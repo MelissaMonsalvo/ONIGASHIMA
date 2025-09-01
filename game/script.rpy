@@ -2,6 +2,7 @@
 
 
 label start:
+    jump map
     if persistent.loop3:
         jump prologue_loop3
     if persistent.loop2:
