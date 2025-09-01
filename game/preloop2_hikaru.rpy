@@ -9,7 +9,7 @@ label loop2_hikaru_mandatory1:
 
 label loop2_hikaru_mandatory2:
 
-    n " Location: Dojo Day"
+    n " Location: Shrine Night"
 
     $ loop2_hikaru_mandatory2 = True
 
@@ -17,7 +17,7 @@ label loop2_hikaru_mandatory2:
 
 label loop2_hikaru_mandatory3:
 
-    n " Location: Village Night"
+    n " Location: Shrine Day"
 
     $ loop2_hikaru_mandatory3 = True
 
@@ -28,5 +28,7 @@ label loop2_hikaru_mandatory4:
     n " Location: Your House Day"
 
     $ loop2_hikaru_mandatory4 = True
+
+    ## all characters vanish from map, but the ghost still appear
 
     return

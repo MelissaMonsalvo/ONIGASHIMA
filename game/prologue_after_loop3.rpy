@@ -37,6 +37,9 @@ label prologue_loop3:
             $ persistent.loop2_hikaru_ghost4 = False
             $ persistent.loop2_hikaru_ghost5 = False
 
+            if persistent.first_playthrough == True:
+                $ persistent.first_playthrough = False
+
             n "Repent! Repent!"
             return
             ## after this, you are kicked to main menu and everyone are alive again

@@ -8,6 +8,10 @@ label loop1_yamato:
 
     $ persistent.loop1 = True
 
+    $ persistent.trueending.unlocked = False
+
     yamato "I ded."
+
+    ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived
 
     return

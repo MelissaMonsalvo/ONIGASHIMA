@@ -1,7 +1,7 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_hikaru_1:
 
-    n " Location: Forest Day"
+    n "To be written later"
 
     $ ghost_hikaru_1 = True
 
@@ -9,7 +9,7 @@ label ghost_hikaru_1:
 
 label ghost_hikaru_2:
 
-    n " Location: Dojo Day"
+    n "To be written later"
 
     $ ghost_hikaru_2 = True
 
@@ -17,7 +17,7 @@ label ghost_hikaru_2:
 
 label ghost_hikaru_3:
 
-    n " Location: Village Night"
+    n "To be written later"
 
     $ ghost_hikaru_3 = True
 
@@ -25,7 +25,7 @@ label ghost_hikaru_3:
 
 label ghost_hikaru_4:
 
-    n " Location: Your House Day"
+    n "To be written later"
 
     $ ghost_hikaru_4 = True
 
@@ -33,7 +33,7 @@ label ghost_hikaru_4:
 
 label ghost_hikaru_5:
 
-    n " Location: Shrine Day"
+    n "To be written later"
 
     $ ghost_hikaru_5 = True
 

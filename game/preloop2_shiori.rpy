@@ -1,7 +1,7 @@
 ############# LOOP 2 WHERE ONE DIED ###########################
 label loop2_shiori_mandatory1:
 
-    n "Location : Shrine Day."
+    n "Location : Village Morning."
 
     $ loop2_shiori_mandatory1 = True
 
@@ -9,7 +9,7 @@ label loop2_shiori_mandatory1:
 
 label loop2_shiori_mandatory2:
 
-    n "Location : Shrine Night."
+    n "Location : Shrine Morning."
 
     $ loop2_shiori_mandatory2 = True
     return
@@ -24,4 +24,6 @@ label loop2_shiori_mandatory4:
 
     n "Location : Shrine Night."
     $ loop2_shiori_mandatory4 = True
+
+    ## all characters vanish from map, but the ghost still appear
     return

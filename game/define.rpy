@@ -3,13 +3,15 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define mc = Character("[player_name]", kind=adv)  # Player-named character
-define n = Character(None, kind=narrator) ## mc sama narrator
-define n2 = Character(None, kind=narrator) ## yamakui narrator
+default persistent.player_name = None
 
-define shiori = Character("Shiori", color="#FFB6C1")
-define yamato = Character("Yamato", color="#FF5555")
-define hikaru = Character("Hikaru", color="#88CCFF")
+define mc = Character("[persistent.player_name]", color="#d40000", kind=adv)  # Player-named character
+define n = Character(None, what_color="#fffafa") ## mc sama narrator
+define n2 = Character(None, what_color="#FF0000") ## yamakui narrator
+
+define shiori = Character("Shiori", color="#c78b12")
+define yamato = Character("Yamato", color="#00d44a")
+define hikaru = Character("Hikaru", color="#092a43")
 
 # define persistent.loop1 = False ## player has cleared loop1
 # define persistent.loop2 = False ## player has cleared loop2
@@ -22,6 +24,7 @@ define hikaru = Character("Hikaru", color="#88CCFF")
 
 #### GHOST WILL APPEAR IN EMPTY SPACES RANDOMLY DURING LOOP2, THE GHOSTS WILL ONLY APPEAR IF THE PERSON IS DEVOURED
 ## GHOSTS THAT DOESN'T APPEAR IN LOOP2 WILL APPEAR IN SOMEONE'S ROUTE IN LOOP 3 (I'LL SEE WHAT WE CAN DO TO ADD TIME)
+## if any persistent data has been unlocked, then that certain ghost jumpscare scene will not happen
 
 #define persistent.loop2_shiori_ghost1 = False
 #define persistent.loop2_shiori_ghost2 = False
@@ -40,3 +43,11 @@ define hikaru = Character("Hikaru", color="#88CCFF")
 #define persistent.loop2_hikaru_ghost3 = False
 #define persistent.loop2_hikaru_ghost4 = False
 #define persistent.loop2_hikaru_ghost5 = False
+
+## this one below is for you to only be able to rename MC after the true end is unlocked
+
+# define persistent.seen_true_end = False 
+
+## this is to check if this is player's first playthrough
+
+#define persistent.first_playthrough = True
