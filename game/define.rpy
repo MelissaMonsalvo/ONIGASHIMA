@@ -13,6 +13,8 @@ define shiori = Character("Shiori", color="#c78b12")
 define yamato = Character("Yamato", color="#00d44a")
 define hikaru = Character("Hikaru", color="#092a43")
 
+image placeholder = "placeholder.jpg"
+
 # define persistent.loop1 = False ## player has cleared loop1
 # define persistent.loop2 = False ## player has cleared loop2
 # define persistent.loop3 = False ## player has cleared loop3

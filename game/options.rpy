@@ -20,7 +20,7 @@ define config.name = _("Spooktober")
 
 define gui.show_name = True
 
-
+define config.developer = True
 ## The version of the game.
 
 define config.version = "1.0"

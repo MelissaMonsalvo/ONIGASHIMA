@@ -1,4 +1,5 @@
-
+init python:
+    renpy.music.register_channel("muzak", "music")
 
 
 label start:
