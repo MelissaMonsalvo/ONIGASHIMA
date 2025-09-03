@@ -3,6 +3,9 @@ init python:
 
 
 label start:
+    #! Jump to mandatory events
+    jump map
+
     if persistent.loop3:
         jump prologue_loop3
     if persistent.loop2:

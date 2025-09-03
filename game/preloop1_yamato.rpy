@@ -3,7 +3,7 @@ label loop1_yamato_mandatory1:
 
     $ loop1_yamato_mandatory1 = True
 
-    n "Location : Dojo Day."
+    n "loop 1 yamato m1 Location : Dojo Day."
 
     return
 
@@ -11,26 +11,26 @@ label loop1_yamato_mandatory2:
 
     $ loop1_yamato_mandatory2 = True
 
-    n "Location : Dojo Night."
+    n "loop 1 yamato m2 Location : Dojo Night."
     return
 
 label loop1_yamato_mandatory3:
 
     $ loop1_yamato_mandatory3 = True
 
-    n "Location : Your House Night"
+    n "loop 1 yamato m3 Location : Your House Night"
     return
 
 label loop1_yamato_mandatory4:
 
     $ loop1_yamato_mandatory4 = True
 
-    n "Location : Village Day"
+    n "loop 1 yamato m4 Location : Village Day"
     return
 
 label loop1_yamato_mandatory5:
 
     $ loop1_yamato_mandatory5 = True
 
-    n "Location : Forest Night"
+    n "loop 1 yamato m5 Location : Forest Night"
     return
