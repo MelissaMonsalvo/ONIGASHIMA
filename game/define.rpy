@@ -5,7 +5,7 @@
 
 default persistent.player_name = None
 
-define mc = Character("[persistent.player_name]", color="#d40000", kind=adv)  # Player-named character
+define MC = Character("[persistent.player_name]", color="#d40000", window_left_padding=100, image="main")  # Player-named character
 define n = Character(None, what_color="#fffafa") ## mc sama narrator
 define n2 = Character(None, what_color="#FF0000") ## yamakui narrator
 

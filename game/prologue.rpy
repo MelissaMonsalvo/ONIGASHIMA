@@ -24,7 +24,7 @@ label prologue:
     scene black with fade
     show placeholder at scary_flicker
 
-    mc "Haa... {w=0.4}Haa..."
+    MC "Haa... {w=0.4}Haa..."
 
     play music "heavy_breathing.ogg"
 
@@ -32,7 +32,8 @@ label prologue:
 
     n "Something is caught in your throat. A {color=#550000}pool of blood{/color} lies at your feet."
 
-    mc "{cps=12}Gh... khhh...{/cps}"
+    play sound "sfx/choke.wav"
+    $ renpy.pause(0.8)
 
     n "Are you choking?"
 
@@ -58,7 +59,7 @@ label prologue:
 
     n "Congratulations. {w=0.3}You did it. {w=0.3}You did it. {w=0.3}You {b}did it.{/b}"
 
-    n "The enemy is dead."
+    n "The enemy is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}."
 
     n "The threat is gone. Gone. {w=0.2}Gone. {w=0.2}Isn’t it?"
 
@@ -125,7 +126,7 @@ label prologue:
 
     n "You’re not going to turn around and see it still breathing."
 
-    n "...Because it’s dead. {w=0.3}You made sure."
+    n "...Because it’s {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}. {w=0.3}You made sure."
 
     stop muzak
 
@@ -281,7 +282,7 @@ label after_get_name:
 
     "Man" "But.... how? How did you do it, [persistent.player_name]?"
 
-    mc "I took down that Oni in one blow! Well... maybe two! Or ten! But who's there to count?!"
+    MC normal "I took down that Oni in one blow! Well... maybe two! Or ten! But who's there to count?!"
 
     play sound "sfx/cheer.mp3"
 
@@ -319,7 +320,7 @@ label after_get_name:
 
     n "You hold the armor up, and it glints in the sun. A red ooze is dripping down from it."
 
-    "Elder" "{b}Look well, all of you.{/b}"
+    "Elder" "Look well, all of you."
 
     "Elder" "{w=0.3}For years, we have lived in {i}shadow.{/i}"
 
@@ -348,17 +349,17 @@ label after_get_name:
     n "Someone shouts from the back, it might've been your friend, Shiori."
 
 
-    mc "Thank you, everyone. I didn’t do it alone."
+    MC "Thank you, everyone. I didn’t do it alone."
 
-    mc "I had your hopes, {w}your prayers, {w}your bento. Aaaand that weird old charm from our beloved shrine maiden..."
+    MC "I had your hopes, {w}your prayers, {w}your bento. Aaaand that weird old charm from our beloved shrine maiden..."
 
-    mc "Still stuck in my pocket, by the way, thanks Shiori!"
+    MC "Still stuck in my pocket, by the way, thanks Shiori!"
 
     n "The girl giggled at the back."
 
-    mc "But I climbed that mountain! I faced it head-on! {w}And I won!"
+    MC "But I climbed that mountain! I faced it head-on! {w}And I won!"
 
-    mc "So let’s celebrate! No more fear!"
+    MC "So let’s celebrate! No more fear!"
 
     play sound "sfx/cheer.mp3"
 
@@ -421,17 +422,21 @@ label after_get_name:
 
     play sound "sfx/grassstep.ogg"
 
-    shiori "Ehehe~ [persistent.player_name]-samaaa~!"
+    show shi normal at shiori_skipp
+
+    shiori "{bt=1}Ehehe~ [persistent.player_name]-samaaa~!{/bt}"
 
     shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi seems like~!"
 
-    mc "Oi, give me a little credit! I’m not that easy to mash, y’know."
+    MC "Oi, give me a little credit! I’m not that easy to mash, y’know."
 
     yamato "Yeah? Could’ve fooled me. Runnin’ off like a dumbass without tellin’ anyone. What, too good to ask for backup?"
 
+    show shi normal at shakey
+
     shiori "Mou~ Yamato, don’t be mean. [persistent.player_name]-sama’s super cool!"
 
-    mc "C’mon, you both know tradition. Oni slayer’s gotta go alone."
+    MC "C’mon, you both know tradition. Oni slayer’s gotta go alone."
 
     yamato "Tch."
 
@@ -439,9 +444,11 @@ label after_get_name:
 
     shiori "Ne, ne~ Tell us! What did Yamakui look like? Was it big? Did it have horns like a cow? Eyes like fireflies? Did it-"
 
+    show shi normal at shiori_tilt
+
     shiori "{w=0.2}-whisper {sc=2}seeeeecrets{/sc} into your ear while it bled? Was it... {w}beautiful?"
 
-    mc "...Huh?"
+    MC "...Huh?"
 
     yamato "Don’t answer that."
 
@@ -449,7 +456,7 @@ label after_get_name:
 
     yamato "Jealous?! Of a corpse?"
 
-    mc "Haha! You kinda sound like you are."
+    MC "Haha! You kinda sound like you are."
 
     yamato "Tch. Shaddup."
 
@@ -459,7 +466,7 @@ label after_get_name:
 
     yamato "Can it. I stayed behind to protect the damned village! Some of us don’t get to play th' hero."
 
-    mc "Hey hey! C’mon, don’t fight. The Yamakui's dead, I'm alive, and we're all safe now! isn't that more important?"
+    MC "Hey hey! C’mon, don’t fight. The Yamakui's dead, I'm alive, and we're all safe now! isn't that more important?"
 
     n "They're bickering again. Like always."
 
@@ -467,7 +474,7 @@ label after_get_name:
 
     hikaru "...Don’t you forget something, [persistent.player_name]?"
 
-    mc "Huh? What, like a souvenir? I brought the armor, didn’t I?"
+    MC "Huh? What, like a souvenir? I brought the armor, didn’t I?"
 
     hikaru "...I see."
 
@@ -494,7 +501,7 @@ label after_get_name:
 
     hikaru "...It's rather... {w}small for Yamakui, isn't it?"
 
-    mc "...What?"
+    MC "...What?"
 
     shiori "Hikaru?"
 
@@ -506,11 +513,17 @@ label after_get_name:
 
     hikaru "...Excuse me."
 
+    play sound "sfx/walk grass.mp3"
+    pause 0.4
+    stop sound fadeout 1.0
+
     n "Hikaru turns and walks away."
+
+
 
     stop music fadeout 1.0
 
-    mc "...Hikaru?"
+    MC "...Hikaru?"
 
     n "The others stand around awkwardly."
 
@@ -520,7 +533,9 @@ label after_get_name:
 
     yamato "Tch, Hikaru's always weird. Let 'em be."
 
-    mc "...Yeah..."
+    MC "...Yeah..."
+
+    stop music fadeout 0.3
 
     n "You look down at the armor again."
 
@@ -532,6 +547,9 @@ label after_get_name:
 
 label beforefirstloop:
 
+    scene black
+    with fade
+
     play music "Idle.mp3"
 
     n "Time passes slowly."
@@ -540,7 +558,7 @@ label beforefirstloop:
 
     n "You do all the things that safe people do."
 
-    n "{cps=7}So you must be safe.{/cps}"
+    n "{cps=20}So you must be {glitch=1.1}safe{/glitch}.{/cps}"
 
     n "Shiori still walks beside you. She's still cheerful. Always. {w=0.3}Always."
 
@@ -550,13 +568,13 @@ label beforefirstloop:
 
     n "You can’t tell if it’s mourning... or perhaps muscle memory."
 
-    n "You pretend it doesn’t matter. It’s easier that way."
+    n "You pretend it doesn’t matter, because it’s easier that way."
 
-    n "Yamato trains every day. Always alone."
+    n "Yamato trains every day, always alone."
 
-    n "He only talks to you when he has to. You remember he was always your sparring partner, but not anymore it seems."
+    n "He only talks to you when he has to. Wasn't he always your sparring partner?"
 
-    n "The Yamakui is dead. {w=0.3}Isn’t it?"
+    n "The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl} {w=0.3}Isn’t it?"
 
     n "So what’s he still protecting them from? You don't need to train as vigorously anymore, do you?"
 
@@ -568,7 +586,7 @@ label beforefirstloop:
 
     n "You never look back, even though you always feel his stares in your bones."
 
-    n "Hikaru-"
+    n "Hikaru..."
 
     n "Hikaru sits with you sometimes, calm as always. They don’t talk much. They never did."
 
@@ -602,12 +620,12 @@ label beforefirstloop:
 
     n "You haven’t touched it since. {w=0.4}You won’t."
 
-    n "You wouldn’t."
+    n "Why would you?"
 
     stop music
     play sound "sfx/suzu.mp3"
 
-    n "{cps=7}Because you killed it. The Yamakui is dead.{/cps}"
+    n "{cps=50}Because you killed it. The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}"
 
     n "You remember the blood, the sound of bone, of the lump of flesh being stabbed {w=0.1}over and over and over...."
 
@@ -643,11 +661,11 @@ label beforefirstloop:
 
     n "{size=*0.95}Again, {w=0.5}again, {w=0.4}again, {w=0.3}again, {w=0.2}again, {w=0.1}again, {w=0.01}again--{/size}"
 
-    mc "{size=*0.95}{alpha=0.8}It’s fine.{/alpha}{/size}"
+    MC normal "{size=*0.95}{alpha=0.8}It’s fine.{/alpha}{/size}"
 
-    mc "{size=+4}{b}It’s FINE.{/b}{/size}"
+    MC "{size=+4}{b}It’s FINE.{/b}{/size}"
 
-    mc "{cps=12}...Fine.{/cps}"
+    MC "{cps=12}...Fine.{/cps}"
 
     n "{alpha=0.6}...Why doesn’t it help?{/alpha}"
 
@@ -663,6 +681,12 @@ label beforefirstloop:
     with fade
 
     pause 0.5
+
+    stop sound
+
+    jump loop1_shiori_mandatory1
+
+
 
     return
 
