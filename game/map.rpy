@@ -74,6 +74,22 @@ label map:
 
 # Pantalla del mapa
 screen map_screen():
+
+    #BG
+    add "images/map/bg.png"
+
+    #Shrine
+    imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #Forest
+    imagebutton auto "images/map/forest_%s.png" focus_mask True action Function(visit_location_func, "forest") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #Dojo
+    imagebutton auto "images/map/dojo_%s.png" focus_mask True action Function(visit_location_func, "dojo") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #town_square
+    imagebutton auto "images/map/village_%s.png" focus_mask True action Function(visit_location_func, "town_square") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #house
+    imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+
+
     frame:
         xalign 0.5
         yalign 0.5
@@ -81,35 +97,9 @@ screen map_screen():
         ypadding 50
         
         vbox:
-            label "Mapa - Día [current_day] - [current_time_block]"
-            text "¿A dónde quieres ir?"
+            label "Map - Día [current_day] - [current_time_block]"
+            text "Where do you want to go?"
 
-
-    # "shrine": "Santuario",
-    # "forest": "Bosque",
-    # "dojo": "Dojo",
-    # "town_square": "Plaza del Pueblo",
-    # "house": "Casa"
-
-
-            hbox:
-                spacing 20
-                vbox:
-                    textbutton "Shrine":
-                        action Function(visit_location_func, "shrine")
-                        #action Function(visit_location, "shrine")
-                    textbutton "Forest":
-                        action Function(visit_location_func, "forest")
-                
-                vbox:
-                    textbutton "Dojo":
-                        action Function(visit_location_func, "dojo")
-                    textbutton "Town_square":
-                        action Function(visit_location_func, "town_square")
-                
-                vbox:
-                    textbutton "House":
-                        action Function(visit_location_func, "house")
 
 
 # Función Python que reemplaza al label visit_location
@@ -141,8 +131,6 @@ init python:
         
         # Verificar rutas completadas
         # renpy.call_in_new_context("check_route_completion")
-
-
 
 
 
