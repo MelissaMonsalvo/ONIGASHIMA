@@ -83,25 +83,33 @@ screen map_screen():
         vbox:
             label "Mapa - Día [current_day] - [current_time_block]"
             text "¿A dónde quieres ir?"
-            
+
+
+    # "shrine": "Santuario",
+    # "forest": "Bosque",
+    # "dojo": "Dojo",
+    # "town_square": "Plaza del Pueblo",
+    # "house": "Casa"
+
+
             hbox:
                 spacing 20
                 vbox:
-                    textbutton "Santuario":
+                    textbutton "Shrine":
                         action Function(visit_location_func, "shrine")
                         #action Function(visit_location, "shrine")
-                #     textbutton "Bosque":
-                #         action Function(visit_location, "forest")
+                    textbutton "Forest":
+                        action Function(visit_location_func, "forest")
                 
-                # vbox:
-                #     textbutton "Dojo":
-                #         action Function(visit_location, "dojo")
-                #     textbutton "Plaza del Pueblo":
-                #         action Function(visit_location, "town_square")
+                vbox:
+                    textbutton "Dojo":
+                        action Function(visit_location_func, "dojo")
+                    textbutton "Town_square":
+                        action Function(visit_location_func, "town_square")
                 
-                # vbox:
-                #     textbutton "Casa":
-                #         action Function(visit_location, "house")
+                vbox:
+                    textbutton "House":
+                        action Function(visit_location_func, "house")
 
 
 # Función Python que reemplaza al label visit_location
