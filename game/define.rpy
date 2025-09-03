@@ -5,13 +5,15 @@
 
 default persistent.player_name = None
 
-define mc = Character("[persistent.player_name]", color="#d40000", kind=adv)  # Player-named character
+define MC = Character("[persistent.player_name]", color="#d40000", window_left_padding=100, image="main")  # Player-named character
 define n = Character(None, what_color="#fffafa") ## mc sama narrator
 define n2 = Character(None, what_color="#FF0000") ## yamakui narrator
 
 define shiori = Character("Shiori", color="#c78b12")
 define yamato = Character("Yamato", color="#00d44a")
 define hikaru = Character("Hikaru", color="#092a43")
+
+image placeholder = "placeholder.jpg"
 
 # define persistent.loop1 = False ## player has cleared loop1
 # define persistent.loop2 = False ## player has cleared loop2
