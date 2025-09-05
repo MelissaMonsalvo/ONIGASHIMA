@@ -9,6 +9,9 @@ default yamato_events_completed = 0
 default hikaru_events_completed = 0
 default shiori_events_completed = 0
 
+#! Quitar
+default preferences.skip_unseen=True
+
 
 define locations = {
     "shrine": "Santuario",

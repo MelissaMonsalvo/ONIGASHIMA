@@ -311,7 +311,7 @@ label loop1_yamato_mandatory3:
 
     play sound "sfx/stone_kick.ogg"
 
-   MC "...Tch."
+    MC "...Tch."
 
     n "You almost growls as the blade presses to his back."
 
