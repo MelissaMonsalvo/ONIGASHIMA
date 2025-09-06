@@ -8,15 +8,15 @@ label loop1_shiori_nonmandatory1:
 
     n "And dangling from each string are effigies. So many of them you can't count."
 
-    mc "Whoa. You’ve been busy! Is there a festival coming...?"
+    MC "Whoa. You’ve been busy! Is there a festival coming...?"
 
-    shiori "Oh, hi [player_name]-sama! I'm just making everyone's effigies for the upcoming red moon."
+    shiori "Oh, hi [persistent.player_name]-sama! I'm just making everyone's effigies for the upcoming red moon."
 
-    mc "...Everyone?"
+    MC "...Everyone?"
 
     shiori "Mm. You. Yamato. Hikaru. And of course the other villagers too!"
 
-    mc "All right... But do we still need them?"
+    MC "All right... But do we still need them?"
 
     shiori "Nothing's wrong with praying for protection right?"
 
@@ -28,21 +28,21 @@ label loop1_shiori_nonmandatory1:
 
     n "You finally find the one with your name, it's upside down."
 
-    mc "Seriously, Shiori-chan?"
+    MC "Seriously, Shiori-chan?"
 
-    mc "That’s how you hang mine? Did I do something to offend the spirits?"
+    MC "That’s how you hang mine? Did I do something to offend the spirits?"
 
     shiori "Oh? Maybe I tied it wrong~"
 
-    mc "Oi, what’s next? You gonna paint on my door with blood?"
+    MC "Oi, what’s next? You gonna paint on my door with blood?"
 
-    mc "Haha. {w}Maybe I’m the sacrifice this year."
+    MC "Haha. {w}Maybe I’m the sacrifice this year."
 
     n "Well, that was morbid."
 
     shiori "Um, I, sorry--"
 
-    mc "That's fine, I’ll fix it myself."
+    MC "That's fine, I’ll fix it myself."
 
     play sound "sfx/paper.ogg"
 
@@ -54,7 +54,7 @@ label loop1_shiori_nonmandatory1:
 
     shiori "Oh. It's watching."
 
-    mc "Huh?"
+    MC "Huh?"
 
     shiori "Don’t you feel it?"
 
@@ -68,7 +68,7 @@ label loop1_shiori_nonmandatory1:
 
     n "Not even a sound."
 
-    mc "...Alright. Creepy much? Can’t we wait 'til sundown to summon things?"
+    MC "...Alright. Creepy much? Can’t we wait 'til sundown to summon things?"
 
     shiori "..."
 
@@ -100,7 +100,7 @@ label loop1_shiori_nonmandatory1:
 
             jump stubborn_lilthang
         "Let it be":
-            mc "Ah, whatever."
+            MC "Ah, whatever."
             return
 
 label stubborn_lilthang:
@@ -110,7 +110,7 @@ label stubborn_lilthang:
 
             n "You fix it again, but it turns again."
 
-            mc "Tche, what's wrong with you?"
+            MC "Tche, what's wrong with you?"
 
             n "You hold it still this time, trying to pin it with brute strength."
 
@@ -118,25 +118,25 @@ label stubborn_lilthang:
 
             n "Somehow, it' ends up upside down again."
 
-            mc "Stubborn little thing..."
+            MC "Stubborn little thing..."
 
-            shiori "Guess some things don’t want to face heaven, eh [player_name]-sama?"
+            shiori "Guess some things don’t want to face heaven, eh [persistent.player_name]-sama?"
 
-            mc "The hell does that mean?"
+            MC "The hell does that mean?"
 
             shiori "Maybe you should pin it with a clip?"
 
-            mc "Yeah, guess that'll help."
+            MC "Yeah, guess that'll help."
 
             n "Shiori hands you one of her hair clips and you literally stabs it with the pin to keep it straight."
 
-            mc "There. Fixed."
+            MC "There. Fixed."
 
             jump stubborn_lilthang2
 
 
         "Let it be":
-            mc "Ah, whatever."
+            MC "Ah, whatever."
             return
 
 label stubborn_lilthang2:
@@ -145,19 +145,19 @@ label stubborn_lilthang2:
 
     n "Upright, tilted, then... upside down again."
 
-    mc "The hell is wrong with this thing!?"
+    MC "The hell is wrong with this thing!?"
 
-    mc "Stay still—"
+    MC "Stay still—"
 
     play sound "sfx/paper.ogg"
 
-    mc "I said stay—!"
+    MC "I said stay—!"
 
     n "You snatch it with such forse that you don't realize you're crushing the paper spine without thinking."
 
     n "You twist the string tight, pull until it bites into your skin."
 
-    mc "Stay. {w}Up. {w}Up! You little--"
+    MC "Stay. {w}Up. {w}Up! You little--"
 
     play sound "sfx/fabric_rip.ogg"
 
@@ -167,11 +167,11 @@ label stubborn_lilthang2:
 
     shiori "Ara~"
 
-    mc "...What?"
+    MC "...What?"
 
     shiori "It's just funny to see the hero that defeated the Yamakui is defeated by a piece of paper~"
 
-    mc "Tch, whatever. I'm leaving."
+    MC "Tch, whatever. I'm leaving."
 
     shiori "Stay safe~"
 
@@ -274,107 +274,107 @@ label loop1_shiori_nonmandatory3:
 
     show shiori smile at midright
 
-    shiori "Good morning, [player_name]-sama."
+    shiori "Good morning, [persistent.player_name]-sama."
 
-    mc "Yo! Morning~ You're up early, huh?"
+    MC "Yo! Morning~ You're up early, huh?"
 
     shiori "Sorry for intruding~ I was looking for you."
 
-    mc "Aw, really? What for?"
+    MC "Aw, really? What for?"
 
     shiori "Mmmmm~ I wanted to ask about the armor. You know the one~"
 
-    mc "Armor? Oh, you mean Yamakui's?"
+    MC "Armor? Oh, you mean Yamakui's?"
 
     shiori "Yeah... You know... Yamato said something strange."
 
     shiori "He said... the armor doesn’t match the old stories."
 
-    mc "...What?"
+    MC "...What?"
 
-    mc "The hell does {i}he{/i} know?"
+    MC "The hell does {i}he{/i} know?"
 
-    mc "What gives Yamato the right to say anything at all?"
+    MC "What gives Yamato the right to say anything at all?"
 
     shiori "I just wanted to understand. You would’ve told me, right?"
 
-    mc "You could’ve just asked me, instead of believing him."
+    MC "You could’ve just asked me, instead of believing him."
 
     shiori "Yamato gets... like that sometimes. You know he's mad he didn't get to battle the Yamakui instead."
 
     shiori "So... He said... He said the armor doesn’t belong to the Yamakui at all."
 
-    mc "Ha."
+    MC "Ha."
 
-    ## mc laugh, sfx?
+    ## MC laugh, sfx?
 
-    mc "So what-so what, I made it up? I fished it out of some cave and rolled it in some animal blood?"
+    MC "So what-so what, I made it up? I fished it out of some cave and rolled it in some animal blood?"
 
     shiori "That’s not what I said--"
 
-    mc "But it’s what you’re {i}thinking.{/i}"
+    MC "But it’s what you’re {i}thinking.{/i}"
 
     shiori "..."
 
-    mc "Yamato never even SAW the damn thing!"
+    MC "Yamato never even SAW the damn thing!"
 
-    mc "I was the one who climbed, and fought, and stabbed--"
+    MC "I was the one who climbed, and fought, and stabbed--"
 
-    mc "It screamed and bled and bit me, Shiori-"
+    MC "It screamed and bled and bit me, Shiori-"
 
-    mc "It chewed through my arm and laughed in a voice that wasn’t its own-" ## MC is lying here
+    MC "It chewed through my arm and laughed in a voice that wasn’t its own-" ## MC is lying here
 
-    mc "And I came back in {i}goddamn pieces.{/i}"
+    MC "And I came back in {i}goddamn pieces.{/i}"
 
-    mc "And you believe him, instead of me?"
+    MC "And you believe him, instead of me?"
 
-    mc "Do you think I lied?"
+    MC "Do you think I lied?"
 
     shiori "I never said that."
 
-    mc "No, no, you didn’t, but you {i}think{/i} I brought back the wrong thing!"
+    MC "No, no, you didn’t, but you {i}think{/i} I brought back the wrong thing!"
 
     shiori "I think{nw}"
 
-    mc "No! No, the hell with that."
+    MC "No! No, the hell with that."
 
-    mc "He didn’t see what it looked like when it died."
+    MC "He didn’t see what it looked like when it died."
 
-    mc "He didn’t see it move even after I cracked its spine, after-afer it choke{w} im it's own BLOOD."
+    MC "He didn’t see it move even after I cracked its spine, after-afer it choke{w} im it's own BLOOD."
 
     ## programming note : the three lines below will kinda be fast forwarded so the players don't get to read it
     ## tbh if they scroll back they are a le to read it, just a lil tidbit
 
-    mc "{cps=99}The sound that it made when I stabbed it all over and over and over{/cps}{nw}"
+    MC "{cps=99}The sound that it made when I stabbed it all over and over and over{/cps}{nw}"
 
     shiori "{cps=99}Um-{/cps}{nw}"
 
-    mc "{cps=99}The smell of it's corpse that makes me want to vomit but also feels like hunger itself.{/cps}{nw}"
+    MC "{cps=99}The smell of it's corpse that makes me want to vomit but also feels like hunger itself.{/cps}{nw}"
 
-    shiori "{cps=99}[player_name]-sama--{/cps}{nw}"
+    shiori "{cps=99}[persistent.player_name]-sama--{/cps}{nw}"
 
-    mc "{cps=99}How the flesh clings on my skin and the putrid smell of blood splattered on my face.{/cps}{nw}"
+    MC "{cps=99}How the flesh clings on my skin and the putrid smell of blood splattered on my face.{/cps}{nw}"
 
 
     ## normal speed again
 
-    mc "I heard that. I saw that. ME."
+    MC "I heard that. I saw that. ME."
 
     shiori "..."
 
     ## her sprite shakes
 
-    mc "Oh.{w} U-Um, sorry. I didn't mean-"
+    MC "Oh.{w} U-Um, sorry. I didn't mean-"
 
-    mc "Oh, crap."
+    MC "Oh, crap."
 
-    mc "That was scary, huh? I really went off there, huh..."
+    MC "That was scary, huh? I really went off there, huh..."
 
     shiori "..."
 
-    mc "Hahahaha..."
+    MC "Hahahaha..."
 
-    mc "Sorry, Shiori-chan. I was just-"
+    MC "Sorry, Shiori-chan. I was just-"
 
     shiori "It's okay. I'll go tell Yamato that maybe... Maybe he's just imagining things."
 
@@ -384,13 +384,13 @@ label loop1_shiori_nonmandatory3:
 
     shiori "Yamato's just jealous..."
 
-    mc "Yeah, that prick is just jealous of me, Shiori-chan."
+    MC "Yeah, that prick is just jealous of me, Shiori-chan."
 
     scene black
 
     ## smaller text as shiori is whispering
 
-    shiori "... But you didn't have any injuries on you, [player_name]"
+    shiori "... But you didn't have any injuries on you, [persistent.player_name]"
 
     $ loop1_shiori_nonmandatory3 = True
 
@@ -400,11 +400,11 @@ label loop1_shiori_nonmandatory4:
 
     ## night only (can be shrine or at the village square), only happens at the last day
 
-    shiori "[player_name]-sama~"
+    shiori "[persistent.player_name]-sama~"
 
     shiori "Do you know what today is?"
 
-    mc "..."
+    MC "..."
 
     shiori "Mmm~ It’s almost here. Our days are numbered."
 
@@ -416,7 +416,7 @@ label loop1_shiori_nonmandatory4:
 
     n "Did something just move at the corner of your eye?"
 
-    mc "What--"
+    MC "What--"
 
     shiori "{size=+10}{color=#FF4444}One.{/color}{/size}"
 
@@ -424,7 +424,7 @@ label loop1_shiori_nonmandatory4:
 
     shiori "{fast}Red Moon.{/fast}"
 
-    mc "..."
+    MC "..."
 
     n "But there’s only her smile."
 
@@ -444,11 +444,11 @@ label loop1_shiori_nonmandatory4:
 
     shiori "l wonder who it’ll choose this time, if it's still alive, that is..."
 
-    mc "Shiori."
+    MC "Shiori."
 
     shiori "Mm?"
 
-    mc "You don't trust me, do you."
+    MC "You don't trust me, do you."
 
     shiori "Ara~"
 
@@ -456,7 +456,7 @@ label loop1_shiori_nonmandatory4:
 
     shiori "Nee, nee. I care about you, you know that right?"
 
-    shiori "I'll still believe in you, even though no one else don't, my [player_name]-sama."
+    shiori "I'll still believe in you, even though no one else don't, my [persistent.player_name]-sama."
     # bam sound? zoom in to her creepy face?
     shiori "Remember that~"
 
