@@ -54,7 +54,7 @@ label loop1_hikaru_nonmandatory1:
 
     hikaru "Tired."
 
-   n "They leap back without another word and dissapears into the trees like smoke."
+    n "They leap back without another word and dissapears into the trees like smoke."
 
     n "What was that about...?"
 

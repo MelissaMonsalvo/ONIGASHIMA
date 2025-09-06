@@ -12,6 +12,9 @@ default shiori_events_completed = 0
 #! Quitar
 default preferences.skip_unseen=True
 
+# Variable para llevar registro de eventos ya mostrados
+default shown_random_events = {}
+
 
 define locations = {
     "shrine": "Santuario",
@@ -65,6 +68,35 @@ define mandatory_events = {
             {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory3"},
             {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory4"}
         ]
+    }
+}
+
+
+# Definir los eventos aleatorios
+define random_events = {
+    1: {
+        "yamato": [
+            {"location": "forest", "time": "night", "event": "loop1_yamato_nonmandatory1"},
+            {"location": "shrine", "time": "day", "event": "loop1_yamato_nonmandatory2"},
+            {"location": "village", "time": "day", "event": "loop1_yamato_nonmandatory3"}
+        ],
+        "hikaru": [
+            {"location": "forest", "time": "night", "event": "loop1_hikaru_nonmandatory1"},
+            {"location": "shrine", "time": "day", "event": "loop1_hikaru_nonmandatory2"},
+            {"location": "shrine", "time": "night", "event": "loop1_hikaru_nonmandatory3"}
+        ],
+        "shiori": [
+            {"location": "forest", "time": "day", "event": "loop1_shiori_nonmandatory1"},
+            {"location": "shrine", "time": "day", "event": "loop1_shiori_nonmandatory2"},
+            {"location": "house", "time": "night", "event": "loop1_shiori_nonmandatory3"},
+            {"location": "shrine", "time": "night", "event": "loop1_shiori_nonmandatory4"}
+        ]
+    },
+    2: {
+        # Puedes agregar eventos random para el loop 2 aquí cuando los necesites
+        "yamato": [],
+        "hikaru": [],
+        "shiori": []
     }
 }
 
@@ -127,8 +159,15 @@ init python:
         if current_mandatory:
             #renpy.jump(current_mandatory)
             renpy.call_in_new_context(current_mandatory)
-        # else:
-        #     renpy.call_in_new_context("random_event", location)
+        else:
+            print("random event")
+            #renpy.call_in_new_context("get_random_event", location)
+            current_mandatory = store.get_random_event(1,location)
+        
+        if current_mandatory:
+            renpy.call_in_new_context(current_mandatory)
+        else:
+            print("Sin lugar")
         
        
         
@@ -175,3 +214,51 @@ python early:
                     setattr(store, f"{char}_events_completed", events_completed + 1)
                     return next_event["event"]
         return None
+
+    # Función para obtener un evento aleatorio de cualquier personaje
+    def get_random_event(loop, location):
+        """
+        Obtiene un evento aleatorio disponible de cualquier personaje para la ubicación actual
+        
+        Args:
+            loop: Número del loop actual
+            location: Ubicación actual del jugador
+        
+        Returns:
+            str: La etiqueta del evento a ejecutar, o None si no hay eventos disponibles
+        """
+        
+        # Verificar si hay eventos para este loop
+        if loop not in random_events:
+            return None
+        
+        available_events = []
+        
+        # Revisar todos los personajes
+        for character in random_events[loop]:
+            # Verificar si el personaje tiene eventos
+            if not random_events[loop][character]:
+                continue
+                
+            # Filtrar eventos que coincidan con ubicación y tiempo actual
+            for event_data in random_events[loop][character]:
+                if (event_data["location"] == location and 
+                    event_data["time"] == store.current_time_block):
+                    
+                    # Verificar si el evento ya fue mostrado
+                    event_key = f"{loop}_{character}_{event_data['event']}"
+                    if event_key not in shown_random_events:
+                        available_events.append((character, event_data))
+        
+        # Si no hay eventos disponibles
+        if not available_events:
+            return None
+        
+        # Elegir un evento aleatorio
+        chosen_character, chosen_event = renpy.random.choice(available_events)
+        
+        # Marcar como mostrado
+        event_key = f"{loop}_{chosen_character}_{chosen_event['event']}"
+        shown_random_events[event_key] = True
+        
+        return chosen_event["event"]

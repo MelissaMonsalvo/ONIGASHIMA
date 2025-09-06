@@ -385,13 +385,13 @@ label loop1_hikaru_mandatory4:
     ## so like, the mouse drags to yes, to open the door, but you can still pick no
 
     menu:
-        "Open the door?":
-            "Yes":
-                jump hikaru_visit_continued
-            "No":
-                n "Oh. You're really not opening it, then?"
-                n "Well. That's... your choice."
-                jump hikaru_visit_rejected
+        "Open the door?"
+        "Yes":
+            jump hikaru_visit_continued
+        "No":
+            n "Oh. You're really not opening it, then?"
+            n "Well. That's... your choice."
+            jump hikaru_visit_rejected
 
 
 label hikaru_visit_rejected:
@@ -435,14 +435,14 @@ label hikaru_visit_continued:
     ## mouse creeps toward yes
 
     menu:
-        "Let Hikaru inside?":
-            "Yes":
-                MC "...Come in. It’s a bit messy, though."
-                n "Great!{w} I mean{w} Good."
-                jump hikaru_inside
-            "No":
+        "Let Hikaru inside?"
+        "Yes":
+            MC "...Come in. It’s a bit messy, though."
+            n "Great!{w} I mean{w} Good."
+            jump hikaru_inside
+        "No":
 
-                jump hikaru_doorclose
+            jump hikaru_doorclose
 
 
 label hikaru_doorclose:
@@ -485,11 +485,11 @@ label hikaru_inside:
     n "I guess just taking a peek at the armor won't cause any harm, right?"
 
     menu:
-        "Show the armor?":
-            "Yes":
-                jump hikaru_armor
-            "No":
-                jump hikaru_armorrefuse
+        "Show the armor?"
+        "Yes":
+            jump hikaru_armor
+        "No":
+            jump hikaru_armorrefuse
 
 label hikaru_armorrefuse:
 
@@ -569,11 +569,11 @@ label hikaru_armor:
     n "Since you brew it yourself... it will be fine if you drink it, right?"
 
     menu:
-        "Drink the tea?":
-            "Yes":
-                jump hikaru_teadrink
-            "No":
-                jump hikaru_teareject
+        "Drink the tea?"
+        "Yes":
+            jump hikaru_teadrink
+        "No":
+            jump hikaru_teareject
 
 label hikaru_teareject:
 
