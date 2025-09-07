@@ -28,45 +28,45 @@ define locations = {
 define mandatory_events = {
     1: {
         "yamato": [
-            {"location": "dojo", "time": "day", "event": "loop1_yamato_mandatory1"},
-            {"location": "dojo", "time": "night", "event": "loop1_yamato_mandatory2"},
-            {"location": "house", "time": "night", "event": "loop1_yamato_mandatory3"},
-            {"location": "town_square", "time": "day", "event": "loop1_yamato_mandatory4"},
-            {"location": "forest", "time": "night", "event": "loop1_yamato_mandatory5"}
+            {"location": "dojo", "time": "day", "event": "loop1_yamato_mandatory1b"},
+            {"location": "dojo", "time": "night", "event": "loop1_yamato_mandatory2b"},
+            {"location": "house", "time": "night", "event": "loop1_yamato_mandatory3b"},
+            {"location": "town_square", "time": "day", "event": "loop1_yamato_mandatory4b"},
+            {"location": "forest", "time": "night", "event": "loop1_yamato_mandatory5b"}
         ],
         "hikaru": [
-            {"location": "forest", "time": "day", "event": "loop1_hikaru_mandatory1"},
-            {"location": "dojo", "time": "day", "event": "loop1_hikaru_mandatory2"},
-            {"location": "town_square", "time": "night", "event": "loop1_hikaru_mandatory3"},
-            {"location": "house", "time": "day", "event": "loop1_hikaru_mandatory4"},
-            {"location": "shrine", "time": "day", "event": "loop1_hikaru_mandatory5"}
+            {"location": "forest", "time": "day", "event": "loop1_hikaru_mandatory1b"},
+            {"location": "dojo", "time": "day", "event": "loop1_hikaru_mandatory2b"},
+            {"location": "town_square", "time": "night", "event": "loop1_hikaru_mandatory3b"},
+            {"location": "house", "time": "day", "event": "loop1_hikaru_mandatory4b"},
+            {"location": "shrine", "time": "day", "event": "loop1_hikaru_mandatory5b"}
         ],
         "shiori": [
-            {"location": "shrine", "time": "day", "event": "loop1_shiori_mandatory1"},
-            {"location": "shrine", "time": "night", "event": "loop1_shiori_mandatory2"},
-            {"location": "shrine", "time": "day", "event": "loop1_shiori_mandatory3"},
-            {"location": "shrine", "time": "night", "event": "loop1_shiori_mandatory4"},
-            {"location": "forest", "time": "day", "event": "loop1_shiori_mandatory5"}
+            {"location": "shrine", "time": "day", "event": "loop1_shiori_mandatory1b"},
+            {"location": "shrine", "time": "night", "event": "loop1_shiori_mandatory2b"},
+            {"location": "shrine", "time": "day", "event": "loop1_shiori_mandatory3b"},
+            {"location": "shrine", "time": "night", "event": "loop1_shiori_mandatory4b"},
+            {"location": "forest", "time": "day", "event": "loop1_shiori_mandatory5b"}
         ]
     },
     2: {
         "yamato": [
-            {"location": "dojo", "time": "day", "event": "loop2_yamato_mandatory1"},
-            {"location": "dojo", "time": "day", "event": "loop2_yamato_mandatory2"},
-            {"location": "shrine", "time": "night", "event": "loop2_yamato_mandatory3"},
-            {"location": "forest", "time": "night", "event": "loop2_yamato_mandatory4"}
+            {"location": "dojo", "time": "day", "event": "loop2_yamato_mandatory1b"},
+            {"location": "dojo", "time": "day", "event": "loop2_yamato_mandatory2b"},
+            {"location": "shrine", "time": "night", "event": "loop2_yamato_mandatory3b"},
+            {"location": "forest", "time": "night", "event": "loop2_yamato_mandatory4b"}
         ],
         "hikaru": [
-            {"location": "forest", "time": "day", "event": "loop2_hikaru_mandatory1"},
-            {"location": "shrine", "time": "night", "event": "loop2_hikaru_mandatory2"},
-            {"location": "shrine", "time": "day", "event": "loop2_hikaru_mandatory3"},
-            {"location": "house", "time": "day", "event": "loop2_hikaru_mandatory4"}
+            {"location": "forest", "time": "day", "event": "loop2_hikaru_mandatory1b"},
+            {"location": "shrine", "time": "night", "event": "loop2_hikaru_mandatory2b"},
+            {"location": "shrine", "time": "day", "event": "loop2_hikaru_mandatory3b"},
+            {"location": "house", "time": "day", "event": "loop2_hikaru_mandatory4b"}
         ],
         "shiori": [
-            {"location": "town_square", "time": "day", "event": "loop2_shiori_mandatory1"},
-            {"location": "shrine", "time": "day", "event": "loop2_shiori_mandatory2"},
-            {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory3"},
-            {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory4"}
+            {"location": "town_square", "time": "day", "event": "loop2_shiori_mandatory1b"},
+            {"location": "shrine", "time": "day", "event": "loop2_shiori_mandatory2b"},
+            {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory3b"},
+            {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory4b"}
         ]
     }
 }
@@ -76,20 +76,20 @@ define mandatory_events = {
 define random_events = {
     1: {
         "yamato": [
-            {"location": "forest", "time": "night", "event": "loop1_yamato_nonmandatory1"},
-            {"location": "shrine", "time": "day", "event": "loop1_yamato_nonmandatory2"},
-            {"location": "village", "time": "day", "event": "loop1_yamato_nonmandatory3"}
+            {"location": "forest", "time": "night", "event": "loop1_yamato_nonmandatory1b"},
+            {"location": "shrine", "time": "day", "event": "loop1_yamato_nonmandatory2b"},
+            {"location": "village", "time": "day", "event": "loop1_yamato_nonmandatory3b"}
         ],
         "hikaru": [
-            {"location": "forest", "time": "night", "event": "loop1_hikaru_nonmandatory1"},
-            {"location": "shrine", "time": "day", "event": "loop1_hikaru_nonmandatory2"},
-            {"location": "shrine", "time": "night", "event": "loop1_hikaru_nonmandatory3"}
+            {"location": "forest", "time": "night", "event": "loop1_hikaru_nonmandatory1b"},
+            {"location": "shrine", "time": "day", "event": "loop1_hikaru_nonmandatory2b"},
+            {"location": "shrine", "time": "night", "event": "loop1_hikaru_nonmandatory3b"}
         ],
         "shiori": [
-            {"location": "forest", "time": "day", "event": "loop1_shiori_nonmandatory1"},
-            {"location": "shrine", "time": "day", "event": "loop1_shiori_nonmandatory2"},
-            {"location": "house", "time": "night", "event": "loop1_shiori_nonmandatory3"},
-            {"location": "shrine", "time": "night", "event": "loop1_shiori_nonmandatory4"}
+            {"location": "forest", "time": "day", "event": "loop1_shiori_nonmandatory1b"},
+            {"location": "shrine", "time": "day", "event": "loop1_shiori_nonmandatory2b"},
+            {"location": "house", "time": "night", "event": "loop1_shiori_nonmandatory3b"},
+            {"location": "shrine", "time": "night", "event": "loop1_shiori_nonmandatory4b"}
         ]
     },
     2: {
@@ -137,15 +137,28 @@ screen map_screen():
 
 
 
-# Función Python que reemplaza al label visit_location
-init python:
+
+
+# Función para verificar eventos obligatorios
+python early:
+
+
     def visit_location_func(location):
         # Incrementar visitas
-
         store.visits_today += 1
         
-        # Verificar eventos obligatorios
+        # Verificar eventos obligatorios primero
         current_mandatory = store.check_mandatory_events(location)
+        
+        # Variable para el evento a ejecutar
+        event_to_call = None
+        
+        if current_mandatory:
+            # Hay evento obligatorio
+            event_to_call = current_mandatory
+        else:
+            # Buscar eventos aleatorios solo de personajes que hayan completado sus obligatorios
+            event_to_call = store.get_random_event(store.current_loop, location)
         
         # Avanzar el tiempo
         if store.visits_today >= 2:
@@ -155,59 +168,18 @@ init python:
         else:
             store.current_time_block = "night" if store.current_time_block == "day" else "day"
 
-        #Llamar a la label
-        if current_mandatory:
-            #renpy.jump(current_mandatory)
-            renpy.call_in_new_context(current_mandatory)
+        # Llamar al evento si existe
+        if event_to_call:
+            renpy.call_in_new_context(event_to_call)
         else:
-            print("random event")
-            #renpy.call_in_new_context("get_random_event", location)
-            current_mandatory = store.get_random_event(1,location)
-        
-        if current_mandatory:
-            renpy.call_in_new_context(current_mandatory)
-        else:
-            print("Sin lugar")
-        
-       
-        
-        # Verificar rutas completadas
-        # renpy.call_in_new_context("check_route_completion")
+            # Mostrar mensaje de ubicación vacía o algo por defecto
+            renpy.call_in_new_context("location_empty", location)
 
 
-
-# # Función para visitar una ubicación
-# label visit_location(location):
-#     $ visits_today += 1
-    
-#     # Verificar si hay evento obligatorio
-#     $ current_mandatory = check_mandatory_events(location)
-#     $ print(location)
-#     if current_mandatory:
-#         call expression current_mandatory
-#     # else:
-#     #     # Evento aleatorio o ubicación vacía
-#     #     call random_event(location)
-    
-#     # Avanzar el tiempo
-#     if visits_today >= 2:
-#         $ current_day += 1
-#         $ visits_today = 0
-#         $ current_time_block = "day"
-#     else:
-#         $ current_time_block = "night" if current_time_block == "day" else "day"
-    
-#     # Verificar si se completó alguna ruta
-#     #call check_route_completion
-    
-#     return
-
-
-# Función para verificar eventos obligatorios
-python early:
     def check_mandatory_events(location):
         for char in ["yamato", "hikaru", "shiori"]:
             events_completed = getattr(store, f"{char}_events_completed", 0)
+            print( f"{char}_events_complete : {events_completed}")
             if events_completed < len(mandatory_events[store.current_loop][char]):
                 next_event = mandatory_events[store.current_loop][char][events_completed]
                 if (next_event["location"] == location and next_event["time"] == store.current_time_block):
@@ -215,19 +187,13 @@ python early:
                     return next_event["event"]
         return None
 
-    # Función para obtener un evento aleatorio de cualquier personaje
+
+# Función para obtener evento aleatorio (CORREGIDA - por personaje)
     def get_random_event(loop, location):
         """
-        Obtiene un evento aleatorio disponible de cualquier personaje para la ubicación actual
-        
-        Args:
-            loop: Número del loop actual
-            location: Ubicación actual del jugador
-        
-        Returns:
-            str: La etiqueta del evento a ejecutar, o None si no hay eventos disponibles
+        Obtiene un evento aleatorio disponible solo de personajes
+        que hayan completado todos sus eventos obligatorios
         """
-        
         # Verificar si hay eventos para este loop
         if loop not in random_events:
             return None
@@ -236,9 +202,17 @@ python early:
         
         # Revisar todos los personajes
         for character in random_events[loop]:
-            # Verificar si el personaje tiene eventos
+            # Verificar si el personaje tiene eventos aleatorios
             if not random_events[loop][character]:
                 continue
+            
+            # VERIFICAR SI EL PERSONAJE COMPLETÓ SUS EVENTOS OBLIGATORIOS
+            events_completed = getattr(store, f"{character}_events_completed", 0)
+            total_mandatory = len(mandatory_events[loop][character])
+            
+            # Solo considerar personajes que completaron todos sus eventos obligatorios
+            if events_completed < total_mandatory:
+                continue  # Saltar este personaje
                 
             # Filtrar eventos que coincidan con ubicación y tiempo actual
             for event_data in random_events[loop][character]:
@@ -262,3 +236,212 @@ python early:
         shown_random_events[event_key] = True
         
         return chosen_event["event"]
+
+
+# Label para cuando no hay eventos
+label location_empty(location):
+    "No hay nada interesante en [location]" #[locations[location]] en este momento."
+    return
+
+
+###########################
+
+# EVENTOS OBLIGATORIOS - LOOP 1
+
+# Yamato - Loop 1
+label loop1_yamato_mandatory1b:
+    "Yamato - Día - Dojo"
+    "Etiqueta: loop1_yamato_mandatory1b"
+    return
+
+label loop1_yamato_mandatory2b:
+    "Yamato - Noche - Dojo"
+    "Etiqueta: loop1_yamato_mandatory2b"
+    return
+
+label loop1_yamato_mandatory3b:
+    "Yamato - Noche - Casa"
+    "Etiqueta: loop1_yamato_mandatory3b"
+    return
+
+label loop1_yamato_mandatory4b:
+    "Yamato - Día - Plaza del Pueblo"
+    "Etiqueta: loop1_yamato_mandatory4b"
+    return
+
+label loop1_yamato_mandatory5b:
+    "Yamato - Noche - Bosque"
+    "Etiqueta: loop1_yamato_mandatory5b"
+    return
+
+# Hikaru - Loop 1
+label loop1_hikaru_mandatory1b:
+    "Hikaru - Día - Bosque"
+    "Etiqueta: loop1_hikaru_mandatory1b"
+    return
+
+label loop1_hikaru_mandatory2b:
+    "Hikaru - Día - Dojo"
+    "Etiqueta: loop1_hikaru_mandatory2b"
+    return
+
+label loop1_hikaru_mandatory3b:
+    "Hikaru - Noche - Plaza del Pueblo"
+    "Etiqueta: loop1_hikaru_mandatory3b"
+    return
+
+label loop1_hikaru_mandatory4b:
+    "Hikaru - Día - Casa"
+    "Etiqueta: loop1_hikaru_mandatory4b"
+    return
+
+label loop1_hikaru_mandatory5b:
+    "Hikaru - Día - Santuario"
+    "Etiqueta: loop1_hikaru_mandatory5b"
+    return
+
+# Shiori - Loop 1
+label loop1_shiori_mandatory1b:
+    "Shiori - Día - Santuario"
+    "Etiqueta: loop1_shiori_mandatory1b"
+    return
+
+label loop1_shiori_mandatory2b:
+    "Shiori - Noche - Santuario"
+    "Etiqueta: loop1_shiori_mandatory2b"
+    return
+
+label loop1_shiori_mandatory3b:
+    "Shiori - Día - Santuario"
+    "Etiqueta: loop1_shiori_mandatory3b"
+    return
+
+label loop1_shiori_mandatory4b:
+    "Shiori - Noche - Santuario"
+    "Etiqueta: loop1_shiori_mandatory4b"
+    return
+
+label loop1_shiori_mandatory5b:
+    "Shiori - Día - Bosque"
+    "Etiqueta: loop1_shiori_mandatory5b"
+    return
+
+# EVENTOS OBLIGATORIOS - LOOP 2
+
+# Yamato - Loop 2
+label loop2_yamato_mandatory1b:
+    "Yamato - Día - Dojo"
+    "Etiqueta: loop2_yamato_mandatory1b"
+    return
+
+label loop2_yamato_mandatory2b:
+    "Yamato - Día - Dojo"
+    "Etiqueta: loop2_yamato_mandatory2b"
+    return
+
+label loop2_yamato_mandatory3b:
+    "Yamato - Noche - Santuario"
+    "Etiqueta: loop2_yamato_mandatory3b"
+    return
+
+label loop2_yamato_mandatory4b:
+    "Yamato - Noche - Bosque"
+    "Etiqueta: loop2_yamato_mandatory4b"
+    return
+
+# Hikaru - Loop 2
+label loop2_hikaru_mandatory1b:
+    "Hikaru - Día - Bosque"
+    "Etiqueta: loop2_hikaru_mandatory1b"
+    return
+
+label loop2_hikaru_mandatory2b:
+    "Hikaru - Noche - Santuario"
+    "Etiqueta: loop2_hikaru_mandatory2b"
+    return
+
+label loop2_hikaru_mandatory3b:
+    "Hikaru - Día - Santuario"
+    "Etiqueta: loop2_hikaru_mandatory3b"
+    return
+
+label loop2_hikaru_mandatory4b:
+    "Hikaru - Día - Casa"
+    "Etiqueta: loop2_hikaru_mandatory4b"
+    return
+
+# Shiori - Loop 2
+label loop2_shiori_mandatory1b:
+    "Shiori - Día - Plaza del Pueblo"
+    "Etiqueta: loop2_shiori_mandatory1b"
+    return
+
+label loop2_shiori_mandatory2b:
+    "Shiori - Día - Santuario"
+    "Etiqueta: loop2_shiori_mandatory2b"
+    return
+
+label loop2_shiori_mandatory3b:
+    "Shiori - Noche - Santuario"
+    "Etiqueta: loop2_shiori_mandatory3b"
+    return
+
+label loop2_shiori_mandatory4b:
+    "Shiori - Noche - Santuario"
+    "Etiqueta: loop2_shiori_mandatory4b"
+    return
+
+# EVENTOS ALEATORIOS - LOOP 1
+
+# Yamato - Aleatorios Loop 1
+label loop1_yamato_nonmandatory1b:
+    "Yamato - Noche - Bosque"
+    "Etiqueta: loop1_yamato_nonmandatory1b"
+    return
+
+label loop1_yamato_nonmandatory2b:
+    "Yamato - Día - Santuario"
+    "Etiqueta: loop1_yamato_nonmandatory2b"
+    return
+
+label loop1_yamato_nonmandatory3b:
+    "Yamato - Día - Pueblo"
+    "Etiqueta: loop1_yamato_nonmandatory3b"
+    return
+
+# Hikaru - Aleatorios Loop 1
+label loop1_hikaru_nonmandatory1b:
+    "Hikaru - Noche - Bosque"
+    "Etiqueta: loop1_hikaru_nonmandatory1b"
+    return
+
+label loop1_hikaru_nonmandatory2b:
+    "Hikaru - Día - Santuario"
+    "Etiqueta: loop1_hikaru_nonmandatory2b"
+    return
+
+label loop1_hikaru_nonmandatory3b:
+    "Hikaru - Noche - Santuario"
+    "Etiqueta: loop1_hikaru_nonmandatory3b"
+    return
+
+# Shiori - Aleatorios Loop 1
+label loop1_shiori_nonmandatory1b:
+    "Shiori - Día - Bosque"
+    "Etiqueta: loop1_shiori_nonmandatory1b"
+    return
+
+label loop1_shiori_nonmandatory2b:
+    "Shiori - Día - Santuario"
+    "Etiqueta: loop1_shiori_nonmandatory2b"
+    return
+
+label loop1_shiori_nonmandatory3b:
+    "Shiori - Noche - Casa"
+    "Etiqueta: loop1_shiori_nonmandatory3b"
+    return
+
+label loop1_shiori_nonmandatory4b:
+    "Shiori - Noche - Santuario"
+    "Etiqueta: loop1_shiori_nonmandatory4b"
+    return
