@@ -14,11 +14,11 @@ label loop1_yamato_mandatory1:
 
     MC "All right, I think you're being unnecessarily hostile. What's gotten into you?"
 
-    yamato "What's gotten into me is that yer bein' too dam clean for someone who fought the damn Yamakui!"
+    yamato "What's gotten into me is that yer bein' too damn clean for someone who fought the fuckin' Yamakui!"
 
     yamato "I don't believe the brat I used to mop the floor with could easily kill 'em!"
 
-    MC "Wait, you imply that I'm lying?"
+    MC "Wait, you're saying... that I'm lying?"
 
     yamato "Keh..."
 
@@ -123,6 +123,8 @@ label loop1_yamato_mandatory1:
     MC "*scoff*"
 
     yamato "If ya really killed the Yamakui, ya wouldn’t be shakin’ right now."
+
+    hide yamato with dissolve
 
     n "He walks out without looking back. You want to shout after him, but your throat closes up."
 
@@ -503,17 +505,15 @@ label loop1_yamato_mandatory5:
 
     $ loop1_yamato_mandatory5 = True
 
-    n "Today's your patrolling schedule again."
+    n "You decide to patrol tonight even though Yamato don't ask you to."
 
-    n "By the kami-sama.... there’s a voice out here."
+    n "It's closer to the red moon, of course, but--"
 
-    n "You're alone. You know you're alone. It's after midnight--"
+    n "You hear mutterings, prayers in ancient language... And it's a voice that you're too familiar with."
 
-    n "You're not supposed to hear anyone."
+    n "You follow it."
 
-    n "Someone, or something, is muttering. Prayers in ancient language... And it's a voice that you're familiar with."
-
-    n "You follow it. You shouldn’t... Not with the red moon so close...."
+    n "Maybe with the red moon so close you shouldn't do something like that..."
 
     n "...but your legs move anyway."
 
@@ -527,25 +527,21 @@ label loop1_yamato_mandatory5:
 
     n "--No--"
 
-    n "There's a shadow behind him that has tendrils, or maybe limbs, all growing everywhere."
+    n "There's a shadow behind him that has tendrils growing everywhere in random directions."
 
-    n "An amalgamation of corpses and all dead things, perhaps."
-
-    n "It has so many eyes in places that shouldn't have eyes."
+    n "It looks like an amalgamation of corpses and all dead things, with many eyes in places that shouldn't have eyes."
 
     n "You can’t look at it directly, because you know it'll recognize you."
 
     MC "...Yamato."
 
-    n "Why are you talking."
+    n "Why is your voice so calm? Why aren't you screaming...?"
 
-    n "Why is your voice calm. Why aren't you screaming...?"
-
-    yamato "...grant me... flame...."
+    yamato "...grant me... {w}flame...."
 
     MC "Yamato."
 
-    Yamato "Hh..!!!"
+    Yamato "Wha--!!!"
 
     n "The thing folds out of existence as soon as Yamato's chanting stops."
 
@@ -559,21 +555,19 @@ label loop1_yamato_mandatory5:
 
     n "Wait, do you know what that thing was? Have you seen it before?"
 
-    yamato "Y-you weren't supposed to see that, damnit."
+    yamato "Y-ya weren't supposed to see that, damnit."
 
     MC "What the hell was that?"
 
     yamato "I'm prayin' for the gods to protect us the next red moon."
 
-    MC "That thing wasn't a god, you know that."
+    MC "That thing doesn't look like a god."
 
     yamato "Yeah, but that wasn't Yamakui either!"
 
-    MC "You're gonna fight an oni with something worse!?"
+    MC "You're gonna fight an oni with something worse?"
 
-    yamato "Ya don't understand a damn thing!"
-
-    yamato "...I wanted t' believe ya, okay!?  But I don't know anymore if I'm strong enough to--"
+    yamato "Shit, you don't know anything, do ya?"
 
     n "Yamato's voice breaks, his sword is clattering innthe ground now."
 
@@ -581,17 +575,17 @@ label loop1_yamato_mandatory5:
 
     yamato "The village already got their hero, so what the hell do they need me for?"
 
-    yamato "And... I ain’t stupid, a'ight? I know what they whisper."
+    yamato "And... I ain’t stupid, a'ight? I know what they're sayin'."
 
-    yamato "‘Course [persistent.player_name] came back stronger. [persistent.player_name] faced the Yamakui. [persistent.player_name] lived.'"
+    yamato "‘Course [persistent.player_name] came back stronger, faced the Yamakui and lived.'"
 
-    yamato "Then they look at me like I’m--like I ain't worth shit if I ain’t swingin' at somethin'."
+    yamato "Then they look at me like I’m--like I'm just a jealous bloke."
+
+    yamato "Tch, {w=0.1}maybe I am. But I'm not just some loser howlin' at the moon."
 
     MC "...So you prayed to whatever that thing was?"
 
-    yamato "...I didn’t mean to summon..."
-
-    yamato "...I just wanted somethin'. {w}Anything."
+    yamato "...I didn’t mean to summon--{nw}"
 
     yamato "I thought maybe if I got stronger--if I had just a bit more--maybe I'd matter again."
 
@@ -611,13 +605,11 @@ label loop1_yamato_mandatory5:
 
     n "But somehow he is still trembling."
 
-    MC "I'm still here, aren't I?"
-
-    yamato "...Goddamn it, I'm so screwed..."
-
-    MC "You're not screwed up."
+    MC "You're more than just a jealous guy, you're the one who always sparred with me and taught me the basics of swordsmanship."
 
     yamato "...Hh."
+
+    MC "'Cmon, let's go back before whatever that thing was decide to return."
 
     n "Yamato finally eases, and you pull your hand away, gesturing for him to follow you."
 

@@ -621,8 +621,6 @@ label hikaru_teareject:
 
     hikaru "Good night, [persistent.player_name]."
 
-    n "That was a perfectly good chance to talk, but now you've chased them away..."
-
     scene black with fade
     $ renpy.pause(1.0)
     return

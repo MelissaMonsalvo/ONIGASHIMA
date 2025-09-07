@@ -20,17 +20,19 @@ label prologue:
 
     ### this has the prologue before
 
-
+    ### azure is testing fer stuff lel
     scene black with fade
+    #show screen eyessss
+    #n "testing fer eyes."
     show placeholder at scary_flicker
-
-    MC "Haa... {w=0.4}Haa..."
+    # particleFog with dissolve:
+        #ypos 0.4
 
     play music "heavy_breathing.ogg"
 
     n "{cps=18}It is dark.{/cps}"
 
-    n "Something is caught in your throat. A {color=#550000}pool of blood{/color} lies at your feet."
+    n "Something is caught in your throat. A {color=#ff0000}pool of blood{/color} lies at your feet."
 
     play sound "sfx/choke.wav"
     $ renpy.pause(0.8)
@@ -45,7 +47,7 @@ label prologue:
 
     n "You stab again. And again. {w=0.1}Again. Again.{w=0.2} No more resistance."
 
-    n "You hear the sound of {color=#660000}wet things{/color} rearranging."
+    n "You hear the sound of {color=#ff0000}wet things{/color} rearranging."
 
     play muzak "sfx/squelch.mp3"
 
@@ -82,11 +84,11 @@ label prologue:
 
     play sound "sfx/drip.wav"
 
-    n "{cps=10}{color=#550000}Drip.{/color}{/cps}"
+    n "{cps=10}{color=#ff0000}Drip.{/color}{/cps}"
 
     play sound "sfx/drip.wav"
 
-    n "{cps=8}{color=#550000}Drip.{/color}{/cps}"
+    n "{cps=8}{color=#ff0000}Drip.{/color}{/cps}"
 
     n "What did you kill?"
 
@@ -423,6 +425,10 @@ label after_get_name:
     play sound "sfx/grassstep.ogg"
 
     show shi normal at shiori_skipp
+    with dissolve
+    pause 0.6
+    show yam normal at yamato_zoom, left
+    with dissolve
 
     shiori "{bt=1}Ehehe~ [persistent.player_name]-samaaa~!{/bt}"
 

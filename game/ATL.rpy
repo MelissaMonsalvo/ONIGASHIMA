@@ -14,6 +14,35 @@ transform midright:
 transform midright2:
     xalign 0.6
 
+### SHOW FOG ####
+image tiledFog = im.Tile(im.Scale("fog.png", 1600, 600), size=(2400, 800))
+image particleFog = SnowBlossom("fog-particle.png", count=80, border=600, xspeed=50, yspeed=0, start=5, fast=True, horizontal=True)
+
+
+
+###EYEEESSSS####
+
+transform blink_eye(delay=0.0, speed=0.4):
+    alpha 1.0
+    pause delay
+    linear speed alpha 0.0
+    linear speed alpha 1.0
+    pause speed * 2
+    repeat
+
+screen eyessss:
+    add "eyes/eye1.png" at blink_eye(delay=0.1, speed=0.3) xpos 0.1 ypos 0.2 zoom 0.3
+    add "eyes/eye2.png" at blink_eye(delay=0.6, speed=0.5) xpos 0.8 ypos 0.1 zoom 0.3
+    add "eyes/eye3.png" at blink_eye(delay=0.2, speed=0.6) xpos 0.4 ypos 0.7 zoom 0.3
+    add "eyes/eye4.png" at blink_eye(delay=0.0, speed=0.2) xpos 0.3 ypos 0.5 zoom 0.3
+    add "eyes/eye5.png" at blink_eye(delay=0.7, speed=0.3) xpos 0.6 ypos 0.8 zoom 0.3
+    add "eyes/eye1.png" at blink_eye(delay=0.4, speed=0.5) xpos 0.15 ypos 0.6 zoom 0.3
+    add "eyes/eye2.png" at blink_eye(delay=0.8, speed=0.4) xpos 0.85 ypos 0.3 zoom 0.3
+    add "eyes/eye3.png" at blink_eye(delay=0.5, speed=0.7) xpos 0.55 ypos 0.2 zoom 0.3
+    add "eyes/eye4.png" at blink_eye(delay=0.3, speed=0.3) xpos 0.2 ypos 0.85 zoom 0.3
+    add "eyes/eye5.png" at blink_eye(delay=0.6, speed=0.6) xpos 0.75 ypos 0.65 zoom 0.3
+
+
 
 ##### CHARACTER MOVEMENTS ########
 transform blink:
@@ -85,12 +114,14 @@ transform scary_flicker:
         linear 0.5 xoffset 0 yoffset 0
         repeat
 
+##### YAMATO'S ATLS ######
+
 ##### SHIORI'S ATLS ######
 transform shiori_skipp:
     zoom 0.25
     xanchor 0.5
     xalign 0.5
-    yalign -0.3   # face zoom
+    yalign -0.45   # face zoom
 
     parallel:
         linear 1.2 zoom 0.26
@@ -113,7 +144,7 @@ transform shiori_tilt:
     zoom 0.25
     xanchor 0.5
     xalign 0.5
-    yalign -0.3
+    yalign -0.45
     yoffset 0
     xzoom 1.0
     yzoom 1.0
@@ -140,7 +171,7 @@ transform shiori_think:
     xanchor 0.5
     yanchor 0.1   # anchor the "neck"
     xalign 0.5
-    yalign -0.15
+    yalign -0.30
     xzoom 1.0
     yzoom 1.0
     yoffset 0
@@ -156,7 +187,7 @@ transform shiori_stomp:
     xanchor 0.5
     yanchor 0.1   # anchor the "neck"
     xalign 0.5
-    yalign -0.15
+    yalign -0.30
     xzoom 1.0
     yzoom 1.0
     yoffset 0
