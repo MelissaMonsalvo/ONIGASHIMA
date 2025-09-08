@@ -20,9 +20,9 @@ image placeholder = "placeholder.jpg"
 # define persistent.loop3 = False ## player has cleared loop3
 # define persistent.trueending.unlocked = False ## player has picked all requirements to get the true ending
 
-# define persistent.shiori_dies = False ## shiori dead
-# define persistent.yamato_dies = False ## yamato dead
-# define persistent.hikaru_dies = False ## hikaru ded
+define persistent.shiori_dies = False ## shiori dead
+define persistent.yamato_dies = False ## yamato dead
+define persistent.hikaru_dies = False ## hikaru ded
 
 #### GHOST WILL APPEAR IN EMPTY SPACES RANDOMLY DURING LOOP2, THE GHOSTS WILL ONLY APPEAR IF THE PERSON IS DEVOURED
 ## GHOSTS THAT DOESN'T APPEAR IN LOOP2 WILL APPEAR IN SOMEONE'S ROUTE IN LOOP 3 (I'LL SEE WHAT WE CAN DO TO ADD TIME)

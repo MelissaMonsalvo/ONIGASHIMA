@@ -9,6 +9,12 @@ default yamato_events_completed = 0
 default hikaru_events_completed = 0
 default shiori_events_completed = 0
 
+# Variables para los eventos fantasmas de los personajes
+define shiori_ghost_events_completed = 0
+define yamato_ghost_events_completed = 0
+define hikaru_ghost_events_completed = 0
+
+
 #! Quitar
 default preferences.skip_unseen=True
 
@@ -100,6 +106,13 @@ define random_events = {
     }
 }
 
+# Definir los eventos fantasmas
+define ghost_events = {
+    "shiori": ["ghost_shiori_1b", "ghost_shiori_2b", "ghost_shiori_3b", "ghost_shiori_4b", "ghost_shiori_5b"],
+    "yamato": ["ghost_yamato_1b", "ghost_yamato_2b", "ghost_yamato_3b", "ghost_yamato_4b", "ghost_yamato_5b"],
+    "hikaru": ["ghost_hikaru_1b", "ghost_hikaru_2b", "ghost_hikaru_3b", "ghost_hikaru_4b", "ghost_hikaru_5b"]
+}
+
 label map:
     #show screen map_screen
     call screen map_screen
@@ -177,66 +190,171 @@ python early:
 
 
     def check_mandatory_events(location):
+        # Guardar candidatos vivos y muertos
+        alive_candidates = []
+        dead_candidates = []
+
         for char in ["yamato", "hikaru", "shiori"]:
             events_completed = getattr(store, f"{char}_events_completed", 0)
-            print( f"{char}_events_complete : {events_completed}")
             if events_completed < len(mandatory_events[store.current_loop][char]):
                 next_event = mandatory_events[store.current_loop][char][events_completed]
                 if (next_event["location"] == location and next_event["time"] == store.current_time_block):
-                    setattr(store, f"{char}_events_completed", events_completed + 1)
-                    return next_event["event"]
+                    if getattr(persistent, f"{char}_dies", False):
+                        # Muerto → mandar a fantasma
+                        ghost_event = get_next_ghost_event(char)
+                        print(f"{char}_dies = True")
+                        if ghost_event:
+                            dead_candidates.append(ghost_event)
+                    else:
+                        # Vivo → evento normal
+                        setattr(store, f"{char}_events_completed", events_completed + 1)
+                        alive_candidates.append(next_event["event"])
+                        print(f"{char}_dies = False")
+
+        # Prioridad: primero vivos, luego muertos
+        if alive_candidates:
+            return alive_candidates[0]
+        elif dead_candidates:
+            return dead_candidates[0]
+
         return None
 
-
-# Función para obtener evento aleatorio (CORREGIDA - por personaje)
     def get_random_event(loop, location):
-        """
-        Obtiene un evento aleatorio disponible solo de personajes
-        que hayan completado todos sus eventos obligatorios
-        """
-        # Verificar si hay eventos para este loop
         if loop not in random_events:
             return None
         
-        available_events = []
-        
-        # Revisar todos los personajes
+        alive_events = []
+        dead_events = []
+
         for character in random_events[loop]:
-            # Verificar si el personaje tiene eventos aleatorios
             if not random_events[loop][character]:
                 continue
             
-            # VERIFICAR SI EL PERSONAJE COMPLETÓ SUS EVENTOS OBLIGATORIOS
             events_completed = getattr(store, f"{character}_events_completed", 0)
             total_mandatory = len(mandatory_events[loop][character])
-            
-            # Solo considerar personajes que completaron todos sus eventos obligatorios
             if events_completed < total_mandatory:
-                continue  # Saltar este personaje
-                
-            # Filtrar eventos que coincidan con ubicación y tiempo actual
-            for event_data in random_events[loop][character]:
-                if (event_data["location"] == location and 
-                    event_data["time"] == store.current_time_block):
-                    
-                    # Verificar si el evento ya fue mostrado
-                    event_key = f"{loop}_{character}_{event_data['event']}"
-                    if event_key not in shown_random_events:
-                        available_events.append((character, event_data))
-        
-        # Si no hay eventos disponibles
-        if not available_events:
-            return None
-        
-        # Elegir un evento aleatorio
-        chosen_character, chosen_event = renpy.random.choice(available_events)
-        
-        # Marcar como mostrado
-        event_key = f"{loop}_{chosen_character}_{chosen_event['event']}"
-        shown_random_events[event_key] = True
-        
-        return chosen_event["event"]
+                continue  
 
+            if getattr(persistent, f"{character}_dies", False):
+                # Muerto → usar evento fantasma
+                ghost_event = get_next_ghost_event(character)
+                if ghost_event:
+                    dead_events.append(ghost_event)
+            else:
+                # Vivo → revisar randoms normales
+                for event_data in random_events[loop][character]:
+                    if (event_data["location"] == location and 
+                        event_data["time"] == store.current_time_block):
+                        
+                        event_key = f"{loop}_{character}_{event_data['event']}"
+                        if event_key not in shown_random_events:
+                            alive_events.append((character, event_data))
+        
+        # Prioridad: primero vivos, luego muertos
+        if alive_events:
+            chosen_character, chosen_event = renpy.random.choice(alive_events)
+            event_key = f"{loop}_{chosen_character}_{chosen_event['event']}"
+            shown_random_events[event_key] = True
+            return chosen_event["event"]
+        
+        if dead_events:
+            return dead_events[0]  # Fantasma en orden
+
+        return None
+
+
+
+
+    def get_next_ghost_event(character):
+        ghost_completed = getattr(store, f"{character}_ghost_events_completed", 0)
+        events_list = ghost_events.get(character, [])
+
+        if ghost_completed < len(events_list):
+            setattr(store, f"{character}_ghost_events_completed", ghost_completed + 1)
+            return events_list[ghost_completed]
+        return None
+
+
+
+
+
+
+
+
+#     def check_mandatory_events(location):
+
+#         for char in ["yamato", "hikaru", "shiori"]:
+#             events_completed = getattr(store, f"{char}_events_completed", 0)
+#             print( f"{char}_events_complete : {events_completed}")
+#             if events_completed < len(mandatory_events[store.current_loop][char]):
+#                 next_event = mandatory_events[store.current_loop][char][events_completed]
+#                 if (next_event["location"] == location and next_event["time"] == store.current_time_block):
+#                     setattr(store, f"{char}_events_completed", events_completed + 1)
+#                     return next_event["event"]
+#         return None
+
+
+# # Función para obtener evento aleatorio (CORREGIDA - por personaje)
+#     def get_random_event(loop, location):
+#         """
+#         Obtiene un evento aleatorio disponible solo de personajes
+#         que hayan completado todos sus eventos obligatorios
+#         """
+#         # Verificar si hay eventos para este loop
+#         if loop not in random_events:
+#             return None
+        
+#         available_events = []
+        
+#         # Revisar todos los personajes
+#         for character in random_events[loop]:
+#             # Verificar si el personaje tiene eventos aleatorios
+#             if not random_events[loop][character]:
+#                 continue
+            
+#             # VERIFICAR SI EL PERSONAJE COMPLETÓ SUS EVENTOS OBLIGATORIOS
+#             events_completed = getattr(store, f"{character}_events_completed", 0)
+#             total_mandatory = len(mandatory_events[loop][character])
+            
+#             # Solo considerar personajes que completaron todos sus eventos obligatorios
+#             if events_completed < total_mandatory:
+#                 continue  # Saltar este personaje
+                
+#             # Filtrar eventos que coincidan con ubicación y tiempo actual
+#             for event_data in random_events[loop][character]:
+#                 if (event_data["location"] == location and 
+#                     event_data["time"] == store.current_time_block):
+                    
+#                     # Verificar si el evento ya fue mostrado
+#                     event_key = f"{loop}_{character}_{event_data['event']}"
+#                     if event_key not in shown_random_events:
+#                         available_events.append((character, event_data))
+        
+#         # Si no hay eventos disponibles
+#         if not available_events:
+#             return None
+        
+#         # Elegir un evento aleatorio
+#         chosen_character, chosen_event = renpy.random.choice(available_events)
+        
+#         # Marcar como mostrado
+#         event_key = f"{loop}_{chosen_character}_{chosen_event['event']}"
+#         shown_random_events[event_key] = True
+        
+#         return chosen_event["event"]
+
+    # def get_ghost_event(character):
+    #     ghost_completed = getattr(store, f"{character}_ghost_events_completed", 0)
+        
+    #     # Obtener la lista de eventos fantasma de ese personaje
+    #     events_list = ghost_events.get(character, [])
+        
+    #     if ghost_completed < len(events_list):
+    #         # Avanzar el contador
+    #         setattr(store, f"{character}_ghost_events_completed", ghost_completed + 1)
+    #         return events_list[ghost_completed]
+        
+    #     return None  # No hay más eventos fantasma
 
 # Label para cuando no hay eventos
 label location_empty(location):
@@ -252,6 +370,8 @@ label location_empty(location):
 label loop1_yamato_mandatory1b:
     "Yamato - Día - Dojo"
     "Etiqueta: loop1_yamato_mandatory1b"
+    #$ persistent.yamato_dies = True
+    #$ print(f"muerto: {persistent.yamato_dies}")
     return
 
 label loop1_yamato_mandatory2b:
@@ -272,6 +392,7 @@ label loop1_yamato_mandatory4b:
 label loop1_yamato_mandatory5b:
     "Yamato - Noche - Bosque"
     "Etiqueta: loop1_yamato_mandatory5b"
+    $ persistent.yamato_dies = True
     return
 
 # Hikaru - Loop 1
@@ -324,6 +445,7 @@ label loop1_shiori_mandatory4b:
 label loop1_shiori_mandatory5b:
     "Shiori - Día - Bosque"
     "Etiqueta: loop1_shiori_mandatory5b"
+    $ persistent.shiori_dies = True
     return
 
 # EVENTOS OBLIGATORIOS - LOOP 2
@@ -444,4 +566,69 @@ label loop1_shiori_nonmandatory3b:
 label loop1_shiori_nonmandatory4b:
     "Shiori - Noche - Santuario"
     "Etiqueta: loop1_shiori_nonmandatory4b"
+    return
+
+
+
+###########Ghost###
+label ghost_shiori_1b:
+    "ghost_shiori_1"
+    return
+
+label ghost_shiori_2b:
+    "ghost_shiori_2"
+    return
+
+label ghost_shiori_3b:
+    "ghost_shiori_3"
+    return
+
+label ghost_shiori_4b:
+    "ghost_shiori_4"
+    return
+
+label ghost_shiori_5b:
+    "ghost_shiori_5"
+    return
+
+
+label ghost_yamato_1b:
+    "ghost_yamato_1"
+    return
+
+label ghost_yamato_2b:
+    "ghost_yamato_2"
+    return
+
+label ghost_yamato_3b:
+    "ghost_yamato_3"
+    return
+
+label ghost_yamato_4b:
+    "ghost_yamato_4"
+    return
+
+label ghost_yamato_5b:
+    "ghost_yamato_5"
+    return
+
+
+label ghost_hikaru_1b:
+    "ghost_hikaru_1"
+    return
+
+label ghost_hikaru_2b:
+    "ghost_hikaru_2"
+    return
+
+label ghost_hikaru_3b:
+    "ghost_hikaru_3"
+    return
+
+label ghost_hikaru_4b:
+    "ghost_hikaru_4"
+    return
+
+label ghost_hikaru_5b:
+    "ghost_hikaru_5"
     return
