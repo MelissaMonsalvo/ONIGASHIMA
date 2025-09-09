@@ -22,14 +22,23 @@ default preferences.skip_unseen=True
 default shown_random_events = {}
 
 
-define locations = {
-    "shrine": "Santuario",
-    "forest": "Bosque",
-    "dojo": "Dojo",
-    "town_square": "Plaza del Pueblo",
-    "house": "Casa"
-}
+# define locations = {
+#     "shrine": "Santuario",
+#     "forest": "Bosque",
+#     "dojo": "Dojo",
+#     "town_square": "Plaza del Pueblo",
+#     "house": "Casa"
+# }
 
+define locations = ["shrine", "forest", "dojo", "town_square","house"]
+
+define location_positions = {
+    "shrine": (400, 200),
+    "forest": (600, 350),
+    "dojo": (250, 450),
+    "town_square": (500, 500),
+    "house": (300, 300)
+}
 # Eventos obligatorios por loop y personaje
 define mandatory_events = {
     1: {
@@ -113,6 +122,15 @@ define ghost_events = {
     "hikaru": ["ghost_hikaru_1b", "ghost_hikaru_2b", "ghost_hikaru_3b", "ghost_hikaru_4b", "ghost_hikaru_5b"]
 }
 
+
+
+define character_icons = {
+    "shiori": "images/map/shiori.png",
+    "yamato": "images/map/yamato.png",
+    "hikaru": "images/map/hikaru.png"
+}
+
+
 label map:
     #show screen map_screen
     call screen map_screen
@@ -125,6 +143,11 @@ screen map_screen():
 
     #BG
     add "images/map/bg.png"
+        # Se calcula una sola vez
+    default icon_data = build_icon_data(store.current_loop, store.current_time_block)
+
+
+
 
     #Shrine
     imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
@@ -137,6 +160,27 @@ screen map_screen():
     #house
     imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
 
+    # Dibujar íconos en un solo for
+    for (pos, char) in icon_data:
+        add Transform(character_icons[char], size=(50, 50)) xpos pos[0] ypos pos[1]
+
+
+    #     # Iterar todas las locaciones
+    # for location in locations:
+    #     $ chars_here = get_characters_in_location(store.current_loop, location, store.current_time_block)
+    #     #$ print("chars_here:", chars_here)
+    #     # Obtener posición base de la locación
+    #     $ center_x, center_y = location_positions[location]
+
+    #     # Calcular posiciones en círculo
+    #     $ positions = get_circle_positions(center_x, center_y, 50, len(chars_here))
+    #     #$ print("positions:", positions)
+    #     # Dibujar los íconos
+    #     for (pos, char) in zip(positions, chars_here):
+    #         $ print("character_icons:", character_icons[char])
+    #         add Transform(character_icons[char], size=(50, 50)) xpos pos[0] ypos pos[1] 
+
+    #add "images/map/shiori.png"
 
     frame:
         xalign 0.5
@@ -156,10 +200,25 @@ screen map_screen():
 python early:
 
 
+    import math
+
+    def get_circle_positions(center_x, center_y, radius, count):
+        positions = []
+        if count == 0:
+            return positions
+        angle_step = 2 * math.pi / count
+        for i in range(count):
+            angle = i * angle_step
+            x = int(center_x + radius * math.cos(angle))
+            y = int(center_y + radius * math.sin(angle))
+            positions.append((x, y))
+        return positions
+
+    #Función que se ejecuta al hacer click en alguna parte del mapa
+
     def visit_location_func(location):
         # Incrementar visitas
         store.visits_today += 1
-        
         # Verificar eventos obligatorios primero
         current_mandatory = store.check_mandatory_events(location)
         
@@ -188,7 +247,7 @@ python early:
             # Mostrar mensaje de ubicación vacía o algo por defecto
             renpy.call_in_new_context("location_empty", location)
 
-
+#Checa en la lista de eventos de vivos y muertos
     def check_mandatory_events(location):
         # Guardar candidatos vivos y muertos
         alive_candidates = []
@@ -219,6 +278,7 @@ python early:
 
         return None
 
+    # funcion random para eventos    
     def get_random_event(loop, location):
         if loop not in random_events:
             return None
@@ -263,7 +323,7 @@ python early:
         return None
 
 
-
+    #Funcion para obtener eventos fantasma
 
     def get_next_ghost_event(character):
         ghost_completed = getattr(store, f"{character}_ghost_events_completed", 0)
@@ -274,9 +334,63 @@ python early:
             return events_list[ghost_completed]
         return None
 
+    #Funcaion para dibujar personajes en mapa
+
+    def get_characters_in_location(loop, location, time_block):
+        present_chars = []
+
+        for char in ["yamato", "hikaru", "shiori"]:
+            # PERSONAJE MUERTO → usa fantasma
+            if getattr(persistent, f"{char}_dies", False):
+                ghost_completed = getattr(store, f"{char}_ghost_events_completed", 0)
+                events_list = ghost_events.get(char, [])
+                if ghost_completed < len(events_list):
+                    # Si quieres que fantasma aparezca SIEMPRE en el mapa:
+                    present_chars.append(char)
+                    # Si quieres que fantasma dependa de location/time,
+                    # necesitarías guardar esos datos también en ghost_events
+            else:
+                # OBLIGATORIOS
+                events_completed = getattr(store, f"{char}_events_completed", 0)
+                if events_completed < len(mandatory_events[loop][char]):
+                    next_event = mandatory_events[loop][char][events_completed]
+                    if next_event["location"] == location and next_event["time"] == time_block:
+                        present_chars.append(char)
+                        continue
+                
+                # RANDOMS
+                for event_data in random_events[loop][char]:
+                    if (event_data["location"] == location and event_data["time"] == time_block):
+                        event_key = f"{loop}_{char}_{event_data['event']}"
+                        if event_key not in shown_random_events:
+                            present_chars.append(char)
+                            break  # Evitar duplicados
+
+        print("present_chars: ", present_chars, "\n")
+        return present_chars
 
 
 
+
+    def build_icon_data(loop, time_block):
+        result = []
+        for location in locations:
+            print("location: ", location, "*************************************\n")
+
+            chars_here = get_characters_in_location(loop, location, time_block)
+            print("chars_here: ", chars_here, "\n")
+            
+            center_x, center_y = location_positions[location]
+            print("Center: ", location_positions[location], "\n")
+
+            positions = get_circle_positions(center_x, center_y, 50, len(chars_here))
+            print("positions: ", positions, "\n")
+
+            for (pos, char) in zip(positions, chars_here):
+                result.append((pos, char))
+
+            #print("result: ", result, "\n")
+        return result
 
 
 
