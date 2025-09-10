@@ -10,9 +10,9 @@ label loop2_shiori:
 
     shiori "When I got scared. You’d let me lean on you, even if you complaied that I made your shoulder stiff."
 
-    shiori "But you always felt warm, [player_name]."
+    shiori "But you always felt warm, [persistent.player_name]."
 
-    mc "Yeah...?"
+    MC "Yeah...?"
 
     shiori "Mmhm."
 
@@ -22,7 +22,7 @@ label loop2_shiori:
 
     shiori "I can’t... hear your heartbeat."
 
-    mc "...!"
+    MC "...!"
 
     n "She lifts her head just a little and stares at you with a knowing smile."
 
@@ -36,7 +36,7 @@ label loop2_shiori:
 
     n2 "Tear. {w}Yet."
 
-    shiori "...You’re really quiet tonight, [player_name]-sama."
+    shiori "...You’re really quiet tonight, [persistent.player_name]-sama."
 
     shiori "That’s okay. I don’t mind."
 
@@ -48,7 +48,7 @@ label loop2_shiori:
 
     shiori "As cold as a corpse."
 
-    mc "Shiori-chan... You're... freaking me out, heh..."
+    MC "Shiori-chan... You're... freaking me out, heh..."
 
     shiori "Really? I think I'm the one who feels afraid."
 
@@ -68,11 +68,11 @@ label loop2_shiori:
 
     n "Shiori’s already waiting."
 
-    shiori "You're such a mess again, [player_name]-sama~"
+    shiori "You're such a mess again, [persistent.player_name]-sama~"
 
     shiori "Come here. I’ll clean you up."
 
-    mc "I’m fine."
+    MC "I’m fine."
 
     shiori "Aww, just let Shiori take care of you. {w}Please?"
 
@@ -136,7 +136,7 @@ label loop2_shiori:
 
     shiori "There, better."
 
-    shiori "You always try to hide, [player_name]-sama.... but I think you’re more beautiful like this."
+    shiori "You always try to hide, [persistent.player_name]-sama.... but I think you’re more beautiful like this."
 
     n "Shiori-chan, what are you saying!?"
 
@@ -182,9 +182,9 @@ label loop2_shiori:
 
     shiori "Aaaand done! Good as new."
 
-    shiori "Oops, but you're not actually [player_name], are you?"
+    shiori "Oops, but you're not actually [persistent.player_name], are you?"
 
-    mc "..."
+    MC "..."
 
     shiori "Don't worry, Yamakui-sama. Even if you can't go out like this..."
 
@@ -208,11 +208,11 @@ label loop2_shiori:
 
     n "Where are we...!?"
 
-    shiori "Oh~ Good morning, [player_name]-sama..."
+    shiori "Oh~ Good morning, [persistent.player_name]-sama..."
 
     n "Why is she limping?"
 
-    mc "What's up with you?"
+    MC "What's up with you?"
 
     shiori "I stubbed my toe real bad. Clumsy ol' me~"
 
@@ -230,11 +230,11 @@ label loop2_shiori:
 
     shiori "Hehe..."
 
-    shiori "You're looking at me funny, [player_name]-sama."
+    shiori "You're looking at me funny, [persistent.player_name]-sama."
 
     shiori "Is it because of the blood?"
 
-    n "Run, run awa, Shiori=chan...!"
+    n "Run, run away, Shiori=chan...!"
 
     n "Tonight is--"
 
@@ -296,7 +296,7 @@ label loop2_shiori:
 
     n "Shiori chan--"
 
-    mc "--Thank you."
+    MC "--Thank you."
 
     n "What... What the hell is happening?"
 
@@ -316,7 +316,7 @@ label loop2_shiori:
 
     shiori "Shiori's so alone, you know?"
 
-    shiori "I know that [player_name] and Hikaru has something special going on, but they won't confess to each other."
+    shiori "I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other."
 
     shiori "Yamato-kun only cares about being the best."
 
@@ -328,7 +328,7 @@ label loop2_shiori:
 
     n2 "F O R E V E R."
 
-    mc "Come closer, then."
+    MC "Come closer, then."
 
     play sound "sfx/mouth_stretch.ogg"
 

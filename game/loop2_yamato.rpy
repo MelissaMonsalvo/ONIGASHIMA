@@ -82,11 +82,11 @@ label loop2_yamato:
 
         yamato "Tch... Look at ya screamin’ like it matters now."
 
-        yamato "Ya people always looked at [player_name] like they was gonna save us, but no, they returned a monster."
+        yamato "Ya people always looked at [persistent.player_name] like they was gonna save us, but no, they returned a monster."
 
         hikaru "What!?"
 
-        mc "He's gone insane because of his jealousy."
+        MC "He's gone insane because of his jealousy."
 
         hikaru "Yamato, this isn’t you at all--"
 
@@ -127,17 +127,17 @@ label loop2_yamato:
 
         n "Her voice cracks as she steps closer. She’s trying not to cry."
 
-        shiori "[player_name]...? What was that just now?"
+        shiori "[persistent.player_name]...? What was that just now?"
 
         shiori "W-What’s going on?"
 
-        mc "...He’s gone, Shiori."
+        MC "...He’s gone, Shiori."
 
         shiori "That wasn’t a kami, was it?"
 
         shiori "The prayers... The chanting's all wrong..."
 
-        mc "He’s beyond saving now."
+        MC "He’s beyond saving now."
 
         shiori "..."
 
@@ -153,9 +153,9 @@ label loop2_yamato:
 
         shiori "Right? I mean... if you just love someone enough..."
 
-        shiori "Even the Yamakui... it just needs someone to see it, to listen to it's pleas."
+        shiori "Even the Yamakui... it just needs someone to see it as it really is."
 
-        shiori "Maybe it’s angry because it’s lonely, because we’re all so mean to it."
+        shiori "Maybe it’s angry because it’s lonely, and because we’re all so mean to it."
 
         shiori "But if we just... sat down... maybe lit some incense... and just talked..."
 
@@ -163,7 +163,7 @@ label loop2_yamato:
 
         shiori "It’d stop, right?"
 
-        mc "..."
+        MC "..."
 
         shiori "If only I was given the chance to talk to it..."
 
@@ -184,13 +184,13 @@ label loop2_yamato:
     scene black with fade
     centered "DAY OF RED MOON."
 
-    n "The sky is red. Night is coming."
+    n "The sky is fully red now, it's just mere hours before the red moon is full."
 
     n "And of course, you saw the man practically crawling towards you."
 
-    n "Limbs jerking. Bent like wet wood. One hand dragging behind, flopping, broken perhaps."
+    n "Limbs jerking, all bent up with one hand dragging behind, flopping."
 
-    n2 "Look, look who crawls back."
+    n2 "Look, look who is crawling back."
 
     yamato "...tonight."
 
@@ -228,7 +228,7 @@ label loop2_yamato:
 
     n "But before you can even unsheate your claws--"
 
-    mc "Hn?"
+    MC "Hn?"
 
     n "You catch a glimpse of his back folding into the treeline, as if something pulled him out from beyond the dimension."
 
@@ -319,7 +319,7 @@ label loop2_yamato:
 
     yamato "Still--still ain’t done--!"
 
-    yamato "I’ll break ya in pieces. One piece for the friend I can't remember, and another for [player_name]--"
+    yamato "I’ll break ya in pieces. One piece for the friend I can't remember, and another for [persistent.player_name]--"
 
     play sound "sfx/charge.ogg"
 
@@ -350,28 +350,28 @@ label loop2_yamato:
 
     n "You take one step forward."
 
-    mc "...yo...meza...me...shunu chiida..."
+    MC "...yo...meza...me...shunu chiida..."
 
     play sound "sfx/glitch_click.ogg"
 
-    mc "...eeyotaz...eh...o...kara...ta...ware..."
+    MC "...eeyotaz...eh...o...kara...ta...ware..."
 
     yamato "...!"
 
-    mc "...o...meza...meza...yo...nush...chiida...nush...chiida..."
+    MC "...o...meza...meza...yo...nush...chiida...nush...chiida..."
 
     play sound "sfx/heartbeat_deep.ogg"
     $ renpy.pause(0.6)
 
     yamato "...What... {w}what the fuck are you saying..."
 
-    mc "Your prayers, don't they go something like this?"
+    MC "Your prayers, don't they go something like this?"
 
     yamato "You’re... saying it backwards--"
 
-    mc "Yamato-kun..."
+    MC "Yamato-kun..."
 
-    mc "Who do you think the master of the earth is?"
+    MC "Who do you think the master of the earth is?"
 
     yamato "No--!"
 
@@ -381,9 +381,9 @@ label loop2_yamato:
 
     yamato "YOU’RE--"
 
-    mc "{size=+4}{color=#aa0000}Mountains. Earth. Same thing{/color}{/size}"
+    MC "{size=+4}{color=#aa0000}Mountains. Earth. Same thing{/color}{/size}"
 
-    mc "The mountains belongs to me, Yamato."
+    MC "The mountains belongs to me, Yamato."
 
     play sound "sfx/bone_creak.ogg"
     $ renpy.pause(0.5)
@@ -392,9 +392,9 @@ label loop2_yamato:
 
     yamato "GHhhAAAGhghh--"
 
-    mc "I gave you teeth, claws, power, eeeeverything you wanted."
+    MC "I gave you teeth, claws, power, eeeeverything you wanted."
 
-    mc "But it'll never be as strong as mine."
+    MC "But it'll never be as strong as mine."
 
     n "His fingers snap sideways as they claw at his own chest."
 
@@ -402,9 +402,9 @@ label loop2_yamato:
 
     yamato "I WASN'T TRYING TO--"
 
-    mc "But you prayed to me."
+    MC "But you prayed to me."
 
-    mc "ME."
+    MC "ME."
 
     me "Yamakui."
 
