@@ -22,22 +22,14 @@ default preferences.skip_unseen=True
 default shown_random_events = {}
 
 
-# define locations = {
-#     "shrine": "Santuario",
-#     "forest": "Bosque",
-#     "dojo": "Dojo",
-#     "town_square": "Plaza del Pueblo",
-#     "house": "Casa"
-# }
-
 define locations = ["shrine", "forest", "dojo", "town_square","house"]
 
 define location_positions = {
-    "shrine": (400, 200),
-    "forest": (600, 350),
-    "dojo": (250, 450),
-    "town_square": (500, 500),
-    "house": (300, 300)
+    "shrine": (1500, 900),
+    "forest": (400, 425),
+    "dojo": (900, 1000),
+    "town_square": (1200, 425),
+    "house": (400, 1000)
 }
 # Eventos obligatorios por loop y personaje
 define mandatory_events = {
@@ -144,10 +136,7 @@ screen map_screen():
     #BG
     add "images/map/bg.png"
         # Se calcula una sola vez
-    default icon_data = build_icon_data(store.current_loop, store.current_time_block)
-
-
-
+    #default icon_data = build_icon_data(store.current_loop, store.current_time_block)
 
     #Shrine
     imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
@@ -161,26 +150,44 @@ screen map_screen():
     imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
 
     # Dibujar íconos en un solo for
-    for (pos, char) in icon_data:
-        add Transform(character_icons[char], size=(50, 50)) xpos pos[0] ypos pos[1]
+    # for (pos, char) in icon_data:
+    #     add Transform(character_icons[char], size=(50, 50)) xpos pos[0] ypos pos[1]
 
 
-    #     # Iterar todas las locaciones
-    # for location in locations:
-    #     $ chars_here = get_characters_in_location(store.current_loop, location, store.current_time_block)
-    #     #$ print("chars_here:", chars_here)
-    #     # Obtener posición base de la locación
-    #     $ center_x, center_y = location_positions[location]
-
-    #     # Calcular posiciones en círculo
-    #     $ positions = get_circle_positions(center_x, center_y, 50, len(chars_here))
-    #     #$ print("positions:", positions)
-    #     # Dibujar los íconos
-    #     for (pos, char) in zip(positions, chars_here):
-    #         $ print("character_icons:", character_icons[char])
-    #         add Transform(character_icons[char], size=(50, 50)) xpos pos[0] ypos pos[1] 
-
-    #add "images/map/shiori.png"
+    # Mostrar iconos de personajes en sus ubicaciones
+    $ icon_data = build_icon_data(store.current_loop, store.current_time_block)
+    
+    for location, characters in icon_data.items():
+        $ pos = location_positions.get(location, (0, 0))
+        $ x_pos, y_pos = pos
+        
+        # Mostrar iconos de personajes vivos
+        for character in characters.get("alive", []):
+            $ icon = character_icons.get(character)
+            if icon:
+                # Ajustar posición para múltiples personajes en la misma ubicación
+                $ offset_x = characters["alive"].index(character) * 50  # Espaciado horizontal
+                imagebutton:
+                    idle Transform(icon, size=(150, 150))
+                    hover Transform(icon, size=(150, 150))
+                    xpos x_pos + offset_x
+                    ypos y_pos - 30  # Levantar un poco el icono sobre la ubicación
+                    action NullAction()
+                    tooltip character.capitalize()
+        
+        # Mostrar iconos de personajes fantasmas (en tono gris/transparente)
+        for character in characters.get("ghost", []):
+            $ icon = character_icons.get(character)
+            if icon:
+                $ offset_x = characters["ghost"].index(character) * 50
+                imagebutton:
+                    idle Transform(im.Grayscale(icon), size=(50, 50))   # Convertir a escala de grises
+                    hover Transform(im.Grayscale(icon), size=(50, 50)) 
+                    xpos x_pos + offset_x
+                    ypos y_pos - 30
+                    #alpha 0.7  # Hacerlo semi-transparente
+                    action NullAction()
+                    tooltip character.capitalize() + " (Fantasma)"
 
     frame:
         xalign 0.5
@@ -334,141 +341,174 @@ python early:
             return events_list[ghost_completed]
         return None
 
+
+
+    def build_icon_data(current_loop, current_time_block):
+        icon_data = {}
+        
+        # Inicializar estructura para cada ubicación
+        for location in locations:
+            icon_data[location] = {"alive": [], "ghost": []}
+        
+        # Determinar el número máximo de eventos obligatorios por loop
+        if current_loop == 1:
+            max_mandatory_events = 5
+        else:
+            max_mandatory_events = 4
+        
+        # Verificar eventos obligatorios para personajes vivos y fantasmas
+        for character in ["yamato", "hikaru", "shiori"]:
+            # Determinar si el personaje está vivo usando las variables persistentes
+            if character == "shiori":
+                alive = not persistent.shiori_dies
+            elif character == "yamato":
+                alive = not persistent.yamato_dies
+            elif character == "hikaru":
+                alive = not persistent.hikaru_dies
+            else:
+                alive = True
+            
+            print(f"{character} alive: {alive}")
+
+            
+            # Obtener eventos completados del personaje
+            events_completed = globals().get(f"{character}_events_completed", 0)
+
+            
+            # Verificar si todos los eventos obligatorios del loop están completados
+            all_mandatory_completed = (events_completed >= max_mandatory_events)
+
+            print(f"events_completed: {events_completed}, Todos los eventos completados? : {all_mandatory_completed}")
+
+
+
+
+            # Buscar en eventos obligatorios (solo si no están todos completados)
+            if not all_mandatory_completed and current_loop in mandatory_events and character in mandatory_events[current_loop]:
+                
+                print("\n\nbuscando eventos obligatorios**********")
+                
+                next_event = mandatory_events[current_loop][character][events_completed]
+
+                if (next_event["time"] == current_time_block and 
+                    next_event["location"] in icon_data and
+                    not event_completed(next_event["event"])):
+                    
+                    if alive:
+                        if character not in icon_data[next_event["location"]]["alive"]:
+                            icon_data[next_event["location"]]["alive"].append(character)
+                            print(f"Evento de {next_event['event']} alive, en {next_event['location']} at {next_event['time']}")
+                    else:
+                        if character not in icon_data[next_event["location"]]["ghost"]:
+                            icon_data[next_event["location"]]["ghost"].append(character)
+                            print(f"Evento de {next_event['event']} ghost, en {next_event['location']} at {next_event['time']}")
+
+            #Buscar en eventos aleatorios (solo para personajes vivos Y después de completar todos los obligatorios)
+            #if True:
+            if (alive and all_mandatory_completed and 
+                current_loop in random_events and character in random_events[current_loop]):
+            
+                for event in random_events[current_loop][character]:
+                    if (event["time"] == current_time_block and 
+                        event["location"] in icon_data and
+                        not event_completed(event["event"])):
+                        if character not in icon_data[event["location"]]["alive"]:
+                            icon_data[event["location"]]["alive"].append(character)
+                            print(f"Evento de {event['event']} ghost, en {event['location']} at {event['time']}")
+            
+            # Buscar en eventos fantasmas (solo para personajes muertos, sin importar eventos completados)
+            if (not alive and current_loop in mandatory_events and 
+                character in mandatory_events[current_loop]):
+                
+                next_ghost_event_index = globals().get(f"{character}_ghost_events_completed", 0)
+                next_event = mandatory_events[current_loop][character][next_ghost_event_index]
+                    
+                if (next_event["time"] == current_time_block and 
+                        next_event["location"] in icon_data and
+                        not event_completed(next_event["event"])):
+                        
+                        if character not in icon_data[next_event["location"]]["ghost"]:
+                            icon_data[next_event["location"]]["ghost"].append(character)
+                            print(f"-----------------Evento de {next_event['event']} ghost, en {next_event['location']} at {next_event['time']}")
+        
+
+
+                # for event in mandatory_events[current_loop][character]:
+                #     if (event["time"] == current_time_block and 
+                #         event["location"] in icon_data and
+                #         not event_completed(event["event"])):
+                        
+                #         if character not in icon_data[event["location"]]["ghost"]:
+                #             icon_data[event["location"]]["ghost"].append(character)
+        
+        return icon_data
+
+        # Función auxiliar para verificar si un evento ya fue completado
+    def event_completed(event_name):
+        # Esta función debería verificar en tu sistema de guardado si el evento ya ocurrió
+        # Puedes usar variables persistentes o otro sistema de tracking
+        # Por ejemplo: return persistent.event_tracker.get(event_name, False)
+        return False  # Cambiar según tu implementación
+
     #Funcaion para dibujar personajes en mapa
 
-    def get_characters_in_location(loop, location, time_block):
-        present_chars = []
+    # def get_characters_in_location(loop, location, time_block):
+    #     present_chars = []
 
-        for char in ["yamato", "hikaru", "shiori"]:
-            # PERSONAJE MUERTO → usa fantasma
-            if getattr(persistent, f"{char}_dies", False):
-                ghost_completed = getattr(store, f"{char}_ghost_events_completed", 0)
-                events_list = ghost_events.get(char, [])
-                if ghost_completed < len(events_list):
-                    # Si quieres que fantasma aparezca SIEMPRE en el mapa:
-                    present_chars.append(char)
-                    # Si quieres que fantasma dependa de location/time,
-                    # necesitarías guardar esos datos también en ghost_events
-            else:
-                # OBLIGATORIOS
-                events_completed = getattr(store, f"{char}_events_completed", 0)
-                if events_completed < len(mandatory_events[loop][char]):
-                    next_event = mandatory_events[loop][char][events_completed]
-                    if next_event["location"] == location and next_event["time"] == time_block:
-                        present_chars.append(char)
-                        continue
+    #     for char in ["yamato", "hikaru", "shiori"]:
+    #         # PERSONAJE MUERTO → usa fantasma
+    #         if getattr(persistent, f"{char}_dies", False):
+    #             ghost_completed = getattr(store, f"{char}_ghost_events_completed", 0)
+    #             events_list = ghost_events.get(char, [])
+    #             if ghost_completed < len(events_list):
+    #                 # Si quieres que fantasma aparezca SIEMPRE en el mapa:
+    #                 present_chars.append(char)
+    #                 # Si quieres que fantasma dependa de location/time,
+    #                 # necesitarías guardar esos datos también en ghost_events
+    #         else:
+    #             # OBLIGATORIOS
+    #             events_completed = getattr(store, f"{char}_events_completed", 0)
+    #             if events_completed < len(mandatory_events[loop][char]):
+    #                 next_event = mandatory_events[loop][char][events_completed]
+    #                 if next_event["location"] == location and next_event["time"] == time_block:
+    #                     present_chars.append(char)
+    #                     continue
                 
-                # RANDOMS
-                for event_data in random_events[loop][char]:
-                    if (event_data["location"] == location and event_data["time"] == time_block):
-                        event_key = f"{loop}_{char}_{event_data['event']}"
-                        if event_key not in shown_random_events:
-                            present_chars.append(char)
-                            break  # Evitar duplicados
+    #             # RANDOMS
+    #             for event_data in random_events[loop][char]:
+    #                 if (event_data["location"] == location and event_data["time"] == time_block):
+    #                     event_key = f"{loop}_{char}_{event_data['event']}"
+    #                     if event_key not in shown_random_events:
+    #                         present_chars.append(char)
+    #                         break  # Evitar duplicados
 
-        print("present_chars: ", present_chars, "\n")
-        return present_chars
-
-
+    #     print("present_chars: ", present_chars, "\n")
+    #     return present_chars
 
 
-    def build_icon_data(loop, time_block):
-        result = []
-        for location in locations:
-            print("location: ", location, "*************************************\n")
 
-            chars_here = get_characters_in_location(loop, location, time_block)
-            print("chars_here: ", chars_here, "\n")
+
+    # def build_icon_data(loop, time_block):
+    #     result = []
+    #     for location in locations:
+    #         print("location: ", location, "*************************************\n")
+
+    #         chars_here = get_characters_in_location(loop, location, time_block)
+    #         print("chars_here: ", chars_here, "\n")
             
-            center_x, center_y = location_positions[location]
-            print("Center: ", location_positions[location], "\n")
+    #         center_x, center_y = location_positions[location]
+    #         print("Center: ", location_positions[location], "\n")
 
-            positions = get_circle_positions(center_x, center_y, 50, len(chars_here))
-            print("positions: ", positions, "\n")
+    #         positions = get_circle_positions(center_x, center_y, 50, len(chars_here))
+    #         print("positions: ", positions, "\n")
 
-            for (pos, char) in zip(positions, chars_here):
-                result.append((pos, char))
+    #         for (pos, char) in zip(positions, chars_here):
+    #             result.append((pos, char))
 
-            #print("result: ", result, "\n")
-        return result
-
-
+    #         #print("result: ", result, "\n")
+    #     return result
 
 
-#     def check_mandatory_events(location):
-
-#         for char in ["yamato", "hikaru", "shiori"]:
-#             events_completed = getattr(store, f"{char}_events_completed", 0)
-#             print( f"{char}_events_complete : {events_completed}")
-#             if events_completed < len(mandatory_events[store.current_loop][char]):
-#                 next_event = mandatory_events[store.current_loop][char][events_completed]
-#                 if (next_event["location"] == location and next_event["time"] == store.current_time_block):
-#                     setattr(store, f"{char}_events_completed", events_completed + 1)
-#                     return next_event["event"]
-#         return None
-
-
-# # Función para obtener evento aleatorio (CORREGIDA - por personaje)
-#     def get_random_event(loop, location):
-#         """
-#         Obtiene un evento aleatorio disponible solo de personajes
-#         que hayan completado todos sus eventos obligatorios
-#         """
-#         # Verificar si hay eventos para este loop
-#         if loop not in random_events:
-#             return None
-        
-#         available_events = []
-        
-#         # Revisar todos los personajes
-#         for character in random_events[loop]:
-#             # Verificar si el personaje tiene eventos aleatorios
-#             if not random_events[loop][character]:
-#                 continue
-            
-#             # VERIFICAR SI EL PERSONAJE COMPLETÓ SUS EVENTOS OBLIGATORIOS
-#             events_completed = getattr(store, f"{character}_events_completed", 0)
-#             total_mandatory = len(mandatory_events[loop][character])
-            
-#             # Solo considerar personajes que completaron todos sus eventos obligatorios
-#             if events_completed < total_mandatory:
-#                 continue  # Saltar este personaje
-                
-#             # Filtrar eventos que coincidan con ubicación y tiempo actual
-#             for event_data in random_events[loop][character]:
-#                 if (event_data["location"] == location and 
-#                     event_data["time"] == store.current_time_block):
-                    
-#                     # Verificar si el evento ya fue mostrado
-#                     event_key = f"{loop}_{character}_{event_data['event']}"
-#                     if event_key not in shown_random_events:
-#                         available_events.append((character, event_data))
-        
-#         # Si no hay eventos disponibles
-#         if not available_events:
-#             return None
-        
-#         # Elegir un evento aleatorio
-#         chosen_character, chosen_event = renpy.random.choice(available_events)
-        
-#         # Marcar como mostrado
-#         event_key = f"{loop}_{chosen_character}_{chosen_event['event']}"
-#         shown_random_events[event_key] = True
-        
-#         return chosen_event["event"]
-
-    # def get_ghost_event(character):
-    #     ghost_completed = getattr(store, f"{character}_ghost_events_completed", 0)
-        
-    #     # Obtener la lista de eventos fantasma de ese personaje
-    #     events_list = ghost_events.get(character, [])
-        
-    #     if ghost_completed < len(events_list):
-    #         # Avanzar el contador
-    #         setattr(store, f"{character}_ghost_events_completed", ghost_completed + 1)
-    #         return events_list[ghost_completed]
-        
-    #     return None  # No hay más eventos fantasma
 
 # Label para cuando no hay eventos
 label location_empty(location):
