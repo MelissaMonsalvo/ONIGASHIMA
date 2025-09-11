@@ -57,7 +57,7 @@ label loop2_shiori_mandatory1:
 
     shiori "But are you sure it's really dead?"
 
-   MC "Definitely."
+    MC "Definitely."
 
     menu:
             "‘I burned it.’":
@@ -359,7 +359,7 @@ label loop2_shiori_mandatory4:
 
     shiori "Can't sleep?"
 
-    m=n2 "I don't sleep."
+    n2 "I don't sleep."
 
     MC "Yeah. The red moon is coming, so I--"
 
