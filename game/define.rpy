@@ -18,6 +18,7 @@ image placeholder = "placeholder.jpg"
 # define persistent.loop1 = False ## player has cleared loop1
 # define persistent.loop2 = False ## player has cleared loop2
 # define persistent.loop3 = False ## player has cleared loop3
+# define persistent.loop4 = False ## player has cleared loop4
 # define persistent.trueending.unlocked = False ## player has picked all requirements to get the true ending
 
 # define persistent.shiori_dies = False ## shiori dead
@@ -48,7 +49,7 @@ image placeholder = "placeholder.jpg"
 
 ## this one below is for you to only be able to rename MC after the true end is unlocked
 
-# define persistent.seen_true_end = False 
+# define persistent.seen_true_end = False
 
 ## this is to check if this is player's first playthrough
 

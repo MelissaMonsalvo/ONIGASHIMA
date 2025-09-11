@@ -42,6 +42,16 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    if persistent.loop8:
+        jump prologue_loop8
+    if persistent.loop7:
+        jump prologue_loop7
+    if persistent.loop6:
+        jump prologue_loop6
+    if persistent.loop5:
+        jump prologue_loop5
+    if persistent.loop4:
+        jump prologue_loop4
     if persistent.loop3:
         jump prologue_loop3
     if persistent.loop2:

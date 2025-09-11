@@ -789,9 +789,13 @@ label hikaru_trust:
 
     n "Their pulse is visible under the red."
 
-    n "You lean in, closer..."
+    n "You lean in, to wake them up, your foreheads are touching now."
 
-    MC "...You can try again, with [persistent.player_name]."
+    hikaru "[persistent.player_name]?"
+
+    MC "Hikaru..."
+
+    MC "...You'll meet [persistent.player_name]."
 
     MC "In the afterlife, when I’m done with you."
 
@@ -845,7 +849,7 @@ label hikaru_trust:
 
     n "No, no..."
 
-    n "My chest hurts... Is it yours...? Or mine...?"
+    n "My chest hurts... {w}My chest? Yours...?"
 
     n "Why does it hurt?"
 
@@ -863,7 +867,7 @@ label hikaru_trust:
 
     MC "I DO remember where I saw the other red scarf, even if you don't."
 
-    MC "We left it right next to that body you tore up."
+    MC "We left it right next to your body."
 
     n "...!?"
 

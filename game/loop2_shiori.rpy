@@ -40,7 +40,7 @@ label loop2_shiori:
 
     shiori "That’s okay. I don’t mind."
 
-    shiori "We can stay this way until you don't feel lonely anymore."
+    shiori "We can stay this way until you don't feel lonely anymore~"
 
     n "She’s curling in closer and presses her head even more to your shoulder."
 
@@ -56,7 +56,7 @@ label loop2_shiori:
 
     n2 "...Soon."
 
-    n2 "Meat will move. Moon will open. Hunger will walk."
+    n2 "Your meat will be mine."
 
     n "...No..."
 
@@ -64,7 +64,7 @@ label loop2_shiori:
 
     n "It's raining today, you're drenched in mud and dirt, and--"
 
-    n "--is that blood?"
+    n "--is that blood? Whose blood?"
 
     n "Shiori’s already waiting."
 

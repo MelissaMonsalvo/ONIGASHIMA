@@ -664,9 +664,9 @@ label loop1_yamato:
 
     pause(0.3)
 
-    yamato "Guess an apology is overdue, for everything I spat at you."
+    yamato "Guess an apology is overdue, for everything I spat at ya."
 
-    yamato "And for actin' like I wanted you gone."
+    yamato "And for actin' like I wanted ya gone."
 
     yamato "I..."
 
@@ -682,7 +682,7 @@ label loop1_yamato:
 
     MC "...Urk..."
 
-    yamato "Oi. You alright?"
+    yamato "Oi. Ya alright?"
 
     n "You nod before thinking as the heat behind your eyes pulses again."
 
@@ -690,7 +690,7 @@ label loop1_yamato:
 
     yamato "Look, if this ain't what you want--"
 
-    n "He waits, searching for an answer in your face. And yet you stay silent, never  once shaking your head, yamato takes it as a yes."
+    n "He waits, searching for an answer in your face. And yet you stay silent, never once shaking your head, so yamato takes it as a yes."
 
     play sound "sfx/shift_closer.ogg"
 
@@ -698,9 +698,9 @@ label loop1_yamato:
 
     n "His breath brushes your cheek now, you're frozen in place."
 
-    n "Youo feel the world tilts again faster."
+    n "You feel the world tilts again faster."
 
-    n "And finally, finally, softly, his lips find yours. His hands and slowly holding your shoulder, shaking, trembling. He doesn't know what he's doing."
+    n "And finally, finally, softly, his lips find yours. His hands slowly holding your shoulder, shaking, trembling. He doesn't know what he's doing."
 
     n "Right at that moment, something underneath your skin wants out."
 

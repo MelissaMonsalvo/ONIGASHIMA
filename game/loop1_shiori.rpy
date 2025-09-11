@@ -280,11 +280,9 @@ label loop1_shiori:
 
     n "Her eyes shimmer under the Red Moon."
 
-    n "Her hands are outstretched now, gentle, almost trembling."
+    n "Her hands are outstretched now, welcoming you."
 
-    n "An invitation...? A threat...?"
-
-    n "So you... place your hand against her cheek."
+    n "You move closer and place your hand against her cheek."
 
     shiori "...[persistent.player_name]-sama?"
 
@@ -302,13 +300,13 @@ label loop1_shiori:
 
     n "You kiss her back, then your lips moves down, down, down...."
 
-    n "Her breath catches in her throat, but she doesn’t stop you."
+    n "Her breath hitches in her throat, but she doesn’t stop you."
 
     n "Then, your teeth close around her shoulder."
 
     shiori "Ah-"
 
-    n "Are you sure this is the right time to do this? The red-"
+    n "Are you sure this is the right time to do this? The red--"
 
     MC "I said shut up."
 
@@ -318,13 +316,13 @@ label loop1_shiori:
 
     n "*sigh*"
 
-    n "You press your mouth harder. Her skin splits, then blood fills your mouth."
+    n "You press your mouth harder. Her skin splits slowly, then her blood fills your mouth."
 
     shiori "Hh-ah... [persistent.player_name]-sa..."
 
     play sound "sfx/drip.ogg"
 
-    n "She reaches up to your back, trembling, nails raking. But you feel none of it."
+    n "She reaches up to your back, trembling, nails raking across your back. But you feel none of it."
 
     MC "You said you love me, right Shiori? So I’m returning the favor."
 
@@ -332,7 +330,7 @@ label loop1_shiori:
 
     shiori "...Hah."
 
-    n "What in the kami-sama is happening?"
+    n "W-What in the kami-sama is happening?"
 
     play sound "sfx/heartbeat_slow.ogg"
 
@@ -341,6 +339,8 @@ label loop1_shiori:
     MC "...Of you."
 
     shiori "Hh-If it’s you, then..."
+
+    ## black BG
 
     play sound "sfx/squelch1.ogg"
 
