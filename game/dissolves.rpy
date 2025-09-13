@@ -298,6 +298,6 @@ define in_image1 = ImageDissolve("/dissolvers/image1.jpg", 6.0)
 define out_image1 = ImageDissolve("/dissolvers/image1.jpg", 6.0, reverse=True)
 ##########image0.jpg
 ##########spiral2.png
-define in_eye = ImageDissolve("/dissolvers/eye.png", 6.0)
-define out_eye = ImageDissolve("/dissolvers/eye.png", 6.0, reverse=True)
+define in_eye = ImageDissolve("/dissolvers/eye.png", 1.0)
+define out_eye = ImageDissolve("/dissolvers/eye.png", 1.0, reverse=True)
 ##########eye.png

@@ -211,6 +211,8 @@ label prologue:
     stop music fadeout 1.0
     stop muzak fadeout 1.0
 
+label village_entrance:
+
     n "Finally."
 
     n "Once you step on the village borders, everything changes."

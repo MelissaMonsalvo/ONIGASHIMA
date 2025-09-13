@@ -18,6 +18,60 @@ transform midright2:
 image tiledFog = im.Tile(im.Scale("fog.png", 1600, 600), size=(2400, 800))
 image particleFog = SnowBlossom("fog-particle.png", count=80, border=600, xspeed=50, yspeed=0, start=5, fast=True, horizontal=True)
 
+### horror circle
+
+image circle_ghost:
+    "Ghosts/Circle/1.jpg"
+    0.04
+    "Ghosts/Circle/2.jpg"
+    0.04
+    "Ghosts/Circle/3.jpg"
+    0.04
+    "Ghosts/Circle/4.jpg"
+    0.04
+    "Ghosts/Circle/5.jpg"
+    0.04
+    "Ghosts/Circle/6.jpg"
+    0.04
+    "Ghosts/Circle/7.jpg"
+    0.04
+    "Ghosts/Circle/8.jpg"
+    0.04
+    "Ghosts/Circle/9.jpg"
+    0.04
+    "Ghosts/Circle/10.jpg"
+    0.04
+    "Ghosts/Circle/11.jpg"
+    0.04
+    "Ghosts/Circle/12.jpg"
+    0.04
+    "Ghosts/Circle/13.jpg"
+    0.04
+    "Ghosts/Circle/14.jpg"
+    0.04
+    "Ghosts/Circle/15.jpg"
+    0.04
+    "Ghosts/Circle/16.jpg"
+    0.04
+    "Ghosts/Circle/17.jpg"
+    0.04
+    "Ghosts/Circle/18.jpg"
+    0.04
+    "Ghosts/Circle/19.jpg"
+    0.04
+    "Ghosts/Circle/20.jpg"
+    0.04
+    "Ghosts/Circle/21.jpg"
+    0.04
+    "Ghosts/Circle/22.jpg"
+    0.04
+    "Ghosts/Circle/23.jpg"
+    0.04
+    "Ghosts/Circle/24.jpg"
+    0.04
+    "Ghosts/Circle/25.jpg"
+    0.04
+    repeat
 
 
 ###EYEEESSSS####
