@@ -169,7 +169,7 @@ label loop3_shiori:
     play sound "sfx/mouth_clicks.ogg"
     $ renpy.pause(0.4)
 
-    shiori "Ne, Yamakui..."
+    shiori "Ne, Yamakui-sama..."
 
     shiori "Do you remember the first time we met~?"
 
@@ -177,11 +177,11 @@ label loop3_shiori:
 
     shiori "It was dark, I was brought to the forest to die alone."
 
-    shiori "I couldn't remember the priests's face, so I'm sure you ate him... {w}or her?"
+    shiori "I couldn't remember the priests's face, so I'm sure you ate him... {w}or her? Ah, that doesn't matter anymore."
 
-    shiori "The rope scratched my wrists. And my legs."
+    shiori "The rope scratched my skin, I was hurt all over."
 
-    shiori "He was dragging me up the mountain, saying something about... {w}offerings, maybe?"
+    shiori "The priest was dragging me up the mountain, saying something about... {w}offerings, maybe?"
 
     n2 "..."
 
@@ -189,32 +189,24 @@ label loop3_shiori:
 
     shiori "You never once looked at me..."
 
+    shiori "Even though I was an easy meal, even though I was bound and bleeding..."
+
     play sound "sfx/squelch2.ogg"
     $ renpy.pause(0.3)
     play sound "sfx/gulp.ogg"
     $ renpy.pause(0.3)
 
-    shiori "You ate them instead. The sinner. The evil person."
+    shiori "But you ate them instead. The sinner, the evil person."
 
     n "..."
 
-    shiori "I remember standing there and watched... I think I watched you eat."
+    shiori "I remember standing there and watched... {w}I think I watched you eat."
 
-    shiori "And I thought... {w}you were beautiful."
-
-    n2 "Hah."
-
-    n2 "I dId nOt tOUcH yoU tHeN."
-
-    shiori "You spared me~"
-
-    shiori "You were hungry, but you left me."
-
-    shiori "No one ever leaves me."
+    shiori "And I thought... {w}you were beautiful. You saved my life. You only eat those who did wrongdoings!"
 
     shiori "So I decided, right there... {w}that I would love you."
 
-    shiori "Forever."
+    shiori "Forever and ever."
 
     n2 "YoU aRe... {w}sTrAnGe."
 
@@ -233,7 +225,7 @@ label loop3_shiori:
     play sound "sfx/throat_rattle.ogg"
 
     MC "HhhHhaHhhAHaHhhHAH~"
-    
+
     MC "YoU thInK i SpArEd yOu bEcAuse i cArEd?"
 
     shiori "..."
@@ -249,7 +241,7 @@ label loop3_shiori:
     play sound "sfx/gulp.ogg"
     $ renpy.pause(0.3)
 
-    MC "BeCAuSe iT TasTES BEttER."
+    MC "BeCAuSe iT TasTED BEttER."
 
     shiori "..."
 

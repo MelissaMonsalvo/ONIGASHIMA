@@ -318,9 +318,9 @@ label loop3_hikaru:
 
     n2 "..."
 
-    hikaru "I still kept the scarf, you know?"
+    hikaru "I still keep the scarf, you know?"
 
-    hikaru "You gave it to me before you left."
+    hikaru "The one you gave before you left?"
 
     hikaru "It still feels like you're here..."
 

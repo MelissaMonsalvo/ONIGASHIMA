@@ -217,7 +217,7 @@ label loop3_yamato:
 
     MC "hOoOoOoO..."
 
-    yamato "C'mon, Oni! Let's finish this!"
+    yamato "C'mon, ya bastard! Let's finish this!"
 
     MC "So HonORaBLe, tHis MuTt."
 
@@ -259,7 +259,7 @@ label loop3_yamato:
 
     n2 "I lEaN bAcK."
 
-    n2 "I tAp tHe bAcK oF hIs hAnD wItH mY fInGeRs."
+    n2 "I tAp tHe bAcK oF hIs heAd wItH mY fInGeRs."
 
     MC "BoOP."
 
