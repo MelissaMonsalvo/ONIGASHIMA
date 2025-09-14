@@ -35,7 +35,7 @@ label prologue_trueend:
 
     n2 "So I dOn’T dIe oF sIlEnCe."
     n2 "So I cAn LiStEn."
-    n2 "ThIs TiMe, I’ll sHuT uP. {w}OnLy YoU, [persistent.player_name]. {w}OnLy YoU."
+    n2 "ThIs TiMe, I’ll sHuT uP. {w}OnLy YoU, [persistent.player_name]. {w}OnLy YoU cAn TalK."
 
     n "I don’t... I don’t even know who I am."
 

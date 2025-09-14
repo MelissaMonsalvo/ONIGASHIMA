@@ -230,11 +230,15 @@ label village_entrance:
 
     n "You walk toward a familliar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
 
+    "Elder" "Im-Impossible..."
+
+    "Elder" "This couldn't be--Ahem!"
+
     "Elder" "Yes... {w=0.4}I believe this is truly the Yamakui's armor."
 
     pause 0.5
 
-    "Elder" "The Oni is no more!"
+    "Elder" "T-The Oni is no more!"
 
     play sound "sfx/cheer.mp3"
 
