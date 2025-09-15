@@ -3,6 +3,22 @@ init python:
 
 define mc2 = Character("[name]")
 
+# =========================
+# ROUTE FLAGS
+# =========================
+default persistent.route1 = True
+default persistent.route2 = False
+
+# Use a normal store variable, not config
+default current_route = "route1"
+
+init python:
+    def update_route():
+        if persistent.route2:
+            store.current_route = "route2"
+        else:
+            store.current_route = "route1"
+
 init python:
     # True name we want to force
     true_name_target = "Yamakui"
@@ -42,7 +58,17 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    scene black
+    n "Blbakljndklashdlksfhdskf"
+    menu:
+        "Hello":
+            n "Hello"
+        "Hi":
+            n "Hi"
     if persistent.trueendingunlocked:
+        $ persistent.route1 = True
+        $ persistent.route2 = False
+        $ update_route()
         jump prologue_trueend
     if persistent.loop8:
         jump prologue_loop8
@@ -57,6 +83,9 @@ label start:
     if persistent.loop3:
         jump prologue_loop3
     if persistent.loop2:
+        $ persistent.route1 = True
+        $ persistent.route2 = False
+        $ update_route()
         jump prologue_loop2
     if persistent.loop1:
         jump prologue_loop1

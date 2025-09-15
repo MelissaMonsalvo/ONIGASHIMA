@@ -1,4 +1,14 @@
-﻿################################################################################
+﻿init python:
+    style.choice_text = Style(style.default)
+    style.choice_text.size = 70         # Make bigger (try 70-90 for very big)
+    style.choice_text.bold = True
+    style.choice_text.color = "#232323" # Set color (change as needed)
+    style.choice_text.outlines = [(2, "#fff", 0, 0)] # White outline, optional
+    style.choice_text.xalign = 0.5
+    style.choice_text.yalign = 0.9
+    style.choice_text.ypadding = 100
+
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -195,21 +205,156 @@ style input:
     xalign gui.dialogue_text_xalign
     xmaximum gui.dialogue_width
 
+# =========================
+# MASK IMAGES (dynamic per route)
+# =========================
 
-## Choice screen ###############################################################
-##
-## This screen is used to display the in-game choices presented by the menu
-## statement. The one parameter, items, is a list of objects, each with caption
-## and action fields.
-##
-## https://www.renpy.org/doc/html/screen_special.html#choice
+# Top masks
+image mask_top = ConditionSwitch(
+    "current_route == 'route1'", "gui/choices/mask_separate/yellow_mask.png",
+    "current_route == 'route2'", "gui/choices/mask_separate/red_mask.png"
+)
+
+# Bottom masks
+image mask_bottom = ConditionSwitch(
+    "current_route == 'route1'", "gui/choices/mask_separate/yellow_mask.png",
+    "current_route == 'route2'", "gui/choices/mask_separate/red_mask.png"
+)
+
+# =========================
+# ANIMATIONS FOR CHOICES
+# =========================
+transform mask_top_anim:
+    xpos -100
+    alpha 0.0
+    zoom 0.7
+    parallel:
+        linear 0.4 alpha 1.0
+    parallel:
+        linear 0.2 zoom 1.0
+    linear 0.2 xpos 1000
+
+transform mask_bottom_anim:
+    xpos 1100
+    alpha 0.0
+    zoom 0.7
+    parallel:
+        linear 0.4 alpha 1.0
+    parallel:
+        linear 0.2 zoom 1.0
+    linear 0.2 xpos -100
+
+
+transform button_top_anim:
+    crop (0, 0, 0, 426)
+    alpha 0.0
+    zoom 0.7
+
+    parallel:
+        linear 0.4 alpha 1.0
+    parallel:
+        linear 0.2 zoom 1.0
+    linear 0.2 crop (0, 0, 1301, 426)
+transform button_bottom_anim:
+    crop (1301, 0, 0, 426)
+    xpos 1301
+    alpha 0.0
+    zoom 0.7
+
+    parallel:
+        linear 0.5 alpha 1.0
+    parallel:
+        linear 0.2 zoom 1.0
+    linear 0.2crop (0, 0, 1301, 426) xpos 0
+
+transform choice_text_fadein:
+    alpha 0.0
+    linear 2 alpha 1.0
+
+
+# =========================
+# BUTTON HALVES
+# =========================
+
+# Route 1 (default theme)
+image top_half_idle_r1 = "gui/choices/mask_separate/choice_yellow_right_idle_background.png"
+image top_half_hover_r1 = "gui/choices/mask_separate/choice_yellow_right_hover_background.png"
+image bottom_half_idle_r1 = "gui/choices/mask_separate/choice_yellow_left_idle_background.png"
+image bottom_half_hover_r1 = "gui/choices/mask_separate/choice_yellow_left_hover_background.png"
+# Route 2 (alt theme)
+image top_half_idle_r2 = "gui/choices/mask_separate/choice_red_right_idle_background.png"
+image top_half_hover_r2 = "gui/choices/mask_separate/choice_red_right_hover_background.png"
+image bottom_half_idle_r2 = "gui/choices/mask_separate/choice_red_left_idle_background.png"
+image bottom_half_hover_r2 = "gui/choices/mask_separate/choice_red_left_hover_background.png"
+
+default hovered_choice = -1
+
+# ======== CHOICE SCREEN =========
 
 screen choice(items):
-    style_prefix "choice"
-
     vbox:
-        for i in items:
-            textbutton i.caption action i.action
+        spacing 40
+        xalign 0.5
+        yalign 0.5
+
+        for idx, (caption, action, chosen) in enumerate(items):
+
+            button:
+                action action
+                xalign 0.5
+                xsize 1301
+                ysize 426
+                background None
+
+                hovered SetVariable("hovered_choice", idx)
+                unhovered SetVariable("hovered_choice", -1)
+
+                fixed:
+                    xysize (1301, 426)
+
+                    # Show correct background for each button (idle or hover)
+                    if idx == 0:
+                        add (
+                            "top_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "top_half_idle_r1" if current_route == "route1" else
+                            "top_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "top_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_top_anim
+                    else:
+                        add (
+                            "bottom_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "bottom_half_idle_r1" if current_route == "route1" else
+                            "bottom_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "bottom_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_bottom_anim
+
+                    # Only one mask per button
+                    if idx == 0:
+                        add "mask_top" xpos 0 ypos 0 at mask_top_anim
+                    else:
+                        add "mask_bottom" xpos 0 ypos 0 at mask_bottom_anim
+
+                    # Centered text
+                    text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 style choice_vbox is vbox
