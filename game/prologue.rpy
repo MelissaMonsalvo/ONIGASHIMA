@@ -24,11 +24,11 @@ label prologue:
     scene black with fade
     #show screen eyessss
     #n "testing fer eyes."
-    show flesh at scary_flicker
+    show flesh2 at scary_flicker
     # particleFog with dissolve:
         #ypos 0.4
 
-    play music "heavy_breathing.ogg"
+    play music "heavy breathing.mp3"
 
     n "{cps=18}It is dark.{/cps}"
 
@@ -61,7 +61,7 @@ label prologue:
 
     n "Congratulations. {w=0.3}You did it. {w=0.3}You did it. {w=0.3}You {b}did it.{/b}"
 
-    n "The enemy is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}."
+    n "The enemy is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}"
 
     n "The threat is gone. Gone. {w=0.2}Gone. {w=0.2}Isn’t it?"
 
@@ -100,7 +100,7 @@ label prologue:
 
     n "And... it looked smaller than the legends said."
 
-    n "It had {i}hands.{/i} Smooth hands. No claws. {w=0.2}Mortal?"
+    n "It had {i}hands.{/i} Smooth hands, without claws. {w=0.2}Mortal's hands?"
 
     n "No. No, that can’t be right. The sound it made when you cut through it... {w=0.3}that wasn’t--"
 
@@ -131,10 +131,11 @@ label prologue:
     n "...Because it’s {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}. {w=0.3}You made sure."
 
     stop muzak
+    stop music
 
     n "{cps=12}You made sure a thousand times already.{/cps}"
 
-    scene black with fade
+    scene black with out_212
 
     play muzak "sfx/forest night.wav"
 
@@ -213,14 +214,19 @@ label prologue:
 
 label village_entrance:
 
+    scene village day with in_182:
+        zoom 0.5
+
     n "Finally."
 
     n "Once you step on the village borders, everything changes."
 
     n "The sky looks like it splits into two once the treeline dissapears... {w}The heavenly shine that you've imagined."
 
-    play sound "sfx/metal drag.wav"
+    with vpunch
+    play sound "sfx/bucketdrop.wav"
     $ renpy.pause(0.8)
+
 
     n "Someone sees you, drops their bucket. Everyone stops what they are doing to look at you."
 
@@ -315,10 +321,24 @@ label after_get_name:
 
     n "You {i}really, really{/i} like that."
 
-    ## shrine BG
-    with fade
+    scene village day:
+        # Start at normal crop
+        anchor (0.5, 0.5)
+        xpos 0.5 ypos 0.5
+        xanchor 0.5 yanchor 0.5
+        zoom 0.6
+        linear 0.15 zoom 0.61
+        linear 0.08 xpos 0.51 ypos 0.49
+        linear 0.08 xpos 0.5 ypos 0.5
+        # Second stumble, more pronounced
+        linear 0.12 zoom 0.63
+        linear 0.10 xpos 0.48 ypos 0.52
+        linear 0.10 xpos 0.5 ypos 0.5
+        # Hold at max zoom
+        linear 0.15 zoom 0.62
+        pause 0.3
 
-    n "Later, you’re pulled toward the shrine steps."
+    n "Later, you are pulled to stand in front of everyone, almost stumbling on your feet."
 
     n "You wonder why the Elder's hand is shaking when he tugs your arm."
 
@@ -357,7 +377,7 @@ label after_get_name:
     n "Someone shouts from the back, it might've been your friend, Shiori."
 
 
-    MC "Thank you, everyone. I didn’t do it alone."
+    MC normal "Thank you, everyone. I didn’t do it alone."
 
     MC "I had your hopes, {w}your prayers, {w}your bento. Aaaand that weird old charm from our beloved shrine maiden..."
 
@@ -377,7 +397,7 @@ label after_get_name:
 
     with fade
 
-    n "As you descend and the crowds part as you walk, you hear whispering."
+    n "As the crowds part as you walk, you hear whispering."
 
     $ renpy.music.set_volume(0.7)
     pause 0.2
@@ -390,6 +410,9 @@ label after_get_name:
     $ renpy.music.set_volume(0.3)
     pause 0.2
 
+    show darken
+    with dissolve
+
     "Man" "{size=*0.95}{alpha=0.8}The next Red Moon’s coming soon, isn’t it?{/alpha}{/size}"
 
     "Woman" "{size=*0.95}{alpha=0.8}Think we’ll be safe this time?{/alpha}{/size}"
@@ -400,7 +423,19 @@ label after_get_name:
 
     n "{size=*0.9}{alpha=0.5}...Right?{/alpha}{/size}"
 
+    $ renpy.music.set_volume(0.4)
+    pause 0.2
+    $ renpy.music.set_volume(0.5)
+    pause 0.2
+    $ renpy.music.set_volume(0.6)
+    pause 0.2
+    $ renpy.music.set_volume(0.7)
+    pause 0.2
     $ renpy.music.set_volume(0.8)
+    pause 0.2
+
+    hide darken
+    with dissolve
 
     n "You can still hear people chanting, laughing, celebrating."
 
@@ -414,29 +449,34 @@ label after_get_name:
 
     n "Because Shiori, Yamato, and Hikaru immediately finds you."
 
-    n "Your childhood friends and confidants."
+
+
+    play sound "sfx/walk grass.mp3"
+
+    show shi normal at shiori_skipp:
+        xalign 0.44
+    with dissolve
+    pause 0.6
+    stop sound
+    show yam normal at yamato_zoom, left
+    with dissolve
+    pause 0.3
+    show hik normal at hikaru_zoom, right
+    with dissolve
+
+    shiori "{bt=1}Ehehe~ [persistent.player_name]-samaaa~!{/bt}"
+
+    n "They are your childhood friends and confidants."
 
     n "You grew up running through rice paddies together, shouting at the sky, skipping stone at puddles, and laughing with no care in the world."
 
     n "The four of you once chased the shrine cat for hours, caught the priest’s omamori instead."
 
-    n "Same hill, same dreams under falling petals."
+    n "Shiori used to say she’d marry someone strong."
 
-    n "Shiori said she’d marry someone strong."
-
-    n "Yamato wanted to guard the village gates as a samurai, sword in hand, pride in chest."
+    n "Yamato wanted to guard the village gates as a samurai, sword in hand and pride in his chest."
 
     n "And Hikaru… {w=0.4}Hikaru never said much, always just listening to you three ramble."
-
-    play sound "sfx/grassstep.ogg"
-
-    show shi normal at shiori_skipp
-    with dissolve
-    pause 0.6
-    show yam normal at yamato_zoom, left
-    with dissolve
-
-    shiori "{bt=1}Ehehe~ [persistent.player_name]-samaaa~!{/bt}"
 
     shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi seems like~!"
 
@@ -444,7 +484,8 @@ label after_get_name:
 
     yamato "Yeah? Could’ve fooled me. Runnin’ off like a dumbass without tellin’ anyone. What, too good to ask for backup?"
 
-    show shi normal at shakey
+    show shi normal at shakey:
+        xalign 0.44
 
     shiori "Mou~ Yamato, don’t be mean. [persistent.player_name]-sama’s super cool!"
 
@@ -456,7 +497,8 @@ label after_get_name:
 
     shiori "Ne, ne~ Tell us! What did Yamakui look like? Was it big? Did it have horns like a cow? Eyes like fireflies? Did it-"
 
-    show shi normal at shiori_tilt
+    show shi normal at shiori_tilt:
+        xalign 0.44
 
     shiori "{w=0.2}-whisper {sc=2}seeeeecrets{/sc} into your ear while it bled? Was it... {w}beautiful?"
 
@@ -466,9 +508,36 @@ label after_get_name:
 
     shiori "Ara~ What’s wrong, Yamato? Jealous of the oni?"
 
+    hide yam normal
+    show yam normal at left:
+
+        zoom 0.23
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+
+        linear 0.09 yoffset 65
+
+        linear 0.08 yoffset 30
+
+        linear 0.12 yoffset 0
+
+    with vpunch
+
     yamato "Jealous?! Of a corpse?"
 
     MC "Haha! You kinda sound like you are."
+
+
+    show yam normal at left, shakey:
+
+        zoom 0.23
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+
 
     yamato "Tch. Shaddup."
 
@@ -507,6 +576,9 @@ label after_get_name:
     $ renpy.music.set_volume(0.1)
     pause 0.2
 
+    show darken
+    with dissolve
+
     play sound "sfx/suzu.mp3"
 
     n "To the armor."
@@ -521,9 +593,17 @@ label after_get_name:
 
     hikaru "...Forget it."
 
-    n "The silence Hikaru leaves stays, as if something watching you three stand there with gaping mouths."
+    show hik normal behind darken:
 
-    hikaru "...Excuse me."
+        zoom 0.231
+        yoffset 460
+
+        linear 0.1 xzoom -1
+
+    hikaru "Excuse me."
+
+    hide hik
+    with dissolve
 
     play sound "sfx/walk grass.mp3"
     pause 0.4
@@ -543,6 +623,8 @@ label after_get_name:
 
     $ renpy.music.set_volume(0.8)
 
+
+
     yamato "Tch, Hikaru's always weird. Let 'em be."
 
     MC "...Yeah..."
@@ -560,7 +642,10 @@ label after_get_name:
 label beforefirstloop:
 
     scene black
-    with fade
+    with out_182
+
+    show petals_dense
+    show petals_scatter
 
     play music "Idle.mp3"
 
@@ -572,15 +657,39 @@ label beforefirstloop:
 
     n "{cps=20}So you must be {glitch=1.1}safe{/glitch}.{/cps}"
 
-    n "Shiori still walks beside you. She's still cheerful. Always. {w=0.3}Always."
+    show shi normal:
+        zoom 0.7
+        xanchor 0.5 yanchor 0.0
+        xpos -0.2 ypos 0.0
+        alpha 0.0
+
+        linear 0.7 xpos 0.4 alpha 1.0
+
+    n "Shiori still skips around beside you. She's still cheerful. Always. {w=0.3}Always."
 
     n "But she starts to leave white flowers-petals at the shrine."
 
     n "She always welcome you with her smile already in place."
 
-    n "You can’t tell if it’s mourning... or perhaps muscle memory."
+    n "You can’t tell if she is mourning.... or celebrating."
 
-    n "You pretend it doesn’t matter, because it’s easier that way."
+    show shi normal:
+        zoom 0.7
+        xanchor 0.5 yanchor 0.0
+        xpos 0.4 ypos 0.0
+        alpha 1.0
+
+        linear 1.2 xpos 1.2 alpha 0.0
+    pause 0.9
+    hide shi
+
+    show yam normal:
+        zoom 0.7
+        xanchor 0.5 yanchor 0.0
+        xpos -0.2 ypos -0.1
+        alpha 0.0
+
+        linear 0.7 xpos 0.6 alpha 1.0
 
     n "Yamato trains every day, always alone."
 
@@ -598,15 +707,43 @@ label beforefirstloop:
 
     n "You never look back, even though you always feel his stares in your bones."
 
+    show yam normal:
+        zoom 0.7
+        xanchor 0.5 yanchor 0.0
+        xpos 0.6 ypos -0.1
+        alpha 1.0
+
+        linear 1.2 xpos 1.2 alpha 0.0
+    pause 1.0
+    hide yam
+
     n "Hikaru..."
+
+    show hik normal:
+        zoom 0.7
+        xanchor 0.5 yanchor 0.0
+        xpos -0.1 ypos -0.1
+        alpha 0.0
+
+        linear 0.7 xpos 0.5 alpha 1.0
 
     n "Hikaru sits with you sometimes, calm as always. They don’t talk much. They never did."
 
     n "But their eyes..."
 
-    n "Their eyes linger too long. On your hands. Your eyes... No...{w=0.3 }Your neck?"
+    n "Their eyes linger much longer than necessary. On your hands, {w=0.2}your eyes... No...{w=0.3}Your neck?"
 
-    n "You don’t ask what they are looking for, because you don’t want the answer to it."
+    n "You never dare ask what they are looking for, because you don’t want the answer to it."
+
+    show hik normal:
+        zoom 0.7
+        xanchor 0.5 yanchor 0.0
+        xpos 0.5 ypos -0.1
+        alpha 1.0
+
+        linear 1.2 xpos 1.2 alpha 0.0
+    pause 0.9
+    hide hik
 
     n "What did you miss, [persistent.player_name]? {w=0.3}What didn’t you bring back down?"
 
@@ -634,8 +771,11 @@ label beforefirstloop:
 
     n "Why would you?"
 
+    scene black
+
     stop music
     play sound "sfx/suzu.mp3"
+    with sshake
 
     n "{cps=50}Because you killed it. The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}"
 
@@ -667,17 +807,11 @@ label beforefirstloop:
 
     n "You keep saying it {i}IS{/i} fine."
 
-    n "{w=0.2}You keep saying it."
-
-    n "{w=0.2}You keep saying it."
-
     n "{size=*0.95}Again, {w=0.5}again, {w=0.4}again, {w=0.3}again, {w=0.2}again, {w=0.1}again, {w=0.01}again--{/size}"
 
     MC normal "{size=*0.95}{alpha=0.8}It’s fine.{/alpha}{/size}"
 
     MC "{size=+4}{b}It’s FINE.{/b}{/size}"
-
-    MC "{cps=12}...Fine.{/cps}"
 
     n "{alpha=0.6}...Why doesn’t it help?{/alpha}"
 
@@ -688,7 +822,7 @@ label beforefirstloop:
 
     play sound "sfx/day change.mp3"
 
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}5 DAYS UNTIL THE NEXT RED MOON{/atl}{/color}"
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}7 DAYS UNTIL THE NEXT RED MOON{/atl}{/color}"
 
     with fade
 

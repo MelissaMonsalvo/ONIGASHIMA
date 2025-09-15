@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Spooktober")
+define config.name = _("Onigashima")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Spooktober"
+define build.name = "Onigashima"
 
 
 ## Sounds and music ############################################################
@@ -120,7 +120,10 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any
 ## other number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 80
+
+default preferences.volume.music = 0.80
+default preferences.volume.sfx = 0.99
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

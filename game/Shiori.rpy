@@ -1,5 +1,5 @@
 transform shiori_zoom:
-    zoom 0.26
+    zoom 0.18
     xanchor 0.5
     xalign 0.5
     yalign -0.45

@@ -1,3 +1,65 @@
+init:
+
+
+    python:
+
+        import math
+
+        class Shaker(object):
+
+            anchors = {
+                'top' : 0.0,
+                'center' : 0.5,
+                'bottom' : 1.0,
+                'left' : 0.0,
+                'right' : 1.0,
+                }
+
+            def __init__(self, start, child, dist):
+                if start is None:
+                    start = child.get_placement()
+                #
+                self.start = [ self.anchors.get(i, i) for i in start ]  # centreal position
+                self.dist = dist    # maximum distance, in pixels, from the starting point
+                self.child = child
+
+            def __call__(self, t, sizes):
+                # Float to integer... turns floating point numbers to
+                # integers.
+                def fti(x, r):
+                    if x is None:
+                        x = 0
+                    if isinstance(x, float):
+                        return int(x * r)
+                    else:
+                        return x
+
+                xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+
+                xpos = xpos - xanchor
+                ypos = ypos - yanchor
+
+                nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+                ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+
+                return (int(nx), int(ny), 0, 0)
+
+        def _Shake(start, time, child=None, dist=100.0, **properties):
+
+            move = Shaker(start, child, dist=dist)
+
+            return renpy.display.layout.Motion(move,
+                          time,
+                          child,
+                          add_sizes=True,
+                          **properties)
+
+        Shake = renpy.curry(_Shake)
+
+init:
+        $ sshake = Shake((0, 0, 0, 0), 1.0, dist=15)
+        $ timeleft = 180
+
 ###### POSITIONS ######
 
 transform midleft:
@@ -17,6 +79,23 @@ transform midright2:
 ### SHOW FOG ####
 image tiledFog = im.Tile(im.Scale("fog.png", 1600, 600), size=(2400, 800))
 image particleFog = SnowBlossom("fog-particle.png", count=80, border=600, xspeed=50, yspeed=0, start=5, fast=True, horizontal=True)
+image petals_dense = SnowBlossom(
+    "ppetal.png",
+    count=40,             # More particles for density
+    xspeed=(-10, 10),     # Not much horizontal movement
+    yspeed=(-60, -110),   # Gentle, slow rise
+    start=0.85,           # Lower part of screen (0.0 = top, 1.0 = bottom)
+    border=40
+)
+image petals_scatter = SnowBlossom(
+    "ppetal.png",
+    count=20,             # Fewer particles
+    xspeed=(-50, 50),     # More horizontal spread
+    yspeed=(-150, -230),  # Faster upward movement
+    start=0.0,            # Start near the top, so they scatter as they rise
+    border=40
+)
+
 
 ### horror circle
 
@@ -175,7 +254,7 @@ transform shiori_skipp:
     zoom 0.25
     xanchor 0.5
     xalign 0.5
-    yalign -0.45   # face zoom
+    yalign -0.60   # face zoom
 
     parallel:
         linear 1.2 zoom 0.26
@@ -198,7 +277,7 @@ transform shiori_tilt:
     zoom 0.25
     xanchor 0.5
     xalign 0.5
-    yalign -0.45
+    yalign -0.60
     yoffset 0
     xzoom 1.0
     yzoom 1.0
@@ -225,7 +304,7 @@ transform shiori_think:
     xanchor 0.5
     yanchor 0.1   # anchor the "neck"
     xalign 0.5
-    yalign -0.30
+    yalign -0.40
     xzoom 1.0
     yzoom 1.0
     yoffset 0
@@ -241,7 +320,7 @@ transform shiori_stomp:
     xanchor 0.5
     yanchor 0.1   # anchor the "neck"
     xalign 0.5
-    yalign -0.30
+    yalign -0.40
     xzoom 1.0
     yzoom 1.0
     yoffset 0

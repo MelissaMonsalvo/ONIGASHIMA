@@ -14,7 +14,8 @@ define yamato = Character("Yamato", color="#00d44a")
 define hikaru = Character("Hikaru", color="#092a43")
 
 image flesh = "BG/Flesh.png"
-image flesh2 = "BG/Flesh22.png"
+image flesh2 = "BG/Flesh2.png"
+image darken = "BG/darken.png"
 
 image dojo day = "BG/Dojo.jpg"
 image house day = "BG/House.jpg"

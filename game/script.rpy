@@ -58,13 +58,6 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
-    scene black
-    n "Blbakljndklashdlksfhdskf"
-    menu:
-        "Hello":
-            n "Hello"
-        "Hi":
-            n "Hi"
     if persistent.trueendingunlocked:
         $ persistent.route1 = True
         $ persistent.route2 = False

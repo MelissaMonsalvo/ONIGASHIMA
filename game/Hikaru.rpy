@@ -1,10 +1,10 @@
 transform hikaru_zoom:
-    zoom 0.23
+    zoom 0.231
     xanchor 0.5
-    yalign -0.05
+    yalign -0.09
     xzoom 1.0
     yzoom 1.0
-    yoffset 0
+    yoffset 460
 
 image hik normal = LiveComposite(
     (3139,6112),
