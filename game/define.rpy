@@ -13,8 +13,20 @@ define shiori = Character("Shiori", color="#c78b12")
 define yamato = Character("Yamato", color="#00d44a")
 define hikaru = Character("Hikaru", color="#092a43")
 
-image placeholder = "placeholder.png"
-image placeholder2 = "placeholder2.png"
+image flesh = "BG/Flesh.png"
+image flesh2 = "BG/Flesh22.png"
+
+image dojo day = "BG/Dojo.jpg"
+image house day = "BG/House.jpg"
+image forest day = "BG/Forest.jpg"
+image shrine day = "BG/Shrine.jpg"
+image village day = "BG/Village.jpg"
+
+image dojo night = "BG/Dojo.jpg"
+image house night = "BG/House.jpg"
+image forest night = "BG/Forest.jpg"
+image shrine night = "BG/Shrine.jpg"
+image village night = "BG/Village.jpg"
 
 # define persistent.loop1 = False ## player has cleared loop1
 # define persistent.loop2 = False ## player has cleared loop2

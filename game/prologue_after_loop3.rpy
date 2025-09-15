@@ -358,7 +358,7 @@ label prologue_loop8:
         "Repent?"
 
         "YEs":
-            $ persistent.trueending.unlocked = True
+            $ persistent.trueendingunlocked = True
 
             ### EVERYTHING IS HARD RESET
             $ persistent.shiori_dies = False

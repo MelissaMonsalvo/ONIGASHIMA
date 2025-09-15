@@ -42,7 +42,7 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
-    if persistent.trueending.unlocked:
+    if persistent.trueendingunlocked:
         jump prologue_trueend
     if persistent.loop8:
         jump prologue_loop8

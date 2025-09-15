@@ -24,7 +24,7 @@ label prologue:
     scene black with fade
     #show screen eyessss
     #n "testing fer eyes."
-    show placeholder at scary_flicker
+    show flesh at scary_flicker
     # particleFog with dissolve:
         #ypos 0.4
 
