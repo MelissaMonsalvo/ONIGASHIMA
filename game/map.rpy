@@ -246,8 +246,13 @@ python early:
         # Guardar candidatos vivos y muertos
         alive_candidates = []
         dead_candidates = []
+        priority = []
 
-        for char in ["yamato", "hikaru", "shiori"]:
+        characters = ["yamato", "hikaru", "shiori"]
+        priority = [char for char in characters if not getattr(persistent, f"{char}_dies", False)]
+        priority.extend(char for char in characters if getattr(persistent, f"{char}_dies", False))
+
+        for char in priority:
             
             if getattr(persistent, f"{char}_dies", False):
                 events_completed = getattr(store, f"{char}_ghost_events_completed", 0)
@@ -308,6 +313,7 @@ python early:
         """
         Determina dónde debería estar un personaje basado en sus eventos pendientes
         """
+
         events_completed = getattr(store, f"{character}_events_completed", 0)
         current_loop = store.current_loop
 
@@ -320,6 +326,7 @@ python early:
             if ghost_completed < len(ghost_events.get(character, [])):
 
                 next_event = mandatory_events[current_loop][character][ghost_completed]
+                print(f"siguiente evento: {next_event}\n")
                 # Solo mostrar si el evento es para el tiempo actual
                 if next_event["time"] == store.current_time_block:
                     #print (f"Return ghost from {character} in {next_event['location']}")
