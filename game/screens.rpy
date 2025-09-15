@@ -432,8 +432,7 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-screen navigation():
-
+screen navigation(): 
     vbox:
         style_prefix "navigation"
 
@@ -567,9 +566,11 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     if main_menu:
         add gui.main_menu_background
     else:
+        #add "gui/menu_background2.jpg"
         add gui.game_menu_background
 
     frame:
+        background None
         style "game_menu_outer_frame"
 
         hbox:
@@ -875,85 +876,315 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
+
+default pref1 = "Window"
+
+default opconfig = 1
+
 screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    add "gui/menu_background2.jpg"
 
-        vbox:
+    #use game_menu(_("Preferences"), scroll="viewport"):
 
-            hbox:
-                box_wrap True
-
-                if renpy.variant("pc") or renpy.variant("web"):
-
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
-
+    use game_menu(_("Preferences")):
+        hbox:
+            frame:
+                xsize 150
+                background None
+                add "gui/game menu/nav_line.png" xoffset 40
                 vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    imagebutton:
+                        idle "gui/game menu/btn_nav_idle_background.png"  
+                        hover "gui/game menu/btn_nav_hover_background.png"  
+                        action SetVariable("opconfig",1)
+            if opconfig == 1:
+                use config_general()
 
-                ## Additional vboxes of type "radio_pref" or "check_pref" can
-                ## be added here, to add additional creator-defined preferences.
+            
+            # #Audio
+            # null height (4 * gui.pref_spacing)
 
-            null height (4 * gui.pref_spacing)
+            # hbox:
+            #     style_prefix "slider"
+            #     box_wrap True
 
-            hbox:
-                style_prefix "slider"
-                box_wrap True
+            #     vbox:
 
-                vbox:
+            #         label _("Text Speed")
 
-                    label _("Text Speed")
+            #         bar value Preference("text speed")
 
-                    bar value Preference("text speed")
+            #         label _("Auto-Forward Time")
 
-                    label _("Auto-Forward Time")
-
-                    bar value Preference("auto-forward time")
-
-                vbox:
-
-                    if config.has_music:
-                        label _("Music Volume")
-
-                        hbox:
-                            bar value Preference("music volume")
-
-                    if config.has_sound:
-
-                        label _("Sound Volume")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+            #         bar value Preference("auto-forward time")
 
 
-                    if config.has_voice:
-                        label _("Voice Volume")
 
-                        hbox:
-                            bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+            #     vbox:
+
+            #         if config.has_music:
+            #             label _("Music Volume")
+
+            #             hbox:
+            #                 bar value Preference("music volume")
+
+            #         if config.has_sound:
+
+            #             label _("Sound Volume")
+
+            #             hbox:
+            #                 bar value Preference("sound volume")
+
+            #                 if config.sample_sound:
+            #                     textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+            #         if config.has_voice:
+            #             label _("Voice Volume")
+
+            #             hbox:
+            #                 bar value Preference("voice volume")
+
+            #                 if config.sample_voice:
+            #                     textbutton _("Test") action Play("voice", config.sample_voice)
+
+            #         if config.has_music or config.has_sound or config.has_voice:
+            #             null height gui.pref_spacing
+
+            #             textbutton _("Mute All"):
+            #                 action Preference("all mute", "toggle")
+            #                 style "mute_all_button"
+
+
+#screen config_general2():
+
+
+
+screen config_general():
+    grid 4 4 spacing 10:
+        #xsize 860
+        #xpos 670
+        #ypos 332
+        #yalign 0.5
+        yoffset 150
+
+        # Renglon 1    ################################
+        # Columna 1 - Etiqueta
+        label _("Display")
+        
+        # Columna 2 - Flecha Izqu
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"  
+            hover "gui/settings/btn_left_arrow_hover.png"  
+            xalign 1.0
+            action [SetVariable("pref1","window"),Preference("display", "window")]
+            sensitive (pref1 != "window" )
+            
+        
+        # Columna 3 - Texto
+        if pref1 == "window":
+            text _("Window"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else: 
+            text _("Fullscreen"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Columna 4 - Flecha derecha    
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"  
+            hover "gui/settings/btn_right_arrow_hover.png"  
+            xalign 0.0
+            action [SetVariable("pref1","fullscreen"),Preference("display", "fullscreen")]
+            sensitive (pref1 != "fullscreen" ) 
+
+        # Renglon 2    ################################
+        # Columna 1 - Etiqueta
+        label _("Skeep: Unseen Text")
+        
+        #Columna 2 - Flecha Izqu
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"  
+            hover "gui/settings/btn_left_arrow_hover.png" 
+            xalign 1.0 
+            action Preference("skip", "toggle")
+            sensitive _preferences.skip_unseen  # Solo activa si Skip All está activado
+        
+        # Columna 3 - Texto
+        if _preferences.skip_unseen:
+            text _("On"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Off"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Columna 4 - Flecha derecha    
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"  
+            hover "gui/settings/btn_right_arrow_hover.png" 
+            xalign 0.0
+            action Preference("skip", "toggle")
+            sensitive not _preferences.skip_unseen  # Solo activa si Skip All está desactivado
+        
+        # Renglon 3    ################################
+        # Columna 1 - Etiqueta
+        label _("Skeep: After Choices")
+        
+        #Columna 2 - Flecha Izqu
+        # Flecha izquierda (para desactivar - After Choices)
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"  
+            hover "gui/settings/btn_left_arrow_hover.png"
+            xalign 1.0  
+            action Preference("after choices", "toggle")
+            sensitive _preferences.skip_after_choices  # Solo activa si Skip está activado
+        
+        # Columna 3 - Texto
+        if _preferences.skip_after_choices:
+            text _("On"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Off"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Flecha derecha (para activar - Skip)
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"  
+            hover "gui/settings/btn_right_arrow_hover.png" 
+            xalign 0.0 
+            action Preference("after choices", "toggle")
+            sensitive not _preferences.skip_after_choices  # Solo activa si Skip está desactivado
+    
+        # Renglon 4    ################################
+        # Columna 1 - Etiqueta
+        label _("Skeep: Transitions")
+        
+        #Columna 2 - Flecha Izqu
+        # Flecha izquierda (para desactivar - After Choices)
+        # Flecha izquierda (para desactivar)
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"  
+            hover "gui/settings/btn_left_arrow_hover.png"  
+            xalign 1.0 
+            action Preference("transitions", "toggle")
+            sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
+        
+        # Columna 3 - Texto
+        if _preferences.transitions:
+            text _("On"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Off"):  
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Flecha derecha (para activar - Skip)
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"  
+            hover "gui/settings/btn_right_arrow_hover.png"  
+            action Preference("transitions", "toggle")
+            sensitive not _preferences.transitions  # Solo activa si las transiciones están deshabilitadas
+
+
+# screen preferences():
+
+#     tag menu
+
+#     use game_menu(_("Preferences"), scroll="viewport"):
+
+#         vbox:
+
+#             hbox:
+#                 box_wrap True
+
+#                 if renpy.variant("pc") or renpy.variant("web"):
+
+#                     vbox:
+#                         style_prefix "radio"
+#                         label _("Display")
+#                         textbutton _("Window") action Preference("display", "window")
+#                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
+
+#                 vbox:
+#                     style_prefix "check"
+#                     label _("Skip")
+#                     textbutton _("Unseen Text") action Preference("skip", "toggle")
+#                     textbutton _("After Choices") action Preference("after choices", "toggle")
+#                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+
+#                 ## Additional vboxes of type "radio_pref" or "check_pref" can
+#                 ## be added here, to add additional creator-defined preferences.
+
+#             null height (4 * gui.pref_spacing)
+
+#             hbox:
+#                 style_prefix "slider"
+#                 box_wrap True
+
+#                 vbox:
+
+#                     label _("Text Speed")
+
+#                     bar value Preference("text speed")
+
+#                     label _("Auto-Forward Time")
+
+#                     bar value Preference("auto-forward time")
+
+#                 vbox:
+
+#                     if config.has_music:
+#                         label _("Music Volume")
+
+#                         hbox:
+#                             bar value Preference("music volume")
+
+#                     if config.has_sound:
+
+#                         label _("Sound Volume")
+
+#                         hbox:
+#                             bar value Preference("sound volume")
+
+#                             if config.sample_sound:
+#                                 textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+#                     if config.has_voice:
+#                         label _("Voice Volume")
+
+#                         hbox:
+#                             bar value Preference("voice volume")
+
+#                             if config.sample_voice:
+#                                 textbutton _("Test") action Play("voice", config.sample_voice)
+
+#                     if config.has_music or config.has_sound or config.has_voice:
+#                         null height gui.pref_spacing
+
+#                         textbutton _("Mute All"):
+#                             action Preference("all mute", "toggle")
+#                             style "mute_all_button"
 
 
 style pref_label is gui_label
