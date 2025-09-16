@@ -900,6 +900,18 @@ screen preferences():
                         idle "gui/game menu/btn_nav_idle_background.png"  
                         hover "gui/game menu/btn_nav_hover_background.png"  
                         action SetVariable("opconfig",1)
+                    imagebutton:
+                        idle "gui/game menu/btn_nav_idle_background.png"  
+                        hover "gui/game menu/btn_nav_hover_background.png"  
+                        action SetVariable("opconfig",2)
+                    imagebutton:
+                        idle "gui/game menu/btn_nav_idle_background.png"  
+                        hover "gui/game menu/btn_nav_hover_background.png"  
+                        action SetVariable("opconfig",3)
+                    imagebutton:
+                        idle "gui/game menu/btn_nav_idle_background.png"  
+                        hover "gui/game menu/btn_nav_hover_background.png"  
+                        action SetVariable("opconfig",4)
             if opconfig == 1:
                 use config_general2()
 
@@ -964,8 +976,18 @@ screen preferences():
 default cell_hight_1 = 150
 default cell_hight_2 = cell_hight_1*4
 
-screen config_general2():
+style estilo_text is text
 
+style estilo_text:
+    #font "gui/fonts/mi_fuente.ttf"
+    size 24
+    color "#FF5733"  # Color naranja
+    #outlines [(2, "#000000", 0, 0)]
+    #kerning 1.0
+    bold True
+
+screen config_general2():
+    style_prefix "estilo"
     hbox:
         xsize 1060
         vbox:
