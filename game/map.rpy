@@ -108,6 +108,7 @@ default offset_x_a = 0
 
 # Pantalla del mapa
 screen map_screen():
+    
 
     #BG
     add "images/map/bg.png"
@@ -126,11 +127,14 @@ screen map_screen():
 
     # Mostrar iconos de personajes según su ubicación y estado
     for character in ["shiori", "yamato", "hikaru"]:
+    #for character in ["shiori"]:
 
         # Obtener la ubicación actual del personaje
         $ char_location = get_character_location(character)
             
         if char_location:
+            $ print(f"Sí hay char_location: {char_location}")
+
             # Obtener posición en el mapa
             $ pos_x, pos_y = location_positions.get(char_location, (0, 0))
             
@@ -211,6 +215,7 @@ python early:
 
     import math
 
+
     #Función que se ejecuta al hacer click en alguna parte del mapa
 
     def visit_location_func(location):
@@ -242,7 +247,7 @@ python early:
 
 #Checa en la lista de eventos de vivos y muertos
     def check_mandatory_events(location):
-        print("\n\n\nBuscando nuevo evento")
+        #print("\n\n\nBuscando nuevo evento")
         # Guardar candidatos vivos y muertos
         alive_candidates = []
         dead_candidates = []
@@ -256,20 +261,20 @@ python early:
             
             if getattr(persistent, f"{char}_dies", False):
                 events_completed = getattr(store, f"{char}_ghost_events_completed", 0)
-                print(f"{char} muerto")
+                #print(f"{char} muerto")
             else:
                 events_completed = getattr(store, f"{char}_events_completed", 0)
-                print(f"{char} vivo")
+                #print(f"{char} vivo")
 
 
             #print(f"Eventos luego de dar click:  {events_completed}")
-            print(f"{char} eventos completos {events_completed}")
+            #print(f"{char} eventos completos {events_completed}")
 
             if events_completed < len(mandatory_events[store.current_loop][char]):
 
                 next_event = mandatory_events[store.current_loop][char][events_completed]
 
-                print(f"{char} next_event {next_event["event"]} in {next_event["location"]} at {next_event["time"]}")
+                #print(f"{char} next_event {next_event["event"]} in {next_event["location"]} at {next_event["time"]}")
 
                 if (next_event["location"] == location and next_event["time"] == store.current_time_block):
 
@@ -282,18 +287,18 @@ python early:
                         # Vivo → evento normal
                         setattr(store, f"{char}_events_completed", events_completed + 1)
                         alive_candidates.append(next_event["event"])
-                        print(f"{char}_dies = False")
+                        #print(f"{char}_dies = False")
 
             # Prioridad: primero vivos, luego muertos
             if alive_candidates:
-                print(f"Evento vivo: {alive_candidates[0]}******************************************")
+                #print(f"Evento vivo: {alive_candidates[0]}******************************************")
                 return alive_candidates[0]
             elif dead_candidates:
                 
                 ghost_completed = getattr(store, f"{char}_ghost_events_completed", 0)
                 setattr(store, f"{char}_ghost_events_completed", ghost_completed + 1)
 
-                print(f"Evento Muerto: {dead_candidates[0]}******************************************")
+                #print(f"Evento Muerto: {dead_candidates[0]}******************************************")
                 return dead_candidates[0]
 
         return None
@@ -317,29 +322,28 @@ python early:
         events_completed = getattr(store, f"{character}_events_completed", 0)
         current_loop = store.current_loop
 
-        
+        dies = getattr(persistent, f"{character}_dies", False)
         # Para personajes muertos con eventos fantasma pendientes
-        if getattr(persistent, f"{character}_dies", False):
+        if dies:
             #print(f"{character} muerto")
-            ghost_completed = getattr(store, f"{character}_ghost_events_completed", 0)
+            ghost_completed = getattr(store, f"{character}_ghost_events_completed", None)
 
             if ghost_completed < len(ghost_events.get(character, [])):
-
+                #print(f"ghost_completed: {ghost_completed}\n")
                 next_event = mandatory_events[current_loop][character][ghost_completed]
-                print(f"siguiente evento: {next_event}\n")
                 # Solo mostrar si el evento es para el tiempo actual
                 if next_event["time"] == store.current_time_block:
+                    print(f"siguiente evento muerto: {next_event} para {store.current_time_block}\n")
                     #print (f"Return ghost from {character} in {next_event['location']}")
                     return next_event["location"]
 
-                
         # Verificar si el personaje tiene eventos mandatorios pendientes
-        if character in mandatory_events.get(current_loop, {}) and events_completed < len(mandatory_events[current_loop][character]):
+        if not dies and character in mandatory_events.get(current_loop, {}) and events_completed < len(mandatory_events[current_loop][character]):
             
             next_event = mandatory_events[current_loop][character][events_completed]
             # Solo mostrar si el evento es para el tiempo actual
             if next_event["time"] == store.current_time_block:
-                #print (f"Return alive from {character} in {next_event['location']}")
+                print (f"Return alive from {character} in {next_event['location']}")
                 return next_event["location"]
 
         
@@ -433,10 +437,10 @@ python early:
             #                 print(f"Evento de {next_event['event']} ghost, en {next_event['location']} at {next_event['time']}")
 
 
-        print("///////////////////////////////////////////////")  
+        #print("///////////////////////////////////////////////")  
         #print(icon_data)    
-        print("///////////////////////////////////////////////\n\n\n") 
-        return icon_data
+        #print("///////////////////////////////////////////////\n\n\n") 
+        #return icon_data
 
         # Función auxiliar para verificar si un evento ya fue completado
     # def event_completed(event_name):
