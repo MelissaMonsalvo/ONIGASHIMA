@@ -76,6 +76,13 @@ transform midright:
 transform midright2:
     xalign 0.6
 
+### colors ###
+
+transform blacku:
+    matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+
+
 ### SHOW FOG ####
 image tiledFog = im.Tile(im.Scale("fog.png", 1600, 600), size=(2400, 800))
 image particleFog = SnowBlossom("fog-particle.png", count=80, border=600, xspeed=50, yspeed=0, start=5, fast=True, horizontal=True)
@@ -89,6 +96,22 @@ image petals_dense = SnowBlossom(
 )
 image petals_scatter = SnowBlossom(
     "ppetal.png",
+    count=20,             # Fewer particles
+    xspeed=(-50, 50),     # More horizontal spread
+    yspeed=(-150, -230),  # Faster upward movement
+    start=0.0,            # Start near the top, so they scatter as they rise
+    border=40
+)
+image petals_dense2 = SnowBlossom(
+    "ppetal2.png",
+    count=40,             # More particles for density
+    xspeed=(-10, 10),     # Not much horizontal movement
+    yspeed=(-60, -110),   # Gentle, slow rise
+    start=0.85,           # Lower part of screen (0.0 = top, 1.0 = bottom)
+    border=40
+)
+image petals_scatter2 = SnowBlossom(
+    "ppetal2.png",
     count=20,             # Fewer particles
     xspeed=(-50, 50),     # More horizontal spread
     yspeed=(-150, -230),  # Faster upward movement
@@ -247,6 +270,26 @@ transform scary_flicker:
         linear 0.5 xoffset 0 yoffset 0
         repeat
 
+transform red_squelch:
+    alpha 0.18
+    yoffset 0
+    yzoom 1.0
+    block:
+        ease 0.19 yzoom 1.07 yoffset 8 alpha 0.22
+        ease 0.08 yzoom 0.95 yoffset 2 alpha 0.14
+        ease 0.14 yzoom 1.12 yoffset 17 alpha 0.26
+        ease 0.11 yzoom 0.99 yoffset 0 alpha 0.18
+        pause 0.06
+        ease 0.20 yzoom 1.09 yoffset 12 alpha 0.21
+        ease 0.12 yzoom 0.97 yoffset 4 alpha 0.12
+        ease 0.13 yzoom 1.10 yoffset 14 alpha 0.25
+        ease 0.11 yzoom 1.0 yoffset 0 alpha 0.18
+        pause 0.10
+
+screen red_squelch_overlay():
+    add Solid("#ff2323") at red_squelch
+        # Or, if you want to use an image of a blood splotch:
+        # add "gui/bloodsplotch.png" at red_squelch
 ##### YAMATO'S ATLS ######
 
 ##### SHIORI'S ATLS ######
@@ -287,28 +330,17 @@ transform shiori_skipp2:
         easeout 0.18 yzoom 1.00 xzoom 1.00
 
 transform shiori_tilt:
-    zoom 0.5
-    xalign 0.4
-    yalign 0
+    zoom 0.26
+    xanchor 0.5
+    xalign 0.5
+    yalign -0.60
     yoffset 0
-    xzoom 1.0
-    yzoom 1.0
 
-    # Lean/bob (forward toward camera)
     parallel:
-        easein 0.4 zoom 0.57
-        easeout 0.4 zoom 0.5
-    parallel:
-        easein 0.4 yoffset -70
-        easeout 0.4 yoffset 0
+        easein 0.4 zoom 0.4 yoffset -1
+        easeout 0.4 zoom 0.26 yoffset 0
 
-    # Subtle bounce (optional)
-    parallel:
-        pause 0.8
-        easein 0.1 yoffset -10
-        easeout 0.1 yoffset 0
-        easein 0.08 yoffset -4
-        easeout 0.08 yoffset 0
+
 
 
 transform shiori_stomp:
@@ -347,4 +379,3 @@ transform shiori_stomp:
     xzoom 1.0
     yzoom 1.0
     rotate 0
-

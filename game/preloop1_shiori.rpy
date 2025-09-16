@@ -94,7 +94,7 @@ label loop1_shiori_mandatory1:
         zoom 0.5
         xalign 0.4
         yalign 0
-        yoffset 0   
+        yoffset 0
         xzoom 1.0
         yzoom 1.0
 
@@ -109,28 +109,50 @@ label loop1_shiori_mandatory1:
 
     MC "Yeah. {w=0.2}Sure. {w=0.2}I’ve got time. Feels like forever since we did that."
 
+    show darken
+    hide shi
+    with dissolve
+
+    $ _prev_music_volume = _preferences.volumes["music"]
+
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
+
     n "{alpha=0.8}The incense grows thick once you've stepped in behind Shiori. The smell hits the back of your nose immediately, overwhelming...{/alpha}"
 
     n "{i}You didn’t remember it being this sharp...{/i} {w=0.2}Or maybe that’s just how memory works?"
+
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
 
     n "{size=*0.95}...Or maybe {atl=-#,#,fade_in_text~0.5}not all the memories are yours.{/atl}{/size}"
 
     n "Maybe it's fine, as long as Shiori remembers the same thing."
 
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
+
     n "{size=*0.95}{i}...That should be enough.{/i}{/size}"
+
+    $ restore_music_volume()
+    $ restore_music_volume()
+    $ restore_music_volume()
+
+    scene black with out_182
 
     #return
 
 label loop1_shiori_mandatory2:
 
-    scene black
-    with fade
+
+
+
 
     ## this happens if you visit the shrine at night
 
     scene shrine night with in_182:
         zoom 0.5
-    
+
 
     play music "Night.mp3"
 
@@ -142,7 +164,11 @@ label loop1_shiori_mandatory2:
 
     n "They say it’s the last place the Yamakui dares enter."
 
-    show shi normal at shiori_skipp2
+    show shi normal:
+        zoom 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
     with dissolve
 
     shiori "...[persistent.player_name]-sama?"
@@ -167,26 +193,14 @@ label loop1_shiori_mandatory2:
 
     shiori "The dead. Everyone who got eaten."
 
-    n "You stare at the gravestones, there are no names written on them."
+    n "You stare at the urns, there are no names written on them."
 
-    MC "Whose graves are those?"
+    MC "Whose urns are those?"
 
     shiori "I-I don't remember their names."
 
-    $ renpy.music.set_volume(0.7)
-    pause 0.2
-    $ renpy.music.set_volume(0.6)
-    pause 0.2
-    $ renpy.music.set_volume(0.5)
-    pause 0.2
-    $ renpy.music.set_volume(0.4)
-    pause 0.2
-    $ renpy.music.set_volume(0.3)
-    pause 0.2
-    $ renpy.music.set_volume(0.2)
-    pause 0.2
-    $ renpy.music.set_volume(0.1)
-    pause 0.2
+    $ decrease_music_volume(0.5)
+    $ renpy.block_rollback()
 
     show darken
     with dissolve
@@ -198,37 +212,37 @@ label loop1_shiori_mandatory2:
 
     n "Surely someone was taken by the Yamakui. {w=0.2}That's why you were sent to kill it, right? {w=0.2}That's why everyone is afraid."
 
-    n "There weren't remains, but bloodstains... {w=0.3}{alpha=0.7}evidence of something being mauled.{/alpha}"
+    n "There weren't remains, but bloodstains... {w=0.3}evidence of something being mauled."
 
     n "But you {size=*0.95}can't place a name.{/size}"
 
-    n "Who was taken last? {w=0.2}A child? {w=0.2}A friend? {w=0.5}{i}{sc=5}Your parents?{/sc}{/i}"
+    n "Who was taken last? {w=0.2}A child? {w=0.2}A friend? {w=0.5}{i}{sc=1}Your parents?{/sc}{/i}"
 
-    n "Because you came back home and there's no parents at home. {w=0.2}{cps=12}Did they get eaten, too?{/cps}"
+    n "Because you came back home and there's no parents at home. {w=0.2}{cps=52}Did they get eaten, too?{/cps}"
+
+    $ restore_music_volume()
 
     MC "...Can you remember anyone?"
 
-    shiori "The elder said that everyone who got eaten by Yamakui {alpha=0.7}{cps=10}got wiped off from everyone's memory...{/cps}{/alpha}"
+    shiori "The elder said that everyone who got eaten by Yamakui {alpha=0.7}{blur}got wiped off from everyone's memory...{/blur}{/alpha}"
 
     MC "Or maybe they were {glitch=15}{i}never there to begin with?{/i}{/glitch}"
 
-    play sound "sfx/stomp.wav"
+    play sound "sfx/stomp.mp3"
 
     hide shi normal
     hide darken
     show shi normal:
-        zoom 0.5 
-        xalign 0.4 
-        yalign 0 
-        yoffset 0 
-        xzoom 1.0 
-        yzoom 1.0
+        zoom 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
 
         parallel:
-            easein 0.1 yoffset -20
+            easein 0.1 yoffset 60
             easeout 0.1 yoffset 0
-            easein 0.08 yoffset -10
-            easeout 0.08 yoffset 0
+            easein 0.08 yoffset 20
+            easeout 0.08 yoffset 80
 
         parallel:
             easein 0.1 yzoom 0.95 xzoom 1.05
@@ -255,13 +269,21 @@ label loop1_shiori_mandatory2:
 
     n "She says nothing else, and you decide it's not worth pressing."
 
+    stop music fadeout 0.3
+
+    show darken
+    hide shi
+    with dissolve
+
     n "{k=-1}But the questions linger.{/k}"
 
-    n "{cps=39}Graves without names.{/cps}"
+    n "{cps=39}Urns without names.{/cps}"
 
-    n "{cps=30}The shrine staying open even when no one prays.{/cps}"
+    n "{cps=30}The shrine staying open even when no one prays anymore.{/cps}"
 
     n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive it."
+
+    scene black with out_182
 
 
     #return
@@ -274,11 +296,24 @@ label loop1_shiori_mandatory3:
     $ loop1_shiori_mandatory3 = True
     ## day scene shrine (scene only appears at day 4/5)
 
+    scene black
+    show shrine2 as wave_overlay:
+        function WaveShader(amp = 0, melt="both", melt_params=(10,1.0,0.1))
+        zoom 0.5
+    play music "Dark.mp3"
+
     n "This morning, you come into the smell of rot lingering on the shrine."
 
     n "It reminds you to the smell of the mountains when you left Yamakui's lair."
 
-    show shiori normal at midright
+    scene shrine day:
+        zoom 0.5
+    show shi normal:
+        zoom 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+    with hpunch
 
     shiori "Ah, [persistent.player_name]-sama~"
 
@@ -298,16 +333,23 @@ label loop1_shiori_mandatory3:
 
     n "It {sc=4}gives{/sc} slightly when you squeeze further."
 
-    ## SQUELCH, SQUELCH
+    show screen red_squelch_overlay
+
+    play sound "sfx/splurt.mp3"
+
+    pause 0.3
+
+    hide screen red_squelch_overlay
 
     n "The texture is the same as an {size=*0.9}{i}overripe fruit{/i}{/size}."
 
     ## SQUELCH, SQUELCH
 
-    n "Then a {color=#aa0000}{cps=12}sticky red liquid{/cps}{/color} wells up around your thumb as you scoop it to your hand."
+    play sound "sfx/sticky.mp3"
 
-    n "It's {cps=8}{alpha=0.7}warm...{/alpha}{/cps} as warm as Shiori's hand when you brush against it as you hand the thing to her."
+    n "Then a {color=ff0019}{cps=62}sticky red liquid{/cps}{/color} wells up around your thumb as you scoop it to your hand."
 
+    n "It's {cps=58}warm...{/cps} as warm as Shiori's hand when you brush against it as you hand the thing to her."
 
     MC "Fresh?"
 
@@ -321,11 +363,14 @@ label loop1_shiori_mandatory3:
 
     n "She lays out four flat plates.  The red liquid seeps out and follows the grain."
 
-    n "But every cut is perfect."
 
-    show shiori neutral at midright
-
-    shiori "Okay! So all we have to do is eat the offering and the gods will listen to our prayers."
+    show shi normal:
+        zoom 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+        ease 0.7 zoom 0.43 yoffset 60
+    shiori "Okay! So all we have to do is eat the offering and the kami-sama will listen to our prayers."
 
     shiori "...Supposedly."
 
@@ -333,19 +378,31 @@ label loop1_shiori_mandatory3:
 
     shiori "It's for Yamato and Hikaru! But, ummm.. They said they can't come so might as well be just the two of us."
 
-    play sound "sfx/slurp.ogg"
+    show darken2
+    with dissolve
 
+
+    play sound "sfx/splurt.mp3"
+    show screen red_squelch_overlay
     n "She lifts a strip and {sc=6}bites{/sc} straight through it."
 
-    # plop sfx
+    hide screen red_squelch_overlay
+
+    play sound "sfx/gross eat.wav"
 
     n "There’s a {size=*0.95}{i}popping{/i}{/size} sound as something hollow inside ruptures."
 
-    n "A {cps=14}{color=#ff0000}{outlinecolor=#660000}wet squelch{/outlinecolor}{/color}{/cps} follows, her lips sliding shut over the offering."
+    n "A {cps=66}{color=#ff0000}{outlinecolor=#660000}wet squelch{/outlinecolor}{/color}{/cps} follows, her lips sliding shut over the offering."
+
+    show screen red_squelch_overlay
 
     n "She {k=2}chews{/k} once, then swallows {alpha=0.8}{i}effortlessly{/i}{/alpha}."
 
+    hide screen red_squelch_overlay
+
     ## she smiles at you afterwards
+
+    stop sound fadeout 0.5
 
     MC "Alright then."
 
@@ -353,9 +410,13 @@ label loop1_shiori_mandatory3:
 
     MC "...Itadakimasu."
 
-    play sound "sfx/squelch2.ogg"
+    play sound "sfx/eatmeat2.mp3"
 
     n "You put it in your mouth."
+
+    show shrine2 as wave_overlay behind shi:
+        function WaveShader(amp = 0, melt="both", melt_params=(10,1.0,0.1))
+        zoom 0.5
 
 label chew_loop:
     menu:
@@ -363,6 +424,7 @@ label chew_loop:
             n "It’s already on your tongue. You chew before you think."
             jump chew_loop
         "Chew":
+            play sound "sfx/gross eat.wav"
             n "It resists your teeth, but eventually gives. You feel something inside it burst like a blister."
             jump chew_loop1
 
@@ -370,9 +432,13 @@ label chew_loop1:
 
     menu:
         "Chew":
+            show screen red_squelch_overlay
+            play sound "sfx/splurt.mp3"
             n "You crush it again. There’s a snap, then a gush of thick, gluey fluid over your tongue."
+            hide screen red_squelch_overlay
             jump chew_loop1
         "Swallow":
+            play sound "sfx/swallow.mp3"
             n "You gulp it down. It catches halfway, then slides easily. You feel it the whole way down."
             jump gulgulp
 
@@ -380,14 +446,20 @@ label chew_loop2:
 
     menu:
         "Chew":
+            show screen red_squelch_overlay
+            play sound "sfx/splurt.mp3"
             n "You keep chewing. It stretches and shreds coil between your teeth."
+            hide screen red_squelch_overlay
             n "There’s something rubbery stuck behind your molars. You keep working it, gagging slightly."
             jump chew_loop2
         "Swallow":
+            play sound "sfx/swallow.mp3"
             n "It’s gone."
             jump gulgulp
 
 label gulgulp:
+    hide darken2
+    with dissolve
     MC "...Not bad. Kind of chewy, though."
 
     shiori "..."
@@ -398,7 +470,7 @@ label gulgulp:
 
     MC "Hah. I’ve had worse during night guard duty."
 
-    shiro "Ah-I see."
+    shiori "Ah-I see."
 
     play sound "sfx/drip.ogg"
 
@@ -406,13 +478,26 @@ label gulgulp:
 
     MC "So, what is it? Boar? Deer?"
 
+    play sound "sfx/suzu.mp3"
+
+    show shi normal:
+        zoom 0.5
+        xanchor 0.5
+        yalign 0
+        yoffset 80
+
+        ease 0.2 zoom 0.7 yoffset +30
+
     shiori "{cps=14}{alpha=0.7}{sc=4}Wouldn't you like to know, [persistent.player_name]-sama.{/sc}{/alpha}{/cps}"
 
     MC "Eh, just curious is all."
 
+    show darken2
+    with dissolve
+
     play sound "sfx/squelch1.ogg"
 
-    n "You lift another even though Shiori doesn't ask you to. It slurps, plaps, you don’t even attempt to chew on this one."
+    n "You lift another even though Shiori doesn't ask you to. You don’t even attempt to chew on this one and immediately swallows."
 
     play sound "sfx/slurp.ogg"
 
@@ -422,25 +507,71 @@ label gulgulp:
 
     n "She wipes it with blood under her fingernails."
 
+    hide darken2
+    with dissolve
+
     n "There's almost nothing left on the bowl."
 
-    n "But you’re not even full."
+    stop music fadeout 1.0
 
-    return
+    scene black
+    with dissolve
+
+    n "{glitch=4}But you’re not even full.{/glitch}"
+
+    #return
 
 label loop1_shiori_mandatory4:
 
-    # night at the shrine
+    scene shrine day with in_182:
+        zoom 0.7
+        xalign 0.5
+        yalign 0.5
 
     n "....."
 
     n "There's no one around when you walk in."
 
-    n "Where's Shiori?{nw}"
+    n "Where's Shiori{nw}"
+
+    play sound "sfx/jumpscare.mp3"
 
     ## dongggg sfx false jumpscaree
 
+    show shi normal with easeinbottom:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 700
+
+        easeout 0.07 yoffset 30
+        easein 0.06 yoffset 120
+        easeout 0.05 yoffset 70
+        easein 0.04 yoffset 90
+        easeout 0.03 yoffset 80
+        easein 0.03 yoffset 80
+    with vpunch
     MC "--!?"
+
+    show shi normal:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+
+        linear 0.10 xoffset -20 yoffset 65
+        linear 0.08 xoffset 24 yoffset 93
+        linear 0.09 xoffset -16 yoffset 77
+        linear 0.07 xoffset 19 yoffset 88
+        linear 0.09 xoffset -12 yoffset 82
+        linear 0.08 xoffset 13 yoffset 74
+        linear 0.09 xoffset -7 yoffset 81
+        linear 0.10 xoffset 6 yoffset 79
+        linear 0.09 xoffset 0 yoffset 80
+
+        pause 0.15
 
     shiori "Ehehe~"
 
@@ -458,6 +589,8 @@ label loop1_shiori_mandatory4:
 
     shiori "If I find one, I’ll banish it~"
 
+    play sound "sfx/suzu.mp3"
+
     n "She raises the bell again."
 
     MC "Wait, maybe we don’t have to--"
@@ -466,46 +599,109 @@ label loop1_shiori_mandatory4:
 
     shiori "Let’s begin~"
 
-    n "She closes her eyes."
+    scene shrine day:
+        zoom 0.7
+        xalign 0.5
+        yalign 0.5
 
-    n "The wind stills. Even the bugs stop chirping."
 
-    play sound "sfx/bell_ceremony.ogg"
+        ease 0.5 zoom 0.5
+    show shi normal:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+        xoffset 0
+
+        # Animate to center & zoom out
+        ease 0.5 zoom 0.34 xalign 0.4
+
+    play sound "sfx/suzu.mp3"
 
     n "She rings the bell again. It feels closer this time, even though she's standing the same distance away."
 
-    window hide
-    $ renpy.pause(0.5)
-    window show
+    play music "noinomai.mp3"
 
     show expression Text("山の鬼よ", style="jojo_text") at jojo_scatter1
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_scatter2
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_scatter3
     pause 2.0
 
+    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6}begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6}begone!{/sc}{/color}{/size}"
+
+
+
+
     n "She chants clearly, loudly. The bell in her hand sways slightly with her rhythm."
 
     ## multiple chanting, the words are shaking at the screen as she chants
+
+    hide expression Text
+    hide expression Text
+    hide expression Text
 
     show expression Text("山の鬼よ", style="jojo_text") at jojo_attack4
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_attack6
 
+    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6}Back to the dark!{/sc}{/color}{/size}"
+
+
+
+
+
 
     MC "{cps=8}{sc=6}{color=#ff0000}Ghh--{/color}{/sc}{/cps}"
 
-    n "The sky overhead is very still, not even a breeze through the trees."
+    with sshake
 
-    n "No monsters, nothing comes out from the bushes."
+    hide expression Text
+    hide expression Text
+    hide expression Text
 
-    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{bt=6}Oni of the mountains,{/bt}{/outlinecolor}{/color}{/size} {w=0.2}{fast}{size=+8}{shader=jitter}{color=#ff0000}begone!{/color}{/shader}{/size}"
+    show expression Text("山の鬼よ", style="jojo_text") at jojo_scatter1
+    show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_scatter2
+    show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_scatter3
+    pause 2.0
 
-    shiori "{cps=14}{alpha=0.8}{vert}Back to the depths.{/vert}{/alpha}{/cps}{w=0.3}{size=+10}{sc=5}{color=#aa0000}Back to the dark!{/color}{/sc}{/size}"
 
-    n "Shiori chants even louder. {w=0.3}The insects have gone quiet."
+    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6}begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6}begone!{/sc}{/color}{/size}"
+
+
+
+
 
     MC "{cps=7}{alpha=0.7}{i}Shiori--!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
+
+    hide expression Text
+    hide expression Text
+    hide expression Text
+
+    show expression Text("山の鬼よ", style="jojo_text") at jojo_attack4 as o1
+    show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5 as o2
+    show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_attack6 as o3
+
+    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6}Back to the dark!{/sc}{/color}{/size}"
+
+
+
+    MC "{sc=10}{size=50}STOP!{/size}{/sc}"
+    scene shrine day:
+        zoom 0.5
+    show shi normal:
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+        xoffset 0
+        zoom 0.34
+    with sshake
     shiori "Eh?"
+
+
+
+    stop music
 
     MC "I think that's enough, no evil spirits are here tonight."
 
@@ -521,22 +717,34 @@ label loop1_shiori_mandatory4:
 
     shiori "Mm~ I’m glad."
 
-    shiori "Because if there *was* something evil nearby..."
+    shiori "Because if there {i}was{/i} something evil nearby..."
 
     shiori "I’d have to do a lot more than ring a bell, y'know?"
 
-    n "The bell swings gently in her hand, but she doesn't ring it this time. instead, she waits."
+    n "The bell swings gently in her hand, but she doesn't ring it this time. Instead, she waits."
 
     ## uncomfortable silence until the next line, maybe add a loong pause....
 
+    pause 3
+
     n "But nothing comes out "
 
-    return
+    #return
 
 
 label loop1_shiori_mandatory5:
 
-    n "Location : Forest Day"
+    scene forest day with in_182:
+        zoom 0.5
+    show shi normal:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+        xoffset 0
+    with dissolve
+
     $ loop1_shiori_mandatory5 = True
     ## forest bg
 

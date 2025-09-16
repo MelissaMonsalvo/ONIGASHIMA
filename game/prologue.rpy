@@ -223,18 +223,50 @@ label village_entrance:
 
     n "The sky looks like it splits into two once the treeline dissapears... {w}The heavenly shine that you've imagined."
 
+    show woman:
+        xzoom -1
+        zoom 0.35
+        xalign 0.65
+        ypos 0.2
+
+        linear 0.1 ypos 0.19 zoom 0.27
     with vpunch
     play sound "sfx/bucketdrop.wav"
     $ renpy.pause(0.8)
 
 
+
     n "Someone sees you, drops their bucket. Everyone stops what they are doing to look at you."
+
+
 
     play music "Tense.ogg"
 
-    "Man" "{size=*0.95}{k=-1}No way...{/k}{/size}"
+    "Woman" "{size=*0.95}{k=-1}No way...{/k}{/size}"
+
+    hide woman
+    with dissolve
+
+    scene village day:
+        zoom 0.5
+        yanchor 1
+        pause 0.1
+        linear 2 zoom 0.7 xalign 0.6
+
+    play sound "sfx/walk grass.mp3"
 
     n "You walk toward a familliar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
+
+    pause 1.0
+
+    stop sound
+
+    show elder:
+        xzoom -1
+        zoom 1
+        xalign 0.65
+        ypos 0.25
+    with dissolve
 
     "Elder" "Im-Impossible..."
 
@@ -246,7 +278,26 @@ label village_entrance:
 
     "Elder" "T-The Oni is no more!"
 
+    with vpunch
+
     play sound "sfx/cheer.mp3"
+
+    hide elder
+    with dissolve
+
+    show woman at left:
+        zoom 0.5
+        ypos 0.2
+    with dissolve
+    show man at center:
+        zoom 0.5
+        ypos 1.67
+    with dissolve
+    show oldman at right:
+        zoom 0.5
+        xoffset -50
+        ypos 1.67
+    with dissolve
 
     n "Suddenly hands reach for you. Claps on yourback, with smiles on their face."
 
@@ -309,9 +360,15 @@ label after_get_name:
 
     play music "Hope.mp3"
 
+    show woman at shakey
+
     "Woman" "Great job, [persistent.player_name]-san!"
 
-    "Kid" "You're amazing, [persistent.player_name]-sama!"
+    show oldman at shakey
+
+    "Old Man" "Proud of you, [persistent.player_name]!"
+
+    show man at bounci
 
     "Man" "{w=0.2}[persistent.player_name], {w=0.2}[persistent.player_name], {w=0.2}[persistent.player_name]!"
 
@@ -343,6 +400,13 @@ label after_get_name:
     n "You wonder why the Elder's hand is shaking when he tugs your arm."
 
     n "Or maybe that's your own hand that's trembling."
+
+    show elder:
+        xzoom -1
+        zoom 0.8
+        xalign 0.65
+        ypos 0.1
+    with dissolve
 
     "Elder" "Come. Let them see it clearly."
 
@@ -395,21 +459,28 @@ label after_get_name:
 
     n "{cps=7}Who wouldn’t?{/cps}"
 
+    hide elder
+
     with fade
 
     n "As the crowds part as you walk, you hear whispering."
 
-    $ renpy.music.set_volume(0.7)
-    pause 0.2
-    $ renpy.music.set_volume(0.6)
-    pause 0.2
-    $ renpy.music.set_volume(0.5)
-    pause 0.2
-    $ renpy.music.set_volume(0.4)
-    pause 0.2
-    $ renpy.music.set_volume(0.3)
+    $ _prev_music_volume = _preferences.volumes["music"]
+
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
     pause 0.2
 
+
+
+    show woman at midleft :
+        zoom 0.5
+        ypos 0.2
+    with dissolve
+    show man at midright:
+        zoom 0.5
+        ypos 0.1
+    with dissolve
     show darken
     with dissolve
 
@@ -423,17 +494,10 @@ label after_get_name:
 
     n "{size=*0.9}{alpha=0.5}...Right?{/alpha}{/size}"
 
-    $ renpy.music.set_volume(0.4)
-    pause 0.2
-    $ renpy.music.set_volume(0.5)
-    pause 0.2
-    $ renpy.music.set_volume(0.6)
-    pause 0.2
-    $ renpy.music.set_volume(0.7)
-    pause 0.2
-    $ renpy.music.set_volume(0.8)
-    pause 0.2
+    $ _preferences.volumes["music"] = _prev_music_volume
 
+    hide man
+    hide woman
     hide darken
     with dissolve
 
@@ -497,8 +561,15 @@ label after_get_name:
 
     shiori "Ne, ne~ Tell us! What did Yamakui look like? Was it big? Did it have horns like a cow? Eyes like fireflies? Did it-"
 
-    show shi normal at shiori_tilt:
+    hide shi normal
+    show shi normal:
+        zoom 0.26
+        yalign -0.60
+        yoffset 0
         xalign 0.44
+        parallel:
+            easein 0.4 zoom 0.34 yalign -0.1
+            easeout 0.4 zoom 0.26 yalign -0.60
 
     shiori "{w=0.2}-whisper {sc=2}seeeeecrets{/sc} into your ear while it bled? Was it... {w}beautiful?"
 
@@ -561,20 +632,10 @@ label after_get_name:
 
     n "Hikaru's voice drops, their eyes slides slowly. From you… to the ground. {w=0.2}No-"
 
-    $ renpy.music.set_volume(0.7)
-    pause 0.2
-    $ renpy.music.set_volume(0.6)
-    pause 0.2
-    $ renpy.music.set_volume(0.5)
-    pause 0.2
-    $ renpy.music.set_volume(0.4)
-    pause 0.2
-    $ renpy.music.set_volume(0.3)
-    pause 0.2
-    $ renpy.music.set_volume(0.2)
-    pause 0.2
-    $ renpy.music.set_volume(0.1)
-    pause 0.2
+    $ _prev_music_volume = _preferences.volumes["music"]
+
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
 
     show darken
     with dissolve
@@ -598,7 +659,7 @@ label after_get_name:
         zoom 0.231
         yoffset 460
 
-        linear 0.1 xzoom -1
+        linear 0.4 xzoom -1 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
 
     hikaru "Excuse me."
 
@@ -621,7 +682,7 @@ label after_get_name:
 
     shiori "Should we-{w}Should we go after Hikaru?"
 
-    $ renpy.music.set_volume(0.8)
+    $ _preferences.volumes["music"] = _prev_music_volume
 
 
 
@@ -641,11 +702,11 @@ label after_get_name:
 
 label beforefirstloop:
 
-    scene black
+    scene white_bg
     with out_182
 
-    show petals_dense
-    show petals_scatter
+    show petals_dense2
+    show petals_scatter2
 
     play music "Idle.mp3"
 
@@ -663,7 +724,7 @@ label beforefirstloop:
         xpos -0.2 ypos 0.0
         alpha 0.0
 
-        linear 0.7 xpos 0.4 alpha 1.0
+        ease 0.7 xpos 0.4 alpha 1.0
 
     n "Shiori still skips around beside you. She's still cheerful. Always. {w=0.3}Always."
 
@@ -679,7 +740,7 @@ label beforefirstloop:
         xpos 0.4 ypos 0.0
         alpha 1.0
 
-        linear 1.2 xpos 1.2 alpha 0.0
+        ease 1.2 xpos 1.2 alpha 0.0
     pause 0.9
     hide shi
 
@@ -689,7 +750,7 @@ label beforefirstloop:
         xpos -0.2 ypos -0.1
         alpha 0.0
 
-        linear 0.7 xpos 0.6 alpha 1.0
+        ease 0.7 xpos 0.6 alpha 1.0
 
     n "Yamato trains every day, always alone."
 
@@ -713,7 +774,7 @@ label beforefirstloop:
         xpos 0.6 ypos -0.1
         alpha 1.0
 
-        linear 1.2 xpos 1.2 alpha 0.0
+        ease 1.2 xpos 1.2 alpha 0.0
     pause 1.0
     hide yam
 
@@ -725,7 +786,7 @@ label beforefirstloop:
         xpos -0.1 ypos -0.1
         alpha 0.0
 
-        linear 0.7 xpos 0.5 alpha 1.0
+        ease 0.7 xpos 0.5 alpha 1.0
 
     n "Hikaru sits with you sometimes, calm as always. They don’t talk much. They never did."
 
@@ -741,7 +802,7 @@ label beforefirstloop:
         xpos 0.5 ypos -0.1
         alpha 1.0
 
-        linear 1.2 xpos 1.2 alpha 0.0
+        ease 1.2 xpos 1.2 alpha 0.0
     pause 0.9
     hide hik
 
@@ -822,7 +883,7 @@ label beforefirstloop:
 
     play sound "sfx/day change.mp3"
 
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}7 DAYS UNTIL THE NEXT RED MOON{/atl}{/color}"
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}7 DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
 
     with fade
 

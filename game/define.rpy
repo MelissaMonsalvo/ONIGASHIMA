@@ -3,6 +3,24 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define original_music_volume = None
+
+init python:
+    def decrease_music_volume(percent=0.2):
+        global original_music_volume
+        # Save original only if not saved yet
+        if original_music_volume is None:
+            original_music_volume = _preferences.volumes["music"]
+        cur_vol = _preferences.volumes["music"]
+        new_vol = max(0.05, cur_vol * (1.0 - percent))
+        _preferences.volumes["music"] = new_vol
+
+    def restore_music_volume():
+        global original_music_volume
+        if original_music_volume is not None:
+            _preferences.volumes["music"] = original_music_volume
+            original_music_volume = None  # Reset for next use
+
 default persistent.player_name = None
 
 define MC = Character("[persistent.player_name]", color="#d40000", window_left_padding=100, image="main")  # Player-named character
@@ -16,6 +34,9 @@ define hikaru = Character("Hikaru", color="#092a43")
 image flesh = "BG/Flesh.png"
 image flesh2 = "BG/Flesh2.png"
 image darken = "BG/darken.png"
+image darken2 = "BG/darken2.png"
+
+image shrine2 = "BG/Shrine2.jpg"
 
 image dojo day = "BG/Dojo.jpg"
 image house day = "BG/House.jpg"
@@ -28,6 +49,15 @@ image house night = "BG/House.jpg"
 image forest night = "BG/Forest.jpg"
 image shrine night = "BG/Shrine.jpg"
 image village night = "BG/Village.jpg"
+
+image child = "NPC/npc_child.webp"
+image man = "NPC/npc_man.webp"
+image oldman = "NPC/npc_oldman.webp"
+image oldwoman = "NPC/npc_oldwoman.webp"
+image elder = "NPC/npc_villageelder.webp"
+image woman = "NPC/npc_woman.webp"
+
+image white_bg = "#FFFFFF"
 
 # define persistent.loop1 = False ## player has cleared loop1
 # define persistent.loop2 = False ## player has cleared loop2

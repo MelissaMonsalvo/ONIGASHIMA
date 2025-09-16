@@ -426,7 +426,7 @@ define config.custom_text_tags["pulse"] = pulse_tag
 
 style jojo_text:
     font "NotoSerifJP-SemiBold.ttf"
-    color "#a282fc"
+    color "#ff0044"
     outlines [ (3, "#000", 0, 0) ]
     size 80
     xalign 0.5
@@ -450,25 +450,25 @@ transform jojo_scatter1:
         repeat
 
 transform jojo_scatter2:
-    xpos 0.86 ypos 0.30
-    rotate -21
+    xpos 0.18 ypos 0.68
+    rotate -10
     alpha 0.0
-    zoom 0.2
+    zoom 0.18
     parallel:
         linear 0.4 alpha 1.0
-    linear 0.4 zoom 1.11
+    linear 0.4 zoom 1.14
     block:
-        linear 0.08 xoffset -24 yoffset 19 rotate -32 zoom 1.22
-        linear 0.08 xoffset 19 yoffset -16 rotate -11 zoom 0.97
-        linear 0.08 xoffset -17 yoffset 21 rotate -21 zoom 1.13
-        linear 0.08 xoffset 14 yoffset -12 rotate -24 zoom 1.07
-        linear 0.08 xoffset 0 yoffset 0 rotate -21 zoom 1.11
+        linear 0.07 xoffset -12 yoffset 17 rotate -18 zoom 1.18
+        linear 0.07 xoffset 16 yoffset -13 rotate -3 zoom 1.09
+        linear 0.07 xoffset -14 yoffset 11 rotate -10 zoom 1.13
+        linear 0.07 xoffset 8 yoffset -15 rotate -5 zoom 1.12
+        linear 0.07 xoffset 0 yoffset 0 rotate -10 zoom 1.14
         pause 0.01
         repeat
 
 transform jojo_scatter3:
-    xpos 0.68 ypos 0.28   
-    rotate -21
+    xpos 0.75 ypos 0.28
+    rotate -90
     alpha 0.0
     zoom 0.2
     parallel:
