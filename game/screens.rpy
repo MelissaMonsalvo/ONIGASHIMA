@@ -901,7 +901,7 @@ screen preferences():
                         hover "gui/game menu/btn_nav_hover_background.png"  
                         action SetVariable("opconfig",1)
             if opconfig == 1:
-                use config_general()
+                use config_general2()
 
             
             # #Audio
@@ -961,8 +961,169 @@ screen preferences():
             #                 action Preference("all mute", "toggle")
             #                 style "mute_all_button"
 
+default cell_hight_1 = 150
+default cell_hight_2 = cell_hight_1*4
 
-#screen config_general2():
+screen config_general2():
+
+    hbox:
+        xsize 1060
+        vbox:
+            xsize 350
+            ysize cell_hight_2
+            label _("Display") yalign 0.1
+            label _("Skeep: Unseen text") yalign 0.1
+            label _("Skeep: After choices") yalign 0.1
+            label _("Skeep: Transitions") yalign 0.1
+        null width 50
+
+        vbox:
+            ################################################################################
+            hbox:
+                ysize cell_hight_1
+                frame:
+                    #padding(0,0,0,0)
+                    background None
+                    xsize 100
+                    imagebutton:
+                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        hover "gui/settings/btn_left_arrow_hover.png"  
+                        xalign 1.0
+                        action [SetVariable("pref1","window"),Preference("display", "window")]
+                        sensitive (pref1 != "window" )
+                frame:
+                    background None
+                    xsize 250
+                    if pref1 == "window":
+                        text _("Window"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                    else: 
+                        text _("Fullscreen"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                frame:
+                    background None
+                    xsize 500
+                    imagebutton:
+                        idle "gui/settings/btn_right_arrow_idle.png"  
+                        hover "gui/settings/btn_right_arrow_hover.png"  
+                        xalign 0.0
+                        action [SetVariable("pref1","fullscreen"),Preference("display", "fullscreen")]
+                        sensitive (pref1 != "fullscreen" ) 
+            ################################################################################
+            hbox:
+                ysize cell_hight_1
+                frame:
+                    background None
+                    xsize 100
+                    imagebutton:
+                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        hover "gui/settings/btn_left_arrow_hover.png" 
+                        xalign 1.0 
+                        action Preference("skip", "toggle")
+                        sensitive _preferences.skip_unseen  # Solo activa si Skip All está activado
+                frame:
+                    background None
+                    xsize 250
+                    if _preferences.skip_unseen:
+                        text _("On"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                    else:
+                        text _("Off"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                frame:
+                    background None
+                    xsize 500
+                    imagebutton:
+                        idle "gui/settings/btn_right_arrow_idle.png"  
+                        hover "gui/settings/btn_right_arrow_hover.png" 
+                        xalign 0.0
+                        action Preference("skip", "toggle")
+                        sensitive not _preferences.skip_unseen  # Solo activa si Skip All está desactivado
+            ################################################################################
+            hbox:
+                ysize cell_hight_1
+                frame:
+                    background None
+                    xsize 100
+                    imagebutton:
+                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        hover "gui/settings/btn_left_arrow_hover.png"
+                        xalign 1.0  
+                        action Preference("after choices", "toggle")
+                        sensitive _preferences.skip_after_choices  # Solo activa si Skip está activado
+                frame:
+                    background None
+                    xsize 250
+                    if _preferences.skip_after_choices:
+                        text _("On"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                    else:
+                        text _("Off"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                frame:
+                    background None
+                    xsize 500
+                    imagebutton:
+                        idle "gui/settings/btn_right_arrow_idle.png"  
+                        hover "gui/settings/btn_right_arrow_hover.png" 
+                        xalign 0.0 
+                        action Preference("after choices", "toggle")
+                        sensitive not _preferences.skip_after_choices  # Solo activa si Skip está desactivado
+            ################################################################################
+            hbox:
+                ysize cell_hight_1
+                frame:
+                    background None
+                    xsize 100
+                    imagebutton:
+                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        hover "gui/settings/btn_left_arrow_hover.png"  
+                        xalign 1.0 
+                        action Preference("transitions", "toggle")
+                        sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
+                    
+                frame:
+                    background None
+                    xsize 250
+                    # Columna 3 - Texto
+                    if _preferences.transitions:
+                        text _("On"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                    else:
+                        text _("Off"):  
+                            size 24
+                            xalign 0.5
+                            yalign 0.5
+                frame:
+                    background None
+                    xsize 500
+                    # Flecha derecha (para activar - Skip)
+                    imagebutton:
+                        idle "gui/settings/btn_right_arrow_idle.png"  
+                        hover "gui/settings/btn_right_arrow_hover.png"  
+                        action Preference("transitions", "toggle")
+                        sensitive not _preferences.transitions  # Solo activa si las transiciones están deshabilitadas
+
+ 
+                
+
+
+
+
 
 
 
