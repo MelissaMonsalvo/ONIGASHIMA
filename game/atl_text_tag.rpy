@@ -351,3 +351,185 @@ init python:
         return new_list
 
     config.custom_text_tags["atl"] = atl_tag
+
+################# AZURE'S TEXT TAGS ###############
+
+init python:
+    def blur_tag(tag, argument, contents):
+        radius = float(argument) if argument else 5.0
+        text_disp = Text(contents, tokenized=True)
+        blurred_disp = Transform(text_disp, blur=radius)
+        return [(renpy.TEXT_DISPLAYABLE, blurred_disp)]
+
+    config.custom_text_tags["blur"] = blur_tag
+
+style glowing_text is default:
+    outlines [ (3, "#00FF0050", 0, 0), (2, "#00FF00A0", 0, 0), (1, "#00FF00", 0, 0) ]
+
+init python:
+    def glow_tag(tag, argument, contents):
+        base_color = argument if argument else "#00FFFF"
+        s = Style("glowing_text")
+        s.outlines = [
+            (3, base_color + "50", 0,0),
+            (2, base_color + "A0", 0,0),
+            (1, base_color, 0,0)
+        ]
+        text_disp = Text(contents, tokenized=True, style=s)
+        return [(renpy.TEXT_DISPLAYABLE, text_disp)]
+
+define config.custom_text_tags["glow"] = glow_tag
+
+
+
+init python:
+    def mirror_tag(tag, argument, contents):
+        txt = Text(contents, tokenized=True)
+        flipped = Transform(txt, yzoom=-1.0, alpha=0.3)
+        reflection = Fixed()
+        reflection.add(txt, xalign=0.0, yalign=0.0)
+        reflection.add(flipped, xalign=0.0, yalign=1.0)
+        return [(renpy.TEXT_DISPLAYABLE, reflection)]
+define config.custom_text_tags["mirror"] = mirror_tag
+
+transform bounce_wave(index=0):
+    yoffset 0
+    on show:
+        pause index * 0.1
+    linear 0.5 yoffset -10
+    linear 0.5 yoffset 0
+    repeat
+
+
+
+init python:
+    def pulse_tag(tag, argument, contents):
+        result = []
+        letter_index = 0
+        for kind, text in contents:
+            if kind == renpy.TEXT_TEXT:
+                for char in text:
+                    if char.strip() == "":
+                        result.append((renpy.TEXT_TEXT, char))
+                    else:
+                        char_text = Text(char)
+                        char_bounce = At(char_text, bounce_wave(letter_index))
+                        result.append((renpy.TEXT_DISPLAYABLE, char_bounce))
+                        letter_index += 1
+            elif kind == renpy.TEXT_TAG:
+                result.append((renpy.TEXT_TAG, text))
+            else:
+                result.append((kind, text))
+        return result
+define config.custom_text_tags["pulse"] = pulse_tag
+# Put these in your script.rpy or relevant script file.
+
+style jojo_text:
+    font "NotoSerifJP-SemiBold.ttf"
+    color "#a282fc"
+    outlines [ (3, "#000", 0, 0) ]
+    size 80
+    xalign 0.5
+    yalign 0.5
+
+transform jojo_scatter1:
+    xpos 0.14 ypos 0.22
+    rotate 17
+    alpha 0.0
+    zoom 0.2
+    parallel:
+        linear 0.4 alpha 1.0
+    linear 0.4 zoom 1.15
+    block:
+        linear 0.07 xoffset 28 yoffset -22 rotate 25 zoom 1.22
+        linear 0.07 xoffset -28 yoffset 14 rotate 13 zoom 1.08
+        linear 0.07 xoffset 22 yoffset -12 rotate 21 zoom 1.15
+        linear 0.07 xoffset -20 yoffset 18 rotate 18 zoom 1.05
+        linear 0.07 xoffset 0 yoffset 0 rotate 17 zoom 1.15
+        pause 0.01
+        repeat
+
+transform jojo_scatter2:
+    xpos 0.86 ypos 0.30
+    rotate -21
+    alpha 0.0
+    zoom 0.2
+    parallel:
+        linear 0.4 alpha 1.0
+    linear 0.4 zoom 1.11
+    block:
+        linear 0.08 xoffset -24 yoffset 19 rotate -32 zoom 1.22
+        linear 0.08 xoffset 19 yoffset -16 rotate -11 zoom 0.97
+        linear 0.08 xoffset -17 yoffset 21 rotate -21 zoom 1.13
+        linear 0.08 xoffset 14 yoffset -12 rotate -24 zoom 1.07
+        linear 0.08 xoffset 0 yoffset 0 rotate -21 zoom 1.11
+        pause 0.01
+        repeat
+
+transform jojo_scatter3:
+    xpos 0.68 ypos 0.28   
+    rotate -21
+    alpha 0.0
+    zoom 0.2
+    parallel:
+        linear 0.4 alpha 1.0
+    linear 0.4 zoom 1.09
+    block:
+        linear 0.08 xoffset -16 yoffset 11 rotate -29 zoom 1.13
+        linear 0.08 xoffset 13 yoffset -10 rotate -14 zoom 1.02
+        linear 0.08 xoffset -8 yoffset 10 rotate -20 zoom 1.10
+        linear 0.08 xoffset 9 yoffset -11 rotate -18 zoom 1.06
+        linear 0.08 xoffset 0 yoffset 0 rotate -21 zoom 1.09
+        pause 0.01
+        repeat
+
+transform jojo_attack4:
+    xpos 0.51 ypos 0.13
+    rotate 28
+    alpha 0.0
+    zoom 0.15
+    parallel:
+        linear 0.4 alpha 1.0
+    linear 0.4 zoom 1.10
+    block:
+        linear 0.06 xoffset 14 yoffset 9 rotate 35 zoom 1.15
+        linear 0.06 xoffset -18 yoffset -8 rotate 21 zoom 1.09
+        linear 0.06 xoffset 9 yoffset 12 rotate 32 zoom 1.14
+        linear 0.06 xoffset -13 yoffset -11 rotate 28 zoom 1.10
+        linear 0.06 xoffset 0 yoffset 0 rotate 28 zoom 1.10
+        pause 0.01
+        repeat
+
+transform jojo_attack5:
+    xpos 0.18 ypos 0.68
+    rotate -10
+    alpha 0.0
+    zoom 0.18
+    parallel:
+        linear 0.4 alpha 1.0
+    linear 0.4 zoom 1.14
+    block:
+        linear 0.07 xoffset -12 yoffset 17 rotate -18 zoom 1.18
+        linear 0.07 xoffset 16 yoffset -13 rotate -3 zoom 1.09
+        linear 0.07 xoffset -14 yoffset 11 rotate -10 zoom 1.13
+        linear 0.07 xoffset 8 yoffset -15 rotate -5 zoom 1.12
+        linear 0.07 xoffset 0 yoffset 0 rotate -10 zoom 1.14
+        pause 0.01
+        repeat
+
+transform jojo_attack6:
+    xpos 0.80 ypos 0.57
+    rotate 33
+    alpha 0.0
+    zoom 0.13
+    parallel:
+        linear 0.4 alpha 1.0
+    linear 0.4 zoom 1.17
+    block:
+        linear 0.08 xoffset 16 yoffset -13 rotate 39 zoom 1.22
+        linear 0.08 xoffset -15 yoffset 18 rotate 29 zoom 1.14
+        linear 0.08 xoffset 11 yoffset -12 rotate 36 zoom 1.19
+        linear 0.08 xoffset -9 yoffset 9 rotate 33 zoom 1.15
+        linear 0.08 xoffset 0 yoffset 0 rotate 33 zoom 1.17
+        pause 0.01
+        repeat

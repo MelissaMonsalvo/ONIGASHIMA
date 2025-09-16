@@ -7,7 +7,11 @@ label loop1_shiori_mandatory1:
 
     play music "Shiori.mp3"
 
-    n "The shrine looks the same."
+    scene shrine day:
+        zoom 0.5
+    with fade
+
+    n "The shrine looks the same as always."
 
     n "Stone steps, with red paint that flakes if you look close enough. Fresh, but actually... {w}old and tattered."
 
@@ -15,7 +19,7 @@ label loop1_shiori_mandatory1:
 
     play sound "sfx/bell_small.ogg"
 
-    show shi normal at shiori_skipp
+    show shi normal at shiori_skipp2
     with dissolve
 
     shiori "{bt=1}[persistent.player_name]-sama~!{/bt}"
@@ -72,9 +76,6 @@ label loop1_shiori_mandatory1:
 
     shiori "Sure. Maybe that’s it."
 
-    show shi normal at shiori_think
-    with dissolve
-
     n "She twirls the broom in her hand as she looks up to the ceiling, clearly trying to remember something."
 
     MC "I mean, it’s not like I wanted all the attention, y’know? I just-{w=0.2}I did what I had to."
@@ -88,6 +89,17 @@ label loop1_shiori_mandatory1:
     n "{size=*0.95}What exactly did you promise her?{/size}"
 
     n "To return? {w=0.3}To keep visiting? {w=0.3}Or..."
+
+    show shi normal:
+        zoom 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 0   
+        xzoom 1.0
+        yzoom 1.0
+
+        ease 0.5 xzoom -1.0
+        ease 0.5 xalign 0.35
 
     n "Shiori just nods and turns away, stepping toward the shrine door."
 
@@ -116,6 +128,10 @@ label loop1_shiori_mandatory2:
 
     ## this happens if you visit the shrine at night
 
+    scene shrine night with in_182:
+        zoom 0.5
+    
+
     play music "Night.mp3"
 
     n "The shrine is still open. Even this late, the doors remain unbarred, and the smoke from the incense still swirls."
@@ -126,7 +142,7 @@ label loop1_shiori_mandatory2:
 
     n "They say it’s the last place the Yamakui dares enter."
 
-    show shi normal at shiori_zoom
+    show shi normal at shiori_skipp2
     with dissolve
 
     shiori "...[persistent.player_name]-sama?"
@@ -172,31 +188,53 @@ label loop1_shiori_mandatory2:
     $ renpy.music.set_volume(0.1)
     pause 0.2
 
+    show darken
+    with dissolve
     play sound "sfx/suzu.mp3"
 
     MC "Wait, really?"
 
     n "Funny, because you {i}don't remember{/i} any names either."
 
-    n "Surely someone was taken by the Yamakui. {w=0.2}That's why you were sent to kill it, right? That's why everyone is afraid."
+    n "Surely someone was taken by the Yamakui. {w=0.2}That's why you were sent to kill it, right? {w=0.2}That's why everyone is afraid."
 
-    n "There weren't remains, but bloodstains, evidence of something being mauled."
+    n "There weren't remains, but bloodstains... {w=0.3}{alpha=0.7}evidence of something being mauled.{/alpha}"
 
     n "But you {size=*0.95}can't place a name.{/size}"
 
-    n "Who was taken last? {w=0.2}A child? {w=0.2}A friend? {w=0.5}{i}Your parents?{/i}"
+    n "Who was taken last? {w=0.2}A child? {w=0.2}A friend? {w=0.5}{i}{sc=5}Your parents?{/sc}{/i}"
 
-    n "Because you came back home and there's no parents at home. {w=0.2}Did they get eaten, too?"
+    n "Because you came back home and there's no parents at home. {w=0.2}{cps=12}Did they get eaten, too?{/cps}"
 
     MC "...Can you remember anyone?"
 
-    shiori "The elder said that everyone who got eaten by Yamakui {alpha=0.7}got wiped off from everyone's memory.{/alpha}"
+    shiori "The elder said that everyone who got eaten by Yamakui {alpha=0.7}{cps=10}got wiped off from everyone's memory...{/cps}{/alpha}"
 
-    MC "Or maybe they were {i}never there to begin with?{/i}"
+    MC "Or maybe they were {glitch=15}{i}never there to begin with?{/i}{/glitch}"
 
     play sound "sfx/stomp.wav"
 
-    show shi normal at shiori_stomp
+    hide shi normal
+    hide darken
+    show shi normal:
+        zoom 0.5 
+        xalign 0.4 
+        yalign 0 
+        yoffset 0 
+        xzoom 1.0 
+        yzoom 1.0
+
+        parallel:
+            easein 0.1 yoffset -20
+            easeout 0.1 yoffset 0
+            easein 0.08 yoffset -10
+            easeout 0.08 yoffset 0
+
+        parallel:
+            easein 0.1 yzoom 0.95 xzoom 1.05
+            easeout 0.1 yzoom 1.0 xzoom 1.0
+            easein 0.08 yzoom 0.97 xzoom 1.03
+            easeout 0.08 yzoom 1.0 xzoom 1.0
     with vpunch
 
     shiori "[persistent.player_name]-sama, that is a cruel thing to say...!"
@@ -226,10 +264,10 @@ label loop1_shiori_mandatory2:
     n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive it."
 
 
-    return
+    #return
 
     $ loop1_shiori_mandatory2 = True
-    return
+    #return
 
 label loop1_shiori_mandatory3:
 
@@ -256,19 +294,20 @@ label loop1_shiori_mandatory3:
 
     MC "This one?"
 
-    n "You reach out, your fingers press into something cold and soft."
+    n "You reach out, your fingers press into something {cps=10}{alpha=0.8}cold{/alpha}{/cps} and soft."
 
-    n "It gives slightly when you squeeze further."
-
-    ## SQUELCH, SQUELCH
-
-    n "The texture is the same as an overripe fruit."
+    n "It {sc=4}gives{/sc} slightly when you squeeze further."
 
     ## SQUELCH, SQUELCH
 
-    n "Then a stucky red liquid wells up around your thumb as you scoop it to your hand."
+    n "The texture is the same as an {size=*0.9}{i}overripe fruit{/i}{/size}."
 
-    n "It's warm... as warm as Shiori's hand when you brush against it as you hand the thing to her."
+    ## SQUELCH, SQUELCH
+
+    n "Then a {color=#aa0000}{cps=12}sticky red liquid{/cps}{/color} wells up around your thumb as you scoop it to your hand."
+
+    n "It's {cps=8}{alpha=0.7}warm...{/alpha}{/cps} as warm as Shiori's hand when you brush against it as you hand the thing to her."
+
 
     MC "Fresh?"
 
@@ -296,21 +335,21 @@ label loop1_shiori_mandatory3:
 
     play sound "sfx/slurp.ogg"
 
-    n "She lifts a strip and bites straight through it."
+    n "She lifts a strip and {sc=6}bites{/sc} straight through it."
 
     # plop sfx
 
-    n "There’s a popping sound as something hollow inside ruptures."
+    n "There’s a {size=*0.95}{i}popping{/i}{/size} sound as something hollow inside ruptures."
 
-    n "A wet squelch follows, her lips sliding shut over the offering."
+    n "A {cps=14}{color=#ff0000}{outlinecolor=#660000}wet squelch{/outlinecolor}{/color}{/cps} follows, her lips sliding shut over the offering."
 
-    n "She chews once, then swallows effortlessly."
+    n "She {k=2}chews{/k} once, then swallows {alpha=0.8}{i}effortlessly{/i}{/alpha}."
 
     ## she smiles at you afterwards
 
     MC "Alright then."
 
-    n "You pick up a piece. The surface seems slick. A thick mucous sheen coats it, and it slides through your fingers once before you get a grip."
+    n "You pick up a piece. The surface seems {alpha=0.7}slick{/alpha}. A thick mucous sheen coats it, and it {sc=4}slides{/sc} through your fingers once before you get a grip."
 
     MC "...Itadakimasu."
 
@@ -367,7 +406,7 @@ label gulgulp:
 
     MC "So, what is it? Boar? Deer?"
 
-    shiori "Wouldn't you like to know, [persistent.player_name]-sama."
+    shiori "{cps=14}{alpha=0.7}{sc=4}Wouldn't you like to know, [persistent.player_name]-sama.{/sc}{/alpha}{/cps}"
 
     MC "Eh, just curious is all."
 
@@ -439,30 +478,33 @@ label loop1_shiori_mandatory4:
     $ renpy.pause(0.5)
     window show
 
-    shiori "{fast}{size=+10}{color=#FF4444}{shk}山の鬼よ、立ち去れ、立ち去れ！{/shk}{/color}{/size}"
-    shiori "{fast}{size=+10}{color=#993333}{shk}深淵に、闇に帰れ{/shk}{/color}{/size}"
+    show expression Text("山の鬼よ", style="jojo_text") at jojo_scatter1
+    show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_scatter2
+    show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_scatter3
+    pause 2.0
 
     n "She chants clearly, loudly. The bell in her hand sways slightly with her rhythm."
 
     ## multiple chanting, the words are shaking at the screen as she chants
 
-    shiori "{fast}{size=+10}{color=#FF4444}{shk}山の鬼よ、立ち去れ、立ち去れ！{/shk}{/color}{/size}"
-    shiori "{fast}{size=+10}{color=#993333}{shk}深淵に、闇に帰れ{/shk}{/color}{/size}"
+    show expression Text("山の鬼よ", style="jojo_text") at jojo_attack4
+    show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5
+    show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_attack6
 
 
-    MC "Ghh--"
+    MC "{cps=8}{sc=6}{color=#ff0000}Ghh--{/color}{/sc}{/cps}"
 
     n "The sky overhead is very still, not even a breeze through the trees."
 
-    n "No monsters, nothing comes out from.the bushes."
+    n "No monsters, nothing comes out from the bushes."
 
-    shiori "{fast}{size=+10}{color=#FF4444}{shk}Oni of the mountains, begone! Begone!{/shk}{/color}{/size}"
-    shiori "{fast}{size=+10}{color=#993333}{shk}Back to the depths. Back to the dark.{/shk}{/color}{/size}"
+    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{bt=6}Oni of the mountains,{/bt}{/outlinecolor}{/color}{/size} {w=0.2}{fast}{size=+8}{shader=jitter}{color=#ff0000}begone!{/color}{/shader}{/size}"
 
-    n "Shiori chants even louder, the insects have gone quiet."
+    shiori "{cps=14}{alpha=0.8}{vert}Back to the depths.{/vert}{/alpha}{/cps}{w=0.3}{size=+10}{sc=5}{color=#aa0000}Back to the dark!{/color}{/sc}{/size}"
 
-    MC "Shiori--!"  # grimacing faaaaaceeee
+    n "Shiori chants even louder. {w=0.3}The insects have gone quiet."
 
+    MC "{cps=7}{alpha=0.7}{i}Shiori--!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
     shiori "Eh?"
 
     MC "I think that's enough, no evil spirits are here tonight."
@@ -552,41 +594,41 @@ label loop1_shiori_mandatory5:
 
     shiori "Yeah, that was a very pleasant day, [persistent.player_name]"
 
-    shiori "Except..."
+    shiori "{cps=62}{alpha=0.8}Except...{/alpha}{/cps}"
 
-    shiori "It didn’t happen like that."
+    shiori "{alpha=0.7}{sc=3}It didn’t happen like that.{/sc}{/alpha}"
 
-    MC "Huh?"
+    MC "{cps=9}{alpha=0.7}Huh?{/alpha}{/cps}"
 
-    shiori "You left without saying goodbye to us, [persistent.player_name]."
+    shiori "{cps=14}{vert}You left without saying goodbye to us, [persistent.player_name].{/vert}"
 
-    shiori "We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you."
+    shiori "{cps=12}{alpha=0.7}We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you.{/alpha}"
 
     n "Did you mixed your memories up? What's happening?"
 
-    MC "N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?"
+    MC "{sc=4}{alpha=0.7}N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?{/alpha}{/sc}"
 
-    shiori "[persistent.player_name], you’re lying. I remember more than anyone else."
+    shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}"
 
-    shiori "Don't try to make things up."
+    shiori "{alpha=0.8}Don't try to make things up.{/alpha}"
 
-    MC "I-- I just--"
+    MC "{cps=59}{sc=3}{alpha=0.7}I-- I just--{/alpha}{/sc}"
 
     n "Guess you can't get yourself out of this situation."
 
-    shiori "But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you."
+    shiori "{fi=2.0}But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you.{/fi}"
 
-    shiori "Even if Yamato and Hikaru told me otherwise."
+    shiori "{cps=52}{alpha=0.7}Even if Yamato and Hikaru told me otherwise.{/alpha}"
 
     n "You extend your hand, about to grab Shiori's wrist as she moves away."
 
     n "What are you doing? Stop it. Stop."
 
-    shiori "I should go. It’s getting late~"
+    shiori "{cps=53}{alpha=0.6}I should go. It’s getting late~{/alpha}"
 
-    shiori "Tomorrow’s the Red Moon, [persistent.player_name]-sama."
+    shiori "{fi=1.8}Tomorrow’s the Red Moon, [persistent.player_name]-sama.{/fi}"
 
-    shiori "Let’s be honest then, okay?"
+    shiori "{sc=3}{alpha=0.8}Let’s be honest then, okay?{/alpha}{/sc}"
 
     n "She walks away, as your body freezes in place."
 
@@ -615,84 +657,84 @@ label loop1_shiori_mandatory5:
 
     n "Indeed, it is too small for a being such as the Yamakui-{nw}"
 
-    MC "I killed it."
+    mc "{b}I killed it.{/b}"
 
-    MC "I killed that kuso-yarou up there."
+    mc "{color=#ff3333}I killed that kuso-yarou up there.{/color}"
 
-    MC "It screamed. It fucking screamed, gods damn it , it *died.*"
+    mc "{size=+4}{sc=5}It screamed. It fucking screamed, gods damn it, it *died.*{/sc}{/size}"
 
     play sound "sfx/metal_hit.ogg"
 
     n "You kick the chestplate. The noise it makes is wet."
 
-    MC "I remember how it sounded like, how it talked like, how it looked like-"
+    mc "I remember how it sounded like, how it talked like, how it looked like-"
 
-    MC "You."
+    mc "{fast}{sc=4}{color=#bb1111}You.{/color}{/sc}"
 
     n "Me."
 
-    MC "...You said I was the hero."
+    mc "{b}...You said I was the hero.{/b}"
 
-    MC "You *said it.*. Now say it again."
+    mc "You said it. Now say it again."
 
-    MC "...Why the hell won’t you say it?"
+    mc "{b}...Why the hell won’t you say it?{/b}"
 
     n "..."
 
-    MC "You’ve been here this whole time."
+    mc "{sc=3}You’ve been here this whole time.{/sc}"
 
-    MC "Narrating every step, whispering like a kami stuck in my spine."
+    mc "Narrating every step, whispering like a kami stuck in my spine."
 
-    MC "But now? Now you shut up?"
+    mc "{size=+2}But now? Now you shut up?{/size}"
 
-    MC "...You liked watching me squirm, didn’t you?"
+    mc "{sc=3}...You liked watching me squirm, didn’t you?{/sc}"
 
-    MC "So what is it now? Scared? Huh?"
+    mc "So what is it now? Scared? Huh?"
 
     play sound "sfx/heartbeat_deep.ogg"
 
     n "..."
 
-    MC "You should be."
+    mc "{size=+2}You should be.{/size}"
 
-    MC "I did what you asked. I followed your damn story."
+    mc "I did what you asked. I followed your damn story."
     play sound "sfx/flesh_pull.ogg"
 
     n "Your hand slides down the chestplate-{nw}"
 
-    MC "There you are."
+    mc "{sc=5}There you are.{/sc}"
 
-    MC "...You never said what to do once the screaming stopped."
-
-    n "..."
-
-    MC "All right, if that's how you wanna play."
+    mc "...You never said what to do once the screaming stopped."
 
     n "..."
 
-    MC "Let's play for a little bit more."
+    mc "All right, if that's how you wanna play."
+
+    n "..."
+
+    mc "{b}Let's play for a little bit more.{/b}"
 
     n "...."
 
     ## uncomfortable silence
 
-    MC "...Oi."
+    mc "...Oi."
 
-    MC "You still there?"
+    mc "{sc=3}You still there?{/sc}"
 
-    MC "Hey?"
+    mc "{sc=4}Hey?{/sc}"
 
-    MC "Don’t you wanna finish your pretty little story?"
+    mc "Don’t you wanna finish your pretty little story?"
 
     n "..."
 
-    MC "Heh."
+    mc "{b}Heh.{/b}"
 
-    MC "You'd better, or I'll finish it for you."
+    mc "{b}You'd better, or I'll finish it for you.{/b}"
 
     n "Wait, what are you-"
 
-    MC "{size=+6}{color=#993333}Don’t look away now.{/color}{/size}"
+    mc "{size=+6}{color=#993333}{shader=jitter}Don’t look away now.{/shader}{/color}{/size}"
 
     window hide
     $ renpy.pause(2.0)

@@ -273,57 +273,54 @@ transform shiori_skipp:
         easein 0.13 yzoom 0.97 xzoom 1.03
         easeout 0.13 yzoom 1.0 xzoom 1.0
 
+transform shiori_skipp2:
+    zoom 0.18
+    xalign 0.4
+    yalign 0
+    yoffset 100    # Increase if still too low
+
+    parallel:
+        linear 1.0 zoom 0.5 yoffset 0
+
+    parallel:
+        easein 0.18 yzoom 0.97 xzoom 1.05
+        easeout 0.18 yzoom 1.00 xzoom 1.00
+
 transform shiori_tilt:
-    zoom 0.25
-    xanchor 0.5
-    xalign 0.5
-    yalign -0.60
+    zoom 0.5
+    xalign 0.4
+    yalign 0
     yoffset 0
     xzoom 1.0
     yzoom 1.0
 
-    # Lean in (upper body moves toward camera)
+    # Lean/bob (forward toward camera)
     parallel:
-        easein 0.4 zoom 0.29
-        easeout 0.4 zoom 0.26
-
+        easein 0.4 zoom 0.57
+        easeout 0.4 zoom 0.5
     parallel:
-        easein 0.4 yoffset -100
+        easein 0.4 yoffset -70
         easeout 0.4 yoffset 0
 
-    # Final resting bounce (subtle)
+    # Subtle bounce (optional)
     parallel:
         pause 0.8
-        easein 0.1 yoffset -12
+        easein 0.1 yoffset -10
         easeout 0.1 yoffset 0
-        easein 0.08 yoffset -6
+        easein 0.08 yoffset -4
         easeout 0.08 yoffset 0
 
-transform shiori_think:
-    zoom 0.26
-    xanchor 0.5
-    yanchor 0.1   # anchor the "neck"
-    xalign 0.5
-    yalign -0.40
-    xzoom 1.0
-    yzoom 1.0
-    yoffset 0
-    rotate 0
-    rotate_pad True
-
-    easein 0.3 rotate -2
-    ease 0.4 rotate 2
-    easeout 0.3 rotate 0
 
 transform shiori_stomp:
-    zoom 0.26
+    # === ANIMATION PHASE: Use anchor for natural squash/stretch ===
+    zoom 0.5
     xanchor 0.5
-    yanchor 0.1   # anchor the "neck"
-    xalign 0.5
-    yalign -0.40
+    yanchor 0.1
+    xalign 0.125
+    yalign -0.261
+    yoffset 0
     xzoom 1.0
     yzoom 1.0
-    yoffset 0
     rotate 0
     rotate_pad True
 
@@ -341,3 +338,13 @@ transform shiori_stomp:
 
     ease 0.2 rotate -3
     ease 0.2 rotate 0
+
+    # === SNAP TO FINAL, PIXEL-PERFECT END POSE ===
+    anchor (0, 0)
+    xalign 0.4
+    yalign 0
+    yoffset 0
+    xzoom 1.0
+    yzoom 1.0
+    rotate 0
+
