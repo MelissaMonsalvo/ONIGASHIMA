@@ -883,7 +883,7 @@ label beforefirstloop:
 
     play sound "sfx/day change.mp3"
 
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}7 DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SEVEN DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
 
     with fade
 
@@ -891,7 +891,7 @@ label beforefirstloop:
 
     stop sound
 
-    jump loop1_shiori_mandatory1
+    jump loop1_yamato_mandatory1
 
 
 

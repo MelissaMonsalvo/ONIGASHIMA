@@ -1,10 +1,31 @@
 ############# LOOP 1 WHERE EVERYONE IS ALIVE ###########################
 label loop1_yamato_mandatory1:
 
+    scene dojo day with in_182:
+        zoom 0.5
+
+    pause 1.0
+
+    show yam normal:
+        zoom 0.3
+        xalign 0.4
+        yalign 0
+        yoffset 0
+        xzoom -1
+        yzoom 1.0
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+        pause 0.8
+
+        ease 0.5 xzoom 1 matrixcolor None xoffset 120
+
     ## DOJO DAY
+
+    play music "Yamato.mp3"
+    pause 0.5
     yamato "Oi, oi. Look what the kami-sama dragged outta bed."
 
-    MC "Morning to you too, Yamato-kun. You out here exorcising evil spirits or something?"
+    MC normal "Morning to you too, Yamato-kun. You out here exorcising evil spirits or something?"
 
     yamato "Someone's gotta do it."
 
@@ -15,6 +36,8 @@ label loop1_yamato_mandatory1:
     MC "All right, I think you're being unnecessarily hostile. What's gotten into you?"
 
     yamato "What's gotten into me is that yer bein' too damn clean for someone who fought the fuckin' Yamakui!"
+
+    with vpunch
 
     yamato "I don't believe the brat I used to mop the floor with could easily kill 'em!"
 
@@ -36,33 +59,152 @@ label loop1_yamato_mandatory1:
 
     MC "Haaaaah!!"
 
-    yamato "Tch! Swingin’ like a drunk ox, kusogaki!"
+    play sound "swing.wav"
+
+    show slash_arc
+    show yam normal:
+        zoom 0.3
+        xalign 0.4
+        xoffset 120
+        yoffset 0
+        xzoom 1
+        yzoom 1.0
+
+        # Crouch slightly (anticipation)
+        linear 0.08 yoffset 18
+
+        # Jump back (zoom out, arc upward, adjust xoffset to stay centered)
+        linear 0.14 zoom 0.25 yoffset -38 xoffset 144
+
+        # Hang in air briefly
+        pause 0.10
+
+        # Land softly, back at ground level, stay zoomed out, maintain adjusted xoffset
+        linear 0.12 yoffset 0
+
+        # Optional: subtle bounce settle
+        linear 0.07 yoffset 8
+        linear 0.09 yoffset 0
+    with vpunch
+
+    yamato "{sc=1}Tch! Swingin’ like a drunk ox, kusogaki!{/sc}"
 
     n "You charge in, but he easily slips past you."
+
+    scene black
+
+    # Optional: Play sound effects in sync
+    scene black
+    play sound "swing.wav"
+    show combo_slash_1
+    $ renpy.pause(0.1, hard=True)
+    stop sound
+
+    play sound "swing.wav"
+    show combo_slash_2
+    $ renpy.pause(0.1, hard=True)
+    stop sound
+
+    play sound "swing.wav"
+    show combo_slash_3
+    $ renpy.pause(0.1, hard=True)
+
+    with sshake
+    pause 0.1
+
+    scene dojo day:
+        zoom 0.5
+
+    show yam normal:
+        zoom 0.47
+        align (0.5, 0.005)
+
+
+        linear 0.01 xalign 0.5 yalign 0.1
+
+        linear 0.16 zoom 0.29 xalign 0.41 yalign -0.09 xoffset 122
+
+        linear 0.12 zoom 0.25 xalign 0.4 yalign 0 xoffset 144 yoffset 0
+
+        linear 0.07 yoffset 8
+        linear 0.09 yoffset 0
+
+
+    hide combo_slash_1
+    hide combo_slash_2
+    hide combo_slash_3
 
     n "His sword cuts the air, but you duck out just in time."
 
     MC "Are you holding back, Yamato-kun~? Or are you always this slow?"
 
-    yamato "Oi, don’t get cocky. Ain’t doin’ shit like that!"
+    show yam normal:
+        zoom 0.25
+        xalign 0.4
+        xoffset 144
+        yoffset 0
+
+        # Rapid, small side-to-side shakes (as if shouting)
+        linear 0.06 xoffset 154
+        linear 0.06 xoffset 134
+        linear 0.06 xoffset 149
+        linear 0.05 xoffset 139
+        linear 0.07 xoffset 144
+
+    yamato "{sc=1}Oi, don’t get cocky. Ain’t doin’ shit like that!{/sc}"
 
     n "Your sword sings again, he manage to parry once but you shifted your weight and swing one more time."
 
+    show yam normal behind slash_fx:
+        zoom 0.26
+        align (0.4, 0.2)
+        linear 0.1 align (0.5, 0.3) zoom 0.4
+        pause 0.05
+        linear 0.2 align (0.4, 0.005) zoom 0.26
+    with vpunch
+
+
+    play sound "swing.wav"
+    show slash_vertical
+    $ renpy.pause(0.1, hard=True)
+    with vpunch
+
     n "It almost hits, but--"
 
-    n "Yamato’s foot hits a soft patch, and he slips down, accidentally avoiding your swing."
+    play sound "sfx/fall.mp3"
+    show yam normal:
+        zoom 0.26
+        align (0.4, 0.005)
+        yoffset 0
 
-    play sound "sfx/bodyfall.ogg"
+        linear 0.10 yoffset -20
 
-    show yamato annoyed at midright
+        linear 0.25 yoffset 1100
 
-    yamato "Tch... Ahhh, fuckin’ hell..."
+        pause 0.4
+
+
+    with vpunch
+
+
+    n "Yamato’s foot trips on something, and he slips down, accidentally avoiding your swing."
+
+    n "..."
+
+    stop music fadeout 1.0
+
+    yamato "Tch... {w=0.1}Ahhh, fuckin’ hell..."
 
     MC "Yamato?!"
 
     n "You remember Yamato is never this careless, you wonder if he is doing this on purpose."
 
     n "You hand out your hand to help him stand, but he doesn't take it."
+
+    show yam normal with easeinbottom:
+        zoom 0.26
+        align (0.4, 0.005)
+        yoffset 0
 
     yamato "Lost my footing, ’s all. Ain’t my lucky day."
 
@@ -80,6 +222,8 @@ label loop1_yamato_mandatory1:
 
     yamato "Tch. Don’t feed me that fluffy crap."
 
+    play music "Tense.ogg"
+
     MC "I’m not--"
 
     yamato "I used to be the strong one. Y'know that?"
@@ -88,43 +232,54 @@ label loop1_yamato_mandatory1:
 
     n "That’s... That’s not how it happened. Is it?"
 
-    yamato "I was the one who trained ya."
+    yamato "{size=+2}{sc=3}I was the one who trained ya.{/sc}{/size}"
 
-    MC "Yeah, but I was the one who killed the damn thing!"
+    MC "{sc=2}Yeah, but I was the one who killed the damn thing!{/sc}"
 
-    yamato "Hah. Ya really believe that? That thing tore warriors in half, scared the elders shitless and somehow... somehow {i}ya{/i} come back without a scratch?"
+    yamato "Hah. {w=0.1}Ya really believe that? That thing tore people in half, scared the elders shitless and somehow... somehow {i}ya{/i} come back without a scratch?"
 
-    MC "What, you think I’m making it up?!"
+    MC "{cps=91}What, {w=0.1}you think I’m making it up?!{/cps}"
 
-    yamato "Tch. I think... ya don’t even know yerself."
+    yamato "{sc=1}Tch.{/sc} I think... ya don’t even know yerself."
 
     n "Yamato hasn’t moved, but you feel cornered by his words. If you hadn't lied, you won't feel cornered."
 
-    MC "Ha! Say whatever you want, I brought back the armor! Everyone saw it!"
+    MC "{cps=10}Ha!{/cps} Say whatever you want, I brought back the armor! Everyone saw it!"
 
-    yamato "Yeah? Armor’s just scrap metal if ya ask me. Coulda been anyone’s. Coulda been planted. Coulda been--"
+    yamato "Yeah? Armor’s just scrap metal if ya ask me. Coulda been anyone’s, or {i}planted--{/i}"
 
-    n "He stops. His jaw locks tight. He almost said something else. Something worse."
+    n "He stops. His jaw locks tight. He almost said something worse."
 
-    MC "What?"
+    MC "{cps=9}What?{/cps}"
 
     n "Yamato pauses, then looks down before staring you right at the eyes. He's hesitating...?"
 
-    yamato "Tch, nevermind."
+    yamato "{sc=5}Tch, nevermind.{/sc}"
 
-    yamato "Next red moon... {w}I’ll be watchin’ you."
+    show darken
+    with dissolve
+
+    yamato "{size=+4}{color=#ff003c}Next red moon...{w}I’ll be watchin’ ya.{/color}{/size}"
 
     n "Weird... Yamato is usually not like this..."
 
     n "He was kind and always ready to help anyone in need of sparring partner, but now..."
 
-    m "What's gotten into him?"
+    n "What's gotten into him?"
 
-    MC "*scoff*"
+    MC "{sc=2}*scoff*{/sc}"
 
-    yamato "If ya really killed the Yamakui, ya wouldn’t be shakin’ right now."
+    yamato "{glitch}If ya really killed the Yamakui, ya wouldn’t be shakin’ right now.{/glitch}"
 
-    hide yamato with dissolve
+    show yam normal:
+        linear 0.4 xzoom -1 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+    pause 0.1
+
+    hide yam
+    hide darken
+    with dissolve
+
+    stop music fadeout 1.0
 
     n "He walks out without looking back. You want to shout after him, but your throat closes up."
 
@@ -134,15 +289,39 @@ label loop1_yamato_mandatory1:
 
     n "Except for the pounding in your ears."
 
-    return
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+    #return
 
 label loop1_yamato_mandatory2:
 
     $ loop1_yamato_mandatory2 = True
 
-    ## DOJO NIGHT
+    scene dojo day with in_182:
+        zoom 0.5
+
+    pause 1.0
 
     n "No one uses the dojo anymore after you return."
+
+    play music "Night.mp3"
+
+    show yam normal with dissolve:
+        zoom 0.26
+        align (0.5, 0.005)
+        yoffset 0
 
     n "But there he is, again. Swinging that katana of his like he has something to prove."
 
@@ -152,19 +331,23 @@ label loop1_yamato_mandatory2:
 
     MC "Shut up, I'm just checking on you."
 
-    yamato "Heh, sure ya do."
+    yamato "{sc=3}Heh, sure ya do.{/sc}"
 
     yamato "Red Moon’s near. Ya feel it?"
 
-    MC "Stop talking like the Oni's gonna return!"
+    MC "{sc=1}Stop talking like the Oni's gonna return!{/sc}"
 
-    MC "I mean, I brought it's armor back, right? What more proof do you want?!"
+    MC "{size=+2}I mean, I brought its armor back, right? What more proof do you want?!{/size}"
 
-    yamato "Yeah? Ya sure 'bout that?"
+    yamato "{w=0.1}Yeah? Ya {i}sure{/i} 'bout that?"
 
     yamato "'cause Hikaru said it was too damn small to belong to the Oni."
 
-    MC "Have either of you or Hikaru seen the oni? I was the only one who did and stayed alive!"
+    MC "{sc=0.5}Have either of you or Hikaru seen the oni?{/sc}"
+
+    MC "{sc=0.5}I was the only one who did and stayed alive!{/sc}"
+
+    with vpunch
 
     yamato "All t' more reason to doubt ya."
 
@@ -172,15 +355,44 @@ label loop1_yamato_mandatory2:
 
     yamato "'Cause people's lives depend on it."
 
+    show yam normal:
+        zoom 0.26
+        align (0.5, 0.005)
+        yoffset 0
+
+        parallel:
+            linear 2.2 zoom 0.3 align (0.55, 0.002) yoffset 40 xoffset 20
+        parallel:
+
+            linear 0.6 align (0.52, 0.04)
+            linear 0.5 align (0.48, 0.02)
+            linear 0.6 align (0.52, 0.04)
+            linear 0.5 align (0.55, 0.02)
+
+
     yamato "Ya came home grinnin’ with blood on that armor, [persistent.player_name]. Told 'em they could sleep easy."
 
-    yamato "So if they don’t wake up after the red moon's over..."
+    show yam normal:
+        zoom 0.3
+        align (0.55, 0.02)
+        yoffset 40
 
-    yamato "That's on ya."
+        parallel:
+            linear 2.2 zoom 0.35 align (0.6, 0.002) yoffset 70 xoffset 20
+        parallel:
 
-    n "The both of you go silent and stare at a red slash slowly forming across the sky, the first sign of the red moon coming."
+            linear 0.6 align (0.52, 0.04)
+            linear 0.5 align (0.48, 0.02)
+            linear 0.6 align (0.52, 0.04)
+            linear 0.5 align (0.55, 0.02)
 
-    yamato "...Oi. [persistent.player_name]."
+    yamato "{size=+2}So if they don’t wake up after the {glitch}red moon's{/glitch} over...{/size}"
+
+    yamato "{fi=13-1.5-20}That's on ya.{/fi}"
+
+    MC "..."
+
+    yamato "{w=0.1}...Oi. [persistent.player_name]."
 
     MC "Huh?"
 
@@ -189,14 +401,18 @@ label loop1_yamato_mandatory2:
     n "The words stumble before you even think of an answer."
 
     menu:
-        "Say it's red.":
-            MC "It was... red."
-            n "Why did you stutter? Of course it was red"
+        "Say it's {color=#ff082d}red.{/color}":
+            show darken2
+            with dissolve
+            MC "It was... {color=#ff082d}red.{/color}"
+            n "Why did you stutter? Of course it was {color=#ff082d}red{/color}"
         "Say it's black.":
             MC "It was... black. Yeah. Black."
             yamato "...Black?"
             n "No, no, something's wrong."
-            MC "I-I mean red?"
+            show darken2
+            with dissolve
+            MC "I-I mean {color=#ff082d}red{/color}?"
 
     yamato "Ya sure?"
 
@@ -209,16 +425,32 @@ label loop1_yamato_mandatory2:
 
     yamato "Tch."
 
+    show yam normal:
+        zoom 0.35
+        align (0.55, 0.02)
+        yoffset 70
+        xoffset 20
+
+        parallel:
+            linear 2.2 zoom 0.42 align (0.65, 0.002) yoffset 95 xoffset 20
+        parallel:
+            linear 0.6 align (0.52, 0.04)
+            linear 0.5 align (0.48, 0.02)
+            linear 0.6 align (0.52, 0.04)
+            linear 0.5 align (0.65, 0.02)
+
+
     n "He doesn't look convinced and leans closer, shrinking the gap between you. You can't breathe right."
 
     yamato "Say that again?"
 
     menu:
-        "Red, I said.":
-            MC "Red, I said!"
+        "{color=#ff082d}Red{/color}, I said.":
+            MC "{color=#ff082d}Red{/color}, I said!"
             n "Whoa, there's no need to yell!"
         "Stop asking me that!":
             MC "Why do you keep asking me that?!"
+            with hpunch
             yamato "Because you keep soundin’ like you’re lyin’."
 
     n "Your pulse pounds harder now. What is the point of this?"
@@ -226,26 +458,56 @@ label loop1_yamato_mandatory2:
     yamato "Last chance. What color was its blood?"
 
     menu:
-        "Red.":
-            MC "...Red."
-        "Red again.":
-            MC "I already told you. Red."
+        "{color=#ff082d}Red.{/color}":
+            MC "{color=#ff082d}...Red.{/color}"
+        "{color=#ff082d}Red.{/color} again.":
+            MC "I already told you. {color=#ff082d}Red.{/color}"
 
-    MC "Red. Red. RedredredredredREDREDREDREDREDREDREDREDRED. RED!"
+    stop music
+
+    MC "{color=#ff082d}Red. Red. RedredredredredREDREDREDREDREDREDREDREDRED. RED!{/color}"
 
     yamato "..."
 
     ## creepy laugh scene
 
-    yamato "...Heh..."
+    show yam normal:
+        zoom 0.42
+        align (0.65, 0.002)
+        yoffset 95
+        xoffset 20
 
-    yamato "...Heh... hehh... hhhhehhh--"
 
-    yamato "Haaaahh... HHHahh--!!"
+        parallel:
+            linear 0.07 yoffset 120
+            linear 0.05 yoffset 88
+            linear 0.06 yoffset 110
+            linear 0.04 yoffset 92
+            linear 0.06 yoffset 105
+            linear 0.05 yoffset 95
+            repeat
+    play music "Narukami.mp3"
+    yamato "{sc=2}...Heh...{/sc}"
 
-    yamato "AHAHAHAHA...!"
+    yamato "{sc=3}{k=2}...Heh... hehh... hhhhehhh--{/k}{/sc}"
+
+    yamato "{sc=4}{size=+2}{k=1}Haaaahh... HHHahh--!!{/k}{/size}{/sc}"
+
+    with vpunch
+
+
+    yamato "{size=+8}{sc=7}AHAHAHAHA...!{/sc}{/size}"
+
+    with sshake
 
     MC "The hell was that for?"
+
+    show yam normal:
+        zoom 0.42
+        align (0.65, 0.002)
+        yoffset 95
+        xoffset 20
+    with dissolve
 
     yamato "...Yeah, ya sounded like a liar."
 
@@ -259,17 +521,34 @@ label loop1_yamato_mandatory2:
 
     n "What did he mean by that?"
 
-    n "You're sure the Oni's blood was red."
+    n "You're sure the Oni's blood was {color=#ff082d}red{/color}."
 
-    n "It was red. You saw it--{w} didn’t you?"
+    n "It was {color=#ff082d}red{/color}. You saw it--{w} didn’t you?"
 
-    n "You stabbed it. {w}The liquid was dipping from your hands when you stab it. {w}Red. {w}Red. It HAD to be red."
+    n "You stabbed it. {w}The liquid was dipping from your hands when you stabbed it. {w}{color=#ff082d}Red{/color}. {w}{color=#ff082d}Red{/color}. It HAD to be {color=#ff082d}red{/color}."
 
-    n "It was evry dark at the time, sure. But your sword was red, right? You remember that, right?"
+    n "It was very dark at the time, sure. But your sword was {color=#ff082d}red{/color}, right? You remember that, right?"
 
-    n "No--no, stop. Stop thinking about it. It was red. It was. {w}It was."
+    n "No. {w}No, stop. Stop thinking about it. It was {color=#ff082d}red{/color}. It was. {w}It {i}was.{/i}"
 
     n "Then why was he laughing like that?"
+
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+
+
     return
 
 label loop1_yamato_mandatory3:
@@ -279,6 +558,13 @@ label loop1_yamato_mandatory3:
 
     ## YOUR HOUSE NIGHT
 
+    scene bg house night:
+        zoom 0.9
+        xanchor 0.5
+        yanchor 0.5
+
+    play music "walk grass.mp3"
+
     n "You are in your house when you hear footsteps outside."
 
     n "Why are you not asleep at this hour? Do you ever sleep? Does the fight haunt you so much that--"
@@ -287,19 +573,11 @@ label loop1_yamato_mandatory3:
 
     n "What matters now is that the footsteps are nearing."
 
-    n "You stand away and walk towards it with bare feet, slowly, so they don't notice."
-
-    n "You slide the panel softly, it almost doesn't make a sound."
-
-    n "And there he is."
+    n "You see a shadow outside your dooe."
 
     n "Yamato."
 
-    n "Crouched low by your shed, his shoulders are hunched, clearly stalking... or waiting."
-
-    n "His hand rests near the latch, creeping slowly closer and closer."
-
-    n "You drop out of sight fast, pulse crashing behind your ears."
+    n "Crouched low, hunched shoulders, clearly stalking... {w=0.2}or waiting."
 
     n "Today is not Yamato's patrol schedule."
 
@@ -313,33 +591,33 @@ label loop1_yamato_mandatory3:
 
     play sound "sfx/stone_kick.ogg"
 
-    MC "...Tch."
+   mc "{sc=2}...Tch.{/sc}"
 
     n "You almost growls as the blade presses to his back."
 
-    MC "...Don’t."
+    mc "{size=+3}{b}...Don’t.{/b}{/size}"
 
     yamato "..."
 
-    MC "Step away. {w}Slowly. {w}Or I’ll spill you across the floorboards."
+    mc "{b}Step away.{/b} {w}{size=+2}Slowly.{/size} {w}{sc=3}Or I’ll spill you across the floorboards.{/sc}"
 
     n "He freezes. You can feel his muscles shift under the blade, but he's still silent."
 
-    MC "Give me a reason not to."
+    mc "{size=+2}Give me a reason not to.{/size}"
 
     yamato "Damn, who taught you to speak like that?"
 
-    MC "Yamato."
+    mc "{b}Yamato.{/b}"
 
     yamato "...I was just walkin' around."
 
-    MC "You never walk around my house nowadays."
+    mc "{sc=2}You never walk around my house nowadays.{/sc}"
 
     yamato "The road goes where I say it does."
 
     n "His voice sounds like it had to fight its way out."
 
-    MC "I think you are snooping around my house."
+    mc "{k=2}I think you are snooping around my house.{/k}"
 
     yamato "Ya always think everyone’s watching you?"
 
@@ -353,11 +631,11 @@ label loop1_yamato_mandatory3:
 
     MC "You know what's inside is not just junk."
 
-    yamato "Heheheheh..."
+    yamato "{sc=4}Heheheheh...{/sc}"
 
-    Yamato "Why so tense, [persistent.player_name]?"
+    yamato "{size=+2}{k=2}Why so tense, [persistent.player_name]?{/k}{/size}"
 
-    yamato "All stiff and hissin', makes me wonder what you’re hidin'."
+    yamato "{sc=3}All stiff and hissin', makes me wonder what you’re hidin'.{/sc}"
 
     n "Your grip tightens, and your whole body wants to fight."
 
@@ -377,65 +655,65 @@ label loop1_yamato_mandatory3:
 
     MC "Go ahead, see for yourself."
 
-    yamato "...Tch. Looks even worse than I remember."
+    yamato "...Tch. {w}Looks even worse than I remember."
 
-    MC "It was worse when I dragged it home."
+    mc "It was worse when I dragged it home."
 
     n "He crouches, then his hand hovers above the armor’s edge."
 
-    yamato "Hmph."
+    yamato "{sc=2}Hmph.{/sc}"
 
     n "He pokes it, the armor clatters."
 
     yamato "...This really it?"
 
-    MC "You’ve seen it before, when I brought it back."
+    mc "You’ve seen it before, when I brought it back."
 
     yamato "Doesn’t feel the same."
 
-    MC "...You still think I lied?"
+    mc "{w=0.2}...You still think I lied?"
 
-    yamato "...I think... {w}I dunno what to think."
+    yamato "...I think... {w}{i}I dunno what to think.{/i}"
 
     n "Yamato takes out a talisman from his sleeve and pushes it to the armor."
 
     n "You know it will react to the armor if it touches an evil spirit."
 
-    n "You take a step back, circling him." ### HOHO EBCAUSE YOU ARE YAMAKUI GET IT GET IT
+    n "You take a step back, circling him."
 
-    MC "I mean, the thing is dead. So if you're looking for some sort of evil aura, there'd be none left."
+    mc "I mean, the thing is dead. So if you're looking for some sort of evil aura, there'd be none left."
 
-    yamato "...If this is real, then you really--"
+    yamato "{w=0.2}...If this is real, then you really--"
 
-    MC "Yeah."
+    mc "Yeah."
 
-    yamato "...Huh."
+    yamato "...{w=0.2}Huh."
 
     n "He circles the armor once, then again, looking for faults. Can't seem to find one."
 
     yamato "Ya could’ve at least cleaned it better."
 
-    MC "I didn’t want to touch it again."
+    mc "I didn’t want to touch it again."
 
     n "He grunts and tries to lift the damn thing."
 
-    yamato "...Kinda heavy for something so damn small."
+    yamato "{w=0.2}...Kinda heavy for something so damn small."
 
-    MC "Try dragging it downhill by yourself."
+    mc "Try dragging it downhill by yourself."
 
     n "He sits down, arms resting on his knees, and maybe, just maybe, recalculating."
 
-    yamato "...A'ight, fine."
+    yamato "{fi=10}...A'ight, fine.{/fi}"
 
     n "Something in his gaze changes, and so is in the way he looks at you now."
 
     n "It's... a lot softer now."
 
-    yamato "Guess I barked up the wrong tree. Hhh... {w}Tch. Damn embarrassing."
+    yamato "{b}Guess I barked up the wrong tree.{/b} Hhh... {w}Tch. Damn embarrassing."
 
-    MC "So you finally admit it?"
+    mc "So you finally admit it?"
 
-    yamato "Don’t push it, kid. I just... {w}got carried away. Thought I smelled somethin’ off, y’know? Guess I was sniffin’ shadows."
+    yamato "Don’t push it, kid. I just... {w}{i}got carried away. Thought I smelled somethin’ off, y’know? Guess I was sniffin’ shadows.{/i}"
 
     n "He rubs the back of his neck, eyes avoiding yours."
 
@@ -477,23 +755,24 @@ label loop1_yamato_mandatory4:
 
     hikaru "Are you really sure?"
 
-    yamato "I'm not fuckin' blind! It didn't shine one bit!"
+    yamato "{sc=3}I'm not fuckin' blind! It didn't shine one bit!{/sc}"
 
-    yamato "Felt like maybe... {w}maybe we’re barkin’ up the wrong damn tree."
+    yamato "Felt like maybe... {w}{i}maybe we’re barkin’ up the wrong damn tree.{/i}"
 
     n "Hikaru goes still. Even from here you see the falter in their posture."
 
-    hikaru "...You don’t mean--"
+    hikaru "{b}...You don’t mean--{/b}"
 
     yamato "I mean... maybe we’re wrong this time. Maybe [persistent.player_name] did kill the damn thing after all."
 
     n "The silence after is heavier than any word spoken."
 
-    hikaru "This is absurd. You were the one who told me not to trust so easily. You said [persistent.player_name] was hiding something."
+    hikaru "{sc=2}This is absurd. You were the one who told me not to trust so easily. You said [persistent.player_name] was hiding something.{/sc}"
 
     yamato "...Yeah. I did."
 
-    yamato "But... I dunno anymore."
+    yamato "{fi=10}But... I dunno anymore.{/fi}"
+
 
     n "You stay hidden in the shadows, even after the both of them part ways."
 

@@ -3,6 +3,12 @@ init python:
 
 define mc2 = Character("[name]")
 
+init:
+    $ wiperight2 = CropMove(0.07, "wiperight")
+    $ wipeleft2 = CropMove(0.07, "wipeleft")
+    $ wipeup2 = CropMove(0.07, "wipeup")
+    $ wipedown2 = CropMove(0.07, "wipedown")
+
 # =========================
 # ROUTE FLAGS
 # =========================
