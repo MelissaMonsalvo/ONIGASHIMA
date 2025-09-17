@@ -10,9 +10,9 @@ default hikaru_events_completed = 0
 default shiori_events_completed = 0
 
 # Variables para los eventos fantasmas de los personajes
-define shiori_ghost_events_completed = 0
-define yamato_ghost_events_completed = 0
-define hikaru_ghost_events_completed = 0
+default shiori_ghost_events_completed = 0
+default yamato_ghost_events_completed = 0
+default hikaru_ghost_events_completed = 0
 
 # define persistent.shiori_dies = False ## shiori dead
 # define persistent.yamato_dies = False ## yamato dead
@@ -126,7 +126,7 @@ screen map_screen():
     imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
 
     # Mostrar iconos de personajes según su ubicación y estado
-    for character in ["shiori", "yamato", "hikaru"]:
+    for i, character in enumerate(["shiori", "yamato", "hikaru"]):
     #for character in ["shiori"]:
 
         # Obtener la ubicación actual del personaje
@@ -141,7 +141,13 @@ screen map_screen():
             # Ajustar posición para el icono (centrado)
             $ icon_x = pos_x - 50  # Ajusta según el tamaño de tus iconos
             $ icon_y = pos_y - 50  # Ajusta según el tamaño de tus iconos
-            
+
+            # Desplazamiento para evitar encimarse
+            $ offset_x = i * 50   # 20 px de separación horizontal
+           
+            $ icon_x += offset_x
+
+
             #btener Icono
             $ icon = character_icons.get(character)
 
@@ -253,7 +259,7 @@ python early:
         dead_candidates = []
         priority = []
 
-        characters = ["yamato", "hikaru", "shiori"]
+        characters = ["shiori", "yamato", "hikaru"]
         priority = [char for char in characters if not getattr(persistent, f"{char}_dies", False)]
         priority.extend(char for char in characters if getattr(persistent, f"{char}_dies", False))
 
@@ -322,13 +328,18 @@ python early:
         events_completed = getattr(store, f"{character}_events_completed", 0)
         current_loop = store.current_loop
 
+        if current_loop == 1:
+            maxevents = 5
+        else:
+            maxevents = 4
+
         dies = getattr(persistent, f"{character}_dies", False)
         # Para personajes muertos con eventos fantasma pendientes
         if dies:
             #print(f"{character} muerto")
             ghost_completed = getattr(store, f"{character}_ghost_events_completed", None)
 
-            if ghost_completed < len(ghost_events.get(character, [])):
+            if ghost_completed < len(ghost_events.get(character, [])) and ghost_completed < maxevents:
                 #print(f"ghost_completed: {ghost_completed}\n")
                 next_event = mandatory_events[current_loop][character][ghost_completed]
                 # Solo mostrar si el evento es para el tiempo actual
@@ -338,7 +349,7 @@ python early:
                     return next_event["location"]
 
         # Verificar si el personaje tiene eventos mandatorios pendientes
-        if not dies and character in mandatory_events.get(current_loop, {}) and events_completed < len(mandatory_events[current_loop][character]):
+        if not dies and character in mandatory_events.get(current_loop, {}) and events_completed < len(mandatory_events[current_loop][character]) and events_completed < maxevents:
             
             next_event = mandatory_events[current_loop][character][events_completed]
             # Solo mostrar si el evento es para el tiempo actual
@@ -349,107 +360,16 @@ python early:
         
         return None  # No mostrar icono si no hay razón para estar en el mapa
 
+    def nextloop():
+        store.current_day = 1
+        store.current_loop += 1
+        store.yamato_events_completed = 0
+        store.shiori_events_completed = 0
+        store.hikaru_events_completed = 0
+        store.yamato_ghost_events_completed = 0
+        store.shiori_ghost_events_completed = 0
+        store.hikaru_ghost_events_completed = 0
 
-    # def build_icon_data(current_loop, current_time_block):
-
-    #     icon_data = {}
-        
-    #     # Inicializar estructura para cada ubicación
-    #     for location in locations:
-    #         icon_data[location] = {"alive": [], "ghost": []}
-        
-    #     # Determinar el número máximo de eventos obligatorios por loop
-    #     if current_loop == 1:
-    #         max_mandatory_events = 5
-    #     else:
-    #         max_mandatory_events = 4
-    
-
-    #     # Verificar eventos obligatorios para personajes vivos y fantasmas
-    #     for character in ["yamato", "hikaru", "shiori"]:
-    #         # Determinar si el personaje está vivo usando las variables persistentes
-    #         if character == "shiori":
-    #             alive = not persistent.shiori_dies
-    #         elif character == "yamato":
-    #             alive = not persistent.yamato_dies
-    #         elif character == "hikaru":
-    #             alive = not persistent.hikaru_dies
-    #         else:
-    #             alive = True
-            
-    #         print(f"{character} alive: {alive}")
-
-    #         # Obtener eventos completados del personaje
-    #         #events_completed = globals().get(f"{character}_events_completed", 0)
-            
-    #         events_completed = getattr(store, f"{character}_events_completed", 0)
-
-    #         print(f"{character}_events_completed: {events_completed}=====================")
-
-    #         # Verificar si todos los eventos obligatorios del loop están completados
-    #         all_mandatory_completed = (events_completed >= max_mandatory_events)
-
-    #         if not alive:
-    #             events_completed = getattr(store, f"{character}_ghost_events_completed", 0)
-    #             if all_mandatory_completed:
-    #                 setattr(store, f"{character}_events_completed", 0)
-
-
-    #         # Buscar en eventos obligatorios (solo si no están todos completados)
-    #         if alive and not all_mandatory_completed and current_loop in mandatory_events and character in mandatory_events[current_loop]:
-    #             print("\n\nbuscando eventos***********************************")
-                
-    #             next_event = mandatory_events[current_loop][character][events_completed]
-    #             if (next_event["time"] == current_time_block and next_event["location"] in icon_data):
-    #                 if character not in icon_data[next_event["location"]]["alive"]:
-    #                     icon_data[next_event["location"]]["alive"].append(character)
-    #                     print(f"Evento de {next_event['event']} alive, en {next_event['location']} at {next_event['time']}")
-    #         elif not alive and not all_mandatory_completed and current_loop in mandatory_events and character in mandatory_events[current_loop]:
-    #             next_event = mandatory_events[current_loop][character][events_completed]
-    #             if (next_event["time"] == current_time_block and next_event["location"] in icon_data):
-    #                 if character not in icon_data[next_event["location"]]["ghost"]:
-    #                     icon_data[next_event["location"]]["ghost"].append(character)
-    #                     print(f"Evento de {next_event['event']} ghost, en {next_event['location']} at {next_event['time']}")
-           
-            
-            # else:
-
-            #     events_completed = getattr(store, f"{character}_ghost_events_completed", 0)
-            #     print(f"{character}_events_completed: {events_completed}")
-
-            #     # if all_mandatory_completed:
-            #         # Devolver a 0
-            #         # setattr(store, f"{character}_events_completed", 0)
-            #         # events_completed = 0
-            #         # print(f"{character}_events_completed: {events_completed}")
-                
-            #     # Buscar en eventos obligatorios (solo si no están todos completados)
-            #     if current_loop in mandatory_events and character in mandatory_events[current_loop]:
-            
-            #         print("\n\nbuscando eventos fantasmas***********************************")
-                    
-            #         next_event = mandatory_events[current_loop][character][events_completed]
-
-            #         if (next_event["time"] == current_time_block and next_event["location"] in icon_data):
-        
-            #             if character not in icon_data[next_event["location"]]["ghost"]:
-            #                 icon_data[next_event["location"]]["ghost"].append(character)
-            #                 print(f"Evento de {next_event['event']} ghost, en {next_event['location']} at {next_event['time']}")
-
-
-        #print("///////////////////////////////////////////////")  
-        #print(icon_data)    
-        #print("///////////////////////////////////////////////\n\n\n") 
-        #return icon_data
-
-        # Función auxiliar para verificar si un evento ya fue completado
-    # def event_completed(event_name):
-    #     # Esta función debería verificar en tu sistema de guardado si el evento ya ocurrió
-    #     # Puedes usar variables persistentes o otro sistema de tracking
-    #     # Por ejemplo: return persistent.event_tracker.get(event_name, False)
-    #     return False  # Cambiar según tu implementación
-
-    #Funcaion para dibujar personajes en mapa
 
 
 # Label para cuando no hay eventos
@@ -489,6 +409,7 @@ label loop1_yamato_mandatory5b:
     "Yamato - Noche - Bosque"
     "Etiqueta: loop1_yamato_mandatory5b"
     $ persistent.yamato_dies = True
+    $ nextloop()
     return
 
 # Hikaru - Loop 1
@@ -515,6 +436,8 @@ label loop1_hikaru_mandatory4b:
 label loop1_hikaru_mandatory5b:
     "Hikaru - Día - Santuario"
     "Etiqueta: loop1_hikaru_mandatory5b"
+    $ persistent.hikaru_dies = True
+    $ nextloop()
     return
 
 # Shiori - Loop 1
@@ -542,6 +465,7 @@ label loop1_shiori_mandatory5b:
     "Shiori - Día - Bosque"
     "Etiqueta: loop1_shiori_mandatory5b"
     $ persistent.shiori_dies = True
+    $ nextloop()
     return
 
 # EVENTOS OBLIGATORIOS - LOOP 2
