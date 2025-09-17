@@ -591,33 +591,33 @@ label loop1_yamato_mandatory3:
 
     play sound "sfx/stone_kick.ogg"
 
-   mc "{sc=2}...Tch.{/sc}"
+    MC "{sc=2}...Tch.{/sc}"
 
     n "You almost growls as the blade presses to his back."
 
-    mc "{size=+3}{b}...Don’t.{/b}{/size}"
+    MC "{size=+3}{b}...Don’t.{/b}{/size}"
 
     yamato "..."
 
-    mc "{b}Step away.{/b} {w}{size=+2}Slowly.{/size} {w}{sc=3}Or I’ll spill you across the floorboards.{/sc}"
+    MC "{b}Step away.{/b} {w}{size=+2}Slowly.{/size} {w}{sc=3}Or I’ll spill you across the floorboards.{/sc}"
 
     n "He freezes. You can feel his muscles shift under the blade, but he's still silent."
 
-    mc "{size=+2}Give me a reason not to.{/size}"
+    MC "{size=+2}Give me a reason not to.{/size}"
 
     yamato "Damn, who taught you to speak like that?"
 
-    mc "{b}Yamato.{/b}"
+    MC "{b}Yamato.{/b}"
 
     yamato "...I was just walkin' around."
 
-    mc "{sc=2}You never walk around my house nowadays.{/sc}"
+    MC "{sc=2}You never walk around my house nowadays.{/sc}"
 
     yamato "The road goes where I say it does."
 
     n "His voice sounds like it had to fight its way out."
 
-    mc "{k=2}I think you are snooping around my house.{/k}"
+    MC "{k=2}I think you are snooping around my house.{/k}"
 
     yamato "Ya always think everyone’s watching you?"
 
@@ -657,7 +657,7 @@ label loop1_yamato_mandatory3:
 
     yamato "...Tch. {w}Looks even worse than I remember."
 
-    mc "It was worse when I dragged it home."
+    MC "It was worse when I dragged it home."
 
     n "He crouches, then his hand hovers above the armor’s edge."
 
@@ -667,11 +667,11 @@ label loop1_yamato_mandatory3:
 
     yamato "...This really it?"
 
-    mc "You’ve seen it before, when I brought it back."
+    MC "You’ve seen it before, when I brought it back."
 
     yamato "Doesn’t feel the same."
 
-    mc "{w=0.2}...You still think I lied?"
+    MC "{w=0.2}...You still think I lied?"
 
     yamato "...I think... {w}{i}I dunno what to think.{/i}"
 
@@ -681,11 +681,11 @@ label loop1_yamato_mandatory3:
 
     n "You take a step back, circling him."
 
-    mc "I mean, the thing is dead. So if you're looking for some sort of evil aura, there'd be none left."
+    MC "I mean, the thing is dead. So if you're looking for some sort of evil aura, there'd be none left."
 
     yamato "{w=0.2}...If this is real, then you really--"
 
-    mc "Yeah."
+    MC "Yeah."
 
     yamato "...{w=0.2}Huh."
 
@@ -693,13 +693,13 @@ label loop1_yamato_mandatory3:
 
     yamato "Ya could’ve at least cleaned it better."
 
-    mc "I didn’t want to touch it again."
+    MC "I didn’t want to touch it again."
 
     n "He grunts and tries to lift the damn thing."
 
     yamato "{w=0.2}...Kinda heavy for something so damn small."
 
-    mc "Try dragging it downhill by yourself."
+    MC "Try dragging it downhill by yourself."
 
     n "He sits down, arms resting on his knees, and maybe, just maybe, recalculating."
 
@@ -711,7 +711,7 @@ label loop1_yamato_mandatory3:
 
     yamato "{b}Guess I barked up the wrong tree.{/b} Hhh... {w}Tch. Damn embarrassing."
 
-    mc "So you finally admit it?"
+    MC "So you finally admit it?"
 
     yamato "Don’t push it, kid. I just... {w}{i}got carried away. Thought I smelled somethin’ off, y’know? Guess I was sniffin’ shadows.{/i}"
 
