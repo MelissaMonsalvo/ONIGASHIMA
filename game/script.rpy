@@ -64,6 +64,7 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    #jump map
     $ _prev_music_volume = _preferences.volumes["music"]
     if persistent.trueendingunlocked:
         $ persistent.route1 = True
