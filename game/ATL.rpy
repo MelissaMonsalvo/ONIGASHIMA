@@ -1,3 +1,5 @@
+
+
 init:
 
 
@@ -60,6 +62,44 @@ init:
         $ sshake = Shake((0, 0, 0, 0), 1.0, dist=15)
         $ timeleft = 180
 
+init:
+    image haze_effect = "images/blur.png"  
+
+    transform haze_transform:
+        parallel:
+            linear 1.5 xoffset -4 yoffset 4 zoom 1.01
+            linear 1.5 xoffset 4 yoffset -4 zoom 0.99
+            repeat
+        parallel:
+            linear 1.5 alpha 0.25 blur 3
+            linear 1.5 alpha 0.35 blur 5
+            linear 1.5 alpha 0.25 blur 3
+            repeat
+init python:
+
+    haze_active = False
+
+    def drunk_haze_overlay():
+        if haze_active:
+            renpy.show("haze_effect", at_list=[haze_transform], layer="overlay")
+        else:
+            renpy.hide("haze_effect", layer="overlay")
+
+    config.overlay_functions.append(drunk_haze_overlay)
+
+
+
+
+screen drunk_haze():
+    add "haze_overlay" at haze_loop:
+        xalign 0.5
+        yalign 0.5
+        xysize (config.screen_width, config.screen_height)
+        alpha 0.3
+        blur 4
+
+
+
 ###### POSITIONS ######
 
 transform midleft:
@@ -80,6 +120,8 @@ transform midright2:
 
 transform blacku:
     matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+define flashred = Fade(0.1, 0.0, 0.5, color="#ff002b")
 
 screen horror_forced_menu(items):
     timer 0.1 repeat True action MouseMove(960, 440)

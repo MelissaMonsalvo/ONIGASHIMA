@@ -28,7 +28,7 @@ label loop1_hikaru_mandatory1:
 
     n "You hear a soft chuckle behind you, a voice that you've heard it a lot of times."
 
-    n "But that person doesn't usually giggle likE that."
+    n "But that person doesn't usually giggle like that."
 
     n "Who--"
 
@@ -103,7 +103,7 @@ label loop1_hikaru_mandatory1:
         xoffset 0
 
         linear 0.4 zoom 0.4 yoffset 20
-    
+
 
     $ decrease_music_volume(0.3)
     $ renpy.block_rollback()
@@ -128,7 +128,7 @@ label loop1_hikaru_mandatory1:
     hikaru "Ah, I... see."
 
     MC "{k=-1}Sorry if I’ve been weird. I just...{/k}"
-    
+
     MC "{bt=1}I don’t know why this feels so strange right now.{/bt}"
 
     hikaru "But you remember what we are, {w=0.2}right?"
@@ -225,7 +225,7 @@ label loop1_hikaru_mandatory1:
         xoffset 0
 
         linear 0.5 zoom 0.4 yoffset 30
-    
+
 
     MC "{sc=1}Y-Yeah....{/sc} Yeah! {cps=200}I'm gonna go rest now so see you, Hikaru!"
 
@@ -371,7 +371,7 @@ label loop1_hikaru_mandatory2:
     hide darken
     with dissolve
 
-    
+
 
     show hik normal behind darken2:
         zoom 0.3
@@ -395,7 +395,7 @@ label loop1_hikaru_mandatory2:
     n "They grab the scarf with both hands and yank it off, thrusting it towards you."
 
     hikaru "{sc=3}You picked it! You said the red matched the color of the moon--{/sc}"
-    
+
     hikaru "{sc=3}--and it gave you hope that we'll get through it!{/sc}"
 
     hikaru "You said I looked beautiful in it. {b}You said--{/b}"
@@ -413,7 +413,7 @@ label loop1_hikaru_mandatory2:
     MC "{size=*0.95}{cps=10}Hikaru--{/cps}{/size}"
 
     hikaru "{cps=150}When you were gone, I waited for you, You promised me you'd get back, but now you return and forgot everything about us--{/cps}"
-    
+
     MC "{w=0.2}Hikaru, if we're really together as you said, why don't Yamato and Shiori said anything? Why didn't you hug me when I return?"
 
     hikaru "{sc=2}Because we're keeping it a {b}secret!{/b}{/sc}"
@@ -495,11 +495,11 @@ label loop1_hikaru_mandatory3:
 
     play sound "Sfx/walk grass.mp3"
     show hik normal:
-        zoom 0.019
+        zoom 0.023
         xanchor 0.05
         xalign 0.63
         yalign 0
-        yoffset 500
+        yoffset 450
         xoffset 0
     with dissolve
     pause 0.3
@@ -550,7 +550,7 @@ label loop1_hikaru_mandatory3:
         xalign 0.5
         yalign 0.33
     with dissolve
-    
+
 
     hikaru "A talisman. She said maybe... {w=0.2}maybe your memory problems were caused by trauma. Or worse."
 
@@ -661,7 +661,7 @@ label loop1_hikaru_mandatory3:
 
     hikaru "I’ll be around. If you need me."
 
-    hide hik 
+    hide hik
     with dissolve
 
     n "They walk away without another word."
@@ -749,11 +749,11 @@ label loop1_hikaru_mandatory4:
 
     play sound "sfx/knock.wav"
 
-    with vpunch 
+    with vpunch
     pause 0.01
-    with vpunch 
+    with vpunch
     pause 0.01
-    with vpunch 
+    with vpunch
     pause 0.01
 
     hikaru "[persistent.player_name]-san? Are you home?"
@@ -764,11 +764,11 @@ label loop1_hikaru_mandatory4:
 
     play sound "sfx/knock.wav"
 
-    with vpunch 
+    with vpunch
     pause 0.01
-    with vpunch 
+    with vpunch
     pause 0.01
-    with vpunch 
+    with vpunch
     pause 0.01
 
     hikaru "[persistent.player_name]-san?"
@@ -810,11 +810,11 @@ label hikaru_visit_rejected:
 
     play sound "sfx/knock.wav"
 
-    with vpunch 
+    with vpunch
     pause 0.01
-    with vpunch 
+    with vpunch
     pause 0.01
-    with vpunch 
+    with vpunch
     pause 1.5
 
     n "After a series of repeated knocks with no avail, it stops."
@@ -1116,6 +1116,7 @@ label hikaru_teadrink:
         xalign 0.5
         yalign 0.3
     show matcha:
+        zoom 0.4
         xanchor 0.5
         xalign 0.5
         yalign 0.33
@@ -1128,17 +1129,38 @@ label hikaru_teadrink:
 
     n "Of course nothing happens."
 
+    hide frame
+    hide matcha
+    with dissolve
+
+    $ haze_active = True
+    show haze_effect at haze_transform
+    with dissolve
+
     hikaru "Well?"
 
     n "The cup touches your lips, and you immediately drink it."
 
+    play sound "sfx/gulp.wav"
+
+    show red_flash_slow onlayer screens
+
+
     n "The taste of salt hits first, followed by sour... and ended up bitter at the tip of your tounge."
+
+    stop music
 
     n "You can't breathe, you want to throw up blood, but you swallow it."
 
+    play sound "sfx/gulp.wav"
+    with flashred
+
     MC "{k=-1}Gh--!{/k}"
 
-    n "The liquid drags down your throat like broken glass soaked in syrup."
+    n "The liquid drags down your throat like broken glass soaked in liquid."
+
+    play sound "sfx/firecrackle.mp3"
+    with flashred
 
     n "You feel it tearing."
 
@@ -1147,6 +1169,11 @@ label hikaru_teadrink:
     hikaru "Is it too strong for you?"
 
     MC "{size=*0.9}...No. It’s... {w=0.2}{cps=10}fine.{/cps}{/size}"
+
+    play sound "sfx/firecrackle.mp3"
+    with flashred
+
+    play music "spooky.mp3"
 
     n "The warmth spreads immediately... then turns into burning."
 
@@ -1160,13 +1187,23 @@ label hikaru_teadrink:
 
     hikaru "If you hated it that much, maybe--"
 
+    $ haze_active = False
+    hide haze_effect
+    with dissolve
+
+    play sound "sfx/gulp.wav"
+    with flashred
+
     MC "{b}I'M FINE.{/b}"
+
+    with vpunch
 
     n "You sip one more time to make a point."
 
     n "Big mistake."
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/gulp.wav"
+    with flashred
 
     n "The tea sloshes past your lips, and your stomach convulses as you force it down your throat again."
 
@@ -1188,15 +1225,19 @@ label hikaru_teadrink:
 
     MC "{w=0.2}W-Wh--"
 
+    play sound "sfx/firecrackle.mp3"
+    with flashred
+
     n "You can’t speak as the heat keeps rising, bile festering behind your throat."
 
     n "You want to spit it out, but you manage to muster a smile."
 
     MC "{k=-1}Oh, really? Uh, what did--What did we drink again?{/k}"
 
-    hikaru "It’s only Obukucha, [persistent.player_name]-san."
+    stop music
+    play sound "sfx/suzu.mp3"
 
-    scene black
+    hikaru "It’s only Obukucha, [persistent.player_name]-san."
 
     n "A pickled plum brings protection."
 
@@ -1212,8 +1253,24 @@ label hikaru_teadrink:
 
     MC "{size=*0.9}...Mm.{/size}"
 
+    show hik normal behind darken2:
+        zoom 0.3
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 40
+        xoffset 0
+
+        linear 0.4 xzoom -1.0 xoffset 24 yoffset 65 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+        #linear 0.09 xzoom -1.0 xoffset 0 yoffset 80
+
+        linear 0.4 zoom 0.3 yoffset 120 xoffset -60 alpha 0.0
+    play sound "sfx/sliding door.mp3"
+
+
 
     n "The door slides behind them."
+
 
     n ",,,"
 
@@ -1223,17 +1280,52 @@ label hikaru_teadrink:
 
     MC "..."
 
+    scene house night:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.5
+
+        linear 0.15 zoom 0.8 xoffset -100
+
+    play sound "sfx/clatter.mp3"
+
+
     n "You lunge for the tray, rattling the cups."
 
     n "Your breath shakes."
 
-    MC "{sc=7}...Disgusting... Disgusting... Disgusting...{/sc}"
+    play music "heavy breathing.mp3"
+
+    scene house night:
+        zoom 0.8
+        xoffset -100
+        xalign 0.5
+        yalign 0.5
+        parallel:
+            linear 1.0 zoom 0.82 xoffset -104 yoffset 2 blur 3
+            linear 1.0 zoom 0.8 xoffset -100 yoffset -2 blur 1
+            repeat
+        parallel:
+            linear 0.2 xoffset -101
+            linear 0.2 xoffset -99
+            linear 0.2 xoffset -100
+            repeat
+
+    MC "{sc=3}...Disgusting... {w}Disgusting... {w}Disgusting...{/sc}"
 
     n "You carry the tray outside and rip the door open and--"
 
-    MC "{cps=10}{sc=6}Haa... Haa... Haa...{/sc}{/cps}"
+    play sound "sfx/sliding door.mp3"
+
+
+    scene black
+    show darken2
+    play sound "sfx/prang.mp3"
+    with sshake
 
     n "--you throw the tray. Well, more like you slammed the tray into the ground that every glasswares breaks apart."
+
+    MC "{cps=10}{sc=6}Haa... {w}Haa... {w}Haa...{/sc}{/cps}"
 
     MC "..."
 
@@ -1247,19 +1339,48 @@ label hikaru_teadrink:
 
     MC "{cps=10}{sc=7}...Ngh.{/sc}{/cps}"
 
+    play sound "sfx/doorslam.wav"
+
+    scene house night:
+        zoom 0.5
+
+    with hpunch
+
     n "You step back inside, close the door and lean against the wood and breathe until your legs stop trembling."
 
     n "It's just tea, [persistent.player_name]..."
 
-    #return
 
     $ loop1_hikaru_mandatory4 = True
 
-    return
+    #return
 
 label loop1_hikaru_mandatory5:
 
-    n "You walk up the shrine path, looking for Shiori."
+    play music "Idle.mp3"
+
+    scene shrine day with in_212:
+        zoom 0.5
+
+    n "You enter the shrine, looking for Shiori."
+
+    n "You have something important to ask her today..."
+
+    show shi normal at shiori_skipp:
+        xalign 0.7
+    with dissolve
+    pause 0.6
+    stop sound
+    show yam normal:
+        zoom 0.23
+        xanchor 0.5
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+        xoffset 600
+
+    with dissolve
 
     n "Coincidentally, Yamato's there too, for some reason."
 
@@ -1275,9 +1396,9 @@ label loop1_hikaru_mandatory5:
 
     shiori "Eh?"
 
-    yamato "...Hah?"
+    yamato "{i}...Hah?{/i}"
 
-    MC "I mean... like that.{w} Close.{w} Before the mountain. Were we...?"
+    MC "I mean... like {i}that.{/i}{w} Close.{w} Before the mountain. Were we...?"
 
     n "Both Yamato and Shiori stare at each other with disbelief."
 
@@ -1287,9 +1408,22 @@ label loop1_hikaru_mandatory5:
 
     yamato "Pffft... Keh."
 
-    play sound "sfx/snort.ogg"
+    show yam normal at left:
+        zoom 0.23
+        xanchor 0.5
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+        xoffset 600
 
-label yamatolol:
+
+        ease 0.05 yoffset -10
+        parallel:
+            ease 0.08 yoffset 10
+            ease 0.08 yoffset -10
+            ease 0.1 yoffset 0
+            repeat 4
 
     yamato "{sc=8}AhahahaHHAHAHhahaha!{/sc}"
 
@@ -1298,10 +1432,32 @@ label yamatolol:
     MC "{size=*0.95}What's that supposed to mean?{/size}"
 
     yamato "{b}No fuckin' way!{/b}"
+    with vpunch
 
-    yamato "You’re loud and anoying. And hikaru? That one’s quiet as a grave!"
+    yamato "You’re loud and anoying. Hikaru won't talk unless ya kill 'er pet or somethin'!"
 
     yamato "{k=-1}Ya ain’t their type. Not by a long shot.{/k}"
+
+    show shi normal:
+
+        zoom 0.26
+        xanchor 0.5
+        xalign 0.5
+        yalign -0.60
+        yoffset 0
+        xzoom 1.0
+        yzoom 1.0
+        xoffset 220
+
+
+        linear 0.05 xoffset -10
+        linear 0.05 xoffset 10
+        linear 0.05 xoffset -12
+        linear 0.05 xoffset 12
+        linear 0.05 xoffset -8
+        linear 0.05 xoffset 8
+
+        ease 0.2 xoffset 0
 
     shiori "{cps=12}Yamato-kun~ don’t be rude!{/cps}"
 
@@ -1311,17 +1467,17 @@ label yamatolol:
 
     shiori "{cps=12}Mm... I think so, right?{/cps}"
 
-    yamato "{b}Did the Yamakui hit yer head so hard ya start hallucinating a damn relationship?{/b}"
+    yamato "{bt=1}Did the Yamakui hit yer head so hard ya start hallucinating a damn relationship?{/bt}"
 
     MC "..."
 
     MC "{size=*0.95}...I-I see.{/size}"
 
-    shiori "{cps=12}You sure you're okay, [persistent.player_name]-sama?{/cps}"
+    shiori "{cps=22}You sure you're okay, [persistent.player_name]-sama?{/cps}"
 
     MC "I’m fine."
 
-    yamato "{b}Yeah, so that's the dumbest shit I've ever heard since ya came back from that damn mountain.{/b}"
+    yamato "Yeah, so that's the dumbest shit I've ever heard since ya came back from that damn mountain."
 
     shiori "If something’s bothering you, I can ask hikaru myself?"
 
@@ -1329,39 +1485,83 @@ label yamatolol:
 
     n "Behind you, by the incense basin, an old woman mutters something... But your sharp ears catches it."
 
+    $ decrease_music_volume(0.3)
+    $ renpy.block_rollback()
+
+    show oldwoman at center:
+        zoom 0.48
+        ypos 1.55
+    hide yam
+    hide shi
+    show darken
+    with dissolve
+
     "Woman" "Please... I pray [persistent.player_name]-sama doesn’t get too close to that one..."
+
+    show yam normal:
+        zoom 0.23
+        xanchor 0.5
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+        xoffset 400
+    with easeinleft
 
     yamato "{k=-1}T’fuck did ya just say?{/k}"
 
-    "Woman" "I mean... Don’t you think hikaru has been... {w=0.2}off lately?"
+    $ restore_music_volume()
+    hide darken
+    with dissolve
 
-    "Woman" "Just like Karasuma-san was. Before he--"
+    "Granny" "I mean... Don’t you think hikaru has been... {w=0.2}off lately?"
 
-    yamato "Tch. This village ran one man off ‘cause it got spooked. An’ now ya wanna do it again to his kid?"
+    "Grann" "Just like Karasuma-san was. Before he--"
 
-    yamato "Hikaru’s nothin’ like their father!"
+    yamato "Tch. This village ran one man off ‘cause it got spooked. An’ now ya wanna do it again to his kid!?"
 
-    "Man" "How would you know that?"
+    yamato "{b}Hikaru’s nothin’ like their father!{/b}"
+
+    "Grann" "How would you know that?"
+
+    show shi normal at right, bounci:
+        zoom 0.26
+        xanchor 0.5
+        xalign 0.5
+        yalign -0.60
+        yoffset 0
+        xzoom 1.0
+        yzoom 1.0
+        xoffset 450
+    with vpunch
+    play sound "sfx/stomp.mp3"
 
     shiori "Hikaru-san always helps me at the shrine, and will never hurt a soul!"
 
-    "Woman" "You weren’t there that night..."
+    "Grann" "You weren’t there that night..."
 
     yamato "{k=-1}Y’wanna blame someone, go stare at yerself in a mirror ‘til it cracks.{/k}"
 
+    play sound "sfx/shing.wav"
+    with vpunch
+
     n "Yamato unsheathes his blade. Just a little."
 
-    n "The old couple imemdiately back away, hands still clutching prayer beads."
+    hide oldwoman
+    with dissolve
+
+    n "The old woman imemdiately back away, hands still clutching prayer beads."
 
     yamato "Tch. Damn cowards."
 
+    scene black
+    with dissolve
+
     n "You know... hikaru’s father vanished on the last Red Moon."
 
-    n "Some say he chased the Yamakui. Sword in hand."
+    n "Some say he chased the Yamakui, some say he tried to stop it."
 
-    n "Some say he chased the Yamakui. Some say he tried to stop it."
-
-    n "Some say he never even made it past the gate."
+    n "Some say he never even made it past the gates."
 
     n "You know how paranoia works. Plant one seed of doubt and suddenly it spreads like wildfire."
 
@@ -1377,7 +1577,7 @@ label yamatolol:
 
     MC "..."
 
-    n "Mmm... {w}Odd. How DO I know that when you don't even remember that?"
+    n "Mmm... {w}Odd. {cps=40}How {i}DO{/i} I know that when you don't even remember that?{/cps}"
 
 
     $ loop1_hikaru_mandatory5 = True
