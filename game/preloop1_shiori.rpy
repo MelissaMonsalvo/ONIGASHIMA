@@ -140,6 +140,24 @@ label loop1_shiori_mandatory1:
 
     scene black with out_182
 
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+    stop music fadeout 3.0
+
+    
+
     #return
 
 label loop1_shiori_mandatory2:
@@ -287,6 +305,22 @@ label loop1_shiori_mandatory2:
 
 
     #return
+
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+    stop music fadeout 3.0
 
     $ loop1_shiori_mandatory2 = True
     #return
@@ -519,6 +553,22 @@ label gulgulp:
 
     n "{glitch=4}But you’re not even full.{/glitch}"
 
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+    stop music fadeout 3.0
+
     #return
 
 label loop1_shiori_mandatory4:
@@ -619,7 +669,7 @@ label loop1_shiori_mandatory4:
 
     play sound "sfx/suzu.mp3"
 
-    n "She rings the bell again. It feels closer this time, even though she's standing the same distance away."
+    n "She rings the bell again. It feels closer this time, even though she's standing further away."
 
     play music "noinomai.mp3"
 
@@ -729,6 +779,22 @@ label loop1_shiori_mandatory4:
 
     n "But nothing comes out "
 
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+    stop music fadeout 3.0
+
     #return
 
 
@@ -748,6 +814,8 @@ label loop1_shiori_mandatory5:
     $ loop1_shiori_mandatory5 = True
     ## forest bg
 
+    play music "shiori.mp3"
+
     n "She’s already sitting there when you arrive."
 
     n "The sakura tree hasn’t bloomed in years."
@@ -756,9 +824,13 @@ label loop1_shiori_mandatory5:
 
     n "You said a lot of things, didn't you?"
 
+    MC normal "Yoo, Shiori!"
+
+    shiori "Good morning [persistent.player_name]-sama~"
+
     shiori "Do you remember the day before they sent you off to the mountain and we said our goodbyes here?"
 
-    MC "Heh... yeah! Right here under this old tree. I remember...."
+    MC normal "Heh... yeah! Right here under this old tree. I remember...."
 
     menu:
         "We all cried.":
@@ -773,11 +845,11 @@ label loop1_shiori_mandatory5:
     shiori "And Yamato said something dumb again back then, right?"
 
     menu:
-        "He said he wanted to come with me.":
+        "He wanted to come too":
             MC "He wanted to come too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I was gone."
             shiori "Yeah~"
         "He was crying.":
-            MC "The stupid oath actually cried because he was so sure I was gonna die, right?"
+            MC "The stupid oaf actually cried because he was so sure I was gonna die, right?"
             MC "He made a pretty ridiculous face, too. Didn't know Yamato could cry like that."
             shiori "Hehe~ I remember something like that..."
 
@@ -785,60 +857,89 @@ label loop1_shiori_mandatory5:
 
     n "Isn’t this what it’s supposed to feel like?"
 
-    shiori "...And you."
-
-    shiori "You said you’d protect us."
+    shiori "And what else did you say?"
 
     menu:
-        "I said I'd protect everyone. Always.":
-            MC "Yeah... I stood right there and said it, didn’t I? That I’d protect everyone."
+        "I said I'd protect everyone":
+            MC "I remember saying that I’d protect everyone."
             MC "And I did, right? When I slayed the Yamakui!"
             shiori "Did you~?"
         "I promised you I'll be back.":
             MC "I promised you that no matter what happens, I'll come back to you, Shiori."
-            MC "That's what's keeping me here. Right beside you."
             shiori "..."
 
 
-    shiori "Yeah, that was a very pleasant day, [persistent.player_name]"
+    shiori "Yeah, you are right, [persistent.player_name]..."
 
     shiori "{cps=62}{alpha=0.8}Except...{/alpha}{/cps}"
+
+    stop music fadeout 0.3
+    play sound "sfx/suzu.mp3"
+    show darken
+    with dissolve
 
     shiori "{alpha=0.7}{sc=3}It didn’t happen like that.{/sc}{/alpha}"
 
     MC "{cps=9}{alpha=0.7}Huh?{/alpha}{/cps}"
 
-    shiori "{cps=14}{vert}You left without saying goodbye to us, [persistent.player_name].{/vert}"
+    shiori "{cps=44}You left without saying goodbye to us, [persistent.player_name]."
 
-    shiori "{cps=12}{alpha=0.7}We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you.{/alpha}"
+    shiori "{cps=22}We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you."
 
     n "Did you mixed your memories up? What's happening?"
 
-    MC "{sc=4}{alpha=0.7}N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?{/alpha}{/sc}"
+    play music "sfx/forest night.wav"
+
+    MC "{sc=1}N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?{/sc}"
 
     shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}"
 
-    shiori "{alpha=0.8}Don't try to make things up.{/alpha}"
+    shiori "Don't try to make things up."
 
-    MC "{cps=59}{sc=3}{alpha=0.7}I-- I just--{/alpha}{/sc}"
+    MC "{cps=59}{sc=3}I-- I just--{/sc}"
 
     n "Guess you can't get yourself out of this situation."
 
-    shiori "{fi=2.0}But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you.{/fi}"
+    shiori "But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you."
 
-    shiori "{cps=52}{alpha=0.7}Even if Yamato and Hikaru told me otherwise.{/alpha}"
+    shiori "{cps=52}Even if Yamato and Hikaru told me otherwise."
 
     n "You extend your hand, about to grab Shiori's wrist as she moves away."
 
+    show shi normal:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+        xoffset 0
+        alpha 1.0
+
+        linear 0.5 zoom 0.3 xalign 0.4
+
     n "What are you doing? Stop it. Stop."
 
-    shiori "{cps=53}{alpha=0.6}I should go. It’s getting late~{/alpha}"
+    shiori "{cps=53}I should go. It’s getting late~"
 
-    shiori "{fi=1.8}Tomorrow’s the Red Moon, [persistent.player_name]-sama.{/fi}"
+    shiori "{sc=3}{color=#ff0026}{i}The Red Moon is coming, [persistent.player_name]-sama.{/i}{/color}{/sc}"
 
-    shiori "{sc=3}{alpha=0.8}Let’s be honest then, okay?{/alpha}{/sc}"
+    shiori "{alpha=0.8}Let’s be honest then, okay?"
+
+    show shi normal:
+        zoom 0.3
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 80
+        alpha 1.0
+
+    
+        linear 0.28 zoom 0.18 alpha 0.0 xalign 0.4 yoffset 208
+
+    
 
     n "She walks away, as your body freezes in place."
+    hide shi
 
     MC "…"
 
@@ -846,109 +947,112 @@ label loop1_shiori_mandatory5:
 
     ## If you see this breakdown scene, you are entering Shiori's route.
 
-    scene bg room_night with fade
-    play music "bgm/mind_break.ogg" fadein 1.5
-
+    scene black
+    with in_212
+    play music "sfx/run.mp3"
     n "You run."
 
-    play sound "sfx/steps_wood.ogg"
+    pause 1
+
+
+    play music "spooky.mp3"
+
+    play sound "sfx/doorslam.wav"
+
+    scene house night:
+        zoom 0.5
+    with sshake
 
     n "You slam the door on your house and scrambles towards the armor you brought back."
 
     n "It’s still here, right where you left it."
 
-    n "It's still wrapped up like a corpse."
-
-    play sound "sfx/cloth_rustle.ogg"
-
-    n "You rip the cloth away with trembling hands."
-
     n "Indeed, it is too small for a being such as the Yamakui-{nw}"
 
-    mc "{b}I killed it.{/b}"
+    MC "{b}I killed it.{/b}"
 
-    mc "{color=#ff3333}I killed that kuso-yarou up there.{/color}"
+    MC "{color=#ff3333}I killed that kuso-yarou up there.{/color}"
 
-    mc "{size=+4}{sc=5}It screamed. It fucking screamed, gods damn it, it *died.*{/sc}{/size}"
+    MC "{size=+4}{sc=5}I brought this goddamn anmor{b} BACK.{/b}{/sc}{/size}"
 
-    play sound "sfx/metal_hit.ogg"
+    play sound "sfx/kickmetal.mp3"
 
-    n "You kick the chestplate. The noise it makes is wet."
+    with hpunch
 
-    mc "I remember how it sounded like, how it talked like, how it looked like-"
+    n "What has gotten into you?"
 
-    mc "{fast}{sc=4}{color=#bb1111}You.{/color}{/sc}"
+    MC "{fast}{sc=4}{color=#bb1111}You.{/color}{/sc}"
 
     n "Me."
 
-    mc "{b}...You said I was the hero.{/b}"
-
-    mc "You said it. Now say it again."
-
-    mc "{b}...Why the hell won’t you say it?{/b}"
+    MC "{b}...You said I was the hero.{/b}"
 
     n "..."
 
-    mc "{sc=3}You’ve been here this whole time.{/sc}"
+    MC "{sc=3}You’ve been here this whole time.{/sc}"
 
-    mc "Narrating every step, whispering like a kami stuck in my spine."
+    MC "Narrating every step, whispering like a kami stuck in my spine."
 
-    mc "{size=+2}But now? Now you shut up?{/size}"
+    MC "{size=+2}But now? Now you shut up?{/size}"
 
-    mc "{sc=3}...You liked watching me squirm, didn’t you?{/sc}"
+    MC "{sc=3}...You liked watching me squirm, didn’t you?{/sc}"
 
-    mc "So what is it now? Scared? Huh?"
+    MC "So what is it now? Scared? Huh?"
 
     play sound "sfx/heartbeat_deep.ogg"
 
     n "..."
 
-    mc "{size=+2}You should be.{/size}"
+    MC "{size=+2}You should be.{/size}"
 
-    mc "I did what you asked. I followed your damn story."
-    play sound "sfx/flesh_pull.ogg"
+    MC "I did what you asked. I followed your damn story."
 
-    n "Your hand slides down the chestplate-{nw}"
-
-    mc "{sc=5}There you are.{/sc}"
-
-    mc "...You never said what to do once the screaming stopped."
+    MC "...You never said what to do once the screaming stopped."
 
     n "..."
 
-    mc "All right, if that's how you wanna play."
+    MC "All right, if that's how you wanna play."
 
     n "..."
 
-    mc "{b}Let's play for a little bit more.{/b}"
+    MC "{b}{sc=3}Let's play for a little bit more.{/sc}{/b}"
 
     n "...."
 
     ## uncomfortable silence
+    pause 3
 
-    mc "...Oi."
+    MC "...Oi."
 
-    mc "{sc=3}You still there?{/sc}"
+    MC "{sc=3}You still there?{/sc}"
 
-    mc "{sc=4}Hey?{/sc}"
+    MC "{sc=4}Hey?{/sc}"
 
-    mc "Don’t you wanna finish your pretty little story?"
+    MC "Don’t you wanna finish your pretty little story?"
 
     n "..."
 
-    mc "{b}Heh.{/b}"
+    MC "{b}Heh.{/b}"
 
-    mc "{b}You'd better, or I'll finish it for you.{/b}"
+    MC "{b}You'd better, or I'll finish it for you.{/b}"
 
     n "Wait, what are you-"
 
-    mc "{size=+6}{color=#993333}{shader=jitter}Don’t look away now.{/shader}{/color}{/size}"
+    MC "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
 
-    window hide
-    $ renpy.pause(2.0)
-    window show
+    scene black
 
-    centered "{size=+10}{color=#FF2222}THE RED MOON IS COMING{/color}{/size}"
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}TWO DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
 
     stop music fadeout 3.0
 

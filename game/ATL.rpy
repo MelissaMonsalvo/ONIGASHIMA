@@ -81,8 +81,111 @@ transform midright2:
 transform blacku:
     matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
 
+screen horror_forced_menu(items):
+    timer 0.1 repeat True action MouseMove(960, 440)
 
+    vbox:
+        spacing 40
+        xalign 0.5
+        yalign 0.5
 
+        for idx, (caption, action, chosen) in enumerate(items):
+
+            button:
+                action action
+                xalign 0.5
+                xsize 1301
+                ysize 426
+                background None
+
+                hovered SetVariable("hovered_choice", idx)
+                unhovered SetVariable("hovered_choice", -1)
+
+                fixed:
+                    xysize (1301, 426)
+
+                    # Your animation code as before:
+                    if idx == 0:
+                        add (
+                            "top_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "top_half_idle_r1" if current_route == "route1" else
+                            "top_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "top_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_top_anim
+                    else:
+                        add (
+                            "bottom_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "bottom_half_idle_r1" if current_route == "route1" else
+                            "bottom_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "bottom_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_bottom_anim
+
+                    if idx == 0:
+                        add "mask_top" xpos 0 ypos 0 at mask_top_anim
+                    else:
+                        add "mask_bottom" xpos 0 ypos 0 at mask_bottom_anim
+
+                    text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
+
+screen horror_forced_menu_two(items):
+    timer 0.1 repeat True action MouseMove(960, 880)
+
+    vbox:
+        spacing 40
+        xalign 0.5
+        yalign 0.5
+
+        for idx, (caption, action, chosen) in enumerate(items):
+
+            button:
+                action action
+                xalign 0.5
+                xsize 1301
+                ysize 426
+                background None
+
+                hovered SetVariable("hovered_choice", idx)
+                unhovered SetVariable("hovered_choice", -1)
+
+                fixed:
+                    xysize (1301, 426)
+
+                    # Your animation code as before:
+                    if idx == 0:
+                        add (
+                            "top_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "top_half_idle_r1" if current_route == "route1" else
+                            "top_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "top_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_top_anim
+                    else:
+                        add (
+                            "bottom_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "bottom_half_idle_r1" if current_route == "route1" else
+                            "bottom_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "bottom_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_bottom_anim
+
+                    if idx == 0:
+                        add "mask_top" xpos 0 ypos 0 at mask_top_anim
+                    else:
+                        add "mask_bottom" xpos 0 ypos 0 at mask_bottom_anim
+
+                    text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
+
+## images
+
+image frame = "images/frame.png"
+image matcha = "images/matcha.png"
+image charm = "images/charm.png"
+
+image red_flash_slow:
+    Solid("#C00000")
+    alpha 0.0
+    on show:
+        linear 1.0 alpha 0.75
+        pause 1.0
+        linear 1.3 alpha 0.0
 ### SHOW FOG ####
 image tiledFog = im.Tile(im.Scale("fog.png", 1600, 600), size=(2400, 800))
 image particleFog = SnowBlossom("fog-particle.png", count=80, border=600, xspeed=50, yspeed=0, start=5, fast=True, horizontal=True)
