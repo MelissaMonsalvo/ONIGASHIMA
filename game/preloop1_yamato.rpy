@@ -53,8 +53,6 @@ label loop1_yamato_mandatory1:
 
     MC "Fine! If you want proof, you damn well got one!!"
 
-    n "He throws a wooden sword at you and you both start circling each other."
-
     play sound "sfx/clash.ogg"
 
     MC "Haaaaah!!"
@@ -355,6 +353,9 @@ label loop1_yamato_mandatory2:
 
     yamato "'Cause people's lives depend on it."
 
+    $ decrease_music_volume(0.5)
+    $ renpy.block_rollback()
+
     show yam normal:
         zoom 0.26
         align (0.5, 0.005)
@@ -405,7 +406,7 @@ label loop1_yamato_mandatory2:
             show darken2
             with dissolve
             MC "It was... {color=#ff082d}red.{/color}"
-            n "Why did you stutter? Of course it was {color=#ff082d}red{/color}"
+            n "Why did you stutter? Of course it was {color=#ff082d}red.{/color}"
         "Say it's black.":
             MC "It was... black. Yeah. Black."
             yamato "...Black?"
@@ -447,6 +448,7 @@ label loop1_yamato_mandatory2:
     menu:
         "{color=#ff082d}Red{/color}, I said.":
             MC "{color=#ff082d}Red{/color}, I said!"
+            with sshake
             n "Whoa, there's no need to yell!"
         "Stop asking me that!":
             MC "Why do you keep asking me that?!"
@@ -460,10 +462,11 @@ label loop1_yamato_mandatory2:
     menu:
         "{color=#ff082d}Red.{/color}":
             MC "{color=#ff082d}...Red.{/color}"
-        "{color=#ff082d}Red.{/color} again.":
+        "{color=#ff082d}Red.{/color} Again.":
             MC "I already told you. {color=#ff082d}Red.{/color}"
 
     stop music
+    $ restore_music_volume()
 
     MC "{color=#ff082d}Red. Red. RedredredredredREDREDREDREDREDREDREDREDRED. RED!{/color}"
 
@@ -517,6 +520,24 @@ label loop1_yamato_mandatory2:
 
     yamato "I'd clean yer mess like always, and slay the blasted thing myself when the red moon comes."
 
+    show yam normal:
+        zoom 0.42
+        align (0.65, 0.002)
+        yoffset 95
+        xoffset 20
+        alpha 1.0
+
+
+        parallel:
+            linear 2.5 zoom 0.3
+        parallel:
+            ease 0.5 xoffset 35 yoffset 105
+            ease 0.5 xoffset 5 yoffset 95
+            repeat 3
+
+
+        linear 0.8 alpha 0.0
+
     MC "...!!!"
 
     n "What did he mean by that?"
@@ -549,7 +570,7 @@ label loop1_yamato_mandatory2:
 
 
 
-    return
+    #return
 
 label loop1_yamato_mandatory3:
 
@@ -558,12 +579,10 @@ label loop1_yamato_mandatory3:
 
     ## YOUR HOUSE NIGHT
 
-    scene bg house night:
-        zoom 0.9
-        xanchor 0.5
-        yanchor 0.5
+    scene house night:
+        zoom 0.5
 
-    play music "walk grass.mp3"
+    play music "sfx/walk grass.mp3"
 
     n "You are in your house when you hear footsteps outside."
 
@@ -573,27 +592,58 @@ label loop1_yamato_mandatory3:
 
     n "What matters now is that the footsteps are nearing."
 
-    n "You see a shadow outside your dooe."
+    n "You see a shadow outside your door."
+    scene white_bg
+    show yam normal:
+        zoom 0.23
+        xanchor 0.5
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+        xoffset 900
+        xzoom -1
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+    show darken
+    with fade
 
+    stop music
     n "Yamato."
 
     n "Crouched low, hunched shoulders, clearly stalking... {w=0.2}or waiting."
 
     n "Today is not Yamato's patrol schedule."
 
-    play sound "sfx/cloth_rustle.ogg"
-
-    n "You immediately grab your sword, ready to fight."
+    n "You immediately grab your sword, ready to fight--"
 
     n "Why? It's just Yamato. Your childhood friend. Even though he is more irritable lately, surely he is not trying to harm you."
 
     n "You don’t make a sound until--"
 
-    play sound "sfx/stone_kick.ogg"
+    show yam normal:
+        zoom 0.23
+        xanchor 0.5
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
+        xoffset 900
+        xzoom -1
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+        ease 0.4 zoom 0.29
+
+        linear 0.05 xoffset 920
+        linear 0.05 xoffset 900
+        linear 0.05 xoffset 925
+        linear 0.05 xoffset 895
+        linear 0.05 xoffset 900
 
     MC "{sc=2}...Tch.{/sc}"
 
     n "You almost growls as the blade presses to his back."
+
+    play music "sfx/forest night.wav"
 
     MC "{size=+3}{b}...Don’t.{/b}{/size}"
 
@@ -603,7 +653,7 @@ label loop1_yamato_mandatory3:
 
     n "He freezes. You can feel his muscles shift under the blade, but he's still silent."
 
-    MC "{size=+2}Give me a reason not to.{/size}"
+    MC "{size=+2}C'mon, Yamato. ive me a reason not to.{/size}"
 
     yamato "Damn, who taught you to speak like that?"
 
@@ -637,11 +687,34 @@ label loop1_yamato_mandatory3:
 
     yamato "{sc=3}All stiff and hissin', makes me wonder what you’re hidin'.{/sc}"
 
+    scene black
+    with sshake
+
     n "Your grip tightens, and your whole body wants to fight."
 
     n "But instead, you take a very deep breath... and walks closer to him."
 
+    scene house night:
+        zoom 0.5
+    with fade
+
+
+
     MC "Fine, if you want to look at it so bad, be my guest."
+
+    show yam normal:
+        zoom 0.3
+        xalign 0.4
+        yalign 0
+        yoffset 0
+        xzoom -1
+        yzoom 1.0
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+        pause 0.8
+
+        ease 0.2 xzoom 1 matrixcolor None xoffset 120
+    with dissolve
 
     yamato "Hah?"
 
@@ -651,7 +724,15 @@ label loop1_yamato_mandatory3:
 
     MC "I'll prove that it's authentic, that you and Hikaru are just looking for a reason to doubt me."
 
-    n "Yamaot follows you inside. The armor sits where you left it, with dried blood still splattering across it."
+    hide yam
+    with dissolve
+
+    scene house night:
+        zoom 0.5
+        xanchor 1
+        yanchor 1
+
+        ease 0.5 zoom 0.7 xoffset -420 yoffset -100
 
     MC "Go ahead, see for yourself."
 
@@ -663,7 +744,13 @@ label loop1_yamato_mandatory3:
 
     yamato "{sc=2}Hmph.{/sc}"
 
-    n "He pokes it, the armor clatters."
+    play sound "sfx/kickmetal.mp3"
+
+    with sshake
+
+    n "He kicks it, the armor clatters."
+
+    MC "Easy."
 
     yamato "...This really it?"
 
@@ -697,9 +784,28 @@ label loop1_yamato_mandatory3:
 
     n "He grunts and tries to lift the damn thing."
 
-    yamato "{w=0.2}...Kinda heavy for something so damn small."
+    yamato "{w=0.2}...Kinda {w=0.4}heavy for something so damn small."
 
     MC "Try dragging it downhill by yourself."
+
+    scene house night:
+        zoom 0.7
+        xanchor 1
+        yanchor 1
+        xoffset -420
+        yoffset -100
+
+        ease 0.5 zoom 0.5 xoffset 0 yoffset 0
+    pause 0.4
+
+    show yam normal:
+        zoom 0.3
+        xalign 0.4
+        yalign 0
+        yoffset 0
+        xzoom -1
+        yzoom 1.0
+    with dissolve
 
     n "He sits down, arms resting on his knees, and maybe, just maybe, recalculating."
 

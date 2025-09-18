@@ -319,6 +319,8 @@ label village_entrance:
 
 label get_player_name:
 
+    ## note to mel
+
     ## player name is persistent
     ## you only name player ONLY ONCE, that name is used all across all loops until true ending is unlocked
     ## you can rename mc again after you have seen the true ending
@@ -336,7 +338,7 @@ label get_player_name:
             $ player_name = "Kagami"
 
         $ persistent.player_name = player_name
-        $ persistent.seen_true_end = False  # Reset good_end status on new game
+        $ persistent.seen_true_end = False
 
         n "[persistent.player_name]."
 
@@ -379,7 +381,6 @@ label after_get_name:
     n "You {i}really, really{/i} like that."
 
     scene village day:
-        # Start at normal crop
         anchor (0.5, 0.5)
         xpos 0.5 ypos 0.5
         xanchor 0.5 yanchor 0.5
@@ -387,11 +388,9 @@ label after_get_name:
         linear 0.15 zoom 0.61
         linear 0.08 xpos 0.51 ypos 0.49
         linear 0.08 xpos 0.5 ypos 0.5
-        # Second stumble, more pronounced
         linear 0.12 zoom 0.63
         linear 0.10 xpos 0.48 ypos 0.52
         linear 0.10 xpos 0.5 ypos 0.5
-        # Hold at max zoom
         linear 0.15 zoom 0.62
         pause 0.3
 

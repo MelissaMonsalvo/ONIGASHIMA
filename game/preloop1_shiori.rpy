@@ -156,7 +156,7 @@ label loop1_shiori_mandatory1:
 
     stop music fadeout 3.0
 
-    
+
 
     #return
 
@@ -664,7 +664,6 @@ label loop1_shiori_mandatory4:
         yoffset 80
         xoffset 0
 
-        # Animate to center & zoom out
         ease 0.5 zoom 0.34 xalign 0.4
 
     play sound "sfx/suzu.mp3"
@@ -681,11 +680,7 @@ label loop1_shiori_mandatory4:
     shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6}begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6}begone!{/sc}{/color}{/size}"
 
 
-
-
     n "She chants clearly, loudly. The bell in her hand sways slightly with her rhythm."
-
-    ## multiple chanting, the words are shaking at the screen as she chants
 
     hide expression Text
     hide expression Text
@@ -933,10 +928,10 @@ label loop1_shiori_mandatory5:
         yoffset 80
         alpha 1.0
 
-    
+
         linear 0.28 zoom 0.18 alpha 0.0 xalign 0.4 yoffset 208
 
-    
+
 
     n "She walks away, as your body freezes in place."
     hide shi
@@ -944,8 +939,6 @@ label loop1_shiori_mandatory5:
     MC "…"
 
     MC "Shit." ## wrong expression here
-
-    ## If you see this breakdown scene, you are entering Shiori's route.
 
     scene black
     with in_212
