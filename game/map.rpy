@@ -99,6 +99,7 @@ define character_icons = {
 
 
 label map:
+    $ current_loop = get_current_loop()
     #show screen map_screen
     call screen map_screen
     pause
@@ -220,6 +221,21 @@ python early:
 
 
     import math
+
+
+    def get_current_loop():
+        """
+        Devuelve el número del loop actual según el progreso del jugador.
+        """
+        if not persistent.loop1:
+            return 1
+        elif not persistent.loop2:
+            return 2
+        elif not persistent.loop3:
+            return 3
+        else:
+            # Si ya pasó todos los loops
+            return None
 
 
     #Función que se ejecuta al hacer click en alguna parte del mapa
@@ -376,6 +392,9 @@ python early:
 label location_empty(location):
     "No hay nada interesante en [location]" #[locations[location]] en este momento."
     return
+
+
+
 
 
 ###########################
