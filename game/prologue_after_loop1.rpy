@@ -22,10 +22,12 @@ label prologue_loop1:
 
     MC "Haa... {w=0.4}Haa..."
 
-    play sound "sfx/huff.ogg" loop
-    show screen huffing_effect
+    scene black with fade
+    show flesh2 at scary_flicker
 
-    n "It’s dark."
+    play music "heavy breathing.mp3"
+
+    n "{cps=18}It is dark.{/cps}"
 
     n "We're here again...?"
 
@@ -37,25 +39,19 @@ label prologue_loop1:
 
     n "Wait a second, you've been through this before... This feels familiar..."
 
-    play sound "sfx/squelch1.ogg"
-    $ renpy.pause(0.3)
-    play sound "sfx/squelch2.ogg"
-    $ renpy.pause(0.3)
+    play muzak "sfx/squelch.mp3"
 
     n "Again."
 
-    n "You stab again. Again. Again. Wait. Stop."
+    n "You stab again. {w=0.1}Again. Again.{w=0.2} {color=#ff0000}Wait.{/color} {w=0.2}{color=#ff0000}Stop.{/color}"
 
     n "Haven't you stabbed this thing to oblivion before?"
 
-    play sound "sfx/squelch3.ogg"
-    $ renpy.pause(0.2)
+    n2 "{atl=-#,#,fade_in_text~0.6}{glitch=1.1}Again.{/glitch}{/atl}"
 
-    n2 "Again."
+    n "..."
 
-    n "…"
-
-    n "Wh-"
+    n "W-h-"
 
     n "Who was that? Was that you?"
 
@@ -63,13 +59,9 @@ label prologue_loop1:
 
     n "You’ll need to clean it. Later. Burn it maybe."
 
-    n "What... did you kill?"
+    n "What... {w=0.1}did you kill?"
 
-    window hide
-    $ renpy.pause(1.0)
-    window show
-
-    n2 "...You."
+    n2 "{size=+4}{color=#990000}{glitch=1.1}...You.{/glitch}{/color}{/size}"
 
     play sound "sfx/heartbeat_deep.ogg"
     $ renpy.pause(0.4)
@@ -82,38 +74,32 @@ label prologue_loop1:
 
     n "This makes no sense."
 
-    n "No, no, that can't be right. The sound that it made when you cut through it was NOT human at all."
+    n "No, no, that can’t be right. The sound that it made when you cut through it was {i}NOT{/i} human at all."
 
-    play sound "sfx/whimper.ogg"
+    n "You heard it screamed, right? {w=0.2}Or did it cry out?"
 
-    n "You heard it screamed, right? Or did it cry out?"
+    n "Did it say your name with its dying breath?"
 
-    n "Did it say your name with it's dying breath?"
+    n "You lift the blade again, about to stab the creature {w=0.2}{size=+4}{color=#990000}{atl=-#,#,fade_in_text~0.6}{glitch=1.1}again{/glitch}{/atl}{/color}{/size}."
 
-    n "You lift the blade again, about to stab the creature {w}again."
+    n "{size=+4}{color=#990000}Stop.{/color}{/size}"
 
-    play muzak "sfx/squelch.mp3"
-
-    n "Stop."
+    stop muzak
 
     MC "...."
 
-    play sound "sfx/drip.wav"
-    $ renpy.pause(0.4)
 
-    n "Please. Stop."
+    n "{size=+2}{color=#880000}Please. Stop.{/color}{/size}"
 
-    n "You saved the village.  This was... {w}noble."
+    n "You saved the village. This was... {w=0.2}noble."
 
-    n "Stabbing a thing that is no longer alive, again, again, again, again, and again is not noble. That's not what heroes do."
+    n "Stabbing a thing that is no longer alive, {w=0.5}again, {w=0.4}again, {w=0.3}again, {w=0.2}again, and {w=0.1}again is {i}not{/i} noble. {w=0.3}That's not what heroes do."
 
-    n "You're sure it's dead now. You can go, return to the village, and..."
+    n "You're sure it's {atl=-#,#,fade_in_text~0.6}{glitch=1.1}dead{/glitch}{/atl} now. You can go, return to the village, and..."
 
-    n2 "Snap, chew, swallow, devour."
+    n2 "{size=*0.95}{k=-1}Snap, {w=0.1}chew, {w=0.1}swallow, {glitch=1.1}d e v o u r.{/glitch}{/k}{/size}"
 
     n "That voice again... Is that you, [persistent.player_name]?"
-
-    stop muzak
 
     n "......"
 
@@ -121,67 +107,71 @@ label prologue_loop1:
 
     n "..."
 
-    n "You must be hallucinating things."
+    n "{size=*0.9}{k=-1}You must be hallucinating things.{/k}{/size}"
+
+
 
     scene black with fade
 
-    
 
-    n "It’s time to return to the village."
+
+    n "{cps=18}It’s time to return to the village.{/cps}"
 
     play muzak "sfx/forest night.wav"
 
-    play sound"sfx/metal drag.wav"
+    
+
+    n "You start down the mountain, but these legs {i}don't feel like yours{/i}."
+
+    play sound "sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
-    n "You start down the mountain, but these legs don't feel like yours."
+    n "{w=0.2}The sound of armor dragging follows behind you. It grinds the stone path as you drag it along with one hand."
 
-    n "The sound of armor clinking follows behind you. It grinds the stone path as you drag it along with one hand."
-
-    play sound"sfx/metal drag.wav"
+    play sound "sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
     n "The elders said the Yamakui wore stone armor. That its body was too large for skin alone."
 
     n "This... this is your proof. You dragged it with you, so they'd believe you."
 
-    n "Because there was nothing else left. {w}Because you--"
+    n "Because there was {i}nothing else{/i} left. {w=0.2}Because you--"
 
-    n2 "--stole it it."
+    n2 "{size=+2}{color=#880000}{glitch=1.1}--stole it.{/glitch}{/color}{/size}"
 
     n "..."
 
-    play sound"sfx/metal drag.wav"
+    play sound "sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
-    n "They won’t doubt you. Not when they see this."
+    n "They won’t doubt you. {w=0.2}Not when they see this."
 
     n "You did it. You killed it. You’re {i}sure{/i}."
 
-    n "You’re sure."
+    n "{size=+2}{color=#880000}You’re sure.{/color}{/size}"
 
     MC "Hhh..."
 
     play sound "sfx/breath_exhale.ogg"
 
-    n "It’s cold and quiet and eerie and absolutely NOT what you expected."
+    n "{w=0.2}It’s cold and quiet and eerie and absolutely NOT what you expected."
 
     n "You just fought the thing they feared for generations. Where’s the fanfare?"
 
     n "Shouldn’t the forest open up for you? Shouldn’t the world feel..."
 
-    n "...safe?"
+    n "{size=*0.95}{k=-1}...safe?{/k}{/size}"
 
     n "You imagine the clouds parting, or gold light spilling down, or flowers blooming or... something."
 
     play sound "sfx/laugh_glitch1.ogg"
     $ renpy.pause(0.2)
 
-    n2 "Pfft... hkkk-HRAHAHAH."
+    n2 "{size=*0.9}{color=#990000}{glitch=1.1}Pfft... hkkk-HRAHAHAH.{/glitch}{/color}{/size}"
 
     n "--!"
 
-    n2 "Gold light. Pretty lie. Ha."
+    n2 "{atl=-#,#,fade_in_text~0.6}{glitch=1.1}Gold light. Pretty lie. Ha.{/glitch}{/atl}"
 
     n "What--"
 
@@ -189,7 +179,7 @@ label prologue_loop1:
 
     n "..."
 
-    play sound"sfx/metal drag.wav"
+    play sound "sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
     n "You keep walking, tracing the familiar pathway to the village that the Yamakui used to trail when they go..."
@@ -198,17 +188,22 @@ label prologue_loop1:
 
     n "...before... the red moon..."
 
-    n "..."
+    n "{cps=10}...{/cps}"
 
-    n2 "Done talking?"
+    n2 "{size=+2}{color=#880000}Done talking?{/color}{/size}"
 
-    n "No. That's not true "
+    n "No. That's {i}not{/i} true."
 
-    n "You killed the Oni. That's what is supposed to happen. So now you're going home."
+    n "You killed the Oni. That's what is supposed to happen. {w=0.3}So now you're going home."
 
-    n "You’ll be a hero."
+    n "{w=0.2}You’ll be a hero."
 
-    n "A hero."
+    n "{b}{cps=8}{glitch=1.1}A hero.{/glitch}{/cps}{/b}"
+
+
+    scene village day with in_182:
+        zoom 0.5
+
 
     n "..."
 
@@ -220,27 +215,66 @@ label prologue_loop1:
 
     MC "Hey, guys. I'm back."
 
+    show woman:
+        xzoom -1
+        zoom 0.35
+        xalign 0.65
+        ypos 0.2
+
+        linear 0.1 ypos 0.19 zoom 0.27
+    with vpunch
+    play sound "sfx/bucketdrop.wav"
+    $ renpy.pause(0.8)
+
     n "Someone sees you, drops their bucket  Everyone stops what they are doing to look at you."
 
-    n2 "So many necks to snap."
+    n2 "{blur}So many necks to snap.{/blur}"
 
-    man "No way..."
+    play music "Tense.ogg"
 
-    woman "[persistent.player_name] is back?"
+    "Woman" "{size=*0.95}{k=-1}No way...{/k}{/size}"
 
-    man "That's impossible... Alive?"
+    hide woman
+    with dissolve
+
+    scene village day:
+        zoom 0.5
+        yanchor 1
+        pause 0.1
+        linear 2 zoom 0.7 xalign 0.6
+
+    play sound "sfx/walk grass.mp3"
 
     n "You walk toward a familliar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
 
     MC "So?"
 
-    elder "Yes... {w}I believe this is truly the Yamakui's armor."
+    "Elder" "Im-Impossible..."
 
-    pause 0.5
+    "Elder" "This couldn't be..."
 
-    elder "The Oni is... dead?"
+    "Elder" "The Oni is... dead?"
 
     n "Insteade of cheering, people just stare..."
+
+    hide elder
+    with dissolve
+
+    play music "Doubt.mp3"
+
+    show woman at left:
+        zoom 0.5
+        ypos 0.2
+    with dissolve
+    show man at center:
+        zoom 0.5
+        ypos 1.67
+    with dissolve
+    show oldman at right:
+        zoom 0.5
+        xoffset -50
+        ypos 1.67
+    with dissolve
 
     n "Hands reach for you, but they seem to be unsteady. Everyone looks...conflicted and unsure."
 
@@ -250,16 +284,13 @@ label prologue_loop1:
 
     n "Wait, what is your name again?"
 
-    n2 "Y A M A K U I" ## use horror text
+    n2 "{blur}{glitch=1.1}Y A M A K U I{/glitch}{/blur}" ## use horror text
 
     n "NO."
 
-    n2 "{fast}Yamakui. Yamakui. Yamakui.{/fast}"
+    n2 "{cps=201}Yamakui. Yamakui. Yamakui--"
 
     n "No, that’s-{w}That’s NOT-!"
-
-    play sound "sfx/heartbeat.ogg"
-    $ renpy.pause(1.0)
 
     man "Did you really kill the yamakui, [persistent.player_name]?"
 
@@ -267,17 +298,17 @@ label prologue_loop1:
 
     elder "[persistent.player_name], you have done us a great service."
 
-    n2 "Hungry hungry hungry."
+    n2 "{cps=201}Hungry hungry hungry."
 
     n "Shut up."
 
-    n "Shut up shut up shut up shut up-"
+    n "{cps=201}Shut up {size=+3}shut up{/size} {size=+6}shut up{/size} {size=+9}shut up{/size} {size=+12}shut up{/size}--"
 
     woman "Great job, [persistent.player_name]-san..."
 
-    kid "[persistent.player_name]-sama, are we really safe now?"
+    oldman "...Are we really safe now?"
 
-    n "{cps=7}No one looks at the armor.{/cps}"
+    n "{cps=57}No one looks at the armor.{/cps}"
 
     n "They looked worried still, because someone was recently devoured. Someone by the name of--"
 
@@ -285,7 +316,7 @@ label prologue_loop1:
 
     n "Why can't I remember their name? That's odd, let me think again. Were they your friend?"
 
-    n2 "Don't think too much."
+    n2 "{cps=20}{sc=0.5}Don't think too much.{/sc}{cps=7}"
 
     if not persistent.shiori_dies: 
         jump speechhh2shiori
@@ -294,9 +325,35 @@ label prologue_loop1:
 
 label speechhh2shiori:
 
-    n "Later, they drag you toward the shrine steps."
+    scene village day:
+        # Start at normal crop
+        anchor (0.5, 0.5)
+        xpos 0.5 ypos 0.5
+        xanchor 0.5 yanchor 0.5
+        zoom 0.6
+        linear 0.15 zoom 0.61
+        linear 0.08 xpos 0.51 ypos 0.49
+        linear 0.08 xpos 0.5 ypos 0.5
+        # Second stumble, more pronounced
+        linear 0.12 zoom 0.63
+        linear 0.10 xpos 0.48 ypos 0.52
+        linear 0.10 xpos 0.5 ypos 0.5
+        # Hold at max zoom
+        linear 0.15 zoom 0.62
+        pause 0.3
 
-    n "The Elder holds your arm, but you can’t tell whose hand is trembling. Yours, maybe."
+    n "Later, you are pulled to stand in front of everyone, almost stumbling on your feet."
+
+    n "You wonder why the Elder's hand is shaking when he tugs your arm."
+
+    n "Or maybe that's your own hand that's trembling."
+
+    show elder:
+        xzoom -1
+        zoom 0.8
+        xalign 0.65
+        ypos 0.1
+    with dissolve
 
     elder "Come. Let them see it clearly."
 
@@ -304,31 +361,32 @@ label speechhh2shiori:
 
     n "Sunlight catches the edges. Something {i}wet{/i} glistens, red trails slide off the plating."
 
-    n "It's red. Yamakui's blood is black."
+    n "It's {color=#ff0000}red.{/color} Yamakui's blood is black."
 
-    n "You lied."
+    n "{atl=-#,#,fade_in_text~0.6}You lied.{/atl}"
 
-    elder "Look well, all of you."
+    elder "{b}Look well, all of you.{/b}{w=0.3}"
 
-    elder "For years, we have lived in shadow."
+    elder "{b}For years, we have lived in shadow.{/b}{w=0.2}"
 
-    elder "We boarded our windows, whispered our prayers, and buried bodies without names."
+    elder "We boarded our windows, {i}whispered our prayers{/i}, and cremated ashes without names.{w=0.2}"
 
-    elder "The Yamakui haunted us longer than memory itself."
+    elder "{b}The Yamakui haunted us longer than memory itself.{/b}{w=0.4}"
 
-    elder "And yet..."
+    elder "{b}And yet...{/b}{w=0.4}"
 
-    elder "[persistent.player_name] climbed that mountain and came back. Where no one else could."
+    elder "{b}[persistent.player_name] climbed that mountain and came back.{/b} {i}Where no one else could.{/i}{w=0.3}"
 
     n "The crowd claps, but they don't seem to be excited. Odd."
 
-    elder "Never again will we light our fires with fear."
+    elder "{b}Never again will we light our fires with fear.{/b}{w=0.3}"
 
-    elder "Never again will we sleep listening for footsteps."
+    elder "{b}Never again will we sleep listening for footsteps.{/b}{w=0.3}"
 
-    elder "Never again will our loved ones vanish under the Red Moon."
+    elder "{b}Never again will our loved ones vanish under the Red Moon.{/b}{w=0.3}"
 
-    elder "And never again will we... forget."
+    elder "{b}And never again will we... forget.{/b}{w=0.6}{nw}"
+
 
     girl "Speech, [persistent.player_name]!"
 
@@ -348,19 +406,19 @@ label speechhh2shiori:
 
     n "Don’t."
 
-    n2 "Lets rip apart the shrine maiden next."
+    n2 "Let's rip apart the shrine maiden next."
 
-    n "Stop. Please."
+    n "Stop. {i}Please.{/i}"
 
-    MC "...I..."
+    MC "...{w=0.3}I..."
 
-    MC "...I climbed that mountain."
+    MC "...{w=0.3}I climbed that mountain."
 
-    MC "...Faced it head-on...."
+    MC "...{w=0.3}Faced it head-on...."
 
-    MC "...And I, I won."
+    MC "...{w=0.3}And I, {w=0.3}I won."
 
-    MC "So let’s celebrate! No more fear!"
+    MC "{w=0.3}So let’s celebrate! No more fear!"
 
     m "They seem to believe you now."
 
@@ -370,7 +428,24 @@ label speechhh2shiori:
 
     n "As you step down from the shrine, the crowd parts."
 
-    n2 "Hungry, hungry, hungry."
+    n2 "{glitch}Hungry, hungry, hungry.{/glitch}"
+
+    $ _prev_music_volume = _preferences.volumes["music"]
+
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
+    pause 0.2
+
+    show woman at midleft :
+        zoom 0.5
+        ypos 0.2
+    with dissolve
+    show man at midright:
+        zoom 0.5
+        ypos 0.1
+    with dissolve
+    show darken
+    with dissolve
 
     n "You can still hear the scared whispers of the villagers ringing in your ears."
 
@@ -386,6 +461,8 @@ label speechhh2shiori:
 
     n2 "AhaHAHAhahaHa."
 
+    $ restore_music_volume()
+
     n "You hear your name again."
 
     n "The armor still hangs limply from your hand."
@@ -398,63 +475,97 @@ label speechhh2shiori:
 
 label speechhh2noshiori:
 
-    show bg shrine_day with fade
-    show villagers_happy at center
-    play music "bgm/festival_soft.ogg" fadein 1.5
+    scene village day:
+        # Start at normal crop
+        anchor (0.5, 0.5)
+        xpos 0.5 ypos 0.5
+        xanchor 0.5 yanchor 0.5
+        zoom 0.6
+        linear 0.15 zoom 0.61
+        linear 0.08 xpos 0.51 ypos 0.49
+        linear 0.08 xpos 0.5 ypos 0.5
+        # Second stumble, more pronounced
+        linear 0.12 zoom 0.63
+        linear 0.10 xpos 0.48 ypos 0.52
+        linear 0.10 xpos 0.5 ypos 0.5
+        # Hold at max zoom
+        linear 0.15 zoom 0.62
+        pause 0.3
 
     n "Later, they drag you toward the shrine steps."
 
     n "The Elder holds your arm, but you can’t tell whose hand is trembling. Yours, maybe."
 
-    elder "Come. Let them see it clearly."
+    show elder:
+        xzoom -1
+        zoom 0.8
+        xalign 0.65
+        ypos 0.1
+    with dissolve
 
-    show mc proud at midleft with dissolve
+    elder "Come. Let them see it clearly."
 
     n "You raise the armor."
 
-    n "Sunlight catches the edges. Something {i}wet{/i} glistens. Red trails slide off the plating."
+    n "Sunlight catches the edges. Something {i}wet{/i} glistens, red trails slide off the plating."
 
-    elder "Look well, all of you."
+    n "It's {color=#ff0000}red.{/color} Yamakui's blood is black."
 
-    elder "For years, we have lived in shadow."
+    n "{atl=-#,#,fade_in_text~0.6}You lied.{/atl}"
 
-    elder "We boarded our windows, whispered our prayers, and buried bodies without names."
+    elder "{b}Look well, all of you.{/b}{w=0.3}"
 
-    elder "The Yamakui haunted us longer than memory itself."
+    elder "{b}For years, we have lived in shadow.{/b}{w=0.2}"
 
-    elder "And yet..."
+    elder "We boarded our windows, {i}whispered our prayers{/i}, and cremated ashes without names.{w=0.2}"
 
-    elder "[persistent.player_name] climbed that mountain and came back. Where no one else could."
+    elder "{b}The Yamakui haunted us longer than memory itself.{/b}{w=0.4}"
+
+    elder "{b}And yet...{/b}{w=0.4}"
+
+    elder "{b}[persistent.player_name] climbed that mountain and came back.{/b} {i}Where no one else could.{/i}{w=0.3}"
 
     n "The crowd claps, but they don't seem to be excited. Odd."
 
-    elder "Never again will we light our fires with fear."
+    elder "{b}Never again will we light our fires with fear.{/b}{w=0.3}"
 
-    elder "Never again will we sleep listening for footsteps."
+    elder "{b}Never again will we sleep listening for footsteps.{/b}{w=0.3}"
 
-    elder "Never again will our loved ones vanish under the Red Moon."
+    elder "{b}Never again will our loved ones vanish under the Red Moon.{/b}{w=0.3}"
 
-    elder "And never again will we... forget."
+    elder "{b}And never again will we... forget.{/b}{w=0.6}{nw}"
 
     pause 0.5
 
     n "....."
 
+    with dissolve
+
+    pause 0.3
+
     n "......"
+
+    with dissolve
+
+    pause 0.3
 
     n "Silence."
 
+    with dissolve
+
+    pause 0.3
+
     MC "....?"
 
-    n "Wait, shouldn't someone say something by now?"
+    n "Wait, {w=0.2}shouldn't someone say something by now?"
 
-    n "Someone always says something here. A girl’s voice, I think her name was--"
+    n "Someone always says something here. {blur}A girl’s voice{/blur} I think her name was--"
 
     n "No, I can't remember her..."
 
     n "She should be laughing with her sweet voice by now, but you don't hear it."
 
-    n "Someone should ask you to say a speech now, right?"
+    n "{blur}Someone{/blur} should ask you to say a speech now, right?"
 
     n2 "The stringy one."
 
@@ -462,7 +573,7 @@ label speechhh2noshiori:
 
     n2 "Sounded shrill when devoured."
 
-    n "I... don’t remember that."
+    n "I... {w=0.2}don’t remember that."
 
     n "...."
 
@@ -472,7 +583,24 @@ label speechhh2noshiori:
 
     n "As you step down from the shrine, the crowd parts."
 
-    n2 "Hungry, hungry, hungry."
+    n2 "{glitch}Hungry, hungry, hungry.{/glitch}"
+
+    $ _prev_music_volume = _preferences.volumes["music"]
+
+    $ decrease_music_volume(0.2)
+    $ renpy.block_rollback()
+    pause 0.2
+
+    show woman at midleft :
+        zoom 0.5
+        ypos 0.2
+    with dissolve
+    show man at midright:
+        zoom 0.5
+        ypos 0.1
+    with dissolve
+    show darken
+    with dissolve
 
     n "You can still hear the scared whispers of the villagers ringing in your ears."
 
@@ -510,17 +638,49 @@ label check_who_ded:
 label LI_intro_noshiori:
     n "But of course, you don't get far."
 
+    show yam normal at yamato_zoom, left
+    with dissolve
+    pause 0.3
+    show hik normal at hikaru_zoom, right
+    with dissolve
+
     n "Because Yamato and Hikaru find you, they are your childhood friends--"
 
     n "Wait a second."
 
-    n "Wasn’t there someone else?"
+    show shi normal:
+        zoom 0.26
+        xanchor 0.5
+        xalign 0.5
+        yalign -0.60
+        yoffset 0
+        xoffset 0
+        yzoom 1.0
+        xzoom 1.0
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+        linear 0.04 alpha 0.1 xoffset 12
+        linear 0.04 alpha 1.0 xoffset 0
+        linear 0.05 alpha 0.25 xoffset -14
+        linear 0.04 alpha 1.0 xoffset 0
+        repeat 3
+
+        parallel:
+            linear 0.07 alpha 0.1
+            linear 0.12 alpha 0.0
+        parallel:
+            linear 0.09 xoffset 25
+            linear 0.10 xoffset -22
+            linear 0.05 xoffset 0
+    hide shi
+
+    n "Wasn’t there {glitch}someone else?{/glitch}"
 
     n "You remember the rice paddies, the muddy sandals, the laughters and the paper effigies--"
 
     n "Someone used to hang those paper effigies."
 
-    n "There were four of you. Weren’t there four?"
+    n "There were four of you. Weren’t there {glitch}four?{/glitch}"
 
     play sound "sfx/grassstep.ogg"
 
@@ -536,9 +696,9 @@ label LI_intro_noshiori:
 
     yamato "Fuckin' tradition..."
 
-    n "Wait... There should be another voice now, someone who usually tease Yamato..."
+    n "Wait... {w}There should be another voice now, someone who usually tease Yamato..."
 
-    n "No, wait... Not Hikaru... Hikaru's a quiet person."
+    n "No, wait... {w}Not Hikaru... {w}Hikaru's a quiet person."
 
     n "..."
 
@@ -566,7 +726,20 @@ label LI_intro_noshiori:
 
     n "But no one else is there but the three of you."
 
-    n2 "...She is D E A D."
+    n2 "...She is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}D E A D.{/glitch}{/atl} "
+
+    show hik normal behind darken:
+
+        zoom 0.231
+        yoffset 460
+
+        linear 0.4 xzoom -1 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+    pause 0.2
+    hide hik with dissolve
+
+    play sound "sfx/walk grass.mp3"
+    pause 0.4
+    stop sound fadeout 1.0
 
     n "Hikaru shrugs, turns and walks away."
 
@@ -574,7 +747,21 @@ label LI_intro_noshiori:
 
     yamato "Tch, whatever."
 
+    show yam normal at yamato_zoom, left:
+        linear 0.4 xzoom -1 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+    pause 0.2
+    hide yam with dissolve
+
+    play sound "sfx/walk grass.mp3"
+    pause 0.4
+    stop sound fadeout 1.0
+
+
     n "Yamato follows. The empty space between you seems larger now."
+
+    scene black
+    show darken2
+    with fade
 
     n "You look down at the armor, it feels heavier. Your fingers ache from holding it."
 
@@ -589,11 +776,39 @@ label LI_intro_nohikaru:
 
     n "But of course, you don’t get far."
 
+    show shi normal at shiori_skipp:
+        xalign 0.44
+    with dissolve
+    pause 0.6
+    stop sound
+    show yam normal at yamato_zoom, left
+    with dissolve
+    pause 0.3
+
     n "Because Shiori and Yamato find you."
 
     n "Your childhood friends. {w}Two of them?"
 
-    n "...Weren’t there more? You cared for them more than the others... didn't you?"
+    show hik normal at hikaru_zoom, right:
+
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+        linear 0.04 alpha 0.1 xoffset 12
+        linear 0.04 alpha 1.0 xoffset 0
+        linear 0.05 alpha 0.25 xoffset -14
+        linear 0.04 alpha 1.0 xoffset 0
+        repeat 3
+
+        parallel:
+            linear 0.07 alpha 0.1
+            linear 0.12 alpha 0.0
+        parallel:
+            linear 0.09 xoffset 25
+            linear 0.10 xoffset -22
+            linear 0.05 xoffset 0
+    hide hik
+
+    n "{w=0.3}...Weren’t there more? {glitch}You cared for them more than the others...{/glitch} {w}didn't you?"
 
     n "Yes, you remember the rice paddies, muddy ankles, chasing cats and sparring...."
 
@@ -601,7 +816,7 @@ label LI_intro_nohikaru:
 
     n "Who was it?"
 
-    n2 "The mushy one."
+    n2 "{blur}The mushy one.{/blur}"
 
     n "..."
 
@@ -617,6 +832,9 @@ label LI_intro_nohikaru:
 
     yamato "Tradition’s for corpses."
 
+    show shi normal at shakey:
+        xalign 0.44
+
     shiori "Mou~ Yamato-kun's just mad he didn’t get to do anything cool~"
 
     yamato "Tch. I stayed behind t’guard the goddamn village."
@@ -629,15 +847,26 @@ label LI_intro_nohikaru:
 
     n "...What?"
 
-    n2 "Soft around the ribs."
+    n2 "{cps=25}Soft around the ribs.{/cps}"
 
     n "..."
 
     shiori "Ne ne~ [persistent.player_name]-sama! You have to tell us what Yamakui looked like! Did it have fangs? Big claws? Did it talk?"
 
+
+    hide shi normal
+    show shi normal:
+        zoom 0.26
+        yalign -0.60
+        yoffset 0
+        xalign 0.44
+        parallel:
+            easein 0.4 zoom 0.34 yalign -0.1
+            easeout 0.4 zoom 0.26 yalign -0.60
+
     MC "Uh... Big. Yeah. Bloody. And...."
 
-    shiori "Beautiful?"
+    shiori "{sc=1}Beau~tiful?{/sc}"
 
     n2 "Hah."
 
@@ -649,17 +878,17 @@ label LI_intro_nohikaru:
 
     yamato "Damn Oni's got teeth, that's what."
 
-    n "They laugh again, but something is missing. {i}Someone{/i} is missing."
+    n "They bicker again, but something is missing. {i}Someone{/i} is missing."
 
-    n "There was four of you. You’re sure of it."
+    n "There was four of you. {i}You’re sure of it.{/i}"
 
-    n "Right?"
+    n "{w=0.3}...Right?"
 
     MC "Yeah, whatever they looked like now, it doesn't matter now."
 
     yamato "Tch. Ain’t like I’m complainin’. Ya came back in one piece."
 
-    shiori "Especially not clean like that~ Not even a scratch on you!"
+    shiori "Especially not clean like that~ {w}Not even a scratch on you!"
 
     yamato "Almost like ya ain’t fought anything at all, eh?"
 
@@ -667,9 +896,12 @@ label LI_intro_nohikaru:
 
     yamato "What, damned oni bonked their head on a stone and dropped dead?"
 
-    MC "Something like that, yeah...!"
+    MC "{k=-1}Something like that, yeah...!{/k}"
 
     n "Yamato and Shiori says nothing else, but their smile fades as yours does."
+    scene black
+    show darken2
+    with fade
 
     n "You look down at the armor."
 
@@ -681,6 +913,15 @@ label LI_intro_noyamato:
 
     n "But of course, you don’t get far."
 
+    show shi normal at shiori_skipp:
+        xalign 0.44
+    with dissolve
+    pause 0.6
+    stop sound
+    pause 0.3
+    show hik normal at hikaru_zoom, right
+    with dissolve
+
     n "Because Shiori and Hikaru, your childhood friends find you."
 
     n "You grew up together, train together, sit under the same tree together, and chase each other on the paddy fields."
@@ -689,9 +930,28 @@ label LI_intro_noyamato:
 
     n "Wait, four?"
 
+    show yam normal at yamato_zoom, left:
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
+        linear 0.04 alpha 0.1 xoffset 12
+        linear 0.04 alpha 1.0 xoffset 0
+        linear 0.05 alpha 0.25 xoffset -14
+        linear 0.04 alpha 1.0 xoffset 0
+        repeat 3
+
+        parallel:
+            linear 0.07 alpha 0.1
+            linear 0.12 alpha 0.0
+        parallel:
+            linear 0.09 xoffset 25
+            linear 0.10 xoffset -22
+            linear 0.05 xoffset 0
+    hide yam
+    with dissolve
+
     n "...Wasn’t there one more?"
 
-    n2 "The loud one."
+    n2 "{sc=1}The loud one.{/sc}"
 
     n "..."
 
@@ -707,13 +967,16 @@ label LI_intro_noyamato:
 
     n "There should be someone grumbling now, that you left them to fight the Yamakui all by yourself..."
 
-    n2 "That one stopped moving halfway down the throat."
+    n2 "{glitch}That one stopped moving halfway down the throat.{/glitch}"
 
     n "..."
 
     shiori "Ne ne~ Did Yamakui look like the legends? Big and scary? Lots of fangs? Or was it kinda cute~?"
 
     MC "I think it looked like it needed stabbing."
+
+    show shi normal at shakey:
+        xalign 0.44
 
     shiori "Muuuu, why are you so stingy, [persistent.player_name]???"
 
@@ -723,33 +986,45 @@ label LI_intro_noyamato:
 
     n "Someone should have said something by now..."
 
+    show shi normal at bounci:
+        xalign 0.44
+
     shiori "You must be starving, [persistent.player_name]-sama. Shiori's gonna make alllll~ the food you want!"
 
-    MC "How 'bout venison?"
+    MC "{cps=35}How 'bout {/cps}{cps=5}venison?{/cps}"
 
-    shiori "Eh...? I don't think I have... that...."
+    shiori "Eh...? I don't think I have... {w}that...."
 
     hikaru "..."
 
+    pause 0.5
+
     MC "What is it?"
 
-    hikaru "...Do you feel like something’s missing?"
+    hikaru "{w=0.5}...Do you feel like something’s missing?"
 
     MC "Huh?"
 
     hikaru "I don’t know. I keep thinking there should be..."
 
-    hikaru "...four of us "
+    hikaru "{w=0.5}...four of us "
 
     MC "..."
 
-    n "You-I... don’t know what to say."
+    n "You-{w=0.1}I... {w}don’t know what to say."
 
     hikaru "...Forget it."
+
+    show shi normal at shakey:
+        xalign 0.44
 
     shiori "Ah, mou... Let's go eat before Hikaru's making odd theories again!"
 
     MC "Yeah, agreed."
+
+    scene black
+    show darken2
+    with fade
 
     n "The fourth voice still doesn’t come."
 
@@ -757,38 +1032,47 @@ label LI_intro_noyamato:
 
     n "..."
 
-    n "You wonder what venison tastes like, again."
+    n "{cps=10}You wonder what venison tastes like, again.{/cps}"
 
+    jump beforesecondloop
 
 label beforesecondloop:
 
+    scene white_bg
+    with out_182
+
+    show petals_dense
+    show petals_scatter
+
+    play music "noinomai.mp3"
+
     n "Time passes slowly when you're waiting."
 
-    n2 "Hungry, hungry, hungry."
+    n2 "{w=0.2}{glitch=1.1}Hungry, hungry, hungry.{/glitch}{w=0.3}"
 
-    n "You wake. You laugh. You sleep. You talk. {w=0.3}Repeat."
+    n "You wake. You laugh. You sleep. You talk.{w=0.3} Repeat."
 
     n "You do all the things that safe people do."
 
-    n "{cps=7}So you must be safe.{/cps}"
+    n "{i}So you must be safe.{/i}"
 
     n "But from what?"
 
     n "The village tries to be more bright and cheery, but there's always this heavy feeling in the air."
 
-    n "They greet you kindly, politely. A bit... rehearsed."
+    n "They greet you kindly, politely. A bit... rehearsed, so to speak."
 
     n "And slightly afraid."
 
     n "No one speaks about the mountain anymore."
 
-    n "Instead, they light incense more often, cose their doors faster..."
+    n "Instead, they light incense more often, close their doors faster..."
 
-    n "...and never once stare at you in the eye "
+    n "...and never once stare at you in the eye"
 
-    n "You never ask why."
+    n "{k=-1}You never ask why.{/k}"
 
-    n2 "No need."
+    n2 "{fast}No need.{/fast}"
 
     n "..."
 
@@ -796,23 +1080,23 @@ label beforesecondloop:
 
     n "They say it only turns red a few times a year."
 
-    n "{i}That’s when the Yamakui comes down.{/i}"
+    n "{i}{blur=1.0}That’s when the Yamakui comes down.{/blur}{/i}"
 
     n "All the villagers can do now is waiting, wondering... If you've truly killed the Yamakui."
 
-    n2 "You know the answer."
+    n2 "{w=0.2}You know the answer.{w=0.2}"
 
-    n "{cps=7}T-The Yamakui is dead.{/cps}"
+    n "{k=-1}T-The Yamakui is dead.{/k}"
 
     n "There was a scream, a pool of blood, and... and... the weight of flesh, giving under your hand."
 
     n "You... You remember stabbing...."
 
-    n "Me-You-We-It...?"
+    n "{blur=1.0}Me-You-We-It...?{/blur}"
 
-    n "Again. Again. Again."
+    n "{w=0.15}Again. Again. Again.{w=0.2}"
 
-    n2 "Again."
+    n2 "{fast}{glitch=1.1}Again.{/glitch}{/fast}"
 
     n "You made sure a thousand times..."
 
@@ -822,15 +1106,5 @@ label beforesecondloop:
 
     n "No one should{nw}"
 
-    n2 "{fast}No one should remember.{/fast}"
+    n2 "{fast}{glitch=1.1}No one should remember.{/glitch}{/fast}"
 
-    scene black
-
-
-    with fade
-
-    pause 0.5
-
-    ### jump to loop2 map system
-
-    return

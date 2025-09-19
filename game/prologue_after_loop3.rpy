@@ -332,7 +332,7 @@ label prologue_loop8:
 
     n2 "tHe sIlEnCe iS sCrEaMiNg iN mY EaRS."
 
-    n2 "I’M... {w}i’m gOnNa—"
+    n2 "I’M... {w}i’m gOnNa--"
 
     pause 1.0
 
@@ -352,7 +352,7 @@ label prologue_loop8:
 
     n2 "i’LL sToP."
 
-    n2 "i’LL sToP—i’LL sToP—"
+    n2 "i’LL sToP--i’LL sToP--"
 
     menu:
         "Repent?"

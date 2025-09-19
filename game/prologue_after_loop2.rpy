@@ -2,6 +2,16 @@ label prologue_loop2:
 
     ### this has the prologue after two peoples has been devoured
 
+    scene black with fade
+
+    MC "Haa... {w=0.4}Haa..."
+
+    scene black with fade
+    show flesh2 at scary_flicker
+
+    play music "sfx/monster breathing.wav"
+
+
     n2 "HhhAahhh... {w}hhHaaaAAhh."
 
     n2 "It stILL fitS. {w=0.3}moRE or lEsS."
