@@ -81,15 +81,20 @@ label start:
     if persistent.loop5:
         jump prologue_loop5
     if persistent.loop4:
+        $ current_loop = 4
         jump prologue_loop4
     if persistent.loop3:
+        $ current_loop = 3
         jump prologue_loop3
     if persistent.loop2:
+        $ current_loop = 2
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
         jump prologue_loop2
     if persistent.loop1:
+        $ current_loop = 1
         jump prologue_loop1
     else:
+        $ current_loop = 1
         jump prologue

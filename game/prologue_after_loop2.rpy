@@ -1,5 +1,4 @@
 label prologue_loop2:
-
     ### this has the prologue after two peoples has been devoured
 
     scene black with fade
