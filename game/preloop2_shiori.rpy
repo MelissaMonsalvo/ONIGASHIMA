@@ -447,7 +447,7 @@ label loop2_shiori_mandatory4:
 
     n2 "LOVE? You wanna love the crawl-thing?!"
 
-    n2 "Stroke the throat, kiss the chewing holes?!"
+    n2 "Stroke the claws, kiss the chewing teeth?!"
 
     n2 "Hold the GULLET while it feeds?!"
 

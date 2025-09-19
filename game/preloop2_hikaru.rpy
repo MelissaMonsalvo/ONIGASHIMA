@@ -91,7 +91,7 @@ label loop2_hikaru_mandatory1:
 
     n2 "*Smell* it... Hhahhh...."
 
-    n2 "So easy to chew--."
+    n2 "So easy to chew--"
 
     n "Please--"
 
@@ -203,7 +203,7 @@ label loop2_hikaru_mandatory2:
     MC "...I..."
 
     menu:
-        "Lie: Say you don’t know what this is":
+        "Say you don’t know":
             MC "...I’ve never seen these before."
 
             hikaru "..."

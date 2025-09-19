@@ -7,7 +7,7 @@ label prologue_loop2:
     scene black with fade
     show flesh2 at scary_flicker
 
-    play music "sfx/monster breathing.wav"
+    play music "sfx/monster breathing.mp3"
 
 
     n2 "HhhAahhh... {w}hhHaaaAAhh."
@@ -55,27 +55,6 @@ label prologue_loop2:
 
     n2 "So muCh hUNgEr."
 
-    ### laughing sfx
-
-    scene black
-
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SEVEN DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
-    $ renpy.pause(2.0)
-
-    return
-label loop3_arrival:
-
     play music "heavy footsteps.mp3"
     play muzak "sfx/forest night.wav"
 
@@ -96,23 +75,15 @@ label loop3_arrival:
         xalign 0.65
         ypos 0.2
 
-        linear 0.1 ypos 0.19 zoom 0.27
+        linear 0.1 ypos 0.3 zoom 0.2
     with vpunch
-    play sound "sfx/bucketdrop.wav"
+    play sound "sfx/aah.wav"
     $ renpy.pause(0.8)
 
     "Woman" "W-What is that?!"
 
-    show child:
-        xzoom -1
-        zoom 0.35
-        xalign 0.3
-        ypos 0.2
-
-        linear 0.1 ypos 0.19 zoom 0.27
-    with vpunch
-
-    "Child" "Kyaaaaaa!!"
+    hide woman
+    with hpunch
 
     ## people screaming and running
 

@@ -229,7 +229,7 @@ label village_entrance:
         xalign 0.65
         ypos 0.2
 
-        linear 0.1 ypos 0.19 zoom 0.27
+        linear 0.1 ypos 0.3 zoom 0.2
     with vpunch
     play sound "sfx/bucketdrop.wav"
     $ renpy.pause(0.8)

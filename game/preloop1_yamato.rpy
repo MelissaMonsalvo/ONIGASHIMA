@@ -291,16 +291,6 @@ label loop1_yamato_mandatory1:
 
     pause 0.3
 
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
     #return
 
 label loop1_yamato_mandatory2:
@@ -561,14 +551,6 @@ label loop1_yamato_mandatory2:
     scene black
 
     pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
 
     stop sound
 
@@ -875,16 +857,6 @@ label loop1_yamato_mandatory3:
 
     pause 0.3
 
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
     #return
 
 label loop1_yamato_mandatory4:
@@ -1005,20 +977,6 @@ label loop1_yamato_mandatory4:
     n "Watching."
 
     stop music
-
-    scene black
-
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
 
     #return
 
