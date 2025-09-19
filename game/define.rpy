@@ -2,6 +2,8 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+init:
+    define config.layers = [ 'background', 'master', 'transient', 'screens', 'overlay', 'custom_layer' ]
 
 define original_music_volume = None
 
@@ -25,7 +27,7 @@ default persistent.player_name = None
 
 define MC = Character("[persistent.player_name]", color="#d40000", window_left_padding=100, image="main")  # Player-named character
 define n = Character(None, what_color="#fffafa") ## mc sama narrator
-define n2 = Character(None, what_color="#FF0000") ## yamakui narrator
+define n2 = Character(None, what_color="#ff5277", what_font="LibreBaskerville-Regular.ttf", what_size=34) ## yamakui narrator
 
 define shiori = Character("Shiori", color="#c78b12")
 define yamato = Character("Yamato", color="#00d44a")

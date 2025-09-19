@@ -4,8 +4,6 @@ label prologue_loop2:
 
     scene black with fade
 
-    MC "Haa... {w=0.4}Haa..."
-
     scene black with fade
     show flesh2 at scary_flicker
 
@@ -20,10 +18,6 @@ label prologue_loop2:
 
     n2 "It'LL lASt fOR onE MoRE MeAT."
 
-    window hide
-    $ renpy.pause(1.5)
-    window show
-
     n2 "YoU waNteD a hErO? {w} LoOk... LoOk cLoSE."
 
     n "..."
@@ -36,24 +30,18 @@ label prologue_loop2:
 
     n2 "ThEy kEep cHeErInG, {w} cHeErInG fOr tHe pErSOn unDEr tHE sKiN."
 
-    play sound "sfx/heartbeat_distorted.ogg" loop
-    $ renpy.pause(0.4)
-
     n "...you..."
 
     MC "HhHHRaAAHaHhAH!"
 
     n2 "OnE MOre."
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/swallow.mp3"
     $ renpy.pause(0.3)
 
     n "s...stop..."
 
     n2 "NnNnnooOOO."
-
-    play sound "sfx/blood_pulse.ogg"
-    show screen blood_pulse_effect
 
     MC "oN tHe nExT rEd mOon..."
 
@@ -69,24 +57,29 @@ label prologue_loop2:
 
     ### laughing sfx
 
-    window show
-    centered "{color=#FF4444}{size=+5}SEVEN DAYS UNTIL THE NEXT RED MOON{/size}{/color}"
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SEVEN DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
 
     $ renpy.pause(2.0)
 
     return
 label loop3_arrival:
 
-    scene bg village_day with fade
-    play sound "sfx/flies_loop.ogg" loop
-    show screen heat_distortion
+    play music "heavy footsteps.mp3"
+    play muzak "sfx/forest night.wav"
 
     n2 "I cAmE dOwN tHe mOunTAiN... {w} jUsT lIkE bEfOrE."
-
-    play sound "sfx/squishstep1.ogg"
-    $ renpy.pause(0.2)
-    play sound "sfx/squishstep2.ogg"
-    $ renpy.pause(0.2)
 
     n2 "stEp. {w} dRip. {w} slOugh."
 
@@ -94,10 +87,30 @@ label loop3_arrival:
 
     n2 "tHe sKin wAs tOo rOTteD aNywAy~"
 
-    show villagers_scared at center
-    play sound "sfx/gasp.ogg"
+    scene village day with in_182:
+        zoom 0.5
 
-    "Villager" "W-What is that?!"
+    show woman:
+        xzoom -1
+        zoom 0.35
+        xalign 0.65
+        ypos 0.2
+
+        linear 0.1 ypos 0.19 zoom 0.27
+    with vpunch
+    play sound "sfx/bucketdrop.wav"
+    $ renpy.pause(0.8)
+
+    "Woman" "W-What is that?!"
+
+    show child:
+        xzoom -1
+        zoom 0.35
+        xalign 0.3
+        ypos 0.2
+
+        linear 0.1 ypos 0.19 zoom 0.27
+    with vpunch
 
     "Child" "Kyaaaaaa!!"
 
@@ -111,15 +124,13 @@ label loop3_arrival:
 
     n "..."
 
-    window hide
-    $ renpy.pause(2.5)
+    scene black
 
-    window show
+    show darken2
+    with fade
 
-    n2 "aND I sTiLL hAvE oNe mOre of YOuR FRieNdS tO eAt."
+    n2 "{sc=1}aND I sTiLL hAvE oNe mOre of YOuR FRieNdS tO eAt.{/sc}"
 
-    scene black with fade
-    $ renpy.pause(2.0)
 
 
     return

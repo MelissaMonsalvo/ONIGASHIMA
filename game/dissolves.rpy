@@ -162,8 +162,8 @@ define out_002 = ImageDissolve("/dissolvers/2.png", 1.5, reverse=True)
 define in_202 = ImageDissolve("/dissolvers/20.jpg", 1.5)
 define out_202 = ImageDissolve("/dissolvers/20.jpg", 1.5, reverse=True)
 ##########20.jpg
-define in_212 = ImageDissolve("/dissolvers/21.jpg", 0.6)
-define out_212 = ImageDissolve("/dissolvers/21.jpg", 1.5, reverse=True)
+define in_212 = ImageDissolve("/dissolvers/21.jpg", 0.3)
+define out_212 = ImageDissolve("/dissolvers/21.jpg", 0.3, reverse=True)
 ##########21.jpg
 define in_222 = ImageDissolve("/dissolvers/22.png", 1.5)
 define out_222 = ImageDissolve("/dissolvers/22.png", 1.5, reverse=True)

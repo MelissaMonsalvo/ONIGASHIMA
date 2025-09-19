@@ -432,6 +432,42 @@ style jojo_text:
     xalign 0.5
     yalign 0.5
 
+style jojo_bigtext:
+    font "NotoSerifJP-SemiBold.ttf"
+    color "#ff1100"
+    outlines [ (4, "#000", 0, 0) ]
+    size 90
+    xalign 0.5
+    yalign 0.5
+
+transform wriggle(delay=0.0, xpos=0.5, ypos=0.5):
+    xpos xpos
+    ypos ypos
+    yoffset 0
+    pause delay
+    block:
+        linear 0.14 yoffset -32
+        linear 0.14 yoffset 28
+        linear 0.14 yoffset -24
+        linear 0.14 yoffset 22
+        linear 0.14 yoffset 0
+        pause 0.01
+        repeat
+transform wriggle_zoomout(delay=0.0, xpos=0.5, ypos=0.5, stay=1.9):
+    xpos xpos
+    ypos ypos
+    zoom 1.0
+    alpha 1.0
+    pause delay
+    block:
+        linear 0.13 yoffset -30
+        linear 0.13 yoffset 30
+        linear 0.13 yoffset -22
+        linear 0.13 yoffset 19
+        linear 0.13 yoffset 0
+        pause 0.01
+        repeat 3
+    linear 1.0 zoom 1.7 alpha 0.0
 transform jojo_scatter1:
     xpos 0.14 ypos 0.22
     rotate 17
