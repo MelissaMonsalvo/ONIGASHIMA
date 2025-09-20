@@ -63,7 +63,7 @@ init:
         $ timeleft = 180
 
 init:
-    image haze_effect = "images/blur.png"  
+    image haze_effect = "images/blur.png"
 
     transform haze_transform:
         parallel:
@@ -99,7 +99,13 @@ screen drunk_haze():
         blur 4
 
 
-
+transform camera_tilt:
+    rotate 0
+    easein 0.1 rotate 5   # quick tilt right
+    easeout 0.15 rotate -4  # swing past center
+    easein 0.1 rotate 2   # wobble correction
+    easeout 0.15 rotate 0 # settle back to normal
+    
 ###### POSITIONS ######
 
 transform midleft:
@@ -219,7 +225,20 @@ screen horror_forced_menu_two(items):
 
 image frame = "images/frame.png"
 image matcha = "images/matcha.png"
+image wine = "images/wine.png"
 image charm = "images/charm.png"
+image charm2 = "images/charm2.png"
+
+image moon1 = "MOON/moon1.jpg"
+image moon2 = "MOON/moon2.jpg"
+image moon3 = "MOON/moon3.jpg"
+image moon4 = "MOON/moon4.jpg"
+image moon5 = "MOON/moon5.jpg"
+image moon6 = "MOON/moon6.jpg"
+image moon7 = "MOON/moon7.jpg"
+
+transform red_moon:
+    matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
 
 image red_flash_slow:
     Solid("#C00000")

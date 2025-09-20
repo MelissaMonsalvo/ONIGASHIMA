@@ -37,6 +37,11 @@ image flesh = "BG/Flesh.png"
 image flesh2 = "BG/Flesh2.png"
 image darken = "BG/darken.png"
 image darken2 = "BG/darken2.png"
+image blood = "BG/blood.png"
+
+image terumc = "images/terumc.webp"
+image terumc_left = "images/terumc_left.png"
+image terumc_right = "images/terumc_right.png"
 
 image shrine2 = "BG/Shrine2.jpg"
 

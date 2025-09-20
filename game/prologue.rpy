@@ -18,7 +18,6 @@ label prologue:
     $ loop1_hikaru_mandatory4 = True
     $ loop1_hikaru_mandatory5 = True
 
-
     ### this has the prologue before
 
     ### azure is testing fer stuff lel

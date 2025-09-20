@@ -1,10 +1,12 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_hikaru_1:
 
-label hikaru_ghost_loveloop_unhinged:
-
 
     ##show hikaru's ghost zoooming very very slowly and distorts (use xzoom or yzoom for distortion)
+    #show ghost_hikaru_idle at show_1
+    #show ghost_hikaru_idle at Glitch(_fps=12., color_range1="c00a", color_range2="f00", glitch_strength=.5)
+    #show ghost_hikaru_idle at show_1
+    show ghost_hikaru_idle at c_show_3
 
     n "Huh? What is--"
 
@@ -22,9 +24,11 @@ label hikaru_ghost_loveloop_unhinged:
 
     hikaru "I love you."
 
+    show ghost_hikaru_idle at c_show_5
+
     n "..."
 
-    mc "What?"
+    MC "What?"
 
     hikaru "{cps=12}I lOvE yOu.{/cps}"
 
@@ -36,15 +40,19 @@ label hikaru_ghost_loveloop_unhinged:
 
     MC "Get away, you--"
 
+    show ghost_hikaru_idle at c_show_6
+
     hikaru "{cps=5}{size=+8}I lOvE yOu—{/size}{/cps}"
 
-    hikaru "{fast}{color=#111}I LOVE YOU I LOVE YOU ILOVEYOUILOVEYOUILOVE—{/color}{/fast}"
+    hikaru "{cps=16}{color=#111}I LOVE YOU I LOVE YOU ILOVEYOUILOVEYOUILOVE—{/color}{/cps}"
 
-    mc "Stop it."
+    MC "Stop it."
 
     hikaru "eVeRy DaY wIThOuT yOu FeLt LiKe—"
 
     hikaru "{size=+10}{cps=4}—hELL—{/cps}{/size}"
+
+    show ghost_hikaru_idle at c_show_2
 
     hikaru "{color=#111}So sTAY{/color}"
 
@@ -55,6 +63,7 @@ label hikaru_ghost_loveloop_unhinged:
     hikaru "{size=+12}{cps=2}I’M ALREADY INSIDE{/cps}{/size}"
 
     ## hikaru's ghost is at maximum zooming
+    show ghost_hikaru_idle at c_show_4
 
     $ renpy.pause(1.5)
 
@@ -80,26 +89,31 @@ label ghost_hikaru_2:
     n "Empty. {w}Still. {w}No windows open."
 
     # show hikaru's ghost at far corner
+    show ghost_hikaru_idle at c_show_7
+
     $ renpy.pause(1.0)
 
     n "..."
 
     n "Wait. {w}Was something—"
 
-    hide hikaru ghost
+    #hide hikaru ghost
+    hide ghost_hikaru_idle
+
     $ renpy.pause(0.2)
 
     # show hikaru's ghost moving fast across the screen
-    $ renpy.pause(1.2)
+    show ghost_hikaru_idle at c_show_8
 
     n "No. That’s nothing."
 
     n "You blink."
 
     hide hikaru ghost
+
     $ renpy.pause(0.2)
 
-    # show hikatu's ghost blinking at the back fast
+    # show hikaru's ghost blinking at the back fast
     $ renpy.pause(1.5)
 
     n "You swear something’s changed."
@@ -112,11 +126,14 @@ label ghost_hikaru_2:
     $ renpy.pause(0.2)
 
     # Jumpscare position (sudden front face)
+    show ghost_hikaru_idle at c_show_9 with vpunch
+
     ## screen shakes
 
-    $ renpy.pause(0.5)
+    #$ renpy.pause(0.5)
 
     ## dissapears
+
     stop music fadeout 2.0
 
     n "..."
@@ -143,10 +160,12 @@ label ghost_hikaru_3:
     n "There are hands around your throat."
 
     ## show hikaru's ghost above you (top down view)
+    show ghost_hikaru_idle at c_show_10
 
     hikaru "...Sshh. Don’t wake up yet."
 
     ## screen shakes as MC struggles
+    show ghost_hikaru_idle with vpunch
 
     n "You try to speak, lift your arms but can't--"
 
@@ -156,6 +175,31 @@ label ghost_hikaru_3:
 
     ## Fake choices appear but can't be picked : "Pull their hands away" "Kick them"
     ## giving the sense of helplessness
+    menu:
+        MC "What should i do?"
+
+        "Pull their hands away" :
+            "Nothing happend."
+            menu:
+                MC "What should i do?"
+                "Pull their hands away" :
+                    "Nothing happend."
+                    jump ghost_hikaru_3_next
+                "Kick them":
+                    "Nothing happend."
+                    jump ghost_hikaru_3_next
+        "Kick them":
+            "Nothing happend."
+            menu:
+                MC "What should i do?"
+                "Pull their hands away" :
+                    "Nothing happend."
+                    jump ghost_hikaru_3_next
+                "Kick them":
+                    "Nothing happend."
+                    jump ghost_hikaru_3_next
+
+    label ghost_hikaru_3_next:
 
     MC "I-I can't do anything!!!!"
 
@@ -166,6 +210,7 @@ label ghost_hikaru_3:
     $ renpy.pause(1.5)
 
     ## gone again
+    show ghost_hikaru_idle at c_show_11
 
     MC "Hahhh--!"
 
@@ -179,7 +224,6 @@ label ghost_hikaru_3:
 
 label ghost_hikaru_4:
 
-
     n "You’re dreaming again..."
 
     n "It's that person again. You called them Hikaru."
@@ -190,7 +234,7 @@ label ghost_hikaru_4:
 
     hikaru "I was waiting. You said you'd be back."
 
-    mc "I am back."
+    MC "I am back."
 
     hikaru "...No."
 
@@ -200,7 +244,7 @@ label ghost_hikaru_4:
 
     hikaru "{cps=12}Why are you wearing their face?{/cps}"
 
-    mc "What?"
+    MC "What?"
 
     hikaru "{cps=10}Who are you?{/cps}"
 

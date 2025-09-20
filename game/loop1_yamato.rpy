@@ -4,15 +4,35 @@ label loop1_yamato:
 
     ## STILL IN DAY 5, HAPPENS AT THE END OF DAY 5
 
+    scene forest night:
+        zoom 0.5
+
+    show yam normal:
+        zoom 0.3
+        xalign 0.4
+        yalign 0
+        yoffset 50
+        xzoom 1.0
+        yzoom 1.0
+
+        parallel:
+            linear 1.1 xoffset 6
+            linear 1.2 xoffset -6
+            linear 1.1 xoffset 0
+            repeat
+
+    play music "Night.mp3"
+
+
     n "You find him at the forest again, alone."
 
     n "The sun's almost gone, with a blood-colored light sinking into the current."
 
-    n "Yamato's hunched, a half-empty bottle of sake in his right arm. Eyes liddled, gaze unfocused."
+    n "Yamato's hunched, a half-empty bottle of sake in his right arm. Eyes liddled, gaze unfocused, and a bit woozy."
 
     MC "...Drinking alone?"
 
-    yamato "Didn't ask for a damn audience."
+    yamato "{cps=14}Didn't ask for a damn audience.{/cps}"
 
     MC "Guess you got one anyway."
 
@@ -22,48 +42,47 @@ label loop1_yamato:
 
     n "But then his eyes meet yours, and he puts the bottle down again."
 
-    yamato "This thing's {w=0.2}*hic* {w=0.1}got more memory than I do."
+    yamato "This thing's{w=0.2} *hic* {w=0.1}got more memory than I do."
 
     MC "You're drunk."
 
-    Yamato "No shit."
+    yamato "{w=0.2}No shit.{/w}"
 
     n "He pulls back his sleeve, and you see a long gash on his arm. The scars look old but it's pulsing."
 
-    yamato "This thing still goddamn burns. You remember how I got it?"
+    yamato "This thing still goddamn burns. {w=0.2}You remember how I got it?"
 
     menu:
         "Did I give it to you?":
             MC "Did I give it to you during sparring?"
-            yamato "Ya? Hah, nah."
+            yamato "Ya? {w=0.15}Hah, nah."
         "Did you get bitten by a wolf during patrol?":
             MC "Did you get bitten by a wolf during patrol?"
-            yamato "What'cha mean? All the wolves around here got eaten by the damn Yamakui."
+            yamato "{cps=13}What'cha mean? All the wolves around here got eaten by the damn Yamakui.{/cps}"
 
-
-    yamato "Can't believe you forgot...."
+    yamato "{w=0.2}Can't believe you forgot....{/w}"
 
     MC "...Yamato--"
 
-    yamato "Tch... We were, what, eleven?"
+    yamato "Tch... {w=0.1}We were, what, eleven?"
 
-    yamato "Said we'd climb the mountain together. Remember that?"
+    yamato "{cps=13}Said we'd climb the mountain together. Remember that?{/cps}"
 
-    yamato "Kill the Yamakui. Be heroes 'n shit."
+    yamato "{w=0.2}Kill the Yamakui. Be heroes 'n shit."
 
     n "Yamato no longer sounds bitter, it seems like he is merely... tired. Or maybe sad? Disappointed?"
 
     yamato "Got as far as the first cliff. I slipped and arm caught a rock."
 
-    yamato "Split clean open, blood everywhere. Thought my fightin' days are done for."
+    yamato "Split clean open, blood everywhere. {w=0.2}Thought my fightin' days are done for."
 
     MC "..."
 
     yamato "You screamed like hell broke loose. Said I was gonna die or somethin'."
 
-    n "Ohh right, you DID scream."
+    n "Ohh right, you {b}DID{/b} scream."
 
-    yamato "You were the one who dragged me all the way back. I woke up t' yer dumb snot in my face."
+    yamato "{cps=12}You were the one who dragged me all the way back. I woke up t' yer dumb snot in my face.{/cps}"
 
     MC "..."
 
@@ -79,11 +98,11 @@ label loop1_yamato:
 
     n "He drops the sake bottle beside him."
 
-    yamato "Yeah. Long enough for ya t' forget."
+    yamato "{w=0.1}Yeah. Long enough for ya t' forget."
 
-    yamato "Long enough for ya... {w=0.1}t' go climb it y'self. Guess I don't matter anymore "
+    yamato "{cps=12}Long enough for ya...{w=0.1} t' go climb it y'self. Guess I don't matter anymore{/cps}"
 
-    yamato "Then, bam, suddenly came back with that damn armor "
+    yamato "{w=0.1}Then, {w=0.1}bam, suddenly came back with that damn armor "
 
     MC "I just-I didn't want anyone else getting hurt."
 
@@ -91,17 +110,17 @@ label loop1_yamato:
 
     MC "...I didn't mean to--"
 
-    yamato "Shut it."
+    yamato "{w=0.15}Shut it."
 
-    yamato "Ain't about what ya meant."
+    yamato "{cps=14}Ain't about what ya meant.{/cps}"
 
     yamato "Ya talk like yer some lone wolf hero from the damn stories."
 
-    yamato "But ya don't even remember who the hell ya were fightin' for."
+    yamato "{w=0.1}But ya don't even remember who the hell ya were fightin' for."
 
     yamato "Tch."
 
-    Yamato "Now everything's weird since ya came back."
+    yamato "{cps=13}Now everything's weird since ya came back.{/cps}"
 
     yamato "Feels like I'm gonna open my mouth and someone else's voice is gonna crawl out."
 
