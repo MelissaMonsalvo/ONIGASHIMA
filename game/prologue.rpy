@@ -18,7 +18,6 @@ label prologue:
     $ loop1_hikaru_mandatory4 = True
     $ loop1_hikaru_mandatory5 = True
 
-    jump map
 
     ### this has the prologue before
 

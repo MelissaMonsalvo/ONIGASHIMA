@@ -966,6 +966,8 @@ screen preferences():
 
         if opconfig == 1:
             use config_general2()
+        elif opconfig == 3:
+            use config_dialogue() 
 
     use confirm_config()
             
@@ -1242,152 +1244,54 @@ screen config_general2():
                         sensitive not _preferences.transitions  # Solo activa si las transiciones están deshabilitadas
 
  
-                
+default cell_hight_4 = 100               
+default cell_hight_3 = cell_hight_4 * 4
+
+
+
+screen config_dialogue():
+    style_prefix "estilo"
+    hbox:
+        xsize 1060
+        yoffset 30
+        #xoffset 250
+        vbox:
+            spacing 10
+            xsize 500
+            ysize cell_hight_3
+            label _("Dialogue Speed") yalign 0.1 text_style "estilo_label"
+            label _("Dialogue Size") yalign 0.1 text_style "estilo_label"
+            label _("Auto-Delay Time") yalign 0.1 text_style "estilo_label"
+            label _("Typeface") yalign 0.1 text_style "estilo_label"
+        #null width 50
+
+        vbox:
+            ysize cell_hight_3
+            spacing 10
+            ################################################################################
+            hbox:
+                ysize cell_hight_4
+                frame:
+                    background None
+                    xsize 100
+                    #text "[preferences.text_cps]"
+                    $ prefs = preferences.text_cps  # valor de 0 a 200
+                    $ display_value = int(prefs / 200.0 * 100)
+                    text "[display_value]"
+                frame:
+                    background None
+                    xsize 524
+                    bar value Preference("text speed"):
+                        range 200
+                        left_bar "gui/game menu/left.png"  
+                        right_bar "gui/game menu/right.png"  
+                        ysize 68
+                        thumb None
 
 
 
 
 
-
-
-screen config_general():
-    grid 4 4 spacing 10:
-        #xsize 860
-        #xpos 670
-        #ypos 332
-        #yalign 0.5
-        yoffset 150
-
-        # Renglon 1    ################################
-        # Columna 1 - Etiqueta
-        label _("Display")
-        
-        # Columna 2 - Flecha Izqu
-        imagebutton:
-            idle "gui/settings/btn_left_arrow_idle.png"  
-            hover "gui/settings/btn_left_arrow_hover.png"  
-            xalign 1.0
-            action [SetVariable("pref1","window"),Preference("display", "window")]
-            sensitive (pref1 != "window" )
-            
-        
-        # Columna 3 - Texto
-        if pref1 == "window":
-            text _("Window"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-        else: 
-            text _("Fullscreen"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-
-        # Columna 4 - Flecha derecha    
-        imagebutton:
-            idle "gui/settings/btn_right_arrow_idle.png"  
-            hover "gui/settings/btn_right_arrow_hover.png"  
-            xalign 0.0
-            action [SetVariable("pref1","fullscreen"),Preference("display", "fullscreen")]
-            sensitive (pref1 != "fullscreen" ) 
-
-        # Renglon 2    ################################
-        # Columna 1 - Etiqueta
-        label _("Skeep: Unseen Text")
-        
-        #Columna 2 - Flecha Izqu
-        imagebutton:
-            idle "gui/settings/btn_left_arrow_idle.png"  
-            hover "gui/settings/btn_left_arrow_hover.png" 
-            xalign 1.0 
-            action Preference("skip", "toggle")
-            sensitive _preferences.skip_unseen  # Solo activa si Skip All está activado
-        
-        # Columna 3 - Texto
-        if _preferences.skip_unseen:
-            text _("On"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-        else:
-            text _("Off"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-
-        # Columna 4 - Flecha derecha    
-        imagebutton:
-            idle "gui/settings/btn_right_arrow_idle.png"  
-            hover "gui/settings/btn_right_arrow_hover.png" 
-            xalign 0.0
-            action Preference("skip", "toggle")
-            sensitive not _preferences.skip_unseen  # Solo activa si Skip All está desactivado
-        
-        # Renglon 3    ################################
-        # Columna 1 - Etiqueta
-        label _("Skeep: After Choices")
-        
-        #Columna 2 - Flecha Izqu
-        # Flecha izquierda (para desactivar - After Choices)
-        imagebutton:
-            idle "gui/settings/btn_left_arrow_idle.png"  
-            hover "gui/settings/btn_left_arrow_hover.png"
-            xalign 1.0  
-            action Preference("after choices", "toggle")
-            sensitive _preferences.skip_after_choices  # Solo activa si Skip está activado
-        
-        # Columna 3 - Texto
-        if _preferences.skip_after_choices:
-            text _("On"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-        else:
-            text _("Off"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-
-        # Flecha derecha (para activar - Skip)
-        imagebutton:
-            idle "gui/settings/btn_right_arrow_idle.png"  
-            hover "gui/settings/btn_right_arrow_hover.png" 
-            xalign 0.0 
-            action Preference("after choices", "toggle")
-            sensitive not _preferences.skip_after_choices  # Solo activa si Skip está desactivado
-    
-        # Renglon 4    ################################
-        # Columna 1 - Etiqueta
-        label _("Skeep: Transitions")
-        
-        #Columna 2 - Flecha Izqu
-        # Flecha izquierda (para desactivar - After Choices)
-        # Flecha izquierda (para desactivar)
-        imagebutton:
-            idle "gui/settings/btn_left_arrow_idle.png"  
-            hover "gui/settings/btn_left_arrow_hover.png"  
-            xalign 1.0 
-            action Preference("transitions", "toggle")
-            sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
-        
-        # Columna 3 - Texto
-        if _preferences.transitions:
-            text _("On"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-        else:
-            text _("Off"):  
-                size 24
-                xalign 0.5
-                yalign 0.5
-
-        # Flecha derecha (para activar - Skip)
-        imagebutton:
-            idle "gui/settings/btn_right_arrow_idle.png"  
-            hover "gui/settings/btn_right_arrow_hover.png"  
-            action Preference("transitions", "toggle")
-            sensitive not _preferences.transitions  # Solo activa si las transiciones están deshabilitadas
 
 
 # screen preferences():
