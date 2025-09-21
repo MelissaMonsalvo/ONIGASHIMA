@@ -1,3 +1,31 @@
+init python:
+    import random
+    import time
+
+    BASE_X = 960
+    BASE_Y = 540
+    JITTER_RANGE = 42
+    JITTER_INTERVAL = 0.07
+
+    mouse_jittering = False
+
+    def start_mouse_jitter():
+        global mouse_jittering
+        mouse_jittering = True
+        renpy.invoke_in_thread(jitter_mouse)
+
+    def stop_mouse_jitter():
+        global mouse_jittering
+        mouse_jittering = False
+
+    def jitter_mouse():
+        while mouse_jittering:
+            dx = random.randint(-JITTER_RANGE, JITTER_RANGE)
+            dy = random.randint(-JITTER_RANGE, JITTER_RANGE)
+            renpy.set_mouse_pos(BASE_X + dx, BASE_Y + dy)
+            time.sleep(JITTER_INTERVAL)
+
+
 
 
 init:
@@ -174,6 +202,130 @@ screen horror_forced_menu(items):
                         add "mask_bottom" xpos 0 ypos 0 at mask_bottom_anim
 
                     text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
+
+transform horror_jitter:
+    # Use renpy.random.randint for ATL expressions!
+    linear 0.05 xoffset renpy.random.randint(-22, 22) yoffset renpy.random.randint(-16, 16)
+    linear 0.05 xoffset renpy.random.randint(-10, 10) yoffset renpy.random.randint(-7, 7)
+    linear 0.05 xoffset renpy.random.randint(-18, 18) yoffset renpy.random.randint(-11, 11)
+    linear 0.05 xoffset renpy.random.randint(-6, 6) yoffset renpy.random.randint(-6, 6)
+    repeat
+
+transform menu_blur_dark:
+    blur 8     # change blur strength here; try 12 for heavier blur
+    alpha 0.7  # 0.7 = very dark, 0.5 = more transparent
+
+screen horror_forced_menu_shaking(items):
+
+    # Dark blurry overlay behind menu
+    add Solid("#0008") xysize (1920, 1080) at menu_blur_dark
+
+    vbox:
+        spacing 40
+        xalign 0.5
+        yalign 0.5
+
+        for idx, (caption, action, chosen) in enumerate(items):
+
+            button:
+                action action
+                xalign 0.5
+                xsize 1301
+                ysize 426
+                background None
+                at horror_jitter    # <<<<<<<<<<<< jitter the button!
+                hovered SetVariable("hovered_choice", idx)
+                unhovered SetVariable("hovered_choice", -1)
+
+                fixed:
+                    xysize (1301, 426)
+                    # Your animation code as before...
+                    # (unchanged)
+                    if idx == 0:
+                        add (
+                            "top_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "top_half_idle_r1" if current_route == "route1" else
+                            "top_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "top_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_top_anim
+                    else:
+                        add (
+                            "bottom_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "bottom_half_idle_r1" if current_route == "route1" else
+                            "bottom_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "bottom_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_bottom_anim
+
+                    if idx == 0:
+                        add "mask_top" xpos 0 ypos 0 at mask_top_anim
+                    else:
+                        add "mask_bottom" xpos 0 ypos 0 at mask_bottom_anim
+
+                    text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
+
+screen horror_forced_menu_jitter(items):
+    on "show" action Function(start_mouse_jitter)
+    on "hide" action Function(stop_mouse_jitter)
+
+    vbox:
+        spacing 40
+        xalign 0.5
+        yalign 0.5
+
+        for idx, (caption, action, chosen) in enumerate(items):
+
+            button:
+                action action
+                xalign 0.5
+                xsize 1301
+                ysize 426
+                background None
+
+                hovered SetVariable("hovered_choice", idx)
+                unhovered SetVariable("hovered_choice", -1)
+
+                fixed:
+                    xysize (1301, 426)
+
+                    # Your animation code as before:
+                    if idx == 0:
+                        add (
+                            "top_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "top_half_idle_r1" if current_route == "route1" else
+                            "top_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "top_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_top_anim
+                    else:
+                        add (
+                            "bottom_half_hover_r1" if current_route == "route1" and hovered_choice == idx else
+                            "bottom_half_idle_r1" if current_route == "route1" else
+                            "bottom_half_hover_r2" if current_route == "route2" and hovered_choice == idx else
+                            "bottom_half_idle_r2"
+                        ) xpos 0 ypos 0 at button_bottom_anim
+
+                    if idx == 0:
+                        add "mask_top" xpos 0 ypos 0 at mask_top_anim
+                    else:
+                        add "mask_bottom" xpos 0 ypos 0 at mask_bottom_anim
+
+                    text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
+
+screen black_flicker:
+    zorder 1000
+    add Solid("#000") at horror_flicker
+
+transform horror_flicker:
+    alpha 0.0
+    linear 0.05 alpha 1.0
+    linear 0.05 alpha 0.0
+    linear 0.05 alpha 1.0
+    linear 0.05 alpha 0.0
+    linear 0.05 alpha 1.0
+    linear 0.05 alpha 0.0
+    linear 0.05 alpha 1.0
+    linear 0.05 alpha 0.0
+    alpha 0.0
+
 
 screen horror_forced_menu_two(items):
     timer 0.1 repeat True action MouseMove(960, 880)

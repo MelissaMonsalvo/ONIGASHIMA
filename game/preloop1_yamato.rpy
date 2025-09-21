@@ -342,6 +342,8 @@ label loop1_yamato_mandatory2:
 
     yamato "'Cause people's lives depend on it."
 
+    $ _prev_music_volume = _preferences.volumes["music"]
+
     $ decrease_music_volume(0.5)
     $ renpy.block_rollback()
 

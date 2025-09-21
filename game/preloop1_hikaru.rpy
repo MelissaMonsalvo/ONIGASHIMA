@@ -105,6 +105,7 @@ label loop1_hikaru_mandatory1:
         linear 0.4 zoom 0.4 yoffset 20
 
 
+    $ _prev_music_volume = _preferences.volumes["music"]
     $ decrease_music_volume(0.3)
     $ renpy.block_rollback()
 

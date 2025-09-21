@@ -1,9 +1,9 @@
 ﻿init python:
     style.choice_text = Style(style.default)
-    style.choice_text.size = 70         # Make bigger (try 70-90 for very big)
+    style.choice_text.size = 70
     style.choice_text.bold = True
-    style.choice_text.color = "#232323" # Set color (change as needed)
-    style.choice_text.outlines = [(2, "#fff", 0, 0)] # White outline, optional
+    style.choice_text.color = "#232323" # Set color
+    style.choice_text.outlines = [(2, "#fff", 0, 0)] # White outline
     style.choice_text.xalign = 0.5
     style.choice_text.yalign = 0.9
     style.choice_text.ypadding = 100
@@ -13,7 +13,6 @@ init python:
         if hasattr(store, "original_music_volume") and store.original_music_volume is not None:
             _preferences.volumes["music"] = store.original_music_volume
             store.original_music_volume = None
-        # Repeat for SFX, voice if needed
 
 
 ################################################################################
@@ -1111,9 +1110,9 @@ screen config_general2():
             xsize 500
             ysize cell_hight_2
             label _("Display") yalign 0.1 text_style "estilo_label"
-            label _("Skeep: Unseen text") yalign 0.1 text_style "estilo_label"
-            label _("Skeep: After choices") yalign 0.1 text_style "estilo_label"
-            label _("Skeep: Transitions") yalign 0.1 text_style "estilo_label"
+            label _("Skip: Unseen text") yalign 0.1 text_style "estilo_label"
+            label _("Skip: After choices") yalign 0.1 text_style "estilo_label"
+            label _("Skip: Transitions") yalign 0.1 text_style "estilo_label"
         null width 50
 
         vbox:
@@ -1302,7 +1301,7 @@ screen config_general():
 
         # Renglon 2    ################################
         # Columna 1 - Etiqueta
-        label _("Skeep: Unseen Text")
+        label _("Skip: Unseen Text")
 
         #Columna 2 - Flecha Izqu
         imagebutton:
@@ -1334,7 +1333,7 @@ screen config_general():
 
         # Renglon 3    ################################
         # Columna 1 - Etiqueta
-        label _("Skeep: After Choices")
+        label _("Skip: After Choices")
 
         #Columna 2 - Flecha Izqu
         # Flecha izquierda (para desactivar - After Choices)
@@ -1367,7 +1366,7 @@ screen config_general():
 
         # Renglon 4    ################################
         # Columna 1 - Etiqueta
-        label _("Skeep: Transitions")
+        label _("Skip: Transitions")
 
         #Columna 2 - Flecha Izqu
         # Flecha izquierda (para desactivar - After Choices)

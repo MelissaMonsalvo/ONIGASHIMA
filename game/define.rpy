@@ -39,6 +39,8 @@ image darken = "BG/darken.png"
 image darken2 = "BG/darken2.png"
 image blood = "BG/blood.png"
 
+image gore = "images/gore.png"
+
 image terumc = "images/terumc.webp"
 image terumc_left = "images/terumc_left.png"
 image terumc_right = "images/terumc_right.png"
