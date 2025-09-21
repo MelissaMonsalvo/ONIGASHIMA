@@ -339,7 +339,7 @@ label loop1_hikaru:
     play music "Hikaru.mp3"
 
     n "When you arrive, you see hundreds of paper effigies hung on the trees. They're perfectly aligned, all but one."
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -355,7 +355,7 @@ label loop1_hikaru:
     n "The one with your name on it is crooked, its head is dangling where the feet should be."
 
 
-    hide frame
+    hide frame2
     hide terumc
     show hik normal:
         zoom 0.4
@@ -374,7 +374,7 @@ label loop1_hikaru:
 
     hikaru "But it's so... stubborn."
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -397,7 +397,7 @@ label loop1_hikaru:
 
     n "Hikaru tries to shift it, but fails again."
 
-    hide frame
+    hide frame2
     hide terumc
 
     hikaru "Do you think... {w=0.2}It's a sign?"
@@ -459,7 +459,7 @@ label loop1_hikaru:
 
     n "They stare at the effigy once more before finally walking away."
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -490,7 +490,7 @@ label loop1_hikaru:
 
     play sound "sfx/riip.mp3"
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5

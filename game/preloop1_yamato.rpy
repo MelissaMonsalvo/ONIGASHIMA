@@ -59,7 +59,11 @@ label loop1_yamato_mandatory1:
 
     play sound "swing.wav"
 
+    scene black
+
     show slash_arc
+    scene dojo day:
+        zoom 0.5
     show yam normal:
         zoom 0.3
         xalign 0.4
@@ -68,19 +72,14 @@ label loop1_yamato_mandatory1:
         xzoom 1
         yzoom 1.0
 
-        # Crouch slightly (anticipation)
         linear 0.08 yoffset 18
 
-        # Jump back (zoom out, arc upward, adjust xoffset to stay centered)
         linear 0.14 zoom 0.25 yoffset -38 xoffset 144
 
-        # Hang in air briefly
         pause 0.10
 
-        # Land softly, back at ground level, stay zoomed out, maintain adjusted xoffset
         linear 0.12 yoffset 0
 
-        # Optional: subtle bounce settle
         linear 0.07 yoffset 8
         linear 0.09 yoffset 0
     with vpunch
@@ -750,7 +749,7 @@ label loop1_yamato_mandatory3:
 
     yamato "...I think... {w}{i}I dunno what to think.{/i}"
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5

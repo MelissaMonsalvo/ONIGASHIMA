@@ -539,7 +539,7 @@ label loop1_hikaru_mandatory3:
 
     MC "What is it?"
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -565,7 +565,7 @@ label loop1_hikaru_mandatory3:
     n "Still, you smell something faintly burning, it's coming from the talisman."
 
     hide show red_flash_slow
-    hide frame
+    hide frame2
     hide charm
     with dissolve
 
@@ -670,7 +670,7 @@ label loop1_hikaru_mandatory3:
 
     play sound "sfx/firecrackle.mp3"
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -692,7 +692,7 @@ label loop1_hikaru_mandatory3:
 
     n "You drop it, then you--"
 
-    hide frame
+    hide frame2
     hide charm
 
     play sound "sfx/stomp.mp3"
@@ -1046,7 +1046,7 @@ label hikaru_armor:
 
 label hikaru_teareject:
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -1110,7 +1110,7 @@ label hikaru_teareject:
 
 label hikaru_teadrink:
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -1129,7 +1129,7 @@ label hikaru_teadrink:
 
     n "Of course nothing happens."
 
-    hide frame
+    hide frame2
     hide matcha
     with dissolve
 

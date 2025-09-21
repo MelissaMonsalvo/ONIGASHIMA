@@ -1,4 +1,4 @@
-init python:
+﻿init python:
     style.choice_text = Style(style.default)
     style.choice_text.size = 70         # Make bigger (try 70-90 for very big)
     style.choice_text.bold = True
@@ -14,6 +14,7 @@ init python:
             _preferences.volumes["music"] = store.original_music_volume
             store.original_music_volume = None
         # Repeat for SFX, voice if needed
+
 
 ################################################################################
 ## Initialization
@@ -123,8 +124,8 @@ screen say(who, what):
                 id "namebox"
                 style "namebox"
                 text who id "who"
-        #!
-        text what id "what" size persistent.dialogue_size
+
+        text what id "what"
 
 
     ## If there's a side image, display it above the text. Do not display on
@@ -439,7 +440,7 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-screen navigation(): 
+screen navigation():
     vbox:
         style_prefix "navigation"
 
@@ -504,9 +505,8 @@ style navigation_button_text:
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
+    on "show" action Function(restore_all_volumes) ### DO NOT DELETE
     tag menu
-
-    on "show" action Function(restore_all_volumes)
 
     add gui.main_menu_background
 
@@ -914,7 +914,7 @@ screen preferences():
     text "SETTINGS":
         font "NotoSerifJP-VariableFont_wght.ttf"
         size 80
-        color "#ffffff" 
+        color "#ffffff"
         xpos 55
         ypos 30
 
@@ -933,20 +933,20 @@ screen preferences():
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"  
-                        hover "gui/game menu/btn_nav_hover_background.png"  
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png" 
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png" 
+                        idle "gui/game menu/btn_nav_idle_background.png"
+                        hover "gui/game menu/btn_nav_hover_background.png"
+                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
+                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
                         action SetVariable("opconfig",1)
                     text "General" xpos 125 yalign 0.5 #ypos 25
                 fixed:
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"  
-                        hover "gui/game menu/btn_nav_hover_background.png" 
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png" 
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"  
+                        idle "gui/game menu/btn_nav_idle_background.png"
+                        hover "gui/game menu/btn_nav_hover_background.png"
+                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
+                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
                         action SetVariable("opconfig",2)
                     text "Audio" xpos 125 yalign 0.5
 
@@ -954,10 +954,10 @@ screen preferences():
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"  
-                        hover "gui/game menu/btn_nav_hover_background.png" 
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png" 
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"  
+                        idle "gui/game menu/btn_nav_idle_background.png"
+                        hover "gui/game menu/btn_nav_hover_background.png"
+                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
+                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
                         action SetVariable("opconfig",3)
                     text "Dialogue" xpos 125 yalign 0.5
 
@@ -965,24 +965,19 @@ screen preferences():
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"  
+                        idle "gui/game menu/btn_nav_idle_background.png"
                         hover "gui/game menu/btn_nav_hover_background.png"
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png" 
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"   
+                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
+                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
                         action SetVariable("opconfig",4)
                     text "Accessibility/\nControls" xpos 125 yalign 0.5
         null width 500
 
         if opconfig == 1:
             use config_general2()
-        elif opconfig == 2:
-            use config_audio()
-        elif opconfig == 3:
-            use config_dialogue() 
-        
 
     use confirm_config()
-            
+
             # #Audio
             # null height (4 * gui.pref_spacing)
 
@@ -1056,8 +1051,8 @@ screen confirm_config():
                 ysize 60
                 yoffset 10
                 background None
-                imagebutton: 
-                    idle "gui/game menu/btn_idle_background.png"  
+                imagebutton:
+                    idle "gui/game menu/btn_idle_background.png"
                     hover "gui/game menu/btn_hover_background.png"
                     xalign 0.5
                     if main_menu:
@@ -1071,8 +1066,8 @@ screen confirm_config():
                 ysize 60
                 yoffset 10
                 background None
-                imagebutton: 
-                    idle "gui/game menu/btn_idle_background.png"  
+                imagebutton:
+                    idle "gui/game menu/btn_idle_background.png"
                     hover "gui/game menu/btn_hover_background.png"
                     xalign 0.5
                     if main_menu:
@@ -1080,8 +1075,8 @@ screen confirm_config():
                     else:
                         action Hide("preferences")
                 text "BACK" xalign 0.3 yalign 0.5 size 30
-            
-            
+
+
 
 
 
@@ -1101,7 +1096,7 @@ style estilo_text:
 
 style estilo_label:
     font "NotoSerifJP-VariableFont_wght.ttf"
-    color "#000000" 
+    color "#000000"
     size 40
 
 
@@ -1130,8 +1125,8 @@ screen config_general2():
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"  
-                        hover "gui/settings/btn_left_arrow_hover.png"  
+                        idle "gui/settings/btn_left_arrow_idle.png"
+                        hover "gui/settings/btn_left_arrow_hover.png"
                         xalign 1.0
                         action [SetVariable("pref1","window"),Preference("display", "window")]
                         sensitive (pref1 != "window" )
@@ -1140,22 +1135,22 @@ screen config_general2():
                     xsize 300
                     yfill True
                     if pref1 == "window":
-                        text _("WINDOW"):  
+                        text _("WINDOW"):
                             xalign 0.5
                             #yalign 0.5
-                    else: 
-                        text _("FULLSCREEN"):  
+                    else:
+                        text _("FULLSCREEN"):
                             xalign 0.5
                             #yalign 0.5
                 frame:
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_right_arrow_idle.png"  
-                        hover "gui/settings/btn_right_arrow_hover.png"  
+                        idle "gui/settings/btn_right_arrow_idle.png"
+                        hover "gui/settings/btn_right_arrow_hover.png"
                         xalign 0.0
                         action [SetVariable("pref1","fullscreen"),Preference("display", "fullscreen")]
-                        sensitive (pref1 != "fullscreen" ) 
+                        sensitive (pref1 != "fullscreen" )
             ################################################################################
             hbox:
                 ysize cell_hight_1
@@ -1163,28 +1158,28 @@ screen config_general2():
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"  
-                        hover "gui/settings/btn_left_arrow_hover.png" 
-                        xalign 1.0 
+                        idle "gui/settings/btn_left_arrow_idle.png"
+                        hover "gui/settings/btn_left_arrow_hover.png"
+                        xalign 1.0
                         action Preference("skip", "toggle")
                         sensitive _preferences.skip_unseen  # Solo activa si Skip All está activado
                 frame:
                     background None
                     xsize 300
                     if _preferences.skip_unseen:
-                        text _("ON"):  
+                        text _("ON"):
                             xalign 0.5
                             #yalign 0.5
                     else:
-                        text _("OFF"):  
+                        text _("Off"):
                             xalign 0.5
                             #yalign 0.5
                 frame:
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_right_arrow_idle.png"  
-                        hover "gui/settings/btn_right_arrow_hover.png" 
+                        idle "gui/settings/btn_right_arrow_idle.png"
+                        hover "gui/settings/btn_right_arrow_hover.png"
                         xalign 0.0
                         action Preference("skip", "toggle")
                         sensitive not _preferences.skip_unseen  # Solo activa si Skip All está desactivado
@@ -1195,9 +1190,9 @@ screen config_general2():
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        idle "gui/settings/btn_left_arrow_idle.png"
                         hover "gui/settings/btn_left_arrow_hover.png"
-                        xalign 1.0  
+                        xalign 1.0
                         action Preference("after choices", "toggle")
                         sensitive _preferences.skip_after_choices  # Solo activa si Skip está activado
                 frame:
@@ -1206,18 +1201,18 @@ screen config_general2():
                     if _preferences.skip_after_choices:
                         text _("ON"):
                             xalign 0.5
-                           
+
                     else:
                         text _("OFF"):
                             xalign 0.5
-                           
+
                 frame:
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_right_arrow_idle.png"  
-                        hover "gui/settings/btn_right_arrow_hover.png" 
-                        xalign 0.0 
+                        idle "gui/settings/btn_right_arrow_idle.png"
+                        hover "gui/settings/btn_right_arrow_hover.png"
+                        xalign 0.0
                         action Preference("after choices", "toggle")
                         sensitive not _preferences.skip_after_choices  # Solo activa si Skip está desactivado
             ################################################################################
@@ -1227,12 +1222,12 @@ screen config_general2():
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"  
-                        hover "gui/settings/btn_left_arrow_hover.png"  
-                        xalign 1.0 
+                        idle "gui/settings/btn_left_arrow_idle.png"
+                        hover "gui/settings/btn_left_arrow_hover.png"
+                        xalign 1.0
                         action Preference("transitions", "toggle")
                         sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
-                    
+
                 frame:
                     background None
                     xsize 300
@@ -1240,230 +1235,169 @@ screen config_general2():
                     if _preferences.transitions:
                         text _("ON"):
                             xalign 0.5
-                            
+
                     else:
                         text _("OFF"):
                             xalign 0.5
-                            
+
                 frame:
                     background None
                     xsize 100
                     # Flecha derecha (para activar - Skip)
                     imagebutton:
-                        idle "gui/settings/btn_right_arrow_idle.png"  
-                        hover "gui/settings/btn_right_arrow_hover.png"  
+                        idle "gui/settings/btn_right_arrow_idle.png"
+                        hover "gui/settings/btn_right_arrow_hover.png"
                         action Preference("transitions", "toggle")
                         sensitive not _preferences.transitions  # Solo activa si las transiciones están deshabilitadas
 
- 
-default cell_hight_4 = 100               
-default cell_hight_3 = cell_hight_4 * 4
-
-
-
-screen config_dialogue():
-    style_prefix "estilo"
-    hbox:
-        xsize 1060
-        yoffset 30
-        #xoffset 250
-        vbox:
-            spacing 30
-            xsize 500
-            ysize cell_hight_3
-            label _("Dialogue Speed") yalign 0.1 text_style "estilo_label"
-            label _("Dialogue Size") yalign 0.1 text_style "estilo_label"
-            label _("Auto-Delay Time") yalign 0.1 text_style "estilo_label"
-            label _("Typeface") yalign 0.1 text_style "estilo_label"
-        #null width 50
-
-        vbox:
-            ysize cell_hight_3
-            spacing 10
-            ### Dialogue Speed #############################################################################
-            hbox:    
-                ysize cell_hight_4
-
-                frame:
-                    background None
-                    xsize 100
-                    #text "[preferences.text_cps]"
-                    $ prefs = preferences.text_cps  # valor de 0 a 200
-                    $ display_value = int(prefs / 200.0 * 100)
-                    text "[display_value]"
-                frame:
-                    background None
-                    xsize 524
-                    bar value FieldValue(preferences, "text_cps", range=200, max_is_zero=False, offset=0, step=1): #Preference("text speed"):
-                        range 200
-                        left_bar "gui/game menu/left.png"  
-                        right_bar "gui/game menu/right.png"  
-                        ysize 68
-                        thumb None
-
-            ### Dialogue Size #############################################################################
-
-            hbox:
-                ysize cell_hight_4
-                frame:
-                    background None
-                    xsize 100
-                    $ prefs = persistent.dialogue_size
-                    text "[prefs]"
-                frame:
-                    background None
-                    xsize 524
-                    bar value FieldValue(persistent, "dialogue_size", range=50, max_is_zero=False, offset=0, step=1):
-                        range 50
-                        left_bar "gui/game menu/left.png"
-                        right_bar "gui/game menu/right.png"
-                        ysize 68
-                        thumb None
-
-            ### Auto-Delay Time #############################################################################
-
-            hbox:
-                ysize cell_hight_4
-                frame:
-                    background None
-                    xsize 100
-                    $ prefs = preferences.afm_time
-                    $ display_value = int(prefs / 30.0 * 100)  # lo mostramos como porcentaje 0 - 100
-                    text "[display_value]"
-                    #text "[preferences.afm_time]"
-                frame:
-                    background None
-                    xsize 524
-                    bar value FieldValue(preferences, "afm_time", range=30.0, max_is_zero=False, offset=0, step=0.1):
-                        left_bar "gui/game menu/left.png"  
-                        right_bar "gui/game menu/right.png"  
-                        ysize 68
-                        thumb None
-
-            ### Dialogue Font #############################################################################
-            hbox:    
-                ysize cell_hight_4
-
-                frame:
-                    background None
-                    xsize 100
-                    #text "[preferences.text_cps]"
-                    $ prefs = preferences.text_cps  # valor de 0 a 200
-                    $ display_value = int(prefs / 200.0 * 100)
-                    text "[display_value]"
-                frame:
-                    background None
-                    xsize 524
-                    bar value FieldValue(preferences, "text_cps", range=200, max_is_zero=False, offset=0, step=1): #Preference("text speed"):
-                        range 200
-                        left_bar "gui/game menu/left.png"  
-                        right_bar "gui/game menu/right.png"  
-                        ysize 68
-                        thumb None
-
-
-
-define persistent.dialogue_size = 0
-
-default pref_muteall = False
-
-
-
-screen config_audio():
-    style_prefix "estilo"
-    hbox:
-        xsize 1060
-        yoffset 30
-        #xoffset 250
-        vbox:
-            spacing 10
-            xsize 500
-            ysize cell_hight_3
-            label _("Music") yalign 0.1 text_style "estilo_label"
-            label _("Sound") yalign 0.1 text_style "estilo_label"
-            label _("Voice") yalign 0.1 text_style "estilo_label"
-            label _("Mute All") yalign 0.1 text_style "estilo_label"
-
-        vbox:
-            ysize cell_hight_3
-            spacing 10
-
-            ### Music #############################################################################
-
-            frame:
-                background None
-                xsize 524
-                ysize cell_hight_4
-                bar value Preference("music volume"): 
-                    left_bar "gui/game menu/left.png"  
-                    right_bar "gui/game menu/right.png"  
-                    ysize 68
-                    thumb None
-
-            ### Sound #############################################################################
-            frame:
-                background None
-                xsize 524
-                ysize cell_hight_4
-                bar value Preference("sound volume"): 
-                    left_bar "gui/game menu/left.png"  
-                    right_bar "gui/game menu/right.png"  
-                    ysize 68
-                    thumb None
-
-            ### Voice #############################################################################
-            frame:
-                background None
-                xsize 524
-                ysize cell_hight_4
-                bar value Preference("voice volume"): 
-                    left_bar "gui/game menu/left.png"  
-                    right_bar "gui/game menu/right.png"  
-                    ysize 68
-                    thumb None
-
-
-            ### Mute all #############################################################################
-            hbox:
-                ysize cell_hight_4
-                frame:
-                    background None
-                    xsize 100
-                    imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"  
-                        hover "gui/settings/btn_left_arrow_hover.png"  
-                        xalign 1.0 
-                        action [SetVariable("pref_muteall", True), Preference("all mute", "toggle")]
-                        sensitive not pref_muteall  # Solo activa si las transiciones están habilitadas
-                    
-                frame:
-                    background None
-                    xsize 300
-                    # Columna 3 - Texto
-                    if pref_muteall:
-                        text _("ON"):
-                            xalign 0.5
-                            
-                    else:
-                        text _("OFF"):
-                            xalign 0.5
-                            
-                frame:
-                    background None
-                    xsize 100
-                    # Flecha derecha (para activar - Skip)
-                    imagebutton:
-                        idle "gui/settings/btn_right_arrow_idle.png"  
-                        hover "gui/settings/btn_right_arrow_hover.png"  
-                        action [SetVariable("pref_muteall",False), Preference("all mute", "toggle")]
-                        sensitive pref_muteall  # Solo activa si las transiciones están deshabilitadas
 
 
 
 
 
 
-        #null width 50
+
+
+
+screen config_general():
+    grid 4 4 spacing 10:
+        #xsize 860
+        #xpos 670
+        #ypos 332
+        #yalign 0.5
+        yoffset 150
+
+        # Renglon 1    ################################
+        # Columna 1 - Etiqueta
+        label _("Display")
+
+        # Columna 2 - Flecha Izqu
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"
+            hover "gui/settings/btn_left_arrow_hover.png"
+            xalign 1.0
+            action [SetVariable("pref1","window"),Preference("display", "window")]
+            sensitive (pref1 != "window" )
+
+
+        # Columna 3 - Texto
+        if pref1 == "window":
+            text _("Window"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Fullscreen"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Columna 4 - Flecha derecha
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"
+            hover "gui/settings/btn_right_arrow_hover.png"
+            xalign 0.0
+            action [SetVariable("pref1","fullscreen"),Preference("display", "fullscreen")]
+            sensitive (pref1 != "fullscreen" )
+
+        # Renglon 2    ################################
+        # Columna 1 - Etiqueta
+        label _("Skeep: Unseen Text")
+
+        #Columna 2 - Flecha Izqu
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"
+            hover "gui/settings/btn_left_arrow_hover.png"
+            xalign 1.0
+            action Preference("skip", "toggle")
+            sensitive _preferences.skip_unseen  # Solo activa si Skip All está activado
+
+        # Columna 3 - Texto
+        if _preferences.skip_unseen:
+            text _("On"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Off"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Columna 4 - Flecha derecha
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"
+            hover "gui/settings/btn_right_arrow_hover.png"
+            xalign 0.0
+            action Preference("skip", "toggle")
+            sensitive not _preferences.skip_unseen  # Solo activa si Skip All está desactivado
+
+        # Renglon 3    ################################
+        # Columna 1 - Etiqueta
+        label _("Skeep: After Choices")
+
+        #Columna 2 - Flecha Izqu
+        # Flecha izquierda (para desactivar - After Choices)
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"
+            hover "gui/settings/btn_left_arrow_hover.png"
+            xalign 1.0
+            action Preference("after choices", "toggle")
+            sensitive _preferences.skip_after_choices  # Solo activa si Skip está activado
+
+        # Columna 3 - Texto
+        if _preferences.skip_after_choices:
+            text _("On"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Off"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Flecha derecha (para activar - Skip)
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"
+            hover "gui/settings/btn_right_arrow_hover.png"
+            xalign 0.0
+            action Preference("after choices", "toggle")
+            sensitive not _preferences.skip_after_choices  # Solo activa si Skip está desactivado
+
+        # Renglon 4    ################################
+        # Columna 1 - Etiqueta
+        label _("Skeep: Transitions")
+
+        #Columna 2 - Flecha Izqu
+        # Flecha izquierda (para desactivar - After Choices)
+        # Flecha izquierda (para desactivar)
+        imagebutton:
+            idle "gui/settings/btn_left_arrow_idle.png"
+            hover "gui/settings/btn_left_arrow_hover.png"
+            xalign 1.0
+            action Preference("transitions", "toggle")
+            sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
+
+        # Columna 3 - Texto
+        if _preferences.transitions:
+            text _("On"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+        else:
+            text _("Off"):
+                size 24
+                xalign 0.5
+                yalign 0.5
+
+        # Flecha derecha (para activar - Skip)
+        imagebutton:
+            idle "gui/settings/btn_right_arrow_idle.png"
+            hover "gui/settings/btn_right_arrow_hover.png"
+            action Preference("transitions", "toggle")
+            sensitive not _preferences.transitions  # Solo activa si las transiciones están deshabilitadas
+
 
 # screen preferences():
 

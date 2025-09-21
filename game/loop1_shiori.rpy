@@ -205,7 +205,7 @@ label loop1_shiori:
 
     shiori "{sc=2}It's protecting you, see?{/sc}"
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -224,7 +224,7 @@ label loop1_shiori:
 
     shiori "{i}You're fine, see?{/i}"
 
-    hide frame
+    hide frame2
     hide charm2
     with dissolve
 
@@ -248,7 +248,7 @@ label loop1_shiori:
 
     shiori "Wait, just one more thing. Since you've burned off the charm..."
 
-    show frame:
+    show frame2:
         zoom 0.4
         xanchor 0.5
         xalign 0.5
@@ -277,7 +277,7 @@ label loop1_shiori:
     n "It sticks to your palate and clots at the back of your throat as you gulp it down."
 
     MC "Hahh~"
-    hide frame
+    hide frame2
     hide wine
     with dissolve
 
