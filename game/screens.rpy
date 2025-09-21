@@ -1,4 +1,4 @@
-﻿init python:
+init python:
     style.choice_text = Style(style.default)
     style.choice_text.size = 70         # Make bigger (try 70-90 for very big)
     style.choice_text.bold = True
@@ -1167,7 +1167,7 @@ screen config_general2():
                             xalign 0.5
                             #yalign 0.5
                     else:
-                        text _("OFF"):  
+                        text _("OFF"):    
                             xalign 0.5
                             #yalign 0.5
                 frame:
@@ -1218,12 +1218,12 @@ screen config_general2():
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"  
-                        hover "gui/settings/btn_left_arrow_hover.png"  
-                        xalign 1.0 
+                        idle "gui/settings/btn_left_arrow_idle.png"
+                        hover "gui/settings/btn_left_arrow_hover.png"
+                        xalign 1.0
                         action Preference("transitions", "toggle")
                         sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
-                    
+
                 frame:
                     background None
                     xsize 300
