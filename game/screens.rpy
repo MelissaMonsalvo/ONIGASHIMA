@@ -8,6 +8,13 @@ init python:
     style.choice_text.yalign = 0.9
     style.choice_text.ypadding = 100
 
+init python:
+    def restore_all_volumes():
+        if hasattr(store, "original_music_volume") and store.original_music_volume is not None:
+            _preferences.volumes["music"] = store.original_music_volume
+            store.original_music_volume = None
+        # Repeat for SFX, voice if needed
+
 ################################################################################
 ## Initialization
 ################################################################################
@@ -498,6 +505,8 @@ screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
+
+    on "show" action Function(restore_all_volumes)
 
     add gui.main_menu_background
 
@@ -1167,7 +1176,7 @@ screen config_general2():
                             xalign 0.5
                             #yalign 0.5
                     else:
-                        text _("OFF"):    
+                        text _("OFF"):  
                             xalign 0.5
                             #yalign 0.5
                 frame:
@@ -1218,12 +1227,12 @@ screen config_general2():
                     background None
                     xsize 100
                     imagebutton:
-                        idle "gui/settings/btn_left_arrow_idle.png"
-                        hover "gui/settings/btn_left_arrow_hover.png"
-                        xalign 1.0
+                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        hover "gui/settings/btn_left_arrow_hover.png"  
+                        xalign 1.0 
                         action Preference("transitions", "toggle")
                         sensitive _preferences.transitions  # Solo activa si las transiciones están habilitadas
-
+                    
                 frame:
                     background None
                     xsize 300
