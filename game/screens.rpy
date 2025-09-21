@@ -116,8 +116,8 @@ screen say(who, what):
                 id "namebox"
                 style "namebox"
                 text who id "who"
-
-        text what id "what"
+        #!
+        text what id "what" size persistent.dialogue_size
 
 
     ## If there's a side image, display it above the text. Do not display on
@@ -966,8 +966,11 @@ screen preferences():
 
         if opconfig == 1:
             use config_general2()
+        elif opconfig == 2:
+            use config_audio()
         elif opconfig == 3:
             use config_dialogue() 
+        
 
     use confirm_config()
             
@@ -1164,7 +1167,7 @@ screen config_general2():
                             xalign 0.5
                             #yalign 0.5
                     else:
-                        text _("Off"):  
+                        text _("OFF"):  
                             xalign 0.5
                             #yalign 0.5
                 frame:
@@ -1256,7 +1259,7 @@ screen config_dialogue():
         yoffset 30
         #xoffset 250
         vbox:
-            spacing 10
+            spacing 30
             xsize 500
             ysize cell_hight_3
             label _("Dialogue Speed") yalign 0.1 text_style "estilo_label"
@@ -1268,9 +1271,10 @@ screen config_dialogue():
         vbox:
             ysize cell_hight_3
             spacing 10
-            ################################################################################
-            hbox:
+            ### Dialogue Speed #############################################################################
+            hbox:    
                 ysize cell_hight_4
+
                 frame:
                     background None
                     xsize 100
@@ -1281,7 +1285,67 @@ screen config_dialogue():
                 frame:
                     background None
                     xsize 524
-                    bar value Preference("text speed"):
+                    bar value FieldValue(preferences, "text_cps", range=200, max_is_zero=False, offset=0, step=1): #Preference("text speed"):
+                        range 200
+                        left_bar "gui/game menu/left.png"  
+                        right_bar "gui/game menu/right.png"  
+                        ysize 68
+                        thumb None
+
+            ### Dialogue Size #############################################################################
+
+            hbox:
+                ysize cell_hight_4
+                frame:
+                    background None
+                    xsize 100
+                    $ prefs = persistent.dialogue_size
+                    text "[prefs]"
+                frame:
+                    background None
+                    xsize 524
+                    bar value FieldValue(persistent, "dialogue_size", range=50, max_is_zero=False, offset=0, step=1):
+                        range 50
+                        left_bar "gui/game menu/left.png"
+                        right_bar "gui/game menu/right.png"
+                        ysize 68
+                        thumb None
+
+            ### Auto-Delay Time #############################################################################
+
+            hbox:
+                ysize cell_hight_4
+                frame:
+                    background None
+                    xsize 100
+                    $ prefs = preferences.afm_time
+                    $ display_value = int(prefs / 30.0 * 100)  # lo mostramos como porcentaje 0 - 100
+                    text "[display_value]"
+                    #text "[preferences.afm_time]"
+                frame:
+                    background None
+                    xsize 524
+                    bar value FieldValue(preferences, "afm_time", range=30.0, max_is_zero=False, offset=0, step=0.1):
+                        left_bar "gui/game menu/left.png"  
+                        right_bar "gui/game menu/right.png"  
+                        ysize 68
+                        thumb None
+
+            ### Dialogue Font #############################################################################
+            hbox:    
+                ysize cell_hight_4
+
+                frame:
+                    background None
+                    xsize 100
+                    #text "[preferences.text_cps]"
+                    $ prefs = preferences.text_cps  # valor de 0 a 200
+                    $ display_value = int(prefs / 200.0 * 100)
+                    text "[display_value]"
+                frame:
+                    background None
+                    xsize 524
+                    bar value FieldValue(preferences, "text_cps", range=200, max_is_zero=False, offset=0, step=1): #Preference("text speed"):
                         range 200
                         left_bar "gui/game menu/left.png"  
                         right_bar "gui/game menu/right.png"  
@@ -1290,9 +1354,107 @@ screen config_dialogue():
 
 
 
+define persistent.dialogue_size = 0
+
+default pref_muteall = False
 
 
 
+screen config_audio():
+    style_prefix "estilo"
+    hbox:
+        xsize 1060
+        yoffset 30
+        #xoffset 250
+        vbox:
+            spacing 10
+            xsize 500
+            ysize cell_hight_3
+            label _("Music") yalign 0.1 text_style "estilo_label"
+            label _("Sound") yalign 0.1 text_style "estilo_label"
+            label _("Voice") yalign 0.1 text_style "estilo_label"
+            label _("Mute All") yalign 0.1 text_style "estilo_label"
+
+        vbox:
+            ysize cell_hight_3
+            spacing 10
+
+            ### Music #############################################################################
+
+            frame:
+                background None
+                xsize 524
+                ysize cell_hight_4
+                bar value Preference("music volume"): 
+                    left_bar "gui/game menu/left.png"  
+                    right_bar "gui/game menu/right.png"  
+                    ysize 68
+                    thumb None
+
+            ### Sound #############################################################################
+            frame:
+                background None
+                xsize 524
+                ysize cell_hight_4
+                bar value Preference("sound volume"): 
+                    left_bar "gui/game menu/left.png"  
+                    right_bar "gui/game menu/right.png"  
+                    ysize 68
+                    thumb None
+
+            ### Voice #############################################################################
+            frame:
+                background None
+                xsize 524
+                ysize cell_hight_4
+                bar value Preference("voice volume"): 
+                    left_bar "gui/game menu/left.png"  
+                    right_bar "gui/game menu/right.png"  
+                    ysize 68
+                    thumb None
+
+
+            ### Mute all #############################################################################
+            hbox:
+                ysize cell_hight_4
+                frame:
+                    background None
+                    xsize 100
+                    imagebutton:
+                        idle "gui/settings/btn_left_arrow_idle.png"  
+                        hover "gui/settings/btn_left_arrow_hover.png"  
+                        xalign 1.0 
+                        action [SetVariable("pref_muteall", True), Preference("all mute", "toggle")]
+                        sensitive not pref_muteall  # Solo activa si las transiciones están habilitadas
+                    
+                frame:
+                    background None
+                    xsize 300
+                    # Columna 3 - Texto
+                    if pref_muteall:
+                        text _("ON"):
+                            xalign 0.5
+                            
+                    else:
+                        text _("OFF"):
+                            xalign 0.5
+                            
+                frame:
+                    background None
+                    xsize 100
+                    # Flecha derecha (para activar - Skip)
+                    imagebutton:
+                        idle "gui/settings/btn_right_arrow_idle.png"  
+                        hover "gui/settings/btn_right_arrow_hover.png"  
+                        action [SetVariable("pref_muteall",False), Preference("all mute", "toggle")]
+                        sensitive pref_muteall  # Solo activa si las transiciones están deshabilitadas
+
+
+
+
+
+
+        #null width 50
 
 # screen preferences():
 
