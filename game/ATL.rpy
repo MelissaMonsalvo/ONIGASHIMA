@@ -105,7 +105,7 @@ transform camera_tilt:
     easeout 0.15 rotate -4  # swing past center
     easein 0.1 rotate 2   # wobble correction
     easeout 0.15 rotate 0 # settle back to normal
-    
+
 ###### POSITIONS ######
 
 transform midleft:
@@ -223,11 +223,11 @@ screen horror_forced_menu_two(items):
 
 ## images
 
-image frame = "images/frame.png"
+image frame2 = "images/frame.png"
 image matcha = "images/matcha.png"
 image wine = "images/wine.png"
 image charm = "images/charm.png"
-image charm2 = "images/charm2.png"
+image charm2 = "image/bento.png"
 
 image moon1 = "MOON/moon1.jpg"
 image moon2 = "MOON/moon2.jpg"
