@@ -131,8 +131,7 @@ label loop2_hikaru_mandatory1:
         linear 0.5 yoffset -420
         linear 0.5 yoffset -400
         repeat
-
-    n "You walk behind Hikaru. Their footsteps make almost no sound."
+    pause 0.5
 
     n2 "Meat ahead."
 
@@ -149,7 +148,7 @@ label loop2_hikaru_mandatory1:
         yalign 0.33
     with dissolve
 
-    hikaru "See that boar? The right leg's limping."
+    hikaru "See that boar? One of its leg is limping."
 
     MC "Mmhmm."
 
@@ -527,7 +526,17 @@ label loop2_hikaru_mandatory2:
 
     MC "Okay, I'll stay here then."
 
-    hikaru "Yeah, see you."
+    hikaru "...You're not... {w=0.2}{i}curious?{/i}"
+
+    hikaru "I mean...{w=0.1} you used to be."
+
+    MC "Nah, it's probably just someone the Yamakui ate a long time ago."
+
+    hikaru "..."
+
+    hikaru "But--"
+
+    hikaru "...Nevermind. {w=0.2}I'll see you later."
 
     show hik normal:
 
@@ -629,11 +638,11 @@ label loop2_hikaru_mandatory3:
 
     hikaru "Mmmph--"
 
-    n2 "The tounge will know the path. {w}Slide it deep, and it'll find the center."
+    n2 "The tounge will know the path.{w=0.}.{w=0.1}.{w=0.1}"
 
     n "{sc}The hell{/sc} are you talking about--"
 
-    n2 "Still ripe."
+    n2 "Hmm.{w} Still ripe."
 
     play sound "sfx/mmph2.mp3"
     with sshake
@@ -678,7 +687,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "That... {w=0.1}that {sc=1}wasn’t...{/sc}"
 
-    n2 "Let’s go deeper this time."
+    n2 "Once more--"
 
     n "NO!"
 
@@ -765,7 +774,7 @@ label loop2_hikaru_mandatory3:
     hide hik
     with hpunch
 
-    n "Run, Hikaru, please... Just go away--"
+    n "..."
 
     scene black
     with out_182
@@ -869,7 +878,7 @@ label loop2_hikaru_mandatory4:
         easein 0.4 zoom 0.47 yoffset 20
     show darken2
 
-    play sound "sfx/shing.mp3"
+    play sound "sfx/shing.wav"
 
     n "You step forward, but Hikaru unsheates their sai."
 
@@ -916,9 +925,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{sc=3}No--no--{/sc}"
 
-    n2 "{b}I told you.{/b}"
-
-    n2 "{size=+6}{w=0.1}Y {w}a {w}m {w}a {w}k {w}u {w}i.{/size}"
+    MC "{size=+6}{w=0.1}Y {w}a {w}m {w}a {w}k {w}u {w}i.{/size}"
 
     n2 "{i}That’s the real name under the skin.{/i}"
 
@@ -982,6 +989,8 @@ label loop2_hikaru_mandatory4:
 
 
     $ loop2_hikaru_mandatory4 = True
+
+    jump loop2_hikaru
 
     ## all characters vanish from map, but the ghost still appear
 

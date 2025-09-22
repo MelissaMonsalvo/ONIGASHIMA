@@ -2,13 +2,27 @@ label loop2_shiori:
 
     ## SHIORI'S ROUTE GOES HERE FOR LOOP 1 AFTER CLEARING ALL MANDATORY EVENTS OR DEFAULT ROUTE IF YOU DIDN'T UNLOCK YAMATO AND HIKARU
 
+    scene shrine night with in_182:
+        zoom 0.5
+
+    show shi normal:
+        zoom 0.8
+        xalign 0.1
+        yoffset -20
+        xoffset -150
+    with dissolve
+
+    play music "Dark.mp3"
+
+    n "Night falls."
+
     n "Shiori's head leans against your shoulder like it’s always belonged there."
 
     shiori "...I used to do this, you know?"
 
     shiori "When we were kids."
 
-    shiori "When I got scared. You’d let me lean on you, even if you complaied that I made your shoulder stiff."
+    shiori "When I got scared. You’d let me lean on you, even if you complained that I made your shoulder stiff."
 
     shiori "But you always felt warm, [persistent.player_name]."
 
@@ -20,51 +34,83 @@ label loop2_shiori:
 
     shiori "...It’s strange though."
 
-    shiori "I can’t... hear your heartbeat."
+    shiori "I can’t...{w=0.1} hear your heartbeat."
 
     MC "...!"
 
-    n "She lifts her head just a little and stares at you with a knowing smile."
+    n "She lifts her head just a little and stares at you with a {sc=4}knowing smile.{/sc}"
 
-    n2 "Hee--heeH--hhhh--KCH--KKHahHhahhh--"
+    n2 "{b}Hee--heeH--hhhh--KCH--KKHahHhahhh--{/b}"
 
-    n "Your hand clenches, you want to move, to push Shiori away, but you can't."
+    n "Your hand clenches,{w=0.2} you want to move, to push Shiori away,{w=0.3} but you can't."
 
-    n "If you do, then--"
+    n "If you do,{w=0.2} then--"
 
-    n2 "{fast}CaaaAAANNN’T.{/fast}"
+    n2 "{b}{cps=2}CaaaAAANNN’T.{/cps}{/b}"
 
-    n2 "Tear. {w}Yet."
+    n2 "Tear.{w=0.2} Yet."
 
     shiori "...You’re really quiet tonight, [persistent.player_name]-sama."
 
-    shiori "That’s okay. I don’t mind."
+    shiori "That’s okay.{w=0.2} I don’t mind."
 
     shiori "We can stay this way until you don't feel lonely anymore~"
 
-    n "She’s curling in closer and presses her head even more to your shoulder."
+    n "She’s curling in closer{w=0.2} and presses her head even more to your shoulder."
 
-    shiori "You're cold now, you know? Like, literally."
+    shiori "{i}You're cold now, you know?{w=0.2} Like, literally.{/i}"
 
-    shiori "As cold as a corpse."
+    shiori "{sc=5}As cold as a corpse.{/sc}"
 
     MC "Shiori-chan... You're... freaking me out, heh..."
 
-    shiori "Really? I think I'm the one who feels afraid."
+    shiori "{glitch=10}Really?{/glitch} I think I'm the one who feels afraid."
 
     shiori "But I'll try not to, so you'd feel better."
 
-    n2 "...Soon."
+    n "She’s curling in closer and presses her head even more to your shoulder."
 
-    n2 "Your meat will be mine."
+    n2 "{b}...Soon.{/b}"
 
-    n "...No..."
+    n2 "{b}Your meat will be mine.{/b}"
 
-    centered "ONE DAY UNTIL THE RED MOON"
+    n "{color=#ff002e}...No...{/color}"
+
+    scene black
+
+    pause 0.3
+
+    stop music
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}ONE DAY UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    scene moon5
+    with fade
+    pause 0.2
+    scene moon6
+    with fade
+
+    stop sound
+
+    pause 0.5
+
+    scene black
+    with fade
+
+    play muzak "sfx/rain.mp3"
 
     n "It's raining today, you're drenched in mud and dirt, and--"
 
     n "--is that blood? Whose blood?"
+
+    scene shrine night with in_182:
+        zoom 0.5
 
     n "Shiori’s already waiting."
 
@@ -88,81 +134,81 @@ label loop2_shiori:
 
     shiori "That wasn’t dirt, huh?"
 
-    play sound "sfx/peel_skin.ogg"
+    play sound "sfx/stretch.mp3"
+    with flashred
+    show darken2
 
-    n "She wipes again... and a piece of muscle sloughs off."
+    n "She wipes again...{w=0.2} and a piece of muscle {sc=5}sloughs{/sc} off."
 
     n "..."
 
     n "..."
 
-    n "Wait."
+    n "{cps=13}Wait.{/cps}"
 
-    n "...That’s... that’s not..."
+    n "{i}...That’s... that’s not...{/i}"
 
-    n "That was mine."
+    n "{sc=6}That was mine.{/sc}"
 
     n "My muscle, my skin, my--"
 
-    n "...You're wearing my face..."
+    n "{glitch=10}...You're wearing my face...{/glitch}"
 
-    n2 "{fast}YOU'RE GETTING IT NOW, LITTLE GHOST~{/fast}"
+    n2 "{b}YOU'RE GETTING IT NOW, LITTLE GHOST~{/b}"
 
-    n2 "{fast}TOOK YOU LONG ENOUGH--KkkkhHrrA--Hahha--{/fast}"
+    n2 "{b}TOOK YOU LONG ENOUGH--KkkkhHrrA--Hahha--{/b}"
 
-    n2 "Your face fit SO WELL."
+    n2 "{b}Your face fit SO WELL.{/b}"
 
-    n "N-No, that can't be...!"
+    n "{color=#ff002e}N-No, that can't be...!{/color}"
 
-    n "That was... the fight... The final battle...?"
+    n "That was...{w=0.2} the fight...{w=0.3} The final battle...?"
 
     n "I killed you. I remember killing you! I stabbed you...!"
 
-    n2 "{fast}YOU. DIED. I. ATE. YOU.{/fast}"
+    n2 "{b}YOU. DIED. I. ATE. YOU.{/b}"
 
-    n2 "But not all of you, so they'd remember you. Because I needed your skin."
+    n2 "{b}But not all of you, so they'd remember you. Because I needed your skin.{/b}"
 
-    n2 "You’re still here because I didn’t finish aaalllll of you."
+    n2 "{b}You’re still here because I didn’t finish aaalllll of you.{/b}"
 
     n "...."
 
-    n "NO--{nw}"
+    n "{sc=7}NO--{/sc}{nw}"
 
-    shiori "Hmm~"
+    shiori "{i}Hmm~{/i}"
 
     shiori "Let’s take this part too."
 
-    n "Shiori, stop, run. Get away from me--!"
+    n "Shiori,{w=0.2} stop,{w=0.2} run.{w=0.2} Get away from me--!"
 
     shiori "There, better."
 
-    shiori "You always try to hide, [persistent.player_name]-sama.... but I think you’re more beautiful like this."
+    shiori "You always try to hide, [persistent.player_name]-sama...{w=0.3} but I think you’re more beautiful like this."
 
-    n "Shiori-chan, what are you saying!?"
+    n "{glitch=9}Shiori-chan, what are you saying!?{/glitch}"
 
-    n "I can't move, my mouth won't say anything, but it's smiling--"
+    n "I can't move,{w=0.2} my mouth won't say anything, but it's smiling--"
 
-    n "Why are you smiling!?"
+    n "{cps=14}Why are you smiling!?{/cps}"
 
-    n2 "...Because the Red Moon’s coming."
+    n2 "{b}...Because the Red Moon’s coming.{/b}"
 
-    n2 "Better make more room inside."
+    n2 "{b}Better make more room inside.{/b}"
 
-    n "No, I refuse to be controlled like this!!!"
+    n "{color=#ff002e}No, I refuse to be controlled like this!!!{/color}"
 
-    n "I’m still ME!"
+    n "{sc=8}I’m still ME!{/sc}"
 
-    n "I can still fight--! These are my muscles, so I can--"
+    n "{sc=7}I can still fight--! These are my muscles, so I can--{/sc}"
 
     ## so the player can rapidly click to move / resist here but nothing happens as the screen moves
-
-    ## let me look into this later
 
     n "I--"
 
     n "I almost--"
 
-    n "I’m taking it back. This body--of mine--"
+    n "{cps=13}I’m taking it back. This body--of mine--{/cps}"
 
     pause 1.0
 
@@ -170,13 +216,13 @@ label loop2_shiori:
 
     n "..."
 
-    n2 "...Heh. HahahaHahRHRAHhahaahH!"
+    n2 "{cps=20}...Heh. HahahaHahRHRAHhahaahH!{/cps}"
 
-    n2 "You thought..."
+    n2 "{cps=20}You thought...{/cps}"
 
-    n2 "You thought you still have control?"
+    n2 "{cps=20}You thought you still have {i}control?{/i}{/cps}"
 
-    n2 "{fast}T O O L A T E{/fast}"
+    n2 "{cps=20}T O O L A T E{/cps}"
 
     n "No--"
 
@@ -190,17 +236,37 @@ label loop2_shiori:
 
     shiori "You can stay with Shiori-chan until the red moon comes!"
 
-    n "She spreads her arm and hugged you--me--what--"
+    n "She spreads her arm and hugged you--{w}me--{W}what--"
 
     n "What is happening?"
 
     n2 "Hush."
 
-    n2 "Go to sleep, ghost."
+    n2 "Go to sleep, {w=0.1}ghost."
 
-    ## fades to black
+    stop music
 
-    centered "DAY OF RED MOON."
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THE RED MOON IS HERE{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    scene moon6
+    with fade
+    pause 0.2
+    scene moon7
+    with fade
+
+    stop sound
+
+    pause 0.5
 
     n "..."
 
@@ -224,7 +290,7 @@ label loop2_shiori:
 
     n2 "I want it. I want her."
 
-    n2 "{fast}GIVE IT TO ME.{/fast}"
+    n2 "GIVE IT TO ME--{/nw"
 
     n "No, stop, stop putting those thoughts in my head!"
 
@@ -240,7 +306,7 @@ label loop2_shiori:
 
     n2 "THE RED MOON."
 
-    n2 "TIME TO FEED."
+    n2 "Time to feed."
 
     scene black
 
@@ -248,79 +314,80 @@ label loop2_shiori:
 
     n "Did Shiori-chan knocked me out, or did you--"
 
-    shiori "It's time, Yamakui-sama~"
+    shiori "{sc=5}It's time, Yamakui-sama~{/sc}"
 
     shiori "I brought tonight’s offering."
 
     n2 "I smell it."
 
-    n2 "I smell it I smell it I SMELL IT--"
+    n2 "I smell it{w=0.1} I smell it{w=0.1} {sc=7}I SMELL IT--{/sc}"
 
     n "She kneels in front of the altar and unfolds the cloth she's been carrying."
 
-    n "Three tiny bones rest inside,, those look too small for an anime--"
+    n "{cps=13}Three tiny bones rest inside...{w=0.2} those look too small for an anima--{/cps}{nw}"
 
-    n "Oh....{w} no."
+    n "Oh....{w=0.3} no."
 
-    n "Those are her--"
+    n "{glitch=8}Those are her--{/glitch}"
 
-    n2 "{fast}HhhhaaAAhghghghggh--{/fast}"
+    n2 "{i}HhhhaaAAhghghghggh--{/i}"
 
-    n2 "TOE. SHE GAVE HER TOES."
+    n2 "{b}TOE. SHE GAVE HER TOES.{/b}"
 
-    n2 "LOVE. LOVE. I LOVE HER."
+    n2 "LOVE. {w=0.2}LOVE. {w=0.2}I love her."
 
     shiori "I thought love should hurt sometimes."
 
-    shiori "If I can’t stay beside you forever...{w} I’ll just give you parts of me instead."
+    shiori "{i}If I can’t stay beside you forever...{w=0.2} I’ll just give you parts of me instead.{/i}"
 
-    shiori "Bit by bit. Until we’re always together~"
+    shiori "{cps=15}Bit by bit. Until we’re always together~{/cps}"
 
     n "No. No, this isn’t--"
 
-    n "This isn't the Shiori-chan I know. This can’t be--"
+    n "This isn't the Shiori-chan I know.{w=0.2} This can’t be--"
 
     n "She--she was always scared of blood--"
 
     shiori "You won’t leave me, nee Yamakui-sama?"
 
-    n2 "NEVER."
+    n2 "{b}NEVER.{/b}"
 
     n "She doesn’t know what she’s saying--"
 
-    n "She’s broken. She’s broken and bleeding and smiling like nothing’s wrong--"
+    n "{sc=6}She’s broken.{w=0.2} She’s broken and bleeding and smiling like nothing’s wrong--{/sc}"
 
     shiori "Tonight, I want you to eat well."
 
-    shiori "So you stay strong~"
+    shiori "{glitch=7}So you stay strong~{/glitch}"
 
     n "Shiori chan--"
 
     MC "--Thank you."
 
-    n "What... What the hell is happening?"
+    n "{i}What... What the hell is happening?{/i}"
 
     n "This isn’t what I died for."
 
-    n "This isn’t the village I tried to save."
+    n "{sc=5}This isn’t the village I tried to save.{/sc}"
 
-    n "Am I going insane, or is everyone is insane from the start?"
+    n "{cps=12}Am I going insane, or is everyone is insane from the start?{/cps}"
 
-    centered "THERE RED MOON IS HERE."
+    centered "{color=#ff002e}THE RED MOON IS HERE.{/color}"
 
     shiori "Yamakui-sama, everyone said that you're evil."
 
     shiori "But I know that you only eat to survive..."
 
-    shiori "If I love you enough... {w}you’ll let me stay by your side, right?"
+    shiori "If I love you enough...{w=0.2} you’ll let me stay by your side, right?"
 
     shiori "Shiori's so alone, you know?"
 
-    shiori "I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other."
+    shiori "{i}I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other.{/i}"
 
     shiori "Yamato-kun only cares about being the best."
 
-    shiori "So let me be with you forever, so Shiori won't get lonely~"
+    shiori "{sc=5}So let me be with you forever, so Shiori won't get lonely~{/sc}"
+
 
     pause 1.0
 

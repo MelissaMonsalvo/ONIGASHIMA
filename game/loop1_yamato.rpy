@@ -1087,7 +1087,7 @@ label loop1_yamato:
         yoffset 400
 
 
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     play music "Love.mp3"
 
     n "You sit next to Yamato on the shrine roof. He's sitting really close that your knees keep bumping to each other."
@@ -1203,7 +1203,7 @@ label loop1_yamato:
         yoffset 400
 
 
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         ease 0.4 zoom 0.6 yoffset 450 xoffset 250
 

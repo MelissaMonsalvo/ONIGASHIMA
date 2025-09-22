@@ -489,7 +489,7 @@ label loop1_shiori:
         zoom 0.5
         xalign 0.5
         yalign 0.5
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     show shi normal:
         zoom 0.34
         xanchor 0.5
@@ -497,7 +497,7 @@ label loop1_shiori:
         yalign 0
         yoffset 80
         xoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     with in_212
 
     n "Shiori is already standing at the altar, when you return to the shrine as promised."
@@ -532,7 +532,7 @@ label loop1_shiori:
         yalign 0
         yoffset 80
         xoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         # Forward creep
         parallel:
@@ -565,7 +565,7 @@ label loop1_shiori:
         yalign 0
         yoffset 70
         xoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         parallel:
             linear 1.6 zoom 0.45 yoffset 40
@@ -587,7 +587,7 @@ label loop1_shiori:
         zoom 0.5
         xalign 0.5
         yalign 1
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         ease 0.4 zoom 0.55
 
@@ -598,7 +598,7 @@ label loop1_shiori:
         yalign 0
         yoffset 40
         xoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         parallel:
             ease 0.4 zoom 0.5 yoffset 10 xoffset -10
@@ -613,7 +613,7 @@ label loop1_shiori:
         zoom 0.5
         xalign 0.5
         yalign 1
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         ease 0.4 zoom 0.6
 
@@ -624,7 +624,7 @@ label loop1_shiori:
         yalign 0
         yoffset 10
         xoffset -10
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         parallel:
             ease 0.4 zoom 0.79 yoffset -40 xoffset -200

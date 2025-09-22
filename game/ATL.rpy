@@ -111,7 +111,7 @@ transform spin_forever:
     linear 2.5 rotate 360
     repeat
 screen magic_circle_spin:
-    add "magic_circle" at spin_forever anchor (0.5, 0.5) align (0.5, 0.5)
+    add "magic_circle" at spin_forever anchor (0.5, 0.5) pos (0.5, 0.5)
 
 init python:
 
@@ -126,7 +126,17 @@ init python:
     config.overlay_functions.append(drunk_haze_overlay)
 
 
+transform bg_run_shake:
+    zoom 0.5
 
+    # Quick shaky running effect
+    linear 0.07 xoffset -24 yoffset 7 zoom 0.505
+    linear 0.08 xoffset 18 yoffset -11 zoom 0.52
+    linear 0.07 xoffset -13 yoffset 5 zoom 0.5
+    linear 0.06 xoffset 10 yoffset -9 zoom 0.507
+    linear 0.09 xoffset -20 yoffset 2 zoom 0.514
+    pause 0.05
+    repeat
 
 screen drunk_haze():
     add "haze_overlay" at haze_loop:

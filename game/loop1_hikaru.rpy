@@ -1199,7 +1199,7 @@ label loop1_redmoon_eve:
         zoom 0.5
         xalign 0.5
         yalign 0.5
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     show hik normal:
         zoom 0.231
         yoffset 185
@@ -1207,7 +1207,7 @@ label loop1_redmoon_eve:
         xalign 0.5
         yalign 0
         xoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     with in_212
 
     hikaru "It's soon..."
@@ -1231,7 +1231,7 @@ label loop1_redmoon_eve:
         xzoom 1.0
         yzoom 1.0
         yoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
     show hik normal:
         zoom 0.231
@@ -1240,7 +1240,7 @@ label loop1_redmoon_eve:
         xalign 0.5
         yalign 0
         xoffset 0
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         linear 0.2 xalign 0.7
 
     hikaru "Yamato-kun--"
@@ -1326,7 +1326,7 @@ label loop1_redmoon_eve:
         yoffset 400
 
 
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
 
 
@@ -1594,7 +1594,7 @@ label hikaru_distrust:
         yoffset 400
 
 
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         linear 0.1 zoom 0.4 yoffset 250
     with sshake
@@ -1662,7 +1662,7 @@ label hikaru_distrust:
         yoffset 400
 
 
-        matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     with sshake
 
     hikaru "{k=2}...ngh--{/k}"
