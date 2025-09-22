@@ -103,6 +103,16 @@ init:
             linear 1.5 alpha 0.35 blur 5
             linear 1.5 alpha 0.25 blur 3
             repeat
+
+    image magic_circle = "images/magic_circle.png"
+    image magic_circle_red = "images/magic_circle_red.png"
+transform spin_forever:
+    rotate 0
+    linear 2.5 rotate 360
+    repeat
+screen magic_circle_spin:
+    add "magic_circle" at spin_forever anchor (0.5, 0.5) align (0.5, 0.5)
+
 init python:
 
     haze_active = False
