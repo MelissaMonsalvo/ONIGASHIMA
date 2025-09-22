@@ -155,7 +155,7 @@ label truend:
     yamato "Oi, Shiori! Open yer damn eyes already!"
     yamato "Ya think this monster’s some savior? Some lover? Tch... bullshit!"
 
-    n "Yamato slams his fist into the shrine pillar, making Shiori's shoulders jolt."
+    n "Yamato slams his fist into the shrine pillar, making Shiorijolt."
 
     yamato "Who the hell protected ya from bullies, huh? Who stood between ya an’ the bigger kids? It was [persistent.player_name]!"
     hikaru "Our friend who never hurt anyone, Shiori-chan. Please, just try to remember."
@@ -194,7 +194,7 @@ label truend:
     shiori "I was looking into the Yamakui but someone... maybe the old priest tried to stop me from it."
     yamato "Tch. Half of it’s rotted. What’s it say?"
 
-    shiori "Something about... {w}famine, and 'ong winters when nothing grew.'"
+    shiori "Something about... {w}famine, and long winters when nothing grew.'"
     shiori "It says... outsiders were 'invited' to the village. But... no one was ever recorded leaving."
     hikaru "Did they stay in the village?"
     shiori "I don't think so... It says 'offerings made at the altar, so our children would not starve.'"

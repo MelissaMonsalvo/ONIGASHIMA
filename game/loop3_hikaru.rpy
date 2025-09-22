@@ -106,68 +106,6 @@ label loop3_hikaru:
 
     n2 "i’LL mAkE iT bEauTiFuL."
 
-    centered "TWO DAYS BEFORE THE RED MOON"
-
-    n2 "tHeY aLL hIdE. {w}eXcEpt tHe tEnDeR oNe."
-
-    n2 "sTeP sTeP sTeP."
-
-    n2 "TheRE YOU aRe."
-
-    play sound "sfx/swoosh_blade.ogg"
-
-    hikaru "GO TO HELL."
-
-    play sound "sfx/metal_clash.ogg"
-    $ renpy.pause(0.3)
-
-    MC "SshhKkk!"
-
-    play sound "sfx/fast_steps.ogg"
-    $ renpy.pause(0.3)
-
-    show hikaru panting at midright
-
-    hikaru "Damn it, it's fast!"
-
-    n2 "i aM bEtTeR tHAn AlL of YoU."
-
-    hikaru "HYAAARGH!"
-
-    ## some more battle animations
-
-    play sound "sfx/metal_drop.ogg"
-
-    show hikaru blank at midright
-
-    hikaru "..."
-
-    hikaru "Tch, this is not over."
-
-    hikaru "I'll end you even if I will have to bring you down with me!"
-
-    hide hikaru with dissolve
-
-    play sound "sfx/wind_rise.ogg"
-
-    n "Hikaru..."
-
-    n "Don’t do this. Don’t throw your life away."
-
-    n "RUN."
-
-    n "JUST RUN."
-
-    n "Forget me. Forget this place. Just--"
-
-    n "If you die, there’s nothing left of me!"
-
-    n2 "..."
-
-    n2 "thErE's sTiLL yOuR vOiCe."
-
-    n2 "I cAn mAkE iT sAy 'i'M sOrry' {w}wHiLe i bReAk tHeIr rIbS~"
-
     centered "ONE DAY BEFORE THE RED MOON"
 
     n2 "sUCh a DeAD VillAGe."

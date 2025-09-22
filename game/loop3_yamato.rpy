@@ -1,30 +1,10 @@
-label loop3_yamato_confront:
-
-    scene bg village_gate_dusk with fade
-    play sound "sfx/flies_loop.ogg" loop
-    show screen heat_distortion
-    show screen blood_pulse_effect
+label loop3_yamato:
 
     n2 "tHeY aLL hIdE."
 
-    n2 "ShUt wInDoWs. {w}LoCk dOoRs. {w}nO fAnfArE."
-
-    play sound "sfx/flesh_peel.ogg"
-
-    n2 "mY lIp sLIdEs dOwN a LiTtLe tOo fAr."
-
-    n2 "bUt mY tEeTh sTiLL glEAm."
-
-    play sound "sfx/step_heavy.ogg"
-    $ renpy.pause(0.3)
-
     n2 "nO oNe sPeAks mY nAmE."
 
-    n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s oLd."
-
-    play sound "sfx/grit_clench.ogg"
-
-    show yamato glare at midright with dissolve
+    n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG--"
 
     yamato "You."
 
@@ -34,21 +14,11 @@ label loop3_yamato_confront:
 
     n2 "GaMeY mEAt."
 
-    yamato "You’re wearing it."
+    yamato "Goddamnit, [persistent.player_name]. Ya go to the mountains yerself and came back with this thing weain' ya?"
 
-    yamato "You’re wearing THEIR FACE."
+    yamato "Oi, bastard! That ain't yer face!"
 
-    n2 "..."
-
-    yamato "I don’t remember who—"
-
-    yamato "But I know. I KNOW."
-
-    yamato "You ate someone. Someone who mattered."
-
-    yamato "That skin doesn’t belong to you."
-
-    n2 "iT dOeS nOw~"
+    MC "iT iS nOw~"
 
     yamato "SHUT YOUR MOUTH!"
 
@@ -56,9 +26,9 @@ label loop3_yamato_confront:
 
     n "..."
 
-    n2 "sO yOu sTiLL hAvE tHe sWoRd, huh?"
+    n2 "sO yOu sTiLL hAvE tHe gUTs, huh?"
 
-    n2 "Go oN tHeN. sHoW mE yOuR pAiN."
+    n2 "Go oN tHeN. sHoW mE."
 
     show yamato rage at midright
 
@@ -69,34 +39,30 @@ label loop3_yamato_confront:
     play sound "sfx/quick_stab.ogg"
     $ renpy.pause(0.2)
 
-    n2 "TtKk—"
+    n2 "TtKk--"
 
-    n2 "tOo sLoW."
-
-    n2 "tOo lAtE."
+    n2 "tOo sLoW, mUtt."
 
     play sound "sfx/fleshtear_burst.ogg"
     $ renpy.pause(0.3)
 
     show yamato panting at midright
 
-    yamato "Bastard—"
+    yamato "Bastard--"
 
-    yamato "Why won’t you break?!"
+    yamato "The hell's with THAT speed?"
 
-    n2 "yOuR hAtReD tAsTeS gOoD."
+    n2 "yOuR hAtReD sMEllS gOoD."
 
     n2 "sO dOeS yOuR gUiLt."
 
-    yamato "I’ll kill you."
+    yamato "I'LL RIP YOU APART, YOU FUCKIN--"
 
-    yamato "I SWEAR, EVEN IF IT KILLS ME—"
+    MC "...nO nEeD tO sWeAr."
 
-    n2 "nO nEeD tO sWeAr."
+    MC "tHe mOoN wILL bE rEd sOoN."
 
-    n2 "tHe mOoN wILL bE rEd sOoN."
-
-    n2 "I’LL mAkE sUrE yOu dIe sCrEaMiNg."
+    MC "I’LL mAkE sUrE yOu dIe sCrEaMiNg."
 
     n "..."
 
@@ -104,27 +70,16 @@ label loop3_yamato_confront:
 
     n "...I’m sorry."
 
-    scene black with fade
-    $ renpy.pause(2.5)
-
-    return
-label loop3_yamato_bleedbait:
-
-    scene bg forest_edge_night with fade
-    play music "bgm/heartbeat_void.ogg" fadein 2.0
-    play sound "sfx/flies_loop.ogg" loop
-    show screen blood_pulse_effect
-
-    show yamato glare at midright
-
     yamato "COME ON!!"
+
+    ## sfxz
 
     play sound "sfx/metal_clash.ogg"
     $ renpy.pause(0.3)
     play sound "sfx/stab_flesh.ogg"
     $ renpy.pause(0.3)
 
-    n2 "SskKkkkhH—"
+    n2 "SskKkkkhH--"
 
     play sound "sfx/squelch2.ogg"
     $ renpy.pause(0.3)
@@ -133,15 +88,17 @@ label loop3_yamato_bleedbait:
 
     play sound "sfx/fist_impact.ogg"
 
-    show yamato injured at midright
+    yamato "Gh--!"
 
-    yamato "Gh—!"
+    n "Yamato... You can't win against the Yamakui!"
+
+    n "Run...! You're bleeding already!"
 
     play sound "sfx/blood_drop.ogg"
 
-    n2 "YoU bLeEd {w}LiKe sOmEtHiNg fReSh."
+    MC "TsK, tsK, tsKKKKKK...."
 
-    n2 "LiKe sOmEtHiNg {w}rAw."
+    MC "iS tHAt AlL?"
 
     play sound "sfx/spit.ogg"
 
@@ -149,96 +106,51 @@ label loop3_yamato_bleedbait:
 
     n2 "nOt dEad yEt, aRe yOu?"
 
-    yamato "...You didn’t finish me."
+    yamato "The fuck yer starin' for?"
 
-    n2 "HeHhhHhHH..."
+    yamato "Why won't ya finish me already!?"
 
-    n2 "nO."
+    MC "HeHhhHhHH..."
 
-    n2 "wOuLdn’t bE fUn."
+    MC "nO."
 
-    n2 "wOuNdEd mEaT dOeSn’t rUn fAr."
+    MC "wOuLdn’t bE fUn."
 
-    n2 "It lEaKs."
-
-    n2 "eAsIeR tO sMeLl."
+    MC "tHE rEd mOOn's NoT HeRE Yet."
 
     show yamato panting at midright
 
-    yamato "You... freak—"
+    yamato "You... freak--"
 
-    n2 "{shk}My mEaL.{/shk}"
+    MC "{shk}RuN. RuN, lITttLE mUTt.{/shk}"
 
-    play sound "sfx/flesh_peel.ogg"
-    $ renpy.pause(0.4)
+    MC "i’LL mAkE sUrE iT hUrTs wHeN i fInD yOu."
 
-    n2 "sTiLl wArM."
+    yamato "Damn it... Damn it to hell!"
 
-    show yamato stepback at midright
-    play sound "sfx/step_back.ogg"
+    yamato "I'll be back t' kill ya, just ya wait!"
 
-    n2 "gO aHeAd."
-
-    n2 "rUn."
-
-    n2 "i’LL mAkE sUrE iT hUrTs wHeN i fInD yOu."
-
-    hide yamato with dissolve
+    ## yamato runs
 
     n "Yamato..."
 
     n "...don’t come back."
 
-    n "Don’t give him what he wants..."
+    n "Don’t give it what it wants..."
 
-    scene black with fade
-    $ renpy.pause(2.5)
+    centered "One Day Before The Red Moon."
 
-    return
-label loop3_yamato_wait:
+    n2 "lOoK aT tHE mOOn, sPiLLiNg {w}bLoOd fOr mE."
 
-    scene bg shrine_night with fade
-    play sound "sfx/redmoon_hum.ogg" loop
-    show screen red_moon_effect
-    show screen blood_pulse_effect
-
-    n2 "ThE mOoN sInGs."
-
-    n2 "lOoK aT iT, sPiLLiNg {w}bLoOd fOr mE."
-
-    n2 "hHhAhhh~ {w}hHhHAhHhAha—"
-
-    play sound "sfx/flesh_peel.ogg"
-    $ renpy.pause(0.3)
-
-    n2 "tHe sKiN's gOnE nOw."
-
-    n2 "sLiDeD oFf mY sHoULdEr lIkE oLd cLoTh."
-
-    n2 "mY jAw sAgS. mY hAnDs dRip."
-
-    n2 "bUt i’m sTiLL sMiLiNg."
-
-    n2 "aNd hE’s sTiLL hIdInG."
+    n2 "hHhAhhh~ {w}hHhHAhHhAha--"
 
     n "..."
 
-    n "He’s not hiding."
+    n2 "YouR sKiN's gOnE nOw."
 
-    n "He’s bleeding."
+    n2 "WhERe, wheRE is YoUR FriENd?"
 
-    n "He’s hurt because you let him go."
-
-    n "He’s not a meal—he’s—"
-
-    n2 "mY mEaT."
-
-    n2 "mY mEaT."
-
-    n2 "mY mEaT."
-
-    play sound "sfx/gurgle_mouth.ogg"
-    $ renpy.pause(0.2)
+    n2 "WheRe is MY mEaT?"
 
     n2 "I cAn smELL hIs swEaT. {w}hIs rIbS."
 
@@ -254,257 +166,126 @@ label loop3_yamato_wait:
 
     n "..."
 
-    n "Please."
+    n "Stop it..."
 
     n2 "He’s tRyInG tO hOlD oN."
 
-    n2 "He’s rEsTiNg, rEpAiRiNg, rEpEaTiNg."
-
-    n2 "aNd i’m {i}lEtTiNg hIm~{/i}"
-
-    play sound "sfx/throat_rattle.ogg"
+    n2 "He’s trYINg to HeAL aNd i’m {i}lEtTiNg hIm~{/i}"
 
     n2 "dO yOu kNoW wHy?"
 
-    n "No. {w}Please don’t tell me."
+    n "No. I don't WANT to know!?"
 
-    n2 "BeCaUsE iT’s bEtTeR wHeN tHeY tHiNk tHeY hAvE a cHaNcE."
+    n2 "BeCausE iT’s bEtTeR wHeN tHeY tHiNk tHeY hAvE a cHaNcE."
 
-    n2 "tHeY bReAtHe bEtTeR. {w}BlEeD bEtTeR."
+    n2 "TheY'Ll tAsTe sWeEtEr thaT WaY."
 
-    n2 "tAsTe sWeEtEr."
+    n "You... monster.. ."
 
-    n "You’re a monster."
-
-    n2 "YoU'rE a bOdY."
-
-    n2 "I’m tHe hUnGeR tHaT wAs hIdInG iN yOu aLL aLoNg."
-
-    n "Don’t hurt him."
-
-    n "Please, not like this—"
-
-    n2 "It wOn'T bE lIkE tHiS."
-
-    n2 "iT wILL bE wOrSe."
+    n2 "cOrReCT."
 
     scene black with fade
     $ renpy.pause(2.5)
 
-    return
-label loop3_yamato_final_duel:
-
-    scene bg shrine_field_night with fade
-    play music "bgm/redmoon_throb.ogg" fadein 2.0
-    play sound "sfx/redmoon_hum.ogg" loop
-    show screen red_moon_effect
-    show screen blood_pulse_effect
+    centered "DAY OF RED MOON."
 
     n2 "FiNaLlY."
 
     n2 "ThE rEd mOoN iS hErE."
 
-    n2 "i cAn sMeLL yOu, gAmEy oNe."
-
-    n2 "sLiCk wItH bLeEd. hAlF hEAlEd. pErFeCt."
-
-    play sound "sfx/steps_dirt.ogg"
-
-    show yamato determined at midright with dissolve
+    MC "i cAn sMeLL yOu, o'gAmEy oNe."
 
     yamato "..."
 
-    play sound "sfx/sword_unsheath.ogg"
+    MC "I sEE yOUr Limp aND YeT yOU DEciDE tO FigHT Me StIll."
 
-    show yamato injured at midright
+    yamato "A real man never backs down from a duel."
 
-    n2 "yOu lImP."
-
-    n2 "bUt yOu cOmE."
-
-    yamato "This is sacred ground now."
-
-    yamato "I set the stones. The salt. The line."
-
-    yamato "This is a duel, monster."
-
-    n2 "A gAmE?"
-
-    yamato "A rite."
-
-    yamato "For my friend. [player_name]."
-
-    n "..."
-
-    n2 "He rEmEmBeRs."
+    yamaro "For [persistent.player_name]'s honor!"
 
     n "Yamato..."
 
-    yamato "For the others too."
+    yamato "A-And... For the others, too."
 
-    yamato "I—I can’t remember their faces. Their names."
+    yamato "I--I can’t remember their damned faces..."
 
-    yamato "...But they laughed with me once."
+    yamato "That just means ya ate 'em!"
 
-    yamato "And you took them."
+    yamato "I can't bring 'em back, but I sure hell can avenge 'em!"
 
-    n "He’s still fighting."
+    n "I always thought you hated me..."
 
-    n "For me."
+    MC "hOoOoOoO..."
 
-    n "Even now."
+    yamato "C'mon, Oni! Let's finish this!"
 
-    play sound "sfx/wind_rise.ogg"
+    MC "So HonORaBLe, tHis MuTt."
 
-    show yamato stance at midright
+    MC "So STupID."
 
-    yamato "Draw your blade."
+    yamato "COME!"
 
-    yamato "No more games. No more tricks. No more begging."
+    n "You don’t have to do this--"
 
-    yamato "We finish this."
+    n "Yamato, please--"
 
-    n2 "hHhhAhaHhAHh..."
-
-    n2 "FiNe."
-
-    n2 "I’ll mAkE yOuR hOnOr tAsTe lIkE sOiL aNd rUsT."
-
-    play sound "sfx/heartbeat_deep.ogg"
-
-    n2 "cOmE oN, yOuR bOnEs aRe cRacKiNg fRoM sTaNdiNg."
-
-    yamato "Then I’ll die standing."
-
-    scene black with fade
-    $ renpy.pause(2.5)
-
-    return
-label loop3_yamato_duel:
-
-    scene bg shrine_field_night with fade
-    play music "bgm/ritual_duel.ogg" fadein 2.0
-    show screen red_moon_effect
-    show screen blood_pulse_effect
-
-    n2 "He sTaNdS."
-
-    n2 "lEgS sHaKe, bUt hE sTaNdS."
-
-    show yamato stance at midright
-
-    yamato "This blade... was for monsters."
-
-    yamato "I thought it would stay sheathed forever."
-
-    yamato "But I’ll use it for you."
-
-    play sound "sfx/heartbeat_slow.ogg"
-
-    n "You don’t have to do this—"
-
-    n "Yamato, please—"
-
-    n "Just run—"
+    n "Just run--"
 
     play sound "sfx/metal_clash.ogg"
     $ renpy.pause(0.2)
 
     n2 "FiRsT sWiNg~"
 
-    n2 "tOo hEaVy. {w}tOo wIdE."
-
     play sound "sfx/slash_whoosh.ogg"
-
-    n2 "I dOn’T dOdGe."
 
     n2 "I lEt hIm gRaZe mY aRm."
 
     play sound "sfx/blood_drop.ogg"
 
-    n2 "hHhhAhhh— {w}iT hUrTs sO nIcE."
+    MC "hHhhAhhh-- {w}iT hUrTs sO nIcE."
 
     show yamato panting at midright
 
-    yamato "Why are you laughing?!"
+    yamato "Why t'hell are ya laughin'?!"
 
-    n2 "bEcAuSe yOu’Re nOt hErE tO wIn."
+    MC "I liKE PlaYIng WiTh FooD."
 
-    n2 "YoU’Re hErE tO tAsTe sLoW."
-
-    play sound "sfx/step_crush.ogg"
-
-    n2 "I sTeP oN tHe sAlT lInE."
-
-    n2 "hE fLinChEs."
-
-    yamato "Back off—!"
+    yamato "The hell--!"
 
     play sound "sfx/metal_clash2.ogg"
     $ renpy.pause(0.2)
 
     n2 "He sWiNgS aGaIn."
 
-    n2 "sPeEd. dEsPeRaTiOn."
-
     n2 "I lEaN bAcK."
 
     n2 "I tAp tHe bAcK oF hIs hAnD wItH mY fInGeRs."
 
-    n2 "LiKe a pAt."
+    MC "BoOP."
 
-    n "Stop."
-
-    n "Please stop playing with him—"
+    n "Please stop playing with him--"
 
     play sound "sfx/fist_impact.ogg"
 
-    show yamato injured at midright
+    yamato "Ghh--!!"
 
-    yamato "Ghh—!!"
+    yamato "You--"
 
-    n2 "tAp bEcOmEs pUnCh."
+    yamato "You’re enjoying this--"
 
-    n2 "He sPiTs."
+    n2 "iT’s a dAaaaAaAaAanCe."
 
-    n2 "He sTePs bAcK."
+    n "Yamato doesn't have any hope of winning--"
 
-    yamato "You—"
+    yamato "[persistent.player_name]..."
 
-    yamato "You’re enjoying this—"
+    yamato "We promised."
 
-    yamato "You’re a damn monster—"
+    yamato "Even if I die.... I’ll keep swingin'."
 
-    n2 "iT’s a dAnCe."
+    n "..."
 
-    n2 "YoU sTiLl knOw tHe sTePs."
-
-    n2 "bUt yOu’Re bReAkInG."
-
-    n "PLEASE—YAMATO, JUST RUN—"
-
-    yamato "I remember [player_name]'s voice."
-
-    yamato "And I remember the promise I made."
-
-    yamato "So I’ll keep swinging."
-
-    n2 "kEeP sWiNgInG, mEaT."
-
-    n2 "mAkEs tHe bLoOd wArMeR."
-
-    window hide
-    $ renpy.pause(3.0)
-
-    return
-label loop3_yamato_break:
-
-    scene bg shrine_field_night with fade
-    play music "bgm/ritual_duel.ogg" fadein 1.0
-    show screen red_moon_effect
-    show screen blood_pulse_effect
-
-    show yamato panting at midright
+    ## some more battle sfx
 
     play sound "sfx/heartbeat_soft.ogg"
 
@@ -514,24 +295,15 @@ label loop3_yamato_break:
 
     n2 "yOuR wOuNdS aRe oPeN aGaIn."
 
-    n2 "yOuR mOuTh sMeLlS lIkE cOpPeR."
-
-    play sound "sfx/step_crush.ogg"
-    $ renpy.pause(0.3)
-
-    n2 "bUt yOu'rE sTiLL pUtTiNg oN a sHoW~"
-
-    show yamato glare at midright
+    n2 "jUsT GivE Up aND DiE~"
 
     yamato "Shut up."
 
-    yamato "Shut up and fight me—"
+    yamato "Shut up and fight me seriously...!"
 
-    n2 "ThIs iS fIgHtInG."
+    MC "I AM fIgHtInG. {w}SerIOuSLy. {w}So YoUR MeaT iS TEndeRIzeD."
 
-    n2 "I’m fIgHtInG yOuR hOpE."
-
-    n2 "aNd lOoK—"
+    n2 "aNd lOoK--"
 
     play sound "sfx/flesh_peel.ogg"
     $ renpy.pause(0.2)
@@ -540,109 +312,67 @@ label loop3_yamato_break:
 
     n2 "jUsT lIkE mY sKiN."
 
-    show yamato blank at midright
+    yamato "AaaAaAghhhh!!!"
 
-    yamato "...Damn it."
-
-    yamato "Damn it..."
-
-    n "No—"
-
-    n "Don’t drop the sword—"
+    # decapitate? blood solatter?
 
     play sound "sfx/metal_drop.ogg"
 
-    n2 "ThErE iT iS."
+    MC "ThErE iT iS."
 
-    n2 "YoU’Re fInAlLy dOnE."
+    MC "YoU’Re fInAlLy dOnE."
 
-    n2 "aNd yEt— {w}yOu cAmE sO pRoUd."
+    MC "StUPiD MuTT. So LOuD... So PRoUd..."
 
-    n2 "sO bIg."
+    MC "LiKe yOu cOuLd sAvE aNyOnE..."
 
-    n2 "LiKe yOu cOuLd sAvE aNyOnE."
-
-    n2 "LiKe yOu wErE sTrOnGeR tHaN mE."
+    MC "LiKe yOu wErE sTrOnGeR tHaN mE...."
 
     play sound "sfx/heartbeat_distorted.ogg"
 
-    n2 "yOu wErEn’t."
+    MC "yOu wErEn’t."
 
-    n2 "yOu’rE nOt."
+    MC "yOu’rE nOt."
 
-    n2 "YoU’rE wEaKeR tHaN tHe oNe wHo lAy dOwN."
+    MC "YoU’rE wEaKeR tHaN tHiS SkIN I'm WeARiNg."
 
-    n2 "[player_name] {w}fOuGhT mE tOo."
+    MC "[persistent.player_name] {w}fOuGhT mE tOo."
 
-    n2 "ThEy dIeD sCrEaMiNg, bUt {i}wItH tHeIr tEeTh bArEd.{/i}"
+    MC "DIeD {i}wItH tEeTh bArEd.{/i}"
 
-    n2 "aNd yOu?"
+    MC "aNd yOu?"
 
-    n2 "yOu’rE oN yOuR kNeEs."
+    MC "yOu’rE oN yOuR kNeEs."
 
     show yamato kneel at midright
 
     play sound "sfx/breath_wet.ogg"
 
-    yamato "...They were stronger than me."
+    yamato "I know, damn it..."
 
-    yamato "...I know that now."
+    yamato "[persistent.player_name] was always, always stronger than me..."
 
-    n "Yamato—please—"
+    n "Yamato, please run...! I forgive you!"
 
-    n "Get up—"
+    n2 "He CAn'T."
 
-    n2 "nO. {w}LeT hIm sTaY."
+    MC "LoOk aT yOu~"
 
-    n2 "iT mAkEs tHe sAuCe cLeAnEr."
+    MC "yOu cAn’T eVeN rUn aNyMoRe."
 
-    window hide
-    $ renpy.pause(3.0)
+    n "DON’T--"
 
-    return
-label loop3_yamato_devour:
+    n "PLEASE--"
 
-    scene bg shrine_field_night with fade
-    play music "bgm/devour_theme.ogg" fadein 2.0
-    play sound "sfx/redmoon_hum.ogg" loop
-    show screen red_moon_effect
-    show screen blood_pulse_effect
-
-    show yamato kneel at midright
-
-    play sound "sfx/heartbeat_deep.ogg"
-
-    n2 "LoOk aT yOu~"
-
-    n2 "yOu cAn’T eVeN rUn aNyMoRe."
-
-    n2 "nO mOrE sWoRd. nO mOrE nAmEs."
-
-    play sound "sfx/slurp_soft.ogg"
-
-    n2 "jUsT yOuR fLeSh."
-
-    n "DON’T—"
-
-    n "PLEASE—"
-
-    n "YAMATO—GET UP—"
+    n "YAMATO--GET UP--"
 
     yamato "..."
 
-    play sound "sfx/fabric_clutch.ogg"
+    yamato "I still have... the sheath you gave me, [persistent.player_name]."
 
-    show yamato holdscabbard at midright
+    yamato "Even if I'll forget you in the end..."
 
-    yamato "I still have this."
-
-    yamato "The sheath you gave me."
-
-    yamato "Even if you forgot—"
-
-    yamato "Even if I forgot—"
-
-    yamato "...I’ll remember this pain."
+    yamato "...I’ll remember this pain {w}in hell."
 
     n2 "hHHhhHhh~"
 
@@ -652,9 +382,11 @@ label loop3_yamato_devour:
 
     n2 "bEcAuSe nOw yOu’LL tAsTe lIkE mEmOrIeS."
 
-    n "DON’T—"
+    n "DON’T--"
 
-    n "STOP—STOP—"
+    n "STOP--STOP--"
+
+    ## yamato screammmmm
 
     play sound "sfx/fleshtear_burst.ogg"
     $ renpy.pause(0.4)
@@ -667,24 +399,18 @@ label loop3_yamato_devour:
     play sound "sfx/devour_thickwet.ogg"
     $ renpy.pause(0.3)
 
-    n2 "gAmmEY cuT—"
-
-    n2 "RiCh. {w}StRoNg. {w}FiBeRs cOmE aPaRt wItH a tUg~"
+    n2 "cHeW--"
 
     play sound "sfx/chew_heavy.ogg"
     $ renpy.pause(0.5)
 
-    n2 "cHeW—"
+    n2 "cHeW--"
 
-    n2 "cHeW—"
+    n2 "cHeW--"
 
-    n2 "cHeW—"
+    n "HE WAS--"
 
-    n "STOP EATING HIM!!"
-
-    n "HE WAS—"
-
-    n "HE WAS THE LAST ONE—"
+    n "HE WAS THE LAST ONE--"
 
     play sound "sfx/fabric_fall.ogg"
 
@@ -701,18 +427,18 @@ label loop3_yamato_devour:
 
     n "Yamato..."
 
-    n "...I’m sorry."
+    n "You took everything from me..."
 
-    n2 "nO oNe lEfT tO rEmEmBeR hIm nOw."
+    n "And now..."
 
-    window hide
+    centered " A L L  Y O U R  F R I E N D S  A R E  D E A D"
+
     $ renpy.pause(3.0)
 
-    show text "{color=#FF0000}{size=+10}HONOR IS A FLAVOR TOO{/size}{/color}" with dissolve
-    $ renpy.pause(3.0)
-    hide text
+    $ persistent.yamato_dies = True
 
-    stop music fadeout 2.5
-    stop sound fadeout 2.5
+    $ persistent.loop3 = True
+
+    ## at the end of the route yamato dies
 
     return
