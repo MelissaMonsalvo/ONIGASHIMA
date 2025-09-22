@@ -8,6 +8,8 @@ define fonts = ["DejaVuSans.ttf", "NotoSans-Regular.ttf", "TurretRoad-Regular.tt
 default font_index = 0  # Índice actual
 define persistent.dialogue_font = "NotoSans-Regular.ttf"
 
+
+
 # Ejemplo de estilo del diálogo usando la fuente seleccionada
 init python:
     def update_dialogue_font():
@@ -63,13 +65,15 @@ screen config_dialogue():
                 frame:
                     background None
                     xsize 100
-                    $ prefs = persistent.dialogue_size
+                    $ preff = preferences.font_size
+                    $ prefs = int(preff / 1.5 * 100)
                     text "[prefs]"
                 frame:
                     background None
                     xsize 524
-                    bar value FieldValue(persistent, "dialogue_size", range=50, max_is_zero=False, offset=0, step=1):
-                        range 50
+                    #bar value FieldValue(persistent, "dialogue_size", range=50, max_is_zero=False, offset=0, step=1):
+                    bar value Preference("font size") yalign 0.5: #Preference("font size")
+                        #range 50
                         left_bar "gui/game menu/left.png"
                         right_bar "gui/game menu/right.png"
                         ysize 68
@@ -229,6 +233,8 @@ screen config_audio():
                         action [SetVariable("pref_muteall",False), Preference("all mute", "toggle")]
                         sensitive pref_muteall  # Solo activa si las transiciones están deshabilitadas
 
+
+
 default self_voicing = False
 default image_captions = False
 
@@ -242,48 +248,12 @@ screen config_accessibility():
             spacing 30
             xsize 500
             ysize cell_hight_3
-            label _("Sound Captions") yalign 0.1 text_style "estilo_label"
-            label _("Image Captions") yalign 0.1 text_style "estilo_label"
+            # label _("Sound Captions") yalign 0.1 text_style "estilo_label"
+            # label _("Image Captions") yalign 0.1 text_style "estilo_label"
             label _("Self-Voicing") yalign 0.1 text_style "estilo_label"
         vbox:
-            #textbutton "Self-Voicing":
-                #action Preference("self voicing", "toggle")
 
-            ### Image Captions #############################################################################
-            # hbox:
-            #     ysize cell_hight_4
-            #     frame:
-            #         background None
-            #         xsize 100
-            #         imagebutton:
-            #             idle "gui/settings/btn_left_arrow_idle.png"  
-            #             hover "gui/settings/btn_left_arrow_hover.png"  
-            #             xalign 1.0 
-            #             action [SetVariable("image_captions", True), Preference("accessibility", "image_captions")]
-            #             sensitive not image_captions  # Solo activa si las transiciones están habilitadas
-                    
-            #     frame:
-            #         background None
-            #         xsize 300
-            #         # Columna 3 - Texto
-            #         if image_captions:
-            #             text _("ON"):
-            #                 xalign 0.5
-                            
-            #         else:
-            #             text _("OFF"):
-            #                 xalign 0.5
-                            
-            #     frame:
-            #         background None
-            #         xsize 100
-            #         # Flecha derecha (para activar - Skip)
-            #         imagebutton:
-            #             idle "gui/settings/btn_right_arrow_idle.png"  
-            #             hover "gui/settings/btn_right_arrow_hover.png"  
-            #             action [SetVariable("image_captions",False), Preference("accessibility", "image_captions")]
-            #             sensitive image_captions  # Solo activa si las transiciones están deshabilitadas
-            
+
             ### self_voicing #############################################################################
             hbox:
                 ysize cell_hight_4
