@@ -30,17 +30,36 @@ label loop2_shiori:
 
     shiori "Mmhm."
 
+
+    scene black
+    with out_eye
+
     n "You close your eyes and the world stops spinning."
 
     shiori "...It’s strange though."
+
+    stop music
 
     shiori "I can’t...{w=0.1} hear your heartbeat."
 
     MC "...!"
 
-    n "She lifts her head just a little and stares at you with a {sc=4}knowing smile.{/sc}"
+    scene shrine night with in_eye:
+        zoom 0.5
 
-    n2 "{b}Hee--heeH--hhhh--KCH--KKHahHhahhh--{/b}"
+    show shi normal:
+        zoom 0.8
+        xalign 0.1
+        yoffset -20
+        xoffset -150
+    show darken
+    with vpunch
+
+    play music "spooky.mp3"
+
+    n "She lifts her head just a little and stares at you with a knowing smile."
+
+    n2 "Hee--{w=0.3}heeH--{w=0.3}hhhh--{w=0.3}KCH--KKHahHhahhh--"
 
     n "Your hand clenches,{w=0.2} you want to move, to push Shiori away,{w=0.3} but you can't."
 
@@ -56,27 +75,32 @@ label loop2_shiori:
 
     shiori "We can stay this way until you don't feel lonely anymore~"
 
+    show shi normal:
+        zoom 0.8
+        xalign 0.1
+        yoffset -20
+        xoffset -150
+
+        linear 0.5 zoom 0.85 xoffset -200 yoffset -40
+
     n "She’s curling in closer{w=0.2} and presses her head even more to your shoulder."
 
-    shiori "{i}You're cold now, you know?{w=0.2} Like, literally.{/i}"
+    shiori "You're cold now, you know?{w=0.2} Like, {i}literally.{/i}"
 
-    shiori "{sc=5}As cold as a corpse.{/sc}"
+    shiori "{sc=1}As cold as a corpse.{/sc}"
 
-    MC "Shiori-chan... You're... freaking me out, heh..."
+    MC "Shiori-chan... {w=0.2}You're... {w=0.2}freaking me out, heh..."
 
-    shiori "{glitch=10}Really?{/glitch} I think I'm the one who feels afraid."
+    shiori "{glitch=5}Really?{/glitch} I think I'm the one who feels afraid."
 
     shiori "But I'll try not to, so you'd feel better."
 
-    n "She’s curling in closer and presses her head even more to your shoulder."
-
-    n2 "{b}...Soon.{/b}"
-
-    n2 "{b}Your meat will be mine.{/b}"
-
-    n "{color=#ff002e}...No...{/color}"
+    stop music
 
     scene black
+    with fade
+
+    shiori "...{w=0.5}Yamakui-sama."
 
     pause 0.3
 
@@ -114,6 +138,16 @@ label loop2_shiori:
 
     n "Shiori’s already waiting."
 
+    show shi normal:
+        zoom 0.35
+        xanchor 0.5
+        xalign 0.4
+        yalign -0.1
+        yoffset 0
+        yzoom 1.0
+        xzoom 1.0
+    with dissolve
+
     shiori "You're such a mess again, [persistent.player_name]-sama~"
 
     shiori "Come here. I’ll clean you up."
@@ -122,11 +156,28 @@ label loop2_shiori:
 
     shiori "Aww, just let Shiori take care of you. {w}Please?"
 
+    scene shrine night:
+        zoom 0.5
+        xalign 0.5
+        linear 0.55 zoom 0.66
+
+    show shi normal:
+        zoom 0.35
+        xanchor 0.5
+        xalign 0.4
+        yalign -0.1
+        yoffset 0
+        yzoom 1.0
+        xzoom 1.0
+        linear 0.4 zoom 0.45
+
     n "She prepares warm water and lifts the cloth with both hands, with a smile."
 
     n "The cloth touches your cheek..."
 
-    play sound "sfx/flesh_squelch.ogg"
+    play sound "sfx/stretch.mp3"
+    show darken2
+    with flashred
 
     n "...and peels the skin away."
 
@@ -140,6 +191,11 @@ label loop2_shiori:
 
     n "She wipes again...{w=0.2} and a piece of muscle {sc=5}sloughs{/sc} off."
 
+    $ _prev_music_volume = _preferences.volumes["music"]
+
+    $ decrease_music_volume(0.5)
+    $ renpy.block_rollback()
+
     n "..."
 
     n "..."
@@ -148,29 +204,40 @@ label loop2_shiori:
 
     n "{i}...That’s... that’s not...{/i}"
 
-    n "{sc=6}That was mine.{/sc}"
+    $ decrease_music_volume(0.5)
+    $ renpy.block_rollback()
+
+    n "That was {sc=2}mine.{/sc}"
 
     n "My muscle, my skin, my--"
 
     n "{glitch=10}...You're wearing my face...{/glitch}"
 
-    n2 "{b}YOU'RE GETTING IT NOW, LITTLE GHOST~{/b}"
+    n2 "{cps=20}YOU'RE GETTING IT NOW, LITTLE GHOST~{/cps}"
 
-    n2 "{b}TOOK YOU LONG ENOUGH--KkkkhHrrA--Hahha--{/b}"
+    n2 "{cps=20}TOOK YOU LONG ENOUGH--{w=0.1}KkkkhHrrA--{w=01}Hahha--{/cps}"
 
-    n2 "{b}Your face fit SO WELL.{/b}"
+    n2 "{cps=20}Your face fit SO WELL.{/cps}"
 
-    n "{color=#ff002e}N-No, that can't be...!{/color}"
+    n "N-No, that can't be...!"
 
     n "That was...{w=0.2} the fight...{w=0.3} The final battle...?"
 
+    stop muzak
+    $ restore_music_volume()
+    $ restore_music_volume()
+
     n "I killed you. I remember killing you! I stabbed you...!"
 
-    n2 "{b}YOU. DIED. I. ATE. YOU.{/b}"
+    pause 0.5
 
-    n2 "{b}But not all of you, so they'd remember you. Because I needed your skin.{/b}"
+    play music "noinomai.mp3"
 
-    n2 "{b}You’re still here because I didn’t finish aaalllll of you.{/b}"
+    n2 "YOU. {w}DIED."
+
+    n2 "I needed your skin."
+
+    n2 "You’re still here because I didn’t finish {cps=10}aaalllll{/cps} of you."
 
     n "...."
 
@@ -182,27 +249,36 @@ label loop2_shiori:
 
     n "Shiori,{w=0.2} stop,{w=0.2} run.{w=0.2} Get away from me--!"
 
+    play sound "sfx/stretch.mp3"
+    with flashred
+    show darken2
+
     shiori "There, better."
 
     shiori "You always try to hide, [persistent.player_name]-sama...{w=0.3} but I think you’re more beautiful like this."
 
     n "{glitch=9}Shiori-chan, what are you saying!?{/glitch}"
 
+    MC "Mm."
+
     n "I can't move,{w=0.2} my mouth won't say anything, but it's smiling--"
 
     n "{cps=14}Why are you smiling!?{/cps}"
 
-    n2 "{b}...Because the Red Moon’s coming.{/b}"
+    n2 "...Because the Red Moon’s coming."
 
-    n2 "{b}Better make more room inside.{/b}"
+    n2 "{cps=10}Better make more room inside.{/cps}"
 
-    n "{color=#ff002e}No, I refuse to be controlled like this!!!{/color}"
+    n "{sc=3}No, I refuse to be controlled like this!!!{/sc}"
 
-    n "{sc=8}I’m still ME!{/sc}"
+    n "{sc=3}I’m still ME!{/sc}"
 
-    n "{sc=7}I can still fight--! These are my muscles, so I can--{/sc}"
+    n "{sc=3}I can still fight--! These are my muscles, so I can--{/sc}"
 
-    ## so the player can rapidly click to move / resist here but nothing happens as the screen moves
+    call screen multi_click_button(total_clicks=7, next_label="after_many_clicks")
+    return
+
+label after_many_clicks:
 
     n "I--"
 
@@ -236,43 +312,59 @@ label loop2_shiori:
 
     shiori "You can stay with Shiori-chan until the red moon comes!"
 
-    n "She spreads her arm and hugged you--{w}me--{W}what--"
+    show shi normal:
+        zoom 0.45
+        xanchor 0.5
+        xalign 0.4
+        yalign -0.1
+        yoffset 0
+        yzoom 1.0
+        xzoom 1.0
+
+        linear 10 zoom 0.8 yoffset -400
+    pause 0.4
+    scene black
+    with out_eye
+
+
+    n "She spreads her arm and hugged you--{w}me--{w}what--"
 
     n "What is happening?"
 
     n2 "Hush."
 
     n2 "Go to sleep, {w=0.1}ghost."
-
-    stop music
-
-    scene black
-
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THE RED MOON IS HERE{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    scene moon6
-    with fade
-    pause 0.2
-    scene moon7
-    with fade
-
-    stop sound
-
-    pause 0.5
-
+    n "..."
     n "..."
 
     n "...!!!"
 
     n "Where are we...!?"
+
+    scene shrine day:
+        zoom 0.5
+    with in_eye
+
+    play sound "sfx/suzu.wav"
+
+    show shi normal:
+        zoom 0.27
+        xanchor 0.5
+        xalign 0.32
+        yalign -0.1
+        yoffset 26
+        yzoom 1.0
+        xzoom 1.0
+
+        easein 0.19 zoom 0.31 xalign 0.36 yoffset -18
+        easeout 0.15 zoom 0.29 xalign 0.355 yoffset 30
+
+        easein 0.14 zoom 0.33 xalign 0.39 yoffset 10
+        easeout 0.13 zoom 0.3 xalign 0.38 yoffset 20
+
+        linear 0.18 zoom 0.35 xalign 0.4 yoffset 0
+
+
 
     shiori "Oh~ Good morning, [persistent.player_name]-sama..."
 
@@ -282,15 +374,13 @@ label loop2_shiori:
 
     shiori "I stubbed my toe real bad. Clumsy ol' me~"
 
-    n2 "Blood and red meat."
-
     n2 "HUNGRY."
 
     n2 "Hungryhungryhungry--"
 
-    n2 "I want it. I want her."
+    n2 "I want it. {w=0.1}I want {i}her.{/i}"
 
-    n2 "GIVE IT TO ME--{/nw"
+    n2 "GIVE IT TO ME--{nw}"
 
     n "No, stop, stop putting those thoughts in my head!"
 
@@ -300,19 +390,52 @@ label loop2_shiori:
 
     shiori "Is it because of the blood?"
 
-    n "Run, run away, Shiori=chan...!"
+    n "{sc=1}Run, run away,{/sc} Shiori-chan...!"
 
     n "Tonight is--"
 
-    n2 "THE RED MOON."
+    stop music
+    stop muzak
 
-    n2 "Time to feed."
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THE TIME TO FEED{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+    pause 0.5
 
     scene black
 
     n "Ah, I passed out again..."
 
     n "Did Shiori-chan knocked me out, or did you--"
+    scene shrine night:
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+        zoom 0.5
+    with in_eye
+
+    show shi normal:
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+        xanchor 0.5
+        yalign -0.1
+        yzoom 1.0
+        xzoom 1.0
+        zoom 0.35
+        xalign 0.4
+        yoffset 0
+    show darken2
+    with dissolve
+
+    play music "Blood Ritual.mp3"
 
     shiori "{sc=5}It's time, Yamakui-sama~{/sc}"
 
@@ -324,17 +447,28 @@ label loop2_shiori:
 
     n "She kneels in front of the altar and unfolds the cloth she's been carrying."
 
+    show frame2:
+        zoom 0.4
+        xanchor 0.5
+        xalign 0.5
+        yalign 0.3
+    show bone:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.5
+        yalign 0.33
+        yzoom -1.0
+    with dissolve
+
     n "{cps=13}Three tiny bones rest inside...{w=0.2} those look too small for an anima--{/cps}{nw}"
 
     n "Oh....{w=0.3} no."
 
     n "{glitch=8}Those are her--{/glitch}"
 
-    n2 "{i}HhhhaaAAhghghghggh--{/i}"
-
-    n2 "{b}TOE. SHE GAVE HER TOES.{/b}"
-
-    n2 "LOVE. {w=0.2}LOVE. {w=0.2}I love her."
+    hide frame2
+    hide bone
+    with dissolve
 
     shiori "I thought love should hurt sometimes."
 
@@ -346,19 +480,17 @@ label loop2_shiori:
 
     n "This isn't the Shiori-chan I know.{w=0.2} This can’t be--"
 
-    n "She--she was always scared of blood--"
+    n "She--{w=0.2}she was always scared of blood--"
 
     shiori "You won’t leave me, nee Yamakui-sama?"
 
-    n2 "{b}NEVER.{/b}"
+    MC "{w=0.2}...Never."
 
     n "She doesn’t know what she’s saying--"
 
-    n "{sc=6}She’s broken.{w=0.2} She’s broken and bleeding and smiling like nothing’s wrong--{/sc}"
-
     shiori "Tonight, I want you to eat well."
 
-    shiori "{glitch=7}So you stay strong~{/glitch}"
+    shiori "{glitch=1}So you stay strong~{/glitch}"
 
     n "Shiori chan--"
 
@@ -368,11 +500,9 @@ label loop2_shiori:
 
     n "This isn’t what I died for."
 
-    n "{sc=5}This isn’t the village I tried to save.{/sc}"
+    n "{sc=2}This isn’t the village I tried to save.{/sc}"
 
     n "{cps=12}Am I going insane, or is everyone is insane from the start?{/cps}"
-
-    centered "{color=#ff002e}THE RED MOON IS HERE.{/color}"
 
     shiori "Yamakui-sama, everyone said that you're evil."
 
@@ -382,11 +512,11 @@ label loop2_shiori:
 
     shiori "Shiori's so alone, you know?"
 
-    shiori "{i}I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other.{/i}"
+    shiori "I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other."
 
     shiori "Yamato-kun only cares about being the best."
 
-    shiori "{sc=5}So let me be with you forever, so Shiori won't get lonely~{/sc}"
+    shiori "So let me be with you forever, so Shiori won't get lonely~"
 
 
     pause 1.0
@@ -397,39 +527,123 @@ label loop2_shiori:
 
     MC "Come closer, then."
 
-    play sound "sfx/mouth_stretch.ogg"
+    play muzak "sfx/shiori_eaten.mp3"
 
-    #mc sprite is now full yamakui
+    scene flesh:
+        matrixcolor BrightnessMatrix(-0.5)
 
-    pause 0.5
+        parallel:
+            linear 1.2 zoom 1.02 blur 2
+            linear 1.2 zoom 1.0 blur 1
+            repeat
+
+        parallel:
+            linear 0.1 matrixcolor BrightnessMatrix(-1)
+            linear 0.1 matrixcolor BrightnessMatrix(-0.5)
+            pause 2.0
+            repeat
+
+        parallel:
+            linear 0.05 xoffset -5 yoffset 3
+            linear 0.05 xoffset 5 yoffset -2
+            linear 0.05 xoffset 0 yoffset 0
+            pause 1.5
+            repeat
+
+        parallel:
+            linear 0.2 blur 6
+            linear 0.4 blur 2
+            pause 3.0
+            repeat
+
+    play music "sfx/monstermunch.mp3"
 
     n "..."
 
-    n "...."
+    $ renpy.pause(1.0)
 
-    n "......."
+    shiori "{sc=4}Ngh...{/sc}"
+
+    show darken2
+    with dissolve
+    pause 0.3
+    hide blood
+    with dissolve
+
+    play sound "sfx/gulp.ogg"
+
+    shiori "...I love..."
+
+
+    play sound "sfx/squelch.mp3"
+
+    show darken2
+    with dissolve
+    pause 0.3
+    hide blood
+    with dissolve
+
+    stop sound
+
+
+    play sound "sfx/splurt.mp3"
+
+    show darken2
+    with dissolve
+    pause 0.3
+    hide blood
+    with dissolve
+
+
+
+    stop muzak
+    play sound "sfx/tearflesh.wav"
+
+    show darken2
+    with dissolve
+    pause 0.3
+    hide blood
+    with dissolve
+    n2 "slrrrp."
+
+    pause 0.5
 
     n "...Why...."
-    pause 1.5
 
-    scene black with slow_dissolve
-
-    play sound "sfx/wet_swallow.ogg"
-    pause 0.3
-    play sound "sfx/wet_breathing.ogg"
-
-    n2 "slrrrp."
+    play sound "sfx/slurrp.mp3"
     pause 0.5
     n2  "glk. glk. glk."
     pause 0.5
-    n2 "{color=#ff0000}{size=+10}I LOVE YOU, SHIORI{/size}{/color}"
-    pause 1.5
 
-    stop sound fadeout 2.0
+    scene black
+
+    stop sound
+    stop music
+    stop muzak
 
     n "..."
 
     n "I should’ve stayed dead."
+
+
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}{font=LibreBaskerville-Regular.ttf}{size=40}I LOVE YOU TOO, SHIORI{/size}{/font}{/color}{/atl}{/color}"
+
+    pause 0.2
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}{font=LibreBaskerville-Regular.ttf}{size=40}O N E M O R E T O G O{/size}{/font}{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
+
+
 
     $ persistent.shiori_dies = True
 

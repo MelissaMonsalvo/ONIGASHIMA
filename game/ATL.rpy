@@ -126,10 +126,36 @@ init python:
     config.overlay_functions.append(drunk_haze_overlay)
 
 
+screen multi_click_button(total_clicks=10, next_label="after_many_clicks"):
+    default current_click = 0
+    $ clicks_left = total_clicks - current_click
+
+    # Clickable area covers entire screen
+    button:
+        action [
+            SetScreenVariable("current_click", current_click + 1),
+            Function(renpy.transition, sshake),
+            If(current_click + 1 >= total_clicks, Jump(next_label), NullAction())
+        ]
+        xysize (config.screen_width, config.screen_height)
+        style "transparent_button"
+
+        text ">> S T RU G G L E !!!! <<" xalign 0.5 yalign 0.5 size 40 color "#ff2222" outlines [(2, "#0008", 0, 0)]
+
+style transparent_button is default
+style transparent_button:
+    background None
+    foreground None
+    hover_background None
+    insensitive_background None
+    padding (0, 0)
+
+screen struggle_qte_end:
+    timer 0.1 action [Hide("struggle_qte"), Return()]
+
 transform bg_run_shake:
     zoom 0.5
 
-    # Quick shaky running effect
     linear 0.07 xoffset -24 yoffset 7 zoom 0.505
     linear 0.08 xoffset 18 yoffset -11 zoom 0.52
     linear 0.07 xoffset -13 yoffset 5 zoom 0.5
@@ -230,6 +256,7 @@ transform horror_jitter:
     linear 0.05 xoffset renpy.random.randint(-18, 18) yoffset renpy.random.randint(-11, 11)
     linear 0.05 xoffset renpy.random.randint(-6, 6) yoffset renpy.random.randint(-6, 6)
     repeat
+
 
 transform menu_blur_dark:
     blur 8     # change blur strength here; try 12 for heavier blur
@@ -401,6 +428,7 @@ image wine = "images/wine.png"
 image charm = "images/charm.png"
 image charm2 = "images/charm2.png"
 image bento = "images/bento.png"
+image bone = "images/bone.png"
 
 image moon1 = "MOON/moon1.jpg"
 image moon2 = "MOON/moon2.jpg"
