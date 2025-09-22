@@ -974,6 +974,10 @@ screen preferences():
 
         if opconfig == 1:
             use config_general2()
+        elif opconfig == 2:
+            use config_audio()
+        elif opconfig == 3:
+            use config_dialogue() 
 
     use confirm_config()
 
