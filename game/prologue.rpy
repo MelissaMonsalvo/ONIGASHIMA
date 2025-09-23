@@ -892,7 +892,7 @@ label beforefirstloop:
     stop sound
 
     jump loop1_yamato_mandatory1
-
+    #jump map
 
 
     return
