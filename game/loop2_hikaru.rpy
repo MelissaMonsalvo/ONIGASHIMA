@@ -573,6 +573,9 @@ label loop2_hikaru:
 
     ## shing sai draw
 
+    play sound "sfx/shing.mp3"
+    with hpunch
+
     n "Hikaru draws their sai now,{w=0.2} ready to fight to the death{w=0.3} and bring you down with them."
 
     n2 "{b}Like that will help.{/b}"

@@ -518,16 +518,12 @@ label yyyesss:
         xzoom 1
         yzoom 1.0
 
-        # Stand up and turn (flip with xzoom, slight yoffset up for stand)
         linear 0.18 yoffset 130 xzoom -1
 
-        # Brief pause as he plants feet (optional, looks natural)
         pause 0.12
 
-        # Start running to left, zoom out, move offscreen left
         easeout 0.42 xalign -0.2 xoffset -320 zoom 0.32 yoffset 160
 
-        # Optionally fade out as he runs
         linear 0.16 alpha 0
 
     play sound "sfx/run.mp3"
@@ -699,23 +695,17 @@ label loop2_yamato_mandatory4:
         yoffset 0
         xoffset 1000
 
-        # Sudden jerk left-down and shrink
         linear 0.05 xoffset 982 yoffset 18 xzoom 1.04 yzoom 0.93
         pause 0.06
-        # Snap right-up, tall/stretched, like joints snap
         linear 0.03 xoffset 1024 yoffset -19 xzoom 0.93 yzoom 1.07
         pause 0.10
-        # Freeze with weird scale (too narrow)
         linear 0.02 xoffset 1012 yoffset 6 xzoom 0.97 yzoom 1.06
         pause 0.13
-        # Glitch: quick return, then a pause
         linear 0.01 xoffset 1000 yoffset 0 xzoom 1.0 yzoom 1.0
         pause 0.03
-        # Jerky shudder, barely moves
         linear 0.04 xoffset 991 yoffset 2 xzoom 1.01 yzoom 0.97
         linear 0.03 xoffset 1005 yoffset 5 xzoom 0.98 yzoom 1.03
         pause 0.07
-        # Hold, as if body “locks up”
         pause 0.18
         repeat
 
