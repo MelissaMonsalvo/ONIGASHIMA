@@ -919,16 +919,16 @@ define btn_skin_red = {
 }
 
 
-default use_alt_skin = False
-
 # persistent.loop1:
 
 
 screen preferences():
 
     tag menu
-    add "gui/menu_background2.jpg"
+    
     style_prefix "preferencessidemenu"
+    add "gui/menu_background2.jpg"
+
 
     $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
 
@@ -1029,9 +1029,9 @@ screen confirm_config():
                     hover skin["hover_2"]
                     xalign 0.5
                     if main_menu:
-                        action Return() #Hide("preferences")
+                        action ShowMenu("main_menu") #action Return() 
                     else:
-                        action Hide("preferences")
+                        action Return() #Hide("preferences")
                 text "CONFIRM" xalign 0.3 yalign 0.5 size 30
             #Right button
             frame:
@@ -1044,9 +1044,9 @@ screen confirm_config():
                     hover skin["hover_2"]
                     xalign 0.5
                     if main_menu:
-                        action Return() #Hide("preferences")
+                        action ShowMenu("main_menu") #Return() 
                     else:
-                        action Hide("preferences")
+                        action Return() #Hide("preferences")
                 text "BACK" xalign 0.3 yalign 0.5 size 30
 
 
