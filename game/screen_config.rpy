@@ -18,8 +18,16 @@ init python:
         #persistent.dialogue_font = fonts[font_index]
         #style.say_dialogue.font = fonts[font_index]
 
+
+define bar_skin_yellow = "gui/game menu/left.png"
+define bar_skin_red = "gui/game menu/left_red.png"
+
+
 screen config_dialogue():
     style_prefix "estilo"
+
+    $ bar_skin = bar_skin_yellow if persistent.loop1 else bar_skin_red
+
     hbox:
         xsize 1060
         yoffset 30
@@ -53,7 +61,7 @@ screen config_dialogue():
                     xsize 524
                     bar value FieldValue(preferences, "text_cps", range=200, max_is_zero=False, offset=0, step=1): #Preference("text speed"):
                         range 200
-                        left_bar "gui/game menu/left.png"  
+                        left_bar bar_skin  
                         right_bar "gui/game menu/right.png"  
                         ysize 68
                         thumb None
@@ -74,7 +82,7 @@ screen config_dialogue():
                     #bar value FieldValue(persistent, "dialogue_size", range=50, max_is_zero=False, offset=0, step=1):
                     bar value Preference("font size") yalign 0.5: #Preference("font size")
                         #range 50
-                        left_bar "gui/game menu/left.png"
+                        left_bar bar_skin
                         right_bar "gui/game menu/right.png"
                         ysize 68
                         thumb None
@@ -94,7 +102,7 @@ screen config_dialogue():
                     background None
                     xsize 524
                     bar value FieldValue(preferences, "afm_time", range=30.0, max_is_zero=False, offset=0, step=0.1):
-                        left_bar "gui/game menu/left.png"  
+                        left_bar bar_skin 
                         right_bar "gui/game menu/right.png"  
                         ysize 68
                         thumb None
@@ -146,6 +154,7 @@ default pref_muteall = False
 
 screen config_audio():
     style_prefix "estilo"
+    $ bar_skin = bar_skin_yellow if persistent.loop1 else bar_skin_red
     hbox:
         xsize 1060
         yoffset 30
@@ -170,7 +179,7 @@ screen config_audio():
                 xsize 524
                 ysize cell_hight_4
                 bar value Preference("music volume"): 
-                    left_bar "gui/game menu/left.png"  
+                    left_bar bar_skin 
                     right_bar "gui/game menu/right.png"  
                     ysize 68
                     thumb None
@@ -181,7 +190,7 @@ screen config_audio():
                 xsize 524
                 ysize cell_hight_4
                 bar value Preference("sound volume"): 
-                    left_bar "gui/game menu/left.png"  
+                    left_bar bar_skin  
                     right_bar "gui/game menu/right.png"  
                     ysize 68
                     thumb None
@@ -192,7 +201,7 @@ screen config_audio():
                 xsize 524
                 ysize cell_hight_4
                 bar value Preference("voice volume"): 
-                    left_bar "gui/game menu/left.png"  
+                    left_bar bar_skin  
                     right_bar "gui/game menu/right.png"  
                     ysize 68
                     thumb None

@@ -897,18 +897,42 @@ style preferencessidemenu_text:
     color "#000000"  # Color naranja
 
 
+
+
+# En screens.rpy o antes del screen:
+define btn_skin_yellow = {
+    "idle" : "gui/game menu/btn_nav_idle_background.png",
+    "hover": "gui/game menu/btn_nav_hover_background.png",
+    "sel_idle": "gui/game menu/btn_nav_selected_idle_background.png",
+    "sel_hover": "gui/game menu/btn_nav_selected_hover_background.png",
+    "idle_2": "gui/game menu/btn_idle_background.png",
+    "hover_2": "gui/game menu/btn_hover_background.png"
+}
+
+define btn_skin_red = {
+    "idle" : "gui/game menu/btn_nav_idle_background.png",
+    "hover": "gui/game menu/btn_nav_hover_background.png",
+    "sel_idle": "gui/game menu/btn_nav_red_selected_idle_background.png",
+    "sel_hover": "gui/game menu/btn_nav_red_selected_hover_background.png",
+    "idle_2": "gui/game menu/btn_idle_background.png",
+    "hover_2": "gui/game menu/btn_red_hover_background.png"
+}
+
+
+default use_alt_skin = False
+
+# persistent.loop1:
+
+
 screen preferences():
 
     tag menu
-
     add "gui/menu_background2.jpg"
-    #add "gui/game menu/settings_mockup.jpg"
-
-    #use game_menu(_("Preferences"), scroll="viewport"):
-
     style_prefix "preferencessidemenu"
 
-    #use game_menu(_("Preferences")):
+    $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
+
+
 
     text "SETTINGS":
         font "NotoSerifJP-VariableFont_wght.ttf"
@@ -932,20 +956,20 @@ screen preferences():
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"
-                        hover "gui/game menu/btn_nav_hover_background.png"
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
+                        idle skin["idle"]
+                        hover skin["hover"]
+                        selected_idle skin["sel_idle"]
+                        selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",1)
                     text "General" xpos 125 yalign 0.5 #ypos 25
                 fixed:
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"
-                        hover "gui/game menu/btn_nav_hover_background.png"
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
+                        idle skin["idle"]
+                        hover skin["hover"]
+                        selected_idle skin["sel_idle"]
+                        selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",2)
                     text "Audio" xpos 125 yalign 0.5
 
@@ -953,10 +977,10 @@ screen preferences():
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"
-                        hover "gui/game menu/btn_nav_hover_background.png"
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
+                        idle skin["idle"]
+                        hover skin["hover"]
+                        selected_idle skin["sel_idle"]
+                        selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",3)
                     text "Dialogue" xpos 125 yalign 0.5
 
@@ -964,10 +988,10 @@ screen preferences():
                     xsize 250
                     ysize 100
                     imagebutton:
-                        idle "gui/game menu/btn_nav_idle_background.png"
-                        hover "gui/game menu/btn_nav_hover_background.png"
-                        selected_idle "gui/game menu/btn_nav_selected_idle_background.png"
-                        selected_hover "gui/game menu/btn_nav_selected_hover_background.png"
+                        idle skin["idle"]
+                        hover skin["hover"]
+                        selected_idle skin["sel_idle"]
+                        selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",4)
                     text "Accessibility/\nControls" xpos 125 yalign 0.5
         null width 500
@@ -986,6 +1010,7 @@ screen preferences():
 
 
 screen confirm_config():
+    $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
     frame:
         xpos 1025
         ypos 965
@@ -1000,8 +1025,8 @@ screen confirm_config():
                 yoffset 10
                 background None
                 imagebutton:
-                    idle "gui/game menu/btn_idle_background.png"
-                    hover "gui/game menu/btn_hover_background.png"
+                    idle skin["idle_2"]
+                    hover skin["hover_2"]
                     xalign 0.5
                     if main_menu:
                         action Return() #Hide("preferences")
@@ -1015,8 +1040,8 @@ screen confirm_config():
                 yoffset 10
                 background None
                 imagebutton:
-                    idle "gui/game menu/btn_idle_background.png"
-                    hover "gui/game menu/btn_hover_background.png"
+                    idle skin["idle_2"]
+                    hover skin["hover_2"]
                     xalign 0.5
                     if main_menu:
                         action Return() #Hide("preferences")
