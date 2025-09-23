@@ -100,6 +100,8 @@ label map:
     pause
 
 
+default offset_x_a = 0
+
 # Pantalla del mapa
 screen map_screen():
     
@@ -167,7 +169,7 @@ screen map_screen():
         ypadding 50
         
         vbox:
-            label "Map -Loop [current_loop] - Day [current_day] - [current_time_block]"
+            label "Map - Día [current_day] - [current_time_block]"
             text "Where do you want to go?"
 
 

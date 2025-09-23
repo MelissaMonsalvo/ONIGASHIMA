@@ -48,6 +48,86 @@ image combo_slash_3:
     alpha 1.0
     linear 0.15 alpha 0.0
 
+image slash_animred:
+    Solid("#FF3333")        
+    rotate 45                
+    size (80, 2500)         
+    alpha 1.0
+    xpos 960 ypos 540        
+    anchor (0.5, 0.5)        
+    linear 0.2 alpha 0.0     
+
+image slash_fx_horizontalred:
+    Solid("#FF3333")         
+    size (1920, 10)          
+    alpha 1.0
+    xpos -200 ypos 540       
+    anchor (0.0, 0.5)        
+    linear 0.2 xpos 2120 alpha 0.0  
+
+
+image slash_fx_zigzagred:
+    # Segment 1: top-left to upper-right
+    Solid("#FF3333")
+    size (500, 16)
+    xpos 120 ypos 70
+    anchor (0.0, 0.5)
+    rotate 18
+
+    # Segment 2: upper-right to left-mid
+    Solid("#FF3333")
+    size (530, 16)
+    xpos 540 ypos 270
+    anchor (0.0, 0.5)
+    rotate -25
+
+    # Segment 3: left-mid to right-lower
+    Solid("#FF3333")
+    size (580, 16)
+    xpos 120 ypos 450
+    anchor (0.0, 0.5)
+    rotate 16
+
+    # Segment 4: right-lower to left-bottom
+    Solid("#FF3333")
+    size (610, 16)
+    xpos 650 ypos 700
+    anchor (0.0, 0.5)
+    rotate -19
+
+    # Segment 5: left-bottom to right-bottom
+    Solid("#FF3333")
+    size (690, 16)
+    xpos 110 ypos 900
+    anchor (0.0, 0.5)
+    rotate 12
+image combo_slash_1red:
+    Solid("#FF3333")
+    rotate 45
+    size (60, 2000)
+    anchor (0.5, 0.5)
+    xpos 960 ypos 540
+    alpha 1.0
+    linear 0.15 alpha 0.0
+
+image combo_slash_2red:
+    Solid("#FF3333")
+    rotate -45
+    size (60, 2000)
+    anchor (0.5, 0.5)
+    xpos 960 ypos 540
+    alpha 1.0
+    linear 0.15 alpha 0.0
+
+image combo_slash_3red:
+    Solid("#FF3333")
+    rotate 60
+    size (60, 2000)
+    anchor (0.5, 0.5)
+    xpos 960 ypos 540
+    alpha 1.0
+    linear 0.15 alpha 0.0
+
 image slash_critical_red:
     Solid("#FF3333")
     size (1920, 50)
@@ -115,3 +195,12 @@ image slash_x2:
     xpos 960 ypos 540
     anchor (0.5, 0.5)
     linear 0.2 alpha 0.0
+
+image slash_x2red:
+    Solid("#FF0000")
+    rotate -45
+    size (50, 2000)
+    xpos 960 ypos 540
+    anchor (0.5, 0.5)
+    linear 0.2 alpha 0.0
+

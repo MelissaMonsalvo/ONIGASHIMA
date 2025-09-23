@@ -2,6 +2,45 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+
+# Define a store variable for speaking state (per character)
+init python:
+
+    # This is set to the name of the character that is speaking, or
+    # None if no character is currently speaking.
+    speaking = None
+    config.debug_sound = True
+
+    # This returns speaking if the character is speaking, and done if the
+    # character is not.
+    def while_speaking(name, speak_d, done_d, st, at):
+        if speaking == name:
+            return speak_d, .1
+        else:
+            return done_d, None
+
+    # Curried form of the above.
+    curried_while_speaking = renpy.curry(while_speaking)
+
+    # Displays speaking when the named character is speaking, and done otherwise.
+    def WhileSpeaking(name, speaking_d, done_d=Null()):
+        return DynamicDisplayable(curried_while_speaking(name, speaking_d, done_d))
+
+    # This callback maintains the speaking variable.
+    def speaker_callback(name, event, **kwargs):
+        global speaking
+
+        if event == "show":
+            speaking = name
+        elif event == "slow_done":
+            speaking = None
+        elif event == "end":
+            speaking = None
+
+    # Curried form of the same.
+    speaker = renpy.curry(speaker_callback)
+
+
 init:
     define config.layers = [ 'background', 'master', 'transient', 'screens', 'overlay', 'custom_layer' ]
 
@@ -25,7 +64,7 @@ init python:
 
 default persistent.player_name = None
 
-define MC = Character("[persistent.player_name]", color="#d40000", window_left_padding=100, image="main")  # Player-named character
+define MC = Character("[persistent.player_name]", color="#d40000", image="main", callback=speaker("main"), window_left_padding=180, namebox_left_padding= 60)  # Player-named character
 define n = Character(None, what_color="#fffafa") ## mc sama narrator
 define n2 = Character(None, what_color="#ff5277", what_font="LibreBaskerville-Regular.ttf", what_size=34) ## yamakui narrator
 

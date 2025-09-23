@@ -13,3 +13,10 @@ image yam normal = LiveComposite(
     #(58, 151), WhileSpeaking("girl", "girl mouth normal", "amy mouth closed.png"),
 
     )
+
+image yam glitched:
+    glitch("yam normal") # reliable slicing
+    pause 1.0
+    glitch("yam normal", offset=100, randomkey=None) # bigger and always-random slicing
+    pause 0.1
+    repeat

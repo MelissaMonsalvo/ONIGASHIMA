@@ -1,4 +1,5 @@
 label prologue_loop2:
+
     ### this has the prologue after two peoples has been devoured
 
     scene black with fade
@@ -7,6 +8,10 @@ label prologue_loop2:
     show flesh2 at scary_flicker
 
     play music "sfx/monster breathing.mp3"
+
+    MC normal "Blablablaldkjshfkdjfsldfkdjkladhfkjdhdjkghkdfgdskhflsdkfhlstalking"
+
+    MC normal "Blablablaldkjshfkdjfsldfkdjkladhfkjdhdjkghkdfgdskhflsdkfhlstalking"
 
 
     n2 "HhhAahhh... {w}hhHaaaAAhh."
@@ -38,7 +43,7 @@ label prologue_loop2:
     play sound "sfx/swallow.mp3"
     $ renpy.pause(0.3)
 
-    n "s...stop..."
+    n "S...{w=0.1}stop..."
 
     n2 "NnNnnooOOO."
 
@@ -54,7 +59,8 @@ label prologue_loop2:
 
     n2 "So muCh hUNgEr."
 
-    play music "heavy footsteps.mp3"
+    scene black with out_212
+
     play muzak "sfx/forest night.wav"
 
     n2 "I cAmE dOwN tHe mOunTAiN... {w} jUsT lIkE bEfOrE."
@@ -75,6 +81,7 @@ label prologue_loop2:
         ypos 0.2
 
         linear 0.1 ypos 0.3 zoom 0.2
+    show darken
     with vpunch
     play sound "sfx/aah.wav"
     $ renpy.pause(0.8)
@@ -100,6 +107,8 @@ label prologue_loop2:
     with fade
 
     n2 "{sc=1}aND I sTiLL hAvE oNe mOre of YOuR FRieNdS tO eAt.{/sc}"
+
+    jump loop3_hikaru
 
 
 

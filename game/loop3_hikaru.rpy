@@ -1,6 +1,8 @@
 label loop3_hikaru:
 
-    ## THIRD LOOP, ONLY HIKARU IS LEFT
+    scene village day:
+        zoom 0.5
+    show darken
 
     n2 "tHe dOOrs aRe sHuT."
 
@@ -9,6 +11,19 @@ label loop3_hikaru:
     n2 "i sEe eYeS tHrOuGh thE sLatS."
 
     n2 "tHeY aRe WaTChIng..."
+
+    show hik normal behind darken:
+        zoom 0.3
+        xalign 0.65
+        yalign 0
+        yoffset 110
+        xzoom 1.0
+        yzoom 1.0
+        alpha 0.0
+
+        linear 0.17 alpha 1.0 xalign 0.55 yoffset 50
+    stop music
+    stop muzak
 
     hikaru "...!"
 
@@ -20,30 +35,74 @@ label loop3_hikaru:
 
     n "Hikaru, run--"
 
-    hikaru "THAT’S THEIR FACE."
+    hikaru "{sc=5}That's [persistent.player_name]'s face...{/sc}"
 
-    hikaru "THAT’S--{w}that’s--"
+    show hik normal behind darken:
+        zoom 0.3
+        xalign 0.55
+        yalign 0
+        yoffset 50
+        xzoom 1.0
+        yzoom 1.0
+        alpha 1.0
+
+        # Violent, irregular shakes (shock)
+        linear 0.06 xoffset -38 yoffset 24
+        linear 0.05 xoffset 32 yoffset -11
+        linear 0.04 xoffset -28 yoffset 19
+        linear 0.04 xoffset 21 yoffset -15
+        linear 0.05 xoffset 0 yoffset 50   # Back to original
+
+    hikaru "{glitch=7}THAT’S--{w}that’s--{/glitch}"
 
     n "Don’t say it. Don’t remember. Don’t look--"
 
-    hikaru "WHERE IS MY LOVER?!"
+    show hik normal behind darken:
+        zoom 0.3
+        xalign 0.55
+        yalign 0
+        yoffset 50
+        xzoom 1.0
+        yzoom 1.0
+        alpha 1.0
 
-    hikaru "WHERE IS--WHERE ARE--"
+        # Violent, irregular shakes (shock)
+        linear 0.06 xoffset -38 yoffset 24
+        linear 0.05 xoffset 32 yoffset -11
+        linear 0.04 xoffset -28 yoffset 19
+        linear 0.04 xoffset 21 yoffset -15
+        linear 0.05 xoffset 0 yoffset 50   # Back to original
+    play music "spooky.mp3"
 
-    mc  "It'S Me, HiKARu"
+    hikaru "{size=+7}WHERE IS MY LOVER?!{/size}"
 
-    hikaru "YAMAKUI...!"
+    hikaru "{sc=7}WHERE IS--WHERE ARE--{/sc}"
 
-    hikaru "How dare you wear [persistent.player_name]'s skin and mock me in that voice!"
+    MC "It'S Me, HiKARu."
 
-    play sound "sfx/choke_cry.ogg"
+    hikaru "{size=+6}YAMAKUI...!{/size}"
 
-    show hikaru crying at midright
-    $ renpy.pause(0.5)
+    hikaru "{glitch=10}How dare you wear [persistent.player_name]'s skin and mock me in that voice!{/glitch}"
 
     hikaru "..."
 
-    hikaru "I'll avenge you, [persistent.player_name]. Just wait..."
+    hikaru "{i}I'll avenge you, [persistent.player_name]. Just wait...!{/i}"
+
+    play sound "sfx/whip.mp3"
+
+    show hik normal behind darken:
+        zoom 0.3
+        xalign 0.55
+        yalign 0
+        yoffset 50
+        xzoom 1.0
+        yzoom 1.0
+        alpha 1.0
+
+        # Quick ninja leap left, fade out fast
+        linear 0.11 xoffset -290 yoffset 8 zoom 0.22
+        linear 0.07 xoffset -560 yoffset -32 zoom 0.12 alpha 0.0
+    with hpunch
 
     n "Hikaru, no--You won't win against the Yamakui!"
 
@@ -51,83 +110,182 @@ label loop3_hikaru:
 
     n2 "ThEy lOoK sO sOFT whEn tHeY bReAK~"
 
-    ## image of moon changing gradually
+    scene moon1
+    with fade
+
+    stop sound
 
     n2 "tHe dAyS paSSes."
 
+    scene moon2
+    play sound "sfx/heartbeat.mp3"
+    with flashred
+    pause 0.3
+
     n2 "DrIP."
+
+    play sound "sfx/drip.wav"
 
     n2 "DRiP"
 
+    play sound "sfx/drip.wav"
+
     n2 "DriPdrIPDRip."
 
-    play sound "sfx/flesh_peel.ogg"
-    $ renpy.pause(0.3)
+    scene moon3
+    play sound "sfx/heartbeat.mp3"
+    with flashred
+    pause 0.3
 
     n2 "mY fAcE fALls oFF iN sTrIpS."
 
+    play sound "sfx/stretch.mp3"
+
     n2 "i wEar iT bAckwArDs sOmEtImEs. {w}fUnNy."
 
-    n "I don't care what ever you are doing to my face..."
+    n "{i}I don't care what ever you are doing to my face...{/i}"
 
     n "But let Hikaru go..."
 
-    n "Please, I’m begging you."
+    n "{cps=13}Please,{/cps} I’m begging you."
 
-    n "You already took Shiori, then Yamato..."
+    n "You already took Shiori, {w=0.1}then Yamato..."
 
-    n "But please... Just this one..."
+    n "But please...{w} Just {i}this one...{/i}"
 
-    n "I loved Hikaru."
+    n "{sc=5}I loved Hikaru.{/sc}"
 
-    play sound "sfx/choke_cry.ogg"
+    scene moon4
+    play sound "sfx/heartbeat.mp3"
+    with flashred
+    pause 0.3
 
     n2 "NnNnnNnnNn."
 
     n2 "I wAnT tO wAtCh tHe hOpe roT iN tHeIr mOuTh."
 
-    n "Please."
+    n "{sc=2}Please.{/sc}"
 
-    n "Please please please I’ll do anything."
+    n "{cps=12}Please please please I’ll do anything.{/cps}"
 
-    n "Kill more. Eat more. I don’t care."
+    n "{i}Kill more. Eat more. I don’t care.{/i}"
 
     n "Just leave Hikaru, let me save JUST ONE."
 
-    n "Everyone else is gone and I can’t--"
+    n "{glitch=1}Everyone else is gone and I can’t--{/glitch}"
 
     n2 "tEnDeR mEAt iS sWeEtEsT wHeN iT knEw yOu bEfOrE."
 
-    n "NO!!"
+    n "{sc=5}NO!!{/sc}"
 
-    n "PLEASE--"
+    n "{cps=14}PLEASE--{/cps}"
+
+    scene moon5
+    play sound "sfx/heartbeat.mp3"
+    with flashred
+    pause 0.3
 
     n2 "DoN'T WorRY, GhOSt."
 
-    n2 "i’LL mAkE iT bEauTiFuL."
 
-    centered "ONE DAY BEFORE THE RED MOON"
+
+    stop music
+
+    scene black
+    with fade
+
+    n2 "{atl=0.3,drop_text~#~ 1.5, bounce_text~5}i’LL mAkE iT bEauTiFuL.{/atl}"
+
+    pause 0.3
+
+    stop music
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}ONE DAY UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    scene moon5
+    with fade
+    pause 0.2
+    scene moon6
+    with fade
+
+    stop sound
+
+    pause 0.5
+
+    scene village day:
+        zoom 0.5
+    show darken
+    with in_212
 
     n2 "sUCh a DeAD VillAGe."
 
     n2 "nO oNe hAs bEen hEre iN dAys."
 
-    play sound "sfx/blade_whip.ogg"
-    $ renpy.pause(0.2)
+    play sound "sfx/whip.mp3"
 
     hikaru "NOW--!"
 
-    play sound "sfx/metal_impact2.ogg"
-    $ renpy.pause(0.2)
-
     n2 "Hkk--!"
 
-    play sound "sfx/flesh_peel.ogg"
-    $ renpy.pause(0.3)
+    scene black
+
+    play sound "swing.wav"
+
+    show slash_arc
+
+    pause 1
+
+    scene village day:
+        zoom 0.5
+
+    show hik normal:
+        zoom 0.3
+        xalign 0.4
+        xoffset 120
+        yoffset 0
+        xzoom 1
+        yzoom 1.0
+
+        linear 0.08 yoffset 18
+
+        linear 0.14 zoom 0.25 yoffset -38 xoffset 144
+
+        pause 0.10
+
+        linear 0.12 yoffset 0
+
+        ease 0.015 yoffset 50
+        ease 0.01 yoffset 130
+    show darken
+    with hpunch
+
+    play music "Battora.mp3"
 
     n2 "TcH. ReLENtlESS."
 
     hikaru "WHY--"
+
+    show hik normal behind darken:
+        zoom 0.25
+        xalign 0.4
+        xoffset 144
+        yoffset 130
+        xzoom 1
+        yzoom 1.0
+
+        linear 0.05 xoffset 121 yoffset 180
+        linear 0.04 xoffset 161 yoffset 110
+        linear 0.04 xoffset 126 yoffset 146
+        linear 0.05 xoffset 174 yoffset 100
+        linear 0.04 xoffset 144 yoffset 130
+
+        pause 0.10
 
     hikaru "WHY WON’T YOU DIE?!"
 
@@ -142,6 +300,22 @@ label loop3_hikaru:
     n2 "..."
 
     hikaru "Ngh--"
+
+    show hik normal behind darken:
+        zoom 0.25
+        xalign 0.4
+        xoffset 144
+        yoffset 130
+        xzoom 1
+        yzoom 1.0
+
+        linear 0.05 xoffset 121 yoffset 180
+        linear 0.04 xoffset 161 yoffset 110
+        linear 0.04 xoffset 126 yoffset 146
+        linear 0.05 xoffset 174 yoffset 100
+        linear 0.04 xoffset 144 yoffset 130
+
+        pause 0.10
 
     hikaru "Damn it, has the kami-sama abandoned us!?"
 
@@ -161,8 +335,18 @@ label loop3_hikaru:
 
     n2 "I wAnT tO tAsTe yOuR hOpE {w}wHiLe thEy dIe."
 
-    hide hikaru with dissolve
-    play sound "sfx/footsteps_fast.ogg"
+    play sound "sfx/whip.mp3"
+
+    show hik normal behind darken:
+        zoom 0.25
+        xalign 0.4
+        xoffset 144
+        yoffset 130
+        xzoom 1
+        yzoom 1.0
+
+        linear 0.10 xoffset 440 yoffset 80 zoom 0.18
+        linear 0.07 xoffset 860 yoffset 34 zoom 0.08 alpha 0.0
 
     n "They’re retreating..."
 
@@ -170,42 +354,116 @@ label loop3_hikaru:
 
     n "I can’t watch this again--"
 
-    play sound "sfx/heartbeat_distorted.ogg"
+    pause 0.1
+
+    play sound "sfx/heartbeat.mp3"
+    with flashred
 
     n2 "ThEn I WiLL GOUge YoUr EYeS."
 
-    scene black with fade
-    $ renpy.pause(2.5)
+    stop music
 
-    centered "RED MOON"
+    scene black
+
+    with fade
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THE RED MOON IS HERE{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    scene moon6
+    with fade
+    pause 0.2
+    scene moon7
+    with fade
+
+    stop sound
+
+    scene black
+    with fade
+
+    pause 0.5
 
     n2 "iT iS tImE."
 
-    play sound "sfx/wet_breath.ogg"
+    play music "Blood Ritual.mp3"
+
+    scene village night with in_212:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.5
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+    show darken2
 
     MC "Oh HikaRuuUuUUu~"
 
+    scene village night:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.5
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+
+        linear 0.14 zoom 0.54 xoffset 26
+        linear 0.13 zoom 0.59 xoffset -29
+        linear 0.14 zoom 0.64 xoffset 19
+        linear 0.15 zoom 0.69 xoffset 18
+
+
     MC "ComE Out, cOmE ouT, wheReVer yOu ARe~"
 
-    play sound "sfx/fast_steps.ogg"
-    show hikaru fierce at midright with flash
+
+    scene black
+    play sound "swing.wav"
+    show slash_fx_horizontalred
+    $ renpy.pause(0.1, hard=True)
+    show darken2
+    with hpunch
 
     hikaru "DIE!!"
 
-    play sound "sfx/metal_clash.ogg"
-    $ renpy.pause(0.2)
-    play sound "sfx/quick_stab.ogg"
-    $ renpy.pause(0.3)
+    play sound "swing.wav"
+    show combo_slash_2red
+    $ renpy.pause(0.1, hard=True)
+    show darken2
+    with vpunch
 
-    n2 "Khh-- {w}yoU GoT mE."
+    MC "Khh-- {w}yoU GoT mE."
 
-    n2 "BuT NoT ENouGH, BiRD."
+    MC "BuT NoT ENouGH, BiRD."
 
-    show hikaru panting at midright
+    scene village night:
+        zoom 0.67
+        xalign 0.5
+        yalign 0.5
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
+    show hik normal:
+        zoom 0.47
+        align (0.5, 0.005)
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+
+
+        linear 0.01 xalign 0.5 yalign 0.1
+
+        linear 0.16 zoom 0.29 xalign 0.41 yalign -0.09 xoffset 122
+
+        linear 0.12 zoom 0.25 xalign 0.4 yalign 0 xoffset 144 yoffset 0
+
+        linear 0.07 yoffset 120
+        linear 0.09 yoffset 190
+    show darken2
+    with vpunch
     hikaru "Wh--That was a direct hit!"
 
     hikaru "Why are you still standing--!?"
+
+    play music "Goodbye.mp3"
 
     MC "..."
 
@@ -218,6 +476,21 @@ label loop3_hikaru:
     MC "I’m still in here--{w} they’re controlling me--"
 
     MC "You can still save me--"
+
+    show hik normal behind darken2:
+        zoom 0.25
+        xalign 0.4
+        yalign 0
+        xoffset 144
+        yoffset 190
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+
+        # Quick upward-back jolt
+        linear 0.09 yoffset 110 zoom 0.22    # Sharp jump up and shrink (shock)
+        linear 0.08 yoffset 150 zoom 0.25    # Bounce down
+        linear 0.07 yoffset 190 zoom 0.25    # Settle back
+
+        pause 0.09
 
     hikaru "...!"
 
@@ -233,76 +506,102 @@ label loop3_hikaru:
 
     n "RUN..."
 
-    n "RUN!!!"
+    n "{sc=2}RUN!!!{/sc}"
 
-    n "IT’S NOT ME!!"
-
-    play sound "sfx/squelch1.ogg"
-    $ renpy.pause(0.2)
+    n "IT’S NOT {sc=2}ME!!{/sc}"
 
     hikaru "...I..."
 
-    n "MOVE--"
+    n "{sc=1}MOVE--{/sc}"
 
-    n2 "{shk}tOo lAtE.{/shk}"
+    n2 "tOo lAtE."
 
-    ## STAB, SCREAM, FALL SFC
 
-    hikaru "Ah..."
+    play sound "sfx/stumble.mp3"
 
-    hikaru "I can't kill you while you still have that face, after all..."
 
-    hikaru "Even if it's broken and rotting..."
+    scene village night:
+        zoom 0.67
+        xalign 0.5
+        yalign 0.5
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+
+        # Abrupt lunge to center, very fast
+        linear 0.14 zoom 1.14
+
+    show hik normal behind darken2:
+        zoom 0.25
+        xalign 0.4
+        yalign 0
+        xoffset 144
+        yoffset 190
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+
+        linear 0.14 zoom 0.66 xalign 0.5 yalign 0.0 xoffset 0 yoffset 0
+    show darken2
+    pause 0.1
+
+    scene black
+    play sound "sfx/stab.mp3"
+    with flashred
+
+    pause 0.5
+
+    play sound "sfx/tearflesh.wav"
+
+
+
+    hikaru "{cps=13}Ah...{/cps}"
+
+    hikaru "{cps=13}I can't kill you while you still have that face, after all...{w=0.1}{/cps}"
+
+    hikaru "{cps=13}Even if it's broken and rotting...{/cps}"
 
     n2 "..."
 
-    hikaru "I still keep the scarf, you know?"
+    hikaru "{cps=13}I still keep the scarf, you know?{w=0.1}{/cps}"
 
-    hikaru "The one you gave before you left?"
+    hikaru "{sc=1}The one you gave before you left?{/sc}"
 
-    hikaru "It still feels like you're here..."
+    hikaru "{cps=13}It still feels like you're here...{w=0.1}{/cps}"
 
-    hikaru "I’ll see you again, right?"
-
+    hikaru "{sc=1}I’ll see you again, right?{/sc}"
     hikaru "...The real you?"
 
     play sound "sfx/heartbeat_soft.ogg"
 
     n "...Hikaru..."
 
-    ## scene black, eating
+    play sound "sfx/tearflesh.wav"
 
-    play sound "sfx/fleshdrag1.ogg"
-    $ renpy.pause(0.3)
-    play sound "sfx/slurp_tear.ogg"
-    $ renpy.pause(0.3)
+    show darken2
+    with dissolve
+    pause 0.3
+    hide blood
+    with dissolve
 
     n2 "tEnDeR..."
 
-    play sound "sfx/devour_thickwet.ogg"
-    $ renpy.pause(0.5)
+    play sound "sfx/splurt.mp3"
+
+    show darken2
+    with dissolve
+    pause 0.3
+    hide blood
+    with dissolve
 
     n2 "mMmhhHH..."
 
-    play sound "sfx/gulp.ogg"
-    $ renpy.pause(0.3)
-
-    play sound "sfx/wet_snap.ogg"
-    $ renpy.pause(0.4)
-    play sound "sfx/bone_crunch1.ogg"
-    $ renpy.pause(0.4)
+    play sound "sfx/slurrp.mp3"
 
     n2 "sWaLLoW..."
 
-    play sound "sfx/mouth_clicks.ogg"
-    play sound "sfx/slurp_soft.ogg"
-    play sound "sfx/gloop_soft.ogg"
+    play sound "sfx/slurrp.mp3"
 
     n2 "SwAllOw..."
 
 
-    play sound "sfx/gulp.ogg"
-    $ renpy.pause(1.5)
+    play sound "sfx/slurrp.mp3"
 
     n2 "SwAllOw."
 
@@ -310,7 +609,21 @@ label loop3_hikaru:
 
     n "And now..."
 
-    centered " A L L  Y O U R  F R I E N D S  A R E  D E A D"
+    stop music
+
+    scene black
+
+    pause 0.3
+
+    play sound "sfx/day change.mp3"
+
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}{font=LibreBaskerville-Regular.ttf}{size=40}N O W  {w=0.1}Y O U R  {w=0.1}L O V E R  {w=0.1}I S  {w=0.1}D E A D {w=0.1} T O O{/size}{/font}{/color}{/atl}{/color}"
+
+    with fade
+
+    pause 0.5
+
+    stop sound
 
     $ renpy.pause(3.0)
 

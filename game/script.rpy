@@ -65,7 +65,7 @@ screen fake_name_input():
 
 label start:
     #jump map
-    jump loop2_shiori_mandatory1
+    jump prologue_loop2
     $ _prev_music_volume = _preferences.volumes["music"]
     if persistent.trueendingunlocked:
         $ persistent.route1 = True

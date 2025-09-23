@@ -438,6 +438,13 @@ image moon5 = "MOON/moon5.jpg"
 image moon6 = "MOON/moon6.jpg"
 image moon7 = "MOON/moon7.jpg"
 
+image moon7 glitched:
+    glitch("moon7") # reliable slicing
+    pause 1.0
+    glitch("moon7", offset=50, randomkey=None) # bigger and always-random slicing
+    pause 0.1
+    repeat
+
 transform red_moon:
     matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
 
