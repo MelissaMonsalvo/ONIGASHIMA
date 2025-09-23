@@ -67,7 +67,7 @@ define gui.interface_text_font = "DejaVuSans.ttf"
 
 ## The size of normal dialogue text.
 #default gui.text_size = 33
-define gui.text_size = persistent.dialogue_size
+define gui.text_size = 33#persistent.dialogue_size
 
 ## The size of character names.
 define gui.name_text_size = 45
