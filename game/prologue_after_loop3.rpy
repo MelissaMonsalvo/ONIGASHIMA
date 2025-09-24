@@ -2,21 +2,23 @@ label prologue_loop3:
 
     ### this has the prologue after everyone has devoured
 
+    scene black
+    show darken2
+    with dissolve
+
+    play music "Narukami.mp3"
+
     n2 "tHe rED MoOn iS GoNE."
 
     n2 "tHe cHiLdReN lAugH aGaIn."
 
     n2 "tHe vIlLaGe iS aLiVe."
 
-    play sound "sfx/bells_ring.ogg"
-    $ renpy.pause(0.4)
 
     n2 "nO oNe rEmEmBeRs YoU."
 
     n2 "[persistent.player_name]? {w}WhO’s tHaT?"
 
-    play sound "sfx/wind_through_grass.ogg"
-    $ renpy.pause(0.3)
 
     n2 "BeCAuSE I deVOuReD WhAT iS LeFt Of YOu."
 
@@ -24,11 +26,11 @@ label prologue_loop3:
 
     n2 "i tEAr aNoThEr oNe aPaRt."
 
-    play sound "sfx/fleshtear_burst.ogg"
-    $ renpy.pause(0.3)
+    scene bg moon7
+    show darken2
+    with fade
 
-    play sound "sfx/wet_snap.ogg"
-    $ renpy.pause(0.3)
+
 
     n2 "tHe mOnThs pAsS."
 
@@ -36,19 +38,19 @@ label prologue_loop3:
 
     n2 "tHe mEaT gEtS tHiN."
 
-    play sound "sfx/gurgle_mouth.ogg"
-    $ renpy.pause(0.3)
 
     n2 "mAyBe oNe dAy--"
 
     n2 "a sLaYeR wILL rIsE aGaIn."
 
-    play sound "sfx/sword_unsheath.ogg"
-    $ renpy.pause(0.3)
 
     n2 "bUt mAyBe--"
 
     n2 "tHeRe iSn’T aNyOnE lEfT wHo WaNTs tO."
+
+    scene black
+    show darken2
+    with fade
 
     show text "{color=#ff0000}{size=+10}B E C A U S E  I  A T E  T H E M  A L L {/size}{/color}" with dissolve
     $ renpy.pause(2.5)
@@ -60,8 +62,6 @@ label prologue_loop3:
 
     n "...{fast}"
 
-    window hide
-    $ renpy.pause(2.0)
 
     n2 "RiGht?"
 
@@ -75,10 +75,6 @@ label prologue_loop3:
 
     n2 "I CaN'T heAR YoU AnYmOrE."
 
-    scene black with fade
-    play sound "sfx/gulp.ogg"
-    $ renpy.pause(1.5)
-
     stop music fadeout 3.0
 
     $ persistent.loop4 = True
@@ -87,17 +83,21 @@ label prologue_loop3:
 
 label prologue_loop4:
 
+    play music "sfx/forest night.wav"
+
     n2 "[persistent.player_name] iS gOnE."
 
     n2 "iT’s qUiEt."
 
-    play sound "sfx/distant_heartbeat.ogg"
-    $ renpy.pause(0.4)
+    scene bg moon4
+    show darken2
+    with fade
 
     n2 "i wAiT fOr tHe mOoN."
 
-    scene bg village_empty with slow_dissolve
-    show screen fog_overlay
+    scene bg moon7
+    show darken2
+    with fade
 
     n2 "i gO dOwN tO tHe vIlLaGe."
 
@@ -105,18 +105,15 @@ label prologue_loop4:
 
     n2 "nEw fAcEs."
 
+
     n "nEw sMeLlS."
 
     n "sAmE tAsTe."
 
     n "SaMe FeAR."
 
-    play sound "sfx/chew_dry.ogg"
-    $ renpy.pause(0.3)
 
     n2 "eAt. {w}SwAlLoW. {w}SlEeP."
-
-    play sound "sfx/yawn_low.ogg"
 
     n2 "YaAaAaaaaAAaAaAaaaaWN~"
 
@@ -127,6 +124,7 @@ label prologue_loop4:
     n2 "bUT tHe cHaSe fEeLs hOlLoW."
 
     scene black with fade
+    show darken2
     $ renpy.pause(1.5)
 
     n2 "iT aLL tAsTeS tHe sAmE nOw."
@@ -145,7 +143,17 @@ label prologue_loop4:
 
 label prologue_loop5:
 
+    play music "sfx/forest night.wav"
+
+    scene black
+    show darken2
+    with fade
+
     n2 "sTiLL hErE."
+
+    scene bg moon7
+    show darken2
+    with fade
 
     n2 "tHe mOoN rIsEs."
 
@@ -155,18 +163,48 @@ label prologue_loop5:
 
     n2 "sAmE pAtTeRn."
 
+    scene flesh:
+        matrixcolor BrightnessMatrix(-0.5)
+
+        parallel:
+            linear 1.2 zoom 1.02 blur 2
+            linear 1.2 zoom 1.0 blur 1
+            repeat
+
+        parallel:
+            linear 0.1 matrixcolor BrightnessMatrix(-1)
+            linear 0.1 matrixcolor BrightnessMatrix(-0.5)
+            pause 2.0
+            repeat
+
+        parallel:
+            linear 0.05 xoffset -5 yoffset 3
+            linear 0.05 xoffset 5 yoffset -2
+            linear 0.05 xoffset 0 yoffset 0
+            pause 1.5
+            repeat
+
+        parallel:
+            linear 0.2 blur 6
+            linear 0.4 blur 2
+            pause 3.0
+            repeat
+    show darken2
+    with fade
+
+    play sound "sfx/monstermunch.mp3"
+
     n2 "EaT. EaT. EateATEateATeaTeateAt--"
 
-    scene bg mountain_cave_dark with fade
-    show screen dust_motes
 
     n2 "i sLeEp lEsS tHeSe dAyS."
 
     n2 "i lIsTeN mOrE."
 
+    stop sound fadeout 0.5
+
     n2 "To SiLEnCe."
 
-    play sound "sfx/distant_echo.ogg"
 
     n2 "yOu uSeD tO sAy sO mUcH."
 
@@ -176,7 +214,6 @@ label prologue_loop5:
 
     n2 "..."
 
-    play sound "sfx/wind_whistle.ogg"
 
     n2 "i dOn’T WaNT tO sPiT jOkEs aNyMoRe."
 
@@ -187,8 +224,6 @@ label prologue_loop5:
     n2 "i tRy tO mAkE tHeM bEg lOuDeR."
 
     n2 "mAkE mYsElF lAuGh."
-
-    play sound "sfx/laugh_choked.ogg"
 
     n2 "iT dOeSn’T sOuNd rIgHt."
 
@@ -201,13 +236,16 @@ label prologue_loop5:
     return
 
 label prologue_loop6:
+
+    scene black
+    with fade
+
     n2 "I wOkE uP tOdAy."
 
     n2 "i sAiD:"
 
     MC "\"It’s dark...\""
 
-    play sound "sfx/breath_sharp.ogg"
 
     n2 "...yOu uSeD tO sAy tHaT."
 
@@ -217,8 +255,6 @@ label prologue_loop6:
 
     n2 "iT sOuNdS fUnNy wHeN i sAy iT."
 
-    scene bg mountain_cave_dark with fade
-    show screen static_overlay
 
     MC "\"Stop stabbing it. You saved the village.\""
 
@@ -226,7 +262,6 @@ label prologue_loop6:
 
     n2 "DrAMatIC."
 
-    play sound "sfx/voice_mimic_fail.ogg"
 
     n2 "...I dOn’T rEmEmBeR hOw yOu sOuNd."
 
@@ -244,20 +279,19 @@ label prologue_loop6:
 
     n2 "i wEnT dOwN."
 
-    ## woman scream
+    play sound "sfx/aah.wav"
 
-    play sound "sfx/wet_crunch2.ogg"
-    $ renpy.pause(0.4)
-    play sound "sfx/gulp.ogg"
-    $ renpy.pause(0.3)
+    with sshake
+
+    scene flesh
+    show darken
+    with fade
 
     n2 "i aTe."
 
     n2 "i aSkEd:"
 
     MC "\"dO yOu rEmEmBeR [persistent.player_name]?\""
-
-    play sound "sfx/wind_whistle.ogg"
 
     n2 "tHe mEaT dIdN’t aNsWeR ME."
 
@@ -270,7 +304,11 @@ label prologue_loop6:
 
     return
 
+
 label prologue_loop7:
+
+    scene black
+    with fade
 
     n2 "..."
 
@@ -284,17 +322,11 @@ label prologue_loop7:
 
     n2 "iT hUrTs {i}iNsIdE.{/i}"
 
-    scene bg forest_clearing_dead with slow_dissolve
-    show screen blood_fog_overlay
-
     n2 "tHe mEaT tAsTeS lIkE mUd NoW."
 
     n2 "tHe vOiCe iN mY hEaD {w}iSn’T yOu."
 
     n2 "...wHeRe aRe yOu."
-
-    play sound "sfx/breath_ragged.ogg"
-    $ renpy.pause(1.0)
 
     n2 "..."
 
@@ -303,9 +335,6 @@ label prologue_loop7:
     n2 "i dOn’T wAnT tO eAt."
 
     n2 "i dOn’T wAnT tO bE aLoNe."
-
-    play sound "sfx/heartbeat_soft.ogg"
-    $ renpy.pause(0.8)
 
     n2 "...."
 
@@ -316,15 +345,14 @@ label prologue_loop7:
 
 label prologue_loop8:
 
+    scene black
+    with fade
+
     n2 "[persistent.player_name]."
 
     n2 "yOu wErE..."
 
-    play sound "sfx/breath_shudder.ogg"
-
     n2 "...tHe oNlY vOiCe tHaT mAdE mE lAuGh."
-
-    play sound "sfx/crack_voice.ogg"
 
     n2 "i cAn’T bE aLoNe."
 

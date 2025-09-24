@@ -1,5 +1,5 @@
 #####################################
-#MC NORMAL
+#MC LOOP2
 ######################################3
 
 image side main normal2 = Transform(

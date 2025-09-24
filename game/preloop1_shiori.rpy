@@ -17,8 +17,6 @@ label loop1_shiori_mandatory1:
 
     n "Just like your whole village."
 
-    play sound "sfx/bell_small.ogg"
-
     show shi normal at shiori_skipp2
     with dissolve
 
@@ -473,11 +471,9 @@ label gulgulp:
 
     shiori "Ah-I see."
 
-    play sound "sfx/drip.ogg"
-
     n "Another strip slides off the tray, leaving a smear behind."
 
-    MC suprised "So, what is it? Boar? Deer?"  
+    MC suprised "So, what is it? Boar? Deer?"
 
     play sound "sfx/suzu.mp3"
 
@@ -496,11 +492,9 @@ label gulgulp:
     show darken2
     with dissolve
 
-    play sound "sfx/squelch1.ogg"
-
     n "You lift another even though Shiori doesn't ask you to. You don’t even attempt to chew on this one and immediately swallows."
 
-    play sound "sfx/slurp.ogg"
+    play sound "sfx/swallow.mp3"
 
     n "It slides down with a thick gulp."
 
@@ -933,7 +927,8 @@ label loop1_shiori_mandatory5:
 
     MC yan "So what is it now? Scared? Huh?"
 
-    play sound "sfx/heartbeat_deep.ogg"
+    play sound "sfx/heartbeat.mp3"
+    with flashred
 
     n "..."
 
@@ -978,7 +973,7 @@ label loop1_shiori_mandatory5:
 
     MC "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
 
-    
+
 
     $ loop1_shiori_mandatory5 = True
 

@@ -666,8 +666,6 @@ label loop1_hikaru:
 
     "Man" "Or are you saying [persistent.player_name] didn’t finish the job?"
 
-    play sound "sfx/murmur.ogg"
-
     n "The accusation rings clear, none of them are talking about the corpse anymore."
 
     hikaru "..."

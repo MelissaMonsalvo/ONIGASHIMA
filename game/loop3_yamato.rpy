@@ -40,7 +40,7 @@ label loop3_yamato:
 
     play music "Battora.mp3"
 
-    MC "iT iS nOw~"
+    MC happy3 "iT iS nOw~"
 
     yamato "{sc=3}SHUT YOUR MOUTH!{/sc}"
 
@@ -140,11 +140,11 @@ label loop3_yamato:
 
     yamato "{glitch=8}I'LL RIP YOU APART, YOU FUCKIN--{/glitch}"
 
-    MC "{w=0.1}...nO nEeD tO sWeAr."
+    MC yan3 "{w=0.1}...nO nEeD tO sWeAr."
 
-    MC "tHe mOoN wILL bE rEd sOoN."
+    MC yan3 "tHe mOoN wILL bE rEd sOoN."
 
-    MC "I’LL mAkE sUrE yOu dIe sCrEaMiNg."
+    MC evil3 "I’LL mAkE sUrE yOu dIe sCrEaMiNg."
 
     n "..."
 
@@ -219,9 +219,9 @@ label loop3_yamato:
 
     yamato "I{w=0.1}-won't..."
 
-    MC "TsK, tsK, tsKKKKKK...."
+    MC shocked3 "TsK, tsK, tsKKKKKK...."
 
-    MC "iS tHAt AlL?"
+    MC shocked3 "iS tHAt AlL?"
 
     yamato "..."
 
@@ -250,13 +250,13 @@ label loop3_yamato:
 
     yamato "{cps=13}Why won't ya finish me already!?{/cps}"
 
-    MC "HeHhhHhHH..."
+    MC happy3 "HeHhhHhHH..."
 
-    MC "nO."
+    MC happy3 "nO."
 
-    MC "wOuLdn’t bE fUn."
+    MC happy3 "wOuLdn’t bE fUn."
 
-    MC "tHE rEd mOOn's NoT HeRE Yet."
+    MC happy3 "tHE rEd mOOn's NoT HeRE Yet."
 
 
 
@@ -281,9 +281,9 @@ label loop3_yamato:
 
     yamato "{i}You... {w=0.1}freak--{/i}"
 
-    MC "{sc=1}RuN. RuN, lITttLE mUTt.{/sc}"
+    MC happycl3 "{sc=1}RuN. RuN, lITttLE mUTt.{/sc}"
 
-    MC "i’LL mAkE sUrE iT hUrTs wHeN i fInD yOu."
+    MC evil3 "i’LL mAkE sUrE iT hUrTs wHeN i fInD yOu."
 
     yamato "Damn it... {sc=2}Damn it to hell!{/sc}"
 
@@ -455,11 +455,11 @@ label loop3_yamato:
         linear 0.20 xalign 0.58 yoffset 150
         linear 0.14 xalign 0.55 yoffset 50
 
-    MC "i cAn sMeLL yOu, o'gAmEy oNe."
+    MC smug3 "i cAn sMeLL yOu, o'gAmEy oNe."
 
     yamato "..."
 
-    MC "I sEE yOUr Limp aND YeT yOU DEciDE tO FigHT Me StIll."
+    MC smug3 "I sEE yOUr Limp aND YeT yOU DEciDE tO FigHT Me StIll."
 
     yamato "{cps=25}A real man never backs down from a duel.{/cps}"
 
@@ -509,13 +509,13 @@ label loop3_yamato:
 
     n "I always thought you hated me..."
 
-    MC "hOoOoOoO..."
+    MC smug3 "hOoOoOoO..."
 
     yamato "{sc=5}C'mon, Oni! Let's finish this!{/sc}"
 
-    MC "So HonORaBLe, tHis MuTt."
+    MC smug3 "So HonORaBLe, tHis MuTt."
 
-    MC "So STupID."
+    MC happy3 "So STupID."
 
     yamato "{sc=5}COME!{/sc}"
 
@@ -565,11 +565,11 @@ label loop3_yamato:
     show darken2
     with vpunch
 
-    MC "hHhhAhhh-- {w}iT hUrTs sO nIcE."
+    MC evil3 "hHhhAhhh-- {w}iT hUrTs sO nIcE."
 
     yamato "Why t'hell are ya laughin'?!"
 
-    MC "I liKE PlaYIng WiTh FooD."
+    MC evil3 "I liKE PlaYIng WiTh FooD."
 
     yamato "{sc=7}The hell--!{/sc}"
 
@@ -586,7 +586,7 @@ label loop3_yamato:
 
     n2 "I tAp tHe bAcK oF hIs hAnD wItH mY fInGeRs."
 
-    MC "BoOP."
+    MC happycl3 "BoOP."
 
     with vpunch
 
@@ -681,7 +681,7 @@ label loop3_yamato:
 
     yamato "Shut up and fight me seriously...!"
 
-    MC "I AM fIgHtInG. {w}SerIOuSLy. {w}So YoUR MeaT iS TEndeRIzeD."
+    MC yansm3 "I AM fIgHtInG. {w}SerIOuSLy. {w}So YoUR MeaT iS TEndeRIzeD."
 
     n2 "aNd lOoK--"
 
@@ -716,29 +716,29 @@ label loop3_yamato:
     pause 0.1
     with vpunch
 
-    MC "ThErE iT iS."
+    MC normal3 "ThErE iT iS."
 
-    MC "YoU’Re fInAlLy dOnE."
+    MC happy3 "YoU’Re fInAlLy dOnE."
 
-    MC "StUPiD MuTT. So LOuD... So PRoUd..."
+    MC smug3 "StUPiD MuTT. So LOuD... So PRoUd..."
 
-    MC "LiKe yOu cOuLd sAvE aNyOnE..."
+    MC smug3 "LiKe yOu cOuLd sAvE aNyOnE..."
 
-    MC "LiKe yOu wErE sTrOnGeR tHaN mE...."
+    MC annoyed3 "LiKe yOu wErE sTrOnGeR tHaN mE...."
 
-    MC "yOu wErEn’t."
+    MC annoyed3 "yOu wErEn’t."
 
-    MC "yOu’rE nOt."
+    MC smug3 "yOu’rE nOt."
 
-    MC "YoU’rE wEaKeR tHaN tHiS SkIN I'm WeARiNg."
+    MC smug3 "YoU’rE wEaKeR tHaN tHiS SkIN I'm WeARiNg."
 
-    MC "[persistent.player_name] {w}fOuGhT mE tOo."
+    MC happy3 "[persistent.player_name] {w}fOuGhT mE tOo."
 
-    MC "DIeD {i}wItH tEeTh bArEd.{/i}"
+    MC smug3 "DIeD {i}wItH tEeTh bArEd.{/i}"
 
-    MC "aNd yOu?"
+    MC yan3 "aNd yOu?"
 
-    MC "yOu’rE oN yOuR kNeEs."
+    MC yansm3 "yOu’rE oN yOuR kNeEs."
 
     ## CG HERE
 
@@ -750,9 +750,9 @@ label loop3_yamato:
 
     n2 "He CAn'T."
 
-    MC "LoOk aT yOu~"
+    MC yansm3 "LoOk aT yOu~"
 
-    MC "yOu cAn’T eVeN rUn aNyMoRe."
+    MC yansm3 "yOu cAn’T eVeN rUn aNyMoRe."
 
     n "{sc=7}DON’T--{/sc}"
 

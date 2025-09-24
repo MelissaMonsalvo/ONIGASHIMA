@@ -26,7 +26,7 @@ label loop2_shiori:
 
     shiori "But you always felt warm, [persistent.player_name]."
 
-    MC "Yeah...?"
+    MC nervous2 "Yeah...?"
 
     shiori "Mmhm."
 
@@ -42,7 +42,7 @@ label loop2_shiori:
 
     shiori "I can’t...{w=0.1} hear your heartbeat."
 
-    MC "...!"
+    MC panic2 "...!"
 
     scene shrine night with in_eye:
         zoom 0.5
@@ -89,7 +89,7 @@ label loop2_shiori:
 
     shiori "{sc=1}As cold as a corpse.{/sc}"
 
-    MC "Shiori-chan... {w=0.2}You're... {w=0.2}freaking me out, heh..."
+    MC nervous2 "Shiori-chan... {w=0.2}You're... {w=0.2}freaking me out, heh..."
 
     shiori "{glitch=5}Really?{/glitch} I think I'm the one who feels afraid."
 
@@ -152,7 +152,7 @@ label loop2_shiori:
 
     shiori "Come here. I’ll clean you up."
 
-    MC "I’m fine."
+    MC annoyed2 "I’m fine."
 
     shiori "Aww, just let Shiori take care of you. {w}Please?"
 
@@ -259,7 +259,7 @@ label loop2_shiori:
 
     n "{glitch=9}Shiori-chan, what are you saying!?{/glitch}"
 
-    MC "Mm."
+    MC normal3 "Mm."
 
     n "I can't move,{w=0.2} my mouth won't say anything, but it's smiling--"
 
@@ -288,8 +288,6 @@ label after_many_clicks:
 
     pause 1.0
 
-    play sound "sfx/flesh_rip.ogg"
-
     n "..."
 
     n2 "{cps=20}...Heh. HahahaHahRHRAHhahaahH!{/cps}"
@@ -306,7 +304,7 @@ label after_many_clicks:
 
     shiori "Oops, but you're not actually [persistent.player_name], are you?"
 
-    MC "..."
+    MC yan3 "..."
 
     shiori "Don't worry, Yamakui-sama. Even if you can't go out like this..."
 
@@ -370,7 +368,7 @@ label after_many_clicks:
 
     n "Why is she limping?"
 
-    MC "What's up with you?"
+    MC normal2 "What's up with you?"
 
     shiori "I stubbed my toe real bad. Clumsy ol' me~"
 
@@ -484,7 +482,7 @@ label after_many_clicks:
 
     shiori "You won’t leave me, nee Yamakui-sama?"
 
-    MC "{w=0.2}...Never."
+    MC yansm3 "{w=0.2}...Never."
 
     n "She doesn’t know what she’s saying--"
 
@@ -494,7 +492,7 @@ label after_many_clicks:
 
     n "Shiori chan--"
 
-    MC "--Thank you."
+    MC yansm3 "--Thank you."
 
     n "{i}What... What the hell is happening?{/i}"
 
@@ -570,7 +568,7 @@ label after_many_clicks:
     hide blood
     with dissolve
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/swallow.mp3"
 
     shiori "...I love..."
 

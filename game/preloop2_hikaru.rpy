@@ -948,7 +948,7 @@ label loop2_hikaru_mandatory4:
 
     n "Hikaru stumbles back, hands trembling. Their mouth hanging open, wanting to scream but can’t."
 
-    play sound "sfx/step_back.ogg"
+    play sound "sfx/stumble.mp3"
     $ renpy.pause(0.3)
 
     hikaru "{k=2}You killed [persistent.player_name]...{/k}"

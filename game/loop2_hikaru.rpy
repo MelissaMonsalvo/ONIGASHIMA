@@ -120,7 +120,7 @@ label loop2_hikaru:
 
     hikaru "Why are you still smiling,{w=0.2} {sc=1}damn you!?{/sc}"
 
-    MC "You’re cute when you’re desperate."
+    MC yansm2 "You’re cute when you’re desperate."
 
     n "{i}No, stop this madness at once! Let me speak--{/i}"
 
@@ -206,7 +206,7 @@ label loop2_hikaru:
 
     n2 "Is that all?"
 
-    MC "{cps=30}Time to say goodbye, Hikaru~{/cps}"
+    MC yansm2 "{cps=30}Time to say goodbye, Hikaru~{/cps}"
 
     n "{color=#ff002e}No--{/color}"
 
@@ -424,17 +424,17 @@ label loop2_hikaru:
 
     n "{i}No...{/i}"
 
-    MC "Sorry for the trouble...{w=0.2} Hikaru’s not well."
+    MC sad2 "Sorry for the trouble...{w=0.2} Hikaru’s not well."
 
     n "{color=#ff002e}No!{/color}"
 
-    MC "Hikaru's been talking nonsense for days,{w=0.2} barely sleeping...{w=0.2} Seeing things in the woods, you know."
+    MC sad2"Hikaru's been talking nonsense for days,{w=0.2} barely sleeping...{w=0.2} Seeing things in the woods, you know."
 
     n "{glitch=8}Hikaru's not wrong!{/glitch}"
 
-    MC "I tried to help."
+    MC nervous2 "I tried to help."
 
-    MC "But...{w=0.2} I think Hikaru's gone mad. Just like Karasuma-san."
+    MC nervous2 "But...{w=0.2} I think Hikaru's gone mad. Just like Karasuma-san."
 
     show hik normal at midleft:
         zoom 0.25
@@ -458,7 +458,7 @@ label loop2_hikaru:
 
     hikaru "{sc=2}You LIAR--{/sc}"
 
-    MC "Go home, Hikaru.{w=0.3} Before you hurt someone."
+    MC sadcl2 "Go home, Hikaru.{w=0.3} Before you hurt someone."
 
     "Man" "{sc=1}Let's go before you make a ruckus again!{/sc}"
 
@@ -602,7 +602,7 @@ label loop2_hikaru:
 
     hikaru "{sc=2}I’ll drag you down screaming if it’s the last thing I do!{/sc}"
 
-    MC "Why don't you try...?"
+    MC smug2 "Why don't you try...?"
 
     hikaru "Kami-sama should’ve struck you down--"
 
@@ -664,7 +664,7 @@ label loop2_hikaru:
 
     n2 "I’m hungry."
 
-    MC "You were always the softest one."
+    MC evil2 "You were always the softest one."
 
     hikaru "You want me?"
 
@@ -810,7 +810,7 @@ label yesyeysysyqsad222:
     play sound "sfx/tearflesh.wav"
     n2 "Gkkk--chk--krRRSHK."
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/swallow.mp3"
     n2 "Ghhhlk... glkk...{w=0.2} *gulp*."
 
     play sound "sfx/splurt.mp3"

@@ -738,7 +738,7 @@ label loop2_shiori_mandatory4:
         linear 0.03 xoffset 0
         pause 0.05
 
-     shiori "M-Maybe!"
+    shiori "M-Maybe!"
 
     shiori "Don’t you?"
 

@@ -587,7 +587,7 @@ label loop2_yamato_mandatory3:
 
         n "Who...?"
 
-        play sound "sfx/flesh_rip.ogg"
+        play sound "sfx/riip.mp3"
 
         n "Her face peeling open like a purse made of meat, from lip, to cheek, then her ears..."
 
@@ -778,7 +778,7 @@ label yesyeysysyqsad:
 
     yamato "You come near, [persistent.player_name], I’ll drag you through yer own blood.."
 
-    MC "Try. {w=0.1}{w=0.1}TRY. {cps=150}TRY. TRY TRY TRY TRY {w=0.1}TRY--{/cps}{nw}"
+    MC evil2 "Try. {w=0.1}{w=0.1}TRY. {cps=150}TRY. TRY TRY TRY TRY {w=0.1}TRY--{/cps}{nw}"
 
     yamato "{sc=3}Tch. WATCH me.{/sc}"
 

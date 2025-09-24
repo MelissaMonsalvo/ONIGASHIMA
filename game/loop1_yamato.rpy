@@ -94,8 +94,6 @@ label loop1_yamato:
 
     yamato "Heh."
 
-    play sound "sfx/bottle_thud.ogg"
-
     n "He drops the sake bottle beside him."
 
     yamato "{w=0.1}Yeah. Long enough for ya t' forget."
@@ -549,8 +547,6 @@ label loop1_yamato:
     yamato "Tch. Sleepyhead."
 
     yamato "...Anyway. Done."
-
-    play sound "sfx/sword_slide.ogg"
 
     yamato "Here ya go."
 
@@ -1073,9 +1069,6 @@ label loop1_yamato:
 
     with dissolve
 
-
-    play sound "sfx/door_close.ogg"
-
     MC "...."
 
     MC "...." ## expression changes
@@ -1261,7 +1254,7 @@ label loop1_yamato:
     hide blood
     with dissolve
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/sticky.mp3"
 
     n "{cps=11}There's a pull in your mouth--no, from your mouth--that feels wet, deep and wrong.{/cps}"
 
@@ -1324,8 +1317,6 @@ label loop1_yamato:
 
     yamato "{sc=6}NNNRRGHH--!--LET--LET--HHHHH--{/sc}"
 
-    play sound "sfx/heartbeat_fast.ogg"
-
     n "{i}...Let him go.{/i}"
 
     n "{sc=4}Please--let him go--!{/sc}"
@@ -1356,13 +1347,13 @@ label loop1_yamato:
 
     n "{sc=3}You--{/sc}"
 
-    MC "Yeah, he's gone now. Don't pretend you didn't see that."
+    MC yan "Yeah, he's gone now. Don't pretend you didn't see that."
 
     n "{w}You're supposed to be--"
 
     n "{sc=4}You were--{/sc}"
 
-    MC "..."
+    MC yan "..."
 
     n "--the hero, right?"
 
@@ -1370,13 +1361,13 @@ label loop1_yamato:
 
     n "{w}But just now you--Why? Why did you do that?"
 
-    MC yan "Eh."
+    MC yansm "Eh."
 
     n "{cps=12}No, no, no way...{/cps}"
 
     n "{sc=4}...Let me out!{/sc}"
 
-    MC "Too late, you're stuck with me now until you're gone or I die."
+    MC yansm "Too late, you're stuck with me now until you're gone or I die."
 
     n "..."
 

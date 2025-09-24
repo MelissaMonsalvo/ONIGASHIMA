@@ -357,7 +357,7 @@ label loop2_yamato:
 
         hikaru "What!?"
 
-        MC "He's gone insane because of his jealousy."
+        MC smug2 "He's gone insane because of his jealousy."
 
         hikaru "Yamato, this isn’t you {i}at all--{/i}"
 
@@ -492,13 +492,13 @@ label loop2_yamato:
 
         shiori "W-What’s going on?"
 
-        MC "...He’s gone, Shiori."
+        MC normal2 "...He’s gone, Shiori."
 
         shiori "{sc=5}That wasn’t a kami, was it?{/sc}"
 
         shiori "The prayers... The chanting's all wrong..."
 
-        MC "He’s beyond saving now."
+        MC sadcl2 "He’s beyond saving now."
 
         shiori "..."
 
@@ -524,7 +524,7 @@ label loop2_yamato:
 
         shiori "It’d stop, {glitch=7}right?{/glitch}"
 
-        MC "..."
+        MC yan2 "..."
 
         shiori "{cps=13}If only I was given the chance to talk to it...{/cps}"
 
@@ -671,7 +671,7 @@ label loop2_yamato:
 
     yamato "{sc=7}{w=0.2}YOU--{/sc}"
 
-    MC "Growl all you want, {i}mutt.{/i}"
+    MC evil2 "Growl all you want, {i}mutt.{/i}"
     show yam glitched:
         zoom 0.4
         xalign 0.5
@@ -853,8 +853,6 @@ label loop2_yamato:
     with sshake
 
     yamato "...Nnn--!"
-
-    play sound "sfx/vomit_eldritch.ogg"
 
     n "He retches,{w=0.2} out comes string of black, twitching, writhing things."
 
@@ -1138,13 +1136,13 @@ label loop2_yamato:
 
     yamato "What...{w=0.2} what the fuck are you saying..."
 
-    MC "Your prayers, don't they go something like this?"
+    MC evil2 "Your prayers, don't they go something like this?"
 
     yamato "You’re... saying it backwards--"
 
-    MC "Yamato-kun..."
+    MC evil2  "Yamato-kun..."
 
-    MC "Who do you think the master of the earth is?"
+    MC evil2 "Who do you think the master of the earth is?"
 
     show yam glitched:
         zoom 0.25
@@ -1208,12 +1206,9 @@ label loop2_yamato:
 
     yamato "{sc=8}YOU’RE--{/sc}"
 
-    MC "{size=+4}{color=#aa0000}Mountains. Earth. Same thing{/color}{/size}"
+    MC evil2 "{size=+4}{color=#aa0000}Mountains. Earth. Same thing{/color}{/size}"
 
-    MC "The mountains belongs to me, Yamato."
-
-    play sound "sfx/bone_creak.ogg"
-    $ renpy.pause(0.5)
+    MC evil2 "The mountains belongs to me, Yamato."
 
     n "Yamato scrambles back immediately as realization slaps him in the face."
 
@@ -1239,9 +1234,9 @@ label loop2_yamato:
 
     yamato "{sc=8}GHhhAAAGhghh--{/sc}"
 
-    MC "I gave you teeth, claws, power, eeeeverything you wanted."
+    MC evil2 "I gave you teeth, claws, power, eeeeverything you wanted."
 
-    MC "But it'll never be as strong as mine."
+    MC evil2 "But it'll never be as strong as mine."
 
     n "His fingers snap sideways as they claw at his own chest."
 
@@ -1266,11 +1261,11 @@ label loop2_yamato:
 
     yamato "{glitch=8}I WASN'T TRYING TO--{/glitch}"
 
-    MC "But you prayed to me."
+    MC yansm2 "But you prayed to me."
 
-    MC "ME."
+    MC evil2 "ME."
 
-    MC "{cps=10}Yamakui.{/cps}"
+    MC evil2 "{cps=10}Yamakui.{/cps}"
 
 
     show moon7 glitched behind yam:
@@ -1348,7 +1343,7 @@ label loop2_yamato:
 
     n "I--"
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/swallow.mp3"
     with flashred
     n2 "JjJJuIiiiiiICe"
 

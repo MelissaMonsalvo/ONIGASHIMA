@@ -78,7 +78,7 @@ label loop3_hikaru:
 
     hikaru "{sc=7}WHERE IS--WHERE ARE--{/sc}"
 
-    MC "It'S Me, HiKARu."
+    MC happycl3 "It'S Me, HiKARu."
 
     hikaru "{size=+6}YAMAKUI...!{/size}"
 
@@ -319,9 +319,9 @@ label loop3_hikaru:
 
     hikaru "Damn it, has the kami-sama abandoned us!?"
 
-    MC "{size=+5}{color=#ff0000}Y E S.{/color}{/size}"
+    MC happy3 "{size=+5}{color=#ff0000}Y E S.{/color}{/size}"
 
-    MC "YoUR KamMI-sAMa HaS AbANDonED YoU."
+    MC happy3 "YoUR KamMI-sAMa HaS AbANDonED YoU."
 
     n2 "i'LL eAt yOu."
 

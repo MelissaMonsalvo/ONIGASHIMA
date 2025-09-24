@@ -14,7 +14,7 @@ label loop1_shiori:
 
     play music "Dark.mp3"
 
-    play sound "sfx/suzu.ogg"
+    play sound "sfx/suzu.mp3"
 
     show shi normal:
         zoom 0.5
@@ -679,7 +679,7 @@ label loop1_shiori:
 
     shiori "{sc=4}Hh-ah... [persistent.player_name]-sa...{/sc}"
 
-    play sound "sfx/drip.ogg"
+    play sound "sfx/drip.mp3"
 
     n "She reaches up to your back, trembling, nails raking across your back. But you {i}feel none of it.{/i}."
 
@@ -740,7 +740,7 @@ label loop1_shiori:
     hide blood
     with dissolve
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/slurrp.mp3"
 
     shiori "...mmnh..."
 

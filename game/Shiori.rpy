@@ -6,10 +6,10 @@ transform shiori_zoom:
     yoffset 0
     xzoom 1.0
     yzoom 1.0
-    
+
 image shi normal = LiveComposite(
     (2000,5637),
-    (-1800,0), Animation(
+    (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
             "Shiori/tail2.png", .25,
             "Shiori/tail3.png", .25,
@@ -18,7 +18,7 @@ image shi normal = LiveComposite(
             "Shiori/tail2.png", .25,
             "Shiori/tail1.png", 2.25,
         ),
-    
+
     (0,0), "Shiori/body.png",
     (0,0), Animation(
             "Shiori/ear_left.png", 4.5,

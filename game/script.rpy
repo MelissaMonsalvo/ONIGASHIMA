@@ -64,6 +64,9 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    $ ysword = False
+    $ hmask = False
+    $ hsword = False
     #jump map
     jump prologue_loop1
     jump prologue_loop2

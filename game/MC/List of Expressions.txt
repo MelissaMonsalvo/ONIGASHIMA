@@ -1,0 +1,15 @@
+NON ONI
+
+MC normal = neutral
+MC happy = laughing eye open
+MC happycl = laughing eye closed
+MC nervous
+MC sad
+MC sadcl = eye closed variant / devastated
+MC annoyed
+MC mad
+MC surprised
+MC shocked = more surprised variant
+MC smug 
+MC smugcl = annoying gremlin MC
+MC evil 

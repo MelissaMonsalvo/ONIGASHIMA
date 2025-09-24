@@ -69,8 +69,8 @@ define n = Character(None, what_color="#fffafa") ## mc sama narrator
 define n2 = Character(None, what_color="#ff5277", what_font="LibreBaskerville-Regular.ttf", what_size=34) ## yamakui narrator
 
 define shiori = Character("Shiori", color="#c78b12", callback=speaker("shio"))
-define yamato = Character("Yamato", color="#00d44a")
-define hikaru = Character("Hikaru", color="#092a43")
+define yamato = Character("Yamato", color="#00d44a", callback=speaker("yama"))
+define hikaru = Character("Hikaru", color="#092a43",callback=speaker("hika"))
 
 image flesh = "BG/Flesh.png"
 image flesh2 = "BG/Flesh2.png"
@@ -91,14 +91,14 @@ image house day = "BG/House.jpg"
 image forest day = "BG/Forest Day.png"
 image teru day = "BG/Teru Day.png"
 image shrine day = "BG/Shrine.jpg"
-image village day = "BG/Village.jpg"
+image village day = "BG/Village Day.jpg"
 
 image dojo night = "BG/Dojo.jpg"
 image house night = "BG/House.jpg"
 image forest night = "BG/Forest Night.png"
 image teru night = "BG/Teru Night.png"
 image shrine night = "BG/Shrine.jpg"
-image village night = "BG/Village.jpg"
+image village night = "BG/Village Night.jpg"
 
 image child = "NPC/npc_child.webp"
 image man = "NPC/npc_man.webp"
