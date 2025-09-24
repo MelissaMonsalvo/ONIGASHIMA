@@ -906,7 +906,8 @@ define btn_skin_yellow = {
     "sel_idle": "gui/game menu/btn_nav_selected_idle_background.png",
     "sel_hover": "gui/game menu/btn_nav_selected_hover_background.png",
     "idle_2": "gui/game menu/btn_idle_background.png",
-    "hover_2": "gui/game menu/btn_hover_background.png"
+    "hover_2": "gui/game menu/btn_hover_background.png",
+    "color": "#000000"
 }
 
 define btn_skin_red = {
@@ -915,10 +916,11 @@ define btn_skin_red = {
     "sel_idle": "gui/game menu/btn_nav_red_selected_idle_background.png",
     "sel_hover": "gui/game menu/btn_nav_red_selected_hover_background.png",
     "idle_2": "gui/game menu/btn_idle_background.png",
-    "hover_2": "gui/game menu/btn_red_hover_background.png"
+    "hover_2": "gui/game menu/btn_red_hover_background.png",
+    "color": "#ffffff"
 }
 
-
+define selected1 = 1
 # persistent.loop1:
 
 
@@ -961,7 +963,10 @@ screen preferences():
                         selected_idle skin["sel_idle"]
                         selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",1)
-                    text "General" xpos 125 yalign 0.5 #ypos 25
+                    if opconfig == 1:
+                        text "General" xpos 125 yalign 0.5 color skin["color"]
+                    else:
+                        text "General" xpos 125 yalign 0.5 color "#000000"
                 fixed:
                     xsize 250
                     ysize 100
@@ -971,7 +976,11 @@ screen preferences():
                         selected_idle skin["sel_idle"]
                         selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",2)
-                    text "Audio" xpos 125 yalign 0.5
+                    #text "Audio" xpos 125 yalign 0.5
+                    if opconfig == 2:
+                        text "Audio" xpos 125 yalign 0.5 color skin["color"]
+                    else:
+                        text "Audio" xpos 125 yalign 0.5 color "#000000"
 
                 fixed:
                     xsize 250
@@ -982,7 +991,11 @@ screen preferences():
                         selected_idle skin["sel_idle"]
                         selected_hover skin["sel_hover"]
                         action SetVariable("opconfig",3)
-                    text "Dialogue" xpos 125 yalign 0.5
+                    #text "Dialogue" xpos 125 yalign 0.5
+                    if opconfig == 3:
+                        text "Dialogue" xpos 125 yalign 0.5 color skin["color"]
+                    else:
+                        text "Dialogue" xpos 125 yalign 0.5 color "#000000"
 
                 fixed:
                     xsize 250
@@ -992,8 +1005,12 @@ screen preferences():
                         hover skin["hover"]
                         selected_idle skin["sel_idle"]
                         selected_hover skin["sel_hover"]
-                        action SetVariable("opconfig",4)
-                    text "Accessibility/\nControls" xpos 125 yalign 0.5
+                        action SetVariable("opconfig",4), SetVariable("selected1",4)
+                    #text "Accessibility/\nControls" xpos 125 yalign 0.5
+                    if opconfig == 4:
+                        text "Accessibility/\nControls" xpos 125 yalign 0.5 color skin["color"]
+                    else:
+                        text "Accessibility/\nControls" xpos 125 yalign 0.5 color "#000000"
         null width 500
 
         if opconfig == 1:
