@@ -21,7 +21,7 @@ label loop2_shiori_mandatory1:
 
     shiori "Did you sleep well~?"
 
-    MC "Yeah, definitely!"
+    MC smug2 "Yeah, definitely!"
 
     shiori "That’s good~ That’s very good."
 
@@ -29,14 +29,13 @@ label loop2_shiori_mandatory1:
 
     n2 "Hoo?"
 
-    MC "Why would I dream of that?"
+    MC smugcl2 "Why would I dream of that?"
 
     show shi normal:
         zoom 0.5
         xalign 0.4
         yalign 0
         yoffset 80
-
 
         linear 0.11 yoffset 40
         linear 0.10 yoffset 95
@@ -46,7 +45,7 @@ label loop2_shiori_mandatory1:
 
     shiori "Oh, woow~ You just defeated the big scary oni and you're unfazed?"
 
-    MC "Guess I'm awesome like that!"
+    MC smug2 "Guess I'm awesome like that!"
 
     shiori "Ne, [persistent.player_name]-sama?"
 
@@ -54,7 +53,7 @@ label loop2_shiori_mandatory1:
 
     n  "Why would she ask that?"
 
-    MC "Why."
+    MC yansm2 "Why."
 
     shiori "I just... I want to understand. I want to know how you get to kill the fearsome oni~"
 
@@ -66,9 +65,9 @@ label loop2_shiori_mandatory1:
 
     menu:
         "I stabbed it in the chest":
-            MC "{i}I snapped it's spine in half.{/i}"
+            MC evil2 "{i}I snapped it's spine in half.{/i}"
         "I decapitated it.":
-            MC "{i}I snapped it's spine in half.{/i}"
+            MC evil2 "{i}I snapped it's spine in half.{/i}"
 
     n "Wait, what? That's not even what you thought of--"
 
@@ -78,17 +77,17 @@ label loop2_shiori_mandatory1:
 
     shiori "{sc=2}But are you sure it's really dead?{/sc}"
 
-    MC "{i}Definitely.{/i}"
+    MC yansm2 "{i}Definitely.{/i}"
 
     menu:
-            "‘I burned it.’":
-                MC "I tore the arms off..."
-            "‘I watched it bleed out.’":
-                MC "I tore the arms off..."
+        "‘I burned it.’":
+            MC evil2 "I tore the arms off..."
+        "‘I watched it bleed out.’":
+            MC evil2 "I tore the arms off..."
 
-    MC "...and bent the legs backwards so it'll be on the wrong angle."
+    MC yan2 "...and bent the legs backwards so it'll be on the wrong angle."
 
-    MC "It looked like {i}a beautiful flower~{/i}"
+    MC happy2 "It looked like {i}a beautiful flower~{/i}"
 
     n "What the hell are you saying."
 
@@ -100,9 +99,9 @@ label loop2_shiori_mandatory1:
 
     menu:
         "It cursed me before dying.":
-            MC "It didn’t say anything, Shiori. Just gurgling noises. Probably because I {glitch}stabbed it in this neck to kill it.{/glitch}"
+            MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I {glitch}stabbed it in this neck to kill it.{/glitch}"
         "It cried like a child.":
-            MC "It didn’t say anything, Shiori. Just gurgling noises. Probably because I stabbed it in this neck to kill it."
+            MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I stabbed it in this neck to kill it."
 
     shiori "{i}...I thought so.{/i}"
 
@@ -117,7 +116,7 @@ label loop2_shiori_mandatory1:
 
     shiori "{sc=2}[persistent.player_name]-sama, you forgot your own story~{/sc}"
 
-    MC "Eh?"
+    MC surprised2 "Eh?"
 
     shiori "{k=1}You said you snapped its spine. Now it’s a stab in the neck?{/k}"
 
@@ -191,7 +190,7 @@ label loop2_shiori_mandatory1:
 
     n "Don’t say anything. Don’t respond. Please--"
 
-    MC "..."
+    MC yan2 "..."
 
     shiori "Ne, [persistent.player_name]-sama..."
 
@@ -199,7 +198,7 @@ label loop2_shiori_mandatory1:
 
     shiori "...will you tell it something for me?"
 
-    MC "What is it?"
+    MC yan2 "What is it?"
 
     show shi normal:
         zoom 0.7
@@ -280,7 +279,7 @@ label loop2_shiori_mandatory2:
 
     shiori "[persistent.player_name]-sama~ Did you sleep well again?"
 
-    MC "...Yeah."
+    MC normal2 "...Yeah."
 
     shiori "I am so happy you get enough sleep!"
 
@@ -302,7 +301,7 @@ label loop2_shiori_mandatory2:
 
     shiori "Ne...{w=01} Can I ask more today?"
 
-    MC "...What now?"
+    MC annoyed2 "...What now?"
 
     shiori "About the mountain. I mean, no one went there and returned alive like you did."
 
@@ -310,7 +309,7 @@ label loop2_shiori_mandatory2:
 
     shiori "I always imagined something awful. Or beautiful. Maybe a bit of both~"
 
-    MC "It’s just a cave filled with rotten meat and bones."
+    MC annoyed2 "It’s just a cave filled with rotten meat and bones."
 
     shiori "Oh~? {w=0.1}That sounds horrifying. Must be {i}lonely.{/i}"
 
@@ -324,9 +323,9 @@ label loop2_shiori_mandatory2:
 
     shiori "I wonder if the mist is Yamakui itself~"
 
-    MC "No, but it hides the cliffside... And there are bodies inside it, probably those who fell."
+    MC normal2 "No, but it hides the cliffside... And there are bodies inside it, probably those who fell."
 
-    MC "They aren't intact, some are half-eaten."
+    MC normal2 "They aren't intact, some are half-eaten."
 
     shiori "{sc=1}Ara~{/sc}"
 
@@ -338,15 +337,14 @@ label loop2_shiori_mandatory2:
 
     shiori "Otherwise it will... {w}run out of food."
 
-    MC "Exactly."
+    MC normal2 "Exactly."
 
-    MC "{i}The Yamakui is a patient hunter.{/i}"
+    MC evil2 "{i}The Yamakui is a patient hunter.{/i}"
 
     n2 "{i}Patient enough to talk like this with prey.{/i}"
 
     show darken2
     with dissolve
-
 
     $ _prev_music_volume = _preferences.volumes["music"]
 
@@ -355,23 +353,24 @@ label loop2_shiori_mandatory2:
 
     shiori "Then, does that mean Red Moon is a {b}feast?{/b}"
 
-    MC "..."
+    MC sadcl2 "..."
 
     shiori "{sc=2}Like... when it actually eats normally and not just snacking?{/sc}"
 
-    MC "{k=1}Yes! That is when it feeds off something fresh and not rotten.{/k}"
+    MC yan2 "{k=1}Yes! That is when it feeds off something fresh and not rotten.{/k}"
 
-    MC "{w}Food that has its own soul and memories."
+    MC yan2 "{w}Food that has its own soul and memories."
 
-    MC "Basically, yes, a feast."
+    MC evil2 "Basically, yes, a feast."
 
     n "{i}What are you saying? How do you know this--{/i}"
 
-    MC "I--I mean, that’s what I heard."
+    MC panic2 "I--I mean, that’s what I heard."
 
-    MC "{k=2}That’s what it did. {w}Not me. {w}I mean--{/k}"
+    MC panic2 "{k=2}That’s what it did. {w}Not me. {w}I mean--{/k}"
 
     n "{w}Why is your mouth running off by itself? Get a grip already!"
+
 
 
     show shi normal:
@@ -398,13 +397,13 @@ label loop2_shiori_mandatory2:
 
     shiori "{i}You talk as if you’ve known it for years.{/i}"
 
-    MC "{w}I was there, remember? I {sc=1}KILLED{/sc} it."
+    MC evil2 "{w}I was there, remember? I {sc=1}KILLED{/sc} it."
 
-    MC "That's why I{i} know.{/i}"
+    MC smug2 "That's why I{i} know.{/i}"
 
     shiori "Mm... {w=0.2}but you talk like it’s still alive."
 
-    MC "..."
+    MC sadcl2 "..."
 
     shiori "{i}So, the Yamakui is hungry, right?{/i}"
 
@@ -412,17 +411,18 @@ label loop2_shiori_mandatory2:
 
     n "{k=2}Don’t answer that.{/k}"
 
-    MC "...I don’t think it works like that for Onis. Do they even have feelings?"
+    MC annoyed2 "...I don’t think it works like that for Onis. Do they even have feelings?"
 
     n2 "{size=+8}Hungry, {w=0.2}hungry, {w=0.2}hungry.{/size}"
 
     shiori "{w}Are you sure?"
 
-    MC "Yeah."
+    MC normal2 "Yeah."
 
     shiori "Well~"
 
     shiori "Thanks for the story again today, [persistent.player_name]-sama."
+
 
 
 
@@ -595,7 +595,7 @@ label loop2_shiori_mandatory4:
 
     n2 "I don't sleep."
 
-    MC "Yeah. The red moon is coming, so I--"
+    MC nervous2 "Yeah. The red moon is coming, so I--"
 
     show shi normal:
         zoom 0.35
@@ -623,7 +623,7 @@ label loop2_shiori_mandatory4:
 
     shiori "I have more questions.{w=0.2} Don't laugh, okay?"
 
-    MC "Yeah?"
+    MC normal2 "Yeah?"
 
     shiori "When the Yamakui wasn’t eating...{w=0.2} what did it do?"
 
@@ -635,7 +635,7 @@ label loop2_shiori_mandatory4:
 
     n "The yamakui is not a {sc=1}dog.{/sc}"
 
-    MC "What the hell, Shiori?"
+    MC annoyed2 "What the hell, Shiori?"
 
     show shi normal:
         zoom 0.35
@@ -662,17 +662,17 @@ label loop2_shiori_mandatory4:
 
     shiori "But also kind of...{w=0.3} I dunno.{w=0.3} {i}Sad?{/i}"
 
-    MC "Sad?"
+    MC surprised2 "Sad?"
 
     shiori "Yeah...{w=0.3} Even if it’s a scary Oni,{w=0.3} it must’ve been lonely, right?"
 
-    MC "..."
+    MC sadcl2 "..."
 
     shiori "Didn’t it ever want someone to talk to?{w=0.2}"
 
     stop music fadeout 1.0
 
-    MC "You're {glitch=7}weird,{/glitch} Shiori."
+    MC annoyed2 "You're {glitch=7}weird,{/glitch} Shiori."
 
     shiori "...Eh?"
 
@@ -680,11 +680,11 @@ label loop2_shiori_mandatory4:
     show darken
     with dissolve
 
-    MC "Every time we talk,{w=0.2} it’s about the Oni."
+    MC mad2 "Every time we talk,{w=0.2} it’s about the Oni."
 
-    MC "You never asked if I was okay,{w=0.2} if I was scared,{w=0.2} or if I was injured..."
+    MC hurt2 "You never asked if I was okay,{w=0.2} if I was scared,{w=0.2} or if I was injured..."
 
-    MC "And I think you're hoping that it managed to survive somehow."
+    MC mad2 "And I think you're hoping that it managed to survive somehow."
 
     shiori "{sc=5}No!{/sc} That’s not--{w=0.2}I mean--"
 
@@ -717,7 +717,7 @@ label loop2_shiori_mandatory4:
 
     shiori "I don’t think that means it didn’t {i}feel{/i} things."
 
-    MC "You think it had feelings?"
+    MC yan2 "You think it had feelings?"
 
     show shi normal:
         zoom 0.35
@@ -738,15 +738,15 @@ label loop2_shiori_mandatory4:
         linear 0.03 xoffset 0
         pause 0.05
 
-    shiori "M-Maybe!"
+     shiori "M-Maybe!"
 
     shiori "Don’t you?"
 
-    MC "..."
+    MC sadcl2 "..."
 
     shiori "{color=#ff002e}At least it was hurt when you killed it, right?{/color}"
 
-    MC "..."
+    MC yan2 "..."
 
     shiori "...I just think..."
 
@@ -755,7 +755,6 @@ label loop2_shiori_mandatory4:
     shiori "{w=0.3}I hope someone hugs it before it dies, just once..."
 
     pause 0.4
-
 
     n2 "{b}LOVE?{/b}"
 
@@ -777,8 +776,7 @@ label loop2_shiori_mandatory4:
 
     with flashred
 
-
-    MC "Mmmph!"
+    MC shocked2 "Mmmph!"
 
     with vpunch
 
@@ -786,13 +784,13 @@ label loop2_shiori_mandatory4:
 
     n "Your hands {i}twitch{/i}.{w=0.2} Your spine {glitch=8}locks.{/glitch}"
 
-    MC "That’s...{w=0.2} ngh--"
+    MC panic2 "That’s...{w=0.2} ngh--"
 
     shiori "...[persistent.player_name]-sama?"
 
-    MC "I’m fine."
+    MC nervous2 "I’m fine."
 
-    MC "Kh.{w=0.2} I’m--fine."
+    MC nervous2 "Kh.{w=0.2} I’m--fine."
 
     n2 "This girl.{w=0.2} So {b}warm{/b} when she talks."
 
@@ -809,7 +807,6 @@ label loop2_shiori_mandatory4:
         yzoom 1.0
         xzoom 1.0
 
-
         linear 0.10 yoffset 42 yzoom 0.95
         linear 0.08 yoffset -18 yzoom 1.08
         linear 0.07 yoffset 10 yzoom 0.98
@@ -819,7 +816,7 @@ label loop2_shiori_mandatory4:
 
     shiori "You're so cruel!"
 
-    MC "No,{w=0.2} sorry,{w=0.2} I just--!"
+    MC hurt2 "No,{w=0.2} sorry,{w=0.2} I just--!"
 
     shiori "{sc=2}Hmph!{/sc}{w=0.2} I can't believe you laughed when I was trying to be nice!"
 

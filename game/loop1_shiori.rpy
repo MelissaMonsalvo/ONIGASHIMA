@@ -27,9 +27,9 @@ label loop1_shiori:
 
     shiori "I was just about to prepare the shrine for the red moon, and--"
 
-    MC "Shiori-chan."
+    MC normal "Shiori-chan."
 
-    MC "You still don't believe me, do you?"
+    MC nervous "You still don't believe me, do you?"
 
     show shi normal:
         zoom 0.5
@@ -43,14 +43,13 @@ label loop1_shiori:
         easein 0.1 yoffset 90 xzoom 0.97 yzoom 1.03
         easeout 0.1 yoffset 80 xzoom 1.0 yzoom 1.0
 
-
     shiori "I--"
 
     shiori "[persistent.player_name]-sama. I believe you, I fully believe that you believe you've killed it, but..."
 
     shiori "Have you ever seen a cicada still move after its head comes off?"
 
-    MC "..."
+    MC sad "..."
 
     shiori "Or a puppet that keeps dancing even when no one’s holding the strings?"
 
@@ -66,7 +65,7 @@ label loop1_shiori:
 
     shiori "Could you bring me the incense box, [persistent.player_name]-sama?"
 
-    MC "...Yeah."
+    MC normal "...Yeah."
 
     shiori "Thank you~"
 
@@ -76,7 +75,7 @@ label loop1_shiori:
 
     play sound "sfx/swallow.mp3"
 
-    MC "*gulp*"
+    MC nervous "*gulp*"
 
     play sound "sfx/jumpscare.mp3"
 
@@ -94,19 +93,19 @@ label loop1_shiori:
 
     shiori "Nee, [persistent.player_name]-sama~"
 
-    MC "...!"
+    MC shocked "...!"
 
     with vpunch
 
     n "Her breath suddenly brushes your cheek. When did she get so close?"
 
-    MC "Shiori..."
+    MC surprised "Shiori..."
 
     shiori "{sc=1}You’re trembling~{/sc}"
 
     shiori "Nee, nee. Are you scared of me?"
 
-    MC "No."
+    MC normal "No."
 
     show shi normal:
         zoom 0.8
@@ -138,7 +137,7 @@ label loop1_shiori:
     n "You didn't realize that your body spasms so hard it knocks down a candle."
 
 
-    MC "{b}-Ah!{/b}"
+    MC shocked "{b}-Ah!{/b}"
 
     n "The flame licks your wrist. Even though it burned off your sleeves, it feels like it's your flesh that is being torn apart too."
 
@@ -177,7 +176,7 @@ label loop1_shiori:
     play sound "sfx/firecrackle.mp3"
     show red_flash_slow onlayer screens
 
-    MC "Nngh-!"
+    MC mad "Nngh-!"
     with sshake
 
     n "The wax lands on your skin-Oh."
@@ -186,11 +185,11 @@ label loop1_shiori:
 
     n "...It's... {w}black?"
 
-    MC "Why the hell is the wax black?!"
+    MC mad "Why the hell is the wax black?!"
 
     n "It burned through the cloth, and you smell something foul. Is your flesh burning?"
 
-    MC "{sc}Shiori, help--{/sc}"
+    MC panic "{sc}Shiori, help--{/sc}"
     with vpunch
 
     n "She should be helping, or reach for something, anything, but..."
@@ -199,7 +198,7 @@ label loop1_shiori:
 
     shiori "{w=0.2}You remember the charm I gave you, right?"
 
-    MC "Seriously, is this the right time to talk about this--"
+    MC panic "Seriously, is this the right time to talk about this--"
 
     shiori "The one I hid in your sleeve before you climbed the mountain...."
 
@@ -234,7 +233,7 @@ label loop1_shiori:
 
     n "You feel lightheaded immediately."
 
-    MC "R-Really?"
+    MC nervous "R-Really?"
 
     shiori "Of course~"
 
@@ -262,7 +261,7 @@ label loop1_shiori:
 
     shiori "{sc=2}Drink this instead and you'll not be marked when the red moon comes.{/sc}"
 
-    MC "...What is it?"
+    MC surprised "...What is it?"
 
     shiori "{i}It's just wine~{/i}"
 
@@ -276,7 +275,7 @@ label loop1_shiori:
 
     n "It sticks to your palate and clots at the back of your throat as you gulp it down."
 
-    MC "Hahh~"
+    MC normal "Hahh~"
     hide frame2
     hide wine
     with dissolve
@@ -287,17 +286,18 @@ label loop1_shiori:
 
     shiori "So? How was it?"
 
-    MC "It's... {w}fine. I guess?"
+    MC normal "It's... {w}fine. I guess?"
 
     shiori "That's it? Just {i}'fine'{/i}? Nothing else?"
 
-    MC "I mean... {w}It's wine, right? Wine's always good in my book."
+    MC happycl "I mean... {w}It's wine, right? Wine's always good in my book."
 
     shiori "{w=0.1}...Nevermind."
 
     shiori "It doesn’t matter."
 
-    MC "...?" ## titlts their head
+    MC confused "...?"
+
 
     shiori "{cps=14}{sc=6}Tomorrow is the {color=#ff002e}Red Moon{/color}, [persistent.player_name]-sama.{/sc}{/cps}"
 
@@ -420,7 +420,7 @@ label loop1_shiori:
 
     shiori "{w=0.2}You came."
 
-    MC "..."
+    MC yan "..."
 
     shiori "It’s almost time, you know."
 
@@ -449,9 +449,9 @@ label loop1_shiori:
 
     shiori "{i}Nee, nee, you wouldn’t leave me alone on a night like this... Right...?{/i}"
 
-    MC "{w=0.15}Of course, Shiori."
+    MC yansm "{w=0.15}Of course, Shiori."
 
-    MC "{cps=11}I'll always come for you.{/cps}"
+    MC yansm "{cps=11}I'll always come for you.{/cps}"
 
     stop music
 
@@ -654,11 +654,11 @@ label loop1_shiori:
 
     n "Are you sure this is the right time to do this? The red--"
 
-    MC "{sc=7}I said shut up.{/sc}"
+    MC yan "{sc=7}I said shut up.{/sc}"
 
     shiori "W-What?"
 
-    MC "{i}Not you.{/i}"
+    MC yansm "{i}Not you.{/i}"
 
     n "*sigh*"
 
@@ -810,7 +810,7 @@ label loop1_shiori:
     scene black
     with in_212
 
-    MC "..."
+    MC yansm "..."
 
     n "Shiori has stopped breathing."
 

@@ -37,13 +37,13 @@ label loop2_yamato_mandatory1:
 
     yamato "I been lookin' for ya."
 
-    MC "...Yamato."
+    MC normal2 "...Yamato."
 
     yamato "{i}Tch.{/i} Don't gimme that voice."
 
     yamato "Ain’t here for pleasantries."
 
-    MC "Okay...?"
+    MC annoyed2 "Okay...?"
 
     yamato "I got questions."
 
@@ -66,7 +66,7 @@ label loop2_yamato_mandatory1:
 
     yamato "{w=0.1}There ain't no way that's happenin'."
 
-    MC "..."
+    MC yan2 "..."
 
     n2 "{cps=13}Hah.{/cps}"
 
@@ -74,15 +74,15 @@ label loop2_yamato_mandatory1:
 
     n "Say something. {w}Anything."
 
-    MC "I got bit."
+    MC yan2 "I got bit."
 
     yamato "{i}Bit?{/i}"
 
-    MC "Yeah, the damn Yamakui bit me. That’s why I--"
+    MC yan2 "Yeah, the damn Yamakui bit me. That’s why I--"
 
     yamato "Bullshit. Where?"
 
-    MC "Here."
+    MC annoyed2 "Here."
 
     play sound "sfx/rustle.mp3"
 
@@ -144,7 +144,7 @@ label loop2_yamato_mandatory1:
 
     yamato "{sc=5}That ain’t--That's a corpse...!{/sc}"
 
-    MC "I thought you wanted proof?"
+    MC evil2 "I thought you wanted proof?"
 
     yamato "Yeah?! Well, ya gave me a damn horror show!"
 
@@ -152,9 +152,9 @@ label loop2_yamato_mandatory1:
 
     n "Stop. Please stop. Don’t talk like that. Don’t even ASK.."
 
-    MC "{i}It’s only a wound, Yamato.{/i}"
+    MC yansm2 "{i}It’s only a wound, Yamato.{/i}"
 
-    MC "I mean it's a Yamakui, it's bound to leave a curse or something."
+    MC smug2 "I mean it's a Yamakui, it's bound to leave a curse or something."
 
     yamato "Nah. That ain’t no wound I ever seen."
 
@@ -170,7 +170,8 @@ label loop2_yamato_mandatory1:
 
     yamato "{i}If the fuckin' Yamakui's dead then the curse would fuck off!{/i}"
 
-    MC "No--"
+    MC annoyed2 "No--"
+
 
     show yam normal:
         zoom 0.2
@@ -260,7 +261,7 @@ label loop2_yamato_mandatory1:
     scene black
     hide red_flash_slow
 
-    MC "..."
+    MC yansm2 "..."
 
     #return
 
@@ -288,7 +289,7 @@ label loop2_yamato_mandatory2:
 
     yamato "{sc=3}Ah hell, what are you doing here!?{/sc}"
 
-    MC "Don't mind me, I just want to spar."
+    MC annoyed2 "Don't mind me, I just want to spar."
 
     show yam normal:
         zoom 0.2
@@ -317,13 +318,13 @@ label loop2_yamato_mandatory2:
 
     yamato "{b}Fuck off!{/b}"
 
-    MC "What, the great Yamato is afraid of a little curse?"
+    MC smug2 "What, the great Yamato is afraid of a little curse?"
 
     yamato "{k=1}Wh--{/k}"
 
-    MC "Can't believe the guy who used to shout he'd kill the Yamakui now {i}run away with his tails between his legs.{/i}"
+    MC smug2 "Can't believe the guy who used to shout he'd kill the Yamakui now {i}run away with his tails between his legs.{/i}"
 
-    MC "What are you, {sc=1}coward?{/sc}"
+    MC yansm2 "What are you, {sc=1}coward?{/sc}"
 
     show yam normal:
         zoom 0.2
@@ -499,7 +500,7 @@ label yyyesss:
 
     n "Stop. Stop thinking like that. That’s not--"
 
-    MC "Yamato--"
+    MC yan2 "Yamato--"
 
     yamato "{k=2}S-Stay back!{/k}"
 
@@ -732,7 +733,7 @@ label loop2_yamato_mandatory4:
 
     yamato "{sc=2}Knew you were watchin’...{/sc}"
 
-    MC "{k=2}...Yamato?{/k}"
+    MC surprised2 "{k=2}...Yamato?{/k}"
 
     yamato "{w}Wanna laugh again, huh? Go on. Do it."
 

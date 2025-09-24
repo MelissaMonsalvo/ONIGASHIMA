@@ -65,6 +65,7 @@ screen fake_name_input():
 
 label start:
     #jump map
+    jump prologue_loop1
     jump prologue_loop2
     $ _prev_music_volume = _preferences.volumes["music"]
     if persistent.trueendingunlocked:

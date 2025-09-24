@@ -30,11 +30,11 @@ label loop1_hikaru:
 
     play music "Doubt.mp3"
 
-    MC "Hikaru, I--"
+    MC nervous "Hikaru, I--"
 
     hikaru "Yes?"
 
-    MC "I asked Yamato and Shiori, and they said they don't know that there's something between us, so--"
+    MC nervous "I asked Yamato and Shiori, and they said they don't know that there's something between us, so--"
 
     hikaru "That's because my father is branded traitor."
 
@@ -46,7 +46,7 @@ label loop1_hikaru:
 
     hikaru "Because I thought if they found out, they’d turn on you too."
 
-    MC "...Ah."
+    MC surprised "...Ah."
 
     n "Everything makes sense now."
 
@@ -77,7 +77,7 @@ label loop1_hikaru:
 
     hikaru "Maybe it wore your face, and that’s why it didn’t know me."
 
-    MC "..."
+    MC sad "..."
 
     n "They look up at you."
 
@@ -103,16 +103,16 @@ label loop1_hikaru:
 
     hikaru "Maybe it's punishment from the gods... {w}For what my father did..."
 
-    MC "...I'm sorry."
+    MC sadcl "...I'm sorry."
 
-    MC "I don’t know what happened to me, or what I lost."
+    MC sadcl "I don’t know what happened to me, or what I lost."
 
-    MC "But... {w}I want to fix it."
+    MC sadcl "But... {w}I want to fix it."
 
 
-    MC "I want to remember {i}you{/i}, Hikaru."
+    MC nervous "I want to remember {i}you{/i}, Hikaru."
 
-    MC "I want to start over... {w=0.1}If you’ll let me."
+    MC nervous "I want to start over... {w=0.1}If you’ll let me."
 
     show hik normal:
         zoom 0.3
@@ -127,7 +127,7 @@ label loop1_hikaru:
 
     hikaru "You really mean that?"
 
-    MC "Of course, Hikaru."
+    MC happy "Of course, Hikaru."
 
     hikaru "{sc=1}Tell me something, [persistent.player_name]...{/sc}"
 
@@ -139,11 +139,11 @@ label loop1_hikaru:
 
     n "You don’t answer right away."
 
-    MC "{k=-1}Well... If I loved you once, I can do it again.{/k}"
+    MC normal "{k=-1}Well... If I loved you once, I can do it again.{/k}"
 
-    MC "And if you tell me again... {i}I’ll listen!{/i}"
+    MC happycl "And if you tell me again... {i}I’ll listen!{/i}"
 
-    MC "We’ll make new memories. {sc=1}A-And I’ll hold onto them this time!{/sc}"
+    MC happycl "We’ll make new memories. {sc=1}A-And I’ll hold onto them this time!{/sc}"
 
     n "Hikaru hesitates for a moment, staring at your face, then wipes their own, nodding."
 
@@ -171,90 +171,170 @@ label loop1_hikaru:
             MC "I don't know, maybe it's just bleeding internally?"
             hikaru "..."
 
-    hikaru "Then what happened to the {glitch=7}scarf?{/glitch}"
+    n "Didn't hikaru greet you with a cold demeanor when you return? Why is--"
 
-    MC "{sc=1}T-The scarf...{/sc}"
+    n "Hold on, let me remember..."
 
-    n "{i}Yes,{/i} you remembered saying a scarf that's the exact same with Hikaru's somewhere, it might be at--"
+    MC nervous "...Hikaru?"
 
-    menu:
-        "I left it":
-            $ scarf_left = False
-            $ hikaru_belief += 1
-            MC "I left it at the mountains, the Yamakui ripped it off me."
-            hikaru "{cps=10}I-I see...{/cps}"
-
-        "I forgot where it is":
-            $ scarf_left = True
-            MC "I can't find it anywhere, haha... Maybe it'll turn up somewhere?"
-            hikaru "..."
-
-    hikaru "{sc=4}[persistent.player_name]...{/sc}"
-
-    hikaru "Where is the talisman I gave you?"
-
-    MC "{i}Wha--?{/i}"
-
-    hikaru "The one I said can ward off evil. Where is it?"
-
-    MC "{cps=13}Um, well...{/cps} It must've fell somewhere! Hahaha..."
+    hikaru "Surprise."
 
     hikaru "..."
 
-    menu:
-        "Reach for their hand":
-            scene forest day:
-                zoom 0.5
-                xalign 0.5
-                yalign 1
-                easein 0.4 zoom 0.6
-            show hik normal:
-                zoom 0.3
-                xalign 0.5
-                yoffset 150
-                xzoom -1.0
-                yzoom 1.0
+    MC nervous "..."
 
-                linear 0.4 zoom 0.4 yoffset 120
-            n "You take Hikaru's hand, gently, trying to soothe them."
-            MC "Hikaru."
-            MC "Even though I don't remember everything, I remember {i}this.{/i}"
-            n "What is this, exactly?"
+    hikaru "Hey, are you all right, [persistent.player_name]?"
 
-        "Say you love them again":
-            $ hikaru_belief += 1
-            scene forest day:
-                zoom 0.5
-                xalign 0.5
-                yalign 1
+    n "This... {w=0.2}this part doesn’t feel familiar. But it sounds like it should be."
 
-                easein 0.4 zoom 0.6
-            show hik normal:
-                zoom 0.3
-                xalign 0.5
-                yoffset 150
-                xzoom -1.0
-                yzoom 1.0
+    show hik normal:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 25
+        xoffset 0
 
-                linear 0.4 zoom 0.4 yoffset 120
-            MC "{i}I don't remember everything {i}exactly,{/i} but I remember my feelings for {i}you.{/i}"
-            MC "I remember... {w=0.1}caring about you, always have, always will."
-            MC "{sc=1}You’re the reason I stayed alive.{/sc}"
-            hikaru "{cps=11}Really?{/cps}"
+        linear 0.4 zoom 0.55 yoffset 35
+    pause 0.5
+    scene shrine day:
+        zoom 0.7
+        xalign 0.5
+        yalign 0.5
 
-    MC "{glitch=1}You see... {w}I was just... {w}scared because I've lost my memories. That's {i}all.{/i}{/glitch}"
+        ease 0.5 zoom 0.55
+    show hik normal:
+        zoom 0.5
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 25
+        xoffset 0
 
-    MC "But I’m here now, and I want to get to know you again."
+        linear 0.4 zoom 0.4 yoffset 20
 
-    hikaru "{sc=4}...That’s...{/sc}"
+    $ _prev_music_volume = _preferences.volumes["music"]
+    $ decrease_music_volume(0.3)
+    $ renpy.block_rollback()
 
-    hikaru "{i}I...{/i}"
+    n "Hikaru walks forward to touch you, but instinctively you step back, avoiding their outstretched hand."
 
-    hikaru "..."
+    MC normal "Yeah, I'm fine. Can you step back?"
 
-    hikaru "..."
+    hikaru "Eh?"
 
-    MC "{cps=12}...You believe me, right?{/cps}"
+    n "Wait. Why did you say that?"
+
+    hikaru "Are you mad of me because I said the armor's too small?"
+
+    MC surprised "What?"
+
+    hikaru "You’ve been off ever since you've returned from slaying the Yamakui..."
+
+    MC nervous "{k=-1}Um, ahahaha...{w=0.2} No, of course not. {w=0.2}I'm just... {w=0.3}{cps=10}tired, is all.{/cps}{/k}"
+
+    hikaru "Ah, I... see."
+
+    MC nervous "{k=-1}Sorry if I’ve been weird. I just...{/k}"
+
+    MC nervous "{bt=1}I don’t know why this feels so strange right now.{/bt}"
+
+    hikaru "But you remember what we are, {w=0.2}right?"
+
+    n "Your stomach turns. What are you supposed to say to that?"
+
+    MC nervous "{cps=40}Of course I do.{/cps}"
+
+    n "You hear yourself answer without even thinking."
+
+    hikaru "Really now?"
+
+    show hik normal:
+        zoom 0.4
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 20
+        xoffset 0
+
+        linear 0.4 zoom 0.48 yoffset 35
+
+    n "They step closer and you feel like they're breaching your personal space. You want to leave."
+
+    n "If you're together, then it should be okay to stay close like this {w}right?"
+
+    MC surprised "{size=*0.95}Hikaru, when did we...?{/size}"
+
+    hikaru "...got together?"
+
+    hikaru "Our anniversary is next month, Dummy. Or did you forget that, too?"
+
+    n "You don't remember any of that happening."
+
+    n "But they sound so certain.... {w}Well, it’s easier to agree than to argue with something that might be true."
+
+    n "You can find out later."
+
+    MC nervous "{w=0.2}Right. I remember."
+
+    hikaru "Do you? {w=0.2}Did the Yamakui knock your head so hard you had amnesia?"
+
+    show shrine2 as wave_overlay behind hik:
+        function WaveShader(amp = 0, melt="both", melt_params=(10,1.0,0.1))
+        zoom 0.5
+    with dissolve
+
+    $ decrease_music_volume(0.3)
+    $ renpy.block_rollback()
+
+    n "Their fingers brush your arm to calm you down, to ground you, instead you feel something crawling upwards."
+
+    MC nervous "{bt=1}Yeah! Yeah, I just need time to readjust.{/bt}"
+
+    hikaru "Is that all it is?"
+
+    MC nervous "{k=-1}Of course. What else would it be?{/k}"
+
+    n "You regret the question the moment it leaves your mouth."
+
+    n "Hikaru's expression sharpens for half a second before settling back into softness."
+
+    hikaru "I missed you so much, [persistent.player_name]..."
+
+    hikaru "I'm really glad you got to return, even though you're...{w=0.1} weird now."
+
+    MC sad "Yeah. I’m sorry."
+
+    hikaru "Don't be. I think... {w}I think you just need to rest."
+
+    n "Their hand lingers on your sleeve a moment too long before letting go."
+
+    hide shrine2
+    with dissolve
+
+    $ restore_music_volume()
+    $ restore_music_volume()
+
+    hikaru "It’s okay. You’ll remember again."
+
+    scene shrine day:
+        zoom 0.55
+        xalign 0.5
+        yalign 0.5
+
+        ease 0.5 zoom 0.5
+    show hik normal:
+        zoom 0.48
+        xanchor 0.5
+        xalign 0.4
+        yalign 0
+        yoffset 35
+        xoffset 0
+
+        linear 0.5 zoom 0.4 yoffset 30
+
+    MC nervous "{sc=1}Y-Yeah....{/sc} Yeah! {cps=200}I'm gonna go rest now so see you, Hikaru!"
+
 
     hikaru "..."
 
@@ -276,9 +356,9 @@ label loop1_hikaru:
 
     hikaru "I want to believe."
 
-    MC "If you still need time, that's okay."
+    MC sadcl "If you still need time, that's okay."
 
-    MC "I'll be here... if you still love me. You can teach me again on how it was supposed to be."
+    MC sadcl "I'll be here... if you still love me. You can teach me again on how it was supposed to be."
 
     hikaru "{i}*Sigh*{/i}"
 
@@ -366,7 +446,7 @@ label loop1_hikaru:
 
     hikaru "...[persistent.player_name]. You're here."
 
-    MC "What's up with my effigy? Looks like I am cursed or something."
+    MC normal "What's up with my effigy? Looks like I am cursed or something."
 
     hikaru "Ah, yes. Shiori-chan did say she tried fixing it, but this just won't budge."
 
@@ -402,7 +482,7 @@ label loop1_hikaru:
 
     hikaru "Do you think... {w=0.2}It's a sign?"
 
-    MC "What, like an omen?"
+    MC surprised "What, like an omen?"
 
     hikaru "Maybe."
 
@@ -410,14 +490,15 @@ label loop1_hikaru:
 
     menu:
         "Mock Hikaru":
-            MC "I think you're being too {i}paranoid{/i}. I mean, Shiori could've just cut it unevenly or something."
-            MC "{k=-1}It fell wrong, maybe, or the string slips. It happens.{/k}"
+            MC smugcl "I think you're being too {i}paranoid{/i}. I mean, Shiori could've just cut it unevenly or something."
+            MC normal "{k=-1}It fell wrong, maybe, or the string slips. It happens.{/k}"
             hikaru "It's not like Shiori-chan to make mistakes like this. She had always been good at crafting."
             hikaru "{i}She even taught me how to make paper crafts....{/i}"
 
         "Act hurt":
-            MC "{sc=5}You really think I'm cursed or something?{/sc} After all I did for the village?"
-            MC "Or... Do you think I'm {glitch=8}lying{/glitch}?"
+            MC sad "{sc=5}You really think I'm cursed or something?{/sc} After all I did for the village?"
+            MC sadcl "Or... Do you think I'm {glitch=8}lying{/glitch}?"
+
             $ hikaru_belief += 1
             n "You let your voice heave and falters for a bit while looking straight at Hikaru's eyes."
             hikaru "{cps=11}No, I--{/cps}"
@@ -430,7 +511,7 @@ label loop1_hikaru:
 
     hikaru "{i}You're still you... Right?{/i}"
 
-    MC "{sc=4}Again with the doubts?{/sc}"
+    MC annoyed "{sc=4}Again with the doubts?{/sc}"
 
     hikaru "...Sorry. Forget I asked."
 
@@ -526,7 +607,7 @@ label loop1_hikaru:
     n "So you rip it in half instead."
 
 
-    MC "..."
+    MC yan  "..."
 
     scene black with fade
 
@@ -554,11 +635,11 @@ label loop1_hikaru:
 
     hikaru "{sc=4}I think it’s the Oni. I think Yamakui--{/sc}"
 
-    MC "Hikaru, I killed it."
+    MC nervous "Hikaru, I killed it."
 
     hikaru "{i}What?{/i}"
 
-    MC "The Yamakui."
+    MC yan "The Yamakui,{w} I mean."
 
     hikaru "...Oh. {w=0.5}{i}Yes. Of course you did.{/i}"
 
@@ -674,7 +755,7 @@ label loop1_hikaru:
     scene house night:
         zoom 0.5
     with sshake
-    MC "...Gh--!"
+    MC hurt "...Gh--!"
 
     n "Your back slams the wall, red trickles down your shoulder. A figure steps forward fast, blade already swinging again."
 
@@ -696,7 +777,7 @@ label loop1_hikaru:
 
     yamato "Tch, knew it. Knew somethin’ was off the second I saw ya back!"
 
-    MC "Yamato--"
+    MC mad "Yamato--"
 
     yamato "Nah. Nah. I ain’t listenin’ to that fake-ass voice comin’ outta your mouth."
 
@@ -785,9 +866,9 @@ label loop1_hikaru:
 
     n "Hikaru glances at you for a split second, hands trembling again, sai still pointed at Yamato."
 
-    MC "Come on, you know me."
+    MC panic "Come on, you know me."
 
-    MC "I didn’t do that. I wouldn't. Hikaru--"
+    MC panic "I didn’t do that. I wouldn't. Hikaru--"
 
     hikaru "..."
 
@@ -849,7 +930,7 @@ label loop1_hikaru:
 
     n "For a moment there, Hikaru is breathless and the cloth slips from their grip."
 
-    MC "Of course it is, what do you mean?"
+    MC nervous "Of course it is, what do you mean?"
 
     hikaru "{i}The Oni were always black-blooded. I’ve never seen one, but the folktale said that...{/i}"
 
@@ -857,7 +938,7 @@ label loop1_hikaru:
 
     hikaru "{k=2}I just have to tell Yamato, {w=0.3}maybe he's not thinking straight, {w=0.3}maybe he's--{/k}"
 
-    MC "...Hikaru."
+    MC sadcl "...Hikaru."
 
     hikaru "{i}Hey, [persistent.player_name]...{/i}"
 
@@ -885,9 +966,9 @@ label loop1_hikaru:
 
         linear 0.3 zoom 0.5 yalign 0.2
 
-    MC "Hey, hey, I'm here. You don't have to worry anymore."
+    MC happycl "Hey, hey, I'm here. You don't have to worry anymore."
 
-    MC "I'm still the same [persistent.player_name] you love."
+    MC nervous "I'm still the same [persistent.player_name] you love."
 
     hikaru "..."
 
@@ -898,7 +979,7 @@ label loop1_hikaru:
 
     hikaru "...Don’t go again."
 
-    MC "Never."
+    MC happycl "Never."
 
     show darken2
     with dissolve
@@ -999,13 +1080,13 @@ label loop1_hikaru:
 
     n "Hikaru never left your side, you wake to them still clinging to your shoulder."
 
-    MC "Mh..."
+    MC normal "Mh..."
 
     play music "Idle.mp3"
 
     hikaru "Oh no, your wounds are bleeding again."
 
-    MC "I'm okay--"
+    MC hurt "I'm okay--"
 
     hikaru "Wait--hold on. Let me change the bandage."
 
@@ -1020,7 +1101,7 @@ label loop1_hikaru:
 
     n "It’s a tune you don’t know how you know... but your mouth moves anyway."
 
-    MC "...Hmm, hmmm, hmmm~"
+    MC normal "...Hmm, hmmm, hmmm~"
 
     n "Odd, I remember that, too."
 
@@ -1032,11 +1113,11 @@ label loop1_hikaru:
 
     hikaru "{sc=3}[persistent.player_name]--{w=0.2}that--{/sc}"
 
-    MC "Mmm?"
+    MC surprised "Mmm?"
 
     hikaru "{i}You remembered that? I thought--{w=0.2}I thought maybe you wouldn’t.{/i}"
 
-    MC "Of course I remember."
+    MC normal "Of course I remember."
 
     hikaru "{k=2}We used to--{/k}"
 
@@ -1046,7 +1127,7 @@ label loop1_hikaru:
 
     n "You tilt your head and let a small smile pull at the corners, enough to show endearment."
 
-    MC "Well, at least I remember how it used to sound like."
+    MC happy "Well, at least I remember how it used to sound like."
 
     hikaru "Right... yeah. Of course. I just--{w=0.2}I didn’t want to assume. I didn’t know how much you lost, or if maybe it all got... {w=0.2}scrambled."
 
@@ -1054,27 +1135,28 @@ label loop1_hikaru:
 
     hikaru "We’re getting somewhere, aren’t we?"
 
-    MC "Yeah, I think we're getting close."
+    MC normal "Yeah, I think we're getting close."
 
-    MC "Actually... When the red moon is over, maybe we should come out on the open."
+    MC nervous "Actually... When the red moon is over, maybe we should come out on the open."
 
     hikaru "{w=0.2}You mean... {k=2}This? Us?{/k}"
 
-    MC "We’ll tell everyone that we're together. I mean since there's no more Oni, they won't care right?"
+    MC nervous "We’ll tell everyone that we're together. I mean since there's no more Oni, they won't care right?"
 
-    MC "Pretty sure Yamato and Shiori would understand."
+    MC happycl "Pretty sure Yamato and Shiori would understand."
 
     hikaru "{sc=5}No... don't!{/sc}"
 
     hikaru "{i}I know Yamato and Shiori would understand, but the others... They'll shame you!{/i}"
 
-    MC "So what? Let ‘em talk. I don't care."
+    MC annoyed "So what? Let ‘em talk. I don't care."
 
     n "You talk like it's so easy..."
 
     hikaru "{k=2}You’re serious about this?{/k}"
 
-    MC "Of course, never been more sure!"
+    MC smug "Of course, never been more sure!"
+
 
 
     menu:
@@ -1088,7 +1170,7 @@ label loop1_hikaru:
 
 label shame:
 
-    MC "Or... are you the one ashamed on me?"
+    MC yan "Or... are you the one ashamed on me?"
 
     show hik normal:
         zoom 0.5
@@ -1115,9 +1197,9 @@ label shame:
 
     n "You muster a serene smile as your voice turns velvety smooth, enveloping Hikaru with safety."
 
-    MC "I won't let them, after all I'm the one who saved them from Yamakui. They'll listen to me."
+    MC annoyed "I won't let them, after all I'm the one who saved them from Yamakui. They'll listen to me."
 
-    MC "Unless you don't want me to?"
+    MC yan "Unless you don't want me to?"
 
     hikaru "...."
 
@@ -1127,11 +1209,11 @@ label shame:
 
     hikaru "I didn’t know you still--"
 
-    MC "Still what?"
+    MC yan "Still what?"
 
     hikaru "...Still wanted me like that."
 
-    MC "Of course I do."
+    MC happycl "Of course I do."
 
     n "You reach for their hand. Their fingers stay still, caught in yours."
 
@@ -1150,17 +1232,17 @@ label shame:
     jump loop1_redmoon_eve
 
 label forgettt:
-    MC "You know what? Forget I ever said that. You clearly don't want anyone to know "
+    MC yan "You know what? Forget I ever said that. You clearly don't want anyone to know "
 
     hikaru "{i}Please don't take it the wrong way, [persistent.player_name]... I just don't want to deal with the aftermath.{/i}"
 
-    MC "Yeah, let's just pretend that we're nothing to each other until who knows when."
+    MC yan "Yeah, let's just pretend that we're nothing to each other until who knows when."
 
     hikaru "[persistent.player_name].... {w=0.1}I'm sorry..."
 
     hikaru "I still care about you a lot, even if I can only do this in secret "
 
-    MC "Fine then, if that's what you want "
+    MC yan "Fine then, if that's what you want "
 
     jump loop1_redmoon_eve
 
@@ -1212,7 +1294,7 @@ label loop1_redmoon_eve:
 
     hikaru "It's soon..."
 
-    MC "Yeah."
+    MC normal "Yeah."
 
     hikaru "Right, so..."
 
@@ -1249,7 +1331,7 @@ label loop1_redmoon_eve:
 
     yamato "{b}{size=+6}That’s on YA.{/size}{/b}"
 
-    MC "What the hell is that supposed to mean?"
+    MC mad "What the hell is that supposed to mean?"
 
     yamato "{sc=2}Don’t play dumb.{/sc}"
 
@@ -1257,7 +1339,7 @@ label loop1_redmoon_eve:
 
     yamato "{i}So if it ain't...? Then you lied to all of us, to Hikaru.{/i}"
 
-    MC "Yamato--"
+    MC hurt "Yamato--"
 
     yamato "{glitch=8}Don’t.{/glitch}"
 
@@ -1275,15 +1357,15 @@ label loop1_redmoon_eve:
 
     hikaru "...What if he's right?"
 
-    MC "Look at me."
+    MC yan "Look at me."
 
-    MC "I killed the Yamakui. Me. Whatever attacked that dog... It's gone now."
+    MC mad "I killed the Yamakui. Me. Whatever attacked that dog... It's gone now."
 
-    MC "No one's getting killed lately right?"
+    MC mad "No one's getting killed lately right?"
 
-    MC "I'm with you, if there's another oni out there, it’s not stronger than us."
+    MC yan "I'm with you, if there's another oni out there, it’s not stronger than us."
 
-    MC "I defeated the Yamakui, remember?"
+    MC happycl "I defeated the Yamakui, remember?"
 
     n "You press your hand against theirs, then grips it so tight your nails leave marks to steady them."
 
@@ -1332,15 +1414,15 @@ label loop1_redmoon_eve:
 
     hikaru "...It’s quiet."
 
-    MC "Yeah."
+    MC sadcl "Yeah."
 
     hikaru "If the Yamakui's here... {w}someone would've screamed, right?"
 
-    MC "Definitely."
+    MC sadcl "Definitely."
 
     hikaru "So... maybe you really DID kill it."
 
-    MC "See? I told you."
+    MC happycl "See? I told you."
 
     hikaru "Sorry that I didn't believe you."
 
@@ -1410,11 +1492,11 @@ label hikaru_trust:
 
     hikaru "[persistent.player_name]?"
 
-    MC "Hikaru..."
+    MC happycl "Hikaru..."
 
-    MC "...You'll meet [persistent.player_name]."
+    MC yansm "...You'll meet [persistent.player_name]."
 
-    MC "In the afterlife, when I’m done with you."
+    MC yansm "In the afterlife, when I’m done with you."
 
     hikaru "{sc=5}...!{/sc}"
 
@@ -1609,7 +1691,7 @@ label hikaru_distrust:
 
     hikaru "{k=2}I trusted you. I let myself believe--{/k}"
 
-    MC "*sigh* I was so close."
+    MC sadcl "*sigh* I was so close."
 
     hikaru "{sc=4}You’re not [persistent.player_name]. You’re not--{/sc}"
 
@@ -1625,7 +1707,7 @@ label hikaru_distrust:
 
     hikaru "{i}...I'm next.{/i}"
 
-    MC "..."
+    MC yan "..."
 
     hikaru "{sc=6}What did you do to [persistent.player_name]!?!?{/sc}"
     with sshake
@@ -1671,7 +1753,7 @@ label hikaru_distrust:
 
     n "You did it? But how come I don't--"
 
-    MC "You done?"
+    MC yansm "You done?"
 
     hikaru "{sc=5}N-no--!{/sc}"
 

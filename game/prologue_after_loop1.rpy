@@ -20,7 +20,7 @@ label prologue_loop1:
 
     scene black with fade
 
-    MC "Haa... {w=0.4}Haa..."
+    MC panic2 "Haa... {w=0.4}Haa..."
 
     scene black with fade
     show flesh2 at scary_flicker
@@ -31,7 +31,7 @@ label prologue_loop1:
 
     n "We're here again...?"
 
-    MC "Gh... khhh..."
+    MC panic2 "Gh... khhh..."
 
     n "Are you choking?"
 
@@ -63,9 +63,6 @@ label prologue_loop1:
 
     n2 "...You."
 
-    play sound "sfx/heartbeat_deep.ogg"
-    $ renpy.pause(0.4)
-
     n "...What?"
 
     n "Isn't this supposed to be Yamakui? But wait..."
@@ -86,7 +83,7 @@ label prologue_loop1:
 
     stop muzak
 
-    MC "...."
+    MC yan2 "...."
 
 
     n "{size=+2}{color=#880000}Please. Stop.{/color}{/size}"
@@ -150,9 +147,7 @@ label prologue_loop1:
 
     n "{size=+2}{color=#880000}You’re sure.{/color}{/size}"
 
-    MC "Hhh..."
-
-    play sound "sfx/breath_exhale.ogg"
+    MC annoyed2 "Hhh..."
 
     n "{w=0.2}It’s cold and quiet and eerie and absolutely NOT what you expected."
 
@@ -210,7 +205,7 @@ label prologue_loop1:
 
     n "The sky looks like it splits into two once the treeline dissapears... The heavenly shine that you've imagined."
 
-    MC "Hey, guys. I'm back."
+    MC happy2 "Hey, guys. I'm back."
 
     show woman:
         xzoom -1
@@ -228,7 +223,7 @@ label prologue_loop1:
     n2 "{blur}{color=#ff2b54}So many necks to snap.{/color}{/blur}"
 
     play music "Tense.ogg"
-    stop muza
+    stop muzak
 
     "Woman" "{size=*0.95}{k=-1}No way...{/k}{/size}"
 
@@ -288,7 +283,7 @@ label prologue_loop1:
 
     n "That's odd, shouldn't they be celebrating? Shouldn't they be joyous?"
 
-    n "Shouldn't they call your. name?"
+    n "Shouldn't they call your name?"
 
     n "Wait, what is your name again?"
 
@@ -302,7 +297,7 @@ label prologue_loop1:
 
     "Man" "Did you really kill the yamakui, [persistent.player_name]?"
 
-    MC "Yeah! I took down that Oni in one blow! Well... maybe two! Or ten! Who’s counting?!"
+    MC smug2 "Yeah! I took down that Oni in one blow! Well... maybe two! Or ten! Who’s counting?!"
 
     "Elder" "[persistent.player_name], you have done us a great service."
 
@@ -408,13 +403,13 @@ label speechhh2shiori:
 
     n "A voice rises from the crowd. Shiori’s, maybe."
 
-    MC "Thank you, everyone. I didn’t do it alone."
+    MC normal2 "Thank you, everyone. I didn’t do it alone."
 
-    MC "I had your hopes, your prayers, {w}your bento."
+    MC normal2 "I had your hopes, your prayers, {w}your bento."
 
-    MC "Aaaand that weird old charm from our beloved shrine maiden..."
+    MC smugcl2 "Aaaand that weird old charm from our beloved shrine maiden..."
 
-    MC "Still stuck in my pocket, by the way, thanks Shiori!"
+    MC smugcl2 "Still stuck in my pocket, by the way, thanks Shiori!"
 
     n2 "It stings. Throw it away."
 
@@ -424,15 +419,16 @@ label speechhh2shiori:
 
     n "Stop. {i}Please.{/i}"
 
-    MC "...{w=0.3}I..."
+    MC nervous2 "...{w=0.3}I..."
 
-    MC "...{w=0.3}I climbed that mountain."
+    MC nervous2 "...{w=0.3}I climbed that mountain."
 
-    MC "...{w=0.3}Faced it head-on...."
+    MC nervous2 "...{w=0.3}Faced it head-on...."
 
-    MC "...{w=0.3}And I, {w=0.3}I won."
+    MC nervous2 "...{w=0.3}And I, {w=0.3}I won."
 
-    MC "{w=0.3}So let’s celebrate! No more fear!"
+    MC smug2 "{w=0.3}So let’s celebrate! No more fear!"
+
 
     n "They seem to believe you now."
 
@@ -450,6 +446,7 @@ label speechhh2shiori:
     $ renpy.block_rollback()
     pause 0.2
 
+    hide elder
     show woman at midleft :
         zoom 0.5
         ypos 0.2
@@ -577,7 +574,7 @@ label speechhh2noshiori:
 
     pause 0.3
 
-    MC "....?"
+    MC annoyed2 "....?"
 
     n "Wait, {w=0.2}shouldn't someone say something by now?"
 
@@ -613,6 +610,7 @@ label speechhh2noshiori:
     $ renpy.block_rollback()
     pause 0.2
 
+    hide elder
     show woman at midleft :
         zoom 0.5
         ypos 0.2
@@ -714,17 +712,17 @@ label LI_intro_noshiori:
 
     n "There were four of you. Weren’t there {glitch}four?{/glitch}"
 
-    play sound "sfx/grassstep.ogg"
+    play sound "sfx/walk grass.mp3"
 
     yamato "Tch. Look who finally shows up."
 
     hikaru "Welcome home, [persistent.player_name]-san."
 
-    MC "Oi. That how you greet a hero?"
+    MC smug2 "Oi. That how you greet a hero?"
 
     yamato "Hero my ass. Ya ran off alone, idiot."
 
-    MC "C’mon, tradition’s tradition. Oni slayer always goes solo."
+    MC smugcl2 "C’mon, tradition’s tradition. Oni slayer always goes solo."
 
     yamato "Fuckin' tradition..."
 
@@ -736,7 +734,7 @@ label LI_intro_noshiori:
 
     hikaru "...Don’t you forget something, [persistent.player_name]?"
 
-    MC "Huh? What, like a souvenir? I brought the armor, didn’t I?"
+    MC surprised2 "Huh? What, like a souvenir? I brought the armor, didn’t I?"
 
     hikaru "...I see."
 
@@ -744,7 +742,7 @@ label LI_intro_noshiori:
 
     hikaru "...It's rather small for something like the Yamakui, isn’t it?"
 
-    MC "...What?"
+    MC nervous2 "...What?"
 
     yamato "Oi. What’s that supposed t' mean?"
 
@@ -775,9 +773,10 @@ label LI_intro_noshiori:
 
     n "Hikaru shrugs, turns and walks away."
 
-    MC "...Hikaru?"
+    MC sad2 "...Hikaru?"
 
     yamato "Tch, whatever."
+
 
     hide yam with dissolve
 
@@ -858,11 +857,11 @@ label LI_intro_nohikaru:
 
     shiori "You came back~! I was so sure you'd get squished into pancake mochi~!"
 
-    MC "Oi, rude. I’m not that easy to mash."
+    MC annoyed2 "Oi, rude. I’m not that easy to mash."
 
-    yamato "Hnh. Coulda fooled me, dumbass. Leavin’ us without a word, ya promised ya'd being me along!"
+    yamato "Hnh. Coulda fooled me, dumbass. Leavin’ us without a word, ya promised ya'd bring me along!"
 
-    MC "C’mon, you know how it is. Oni slayer tradition."
+    MC smugcl2 "C’mon, you know how it is. Oni slayer tradition."
 
     yamato "Tradition’s for corpses."
 
@@ -887,9 +886,7 @@ label LI_intro_nohikaru:
 
     shiori "Ne ne~ [persistent.player_name]-sama! You have to tell us what Yamakui looked like! Did it have fangs? Big claws? Did it talk?"
 
-
-
-    MC "Uh... Big. Yeah. Bloody. And...."
+    MC nervous2 "Uh... Big. Yeah. Bloody. And...."
 
     hide shi normal
     show shi normal:
@@ -901,12 +898,11 @@ label LI_intro_nohikaru:
             easein 0.4 zoom 0.34 yalign -0.1
             easeout 0.4 zoom 0.26 yalign -0.60
 
-
     shiori "{sc=1}Beau~tiful?{/sc}"
 
     n2 "Hah."
 
-    MC "...What?"
+    MC surprised2 "...What?"
 
     yamato "Oi, cut it out."
 
@@ -920,7 +916,7 @@ label LI_intro_nohikaru:
 
     n "{w=0.3}...Right?"
 
-    MC "Yeah, whatever they looked like now, it doesn't matter now."
+    MC normal2 "Yeah, whatever they looked like now, it doesn't matter now."
 
     yamato "Tch. Ain’t like I’m complainin’. Ya came back in one piece."
 
@@ -928,11 +924,12 @@ label LI_intro_nohikaru:
 
     yamato "Almost like ya ain’t fought anything at all, eh?"
 
-    MC "Ehh, just got Lucky's all!"
+    MC happycl2 "Ehh, just got Lucky's all!"
 
     yamato "What, damned oni bonked their head on a stone and dropped dead?"
 
-    MC "{k=-1}Something like that, yeah...!{/k}"
+    MC nervous2 "{k=-1}Something like that, yeah...!{/k}"
+
 
     n "Yamato and Shiori says nothing else, but their smile fades as yours does."
     scene black
@@ -1002,7 +999,7 @@ label LI_intro_noyamato:
 
     shiori "You came back~! You didn’t explode or get squashed or turned into dough!"
 
-    MC "Oi, rude. I’m tougher than I look."
+    MC annoyed2 "Oi, rude. I’m tougher than I look."
 
     hikaru "Welcome home, [persistent.player_name]-san."
 
@@ -1014,7 +1011,7 @@ label LI_intro_noyamato:
 
     shiori "Ne ne~ Did Yamakui look like the legends? Big and scary? Lots of fangs? Or was it kinda cute~?"
 
-    MC "I think it looked like it needed stabbing."
+    MC smug2 "I think it looked like it needed stabbing."
 
     show shi normal at shakey:
         xalign 0.44
@@ -1032,7 +1029,7 @@ label LI_intro_noyamato:
 
     shiori "You must be starving, [persistent.player_name]-sama. Shiori's gonna make alllll~ the food you want!"
 
-    MC "{cps=35}How 'bout {/cps}{cps=5}venison?{/cps}"
+    MC smugcl2 "{cps=35}How 'bout {/cps}{cps=5}venison?{/cps}"
 
     shiori "Eh...? I don't think I have... {w}that...."
 
@@ -1040,17 +1037,17 @@ label LI_intro_noyamato:
 
     pause 0.5
 
-    MC "What is it?"
+    MC surprised2 "What is it?"
 
     hikaru "{w=0.5}...Do you feel like something’s missing?"
 
-    MC "Huh?"
+    MC nervous2 "Huh?"
 
     hikaru "I don’t know. I keep thinking there should be..."
 
     hikaru "{w=0.5}...four of us "
 
-    MC "..."
+    MC sad2 "..."
 
     n "You-{w=0.1}I... {w}don’t know what to say."
 
@@ -1061,7 +1058,7 @@ label LI_intro_noyamato:
 
     shiori "Ah, mou... Let's go eat before Hikaru's making odd theories again!"
 
-    MC "Yeah, agreed."
+    MC normal2 "Yeah, agreed."
 
     scene black
     show darken2
@@ -1148,3 +1145,5 @@ label beforesecondloop:
     n "No one should{nw}"
 
     n2 "No one should remember."
+
+    return

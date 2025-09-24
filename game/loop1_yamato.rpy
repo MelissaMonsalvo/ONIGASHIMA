@@ -30,11 +30,11 @@ label loop1_yamato:
 
     n "Yamato's hunched, a half-empty bottle of sake in his right arm. Eyes liddled, gaze unfocused, and a bit woozy."
 
-    MC "...Drinking alone?"
+    MC surprised "...Drinking alone?"
 
     yamato "{cps=14}Didn't ask for a damn audience.{/cps}"
 
-    MC "Guess you got one anyway."
+    MC smugcl "Guess you got one anyway."
 
     yamato "Figures."
 
@@ -44,7 +44,7 @@ label loop1_yamato:
 
     yamato "This thing's{w=0.2} *hic* {w=0.1}got more memory than I do."
 
-    MC "You're drunk."
+    MC annoyed "You're drunk."
 
     yamato "{w=0.2}No shit."
 
@@ -54,15 +54,15 @@ label loop1_yamato:
 
     menu:
         "Did I give it to you?":
-            MC "Did I give it to you during sparring?"
+            MC nervous "Did I give it to you during sparring?"
             yamato "Ya? {w=0.15}Hah, nah."
         "Did you get bitten by a wolf?":
-            MC "Did you get bitten by a wolf during patrol?"
+            MC surprised "Did you get bitten by a wolf during patrol?"
             yamato "{cps=13}What'cha mean? All the wolves around here got eaten by the damn Yamakui.{/cps}"
 
     yamato "{w=0.2}Can't believe you forgot..."
 
-    MC "...Yamato--"
+    MC sad "...Yamato--"
 
     yamato "Tch... {w=0.1}We were, what, eleven?"
 
@@ -76,7 +76,7 @@ label loop1_yamato:
 
     yamato "Split clean open, blood everywhere. {w=0.2}Thought my fightin' days are done for."
 
-    MC "..."
+    MC sad "..."
 
     yamato "You screamed like hell broke loose. Said I was gonna die or somethin'."
 
@@ -84,13 +84,13 @@ label loop1_yamato:
 
     yamato "{cps=12}You were the one who dragged me all the way back. I woke up t' yer dumb snot in my face.{/cps}"
 
-    MC "..."
+    MC sadcl "..."
 
     yamato "Then you bawled your eyes out in front o' the whole damn village."
 
     n "Oh yes, I remember that too..."
 
-    MC "...That was a long time ago, right?"
+    MC nervous "...That was a long time ago, right?"
 
     yamato "Heh."
 
@@ -104,11 +104,11 @@ label loop1_yamato:
 
     yamato "{w=0.1}Then, {w=0.1}bam, suddenly came back with that damn armor."
 
-    MC "I just-I didn't want anyone else getting hurt."
+    MC sadcl "I just-I didn't want anyone else getting hurt."
 
     yamato "So what, ya think we're weak? Think I can't take a hit?"
 
-    MC "...I didn't mean to--"
+    MC hurt "...I didn't mean to--"
 
     yamato "{w=0.15}Shut it."
 
@@ -201,7 +201,7 @@ label loop1_yamato:
 
     yamato "{cps=100}Mouths in the walls, eyes in the roots, {sc=3}who are you when you're all eaten up?{/sc} {i}Who am I?{/i}--{/cps}{nw}"
 
-    MC "Yamato--"
+    MC surprised "Yamato--"
 
     yamato "{cps=100}Feed it, {w=0.1}feed it, {w=0.1}feed it, never full, never done--{k=2}starving starving always starving {/k}{/cps}{nw}"
 
@@ -210,7 +210,7 @@ label loop1_yamato:
 
     n "What is happening!? That doesn't sound like Yamato at all...!?"
 
-    MC "Yamato."
+    MC annoyed "Yamato."
 
     play sound "sfx/suzu.wav"
 
@@ -233,17 +233,17 @@ label loop1_yamato:
 
     yamato "...Shit."
 
-    MC "You alright?"
+    MC annoyed "You alright?"
 
     yamato "No."
 
-    MC "..."
+    MC yan "..."
 
     n "You pat Yamato's back, saying nothing as he tried to compose himself."
 
-    MC "There, there..."
+    MC yansm "There, there..."
 
-    MC "You're gonna be {glitch}okay.{/glitch}"
+    MC yansm "You're gonna be {glitch}okay.{/glitch}"
 
     n "Why--"
 
@@ -305,21 +305,21 @@ label loop1_yamato:
 
     yamato "Oi. Ya showed up. Thought ya'd be late again."
 
-    MC "{k=2}...Yamato?{/k}"
+    MC surprised "{k=2}...Yamato?{/k}"
 
     yamato "What? Ya lookin' funny. Grab a sword, will ya?"
 
     n "...Wait. Where's the Yamato last night? Does he even remember what happened?"
 
-    MC "Are you okay?"
+    MC nervous "Are you okay?"
 
     yamato "Haaa? What'd ya mean?"
 
-    MC "{sc=1}It's just... You were drunk last night and I--{/sc}"
+    MC nervous "{sc=1}It's just... You were drunk last night and I--{/sc}"
 
     yamato "Tch, I don't get ya. Red Moon's tomorrow, remember? I ain't lettin' ya slack off."
 
-    MC "{i}...You're... in a good mood today.{/i}"
+    MC normal "{i}...You're... in a good mood today.{/i}"
 
     yamato "{k=1}H-Hah? Dumbass, don't say it like that.{/k}"
 
@@ -327,9 +327,10 @@ label loop1_yamato:
 
     n "The corner of his mouth twitches. Yamato struggles to smile, but his face isn't used to it."
 
-    MC "{i}...Thanks.{/i}"
+    MC happycl "{i}...Thanks.{/i}"
 
     yamato "D-Don't thank me, idiot. I'm doin' it for the village, not for ya."
+
 
     scene black
 
@@ -361,7 +362,7 @@ label loop1_yamato:
 
     n "He swings lightly this time. A soft tap in your side instead of a full-blown strike, you feel he's holding back."
 
-    MC "You're going easy on me."
+    MC smugcl "You're going easy on me."
 
     yamato "{sc=1}Wha--hell I am!{/sc} If ya think this is easy, yer gettin' soft.."
 
@@ -369,7 +370,7 @@ label loop1_yamato:
 
     yamato "...I just don't wanna see ya keel over, alright?"
 
-    MC "Really~?"
+    MC smgcl "Really~?"
 
     scene black
 
@@ -414,7 +415,7 @@ label loop1_yamato:
 
     yamato "Lemme see yer blade, [persistent.player_name]."
 
-    MC "Why...?"
+    MC surprised "Why...?"
 
     yamato "Just gimme."
 
@@ -424,17 +425,17 @@ label loop1_yamato:
 
     yamato "Look at this edge. Disrespectful,{w=0.1} that's what this is."
 
-    MC "*scoff* {w=0.1}'Scuse me?"
+    MC annoyed "*scoff* {w=0.1}'Scuse me?"
 
     yamato "Lemme sharpen it for ya."
 
     n "He brings it to the whetstone he used to keep at the dojo."
 
-    MC "Oi, there's no need--"
+    MC surprised "Oi, there's no need--"
 
     yamato "Shut it. Just don't want the damn thing falling apart on ya mid-swing and me havin' to pick up yer pieces."
 
-    MC "...Thanks."
+    MC happycl "...Thanks."
 
     n "You say nothing else and listen to the whetstone whispers against steel."
 
@@ -518,7 +519,7 @@ label loop1_yamato:
 
     play sound "sfx/heartbeat.mp3"
 
-    MC "..."
+    MC yan "..."
 
     play sound "sfx/heartbeat.mp3"
 
@@ -539,11 +540,11 @@ label loop1_yamato:
         align (0.5, 0.005)
         yoffset 0
 
-    MC "...Huh?"
+    MC surprised "...Huh?"
 
     yamato "What were you staring at?"
 
-    MC "Nothing."
+    MC yan "Nothing."
 
     yamato "Tch. Sleepyhead."
 
@@ -553,15 +554,15 @@ label loop1_yamato:
 
     yamato "Here ya go."
 
-    MC "...Thanks."
+    MC happycl "...Thanks."
 
     yamato "{bt=h1-s0.5-p1.0}Ughhh.{/bt}"
 
-    MC "What?"
+    MC smug "What?"
 
     yamato "Wipe that smug grin off yer face, already."
 
-    MC "Mmmm, not a chance."
+    MC smug "Mmmm, not a chance."
 
     show yam normal:
         zoom 0.26
@@ -586,7 +587,7 @@ label loop1_yamato:
 
     yamato "Yer goin' in patrol tonight, right?"
 
-    MC "Yeah, obviously, the red moon is coming."
+    MC normal "Yeah, obviously, the red moon is coming."
 
     yamato "Great, see ya tonight then."
 
@@ -627,7 +628,7 @@ label loop1_yamato:
 
     n "You were getting ready for tonight's patrol when you hear a soft knock."
 
-    MC "...Come in."
+    MC neutral "...Come in."
 
     play sound "sfx/sliding door.mp3"
 
@@ -653,7 +654,7 @@ label loop1_yamato:
 
     yamato "Yo. Ya aready for patrol or ya still nappin'?"
 
-    MC "You're early."
+    MC neutral "You're early."
 
     yamato "No, yer lazy. Ya eatin' yet?"
 
@@ -671,15 +672,15 @@ label loop1_yamato:
 
     n "He takes out two packs of bento."
 
-    MC "What's that?"
+    MC surprised "What's that?"
 
     yamato "Bento. Made too much."
 
-    MC "For me?"
+    MC happy "For me?"
 
     yamato "Don't start smilin', dumbass. I ain't tryna marry you."
 
-    MC "Actually, I haven't eaten--"
+    MC happycl "Actually, I haven't eaten--"
 
     n "Now that I think of it, you haven't eaten for DAYS, have you?"
 
@@ -691,7 +692,7 @@ label loop1_yamato:
 
     yamato "Half's yours. Don't drop it or I'll kick yer spine straight."
 
-    MC "...Thanks."
+    MC normal "...Thanks."
 
     yamato "Shut up and eat."
 
@@ -699,7 +700,7 @@ label loop1_yamato:
 
     n "It actually looks... {w=0.1}decent. MORE then decent, even."
 
-    MC "{k=2}I-{w=0.1}Itadakimatsu...{/k}"
+    MC nervous "{k=2}I-{w=0.1}Itadakimatsu...{/k}"
 
     scene black
 
@@ -716,7 +717,7 @@ label loop1_yamato:
 
     n "The act of chewing itself spreads it across your tongue in layers. Tastes like...{w}damp cloth?{w}{sc=2} Sour milk?{/sc}"
 
-    MC "{sc=3}...Nn...{/sc}"
+    MC sadcl "{sc=3}...Nn...{/sc}"
 
     with hpunch
     with flashred
@@ -731,7 +732,7 @@ label loop1_yamato:
 
     n "It passes only because of sheer will."
 
-    MC "...Tastes good."
+    MC nervous "...Tastes good."
 
     yamato "Damn right. I seasoned it myself."
 
@@ -764,11 +765,11 @@ label loop1_yamato:
 
     with hpunch
 
-    MC "{k=2}...Ngh.{/k}"
+    MC hurt "{k=2}...Ngh.{/k}"
 
     yamato "Oi. 'S that bad?"
 
-    MC "{sc=3}No, no--It's really good! I'm actually not...{w} really hungry.{/sc}"
+    MC hurt "{sc=3}No, no--It's really good! I'm actually not...{w} really hungry.{/sc}"
 
     n "You nod as your gut {i}sloshes{/i}. The taste lingers, you want to drink something to wash it off since swallowing doesn't clear it and chewing doesn't help."
 
@@ -782,7 +783,7 @@ label loop1_yamato:
 
     with vpunch
 
-    MC "{k=2}I-Uh...{/k}"
+    MC hurt "{k=2}I-Uh...{/k}"
 
     n "Your hand's frozen halfway now, chopsticks floating."
 
@@ -816,7 +817,7 @@ label loop1_yamato:
 
 
 
-    MC "Yeah, I'm done."
+    MC yan "Yeah, I'm done."
 
     yamato "Let's go, then."
 
@@ -882,11 +883,11 @@ label loop1_yamato:
 
     yamato "Tch... This kinda quiet's the worst."
 
-    MC "Why? Peaceful's bad now?"
+    MC normal "Why? Peaceful's bad now?"
 
     yamato "It's the waitin' I hate."
 
-    MC "Still think something's out here?"
+    MC normal "Still think something's out here?"
 
     yamato "Maybe."
 
@@ -896,7 +897,7 @@ label loop1_yamato:
 
     yamato "...Maybe ya actually pulled it off."
 
-    MC "Mm, 'course I did."
+    MC smug "Mm, 'course I did."
 
     n "He rubs the back of his neck."
 
@@ -906,25 +907,26 @@ label loop1_yamato:
 
     yamato "{cps=10}Hnh...{/cps}"
 
-    MC "...Yeah?"
+    MC surprised "...Yeah?"
 
     yamato "Tch. {w}Forget it."
 
-    MC "--wanna go cherry blossom viewing?"
+    MC happycl "--wanna go cherry blossom viewing?"
 
     yamato "Was gonna say drink 'till dawn, but that works too."
 
-    MC "I would conisder it since you're blushing so hard I almost want to pity you."
+    MC smugcl "I would conisder it since you're blushing so hard I almost want to pity you."
 
     yamato "{sc=2}{size=+2}The hell I am!{/size}{/sc}"
 
-    MC "Ohh, you totally are. {cps=10}Wooow.{/cps} Do you like me, Yamato?"
+    MC smugcl "Ohh, you totally are. {cps=10}Wooow.{/cps} Do you like me, Yamato?"
 
     yamato "{sc=1}K-Keep talkin' and I-'ll... {w=0.2}I'll...{/sc}"
 
     yamato "{w=0.1}Argh, whatever."
 
-    MC "So that's a yes."
+    MC happy "So that's a yes."
+
 
     show yam normal:
         zoom 0.5
@@ -989,7 +991,7 @@ label loop1_yamato:
 
     n "You're used to Yamato's knocking pattern by now."
 
-    MC "Come in."
+    MC neutral "Come in."
 
     play sound "sfx/sliding door.mp3"
 
@@ -1012,7 +1014,7 @@ label loop1_yamato:
     stop sound
     yamato "...Yo."
 
-    MC "You're up early."
+    MC normal "You're up early."
 
     yamato "Couldn't get a damn sleep."
 
@@ -1020,7 +1022,7 @@ label loop1_yamato:
 
     yamato "That time of th' year again. Damn red moon and all."
 
-    MC "Yeah..."
+    MC sad "Yeah..."
 
     yamato "{sc=2}Thought maybe...{/sc}"
 
@@ -1028,15 +1030,15 @@ label loop1_yamato:
 
     yamato "{k=1}...Tch. Whatever. Ain't like I believe in fate 'n shit.{/k}"
 
-    MC "What is it?"
+    MC curious "What is it?"
 
     yamato "{k=2}Ya wanna be on guard with me?{/k}"
 
-    MC "{i}Of course!{/i}"
+    MC happycl "{i}Of course!{/i}"
 
     yamato "Heh. Figures. Ya'd say yes even if I told ya we'd both die tonight."
 
-    MC "Well, I'm just looking out for you, that's all."
+    MC happy "Well, I'm just looking out for you, that's all."
 
     pause(0.3)
 
@@ -1046,11 +1048,11 @@ label loop1_yamato:
 
     yamato "...Then maybe I'll believe ya for {i}real{/i} this time."
 
-    MC "...Yamato."
+    MC surprised "...Yamato."
 
     yamato "What?"
 
-    MC "{i}That almost sounded like a compliment, you know.{/i}"
+    MC smugcl "{i}That almost sounded like a compliment, you know.{/i}"
 
     yamato "{k=2}{sc=1}Wh-Shut the hell up!{/sc}{/k}"
 
@@ -1062,9 +1064,10 @@ label loop1_yamato:
 
     yamato "{i}--Guess I'd be glad.{/i}{w} If ya really killed the damn thing."
 
-    MC "Same with me."
+    MC happy "Same with me."
 
     yamato "Anyway. Let's not die."
+
 
     scene black
 
@@ -1096,7 +1099,7 @@ label loop1_yamato:
 
     yamato "I'm keepin' it for after the red moon."
 
-    MC "Can't wait."
+    MC normal "Can't wait."
 
     yamato "{i}...Sigh...{/i}"
 
@@ -1106,11 +1109,11 @@ label loop1_yamato:
 
     yamato "I kept barkin' at'cha 'cause I didn't know what else to do."
 
-    MC "Yeah, but I did forgot our promise. Understandable."
+    MC normal "Yeah, but I did forgot our promise. Understandable."
 
     yamato "{i}I know. Not an excuse, though.{/i}"
 
-    MC "...Yamato."
+    MC normal "...Yamato."
 
     yamato "{w=0.2}So... all I can think is--if ya die out there and I never said any of this, I'd never forgive myself."
 
@@ -1118,7 +1121,7 @@ label loop1_yamato:
 
     yamato "{i}That ain't new. I just-I was too busy actin' tough t' notice.{/i}"
 
-    MC "...You really mean that?"
+    MC normal "...You really mean that?"
 
     yamato "{i}Yeah.{/i}"
 
@@ -1126,9 +1129,9 @@ label loop1_yamato:
 
     yamato "{k=1}I... {w=0.3}didn't hate ya. Never did.{/k}"
 
-    MC "..."
+    MC normal "..."
 
-    MC "{i}I don't hate you too, Yamato.{/i}"
+    MC normal "{i}I don't hate you too, Yamato.{/i}"
 
     yamato "That so?"
 
@@ -1136,7 +1139,8 @@ label loop1_yamato:
 
     yamato "Y'know, what the hell this is between us."
 
-    MC "That would be nice."
+    MC normal "That would be nice."
+
 
     n "None of you talk again in a while."
 
@@ -1366,7 +1370,7 @@ label loop1_yamato:
 
     n "{w}But just now you--Why? Why did you do that?"
 
-    MC "Eh."
+    MC yan "Eh."
 
     n "{cps=12}No, no, no way...{/cps}"
 

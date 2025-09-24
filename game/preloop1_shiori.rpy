@@ -32,11 +32,11 @@ label loop1_shiori_mandatory1:
 
     n "{i}Is it?{/i}"
 
-    MC "Heh... {w}yeah. Guess I should come by more. Bet the gods missed me."
+    MC smugcl "Heh... {w}yeah. Guess I should come by more. Bet the gods missed me."
 
     shiori "They’d have to remember you first~"
 
-    MC "Eh?"
+    MC surprised "Eh?"
 
     shiori "I’m joking~"
 
@@ -46,7 +46,7 @@ label loop1_shiori_mandatory1:
 
     shiori "They don’t really talk much anymore."
 
-    MC "...That’s kinda weird. They used to, didn’t they? I mean, we all used to hang out together, right?"
+    MC nervous "...That’s kinda weird. They used to, didn’t they? I mean, we all used to hang out together, right?"
 
     shiori "We did. Back then."
 
@@ -54,15 +54,15 @@ label loop1_shiori_mandatory1:
 
     n "You nod before you even think."
 
-    MC "Right, yeah. We always used to hang out by that, uh... {w=0.2}that rock thing. The... {w}{i}Dosojin{/i}?"
+    MC normal "Right, yeah. We always used to hang out by that, uh... {w=0.2}that rock thing. The... {w}{i}Dosojin{/i}?"
 
     shiori "Mhm~"
 
-    MC "And we had those snacks... {w=0.2}What were they? Rice cakes?"
+    MC normal "And we had those snacks... {w=0.2}What were they? Rice cakes?"
 
     shiori "They were pickled plums, actually."
 
-    MC "Whoops, okay. {w=0.2}Right. {w=0.2}Salty stuff. I remember."
+    MC annoyed "Whoops, okay. {w=0.2}Right. {w=0.2}Salty stuff. I remember."
 
     n "{i}Do you?{/i}"
 
@@ -72,17 +72,17 @@ label loop1_shiori_mandatory1:
 
     shiori "But now? They're being weird with you."
 
-    MC "Heh... maybe they're just jealous I did it. Yamakui’s gone, after all."
+    MC smug "Heh... maybe they're just jealous I did it. Yamakui’s gone, after all."
 
     shiori "Sure. Maybe that’s it."
 
     n "She twirls the broom in her hand as she looks up to the ceiling, clearly trying to remember something."
 
-    MC "I mean, it’s not like I wanted all the attention, y’know? I just-{w=0.2}I did what I had to."
+    MC normal "I mean, it’s not like I wanted all the attention, y’know? I just-{w=0.2}I did what I had to."
 
     shiori "And you came back. That’s all that matters."
 
-    MC "Of course I do. I promised you, didn’t I?"
+    MC happy "Of course I do. I promised you, didn’t I?"
 
     n "{i}Did you?{/i}"
 
@@ -107,7 +107,8 @@ label loop1_shiori_mandatory1:
 
     shiori "I’ll make tea, then we can pray together! Just like before~"
 
-    MC "Yeah. {w=0.2}Sure. {w=0.2}I’ve got time. Feels like forever since we did that."
+    MC normal "Yeah. {w=0.2}Sure. {w=0.2}I’ve got time. Feels like forever since we did that."
+
 
     show darken
     hide shi
@@ -138,23 +139,9 @@ label loop1_shiori_mandatory1:
     $ restore_music_volume()
     $ restore_music_volume()
 
-    scene black with out_182
+    $ loop1_shiori_mandatory1 = True
 
-    scene black
 
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
-    stop music fadeout 3.0
 
 
 
@@ -193,27 +180,27 @@ label loop1_shiori_mandatory2:
 
     shiori "Why are you here at this hour?"
 
-    MC "I can't sleep, so thought I’d check on you. Still awake, huh?"
+    MC normal "I can't sleep, so thought I’d check on you. Still awake, huh?"
 
     shiori "Yes... I'm still in the middle of lighting all the lanterns."
 
-    MC "Why?"
+    MC annoyed "Why?"
 
     shiori "..."
 
     shiori "In case someone needs to find their way."
 
-    MC "Who?"
+    MC annoyed "Who?"
 
     shiori "Well, it can be anyone~"
 
-    MC "And the flowers? You’ve been leaving more of them lately... {w=0.2}Who are they for?"
+    MC nervous "And the flowers? You’ve been leaving more of them lately... {w=0.2}Who are they for?"
 
     shiori "The dead. Everyone who got eaten."
 
     n "You stare at the urns, there are no names written on them."
 
-    MC "Whose urns are those?"
+    MC nervous "Whose urns are those?"
 
     shiori "I-I don't remember their names."
 
@@ -224,7 +211,8 @@ label loop1_shiori_mandatory2:
     with dissolve
     play sound "sfx/suzu.mp3"
 
-    MC "Wait, really?"
+    MC surprised "Wait, really?"
+
 
     n "Funny, because you {i}don't remember{/i} any names either."
 
@@ -240,11 +228,11 @@ label loop1_shiori_mandatory2:
 
     $ restore_music_volume()
 
-    MC "...Can you remember anyone?"
+    MC nervous "...Can you remember anyone?"
 
     shiori "The elder said that everyone who got eaten by Yamakui {alpha=0.7}{blur}got wiped off from everyone's memory...{/blur}{/alpha}"
 
-    MC "Or maybe they were {glitch=15}{i}never there to begin with?{/i}{/glitch}"
+    MC yan "Or maybe they were {glitch=15}{i}never there to begin with?{/i}{/glitch}"
 
     play sound "sfx/stomp.mp3"
 
@@ -271,15 +259,15 @@ label loop1_shiori_mandatory2:
 
     shiori "[persistent.player_name]-sama, that is a cruel thing to say...!"
 
-    MC "Oi, oi. I didn't mean it like that, Shiori-chan.."
+    MC hurt "Oi, oi. I didn't mean it like that, Shiori-chan.."
 
     n "You actually did."
 
-    MC "But, anyway, if they didn't exist... Then who are you offering for?"
+    MC annoyed "But, anyway, if they didn't exist... Then who are you offering for?"
 
     shiori "..."
 
-    MC "Shiori?"
+    MC nervous "Shiori?"
 
     n "Suddenly, the smell of insence makes you want to gag."
 
@@ -300,27 +288,6 @@ label loop1_shiori_mandatory2:
     n "{cps=30}The shrine staying open even when no one prays anymore.{/cps}"
 
     n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive it."
-
-    scene black with out_182
-
-
-    #return
-
-    scene black
-
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
-    stop music fadeout 3.0
 
     $ loop1_shiori_mandatory2 = True
     #return
@@ -353,7 +320,7 @@ label loop1_shiori_mandatory3:
 
     shiori "You’re just in time! I was preparing the offering."
 
-    MC "Heh. Lucky me, huh? Need help?"
+    MC happy "Heh. Lucky me, huh? Need help?"
 
     shiori "Always~"
 
@@ -361,7 +328,7 @@ label loop1_shiori_mandatory3:
 
     shiori "Can you hand me the insides of that bowl?"
 
-    MC "This one?"
+    MC nervous "This one?"
 
     n "You reach out, your fingers press into something {cps=10}{alpha=0.8}cold{/alpha}{/cps} and soft."
 
@@ -385,18 +352,17 @@ label loop1_shiori_mandatory3:
 
     n "It's {cps=58}warm...{/cps} as warm as Shiori's hand when you brush against it as you hand the thing to her."
 
-    MC "Fresh?"
+    MC surprised "Fresh?"
 
     shiori "Mm. It should be."
 
-    MC "You butcher this yourself?"
+    MC annoyed "You butcher this yourself?"
 
     shiori "Ara~ You think little ol' me have the strength to do it?"
 
     n "There's no right answer to that."
 
     n "She lays out four flat plates.  The red liquid seeps out and follows the grain."
-
 
     show shi normal:
         zoom 0.5
@@ -408,9 +374,10 @@ label loop1_shiori_mandatory3:
 
     shiori "...Supposedly."
 
-    MC "What are the two other plates for?"
+    MC normal "What are the two other plates for?"
 
     shiori "It's for Yamato and Hikaru! But, ummm.. They said they can't come so might as well be just the two of us."
+
 
     show darken2
     with dissolve
@@ -438,11 +405,11 @@ label loop1_shiori_mandatory3:
 
     stop sound fadeout 0.5
 
-    MC "Alright then."
+    MC nervous "Alright then."
 
     n "You pick up a piece. The surface seems {alpha=0.7}slick{/alpha}. A thick mucous sheen coats it, and it {sc=4}slides{/sc} through your fingers once before you get a grip."
 
-    MC "...Itadakimasu."
+    MC normal "...Itadakimasu."
 
     play sound "sfx/eatmeat2.mp3"
 
@@ -494,15 +461,15 @@ label chew_loop2:
 label gulgulp:
     hide darken2
     with dissolve
-    MC "...Not bad. Kind of chewy, though."
+    MC normal "...Not bad. Kind of chewy, though."
 
     shiori "..."
 
-    MC "What?"
+    MC annoyed "What?"
 
     shiori "I thought you were going to puke."
 
-    MC "Hah. I’ve had worse during night guard duty."
+    MC smug "Hah. I’ve had worse during night guard duty."
 
     shiori "Ah-I see."
 
@@ -510,7 +477,7 @@ label gulgulp:
 
     n "Another strip slides off the tray, leaving a smear behind."
 
-    MC "So, what is it? Boar? Deer?"
+    MC suprised "So, what is it? Boar? Deer?"  
 
     play sound "sfx/suzu.mp3"
 
@@ -524,7 +491,7 @@ label gulgulp:
 
     shiori "{cps=14}{alpha=0.7}{sc=4}Wouldn't you like to know, [persistent.player_name]-sama.{/sc}{/alpha}{/cps}"
 
-    MC "Eh, just curious is all."
+    MC normal "Eh, just curious is all."
 
     show darken2
     with dissolve
@@ -553,21 +520,6 @@ label gulgulp:
 
     n "{glitch=4}But you’re not even full.{/glitch}"
 
-    scene black
-
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
-    stop music fadeout 3.0
 
     #return
 
@@ -602,7 +554,7 @@ label loop1_shiori_mandatory4:
         easeout 0.03 yoffset 80
         easein 0.03 yoffset 80
     with vpunch
-    MC "--!?"
+    MC shocked "--!?"
 
     show shi normal:
         zoom 0.5
@@ -627,13 +579,13 @@ label loop1_shiori_mandatory4:
 
     shiori "Did I startle you, [persistent.player_name]-sama?"
 
-    MC "Y-yeah, kinda! You didn’t give me any warning--"
+    MC nervous "Y-yeah, kinda! You didn’t give me any warning--"
 
     shiori "Hikaru said ceremonial bells drive evil spirits away."
 
     shiori "Sooo I'm just checking."
 
-    MC "...Checking?"
+    MC surprised "...Checking?"
 
     shiori "If there’s anything evil around, of course! Since the red moon is coming, and all!"
 
@@ -643,7 +595,7 @@ label loop1_shiori_mandatory4:
 
     n "She raises the bell again."
 
-    MC "Wait, maybe we don’t have to--"
+    MC panic "Wait, maybe we don’t have to--"
 
     shiori "Shhh."
 
@@ -697,7 +649,7 @@ label loop1_shiori_mandatory4:
 
 
 
-    MC "{cps=8}{sc=6}{color=#ff0000}Ghh--{/color}{/sc}{/cps}"
+    MC hurt "{cps=8}{sc=6}{color=#ff0000}Ghh--{/color}{/sc}{/cps}"
 
     with sshake
 
@@ -717,7 +669,7 @@ label loop1_shiori_mandatory4:
 
 
 
-    MC "{cps=7}{alpha=0.7}{i}Shiori--!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
+    MC yan "{cps=7}{alpha=0.7}{i}Shiori--!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
 
     hide expression Text
     hide expression Text
@@ -731,7 +683,7 @@ label loop1_shiori_mandatory4:
 
 
 
-    MC "{sc=10}{size=50}STOP!{/size}{/sc}"
+    MC mad "{sc=10}{size=50}STOP!{/size}{/sc}"
     scene shrine day:
         zoom 0.5
     show shi normal:
@@ -744,21 +696,19 @@ label loop1_shiori_mandatory4:
     with sshake
     shiori "Eh?"
 
-
-
     stop music
 
-    MC "I think that's enough, no evil spirits are here tonight."
+    MC annoyed "I think that's enough, no evil spirits are here tonight."
 
-    MC "See? Nothing "
+    MC normal "See? Nothing "
 
     shiori "You're right, I don’t sense anything~"
 
-    MC "Yeah, so you can stop now."
+    MC normal "Yeah, so you can stop now."
 
     shiori "You sure? You look like you saw something just now, [persistent.player_name]-sama."
 
-    MC "I'm--fine."
+    MC nervous "I'm--fine."
 
     shiori "Mm~ I’m glad."
 
@@ -774,21 +724,12 @@ label loop1_shiori_mandatory4:
 
     n "But nothing comes out "
 
+
     scene black
 
-    pause 0.3
-
-    play sound "sfx/day change.mp3"
-
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
-
-    with fade
-
-    pause 0.5
-
-    stop sound
-
     stop music fadeout 3.0
+
+    $ loop1_shiori_mandatory4 = True
 
     #return
 
@@ -819,7 +760,7 @@ label loop1_shiori_mandatory5:
 
     n "You said a lot of things, didn't you?"
 
-    MC normal "Yoo, Shiori!"
+    MC happycl "Yoo, Shiori!"
 
     shiori "Good morning [persistent.player_name]-sama~"
 
@@ -829,10 +770,10 @@ label loop1_shiori_mandatory5:
 
     menu:
         "We all cried.":
-            MC "We all cried because you all think I wouldn't make it."
+            MC happy "We all cried because you all think I wouldn't make it."
             shiori "Mhm~ We did."
         "We all said a prayer.":
-            MC "We all said a prayer for my success. I think you were the one who suggested it."
+            MC normal "We all said a prayer for my success. I think you were the one who suggested it."
             shiori "Ehehe~ Yeah. That sounds right."
 
     n "She nods, still looking at the sky."
@@ -841,11 +782,11 @@ label loop1_shiori_mandatory5:
 
     menu:
         "He wanted to come too":
-            MC "He wanted to come too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I was gone."
+            MC smugcl "He wanted to come too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I was gone."
             shiori "Yeah~"
         "He was crying.":
-            MC "The stupid oaf actually cried because he was so sure I was gonna die, right?"
-            MC "He made a pretty ridiculous face, too. Didn't know Yamato could cry like that."
+            MC happy "The stupid oaf actually cried because he was so sure I was gonna die, right?"
+            MC smug "He made a pretty ridiculous face, too. Didn't know Yamato could cry like that."
             shiori "Hehe~ I remember something like that..."
 
     n "You’re smiling, and your chest feels warm."
@@ -856,13 +797,12 @@ label loop1_shiori_mandatory5:
 
     menu:
         "I said I'd protect everyone":
-            MC "I remember saying that I’d protect everyone."
-            MC "And I did, right? When I slayed the Yamakui!"
+            MC normal "I remember saying that I’d protect everyone."
+            MC smug "And I did, right? When I slayed the Yamakui!"
             shiori "Did you~?"
         "I promised you I'll be back.":
-            MC "I promised you that no matter what happens, I'll come back to you, Shiori."
+            MC normal "I promised you that no matter what happens, I'll come back to you, Shiori."
             shiori "..."
-
 
     shiori "Yeah, you are right, [persistent.player_name]..."
 
@@ -875,7 +815,7 @@ label loop1_shiori_mandatory5:
 
     shiori "{alpha=0.7}{sc=3}It didn’t happen like that.{/sc}{/alpha}"
 
-    MC "{cps=9}{alpha=0.7}Huh?{/alpha}{/cps}"
+    MC surprised "{cps=9}{alpha=0.7}Huh?{/alpha}{/cps}"
 
     shiori "{cps=44}You left without saying goodbye to us, [persistent.player_name]."
 
@@ -885,13 +825,13 @@ label loop1_shiori_mandatory5:
 
     play music "sfx/forest night.wav"
 
-    MC "{sc=1}N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?{/sc}"
+    MC panic "{sc=1}N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?{/sc}"
 
     shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}"
 
     shiori "Don't try to make things up."
 
-    MC "{cps=59}{sc=3}I-- I just--{/sc}"
+    MC sad "{cps=59}{sc=3}I-- I just--{/sc}"
 
     n "Guess you can't get yourself out of this situation."
 
@@ -911,6 +851,7 @@ label loop1_shiori_mandatory5:
         alpha 1.0
 
         linear 0.5 zoom 0.3 xalign 0.4
+    with hpunch
 
     n "What are you doing? Stop it. Stop."
 
@@ -936,9 +877,9 @@ label loop1_shiori_mandatory5:
     n "She walks away, as your body freezes in place."
     hide shi
 
-    MC "…"
+    MC surprised "…"
 
-    MC "Shit." ## wrong expression here
+    MC yan "Shit." ## wrong expression here
 
     scene black
     with in_212
@@ -962,11 +903,11 @@ label loop1_shiori_mandatory5:
 
     n "Indeed, it is too small for a being such as the Yamakui-{nw}"
 
-    MC "{b}I killed it.{/b}"
+    MC yan "{b}I killed it.{/b}"
 
-    MC "{color=#ff3333}I killed that kuso-yarou up there.{/color}"
+    MC yan "{color=#ff3333}I killed that kuso-yarou up there.{/color}"
 
-    MC "{size=+4}{sc=5}I brought this goddamn anmor{b} BACK.{/b}{/sc}{/size}"
+    MC mad "{size=+4}{sc=5}I brought this goddamn anmor{b} BACK.{/b}{/sc}{/size}"
 
     play sound "sfx/kickmetal.mp3"
 
@@ -974,79 +915,71 @@ label loop1_shiori_mandatory5:
 
     n "What has gotten into you?"
 
-    MC "{fast}{sc=4}{color=#bb1111}You.{/color}{/sc}"
+    MC yan "{fast}{sc=4}{color=#bb1111}You.{/color}{/sc}"
 
     n "Me."
 
-    MC "{b}...You said I was the hero.{/b}"
+    MC yansm "{b}...You said I was the hero.{/b}"
 
     n "..."
 
-    MC "{sc=3}You’ve been here this whole time.{/sc}"
+    MC yansm "{sc=3}You’ve been here this whole time.{/sc}"
 
-    MC "Narrating every step, whispering like a kami stuck in my spine."
+    MC yan "Narrating every step, whispering like a kami stuck in my spine."
 
-    MC "{size=+2}But now? Now you shut up?{/size}"
+    MC yan "{size=+2}But now? Now you shut up?{/size}"
 
-    MC "{sc=3}...You liked watching me squirm, didn’t you?{/sc}"
+    MC yan "{sc=3}...You liked watching me squirm, didn’t you?{/sc}"
 
-    MC "So what is it now? Scared? Huh?"
+    MC yan "So what is it now? Scared? Huh?"
 
     play sound "sfx/heartbeat_deep.ogg"
 
     n "..."
 
-    MC "{size=+2}You should be.{/size}"
+    MC yansm "{size=+2}You should be.{/size}"
 
-    MC "I did what you asked. I followed your damn story."
+    MC yan "I did what you asked. I followed your damn story."
 
-    MC "...You never said what to do once the screaming stopped."
-
-    n "..."
-
-    MC "All right, if that's how you wanna play."
+    MC yan "...You never said what to do once the screaming stopped."
 
     n "..."
 
-    MC "{b}{sc=3}Let's play for a little bit more.{/sc}{/b}"
+    MC yansm "All right, if that's how you wanna play."
+
+    n "..."
+
+    MC yansm "{b}{sc=3}Let's play for a little bit more.{/sc}{/b}"
 
     n "...."
 
     ## uncomfortable silence
     pause 3
 
-    MC "...Oi."
+    MC yan "...Oi."
 
-    MC "{sc=3}You still there?{/sc}"
+    MC yan "{sc=3}You still there?{/sc}"
 
-    MC "{sc=4}Hey?{/sc}"
+    MC yan "{sc=4}Hey?{/sc}"
 
-    MC "Don’t you wanna finish your pretty little story?"
+    MC yan "Don’t you wanna finish your pretty little story?"
 
     n "..."
 
-    MC "{b}Heh.{/b}"
+    MC yansm "{b}Heh.{/b}"
 
-    MC "{b}You'd better, or I'll finish it for you.{/b}"
+    MC yan "{b}You'd better, or I'll finish it for you.{/b}"
 
     n "Wait, what are you-"
-
-    MC "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
 
     scene black
 
     pause 0.3
 
-    play sound "sfx/day change.mp3"
+    MC "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
 
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}TWO DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+    
 
-    with fade
-
-    pause 0.5
-
-    stop sound
-
-    stop music fadeout 3.0
+    $ loop1_shiori_mandatory5 = True
 
     return

@@ -68,7 +68,7 @@ define MC = Character("[persistent.player_name]", color="#d40000", image="main",
 define n = Character(None, what_color="#fffafa") ## mc sama narrator
 define n2 = Character(None, what_color="#ff5277", what_font="LibreBaskerville-Regular.ttf", what_size=34) ## yamakui narrator
 
-define shiori = Character("Shiori", color="#c78b12")
+define shiori = Character("Shiori", color="#c78b12", callback=speaker("shio"))
 define yamato = Character("Yamato", color="#00d44a")
 define hikaru = Character("Hikaru", color="#092a43")
 

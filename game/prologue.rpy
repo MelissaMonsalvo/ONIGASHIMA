@@ -74,7 +74,7 @@ label prologue:
 
     n "{cps=16}Silence falls, finally, as you stop stabbing.{/cps}"
 
-    play sound "sfx/drip.mp3"
+    play sound "sfx/drip.wav"
 
     n "You tilt your head. A warm liquid drips off your chin."
 
@@ -347,7 +347,7 @@ label after_get_name:
 
     "Man" "But.... how? How did you do it, [persistent.player_name]?"
 
-    MC normal "I took down that Oni in one blow! Well... maybe two! Or ten! But who's there to count?!"
+    MC smug "I took down that Oni in one blow! Well... maybe two! Or ten! But who's there to count?!"
 
     play sound "sfx/cheer.mp3"
 
@@ -424,7 +424,7 @@ label after_get_name:
 
     "Elder" "{size=*1.05}[persistent.player_name]{/size} climbed that mountain and came back. {w=0.3}Where no one else {i}couldn't.{/i}"
 
-    play sound "sfx/cheer2.ogg"
+    play sound "sfx/cheer.mp3"
 
     n "The crowd breaks into cheers and applause."
 
@@ -441,17 +441,18 @@ label after_get_name:
     n "Someone shouts from the back, it might've been your friend, Shiori."
 
 
-    MC normal "Thank you, everyone. I didn’t do it alone."
+    MC happy "Thank you, everyone. I didn’t do it alone."
 
-    MC "I had your hopes, {w}your prayers, {w}your bento. Aaaand that weird old charm from our beloved shrine maiden..."
+    MC happycl "I had your hopes, {w}your prayers, {w}your bento. Aaaand that weird old charm from our beloved shrine maiden..."
 
-    MC "Still stuck in my pocket, by the way, thanks Shiori!"
+    MC happy "Still stuck in my pocket, by the way, thanks Shiori!"
 
     n "The girl giggled at the back."
 
-    MC "But I climbed that mountain! I faced it head-on! {w}And I won!"
+    MC smug "But I climbed that mountain! I faced it head-on! {w}And I won!"
 
-    MC "So let’s celebrate! No more fear!"
+    MC smug "So let’s celebrate! No more fear!"
+
 
     play sound "sfx/cheer.mp3"
 
@@ -544,7 +545,7 @@ label after_get_name:
 
     shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi seems like~!"
 
-    MC "Oi, give me a little credit! I’m not that easy to mash, y’know."
+    MC smugcl "Oi, give me a little credit! I’m not that easy to mash, y’know."
 
     yamato "Yeah? Could’ve fooled me. Runnin’ off like a dumbass without tellin’ anyone. What, too good to ask for backup?"
 
@@ -553,7 +554,7 @@ label after_get_name:
 
     shiori "Mou~ Yamato, don’t be mean. [persistent.player_name]-sama’s super cool!"
 
-    MC "C’mon, you both know tradition. Oni slayer’s gotta go alone."
+    MC normal "C’mon, you both know tradition. Oni slayer’s gotta go alone."
 
     yamato "Tch."
 
@@ -573,7 +574,7 @@ label after_get_name:
 
     shiori "{w=0.2}-whisper {sc=2}seeeeecrets{/sc} into your ear while it bled? Was it... {w}beautiful?"
 
-    MC "...Huh?"
+    MC surprised "...Huh?"
 
     yamato "Don’t answer that."
 
@@ -598,7 +599,7 @@ label after_get_name:
 
     yamato "Jealous?! Of a corpse?"
 
-    MC "Haha! You kinda sound like you are."
+    MC happy "Haha! You kinda sound like you are."
 
 
     show yam normal at left, shakey:
@@ -618,7 +619,7 @@ label after_get_name:
 
     yamato "Can it. I stayed behind to protect the damned village! Some of us don’t get to play th' hero."
 
-    MC "Hey hey! C’mon, don’t fight. The Yamakui's dead, I'm alive, and we're all safe now! isn't that more important?"
+    MC happy "Hey hey! C’mon, don’t fight. The Yamakui's dead, I'm alive, and we're all safe now! isn't that more important?"
 
     n "They're bickering again. Like always."
 
@@ -626,7 +627,7 @@ label after_get_name:
 
     hikaru "...Don’t you forget something, [persistent.player_name]?"
 
-    MC "Huh? What, like a souvenir? I brought the armor, didn’t I?"
+    MC nervous "Huh? What, like a souvenir? I brought the armor, didn’t I?"
 
     hikaru "...I see."
 
@@ -646,7 +647,7 @@ label after_get_name:
 
     hikaru "...It's rather... {w}small for Yamakui, isn't it?"
 
-    MC "...What?"
+    MC surprised "...What?"
 
     shiori "Hikaru?"
 
@@ -676,7 +677,7 @@ label after_get_name:
 
     stop music fadeout 1.0
 
-    MC "...Hikaru?"
+    MC sad "...Hikaru?"
 
     n "The others stand around awkwardly."
 
@@ -688,7 +689,8 @@ label after_get_name:
 
     yamato "Tch, Hikaru's always weird. Let 'em be."
 
-    MC "...Yeah..."
+    MC sadcl "...Yeah..."
+
 
     stop music fadeout 0.3
 

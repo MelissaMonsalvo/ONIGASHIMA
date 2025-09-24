@@ -48,7 +48,7 @@ label loop2_hikaru_mandatory1:
 
     n "But now it sounded... different. Their tone sounds different too."
 
-    MC "Yeah?"
+    MC annoyed2 "Yeah?"
 
     hikaru "You looked pale this morning. {w}Are you alright?"
 
@@ -78,13 +78,13 @@ label loop2_hikaru_mandatory1:
 
     n2 "Just go with it."
 
-    MC "Kind of hard to concentrate if the villagers looks at you like you're lying."
+    MC annoyed2 "Kind of hard to concentrate if the villagers looks at you like you're lying."
 
     hikaru "Ah."
 
     hikaru "I... {w=0.1}can relate."
 
-    MC "Yeah, sorry."
+    MC sadcl2 "Yeah, sorry."
 
     hikaru "Don't be. {w}Hey, what if we go hunting instead?"
 
@@ -150,7 +150,7 @@ label loop2_hikaru_mandatory1:
 
     hikaru "See that boar? One of its leg is limping."
 
-    MC "Mmhmm."
+    MC neutral2 "Mmhmm."
 
     hikaru "On my signal, okay?"
 
@@ -241,7 +241,7 @@ label loop2_hikaru_mandatory1:
     show darken
     with sshake
 
-    MC "....!"
+    MC shocked2 "....!"
 
     play music "sfx/ forest night.wav"
 
@@ -249,7 +249,7 @@ label loop2_hikaru_mandatory1:
 
     hikaru "{w=0.1}...Are you alright?"
 
-    MC "I-I'm {w}just a little hungry."
+    MC nervous2 "I-I'm {w}just a little hungry."
 
     hikaru "Then let’s bring it back quickly. We’ll cook it together."
 
@@ -287,22 +287,22 @@ label loop2_hikaru_mandatory1:
 
     hikaru "You... {w=0.5}You're sure you're {i}okay?{/i}"
 
-    MC "...Sorry. Just thinking."
+    MC sad2 "...Sorry. Just thinking."
 
     hikaru "About what?"
 
-    MC "Uh, {w=0.5}umm, {w=0.5}how the boar will taste."
+    MC nervous2 "Uh, {w=0.5}umm, {w=0.5}how the boar will taste."
 
     hikaru "Hungry already?"
 
-    MC "...Yeah."
+    MC yan2 "...Yeah."
 
     hikaru "Don't worry, I'll make sure it'll taste good for everyone."
 
     scene black
     with out_212
 
-    MC "..."
+    MC yan2 "..."
 
     $ loop2_hikaru_mandatory1 = True
 
@@ -413,30 +413,30 @@ label loop2_hikaru_mandatory2:
 
     hikaru "Do you remember them?"
 
-    MC "...I..."
+    MC yan2 "...I..."
 
     menu:
         "Say you don’t know":
-            MC "...I’ve never seen these before."
+            MC yan2 "...I’ve never seen these before."
 
             hikaru "..."
 
             hikaru "{sc=1}I... I see.{/sc}"
 
         "Say nothing":
-            MC "..."
+            MC yan2 "..."
 
     hikaru "{w=0.2}Do you think they got eaten by Yamakui?"
 
-    MC "If you can't remember them, then yes."
+    MC normal2 "If you can't remember them, then yes."
 
     hikaru "..."
 
-    MC "But don't worry, I killed it! So there's no way anyone will get eaten again!"
+    MC happy2 "But don't worry, I killed it! So there's no way anyone will get eaten again!"
 
     hikaru "{k=2}Y-Yes... That's right..{/k}"
 
-    MC "Let's just go home, you look pale, Hikaru."
+    MC happycl2 "Let's just go home, you look pale, Hikaru."
 
     hikaru "{i}Yeah...{/i}"
 
@@ -479,10 +479,10 @@ label loop2_hikaru_mandatory2:
 
     hikaru "Do you know where the bones are? I'm about to bury them--"
 
-    MC "No idea."
+    MC yan2 "No idea."
 
     if persistent.shiori_eaten:
-        MC "Maybe the shrine maiden got rid of it?"
+        MC surprised2 "Maybe the shrine maiden got rid of it?"
 
         hikaru "{sc=4}We have {b}NO{/b} shrine maiden!{/sc}"
 
@@ -493,7 +493,7 @@ label loop2_hikaru_mandatory2:
         n "You just shrug."
 
     elif persistent.yamato_eaten:
-        MC "Did Shiori bury it?"
+        MC surprised2 "Did Shiori bury it?"
 
         hikaru "{k=2}No... I told Shiori that I'll bury it myself...{/k}"
 
@@ -520,17 +520,17 @@ label loop2_hikaru_mandatory2:
 
     hikaru "[persistent.player_name]...?"
 
-    MC "Mm?"
+    MC surprised2 "Mm?"
 
     hikaru "I'm gonna go look for it. Maybe someone else buried it."
 
-    MC "Okay, I'll stay here then."
+    MC happy2 "Okay, I'll stay here then."
 
     hikaru "...You're not... {w=0.2}{i}curious?{/i}"
 
     hikaru "I mean...{w=0.1} you used to be."
 
-    MC "Nah, it's probably just someone the Yamakui ate a long time ago."
+    MC happycl2 "Nah, it's probably just someone the Yamakui ate a long time ago."
 
     hikaru "..."
 
@@ -691,11 +691,11 @@ label loop2_hikaru_mandatory3:
 
     n "NO!"
 
-    MC "..."
+    MC yansm2 "..."
 
-    MC "Why? You said I wasn't as affectionate."
+    MC yansm2 "Why? You said I wasn't as affectionate."
 
-    MC "This good enough for you?"
+    MC yansm2 "This good enough for you?"
 
     hikaru "I-{w=0.1}I..."
 
@@ -717,7 +717,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "You're being weird, [persistent.player_name]. What's... {w=0.1}{sc=1}what's gotten into you?{/sc}"
 
-    MC "I don't understand."
+    MC yan2 "I don't understand."
 
     show hik normal:
         zoom 0.5
@@ -779,9 +779,9 @@ label loop2_hikaru_mandatory3:
     scene black
     with out_182
 
-    MC "..."
+    MC yan2 "..."
 
-    MC "..." ## change to eerie expression
+    MC evil2 "..." ## change to eerie expression
     $ loop2_hikaru_mandatory3 = True
 
     #return
@@ -819,7 +819,7 @@ label loop2_hikaru_mandatory4:
 
     stop sound
 
-    MC "Hey, Hikaru. Come in--"
+    MC happycl2 "Hey, Hikaru. Come in--"
 
     n "Hikaru doesn't budge."
 
@@ -835,7 +835,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{i}That feels... {w}wrong.{/i}"
 
-    MC "Huh?"
+    MC surprised2 "Huh?"
 
     show darken2
 
@@ -925,7 +925,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{sc=3}No--no--{/sc}"
 
-    MC "{size=+6}{w=0.1}Y {w}a {w}m {w}a {w}k {w}u {w}i.{/size}"
+    MC evil2 "{size=+6}{w=0.1}Y {w}a {w}m {w}a {w}k {w}u {w}i.{/size}"
 
     n2 "{i}That’s the real name under the skin.{/i}"
 
@@ -953,7 +953,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{k=2}You killed [persistent.player_name]...{/k}"
 
-    MC "{w=0.1}Hikaru--"
+    MC shocked2 "{w=0.1}Hikaru--"
 
     show hik normal:
         zoom 0.3
