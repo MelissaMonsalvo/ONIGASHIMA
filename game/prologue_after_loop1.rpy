@@ -853,6 +853,9 @@ label LI_intro_nohikaru:
 
     n "..."
 
+    show shi happyblush
+    with dissolve
+
     shiori "Ehehe~ [persistent.player_name]-samaaa~!"
 
     shiori "You came back~! I was so sure you'd get squished into pancake mochi~!"
@@ -865,12 +868,15 @@ label LI_intro_nohikaru:
 
     yamato "Tradition’s for corpses."
 
-    show shi normal at shakey:
+    show shi annoyed at shakey:
         xalign 0.44
 
     shiori "Mou~ Yamato-kun's just mad he didn’t get to do anything cool~"
 
     yamato "Tch. I stayed behind t’guard the goddamn village."
+
+    show shi smug
+    with dissolve
 
     shiori "Did you now? Aren't you just sulky [persistent.player_name] didn't bring you along?"
 
@@ -884,12 +890,15 @@ label LI_intro_nohikaru:
 
     n "..."
 
+    show shi happy
+    with dissolve
+
     shiori "Ne ne~ [persistent.player_name]-sama! You have to tell us what Yamakui looked like! Did it have fangs? Big claws? Did it talk?"
 
     MC nervous2 "Uh... Big. Yeah. Bloody. And...."
 
-    hide shi normal
-    show shi normal:
+    hide shi happy
+    show shi yansm:
         zoom 0.26
         yalign -0.60
         yoffset 0
@@ -906,6 +915,9 @@ label LI_intro_nohikaru:
 
     yamato "Oi, cut it out."
 
+    show shi happy
+    with dissolve
+
     shiori "What~? I’m just sayin’! Maybe Yamakui-sama's got a pretty face!"
 
     yamato "Damn Oni's got teeth, that's what."
@@ -919,6 +931,9 @@ label LI_intro_nohikaru:
     MC normal2 "Yeah, whatever they looked like now, it doesn't matter now."
 
     yamato "Tch. Ain’t like I’m complainin’. Ya came back in one piece."
+
+    show shi surprised
+    with dissolve
 
     shiori "Especially not clean like that~ {w}Not even a scratch on you!"
 
@@ -950,7 +965,7 @@ label LI_intro_noyamato:
 
     n "But of course, you don’t get far."
 
-    show shi normal at shiori_skipp:
+    show shi happy at shiori_skipp:
         xalign 0.44
     with dissolve
     pause 0.6
@@ -995,6 +1010,9 @@ label LI_intro_noyamato:
 
     n2 "All muscle, gamey."
 
+    show shi happyblush
+    with dissolve
+
     shiori "Ehehe~ [persistent.player_name]-samaaa~!"
 
     shiori "You came back~! You didn’t explode or get squashed or turned into dough!"
@@ -1013,7 +1031,7 @@ label LI_intro_noyamato:
 
     MC smug2 "I think it looked like it needed stabbing."
 
-    show shi normal at shakey:
+    show shi annoyed at shakey:
         xalign 0.44
 
     shiori "Muuuu, why are you so stingy, [persistent.player_name]???"
@@ -1024,12 +1042,15 @@ label LI_intro_noyamato:
 
     n "Someone should have said something by now..."
 
-    show shi normal at bounci:
+    show shi happyblush at bounci:
         xalign 0.44
 
     shiori "You must be starving, [persistent.player_name]-sama. Shiori's gonna make alllll~ the food you want!"
 
     MC smugcl2 "{cps=35}How 'bout {/cps}{cps=5}venison?{/cps}"
+
+    show shi surprised
+    with dissolve
 
     shiori "Eh...? I don't think I have... {w}that...."
 
@@ -1053,7 +1074,7 @@ label LI_intro_noyamato:
 
     hikaru "...Forget it."
 
-    show shi normal at shakey:
+    show shi worried at shakey:
         xalign 0.44
 
     shiori "Ah, mou... Let's go eat before Hikaru's making odd theories again!"

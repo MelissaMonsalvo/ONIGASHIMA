@@ -8,7 +8,7 @@ label loop2_shiori_mandatory1:
     scene shrine day with in_182:
         zoom 0.5
 
-    show shi normal:
+    show shi happyblush:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -25,13 +25,16 @@ label loop2_shiori_mandatory1:
 
     shiori "That’s good~ That’s very good."
 
+    show shi yansm
+    with dissolve
+
     shiori "I thought you'd dream of killing the Yamakui."
 
     n2 "Hoo?"
 
     MC smugcl2 "Why would I dream of that?"
 
-    show shi normal:
+    show shi happy:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -47,6 +50,9 @@ label loop2_shiori_mandatory1:
 
     MC smug2 "Guess I'm awesome like that!"
 
+    show shi yansm
+    with dissolve
+
     shiori "Ne, [persistent.player_name]-sama?"
 
     shiori "Will you tell me how you killed the Yamakui?"
@@ -55,11 +61,17 @@ label loop2_shiori_mandatory1:
 
     MC yansm2 "Why."
 
+    show shi happy
+    with dissolve
+
     shiori "I just... I want to understand. I want to know how you get to kill the fearsome oni~"
 
     shiori "{i}Where did you strike first? What's the color of it's blood? Did it go down without a fight?{/i}"
 
     n "That voice is far too soft for someone asking something that gruesome."
+
+    show shi yan
+    with dissolve
 
     shiori "{k=1}Did you see its eyes when it died?{/k}"
 
@@ -72,6 +84,9 @@ label loop2_shiori_mandatory1:
     n "Wait, what? That's not even what you thought of--"
 
     n2 "{i}I say what I want.{/i}"
+
+    show shi worried
+    with dissolve
 
     shiori "Ara~ That sounds...{w} painful."
 
@@ -93,6 +108,9 @@ label loop2_shiori_mandatory1:
 
     n2 "{size=+8}Heh. Heh. HeHeHAHAHAHa.{/size}"
 
+    show shi yan
+    with dissolve
+
     shiori "...."
 
     shiori "And did it... {w=0.1}say anything before it died?"
@@ -102,6 +120,9 @@ label loop2_shiori_mandatory1:
             MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I {glitch}stabbed it in this neck to kill it.{/glitch}"
         "It cried like a child.":
             MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I stabbed it in this neck to kill it."
+
+    show shi happy
+    with dissolve
 
     shiori "{i}...I thought so.{/i}"
 
@@ -114,13 +135,16 @@ label loop2_shiori_mandatory1:
     show darken
     with dissolve
 
+    show shi yansm
+    with dissolve
+
     shiori "{sc=2}[persistent.player_name]-sama, you forgot your own story~{/sc}"
 
     MC surprised2 "Eh?"
 
     shiori "{k=1}You said you snapped its spine. Now it’s a stab in the neck?{/k}"
 
-    show shi normal:
+    show shi yansm:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -144,7 +168,7 @@ label loop2_shiori_mandatory1:
 
     n2 "This mouth. {w}{i}So much fun.{/i}"
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -167,7 +191,7 @@ label loop2_shiori_mandatory1:
 
     n "Oh no--"
 
-    show shi normal:
+    show shi yansm:
         zoom 0.6
         xalign 0.3
         yoffset 80
@@ -192,6 +216,7 @@ label loop2_shiori_mandatory1:
 
     MC yan2 "..."
 
+
     shiori "Ne, [persistent.player_name]-sama..."
 
     shiori "{k=1}If you see the Yamakui again...{/k}"
@@ -200,7 +225,7 @@ label loop2_shiori_mandatory1:
 
     MC yan2 "What is it?"
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.7
         xalign 0.1
         yoffset 0
@@ -224,7 +249,7 @@ label loop2_shiori_mandatory1:
 
     shiori "{sc=2}...come find me first.{/sc}"
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.8
         xalign 0.5
         yoffset -20
@@ -281,9 +306,12 @@ label loop2_shiori_mandatory2:
 
     MC normal2 "...Yeah."
 
+    show shi happyblush
+    with dissolve
+
     shiori "I am so happy you get enough sleep!"
 
-    show shi normal:
+    show shi happyblush:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -311,6 +339,9 @@ label loop2_shiori_mandatory2:
 
     MC annoyed2 "It’s just a cave filled with rotten meat and bones."
 
+    show shi worried
+    with dissolve
+
     shiori "Oh~? {w=0.1}That sounds horrifying. Must be {i}lonely.{/i}"
 
     n2 "Meat's always in storage."
@@ -326,6 +357,9 @@ label loop2_shiori_mandatory2:
     MC normal2 "No, but it hides the cliffside... And there are bodies inside it, probably those who fell."
 
     MC normal2 "They aren't intact, some are half-eaten."
+
+    show shi yan
+    with fissolve
 
     shiori "{sc=1}Ara~{/sc}"
 
@@ -351,6 +385,9 @@ label loop2_shiori_mandatory2:
     $ decrease_music_volume(0.5)
     $ renpy.block_rollback()
 
+    show shi yansm
+    with dissolve
+
     shiori "Then, does that mean Red Moon is a {b}feast?{/b}"
 
     MC sadcl2 "..."
@@ -373,7 +410,7 @@ label loop2_shiori_mandatory2:
 
 
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.6
         xalign 0.4
         yalign 0
@@ -405,7 +442,13 @@ label loop2_shiori_mandatory2:
 
     MC sadcl2 "..."
 
+    show shi normal
+    with dissolve
+
     shiori "{i}So, the Yamakui is hungry, right?{/i}"
+
+    show shi sad
+    with dissolve
 
     shiori "But maybe... {w=0.2}it was lonely too?"
 
@@ -418,6 +461,9 @@ label loop2_shiori_mandatory2:
     shiori "{w}Are you sure?"
 
     MC normal2 "Yeah."
+
+    show shi normal
+    with dissolve
 
     shiori "Well~"
 
@@ -478,7 +524,7 @@ label loop2_shiori_mandatory3:
 
     scene shrine day:
         zoom 0.5
-    show shi normal:
+    show shi worried:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -501,8 +547,6 @@ label loop2_shiori_mandatory3:
 
     shiori "{i}But I can't remember who...{/i}"
 
-    n "She rubs her eyes but the tears keeps flowing down."
-
     shiori "{i}There were four of us, I swear!{/i}"
 
     play sound "sfx/sniffle.mp3"
@@ -524,6 +568,10 @@ label loop2_shiori_mandatory3:
     n "Your chest aches."
 
     n2 "..."
+
+    show shi sad
+    behind darken
+    with dissolve
 
 
     shiori "I keep seeing a shadow next to me when I walk,{w=0.2} and then I turn and there’s no one."
@@ -579,7 +627,7 @@ label loop2_shiori_mandatory4:
         zoom 0.5
     with fade
 
-    show shi normal:
+    show shi happy:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -597,7 +645,7 @@ label loop2_shiori_mandatory4:
 
     MC nervous2 "Yeah. The red moon is coming, so I--"
 
-    show shi normal:
+    show shi happy:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -625,6 +673,9 @@ label loop2_shiori_mandatory4:
 
     MC normal2 "Yeah?"
 
+    show shi sad
+    with dissolve
+
     shiori "When the Yamakui wasn’t eating...{w=0.2} what did it do?"
 
     shiori "Did it nap in a corner{w=0.2} or {i}crawl{/i} somewhere quiet?"
@@ -637,7 +688,7 @@ label loop2_shiori_mandatory4:
 
     MC annoyed2 "What the hell, Shiori?"
 
-    show shi normal:
+    show shi shocked:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -658,6 +709,9 @@ label loop2_shiori_mandatory4:
 
     shiori "I-I mean!{w=0.2} It's been alone all these time, right?"
 
+    show shi sad
+    with dissolve
+
     shiori "{cps=15}That must’ve been scary.{/cps}"
 
     shiori "But also kind of...{w=0.3} I dunno.{w=0.3} {i}Sad?{/i}"
@@ -674,6 +728,9 @@ label loop2_shiori_mandatory4:
 
     MC annoyed2 "You're {glitch=7}weird,{/glitch} Shiori."
 
+    show shi surprised
+    with dissolve
+
     shiori "...Eh?"
 
     play music "Tense.ogg"
@@ -686,9 +743,12 @@ label loop2_shiori_mandatory4:
 
     MC mad2 "And I think you're hoping that it managed to survive somehow."
 
+    show shi fear
+    with dissolve
+
     shiori "{sc=5}No!{/sc} That’s not--{w=0.2}I mean--"
 
-    show shi normal:
+    show shi fear:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -709,6 +769,9 @@ label loop2_shiori_mandatory4:
 
     shiori "I care if you’re okay!"
 
+    show shi sad
+    with dissolve
+
     shiori "{w=0.2}...But I-um,{w=0.2} also just..."
 
     shiori "{w=0.2}...I keep thinking about it.{w=0.3} The Yamakui."
@@ -719,7 +782,7 @@ label loop2_shiori_mandatory4:
 
     MC yan2 "You think it had feelings?"
 
-    show shi normal:
+    show surprised:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -743,6 +806,9 @@ label loop2_shiori_mandatory4:
     shiori "Don’t you?"
 
     MC sadcl2 "..."
+
+    show shi sad
+    with dissolve
 
     shiori "{color=#ff002e}At least it was hurt when you killed it, right?{/color}"
 
@@ -786,6 +852,9 @@ label loop2_shiori_mandatory4:
 
     MC panic2 "That’s...{w=0.2} ngh--"
 
+    show shi worried
+    with dissolve
+
     shiori "...[persistent.player_name]-sama?"
 
     MC nervous2 "I’m fine."
@@ -796,9 +865,12 @@ label loop2_shiori_mandatory4:
 
     n2 "{i}Makes me wanna {b}peel{/b} the skin and see where the softness comes from~{/i}{nw}"
 
+    show shi annoyed
+    with dissolve
+
     shiori "A-Are you laughing!?"
 
-    show shi normal:
+    show shi angry:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -822,7 +894,7 @@ label loop2_shiori_mandatory4:
 
     shiori "YOU {sc=2}BAKA!{/sc}"
 
-    show shi normal:
+    show shi angry:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -844,6 +916,7 @@ label loop2_shiori_mandatory4:
         linear 0.18 alpha 0.0
 
     pause 0.5
+    hide shi
 
     n "{cps=14}She’s gone.{/cps}"
 

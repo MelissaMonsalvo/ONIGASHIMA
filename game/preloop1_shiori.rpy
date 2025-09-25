@@ -17,7 +17,7 @@ label loop1_shiori_mandatory1:
 
     n "Just like your whole village."
 
-    show shi normal at shiori_skipp2
+    show shi happyblush at shiori_skipp2
     with dissolve
 
     shiori "{bt=1}[persistent.player_name]-sama~!{/bt}"
@@ -26,17 +26,28 @@ label loop1_shiori_mandatory1:
 
     MC normal "Yo! Shiori! Always so busy at the shrine, huh?"
 
+    show shi annoyed
+    with dissolve
+
     shiori "It’s your shrine too, you know. You could've helped."
 
     n "{i}Is it?{/i}"
 
     MC smugcl "Heh... {w}yeah. Guess I should come by more. Bet the gods missed me."
 
+    show shi yan
+    with dissolve
     shiori "They’d have to remember you first~"
 
     MC surprised "Eh?"
 
+    show shi happy
+    with dissolve
+
     shiori "I’m joking~"
+
+    show shi sad
+    with dissolve
 
     shiori "It’s been so quiet, you know."
 
@@ -46,6 +57,9 @@ label loop1_shiori_mandatory1:
 
     MC nervous "...That’s kinda weird. They used to, didn’t they? I mean, we all used to hang out together, right?"
 
+    show shi normal
+    with dissolve
+    
     shiori "We did. Back then."
 
     shiori "The four of us."
@@ -64,6 +78,9 @@ label loop1_shiori_mandatory1:
 
     n "{i}Do you?{/i}"
 
+    show shi worried
+    with dissolve
+
     shiori "It’s strange how different things feel now."
 
     shiori "When you're gone, Yamato-kun was yelling about how you’d get yourself killed. Hikaru-san wouldn’t stop writing charms for your safety."
@@ -72,6 +89,9 @@ label loop1_shiori_mandatory1:
 
     MC smug "Heh... maybe they're just jealous I did it. Yamakui’s gone, after all."
 
+    show shi normal
+    with dissolve
+    
     shiori "Sure. Maybe that’s it."
 
     n "She twirls the broom in her hand as she looks up to the ceiling, clearly trying to remember something."
@@ -88,7 +108,7 @@ label loop1_shiori_mandatory1:
 
     n "To return? {w=0.3}To keep visiting? {w=0.3}Or..."
 
-    show shi normal:
+    show shi sad:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -167,7 +187,7 @@ label loop1_shiori_mandatory2:
 
     n "They say it’s the last place the Yamakui dares enter."
 
-    show shi normal:
+    show shi worried:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -184,11 +204,17 @@ label loop1_shiori_mandatory2:
 
     MC annoyed "Why?"
 
+    show shi sad
+    with dissolve
+
     shiori "..."
 
     shiori "In case someone needs to find their way."
 
     MC annoyed "Who?"
+
+    show shi normal
+    with dissolve
 
     shiori "Well, it can be anyone~"
 
@@ -199,6 +225,9 @@ label loop1_shiori_mandatory2:
     n "You stare at the urns, there are no names written on them."
 
     MC nervous "Whose urns are those?"
+
+    show shi worried
+    with dissolve
 
     shiori "I-I don't remember their names."
 
@@ -234,7 +263,7 @@ label loop1_shiori_mandatory2:
 
     play sound "sfx/stomp.mp3"
 
-    hide shi normal
+    hide shi annoyed
     hide darken
     show shi normal:
         zoom 0.5
@@ -263,11 +292,17 @@ label loop1_shiori_mandatory2:
 
     MC annoyed "But, anyway, if they didn't exist... Then who are you offering for?"
 
+    show shi worried
+    with dissolve
+    
     shiori "..."
 
     MC nervous "Shiori?"
 
     n "Suddenly, the smell of insence makes you want to gag."
+
+    show shi yan
+    with dissolve
 
     shiori "They’re for the... {w}ones who are gone, like I said."
 
@@ -307,7 +342,7 @@ label loop1_shiori_mandatory3:
 
     scene shrine day:
         zoom 0.5
-    show shi normal:
+    show shi happy:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -323,6 +358,9 @@ label loop1_shiori_mandatory3:
     shiori "Always~"
 
     n "Shiori's sleeves are damp. You see a dark smear near her elbow."
+
+    show shi normal
+    with dissolve
 
     shiori "Can you hand me the insides of that bowl?"
 
@@ -356,13 +394,16 @@ label loop1_shiori_mandatory3:
 
     MC annoyed "You butcher this yourself?"
 
+    show shi yansm
+    with dissolve
+
     shiori "Ara~ You think little ol' me have the strength to do it?"
 
     n "There's no right answer to that."
 
     n "She lays out four flat plates.  The red liquid seeps out and follows the grain."
 
-    show shi normal:
+    show shi happy:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -461,6 +502,9 @@ label gulgulp:
     with dissolve
     MC normal "...Not bad. Kind of chewy, though."
 
+    show shi yanbl
+    with dissolve
+
     shiori "..."
 
     MC annoyed "What?"
@@ -468,6 +512,9 @@ label gulgulp:
     shiori "I thought you were going to puke."
 
     MC smug "Hah. I’ve had worse during night guard duty."
+
+    show shi surprised
+    with dissolve
 
     shiori "Ah-I see."
 
@@ -477,7 +524,7 @@ label gulgulp:
 
     play sound "sfx/suzu.mp3"
 
-    show shi normal:
+    show shi yansm:
         zoom 0.5
         xanchor 0.5
         yalign 0
@@ -534,7 +581,7 @@ label loop1_shiori_mandatory4:
 
     ## dongggg sfx false jumpscaree
 
-    show shi normal with easeinbottom:
+    show shi happyblush with easeinbottom:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -550,7 +597,7 @@ label loop1_shiori_mandatory4:
     with vpunch
     MC shocked "--!?"
 
-    show shi normal:
+    show shi yansm:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -591,6 +638,9 @@ label loop1_shiori_mandatory4:
 
     MC panic "Wait, maybe we don’t have to--"
 
+    show shi yansm
+    with dissolve
+
     shiori "Shhh."
 
     shiori "Let’s begin~"
@@ -602,7 +652,7 @@ label loop1_shiori_mandatory4:
 
 
         ease 0.5 zoom 0.5
-    show shi normal:
+    show shi yan:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -680,7 +730,7 @@ label loop1_shiori_mandatory4:
     MC mad "{sc=10}{size=50}STOP!{/size}{/sc}"
     scene shrine day:
         zoom 0.5
-    show shi normal:
+    show shi fear:
         xanchor 0.5
         xalign 0.4
         yalign 0
@@ -696,6 +746,9 @@ label loop1_shiori_mandatory4:
 
     MC normal "See? Nothing "
 
+    show shi yansm
+    with dissolve
+
     shiori "You're right, I don’t sense anything~"
 
     MC normal "Yeah, so you can stop now."
@@ -707,6 +760,9 @@ label loop1_shiori_mandatory4:
     shiori "Mm~ I’m glad."
 
     shiori "Because if there {i}was{/i} something evil nearby..."
+
+    show shi yansmbl
+    with dissolve
 
     shiori "I’d have to do a lot more than ring a bell, y'know?"
 
@@ -732,7 +788,7 @@ label loop1_shiori_mandatory5:
 
     scene forest day with in_182:
         zoom 0.5
-    show shi normal:
+    show shi happy:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -798,6 +854,9 @@ label loop1_shiori_mandatory5:
             MC normal "I promised you that no matter what happens, I'll come back to you, Shiori."
             shiori "..."
 
+    show shi normal
+    with dissolve
+
     shiori "Yeah, you are right, [persistent.player_name]..."
 
     shiori "{cps=62}{alpha=0.8}Except...{/alpha}{/cps}"
@@ -805,6 +864,9 @@ label loop1_shiori_mandatory5:
     stop music fadeout 0.3
     play sound "sfx/suzu.mp3"
     show darken
+    with dissolve
+
+    show shi yansm behind darken
     with dissolve
 
     shiori "{alpha=0.7}{sc=3}It didn’t happen like that.{/sc}{/alpha}"
@@ -829,13 +891,16 @@ label loop1_shiori_mandatory5:
 
     n "Guess you can't get yourself out of this situation."
 
+    show shi happyblush
+    with dissolve
+
     shiori "But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you."
 
     shiori "{cps=52}Even if Yamato and Hikaru told me otherwise."
 
     n "You extend your hand, about to grab Shiori's wrist as she moves away."
 
-    show shi normal:
+    show shi yansm:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -855,7 +920,7 @@ label loop1_shiori_mandatory5:
 
     shiori "{alpha=0.8}Let’s be honest then, okay?"
 
-    show shi normal:
+    show shi yansm:
         zoom 0.3
         xanchor 0.5
         xalign 0.4

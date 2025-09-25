@@ -5,7 +5,7 @@ label loop2_shiori:
     scene shrine night with in_182:
         zoom 0.5
 
-    show shi normal:
+    show shi blush:
         zoom 0.8
         xalign 0.1
         yoffset -20
@@ -47,7 +47,7 @@ label loop2_shiori:
     scene shrine night with in_eye:
         zoom 0.5
 
-    show shi normal:
+    show shi yan:
         zoom 0.8
         xalign 0.1
         yoffset -20
@@ -69,13 +69,16 @@ label loop2_shiori:
 
     n2 "Tear.{w=0.2} Yet."
 
+    show shi yansm
+    with dissolve
+
     shiori "...You’re really quiet tonight, [persistent.player_name]-sama."
 
     shiori "That’s okay.{w=0.2} I don’t mind."
 
     shiori "We can stay this way until you don't feel lonely anymore~"
 
-    show shi normal:
+    show shi yansm:
         zoom 0.8
         xalign 0.1
         yoffset -20
@@ -91,7 +94,14 @@ label loop2_shiori:
 
     MC nervous2 "Shiori-chan... {w=0.2}You're... {w=0.2}freaking me out, heh..."
 
+    show shi yan
+    with dissolve
+
     shiori "{glitch=5}Really?{/glitch} I think I'm the one who feels afraid."
+
+    show shi yansm
+
+    with dissolve
 
     shiori "But I'll try not to, so you'd feel better."
 
@@ -138,7 +148,7 @@ label loop2_shiori:
 
     n "Shiori’s already waiting."
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -161,7 +171,7 @@ label loop2_shiori:
         xalign 0.5
         linear 0.55 zoom 0.66
 
-    show shi normal:
+    show shi yansm:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -180,6 +190,9 @@ label loop2_shiori:
     with flashred
 
     n "...and peels the skin away."
+
+    show shi yan
+    with dissolve
 
     shiori "Oops~"
 
@@ -243,6 +256,9 @@ label loop2_shiori:
 
     n "{sc=7}NO--{/sc}{nw}"
 
+    show shiyansm behind darken2
+    with dissolve
+
     shiori "{i}Hmm~{/i}"
 
     shiori "Let’s take this part too."
@@ -300,6 +316,9 @@ label after_many_clicks:
 
     n "No--"
 
+    show shi happyblush
+    with dissolve
+
     shiori "Aaaand done! Good as new."
 
     shiori "Oops, but you're not actually [persistent.player_name], are you?"
@@ -310,7 +329,7 @@ label after_many_clicks:
 
     shiori "You can stay with Shiori-chan until the red moon comes!"
 
-    show shi normal:
+    show shi happyblush:
         zoom 0.45
         xanchor 0.5
         xalign 0.4
@@ -345,7 +364,7 @@ label after_many_clicks:
 
     play sound "sfx/suzu.wav"
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.27
         xanchor 0.5
         xalign 0.32
@@ -370,6 +389,9 @@ label after_many_clicks:
 
     MC normal2 "What's up with you?"
 
+    show shi blush
+    with dissolve
+
     shiori "I stubbed my toe real bad. Clumsy ol' me~"
 
     n2 "HUNGRY."
@@ -381,6 +403,9 @@ label after_many_clicks:
     n2 "GIVE IT TO ME--{nw}"
 
     n "No, stop, stop putting those thoughts in my head!"
+
+    show shi yansmbl
+    with dissolve
 
     shiori "Hehe..."
 
@@ -421,7 +446,7 @@ label after_many_clicks:
         zoom 0.5
     with in_eye
 
-    show shi normal:
+    show shi yansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -468,9 +493,15 @@ label after_many_clicks:
     hide bone
     with dissolve
 
+    show shi yanbl
+    with dissolve
+
     shiori "I thought love should hurt sometimes."
 
     shiori "{i}If I can’t stay beside you forever...{w=0.2} I’ll just give you parts of me instead.{/i}"
+
+    show shi yansmbl
+    with dissolve
 
     shiori "{cps=15}Bit by bit. Until we’re always together~{/cps}"
 
@@ -480,6 +511,9 @@ label after_many_clicks:
 
     n "She--{w=0.2}she was always scared of blood--"
 
+    show shi yan
+    with dissolve
+
     shiori "You won’t leave me, nee Yamakui-sama?"
 
     MC yansm3 "{w=0.2}...Never."
@@ -487,6 +521,9 @@ label after_many_clicks:
     n "She doesn’t know what she’s saying--"
 
     shiori "Tonight, I want you to eat well."
+
+    show shi yansmbl
+    with dissolve
 
     shiori "{glitch=1}So you stay strong~{/glitch}"
 
@@ -508,11 +545,18 @@ label after_many_clicks:
 
     shiori "If I love you enough...{w=0.2} you’ll let me stay by your side, right?"
 
+    show shi yan
+
+    with dissolve
+
     shiori "Shiori's so alone, you know?"
 
     shiori "I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other."
 
     shiori "Yamato-kun only cares about being the best."
+
+    show shi yansm
+    with dissolve
 
     shiori "So let me be with you forever, so Shiori won't get lonely~"
 

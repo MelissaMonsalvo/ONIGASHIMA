@@ -5,7 +5,7 @@ label loop3_shiori:
     show darken
 
     play sound "Sfx/walk grass.mp3"
-    show shi normal behind darken:
+    show shi happy behind darken:
         zoom 0.023
         xanchor 0.05
         xalign 0.63
@@ -14,7 +14,7 @@ label loop3_shiori:
         xoffset 0
     with dissolve
     pause 0.3
-    show shi normal behind darken:
+    show shi happy behind darken:
         zoom 0.1
         xanchor 0.05
         xalign 0.63
@@ -23,7 +23,7 @@ label loop3_shiori:
         xoffset 0
     with dissolve
     pause 0.3
-    show shi normal behind darken:
+    show shi happyblush behind darken:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -45,7 +45,7 @@ label loop3_shiori:
 
     n2 "STrAnGE. {w} sHe’S smILiNg."
 
-    show shi normal behind darken:
+    show shi happyblush behind darken:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -66,6 +66,9 @@ label loop3_shiori:
 
     n "Why do you speak like that to the Yamakui...?"
 
+    show shi yansmbl
+    with dissolve
+
     shiori "Aaaah~ You look soooo different now~"
 
     shiori "Did you cut your hair? Your face? Your whole, um... body?"
@@ -79,7 +82,7 @@ label loop3_shiori:
     n2 "SHe sMeLLs rEADY."
 
 
-    show shi normal behind darken:
+    show shi yansmbl behind darken:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -204,7 +207,7 @@ label loop3_shiori:
         zoom 0.5
     with in_212
 
-    show shi normal:
+    show shi yansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -234,7 +237,7 @@ label loop3_shiori:
 
     shiori "Of course I do~ You’ve been so patient."
 
-    show shi normal:
+    show shi yansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -256,7 +259,7 @@ label loop3_shiori:
 
     shiori "But I saw you. {w=0.1}Even back then."
 
-    show shi normal:
+    show shi yan:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -273,11 +276,14 @@ label loop3_shiori:
     shiori "{glitch=5}All those people ran away and called you a monster.{/glitch}"
 
 
+    show shiyansmbl
+    with dissolve
+
     shiori "But not {sc=5}me~{/sc}"
 
     shiori "Because love doesn’t scream when it sees the truth~"
 
-    show shi normal:
+    show shi shiyansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -295,7 +301,7 @@ label loop3_shiori:
 
     shiori "{cps=15}You’ve been hungry, haven’t you~?{/cps}"
 
-    show shi normal:
+    show shi shiyansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -313,7 +319,7 @@ label loop3_shiori:
 
     shiori "{i}I’ll fill the part that hurts.{/i}"
 
-    show shi normal:
+    show shi shiyansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -369,9 +375,6 @@ label loop3_shiori:
 
     shiori "Even though I was an easy meal, {w=0.2}even though I was bound and bleeding..."
 
-    play sound "sfx/squelch2.ogg"
-    $ renpy.pause(0.3)
-    play sound "sfx/gulp.ogg"
     $ renpy.pause(0.3)
 
     shiori "But you ate them instead. {w=0.2}The sinner, {w=0.2}the evil person."
@@ -427,7 +430,7 @@ label loop3_shiori:
 
 
 
-    show shi normal:
+    show shi fear:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -437,12 +440,10 @@ label loop3_shiori:
         xalign 0.38
         yoffset -41
 
-        # Sudden jerk back, like slapped
         linear 0.12 zoom 0.31 xalign 0.45 yoffset 4
 
         pause 0.13
 
-        # Optionally, settle at a neutral pose (can be omitted)
         linear 0.09 zoom 0.3 xalign 0.43 yoffset 8
 
         pause 0.10
@@ -453,7 +454,7 @@ label loop3_shiori:
 
     shiori "{sc=5}Ah...{/sc}"
 
-    show shi normal:
+    show shi yansm:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -463,16 +464,15 @@ label loop3_shiori:
         xalign 0.43
         yoffset 8
 
-        # Small laugh bounce
         linear 0.08 yoffset -3 zoom 0.308
         linear 0.09 yoffset 13 zoom 0.294
-        linear 0.08 yoffset 8 zoom 0.3    # Back to neutral
+        linear 0.08 yoffset 8 zoom 0.3
 
         pause 0.07
 
     shiori "Aha... haha..."
 
-    show shi normal:
+    show shi yansm:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -491,13 +491,16 @@ label loop3_shiori:
 
     shiori "{i}Ahaha~{/i}"
 
+    show shi angry
+    with dissolve
+
     shiori "{glitch=9}Then... then it wasn’t fate?{/glitch}"
 
     with vpunch
 
     shiori "It wasn’t because you--{w}{i}cared?{/i}"
 
-    show shi normal:
+    show shi angry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -524,7 +527,7 @@ label loop3_shiori:
 
     n "Please... {w}please stop..."
 
-    show shi normal:
+    show shi fear:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -552,7 +555,7 @@ label loop3_shiori:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.5
         linear 0.18 zoom 1.2
-    show shi normal:
+    show shi fear:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1

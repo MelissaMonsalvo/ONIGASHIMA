@@ -518,7 +518,7 @@ label after_get_name:
 
     play sound "sfx/walk grass.mp3"
 
-    show shi normal at shiori_skipp:
+    show shi happy at shiori_skipp:
         xalign 0.44
     with dissolve
     pause 0.6
@@ -543,13 +543,16 @@ label after_get_name:
 
     n "And Hikaru… {w=0.4}Hikaru never said much, always just listening to you three ramble."
 
+    show shi happyblush
+    with dissolve
+    
     shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi seems like~!"
 
     MC smugcl "Oi, give me a little credit! I’m not that easy to mash, y’know."
 
     yamato "Yeah? Could’ve fooled me. Runnin’ off like a dumbass without tellin’ anyone. What, too good to ask for backup?"
 
-    show shi normal at shakey:
+    show shi annoyed at shakey:
         xalign 0.44
 
     shiori "Mou~ Yamato, don’t be mean. [persistent.player_name]-sama’s super cool!"
@@ -563,7 +566,7 @@ label after_get_name:
     shiori "Ne, ne~ Tell us! What did Yamakui look like? Was it big? Did it have horns like a cow? Eyes like fireflies? Did it-"
 
     hide shi normal
-    show shi normal:
+    show shi smug:
         zoom 0.26
         yalign -0.60
         yoffset 0
@@ -577,6 +580,8 @@ label after_get_name:
     MC surprised "...Huh?"
 
     yamato "Don’t answer that."
+
+    show shi happy with dissolve
 
     shiori "Ara~ What’s wrong, Yamato? Jealous of the oni?"
 
@@ -615,6 +620,8 @@ label after_get_name:
 
     yamato "I'm just sayin’... Yer' too reckless to be able t' defeat the goddamn Yamakui. Not even a scratch in ya."
 
+    show shi smug with dissolve
+    
     shiori "You’re just grumpy ‘cause [persistent.player_name]-sama did what you couldn’t~"
 
     yamato "Can it. I stayed behind to protect the damned village! Some of us don’t get to play th' hero."
@@ -648,6 +655,9 @@ label after_get_name:
     hikaru "...It's rather... {w}small for Yamakui, isn't it?"
 
     MC surprised "...What?"
+
+    show shi sad
+    with dissolve
 
     shiori "Hikaru?"
 

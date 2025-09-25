@@ -16,7 +16,7 @@ label loop1_shiori:
 
     play sound "sfx/suzu.mp3"
 
-    show shi normal:
+    show shi happy:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -31,7 +31,7 @@ label loop1_shiori:
 
     MC nervous "You still don't believe me, do you?"
 
-    show shi normal:
+    show shi fear:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -45,6 +45,9 @@ label loop1_shiori:
 
     shiori "I--"
 
+    show shi yansm
+    with dissolve
+
     shiori "[persistent.player_name]-sama. I believe you, I fully believe that you believe you've killed it, but..."
 
     shiori "Have you ever seen a cicada still move after its head comes off?"
@@ -55,11 +58,19 @@ label loop1_shiori:
 
     shiori "We prepare because something always comes, [persistent.player_name]."
 
+    show shi happy blush
+    with dissolve
+    
     shiori "That's what Hikaru and Yamato keeps telling me anyway..."
+
+   
 
     n "None of you speak again for a while."
 
     n "..."
+
+    show shi normal
+    with dissolve
 
     shiori "Nee..."
 
@@ -79,7 +90,7 @@ label loop1_shiori:
 
     play sound "sfx/jumpscare.mp3"
 
-    show shi normal:
+    show shi yansm:
 
         zoom 0.5
         xalign 0.4
@@ -107,7 +118,7 @@ label loop1_shiori:
 
     MC normal "No."
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.8
         xalign 0.4
         yalign 0
@@ -151,7 +162,7 @@ label loop1_shiori:
 
         linear 0.3 zoom 0.5
 
-    show shi normal:
+    show shi yansm:
         zoom 0.8
         xalign 0.4
         yalign 0
@@ -235,6 +246,9 @@ label loop1_shiori:
 
     MC nervous "R-Really?"
 
+    show yansmbl
+    with dissolve
+
     shiori "Of course~"
 
     shiori "{glitch=1.1}You're always, {w=0.1}always within my protection.{/glitch}"
@@ -244,6 +258,9 @@ label loop1_shiori:
     n "...but her hand closes around your wrist before you can move."
 
     shiori "{w=0.2}Um, wait--!"
+
+    show shi worried
+    with dissolve
 
     shiori "Wait, just one more thing. Since you've burned off the charm..."
 
@@ -262,6 +279,9 @@ label loop1_shiori:
     shiori "{sc=2}Drink this instead and you'll not be marked when the red moon comes.{/sc}"
 
     MC surprised "...What is it?"
+
+    show shi yansmbl
+    with dissolve
 
     shiori "{i}It's just wine~{/i}"
 
@@ -284,13 +304,22 @@ label loop1_shiori:
     hide haze_effect
     with dissolve
 
+    show shi happy
+    with dissolve
+
     shiori "So? How was it?"
 
     MC normal "It's... {w}fine. I guess?"
 
+    show shi surprised
+    with dissolve
+
     shiori "That's it? Just {i}'fine'{/i}? Nothing else?"
 
     MC happycl "I mean... {w}It's wine, right? Wine's always good in my book."
+
+    show shi yan
+    with fissolve
 
     shiori "{w=0.1}...Nevermind."
 
@@ -298,12 +327,15 @@ label loop1_shiori:
 
     MC confused "...?"
 
+    show shi yansm
+    with fissolve
+
 
     shiori "{cps=14}{sc=6}Tomorrow is the {color=#ff002e}Red Moon{/color}, [persistent.player_name]-sama.{/sc}{/cps}"
 
 
 
-    show shi normal:
+    show shi yansm:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -409,7 +441,7 @@ label loop1_shiori:
 
     scene shrine day:
         zoom 0.5
-    show shi normal:
+    show shi yansm:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -424,7 +456,7 @@ label loop1_shiori:
 
     shiori "It’s almost time, you know."
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.5
         xalign 0.4
         yalign 0
@@ -490,7 +522,7 @@ label loop1_shiori:
         xalign 0.5
         yalign 0.5
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
-    show shi normal:
+    show shi yansm:
         zoom 0.34
         xanchor 0.5
         xalign 0.4
@@ -504,6 +536,9 @@ label loop1_shiori:
 
     shiori "{sc=5}~[persistent.player_name]-sama~{/sc}"
 
+    show shi yansmbl
+    with dissolve
+
     shiori "I'm so {i}happy{/i} you came~"
 
     n "Her voice turns {i}{bt=h1-s0.5-p1.0}singy-songy{/bt}{/i}, even more unhinged than the last time you saw her."
@@ -516,6 +551,9 @@ label loop1_shiori:
 
     shiori "When I started looking at you and thinking... {sc=3}you poor thing~{/sc}"
 
+    show shi yan
+    with dissolve
+    
     shiori "{i}You risked your life for the village, and this is the thanks you get?{/i}"
 
     shiori "Hikaru and Yamato won't talk to you, and everyone doubts you really killed the oni..."
@@ -524,7 +562,7 @@ label loop1_shiori:
 
     shiori "And now that I've done everything I can to prove otherwise, I {glitch=8}failed{/glitch}."
 
-    show shi normal:
+    show shi yansmbl:
         # Starting pose
         zoom 0.34
         xanchor 0.5
@@ -558,7 +596,7 @@ label loop1_shiori:
 
     shiori "And love is stronger than any curse~"
 
-    show shi normal:
+    show shi yansmbl:
         zoom 0.4
         xanchor 0.5
         xalign 0.4
@@ -591,7 +629,7 @@ label loop1_shiori:
 
         ease 0.4 zoom 0.55
 
-    show shi normal:
+    show shi yanbl:
         zoom 0.45
         xanchor 0.5
         xalign 0.4
@@ -617,7 +655,7 @@ label loop1_shiori:
 
         ease 0.4 zoom 0.6
 
-    show shi normal:
+    show shi yanbl:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
