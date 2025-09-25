@@ -1,6 +1,6 @@
 ﻿init python:
     style.choice_text = Style(style.default)
-    style.choice_text.size = 70
+    style.choice_text.size = 60
     style.choice_text.bold = True
     style.choice_text.color = "#232323" # Set color
     style.choice_text.outlines = [(2, "#fff", 0, 0)] # White outline
@@ -927,7 +927,7 @@ define selected1 = 1
 screen preferences():
 
     tag menu
-    
+
     style_prefix "preferencessidemenu"
     add "gui/menu_background2.jpg"
 
@@ -1018,7 +1018,7 @@ screen preferences():
         elif opconfig == 2:
             use config_audio()
         elif opconfig == 3:
-            use config_dialogue() 
+            use config_dialogue()
         elif opconfig == 4:
             use config_accessibility()
 
@@ -1046,7 +1046,7 @@ screen confirm_config():
                     hover skin["hover_2"]
                     xalign 0.5
                     if main_menu:
-                        action ShowMenu("main_menu") #action Return() 
+                        action ShowMenu("main_menu") #action Return()
                     else:
                         action Return() #Hide("preferences")
                 text "CONFIRM" xalign 0.3 yalign 0.5 size 30
@@ -1061,7 +1061,7 @@ screen confirm_config():
                     hover skin["hover_2"]
                     xalign 0.5
                     if main_menu:
-                        action ShowMenu("main_menu") #Return() 
+                        action ShowMenu("main_menu") #Return()
                     else:
                         action Return() #Hide("preferences")
                 text "BACK" xalign 0.3 yalign 0.5 size 30
