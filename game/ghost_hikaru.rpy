@@ -1,12 +1,14 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_hikaru_1:
 
+label hikaru_ghost_loveloop_unhinged:
+
 
     ##show hikaru's ghost zoooming very very slowly and distorts (use xzoom or yzoom for distortion)
     #show ghost_hikaru_idle at show_1
     #show ghost_hikaru_idle at Glitch(_fps=12., color_range1="c00a", color_range2="f00", glitch_strength=.5)
     #show ghost_hikaru_idle at show_1
-    show ghost_hikaru_idle at c_show_3
+    show ghost_hikaru idle at c_show_3
 
     n "Huh? What is--"
 
@@ -24,7 +26,7 @@ label ghost_hikaru_1:
 
     hikaru "I love you."
 
-    show ghost_hikaru_idle at c_show_5
+    show ghost_hikaru idle at c_show_5
 
     n "..."
 
@@ -40,7 +42,7 @@ label ghost_hikaru_1:
 
     MC "Get away, you--"
 
-    show ghost_hikaru_idle at c_show_6
+    show ghost_hikaru idle at c_show_6
 
     hikaru "{cps=5}{size=+8}I lOvE yOu—{/size}{/cps}"
 
@@ -52,7 +54,7 @@ label ghost_hikaru_1:
 
     hikaru "{size=+10}{cps=4}—hELL—{/cps}{/size}"
 
-    show ghost_hikaru_idle at c_show_2
+    show ghost_hikaru idle at c_show_2
 
     hikaru "{color=#111}So sTAY{/color}"
 
@@ -63,7 +65,7 @@ label ghost_hikaru_1:
     hikaru "{size=+12}{cps=2}I’M ALREADY INSIDE{/cps}{/size}"
 
     ## hikaru's ghost is at maximum zooming
-    show ghost_hikaru_idle at c_show_4
+    show ghost_hikaru idle at c_show_4
 
     $ renpy.pause(1.5)
 
@@ -89,7 +91,7 @@ label ghost_hikaru_2:
     n "Empty. {w}Still. {w}No windows open."
 
     # show hikaru's ghost at far corner
-    show ghost_hikaru_idle at c_show_7
+    show ghost_hikaru idle at c_show_7
 
     $ renpy.pause(1.0)
 
@@ -98,23 +100,24 @@ label ghost_hikaru_2:
     n "Wait. {w}Was something—"
 
     #hide hikaru ghost
-    hide ghost_hikaru_idle
+    hide ghost_hikaru
 
     $ renpy.pause(0.2)
 
     # show hikaru's ghost moving fast across the screen
-    show ghost_hikaru_idle at c_show_8
+    show ghost_hikaru idle at c_show_8
 
     n "No. That’s nothing."
 
     n "You blink."
 
-    hide hikaru ghost
+    hide ghost_hikaru
 
     $ renpy.pause(0.2)
 
     # show hikaru's ghost blinking at the back fast
-    $ renpy.pause(1.5)
+    show ghost_hikaru idle at c_show_12
+    #$ renpy.pause(1.5)
 
     n "You swear something’s changed."
 
@@ -122,12 +125,12 @@ label ghost_hikaru_2:
 
     n "You can’t."
 
-    hide hikaru ghost
+    hide ghost_hikaru
     $ renpy.pause(0.2)
 
     # Jumpscare position (sudden front face)
-    show ghost_hikaru_idle at c_show_9 with vpunch
-
+    show ghost_hikaru idle at c_show_9 with vpunch
+    
     ## screen shakes
 
     #$ renpy.pause(0.5)
@@ -160,12 +163,12 @@ label ghost_hikaru_3:
     n "There are hands around your throat."
 
     ## show hikaru's ghost above you (top down view)
-    show ghost_hikaru_idle at c_show_10
+    show ghost_hikaru idle at c_show_10
 
     hikaru "...Sshh. Don’t wake up yet."
 
     ## screen shakes as MC struggles
-    show ghost_hikaru_idle with vpunch
+    show ghost_hikaru idle with vpunch
 
     n "You try to speak, lift your arms but can't--"
 
@@ -184,20 +187,20 @@ label ghost_hikaru_3:
                 MC "What should i do?"
                 "Pull their hands away" :
                     "Nothing happend."
-                    jump ghost_hikaru_3_next
+                    jump ghost_hikaru_3_next 
                 "Kick them":
                     "Nothing happend."
-                    jump ghost_hikaru_3_next
+                    jump ghost_hikaru_3_next 
         "Kick them":
             "Nothing happend."
             menu:
                 MC "What should i do?"
                 "Pull their hands away" :
                     "Nothing happend."
-                    jump ghost_hikaru_3_next
+                    jump ghost_hikaru_3_next 
                 "Kick them":
                     "Nothing happend."
-                    jump ghost_hikaru_3_next
+                    jump ghost_hikaru_3_next 
 
     label ghost_hikaru_3_next:
 
@@ -210,7 +213,7 @@ label ghost_hikaru_3:
     $ renpy.pause(1.5)
 
     ## gone again
-    show ghost_hikaru_idle at c_show_11
+    show ghost_hikaru idle at c_show_11
 
     MC "Hahhh--!"
 
@@ -223,6 +226,8 @@ label ghost_hikaru_3:
     return
 
 label ghost_hikaru_4:
+
+    show normal_hikaru normal at c_show_15
 
     n "You’re dreaming again..."
 
@@ -259,7 +264,9 @@ label ghost_hikaru_4:
     n "You can't make the edges anymore."
 
     hikaru "{cps=9}I know that voice, but not that look...{/cps}"
-
+    
+    show normal_hikaru normal at c_show_16
+    show ghost_hikaru attack at c_show_17
     ## hikaru's normal sprite dissolves to their ghost sprite slowly
     ## you can check dissolve.rpy for the transition you like
 
@@ -327,7 +334,7 @@ label ghost_hikaru_5:
     n "You turn back."
 
     play sound "sfx/air_cut.ogg"
-    show hikaru ghost at Position(xpos=0.5, ypos=0.85, xanchor=0.5, yanchor=1.0)
+    show ghost_hikaru idle at c_show_18
     $ renpy.pause(1.0)
 
     MC "...Hikaru?"
@@ -336,7 +343,8 @@ label ghost_hikaru_5:
 
     n "You walk forward. Slowly."
 
-    show hikaru ghost at Position(xpos=0.5, ypos=0.85) with move
+    #show hikaru ghost at Position(xpos=0.5, ypos=0.85) with move
+    show ghost_hikaru idle at c_show_19
     $ renpy.pause(2.0)
 
     n "It still follows you with the same pace and rythm."
@@ -348,7 +356,8 @@ label ghost_hikaru_5:
     n "You walk faster."
 
     play sound "sfx/steps_dirt.ogg"
-    show hikaru ghost at Position(xpos=0.5, ypos=0.85) with move
+    #show hikaru ghost at Position(xpos=0.5, ypos=0.85) with move
+    show ghost_hikaru idle at c_show_20
     $ renpy.pause(1.5)
 
     n "They're still there."
@@ -362,6 +371,8 @@ label ghost_hikaru_5:
     n "There's a pair of wings on your shadow."
 
     ## show hikaru's ghost but only shadowed
+    hide ghost_hikaru with fade
+    show ghost_hikaru normal shadow at c_show_21
 
     $ renpy.pause(2.0)
 

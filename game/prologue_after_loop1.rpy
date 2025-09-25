@@ -714,6 +714,9 @@ label LI_intro_noshiori:
 
     play sound "sfx/walk grass.mp3"
 
+    show yam annoyed
+    with dissolve
+
     yamato "Tch. Look who finally shows up."
 
     hikaru "Welcome home, [persistent.player_name]-san."
@@ -743,6 +746,9 @@ label LI_intro_noshiori:
     hikaru "...It's rather small for something like the Yamakui, isn’t it?"
 
     MC nervous2 "...What?"
+
+    show yam serious
+    with dissolve
 
     yamato "Oi. What’s that supposed t' mean?"
 
@@ -774,6 +780,9 @@ label LI_intro_noshiori:
     n "Hikaru shrugs, turns and walks away."
 
     MC sad2 "...Hikaru?"
+
+    show yam annoyed
+    with dissolve
 
     yamato "Tch, whatever."
 
@@ -862,6 +871,9 @@ label LI_intro_nohikaru:
 
     MC annoyed2 "Oi, rude. I’m not that easy to mash."
 
+    show yam annoyed
+    with dissolve
+
     yamato "Hnh. Coulda fooled me, dumbass. Leavin’ us without a word, ya promised ya'd bring me along!"
 
     MC smugcl2 "C’mon, you know how it is. Oni slayer tradition."
@@ -913,6 +925,9 @@ label LI_intro_nohikaru:
 
     MC surprised2 "...What?"
 
+    show yam angry
+    with dissolve
+
     yamato "Oi, cut it out."
 
     show shi happy
@@ -930,12 +945,18 @@ label LI_intro_nohikaru:
 
     MC normal2 "Yeah, whatever they looked like now, it doesn't matter now."
 
+    show yam annoyed
+    with dissolve
+
     yamato "Tch. Ain’t like I’m complainin’. Ya came back in one piece."
 
     show shi surprised
     with dissolve
 
     shiori "Especially not clean like that~ {w}Not even a scratch on you!"
+
+    show yam smug
+    with dissolve
 
     yamato "Almost like ya ain’t fought anything at all, eh?"
 

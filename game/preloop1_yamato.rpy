@@ -6,7 +6,9 @@ label loop1_yamato_mandatory1:
 
     pause 1.0
 
-    show yam normal:
+    $ ysword = True
+
+    show yam smug:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -31,19 +33,29 @@ label loop1_yamato_mandatory1:
 
     MC smug "Why? I killed the Oni, didn't I? You can take a break once in a while, you know!"
 
+    show yam annoyed
+    with dissolve
+
     yamato "Tch... Standin’ there lookin’ so smug..."
 
     MC annoyed "All right, I think you're being unnecessarily hostile. What's gotten into you?"
 
-    yamato "What's gotten into me is that yer bein' too damn clean for someone who fought the fuckin' Yamakui!"
-
+    show yam angry
     with vpunch
+
+    yamato "What's gotten into me is that yer bein' too damn clean for someone who fought the fuckin' Yamakui!"
 
     yamato "I don't believe the brat I used to mop the floor with could easily kill 'em!"
 
     MC surprised "Wait, you're saying... that I'm lying?"
 
+    show yam ngh
+    with dissolve
+
     yamato "Keh..."
+
+    show yam smug
+    with dissolve
 
     yamato "Why don't we go one round to see which one of us is lyin', eh?"
 
@@ -63,10 +75,10 @@ label loop1_yamato_mandatory1:
 
     scene black
 
-    
+
     scene dojo day:
         zoom 0.5
-    show yam normal:
+    show yam rage:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -114,7 +126,7 @@ label loop1_yamato_mandatory1:
     scene dojo day:
         zoom 0.5
 
-    show yam normal:
+    show yam angry:
         zoom 0.47
         align (0.5, 0.005)
 
@@ -137,7 +149,7 @@ label loop1_yamato_mandatory1:
 
     MC smug "Are you holding back, Yamato-kun~? Or are you always this slow?"
 
-    show yam normal:
+    show yam rage:
         zoom 0.25
         xalign 0.4
         xoffset 144
@@ -154,7 +166,7 @@ label loop1_yamato_mandatory1:
 
     n "Your sword sings again, he manage to parry once but you shifted your weight and swing one more time."
 
-    show yam normal behind slash_fx:
+    show yam rage behind slash_fx:
         zoom 0.26
         align (0.4, 0.2)
         linear 0.1 align (0.5, 0.3) zoom 0.4
@@ -171,7 +183,7 @@ label loop1_yamato_mandatory1:
     n "It almost hits, but--"
 
     play sound "sfx/fall.mp3"
-    show yam normal:
+    show yam panic:
         zoom 0.26
         align (0.4, 0.005)
         yoffset 0
@@ -200,7 +212,7 @@ label loop1_yamato_mandatory1:
 
     n "You hand out your hand to help him stand, but he doesn't take it."
 
-    show yam normal with easeinbottom:
+    show yam annoyedbl with easeinbottom:
         zoom 0.26
         align (0.4, 0.005)
         yoffset 0
@@ -208,6 +220,11 @@ label loop1_yamato_mandatory1:
     yamato "Lost my footing, ’s all. Ain’t my lucky day."
 
     MC normal "...Yamato kun--"
+
+    $ ysword = False
+    show yam annoyed
+    with dissolve
+
 
     yamato "Oi. Don’t gimme that look."
 
@@ -225,6 +242,9 @@ label loop1_yamato_mandatory1:
 
     MC hurt "I’m not--"
 
+    show yam ngh
+    with dissolve
+
     yamato "I used to be the strong one. Y'know that?"
 
     yamato "Back when ya still pissed yer hakama and swung like a fish outta water."
@@ -234,6 +254,9 @@ label loop1_yamato_mandatory1:
     yamato "{size=+2}{sc=3}I was the one who trained ya.{/sc}{/size}"
 
     MC smug "{sc=2}Yeah, but I was the one who killed the damn thing!{/sc}"
+
+    show yam annoyed
+    with dissolve
 
     yamato "Hah. {w=0.1}Ya really believe that? That thing tore people in half, scared the elders shitless and somehow... somehow {i}ya{/i} come back without a scratch?"
 
@@ -247,6 +270,9 @@ label loop1_yamato_mandatory1:
 
     yamato "Yeah? Armor’s just scrap metal if ya ask me. Coulda been anyone’s, or {i}planted--{/i}"
 
+    show yam ngh
+    with dissolve
+
     n "He stops. His jaw locks tight. He almost said something worse."
 
     MC surprised "{cps=9}What?{/cps}"
@@ -255,6 +281,7 @@ label loop1_yamato_mandatory1:
 
     yamato "{sc=5}Tch, nevermind.{/sc}"
 
+    show yam evil
     show darken
     with dissolve
 
@@ -271,7 +298,7 @@ label loop1_yamato_mandatory1:
     yamato "{glitch}If ya really killed the Yamakui, ya wouldn’t be shakin’ right now.{/glitch}"
 
 
-    show yam normal:
+    show yam evil:
         linear 0.4 xzoom -1 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
     pause 0.1
 
@@ -300,6 +327,7 @@ label loop1_yamato_mandatory1:
 label loop1_yamato_mandatory2:
 
     $ loop1_yamato_mandatory2 = True
+    $ ysword = False
 
     scene dojo day with in_182:
         zoom 0.5
@@ -310,7 +338,7 @@ label loop1_yamato_mandatory2:
 
     play music "Night.mp3"
 
-    show yam normal with dissolve:
+    show yam serious with dissolve:
         zoom 0.26
         align (0.5, 0.005)
         yoffset 0
@@ -322,6 +350,9 @@ label loop1_yamato_mandatory2:
     yamato "Ya said we don't need t' train anymore because the goddamn Yamakui died, didn't ya?"
 
     MC annoyed "Shut up, I'm just checking on you."
+
+    show yam smug
+    with dissolve
 
     yamato "{sc=3}Heh, sure ya do.{/sc}"
 
@@ -341,6 +372,9 @@ label loop1_yamato_mandatory2:
 
     with vpunch
 
+    show yam evil
+    with dissolve
+
     yamato "All t' more reason to doubt ya."
 
     MC sad "...Damn, that was harsh."
@@ -352,7 +386,7 @@ label loop1_yamato_mandatory2:
     $ decrease_music_volume(0.5)
     $ renpy.block_rollback()
 
-    show yam normal:
+    show yam evil:
         zoom 0.26
         align (0.5, 0.005)
         yoffset 0
@@ -369,7 +403,7 @@ label loop1_yamato_mandatory2:
 
     yamato "Ya came home grinnin’ with blood on that armor, [persistent.player_name]. Told 'em they could sleep easy."
 
-    show yam normal:
+    show yam evil:
         zoom 0.3
         align (0.55, 0.02)
         yoffset 40
@@ -388,6 +422,9 @@ label loop1_yamato_mandatory2:
     yamato "{fi=13-1.5-20}That's on ya.{/fi}"
 
     MC nervous "..."
+
+    show yam smug
+    with dissolve
 
     yamato "{w=0.1}...Oi. [persistent.player_name]."
 
@@ -412,6 +449,9 @@ label loop1_yamato_mandatory2:
             with dissolve
             MC panic "I-I mean {color=#ff082d}red{/color}?"
 
+    show yam evil
+    with dissolve
+
     yamato "Ya sure?"
 
     menu:
@@ -423,7 +463,7 @@ label loop1_yamato_mandatory2:
 
     yamato "Tch."
 
-    show yam normal:
+    show yam evil:
         zoom 0.35
         align (0.55, 0.02)
         yoffset 70
@@ -439,7 +479,7 @@ label loop1_yamato_mandatory2:
 
     n "He doesn't look convinced and leans closer, shrinking the gap between you. You can't breathe right."
 
-    yamato "Say that again?"
+    yamato "Say that {i}again?{/o}"
 
     menu:
         "{color=#ff082d}Red{/color}, I said.":
@@ -470,7 +510,7 @@ label loop1_yamato_mandatory2:
 
     ## creepy laugh scene
 
-    show yam normal:
+    show yam evil:
         zoom 0.42
         align (0.65, 0.002)
         yoffset 95
@@ -499,7 +539,7 @@ label loop1_yamato_mandatory2:
 
     MC shocked "The hell was that for?"
 
-    show yam normal:
+    show yam smug:
         zoom 0.42
         align (0.65, 0.002)
         yoffset 95
@@ -510,11 +550,12 @@ label loop1_yamato_mandatory2:
 
     MC annoyed "You sounded like an asshole."
 
+
     yamato "Don't worry, [persistent.player_name], even if you're lyin'... I'd always be here, yeah?"
 
     yamato "I'd clean yer mess like always, and slay the blasted thing myself when the red moon comes."
 
-    show yam normal:
+    show yam smug:
         zoom 0.42
         align (0.65, 0.002)
         yoffset 95
@@ -564,6 +605,8 @@ label loop1_yamato_mandatory2:
 label loop1_yamato_mandatory3:
 
     $ loop1_yamato_mandatory3 = True
+
+    $ ysword = True
 
 
     ## YOUR HOUSE NIGHT
@@ -690,7 +733,7 @@ label loop1_yamato_mandatory3:
     MC yan "Fine, if you want to look at it so bad, be my guest."
 
 
-    show yam normal:
+    show yam shocked:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -707,6 +750,9 @@ label loop1_yamato_mandatory3:
     yamato "Hah?"
 
     MC annoyed "The armor. That's what you’re here for, right?"
+
+    show yam panic
+    with dissolve
 
     yamato "Uh... I--"
 
@@ -800,7 +846,7 @@ label loop1_yamato_mandatory3:
         ease 0.5 zoom 0.5 xoffset 0 yoffset 0
     pause 0.4
 
-    show yam normal:
+    show yam serious:
         zoom 0.3
         xalign 0.4
         yalign -0.15
@@ -817,6 +863,9 @@ label loop1_yamato_mandatory3:
 
     n "It's... a lot softer now."
 
+    show yam blush
+    with dissolve
+
     yamato "Guess I barked up the wrong tree. Hhh... {w}Tch. Damn embarrassing."
 
     MC smugcl "So you finally admit it?"
@@ -831,7 +880,7 @@ label loop1_yamato_mandatory3:
 
     MC normal "Yeah, yeah."
 
-    show yam normal:
+    show yam blush:
         zoom 0.3
         xalign 0.4
         yalign -0.15
@@ -862,6 +911,7 @@ label loop1_yamato_mandatory3:
     #return
 
 label loop1_yamato_mandatory4:
+    $ ysword = False
 
     $ loop1_yamato_mandatory4 = True
 
@@ -883,7 +933,7 @@ label loop1_yamato_mandatory4:
 
     with dissolve
     pause 0.3
-    show yam normal:
+    show yam serious:
         zoom 0.23
         xanchor 0.5
         yalign -0.04
@@ -912,7 +962,7 @@ label loop1_yamato_mandatory4:
 
     hikaru "{atl=-#,#,fade_in_text~0.6}Are you really sure?{/atl}"
 
-    show yam normal:
+    show yam angry:
         zoom 0.23
         xanchor 0.5
         yalign -0.04
@@ -930,6 +980,9 @@ label loop1_yamato_mandatory4:
 
 
     yamato "{sc=3}I'm not fuckin' blind! It didn't shine one bit!{/sc}"
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "Felt like maybe... {w}{i}maybe we’re barkin’ up the wrong damn tree.{/i}"
 
@@ -956,9 +1009,12 @@ label loop1_yamato_mandatory4:
 
     hikaru "{sc=2}This is absurd.{/sc} {i}You{/i} were the one who told me not to trust so easily. You said [persistent.player_name] was hiding something."
 
+    show yam ngh
+    with dissolve
+
     yamato "...Yeah. I did."
 
-    show yam normal:
+    show yam ngh:
         zoom 0.23
         xanchor 0.5
         yalign -0.04
@@ -983,6 +1039,8 @@ label loop1_yamato_mandatory4:
     #return
 
 label loop1_yamato_mandatory5:
+
+    $ ysword = False
 
     $ loop1_yamato_mandatory5 = True
 
@@ -1010,7 +1068,7 @@ label loop1_yamato_mandatory5:
         pause 0.1
         linear 2 zoom 0.7
     pause 0.5
-    show yam normal:
+    show yam eldritch1:
         zoom 0.35
         xanchor 0.5
         yalign -0.04
@@ -1083,7 +1141,7 @@ label loop1_yamato_mandatory5:
 
     show screen eyessss onlayer background
 
-    show yam normal:
+    show yam eldritch1:
         zoom 0.4
         xanchor 0.5
         yalign -0.04
@@ -1154,7 +1212,7 @@ label loop1_yamato_mandatory5:
 
     scene forest night:
         zoom 0.5
-    show yam normal:
+    show yam panic:
         zoom 0.3
         xanchor 0.5
         yalign -0.04
@@ -1184,6 +1242,9 @@ label loop1_yamato_mandatory5:
 
     n "{i}Wait, do you know what that thing was?{w=0.2} Have you seen it before?{/i}"
 
+    show yam ngh
+    with dissolve
+
     yamato "Y-ya weren't supposed to see that, damnit."
 
     MC yan "What the hell was that?"
@@ -1192,7 +1253,7 @@ label loop1_yamato_mandatory5:
 
     MC yan "That thing doesn't look like a god."
 
-    show yam normal:
+    show yam panic:
 
         zoom 0.3
         xanchor 0.5
@@ -1219,6 +1280,9 @@ label loop1_yamato_mandatory5:
 
     MC yan "You're gonna fight an oni with something worse?"
 
+    show yam ngh
+    with dissolve
+
     yamato "{sc=0.2}Shit, you don't know anything, do ya?{/sc}"
 
     n "Yamato's voice breaks, his sword is clattering in the ground now. {w=0.2}"
@@ -1227,17 +1291,23 @@ label loop1_yamato_mandatory5:
 
     yamato "The village already got their hero, so what the hell do they need me for?"
 
+    show yam sad
+    with dissolve
+
     yamato "And... I ain’t stupid, a'ight? I know what they're sayin'."
 
     yamato "‘Course [persistent.player_name] came back stronger, faced the Yamakui and lived.'"
 
     yamato "Then they look at me like I’m--like I'm just a jealous bloke. {w=0.2}"
 
+    show yam ngh
+    with dissolve
+
     yamato "{w=0.1}Tch, maybe I {i}am.{/i} But I'm not just some loser howlin' at the moon."
 
     MC yan "...So you prayed to whatever that thing was?"
 
-    show yam normal:
+    show yam panic:
         zoom 0.3
         xanchor 0.5
         yalign -0.04
@@ -1258,6 +1328,9 @@ label loop1_yamato_mandatory5:
 
     yamato "...I didn’t mean to summon--{nw}"
 
+    show yam sad
+    with dissolve
+
     yamato "{glitch=1.1}I thought maybe if I got stronger--if I had just a bit {i}more{/i}--maybe I'd be--{/glitch}"
 
     MC annoyed "Haaaah...."
@@ -1276,7 +1349,7 @@ label loop1_yamato_mandatory5:
 
         pause 0.1
         linear 1 zoom 0.6
-    show yam normal:
+    show yam sad:
         zoom 0.30
         xanchor 0.5
         yalign -0.04
@@ -1321,4 +1394,3 @@ label loop1_yamato_mandatory5:
     ## so like the MC is yamakui, and the amalgamation is merely the corpses / ghosts of the things the yamakui has killed
 
     return
-   

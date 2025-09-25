@@ -1,6 +1,8 @@
 ############# LOOP 2 WHERE ONE DIED ###########################
 label loop2_yamato_mandatory1:
 
+    $ ysword = False
+
     play music "sfx/forest night.wav"
 
     scene forest day:
@@ -18,7 +20,7 @@ label loop2_yamato_mandatory1:
 
     n "You don't remember it curving like this..."
 
-    show yam normal:
+    show yam annoyed:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -49,7 +51,7 @@ label loop2_yamato_mandatory1:
 
     MC "About...?"
 
-    show yam normal:
+    show yam angry:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -76,9 +78,15 @@ label loop2_yamato_mandatory1:
 
     MC yan2 "I got bit."
 
+    show yam surprised
+    with dissolve
+
     yamato "{i}Bit?{/i}"
 
     MC yan2 "Yeah, the damn Yamakui bit me. That’s why I--"
+
+    show yam annoyed
+    with dissolve
 
     yamato "Bullshit. Where?"
 
@@ -110,7 +118,9 @@ label loop2_yamato_mandatory1:
 
     play music "spooky.mp3"
 
-    show yam normal:
+
+
+    show yam rage:
         zoom 0.45
         xalign 0.4
         yalign 0
@@ -130,6 +140,8 @@ label loop2_yamato_mandatory1:
 
     yamato "That ain’t a wound. That’s... That’s--"
 
+    $ ysword = True
+
     play sound "sfx/shing.mp3"
     hide gore
 
@@ -142,9 +154,15 @@ label loop2_yamato_mandatory1:
 
     n "Yamato unsheates his blades now."
 
+    show yam shocked
+    with dissolve
+
     yamato "{sc=5}That ain’t--That's a corpse...!{/sc}"
 
     MC evil2 "I thought you wanted proof?"
+
+    show yam rage
+    with dissolve
 
     yamato "Yeah?! Well, ya gave me a damn horror show!"
 
@@ -156,15 +174,23 @@ label loop2_yamato_mandatory1:
 
     MC smug2 "I mean it's a Yamakui, it's bound to leave a curse or something."
 
+    show yam ngh
+    with dissolve
+
     yamato "Nah. That ain’t no wound I ever seen."
 
     yamato "That thing’s... That thing's {glitch=5}crawling under your fuckin’ skin.{/glitch}"
 
-    n2 "{cps=11}It fits good.{/cps}"
+    n2 "{cps=11}It fits goooood.{/cps}"
 
     n2 "{cps=11}Tight.{/cps}"
 
+    show yam angry
+    with dissolve
+
     yamato "...You’re lyin'."
+
+    show yam rage
 
     with vpunch
 
@@ -173,7 +199,7 @@ label loop2_yamato_mandatory1:
     MC annoyed2 "No--"
 
 
-    show yam normal:
+    show yam panic:
         zoom 0.2
         xalign 0.5
         yalign 0
@@ -205,11 +231,12 @@ label loop2_yamato_mandatory1:
 
     n "DO NOT. Don’t touch him. Don’t even think about it--"
 
+
     yamato "Tch..."
 
     n "His hand is trembling. You have never seen Yamato this horrified before."
 
-    show yam normal:
+    show yam ngh:
         zoom 0.70
         xalign 0.5
         yalign 0
@@ -272,7 +299,7 @@ label loop2_yamato_mandatory2:
 
     pause 1.0
 
-    show yam normal:
+    show yam rage:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -291,7 +318,7 @@ label loop2_yamato_mandatory2:
 
     MC annoyed2 "Don't mind me, I just want to spar."
 
-    show yam normal:
+    show yam rage:
         zoom 0.2
         xalign 0.5
         yalign 0
@@ -320,13 +347,16 @@ label loop2_yamato_mandatory2:
 
     MC smug2 "What, the great Yamato is afraid of a little curse?"
 
+    show yam ngh
+    with dissolve
+
     yamato "{k=1}Wh--{/k}"
 
     MC smug2 "Can't believe the guy who used to shout he'd kill the Yamakui now {i}run away with his tails between his legs.{/i}"
 
     MC yansm2 "What are you, {sc=1}coward?{/sc}"
 
-    show yam normal:
+    show yam rage:
         zoom 0.2
         xalign 0.5
         yalign 0
@@ -343,7 +373,7 @@ label loop2_yamato_mandatory2:
         repeat
     yamato "{sc=2}Damn you--{/sc}"
 
-    show yam normal:
+    show yam rage:
         zoom 0.2
         xalign 0.5
         yalign 0
@@ -399,7 +429,7 @@ label loop2_yamato_mandatory2:
 
     scene dojo day:
         zoom 0.5
-    show yam normal:
+    show yam panic:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -454,7 +484,7 @@ label loop2_yamato_mandatory2:
     scene dojo day:
         zoom 0.7
         yoffset -100
-    show yam normal:
+    show yam angry:
         zoom 0.4
         xalign 0.4
         xoffset 180
@@ -502,6 +532,9 @@ label yyyesss:
 
     MC yan2 "Yamato--"
 
+    show yam panic
+    with sshake
+
     yamato "{k=2}S-Stay back!{/k}"
 
     yamato "{sc=4}You ain’t foolin’ anyone anymore!{/sc}"
@@ -510,7 +543,7 @@ label yyyesss:
 
     yamato "{sc=3}Tch, damn it!{/sc}"
 
-    show yam normal:
+    show yam panicl:
         # Start from end of breathing
         zoom 0.4
         xalign 0.4
@@ -550,7 +583,7 @@ label loop2_yamato_mandatory3:
 
     scene shrine night with in_212:
         zoom 0.5
-    show yam normal:
+    show yam sad:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -675,6 +708,8 @@ label loop2_yamato_mandatory4:
 
     scene black
 
+    $ ysword = False
+
 
     n "Why... Why are you in the forest this late?"
 
@@ -687,7 +722,7 @@ label loop2_yamato_mandatory4:
         pause 0.1
         linear 2 zoom 0.7
     pause 0.5
-    show yam normal:
+    show yam eldritch:
         zoom 0.35
         xanchor 0.5
         yalign -0.04
@@ -743,7 +778,7 @@ label loop2_yamato_mandatory4:
 
     yamato "{i}Red moon's comin’... and I’m gonna peel the meat off your damn bones.{/i}"
 
-    show yam normal:
+    show yam eldritch:
         zoom 0.35
         xanchor 0.5
         yalign -0.04

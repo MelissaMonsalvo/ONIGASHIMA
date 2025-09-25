@@ -8,7 +8,7 @@ label loop2_yamato:
         pause 0.1
         linear 2 zoom 0.7
     pause 0.5
-    show yam normal:
+    show yam eldritch1:
         zoom 0.4
         xanchor 0.5
         xalign 1.15
@@ -34,7 +34,7 @@ label loop2_yamato:
     n "You're familliar with the voice. Of course it's Yamato."
 
 
-    show yam normal:
+    show yam eldritch:
         zoom 0.3
         xanchor 0.5
         xalign 0.6
@@ -59,7 +59,7 @@ label loop2_yamato:
 
 
 
-    n "He’s... bent forward too far. Spine curled like a beast crawling toward a scent."
+    n "He’s... bent forward in a wrong angle. Spine curled like a beast crawling toward a scent."
 
     n "He's clutching his stomach."
 
@@ -190,7 +190,7 @@ label loop2_yamato:
 
         pause 0.1
         linear 0.1 zoom 0.7
-    show yam normal:
+    show yam eldritch:
         zoom 0.4
         xanchor 0.5
         xalign 1.15
@@ -208,7 +208,7 @@ label loop2_yamato:
 
     n2 "{i}Don't have claws on your own, so you ask for another.{/i}"
 
-    show yam normal:
+    show yam eldritch:
         zoom 0.3
         xanchor 0.5
         xalign 0.6
@@ -233,7 +233,7 @@ label loop2_yamato:
 
     yamato "Heh."
 
-    show yam normal:
+    show yam eldritch2:
         zoom 0.3
         xanchor 0.5
         xalign 0.6
@@ -258,7 +258,7 @@ label loop2_yamato:
 
     yamato "Maybe now you’ll see what I become."
 
-    show yam normal:
+    show yam eldritch2:
         zoom 0.3
         xanchor 0.5
         xalign 0.6
@@ -313,7 +313,7 @@ label loop2_yamato:
             linear 0.13 xalign 0.9
             linear 0.10 xalign 0.7
             linear 0.10 xalign 0.8
-        show yam normal behind darken2:
+        show yam eldritch behind darken2:
             zoom 0.3
             xanchor 0.5
             xalign 0.6
@@ -361,7 +361,7 @@ label loop2_yamato:
 
         hikaru "Yamato, this isn’t you {i}at all--{/i}"
 
-        show yam normal:
+        show yam eldritch:
             zoom 0.3
             xanchor 0.5
             xalign 0.2
@@ -389,7 +389,7 @@ label loop2_yamato:
 
         yamato "And I fuckin’ {i}got it.{/i}"
 
-        show yam normal:
+        show yam eldritch:
             zoom 0.3
             xanchor 0.5
             xalign 0.2
@@ -418,9 +418,7 @@ label loop2_yamato:
 
         hikaru "{sc=7}What did you CALL!?{/sc}"
 
-        label yamato_pulled_left_bent:
-
-        show yam normal:
+        show yam eldritch:
             zoom 0.3
             xanchor 0.5
             xalign 0.2

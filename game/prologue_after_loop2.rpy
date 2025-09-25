@@ -9,11 +9,6 @@ label prologue_loop2:
 
     play music "sfx/monster breathing.mp3"
 
-    MC normal "Blablablaldkjshfkdjfsldfkdjkladhfkjdhdjkghkdfgdskhflsdkfhlstalking"
-
-    MC normal "Blablablaldkjshfkdjfsldfkdjkladhfkjdhdjkghkdfgdskhflsdkfhlstalking"
-
-
     n2 "HhhAahhh... {w}hhHaaaAAhh."
 
     n2 "It stILL fitS. {w=0.3}moRE or lEsS."

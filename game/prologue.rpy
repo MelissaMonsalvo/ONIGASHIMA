@@ -545,10 +545,13 @@ label after_get_name:
 
     show shi happyblush
     with dissolve
-    
+
     shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi seems like~!"
 
     MC smugcl "Oi, give me a little credit! I’m not that easy to mash, y’know."
+
+    show yam annoyed
+    with dissolve
 
     yamato "Yeah? Could’ve fooled me. Runnin’ off like a dumbass without tellin’ anyone. What, too good to ask for backup?"
 
@@ -586,7 +589,7 @@ label after_get_name:
     shiori "Ara~ What’s wrong, Yamato? Jealous of the oni?"
 
     hide yam normal
-    show yam normal at left:
+    show yam angry at left:
 
         zoom 0.23
         yalign -0.04
@@ -607,7 +610,7 @@ label after_get_name:
     MC happy "Haha! You kinda sound like you are."
 
 
-    show yam normal at left, shakey:
+    show yam annoyed at left, shakey:
 
         zoom 0.23
         yalign -0.04
@@ -621,8 +624,11 @@ label after_get_name:
     yamato "I'm just sayin’... Yer' too reckless to be able t' defeat the goddamn Yamakui. Not even a scratch in ya."
 
     show shi smug with dissolve
-    
+
     shiori "You’re just grumpy ‘cause [persistent.player_name]-sama did what you couldn’t~"
+
+    show yam angry
+    with dissolve
 
     yamato "Can it. I stayed behind to protect the damned village! Some of us don’t get to play th' hero."
 
@@ -661,6 +667,9 @@ label after_get_name:
 
     shiori "Hikaru?"
 
+    show yam surprised
+    with dissolve
+
     yamato "Oi. The hell’s that supposed to mean?"
 
     hikaru "...Forget it."
@@ -695,6 +704,8 @@ label after_get_name:
 
     $ _preferences.volumes["music"] = _prev_music_volume
 
+    show yam serious
+    with dissolve
 
 
     yamato "Tch, Hikaru's always weird. Let 'em be."
@@ -756,7 +767,7 @@ label beforefirstloop:
     pause 0.9
     hide shi
 
-    show yam normal:
+    show yam serious:
         zoom 0.7
         xanchor 0.5 yanchor 0.0
         xpos -0.2 ypos -0.1
@@ -780,7 +791,7 @@ label beforefirstloop:
 
     n "You never look back, even though you always feel his stares in your bones."
 
-    show yam normal:
+    show yam serious:
         zoom 0.7
         xanchor 0.5 yanchor 0.0
         xpos 0.6 ypos -0.1
@@ -903,7 +914,7 @@ label beforefirstloop:
 
     stop sound
 
-    jump loop1_yamato_mandatory1
+    #jump loop1_yamato_mandatory1
     #jump map
 
 

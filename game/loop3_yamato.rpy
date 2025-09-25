@@ -1,5 +1,7 @@
 label loop3_yamato:
 
+    $ ysword = True
+
     scene village day:
         zoom 0.5
     show darken
@@ -10,7 +12,7 @@ label loop3_yamato:
 
     n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG--"
 
-    show yam normal behind darken:
+    show yam rage behind darken:
         zoom 0.3
         xalign 0.65       # Start off to the right
         yalign 0
@@ -54,7 +56,7 @@ label loop3_yamato:
 
     n2 "Go oN tHeN. sHoW mE."
 
-    show yam normal behind darken:
+    show yam rage behind darken:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -95,7 +97,7 @@ label loop3_yamato:
     scene village day:
         zoom 0.5
 
-    show yam normal:
+    show yam rage:
         zoom 0.47
         align (0.5, 0.005)
 
@@ -121,7 +123,7 @@ label loop3_yamato:
 
     n2 "sO dOeS yOuR gUiLt."
 
-    show yam normal:
+    show yam rage:
         zoom 0.25
         xalign 0.4
         yalign 0
@@ -154,7 +156,7 @@ label loop3_yamato:
 
     yamato "{sc=7}COME ON!!{/sc}"
 
-    show yam normal behind darken:
+    show yam rage behind darken:
         zoom 0.25
         xalign 0.4
         yalign 0
@@ -176,7 +178,7 @@ label loop3_yamato:
     scene village day:
         zoom 0.5
 
-    show yam normal:
+    show yam ngh:
         zoom 0.47
         align (0.5, 0.005)
 
@@ -200,7 +202,7 @@ label loop3_yamato:
 
     n "Run...! You're bleeding already!"
 
-    show yam normal:
+    show yam ngh:
         zoom 0.35
         xalign 0.4
         yalign 0
@@ -229,7 +231,7 @@ label loop3_yamato:
 
     play sound "sfx/spit.mp3"
 
-    show yam normal:
+    show yam rage:
         zoom 0.35
         xalign 0.4
         yalign 0
@@ -260,7 +262,7 @@ label loop3_yamato:
 
 
 
-    show yam normal:
+    show yam shocked:
         zoom 0.35
         xalign 0.4
         yalign 0
@@ -437,7 +439,7 @@ label loop3_yamato:
     n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG--"
 
 
-    show yam normal behind darken2:
+    show yam panic behind darken2:
         zoom 0.3
         xalign 0.67
         yalign 0
@@ -461,9 +463,12 @@ label loop3_yamato:
 
     MC smug3 "I sEE yOUr Limp aND YeT yOU DEciDE tO FigHT Me StIll."
 
+    show yam angry
+    with dissolve
+
     yamato "{cps=25}A real man never backs down from a duel.{/cps}"
 
-    show yam normal behind darken2:
+    show yam rage behind darken2:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -483,11 +488,14 @@ label loop3_yamato:
 
     n "{i}Yamato...{/i}"
 
+    show yam ngh
+    with dissolve
+
     yamato "A-And... For the others, too."
 
     yamato "{cps=14}I--I can’t remember their damned faces...{/cps}"
 
-    show yam normal behind darken2:
+    show yam rage behind darken2:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -530,7 +538,7 @@ label loop3_yamato:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         linear 0.23 zoom 1.22
 
-    show yam normal behind darken2:
+    show yam rage behind darken2:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -596,7 +604,7 @@ label loop3_yamato:
         zoom 0.5
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-    show yam normal:
+    show yam ngh:
         zoom 0.47
         align (0.5, 0.005)
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -615,6 +623,9 @@ label loop3_yamato:
 
     yamato "{sc=6}Ghh--!!{/sc}"
 
+    show yam panic
+    with hpunch
+
     yamato "You--"
 
     yamato "You’re enjoying this--"
@@ -626,6 +637,9 @@ label loop3_yamato:
     n "{i}Yamato doesn't have any hope of winning--{/i}"
 
     play music "Goodbye.mp3"
+
+    show yam sad
+    with dissolve
 
     yamato "{sc=5}[persistent.player_name]...{/sc}"
 
@@ -651,7 +665,7 @@ label loop3_yamato:
         zoom 0.5
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-    show yam normal:
+    show yam rage:
         zoom 0.47
         align (0.5, 0.005)
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -692,7 +706,7 @@ label loop3_yamato:
 
     n2 "jUsT lIkE mY sKiN."
 
-    show yam normal behind darken2:
+    show yam panic behind darken2:
         zoom 0.25
         xalign 0.4
         yalign 0

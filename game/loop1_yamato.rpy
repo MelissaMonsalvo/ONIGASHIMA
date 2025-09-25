@@ -1,5 +1,7 @@
 label loop1_yamato:
 
+    $ ysword = False
+
     ## YAMATO'S ROUTE GOES HERE FOR LOOP 1 AFTER CLEARING ALL MANDATORY EVENTS
 
     ## STILL IN DAY 5, HAPPENS AT THE END OF DAY 5
@@ -7,7 +9,7 @@ label loop1_yamato:
     scene forest night:
         zoom 0.5
 
-    show yam normal:
+    show yam drunk:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -53,10 +55,10 @@ label loop1_yamato:
     yamato "This thing still goddamn burns. {w=0.2}You remember how I got it?"
 
     menu:
-        "Did I give it to you?":
+        "I gave it to you":
             MC nervous "Did I give it to you during sparring?"
             yamato "Ya? {w=0.15}Hah, nah."
-        "Did you get bitten by a wolf?":
+        "You get bitten by a wolf":
             MC surprised "Did you get bitten by a wolf during patrol?"
             yamato "{cps=13}What'cha mean? All the wolves around here got eaten by the damn Yamakui.{/cps}"
 
@@ -92,9 +94,15 @@ label loop1_yamato:
 
     MC nervous "...That was a long time ago, right?"
 
+    show yam drunk2
+    with dissolve
+
     yamato "Heh."
 
     n "He drops the sake bottle beside him."
+
+    show yam drunk
+    with dissolve
 
     yamato "{w=0.1}Yeah. Long enough for ya t' forget."
 
@@ -107,6 +115,9 @@ label loop1_yamato:
     yamato "So what, ya think we're weak? Think I can't take a hit?"
 
     MC hurt "...I didn't mean to--"
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "{w=0.15}Shut it."
 
@@ -140,7 +151,7 @@ label loop1_yamato:
         linear 0.1 zoom 0.75
         linear 0.01 zoom 0.9
 
-    show yam normal:
+    show yam eldritch:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -162,7 +173,7 @@ label loop1_yamato:
         linear 0.03 xoffset 200
     pause 0.5
 
-    show yam normal:
+    show yam eldritch:
         zoom 0.7
         xalign 0.55
         yalign 0.28
@@ -212,7 +223,7 @@ label loop1_yamato:
 
     play sound "sfx/suzu.wav"
 
-    show yam normal:
+    show yam panic:
         zoom 0.6
         xalign 0.55
         yalign 0.28
@@ -228,6 +239,9 @@ label loop1_yamato:
     yamato "....!"
 
     yamato "Haah.... {w}Haaaah...."
+
+    show yam ngh
+    with dissolve
 
     yamato "...Shit."
 
@@ -285,7 +299,7 @@ label loop1_yamato:
 
     n "So naturally you want to check up on him again today."
 
-    show yam normal:
+    show yam serious:
         zoom 0.3
         xalign 0.4
         yalign 0
@@ -311,6 +325,9 @@ label loop1_yamato:
 
     MC nervous "Are you okay?"
 
+    show yam annoyed
+    with dissolve
+
     yamato "Haaa? What'd ya mean?"
 
     MC nervous "{sc=1}It's just... You were drunk last night and I--{/sc}"
@@ -318,6 +335,9 @@ label loop1_yamato:
     yamato "Tch, I don't get ya. Red Moon's tomorrow, remember? I ain't lettin' ya slack off."
 
     MC normal "{i}...You're... in a good mood today.{/i}"
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "{k=1}H-Hah? Dumbass, don't say it like that.{/k}"
 
@@ -341,7 +361,7 @@ label loop1_yamato:
     scene dojo day:
         zoom 0.5
 
-    show yam normal:
+    show yam serious:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -362,6 +382,9 @@ label loop1_yamato:
 
     MC smugcl "You're going easy on me."
 
+    show yam annoyedbl
+    with dissolve
+
     yamato "{sc=1}Wha--hell I am!{/sc} If ya think this is easy, yer gettin' soft.."
 
     n "He looks everywhere else but your eyes, focusing on your stance, a soft blush creeping to his ears."
@@ -380,7 +403,7 @@ label loop1_yamato:
     scene dojo day:
         zoom 0.5
 
-    show yam normal:
+    show yam annoyedbl:
         zoom 0.47
         align (0.5, 0.005)
 
@@ -411,6 +434,9 @@ label loop1_yamato:
 
     n "You're done sparring now. Yamato taps his side as you sit down."
 
+    show yam serious
+    with dissolve
+
     yamato "Lemme see yer blade, [persistent.player_name]."
 
     MC surprised "Why...?"
@@ -419,11 +445,17 @@ label loop1_yamato:
 
     n "You hand him your blade without protest, he turns it around in his hand."
 
+    show yam annoyed
+    with dissolve
+
     yamato "Tch. What the hell did ya hit, {i}a boulder?{/i}"
 
     yamato "Look at this edge. Disrespectful,{w=0.1} that's what this is."
 
     MC annoyed "*scoff* {w=0.1}'Scuse me?"
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "Lemme sharpen it for ya."
 
@@ -434,6 +466,9 @@ label loop1_yamato:
     yamato "Shut it. Just don't want the damn thing falling apart on ya mid-swing and me havin' to pick up yer pieces."
 
     MC happycl "...Thanks."
+
+    show yam serious
+    with dissolve
 
     n "You say nothing else and listen to the whetstone whispers against steel."
 
@@ -533,7 +568,7 @@ label loop1_yamato:
         zoom 0.5
 
 
-    show yam normal with dissolve:
+    show yam surprised with dissolve:
         zoom 0.26
         align (0.5, 0.005)
         yoffset 0
@@ -544,13 +579,22 @@ label loop1_yamato:
 
     MC yan "Nothing."
 
+    show yam annoyed
+    with dissolve
+
     yamato "Tch. Sleepyhead."
+
+    show yam happycl
+    with dissolve
 
     yamato "...Anyway. Done."
 
     yamato "Here ya go."
 
     MC happycl "...Thanks."
+
+    show yam blush
+    with dissolve
 
     yamato "{bt=h1-s0.5-p1.0}Ughhh.{/bt}"
 
@@ -560,7 +604,7 @@ label loop1_yamato:
 
     MC smug "Mmmm, not a chance."
 
-    show yam normal:
+    show yam blush:
         zoom 0.26
         align (0.5, 0.005)
         yoffset 0
@@ -569,7 +613,7 @@ label loop1_yamato:
 
     n "He hands it back, knuckles brushing your grip, somehow... {w=0.1}they feel longer than they need to."
 
-    show yam normal:
+    show yam panicbl:
         zoom 0.35
         align (0.5, 0.005)
         yoffset -20
@@ -581,13 +625,19 @@ label loop1_yamato:
 
     yamato "See ya around--{w}Uh, {w=0.2}umm..."
 
+    show yam annoyedbl
+    with dissolve
+
     yamato "Yer goin' in patrol tonight, right?"
 
     MC normal "Yeah, obviously, the red moon is coming."
 
+    show yam blush
+    with dissolve
+
     yamato "Great, see ya tonight then."
 
-    show yam normal:
+    show yam blush:
         zoom 0.26
         align (0.5, 0.005)
         yoffset 0
@@ -595,7 +645,7 @@ label loop1_yamato:
         ease 0.3 xzoom -1
     pause 0.3
 
-    hide yam normal
+    hide yam blush
     with easeoutleft
 
     play sound "sfx/doorslam.wav"
@@ -633,7 +683,7 @@ label loop1_yamato:
     scene house night:
         zoom 0.5
 
-    show yam normal:
+    show yam serious:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -651,6 +701,9 @@ label loop1_yamato:
     yamato "Yo. Ya aready for patrol or ya still nappin'?"
 
     MC neutral "You're early."
+
+    show yam smug
+    with dissolve
 
     yamato "No, yer lazy. Ya eatin' yet?"
 
@@ -670,9 +723,15 @@ label loop1_yamato:
 
     MC surprised "What's that?"
 
+    show yam blush
+    with dissolve
+
     yamato "Bento. Made too much."
 
     MC happy "For me?"
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "Don't start smilin', dumbass. I ain't tryna marry you."
 
@@ -680,7 +739,13 @@ label loop1_yamato:
 
     n "Now that I think of it, you haven't eaten for DAYS, have you?"
 
+    show yam smug
+    with dissolve
+
     yamato "Heh. Of course. Can't trust ya to prep yer own damn lungs."
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "Get some before ya go and ya die hungry or somethin'"
 
@@ -691,6 +756,9 @@ label loop1_yamato:
     MC normal "...Thanks."
 
     yamato "Shut up and eat."
+
+    show yam blush
+    with dissolve
 
     n "Yamato just stands there as he waits for you to begin eating."
 
@@ -737,7 +805,7 @@ label loop1_yamato:
     scene house night:
         zoom 0.5
 
-    show yam normal:
+    show yam serious:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -763,11 +831,17 @@ label loop1_yamato:
 
     MC hurt "{k=2}...Ngh.{/k}"
 
+    show yam panicbl
+    with dissolve
+
     yamato "Oi. 'S that bad?"
 
     MC hurt "{sc=3}No, no--It's really good! I'm actually not...{w} really hungry.{/sc}"
 
     n "You nod as your gut {i}sloshes{/i}. The taste lingers, you want to drink something to wash it off since swallowing doesn't clear it and chewing doesn't help."
+
+    show yam blush
+    with dissolve
 
     yamato "Ya don't have to force yerself t' eat it, ya know..."
 
@@ -802,7 +876,7 @@ label loop1_yamato:
     scene house night:
         zoom 0.5
 
-    show yam normal:
+    show yam shocked:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -814,6 +888,9 @@ label loop1_yamato:
 
 
     MC yan "Yeah, I'm done."
+
+    show yam normal
+    with dissolve
 
     yamato "Let's go, then."
 
@@ -859,7 +936,7 @@ label loop1_yamato:
         blur 2
         linear 15 xpos -1920  # Move left by one screen width over 8 seconds (adjust speed)
         repeat
-    show yam normal:
+    show yam serious:
         zoom 0.5
         xalign 0.4
         yalign -0.15
@@ -897,6 +974,9 @@ label loop1_yamato:
 
     n "He rubs the back of his neck."
 
+    show yam blush
+    with dissolve
+
     yamato "Say we live past tomorrow."
 
     yamato "I was thinkin' maybe we--"
@@ -905,13 +985,22 @@ label loop1_yamato:
 
     MC surprised "...Yeah?"
 
+    show yam panicbl
+    with dissolve
+
     yamato "Tch. {w}Forget it."
 
     MC happycl "--wanna go cherry blossom viewing?"
 
+    show yam annoyedbl
+    with dissolve
+
     yamato "Was gonna say drink 'till dawn, but that works too."
 
     MC smugcl "I would conisder it since you're blushing so hard I almost want to pity you."
+
+    show yam panicbl
+    with dissolve
 
     yamato "{sc=2}{size=+2}The hell I am!{/size}{/sc}"
 
@@ -919,12 +1008,15 @@ label loop1_yamato:
 
     yamato "{sc=1}K-Keep talkin' and I-'ll... {w=0.2}I'll...{/sc}"
 
+    show yam blush
+    with dissolve
+
     yamato "{w=0.1}Argh, whatever."
 
     MC happy "So that's a yes."
 
 
-    show yam normal:
+    show yam blush:
         zoom 0.5
         xalign 0.4
         yalign -0.15
@@ -996,7 +1088,7 @@ label loop1_yamato:
     scene house day:
         zoom 0.5
 
-    show yam normal:
+    show yam serious:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -1012,6 +1104,9 @@ label loop1_yamato:
 
     MC normal "You're up early."
 
+    show yam ngh
+    with dissolve
+
     yamato "Couldn't get a damn sleep."
 
     n "He leans on the frame, arms crossed, eyes tired. Clearly he had been thinking too much and didn't like any of it."
@@ -1020,9 +1115,15 @@ label loop1_yamato:
 
     MC sad "Yeah..."
 
+    show yam sad
+    with dissolve
+
     yamato "{sc=2}Thought maybe...{/sc}"
 
     pause(0.4)
+
+    show yam annoyedbl
+    with dissolve
 
     yamato "{k=1}...Tch. Whatever. Ain't like I believe in fate 'n shit.{/k}"
 
@@ -1040,17 +1141,29 @@ label loop1_yamato:
 
     yamato "..."
 
+    show yam ngh
+    with dissolve
+
     yamato "If nothin' happens and the red moon passes..."
 
     yamato "...Then maybe I'll believe ya for {i}real{/i} this time."
 
     MC surprised "...Yamato."
 
+    show yam surprised
+    with dissolve
+
     yamato "What?"
 
     MC smugcl "{i}That almost sounded like a compliment, you know.{/i}"
 
+    show yam annoyedbl
+    with hpunch
+
     yamato "{k=2}{sc=1}Wh-Shut the hell up!{/sc}{/k}"
+
+    show yam blush
+    with dissolve
 
     yamato "{sc=1}Ergh...{/sc}"
 
@@ -1062,20 +1175,20 @@ label loop1_yamato:
 
     MC happy "Same with me."
 
-    yamato "Anyway. Let's not die."
+    yamato "Anyway. {w=0.1}Let's not die."
 
 
     scene black
 
     with dissolve
 
-    MC "...."
+    MC happy "...."
 
-    MC "...." ## expression changes
+    MC yansm "...." ## expression changes
 
     scene moon7
     with in_212
-    show yam normal:
+    show yam serious:
         zoom 0.5
         xalign 0.8
         yalign 0.2
@@ -1094,6 +1207,9 @@ label loop1_yamato:
 
     MC normal "Can't wait."
 
+    show yam sad
+    with dissolve
+
     yamato "{i}...Sigh...{/i}"
 
     yamato "{k=1}Look... I was a dick. Ya know it, I know it.{/k}"
@@ -1104,17 +1220,29 @@ label loop1_yamato:
 
     MC normal "Yeah, but I did forgot our promise. Understandable."
 
+    show yam ngh
+    with dissolve
+
     yamato "{i}I know. Not an excuse, though.{/i}"
 
     MC normal "...Yamato."
 
+    show yam sad
+    with dissolve
+
     yamato "{w=0.2}So... all I can think is--if ya die out there and I never said any of this, I'd never forgive myself."
+
+    show yam blush
+    with dissolve
 
     yamato "'Cause I care about ya, dumbass."
 
-    yamato "{i}That ain't new. I just-I was too busy actin' tough t' notice.{/i}"
+    yamato "{i}That ain't new. I just-{w=0.1}I was too busy actin' tough t' notice.{/i}"
 
     MC normal "...You really mean that?"
+
+    show yam drunk2
+    with dissolve
 
     yamato "{i}Yeah.{/i}"
 
@@ -1130,10 +1258,12 @@ label loop1_yamato:
 
     yamato "{w=0.2}If we live... {w=0.2}maybe we figure this out."
 
+    show yam blush
+    with dissolve
+
     yamato "Y'know, what the hell this is between us."
 
     MC normal "That would be nice."
-
 
     n "None of you talk again in a while."
 
@@ -1155,6 +1285,9 @@ label loop1_yamato:
 
     n "Yamato has already started drinking, but you hesitate on yours."
 
+    show yam happycl
+    with dissolve
+
     yamato "...Heh."
 
     yamato "So that's it, guess you really did it."
@@ -1164,6 +1297,9 @@ label loop1_yamato:
     yamato "Guess an apology is overdue, for everything I spat at ya."
 
     yamato "And for actin' like I wanted ya gone."
+
+    show yam blush
+    with dissolve
 
     yamato "I..."
 
@@ -1192,7 +1328,7 @@ label loop1_yamato:
 
     n "He waits, searching for an answer in your face. And yet you stay silent, never once shaking your head, so yamato takes it as a yes."
 
-    show yam normal:
+    show yam kiss:
         zoom 0.5
         xalign 0.8
         yalign 0.2
@@ -1216,6 +1352,8 @@ label loop1_yamato:
     with dissolve
 
     stop music fadeout 1.0
+
+    ## CG here
 
     stop music
     play sound "sfx/hahh.mp3"
