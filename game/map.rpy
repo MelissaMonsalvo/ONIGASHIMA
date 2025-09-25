@@ -22,19 +22,33 @@ default hikaru_ghost_events_completed = 0
 #! Quitar
 default preferences.skip_unseen=True
 
-define locations = ["shrine", "forest", "dojo", "town_square","house"]
+define locations = ["shrine", "forest", "dojo", "village","house"]
 
+# define location_positions = {
+#     "shrine": (1500, 900),
+#     "forest": (400, 425),
+#     "dojo": (900, 1000),
+#     "village": (1200, 425),
+#     "house": (400, 1000)
+# }
 define location_positions = {
-    "shrine": (1500, 900),
-    "forest": (400, 425),
-    "dojo": (900, 1000),
-    "town_square": (1200, 425),
-    "house": (400, 1000)
+    "shrine": (850, 125),
+    "forest": (350, 390),
+    "dojo": (1620, 500),
+    "village": (975, 950),
+    "house": (325, 850)
 }
-<<<<<<< HEAD
+# shrine
+# xpos 850 ypos 25
+# Forest
+# xpos 350 ypos 290
+# Dojo
+# xpos 1620 ypos 400
+# Village
+# xpos 975 ypos 850
+# House
+# xpos 325 ypos 750
 
-=======
->>>>>>> parent of e09e4aa (map)
 # Eventos obligatorios por loop y personaje
 define mandatory_events = {
     1: {
@@ -42,13 +56,13 @@ define mandatory_events = {
             {"location": "dojo", "time": "day", "event": "loop1_yamato_mandatory1"},
             {"location": "dojo", "time": "night", "event": "loop1_yamato_mandatory2"},
             {"location": "house", "time": "night", "event": "loop1_yamato_mandatory3"},
-            {"location": "town_square", "time": "day", "event": "loop1_yamato_mandatory4"},
+            {"location": "village", "time": "day", "event": "loop1_yamato_mandatory4"},
             {"location": "forest", "time": "night", "event": "loop1_yamato_mandatory5"}
         ],
         "hikaru": [
             {"location": "forest", "time": "day", "event": "loop1_hikaru_mandatory1"},
             {"location": "dojo", "time": "day", "event": "loop1_hikaru_mandatory2"},
-            {"location": "town_square", "time": "night", "event": "loop1_hikaru_mandatory3"},
+            {"location": "village", "time": "night", "event": "loop1_hikaru_mandatory3"},
             {"location": "house", "time": "day", "event": "loop1_hikaru_mandatory4"},
             {"location": "shrine", "time": "day", "event": "loop1_hikaru_mandatory5"}
         ],
@@ -74,7 +88,7 @@ define mandatory_events = {
             {"location": "house", "time": "day", "event": "loop2_hikaru_mandatory4"}
         ],
         "shiori": [
-            {"location": "town_square", "time": "day", "event": "loop2_shiori_mandatory1"},
+            {"location": "village", "time": "day", "event": "loop2_shiori_mandatory1"},
             {"location": "shrine", "time": "day", "event": "loop2_shiori_mandatory2"},
             {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory3"},
             {"location": "shrine", "time": "night", "event": "loop2_shiori_mandatory4"}
@@ -91,10 +105,29 @@ define ghost_events = {
 }
 
 
-define character_icons = {
-    "shiori": "images/map/shiori.png",
-    "yamato": "images/map/yamato.png",
-    "hikaru": "images/map/hikaru.png"
+# define character_icons = {
+#     "shiori": "images/map/shiori.png",
+#     "yamato": "images/map/yamato.png",
+#     "hikaru": "images/map/hikaru.png"
+# }
+
+define character_icons_idle = {
+    "shiori": "images/map/map_shiori_idle.png",
+    "yamato": "images/map/map_yamato_idle.png",
+    "hikaru": "images/map/map_hikaru_idle.png"
+}
+
+define character_icons_red = {
+    "shiori": "images/map/map_shiori_red_hover.png",
+    "yamato": "images/map/map_yamato_red_hover.png",
+    "hikaru": "images/map/map_hikaru_red_hover.png"
+}
+
+
+define character_icons_yellow= {
+    "shiori": "images/map/map_shiori_yellow_hover.png",
+    "yamato": "images/map/map_yamato_yellow_hover.png",
+    "hikaru": "images/map/map_hikaru_yellow_hover.png"
 }
 
 
@@ -115,15 +148,21 @@ screen map_screen():
 
 
     #Shrine
-    imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    textbutton "Shrine" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 850 ypos 25
     #Forest
-    imagebutton auto "images/map/forest_%s.png" focus_mask True action Function(visit_location_func, "forest") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #imagebutton auto "images/map/forest_%s.png" focus_mask True action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    textbutton "Forest" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
+    
     #Dojo
-    imagebutton auto "images/map/dojo_%s.png" focus_mask True action Function(visit_location_func, "dojo") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
-    #town_square
-    imagebutton auto "images/map/village_%s.png" focus_mask True action Function(visit_location_func, "town_square") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    textbutton "Dojo" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1620 ypos 400
+    #imagebutton auto "images/map/dojo_%s.png" focus_mask True action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    #village
+    textbutton "Village" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
+    #imagebutton auto "images/map/village_%s.png" focus_mask True action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
     #house
-    imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/audio/buttons/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    textbutton "House" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
+    #imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
 
     # Mostrar iconos de personajes según su ubicación y estado
     for i, character in enumerate(["shiori", "yamato", "hikaru"]):
@@ -133,7 +172,7 @@ screen map_screen():
         $ char_location = get_character_location(character)
             
         if char_location:
-            $ print(f"Sí hay char_location: {char_location}")
+            #$ print(f"Sí hay char_location: {char_location}")
 
             # Obtener posición en el mapa
             $ pos_x, pos_y = location_positions.get(char_location, (0, 0))
@@ -147,6 +186,8 @@ screen map_screen():
            
             $ icon_x += offset_x
 
+
+            $ character_icons = character_icons_yellow if persistent.loop1 else character_icons_red
 
             #btener Icono
             $ icon = character_icons.get(character)
@@ -214,7 +255,16 @@ python early:
             renpy.call_in_new_context(event_to_call)
         else:
             # Mostrar mensaje de ubicación vacía o algo por defecto
-            renpy.call_in_new_context("location_empty", location)
+            #renpy.call_in_new_context("location_empty", location)
+            time_block = "night" if store.current_time_block == "day" else "day"
+
+            label_name = f"empty_{location}_{time_block}"
+            # Verificamos si existe
+            if renpy.has_label(label_name):
+                #renpy.jump(label_name)
+                renpy.call_in_new_context(label_name)
+            else:
+                renpy.call_in_new_context("location_empty", location)
 
 #Checa en la lista de eventos de vivos y muertos
     def check_mandatory_events(location):
@@ -309,7 +359,7 @@ python early:
                 next_event = mandatory_events[current_loop][character][ghost_completed]
                 # Solo mostrar si el evento es para el tiempo actual
                 if next_event["time"] == store.current_time_block:
-                    print(f"siguiente evento muerto: {next_event} para {store.current_time_block}\n")
+                    #print(f"siguiente evento muerto: {next_event} para {store.current_time_block}\n")
                     #print (f"Return ghost from {character} in {next_event['location']}")
                     return next_event["location"]
 
@@ -319,7 +369,7 @@ python early:
             next_event = mandatory_events[current_loop][character][events_completed]
             # Solo mostrar si el evento es para el tiempo actual
             if next_event["time"] == store.current_time_block:
-                print (f"Return alive from {character} in {next_event['location']}")
+                #print (f"Return alive from {character} in {next_event['location']}")
                 return next_event["location"]
 
         
