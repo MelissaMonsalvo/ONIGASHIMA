@@ -67,7 +67,7 @@ label start:
     $ ysword = False
     $ hmask = False
     $ hsword = False
-    #jump map
+    jump map
     jump prologue_loop1
     jump prologue_loop2
     $ _prev_music_volume = _preferences.volumes["music"]
