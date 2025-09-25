@@ -31,7 +31,10 @@ define location_positions = {
     "town_square": (1200, 425),
     "house": (400, 1000)
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of e09e4aa (map)
 # Eventos obligatorios por loop y personaje
 define mandatory_events = {
     1: {
@@ -88,29 +91,10 @@ define ghost_events = {
 }
 
 
-# define character_icons = {
-#     "shiori": "images/map/shiori.png",
-#     "yamato": "images/map/yamato.png",
-#     "hikaru": "images/map/hikaru.png"
-# }
-
-define character_icons_idle = {
-    "shiori": "images/map/map_shiori_idle.png",
-    "yamato": "images/map/map_yamato_idle.png",
-    "hikaru": "images/map/map_hikaru_idle.png"
-}
-
-define character_icons_red = {
-    "shiori": "images/map/map_shiori_red_hover.png",
-    "yamato": "images/map/map_yamato_red_hover.png",
-    "hikaru": "images/map/map_hikaru_red_hover.png"
-}
-
-
-define character_icons_yellow= {
-    "shiori": "images/map/map_shiori_yellow_hover.png",
-    "yamato": "images/map/map_yamato_yellow_hover.png",
-    "hikaru": "images/map/map_hikaru_yellow_hover.png"
+define character_icons = {
+    "shiori": "images/map/shiori.png",
+    "yamato": "images/map/yamato.png",
+    "hikaru": "images/map/hikaru.png"
 }
 
 
@@ -163,8 +147,6 @@ screen map_screen():
            
             $ icon_x += offset_x
 
-
-            $ character_icons = character_icons_yellow if persistent.loop1 else character_icons_red
 
             #btener Icono
             $ icon = character_icons.get(character)
