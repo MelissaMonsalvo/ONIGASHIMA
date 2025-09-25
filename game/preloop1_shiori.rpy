@@ -59,7 +59,7 @@ label loop1_shiori_mandatory1:
 
     show shi normal
     with dissolve
-    
+
     shiori "We did. Back then."
 
     shiori "The four of us."
@@ -91,7 +91,7 @@ label loop1_shiori_mandatory1:
 
     show shi normal
     with dissolve
-    
+
     shiori "Sure. Maybe that’s it."
 
     n "She twirls the broom in her hand as she looks up to the ceiling, clearly trying to remember something."
@@ -110,7 +110,7 @@ label loop1_shiori_mandatory1:
 
     show shi sad:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 0
         xzoom 1.0
@@ -163,7 +163,7 @@ label loop1_shiori_mandatory1:
 
 
 
-    #return
+    return
 
 label loop1_shiori_mandatory2:
 
@@ -187,9 +187,9 @@ label loop1_shiori_mandatory2:
 
     n "They say it’s the last place the Yamakui dares enter."
 
-    show shi worried:
+    show shi normal:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with dissolve
@@ -265,9 +265,9 @@ label loop1_shiori_mandatory2:
 
     hide shi annoyed
     hide darken
-    show shi normal:
+    show shi angry:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
 
@@ -294,7 +294,7 @@ label loop1_shiori_mandatory2:
 
     show shi worried
     with dissolve
-    
+
     shiori "..."
 
     MC nervous "Shiori?"
@@ -323,7 +323,7 @@ label loop1_shiori_mandatory2:
     n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive it."
 
     $ loop1_shiori_mandatory2 = True
-    #return
+    return
 
 label loop1_shiori_mandatory3:
 
@@ -344,7 +344,7 @@ label loop1_shiori_mandatory3:
         zoom 0.5
     show shi happy:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with hpunch
@@ -405,7 +405,7 @@ label loop1_shiori_mandatory3:
 
     show shi happy:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         ease 0.7 zoom 0.43 yoffset 60
@@ -525,12 +525,12 @@ label gulgulp:
     play sound "sfx/suzu.mp3"
 
     show shi yansm:
-        zoom 0.5
+        zoom 0.43
         xanchor 0.5
         yalign 0
-        yoffset 80
+        yoffset 60
 
-        ease 0.2 zoom 0.7 yoffset +30
+        ease 0.2 zoom 0.7 yoffset +30 xanchor 0.4
 
     shiori "{cps=14}{alpha=0.7}{sc=4}Wouldn't you like to know, [persistent.player_name]-sama.{/sc}{/alpha}{/cps}"
 
@@ -562,7 +562,7 @@ label gulgulp:
     n "{glitch=4}But you’re not even full.{/glitch}"
 
 
-    #return
+    return
 
 label loop1_shiori_mandatory4:
 
@@ -584,7 +584,7 @@ label loop1_shiori_mandatory4:
     show shi happyblush with easeinbottom:
         zoom 0.5
         xanchor 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 700
 
@@ -600,7 +600,7 @@ label loop1_shiori_mandatory4:
     show shi yansm:
         zoom 0.5
         xanchor 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
 
@@ -655,12 +655,12 @@ label loop1_shiori_mandatory4:
     show shi yan:
         zoom 0.5
         xanchor 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xoffset 0
 
-        ease 0.5 zoom 0.34 xalign 0.4
+        ease 0.5 zoom 0.44 xalign 0.3
 
     play sound "sfx/suzu.mp3"
 
@@ -781,7 +781,7 @@ label loop1_shiori_mandatory4:
 
     $ loop1_shiori_mandatory4 = True
 
-    #return
+    return
 
 
 label loop1_shiori_mandatory5:
@@ -791,7 +791,7 @@ label loop1_shiori_mandatory5:
     show shi happy:
         zoom 0.5
         xanchor 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xoffset 0
@@ -816,13 +816,13 @@ label loop1_shiori_mandatory5:
 
     shiori "Do you remember the day before they sent you off to the mountain and we said our goodbyes here?"
 
-    MC normal "Heh... yeah! Right here under this old tree. I remember...."
+    MC happy "Heh... yeah! Right here under this old tree. I remember...."
 
     menu:
         "We all cried.":
             MC happy "We all cried because you all think I wouldn't make it."
             shiori "Mhm~ We did."
-        "We all said a prayer.":
+        "We said a prayer.":
             MC normal "We all said a prayer for my success. I think you were the one who suggested it."
             shiori "Ehehe~ Yeah. That sounds right."
 
@@ -831,10 +831,10 @@ label loop1_shiori_mandatory5:
     shiori "And Yamato said something dumb again back then, right?"
 
     menu:
-        "He wanted to come too":
-            MC smugcl "He wanted to come too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I was gone."
+        "He wanted to go too":
+            MC smugcl "He wanted to go too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I was gone."
             shiori "Yeah~"
-        "He was crying.":
+        "He was crying":
             MC happy "The stupid oaf actually cried because he was so sure I was gonna die, right?"
             MC smug "He made a pretty ridiculous face, too. Didn't know Yamato could cry like that."
             shiori "Hehe~ I remember something like that..."
@@ -846,11 +846,11 @@ label loop1_shiori_mandatory5:
     shiori "And what else did you say?"
 
     menu:
-        "I said I'd protect everyone":
+        "A vow":
             MC normal "I remember saying that I’d protect everyone."
             MC smug "And I did, right? When I slayed the Yamakui!"
             shiori "Did you~?"
-        "I promised you I'll be back.":
+        "A promise":
             MC normal "I promised you that no matter what happens, I'll come back to you, Shiori."
             shiori "..."
 
@@ -903,13 +903,13 @@ label loop1_shiori_mandatory5:
     show shi yansm:
         zoom 0.5
         xanchor 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xoffset 0
         alpha 1.0
 
-        linear 0.5 zoom 0.3 xalign 0.4
+        linear 0.5 zoom 0.3 xalign 0.3
     with hpunch
 
     n "What are you doing? Stop it. Stop."
@@ -923,13 +923,13 @@ label loop1_shiori_mandatory5:
     show shi yansm:
         zoom 0.3
         xanchor 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         alpha 1.0
 
 
-        linear 0.28 zoom 0.18 alpha 0.0 xalign 0.4 yoffset 208
+        linear 0.28 zoom 0.18 alpha 0.0 xalign 0.3 yoffset 208
 
 
 
@@ -1036,7 +1036,7 @@ label loop1_shiori_mandatory5:
 
     pause 0.3
 
-    MC "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
+    MC yan "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
 
 
 

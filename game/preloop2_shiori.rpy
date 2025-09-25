@@ -10,7 +10,7 @@ label loop2_shiori_mandatory1:
 
     show shi happyblush:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with dissolve
@@ -36,7 +36,7 @@ label loop2_shiori_mandatory1:
 
     show shi happy:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
 
@@ -76,9 +76,9 @@ label loop2_shiori_mandatory1:
     shiori "{k=1}Did you see its eyes when it died?{/k}"
 
     menu:
-        "I stabbed it in the chest":
+        "I stabbed it":
             MC evil2 "{i}I snapped it's spine in half.{/i}"
-        "I decapitated it.":
+        "I decapitated it":
             MC evil2 "{i}I snapped it's spine in half.{/i}"
 
     n "Wait, what? That's not even what you thought of--"
@@ -95,9 +95,9 @@ label loop2_shiori_mandatory1:
     MC yansm2 "{i}Definitely.{/i}"
 
     menu:
-        "‘I burned it.’":
+        "I burned it":
             MC evil2 "I tore the arms off..."
-        "‘I watched it bleed out.’":
+        "I watched it bleed out":
             MC evil2 "I tore the arms off..."
 
     MC yan2 "...and bent the legs backwards so it'll be on the wrong angle."
@@ -116,9 +116,9 @@ label loop2_shiori_mandatory1:
     shiori "And did it... {w=0.1}say anything before it died?"
 
     menu:
-        "It cursed me before dying.":
+        "It cursed me":
             MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I {glitch}stabbed it in this neck to kill it.{/glitch}"
-        "It cried like a child.":
+        "It cried":
             MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I stabbed it in this neck to kill it."
 
     show shi happy
@@ -131,7 +131,7 @@ label loop2_shiori_mandatory1:
     pause 0.5
 
     stop music
-    play sound "sfx/suzu.wav"
+    play sound "sfx/suzu.mp3"
     show darken
     with dissolve
 
@@ -146,7 +146,7 @@ label loop2_shiori_mandatory1:
 
     show shi yansm:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
 
@@ -170,11 +170,11 @@ label loop2_shiori_mandatory1:
 
     show shi yansmbl:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
 
-        linear 0.25 zoom 0.52 xalign 0.415 yoffset 85
+        linear 0.25 zoom 0.52 xalign 0.315 yoffset 85
         pause 0.05
         linear 0.16 zoom 0.54 xalign 0.38 yoffset 78
         pause 0.03
@@ -265,7 +265,6 @@ label loop2_shiori_mandatory1:
     with dissolve
     pause 0.5
 
-    play sound "sfx/walk.mp3"
 
 
 
@@ -280,7 +279,7 @@ label loop2_shiori_mandatory1:
 
     $ loop2_shiori_mandatory1 = True
 
-    #return
+    return
 
 label loop2_shiori_mandatory2:
 
@@ -293,7 +292,7 @@ label loop2_shiori_mandatory2:
 
     show shi normal:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with dissolve
@@ -313,16 +312,16 @@ label loop2_shiori_mandatory2:
 
     show shi happyblush:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         yzoom 1.0
 
-        linear 0.19 zoom 0.54 yzoom 1.03 yoffset 70   # Inching forward, slightly stretching
+        linear 0.19 zoom 0.54 yoffset 70   # Inching forward, slightly stretching
         pause 0.06
-        linear 0.16 zoom 0.57 yzoom 1.05 yoffset 74 xoffset -50 # Even closer, a bit more y-stretch
+        linear 0.16 zoom 0.57 yoffset 74 xoffset -50 # Even closer, a bit more y-stretch
         pause 0.04
-        linear 0.13 zoom 0.6 yzoom 1.07 yoffset 80 xoffset -100   # Final uneasy "lean", back to yoffset start
+        linear 0.13 zoom 0.6 yoffset 80 xoffset -100   # Final uneasy "lean", back to yoffset start
 
 
     n "She’s inching closer again."
@@ -359,7 +358,7 @@ label loop2_shiori_mandatory2:
     MC normal2 "They aren't intact, some are half-eaten."
 
     show shi yan
-    with fissolve
+    with dissolve
 
     shiori "{sc=1}Ara~{/sc}"
 
@@ -412,7 +411,7 @@ label loop2_shiori_mandatory2:
 
     show shi yansmbl:
         zoom 0.6
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xoffset -100
@@ -474,7 +473,7 @@ label loop2_shiori_mandatory2:
 
     show shi normal:
         zoom 0.6
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xoffset -100
@@ -518,7 +517,7 @@ label loop2_shiori_mandatory2:
     n "..."
 
     $ loop2_shiori_mandatory2 = True
-    #return
+    return
 
 label loop2_shiori_mandatory3:
 
@@ -526,7 +525,7 @@ label loop2_shiori_mandatory3:
         zoom 0.5
     show shi worried:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with hpunch
@@ -569,8 +568,7 @@ label loop2_shiori_mandatory3:
 
     n2 "..."
 
-    show shi sad
-    behind darken
+    show shi sad behind darken
     with dissolve
 
 
@@ -619,7 +617,7 @@ label loop2_shiori_mandatory3:
     n2 "{cps=20}No one cares enough to remember.{/cps}"
 
     $ loop2_shiori_mandatory3 = True
-    #return
+    return
 
 label loop2_shiori_mandatory4:
 
@@ -654,7 +652,6 @@ label loop2_shiori_mandatory4:
         yzoom 1.0
         xzoom 1.0
 
-        # Jumping/bouncing in place (loop as needed)
         easein 0.13 yoffset -32 yzoom 1.04 xzoom 0.96
         easeout 0.13 yoffset 0 yzoom 1.0 xzoom 1.0
         pause 0.07
@@ -697,7 +694,6 @@ label loop2_shiori_mandatory4:
         yzoom 1.0
         xzoom 1.0
 
-        # Quick, jittery shake side to side
         linear 0.04 xoffset -14
         linear 0.04 xoffset 16
         linear 0.04 xoffset -13
@@ -757,7 +753,6 @@ label loop2_shiori_mandatory4:
         yzoom 1.0
         xzoom 1.0
 
-        # Quick, jittery shake side to side
         linear 0.04 xoffset -14
         linear 0.04 xoffset 16
         linear 0.04 xoffset -13
@@ -782,7 +777,7 @@ label loop2_shiori_mandatory4:
 
     MC yan2 "You think it had feelings?"
 
-    show surprised:
+    show shi surprised:
         zoom 0.35
         xanchor 0.5
         xalign 0.4
@@ -791,7 +786,6 @@ label loop2_shiori_mandatory4:
         yzoom 1.0
         xzoom 1.0
 
-        # Quick, jittery shake side to side
         linear 0.04 xoffset -14
         linear 0.04 xoffset 16
         linear 0.04 xoffset -13
@@ -842,7 +836,7 @@ label loop2_shiori_mandatory4:
 
     with flashred
 
-    MC shocked2 "Mmmph!"
+    MC happy "Mmmph!"
 
     with vpunch
 
@@ -850,7 +844,7 @@ label loop2_shiori_mandatory4:
 
     n "Your hands {i}twitch{/i}.{w=0.2} Your spine {glitch=8}locks.{/glitch}"
 
-    MC panic2 "That’s...{w=0.2} ngh--"
+    MC happy "That’s...{w=0.2} ngh--"
 
     show shi worried
     with dissolve
@@ -930,5 +924,4 @@ label loop2_shiori_mandatory4:
 
     ## all characters vanish from map, but the ghost still appear
 
-    jump loop2_shiori
     return

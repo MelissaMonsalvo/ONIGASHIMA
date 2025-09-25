@@ -80,6 +80,9 @@ image blood = "BG/blood.png"
 
 image gore = "images/gore.png"
 
+image cg_shioriloop1 = "images/cg_shioriloop1.png"
+image cg_trueending = "images/cg_trueending.png"
+
 image terumc = "images/terumc.webp"
 image terumc_left = "images/terumc_left.png"
 image terumc_right = "images/terumc_right.png"

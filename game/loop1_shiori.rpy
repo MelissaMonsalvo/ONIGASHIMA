@@ -6,7 +6,7 @@ label loop1_shiori:
 
 
     scene shrine day:
-        zoom 0.6
+        zoom 0.5
 
     n "There was no sleep to be had, so you just wander around aimlessly."
 
@@ -18,7 +18,7 @@ label loop1_shiori:
 
     show shi happy:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with dissolve
@@ -33,7 +33,7 @@ label loop1_shiori:
 
     show shi fear:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         easein 0.15 yoffset 110 xzoom 0.95 yzoom 1.05
@@ -58,12 +58,12 @@ label loop1_shiori:
 
     shiori "We prepare because something always comes, [persistent.player_name]."
 
-    show shi happy blush
+    show shi happyblush
     with dissolve
-    
+
     shiori "That's what Hikaru and Yamato keeps telling me anyway..."
 
-   
+
 
     n "None of you speak again for a while."
 
@@ -93,14 +93,14 @@ label loop1_shiori:
     show shi yansm:
 
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xzoom 1.0
         yzoom 1.0
 
         # Sudden zoom-in like a jumpscare
-        easein 0.08 zoom 0.8 yoffset -20 xoffset -120
+        easein 0.08 zoom 0.8 yoffset -20 xoffset -200
 
     shiori "Nee, [persistent.player_name]-sama~"
 
@@ -120,19 +120,20 @@ label loop1_shiori:
 
     show shi yansmbl:
         zoom 0.8
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 40
         xzoom 1.0
         yzoom 1.0
 
 
-        easein 1.0 zoom 1 yoffset -200 xzoom 1.1 yzoom 1.1 xoffset -120
+
+        easein 1.0 zoom 1 yoffset -200 xzoom 1.1 yzoom 1.1 xoffset -400
 
         pause 0.2
 
 
-        easeout 0.2 zoom 0.8 yoffset -20 xoffset -120 xzoom 1.0 yzoom 1.0
+        easeout 0.2 zoom 0.8 yoffset -20 xoffset -200 xzoom 1.0 yzoom 1.0
 
     shiori "Are you {sc=3}suuuuure~?{/sc}"
 
@@ -164,7 +165,7 @@ label loop1_shiori:
 
     show shi yansm:
         zoom 0.8
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 40
         xzoom 1.0
@@ -246,7 +247,7 @@ label loop1_shiori:
 
     MC nervous "R-Really?"
 
-    show yansmbl
+    show shi yansmbl
     with dissolve
 
     shiori "Of course~"
@@ -319,16 +320,16 @@ label loop1_shiori:
     MC happycl "I mean... {w}It's wine, right? Wine's always good in my book."
 
     show shi yan
-    with fissolve
+    with dissolve
 
     shiori "{w=0.1}...Nevermind."
 
     shiori "It doesn’t matter."
 
-    MC confused "...?"
+    MC surprised "...?"
 
     show shi yansm
-    with fissolve
+    with dissolve
 
 
     shiori "{cps=14}{sc=6}Tomorrow is the {color=#ff002e}Red Moon{/color}, [persistent.player_name]-sama.{/sc}{/cps}"
@@ -337,7 +338,7 @@ label loop1_shiori:
 
     show shi yansm:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
         xoffset 0
@@ -443,7 +444,7 @@ label loop1_shiori:
         zoom 0.5
     show shi yansm:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
     with in_212
@@ -458,7 +459,7 @@ label loop1_shiori:
 
     show shi yansmbl:
         zoom 0.5
-        xalign 0.4
+        xalign 0.3
         yalign 0
         yoffset 80
 
@@ -475,7 +476,7 @@ label loop1_shiori:
 
     shiori "{glitch=1.1}I need my big, strong Oni slayer to protect me~{/glitch}"
 
-    n "Odd"
+    n "Odd..."
 
     n "Her hand no longer shakes as she looks at you, as if something had changed overnight."
 
@@ -553,7 +554,7 @@ label loop1_shiori:
 
     show shi yan
     with dissolve
-    
+
     shiori "{i}You risked your life for the village, and this is the thanks you get?{/i}"
 
     shiori "Hikaru and Yamato won't talk to you, and everyone doubts you really killed the oni..."
@@ -602,7 +603,7 @@ label loop1_shiori:
         xalign 0.4
         yalign 0
         yoffset 70
-        xoffset 0
+        xoffset 25
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         parallel:
@@ -700,24 +701,22 @@ label loop1_shiori:
 
     n "*sigh*"
 
-    ## CG IS HERE
+    show cg_shioriloop1:
+        zoom 1
+
+        easeout 0.7 zoom 0.5
 
     camera:
         linear 0.5 ypos 0.0
     pause 0.2
 
-    scene black
-    with fade
-
     play muzak "sfx/shiori_eaten.mp3"
 
     n "You press your mouth harder. Her skin splits slowly, then her blood fills your mouth."
 
-
-
     shiori "{sc=4}Hh-ah... [persistent.player_name]-sa...{/sc}"
 
-    play sound "sfx/drip.mp3"
+    with fade
 
     n "She reaches up to your back, trembling, nails raking across your back. But you {i}feel none of it.{/i}."
 
@@ -726,6 +725,8 @@ label loop1_shiori:
     MC "Isn’t that what {glitch=12}love{/glitch} is?"
 
     shiori "...Hah."
+
+    with fade
 
     n "{cps=12}W-What in the kami-sama is happening?{/cps}"
 
@@ -847,8 +848,6 @@ label loop1_shiori:
 
     scene black
     with in_212
-
-    MC yansm "..."
 
     n "Shiori has stopped breathing."
 

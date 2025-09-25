@@ -256,7 +256,7 @@ label loop2_shiori:
 
     n "{sc=7}NO--{/sc}{nw}"
 
-    show shiyansm behind darken2
+    show shi yansm behind darken2
     with dissolve
 
     shiori "{i}Hmm~{/i}"
@@ -362,7 +362,7 @@ label after_many_clicks:
         zoom 0.5
     with in_eye
 
-    play sound "sfx/suzu.wav"
+    play sound "sfx/suzu.mp3"
 
     show shi yansmbl:
         zoom 0.27

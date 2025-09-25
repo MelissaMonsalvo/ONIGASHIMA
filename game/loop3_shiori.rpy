@@ -28,7 +28,7 @@ label loop3_shiori:
         xanchor 0.5
         xalign 0.5
         yalign 0
-        yoffset 60
+        yoffset 200
         xoffset -40
     with dissolve
     stop sound
@@ -50,13 +50,13 @@ label loop3_shiori:
         xanchor 0.5
         xalign 0.5
         yalign 0
-        yoffset 60
+        yoffset 200
         xoffset -40
 
-        linear 0.13 yoffset 18 zoom 0.315
-        linear 0.09 yoffset 72 zoom 0.28
-        linear 0.10 yoffset 38 zoom 0.307
-        linear 0.08 yoffset 60 zoom 0.3
+        linear 0.13 yoffset 180 zoom 0.315
+        linear 0.09 yoffset 120 zoom 0.28
+        linear 0.10 yoffset 100 zoom 0.307
+        linear 0.08 yoffset 200 zoom 0.3
 
         pause 0.08
 
@@ -87,7 +87,7 @@ label loop3_shiori:
         xanchor 0.5
         xalign 0.5
         yalign 0
-        yoffset 60
+        yoffset 200
         xoffset -40
 
         linear 0.14 xoffset 40 yoffset 100 zoom 0.2
@@ -233,7 +233,7 @@ label loop3_shiori:
 
     shiori "{sc=5}Ehehe~{/sc} I’m ready, Yamakui-sama."
 
-    MC "dO yOu eVen knOw wHAt YoU aRE ReadY For?"
+    MC yan3 "dO yOu eVen knOw wHAt YoU aRE ReadY For?"
 
     shiori "Of course I do~ You’ve been so patient."
 
@@ -276,14 +276,14 @@ label loop3_shiori:
     shiori "{glitch=5}All those people ran away and called you a monster.{/glitch}"
 
 
-    show shiyansmbl
+    show shi yansmbl
     with dissolve
 
     shiori "But not {sc=5}me~{/sc}"
 
     shiori "Because love doesn’t scream when it sees the truth~"
 
-    show shi shiyansmbl:
+    show shi yansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -301,7 +301,7 @@ label loop3_shiori:
 
     shiori "{cps=15}You’ve been hungry, haven’t you~?{/cps}"
 
-    show shi shiyansmbl:
+    show shi yansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -319,7 +319,7 @@ label loop3_shiori:
 
     shiori "{i}I’ll fill the part that hurts.{/i}"
 
-    show shi shiyansmbl:
+    show shi yansmbl:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         xanchor 0.5
         yalign -0.1
@@ -405,28 +405,28 @@ label loop3_shiori:
 
     n2 "..."
 
-    MC "HhhHhaHhhAHaHhhHAH~"
+    MC happy3 "HhhHhaHhhAHaHhhHAH~"
 
     play music "noinomai.mp3"
 
     with sshake
 
-    MC "YoU thInK i SpArEd yOu bEcAuse i cArEd?"
+    MC happy3 "YoU thInK i SpArEd yOu bEcAuse i cArEd?"
 
     shiori "..."
 
-    MC "ChiLd mEaT tAstEs DisGuStINg."
+    MC happy3 "ChiLd mEaT tAstEs DisGuStINg."
 
-    MC "UnRiPE."
+    MC happy3 "UnRiPE."
 
-    MC "BlAaaaaAAAaaanD."
+    MC happy3 "BlAaaaaAAAaaanD."
 
-    MC "i aTe tHe prIeSt."
+    MC happy3 "i aTe tHe prIeSt."
 
     play sound "sfx/gulp.wav"
     with flashred
 
-    MC "BeCAuSe iT TasTED BEttER."
+    MC happy3 "BeCAuSe iT TasTED BEttER."
 
 
 

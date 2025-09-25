@@ -39,7 +39,7 @@ image shi normal = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_neutral.webp",
+
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -55,6 +55,7 @@ image shi normal = LiveComposite(
             Animation("Shiori/mouth/m_neutral.webp", .2, "Shiori/mouth/m_neutral_open.webp", .2),
             "Shiori/mouth/m_neutral.webp"
         ),
+    (0,0), "Shiori/brow/b_neutral.webp",
 
     )
 
@@ -90,7 +91,7 @@ image shi happy = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_happy.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -106,6 +107,7 @@ image shi happy = LiveComposite(
             Animation("Shiori/mouth/m_smile.webp", .2, "Shiori/mouth/m_smile_open.webp", .2),
             "Shiori/mouth/m_smile.webp"
         ),
+    (0,0), "Shiori/brow/b_happy.webp",
 
     )
 
@@ -141,19 +143,16 @@ image shi happyblush = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_happy.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), "Shiori/eyes/e_closed.webp",
-        ),
     (0,0), WhileSpeaking(
             "shio",
             Animation("Shiori/mouth/m_smile.webp", .2, "Shiori/mouth/m_smile_open.webp", .2),
             "Shiori/mouth/m_smile.webp"
         ),
-    (0,0), "Shiori/extra/ex_blush.png",
-
-    )
+    (0,0), "Shiori/extra/ex_blush.webp",)
 
 image shi sad = LiveComposite(
     (2000,5637),
@@ -186,6 +185,7 @@ image shi sad = LiveComposite(
             Animation("Shiori/mouth/m_serious.webp", .2, "Shiori/mouth/m_serious_open.webp", .2),
             "Shiori/mouth/m_serious.webp"
         ),
+    (0,0), "Shiori/brow/b_happy.webp",
 
     )
 
@@ -205,7 +205,6 @@ image shi blush = LiveComposite(
     (0,0), "Shiori/ear_left2.png",
     (0,0), "Shiori/ear_right2.png",
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_sad.webp",
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -220,7 +219,8 @@ image shi blush = LiveComposite(
             Animation("Shiori/mouth/m_smile.webp", .2, "Shiori/mouth/m_smile_open.webp", .2),
             "Shiori/mouth/m_smile.webp"
         ),
-    (0,0), "Shiori/extra/ex_blush.png",
+    (0,0), "Shiori/brow/b_sad.webp",
+    (0,0), "Shiori/extra/ex_blush.webp",
 
 
     )
@@ -241,7 +241,7 @@ image shi worried = LiveComposite(
     (0,0), "Shiori/ear_left2.png",
     (0,0), "Shiori/ear_right2.png",
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_fear.webp",
+
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), "Shiori/eyes/e_closed.webp",
@@ -250,7 +250,8 @@ image shi worried = LiveComposite(
             Animation("Shiori/mouth/m_serious.webp", .2, "Shiori/mouth/m_serious_open.webp", .2),
             "Shiori/mouth/m_serious.webp"
         ),
-    (0,0), "Shiori/extra/ex_sweat.png",
+    (0,0), "Shiori/brow/b_fear.webp",
+    (0,0), "Shiori/extra/ex_sweat.webp",
 
     )
 
@@ -270,7 +271,7 @@ image shi fear = LiveComposite(
     (0,0), "Shiori/ear_left2.png",
     (0,0), "Shiori/ear_right2.png",
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_fear.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), Animation(
@@ -286,6 +287,8 @@ image shi fear = LiveComposite(
             Animation("Shiori/mouth/m_surprise.webp", .2, "Shiori/mouth/m_surprise_open.webp", .2),
             "Shiori/mouth/m_surprise_open.webp"
         ),
+    (0,0), "Shiori/brow/b_fear.webp",
+    (0,0), "Shiori/extra/ex_sweat.webp",
 
     )
 
@@ -321,7 +324,7 @@ image shi surprised = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_happy.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -334,9 +337,10 @@ image shi surprised = LiveComposite(
         ),
     (0,0), WhileSpeaking(
             "shio",
-            Animation("Shiori/mouth/m_surprise.webp", .2, "Shiori/mouth/m_surprise_open.webp", .2),
-            "Shiori/mouth/m_surprise_open.webp"
+            Animation("Shiori/mouth/m_shout.webp", .2, "Shiori/mouth/m_shout_open.webp", .2),
+            "Shiori/mouth/m_shout_open.webp"
         ),
+    (0,0), "Shiori/brow/b_happy.webp",
 
     )
 image shi shocked = LiveComposite(
@@ -371,7 +375,7 @@ image shi shocked = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_fear.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), Animation(
@@ -384,9 +388,10 @@ image shi shocked = LiveComposite(
         ),
     (0,0), WhileSpeaking(
             "shio",
-            Animation("Shiori/mouth/m_shout.webp", .2, "Shiori/mouth/m_shout_open.webp", .2),
-            "Shiori/mouth/m_shout_open.webp"
+            Animation("Shiori/mouth/m_angry.webp", .2, "Shiori/mouth/m_angry_open.webp", .2),
+            "Shiori/mouth/m_angry_open.webp"
         ),
+    (0,0), "Shiori/brow/b_fear.webp",
 
     )
 image shi annoyed = LiveComposite(
@@ -421,7 +426,7 @@ image shi annoyed = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_anger.webp",
+
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -437,6 +442,7 @@ image shi annoyed = LiveComposite(
             Animation("Shiori/mouth/m_serious.webp", .2, "Shiori/mouth/m_serious_open.webp", .2),
             "Shiori/mouth/m_serious_open.webp"
         ),
+    (0,0), "Shiori/brow/b_anger.webp",
 
     )
 image shi angry = LiveComposite(
@@ -471,7 +477,7 @@ image shi angry = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_anger.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -487,6 +493,7 @@ image shi angry = LiveComposite(
             Animation("Shiori/mouth/m_angry.webp", .2, "Shiori/mouth/m_angry_open.webp", .2),
             "Shiori/mouth/m_angry_open.webp"
         ),
+    (0,0), "Shiori/brow/b_anger.webp",
 
     )
 image shi yansm = LiveComposite(
@@ -521,7 +528,7 @@ image shi yansm = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_fear.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), Animation(
@@ -537,6 +544,7 @@ image shi yansm = LiveComposite(
             Animation("Shiori/mouth/m_yandere.webp", .2, "Shiori/mouth/m_yandere_open.webp", .2),
             "Shiori/mouth/m_yandere.webp"
         ),
+    (0,0), "Shiori/brow/b_fear.webp",
 
     )
 image shi yan = LiveComposite(
@@ -571,7 +579,7 @@ image shi yan = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_fear.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), Animation(
@@ -587,6 +595,7 @@ image shi yan = LiveComposite(
             Animation("Shiori/mouth/m_neutral.webp", .2, "Shiori/mouth/m_neutral_open.webp", .2),
             "Shiori/mouth/m_neutral.webp"
         ),
+    (0,0), "Shiori/brow/b_fear.webp",
 
     )
 image shi yanbl = LiveComposite(
@@ -621,7 +630,7 @@ image shi yanbl = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_sad.webp",
+
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), Animation(
@@ -637,7 +646,8 @@ image shi yanbl = LiveComposite(
             Animation("Shiori/mouth/m_surprise.webp", .2, "Shiori/mouth/m_surprise_open.webp", .2),
             "Shiori/mouth/m_surprise_open.webp"
         ),
-    (0,0), "Shiori/extra/ex_blush",
+    (0,0), "Shiori/brow/b_sad.webp",
+    (0,0), "Shiori/extra/ex_blush.webp",
 
     )
 image shi yansmbl = LiveComposite(
@@ -672,7 +682,7 @@ image shi yansmbl = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_happy.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), Animation(
@@ -688,7 +698,8 @@ image shi yansmbl = LiveComposite(
             Animation("Shiori/mouth/m_yandere.webp", .2, "Shiori/mouth/m_yandere_open.webp", .2),
             "Shiori/mouth/m_yandere_open.webp"
         ),
-    (0,0), "Shiori/extra/ex_blush",
+    (0,0), "Shiori/brow/b_happy.webp",
+    (0,0), "Shiori/extra/ex_blush.webp",
 
     )
 image shi smug = LiveComposite(
@@ -723,15 +734,15 @@ image shi smug = LiveComposite(
             "Shiori/ear_right2.png", .25,
         ),
     (0,0), "Shiori/bangs.png",
-    (0,0), "Shiori/brow/b_angry.webp",
+
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
     (0,0), "Shiori/eyes/e_closed.webp",
-        ),
     (0,0), WhileSpeaking(
             "shio",
             Animation("Shiori/mouth/m_yandere.webp", .2, "Shiori/mouth/m_yandere_open.webp", .2),
             "Shiori/mouth/m_yandere.webp"
-        )
+        ),
+    (0,0), "Shiori/brow/b_Anger.webp",
 
     )
