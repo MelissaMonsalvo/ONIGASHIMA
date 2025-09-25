@@ -68,8 +68,9 @@ label start:
     $ hmask = False
     $ hsword = False
     jump map
-    jump prologue_loop1
-    jump prologue_loop2
+    #jump get_player_name
+    #jump prologue_loop1
+    #jump prologue_loop2
     $ _prev_music_volume = _preferences.volumes["music"]
     if persistent.trueendingunlocked:
         $ persistent.route1 = True
@@ -92,8 +93,11 @@ label start:
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
+        $ current_loop = 2
         jump prologue_loop2
     if persistent.loop1:
+        $ current_loop = 1
         jump prologue_loop1
     else:
+        $ current_loop = 1
         jump prologue
