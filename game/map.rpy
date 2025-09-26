@@ -146,27 +146,19 @@ screen map_screen():
 
     #BG
     #$ check_rutes()
-    add "images/map/bg.png"
+    if current_time_block == "Day":
+        add "images/map/map_day.png"
+    else:
+        add "images/map/map_night.png"
     if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
         timer 0.1 action Function(check_rutes) repeat True
     #textbutton "" xsize 1920 ysize 1080 action Function (check_rutes)
 
-    #Shrine
-    #imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
-    textbutton "Shrine" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 850 ypos 25
-    #Forest
-    #imagebutton auto "images/map/forest_%s.png" focus_mask True action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
-    textbutton "Forest" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
-
-    #Dojo
-    textbutton "Dojo" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1620 ypos 400
-    #imagebutton auto "images/map/dojo_%s.png" focus_mask True action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
-    #village
-    textbutton "Village" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
-    #imagebutton auto "images/map/village_%s.png" focus_mask True action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
-    #house
-    textbutton "House" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
-    #imagebutton auto "images/map/house_%s.png" focus_mask True action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
+    imagebutton auto "images/map/shrine_%s.png" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 850 ypos 25
+    imagebutton auto "images/map/forest_%s.png" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
+    imagebutton auto "images/map/dojo_%s.png" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1620 ypos 400
+    imagebutton auto "images/map/village_%s.png" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
+    imagebutton auto "images/map/house_%s.png" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
 
     # Mostrar iconos de personajes según su ubicación y estado
     for i, character in enumerate(["shiori", "yamato", "hikaru"]):
