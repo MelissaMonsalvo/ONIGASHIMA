@@ -62,7 +62,7 @@ init python:
             _preferences.volumes["music"] = original_music_volume
             original_music_volume = None  # Reset for next use
 
-default persistent.player_name = None
+default persistent.player_name = ""
 
 define MC = Character("[persistent.player_name]", color="#d40000", image="main", callback=speaker("main"), window_left_padding=180, namebox_left_padding= 60)  # Player-named character
 define n = Character(None, what_color="#fffafa") ## mc sama narrator

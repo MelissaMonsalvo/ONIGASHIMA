@@ -330,15 +330,25 @@ label get_player_name:
         n "..."
     else:
         # Name input only if first time or after good ending
-        $ player_name = renpy.input("Say your name out loud.", length=8)
-        $ player_name = player_name.strip()
-        if player_name == "":
-            $ player_name = "Kagami"
+        # $ player_name = renpy.input("Say your name out loud.", length=8)
+        # $ player_name = player_name.strip()
+        # if player_name == "":
+        #     $ player_name = "Kagami"
 
-        $ persistent.player_name = player_name
-        $ persistent.seen_true_end = False  # Reset good_end status on new game
+        # $ persistent.player_name = player_name
+        # $ persistent.seen_true_end = False  # Reset good_end status on new game
 
-        n "[persistent.player_name]."
+        # n "[persistent.player_name]."
+
+        call screen name_input()
+
+        $ persistent.player_name = persistent.player_name.strip()
+
+        if persistent.player_name == "":
+            $ persistent.player_name = "Kagami"
+
+        $ persistent.seen_true_end = False
+        n "[persistent.player_name]"
 
 
     jump after_get_name
