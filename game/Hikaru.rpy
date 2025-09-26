@@ -46,11 +46,11 @@ image hik normal = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -102,11 +102,11 @@ image hik happy = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -150,11 +150,11 @@ image hik happycl = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -205,11 +205,11 @@ image hik smilesad = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -260,11 +260,11 @@ image hik smileblush = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -309,11 +309,11 @@ image hik sad = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -365,11 +365,11 @@ image hik blush = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -414,11 +414,11 @@ image hik cry = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -471,11 +471,11 @@ image hik madcry = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -527,11 +527,11 @@ image hik worried = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -582,11 +582,11 @@ image hik surprised = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -594,8 +594,7 @@ image hik surprised = LiveComposite(
             "Hikaru/bangs2.png", .25,
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
-        ),
-    (0,0), "Hikaru/extra/ex_tears.webp"
+        )
 
     )
 image hik shocked = LiveComposite(
@@ -638,11 +637,11 @@ image hik shocked = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -650,8 +649,7 @@ image hik shocked = LiveComposite(
             "Hikaru/bangs2.png", .25,
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
-        ),
-    (0,0), "Hikaru/extra/ex_tears.webp"
+        )
 
     )
 image hik serious = LiveComposite(
@@ -689,16 +687,16 @@ image hik serious = LiveComposite(
     (0,0),  ConditionSwitch(
     "hmask == False", WhileSpeaking(
             "hika",
-            Animation("Hikaru/mouth/m_serious.webp", .2, "Hikaru/mouth/m_serious_open.webp", .2),
-            "Hikaru/mouth/m_serious.webp"
+            Animation("Hikaru/mouth/m_neutral.webp", .2, "Hikaru/mouth/m_neutral_open.webp", .2),
+            "Hikaru/mouth/m_neutral.webp"
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -749,11 +747,11 @@ image hik angry = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -797,11 +795,11 @@ image hik angry2 = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -852,11 +850,11 @@ image hik rage = LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,
@@ -907,11 +905,11 @@ image hik panic= LiveComposite(
         ),
     "True", "Hikaru/items/mask.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_bottom.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_bottom.webp"),
     (0,0),  ConditionSwitch(
-    "hsword == False", "Hikaru/items/weapon_top.webp",
-    "True", "Hikaru/items/empty.png"),
+    "hsword == False", "Hikaru/items/empty.png",
+    "True", "Hikaru/items/weapon_top.webp"),
     (0,0), Animation(
             "Hikaru/bangs1.png", 4.5,
             "Hikaru/bangs2.png", .25,

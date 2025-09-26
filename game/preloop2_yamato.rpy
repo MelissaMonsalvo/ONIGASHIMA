@@ -20,6 +20,8 @@ label loop2_yamato_mandatory1:
 
     n "You don't remember it curving like this..."
 
+    stop sound
+
     show yam annoyed:
         zoom 0.3
         xalign 0.4
@@ -114,7 +116,8 @@ label loop2_yamato_mandatory1:
 
     n "{cps=14}Oh wait, it’s actually melting--{/cps}"
 
-    n2 "Mmmmnnnnh~"
+
+    hide gore
 
     play music "spooky.mp3"
 
@@ -142,8 +145,8 @@ label loop2_yamato_mandatory1:
 
     $ ysword = True
 
-    play sound "sfx/shing.mp3"
-    hide gore
+    play sound "sfx/shing.wav"
+
 
     with hpunch
 
@@ -216,7 +219,7 @@ label loop2_yamato_mandatory1:
         linear 0.05 xoffset -480
         linear 0.04 xoffset -400
 
-    play sound "sfx/footstomp.wav"
+    play sound "Sfx/whip.mp3"
 
 
     yamato "{sc=4}Don’t you lie t’me!{/sc}"
@@ -290,7 +293,7 @@ label loop2_yamato_mandatory1:
 
     MC yansm2 "..."
 
-    #return
+    return
 
 label loop2_yamato_mandatory2:
 
@@ -532,6 +535,8 @@ label yyyesss:
 
     MC yan2 "Yamato--"
 
+
+
     show yam panic
     with sshake
 
@@ -543,7 +548,7 @@ label yyyesss:
 
     yamato "{sc=3}Tch, damn it!{/sc}"
 
-    show yam panicl:
+    show yam panic:
         # Start from end of breathing
         zoom 0.4
         xalign 0.4
@@ -572,10 +577,12 @@ label yyyesss:
 
     n2 "I want to see what they taste like... one by one."
 
+    stop sound
+
 
     $ loop2_yamato_mandatory2 = True
 
-    #return
+    return
 
 label loop2_yamato_mandatory3:
 
@@ -702,7 +709,7 @@ label loop2_yamato_mandatory3:
 
     $ loop2_yamato_mandatory3 = True
 
-    #return
+    return
 
 label loop2_yamato_mandatory4:
 

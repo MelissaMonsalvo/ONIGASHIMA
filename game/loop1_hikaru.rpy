@@ -73,7 +73,7 @@ label loop1_hikaru:
             linear 0.07 xoffset 0 yoffset 150
             repeat
 
-    hikaru "{sc=4}So when you forgot about me... {w=0.1]I thought you were possessed.{/sc}"
+    hikaru "{sc=4}So when you forgot about me... {w=0.1}I thought you were possessed.{/sc}"
 
     hikaru "When you came back from the mountains, you looked like you and sounded like you..."
 
@@ -179,6 +179,7 @@ label loop1_hikaru:
     ## Your choices here will matter on whether hikaru believe you or not at the end
 
     $ hikaru_belief = 0
+    pause 0.5
 
     menu:
         "I got bitten":
@@ -199,7 +200,7 @@ label loop1_hikaru:
             MC "I don't know, maybe it's just bleeding internally?"
             hikaru "..."
 
-
+    pause 0.5
     menu:
         "Smile":
             n "You muster the best smile you can conjure."
@@ -223,25 +224,10 @@ label loop1_hikaru:
 
     hikaru "{i}*Sigh*{/i}"
 
-    show hik sadsmile
+    show hik smilesad
     with dissolve
 
     hikaru "...Okay."
-
-    show hik sadsmile:
-        zoom 0.4
-        xalign 0.5
-        yoffset 120
-        xzoom -1.0
-        yzoom 1.0
-
-
-        linear 0.3 yoffset 145 zoom 0.35
-
-        parallel:
-            linear 0.3 alpha 0.8
-            linear 0.2 alpha 0.5
-            linear 0.4 alpha 0.0
 
     n "You don’t know if they believe you, but Hikaru never steps away."
 
@@ -359,6 +345,7 @@ label loop1_hikaru:
     hikaru "Maybe."
 
     ## so like there is a counter for Hikaru's disbelief and it just shows how different Hikaru reacts at the ending
+    pause 0.5
 
     menu:
         "Mock Hikaru":
@@ -415,6 +402,7 @@ label loop1_hikaru:
         linear 0.2 yoffset 140 zoom 0.36 alpha 0.5
         linear 0.4 yoffset 150 zoom 0.37 alpha 0.0
     hide hik
+    with dissolve
 
     n "They stare at the effigy once more before finally walking away."
 
@@ -496,9 +484,6 @@ label loop1_hikaru:
     n "You see the villages folk gather on the town square."
 
     show flesh2 at scary_flicker
-
-    play music "sfx/Flies.mp3"
-
     n "They circle around a dog... or what remains of it."
 
     n "Its belly is torn wide, skin hangs in pieces, ribs pulled apart."
@@ -534,7 +519,7 @@ label loop1_hikaru:
         xzoom -1
     with dissolve
     show man at midright:
-        zoom 0.45
+        zoom 0.4
         ypos 0.1
     with dissolve
     show darken
@@ -588,7 +573,7 @@ label loop1_hikaru:
 
     play sound "sfx/run.mp3"
 
-    hide hik 
+    hide hik
     with dissolve
 
     hide darken
@@ -663,6 +648,8 @@ label loop1_hikaru:
     yamato "I saw ya, ya were standin’ there starin’ at the body all bloodied up. Same fuckin’ face, but not ya."
 
     n "Wait, I don't remember you--"
+
+    pause 0.5
 
     menu:
         "Attack Yamato":
@@ -1034,7 +1021,7 @@ label loop1_hikaru:
 
     show hik smileblush
     with dissolve
-    
+
     hikaru "{i}I was afraid it was just me holding onto it. But this... {w}this feels better.{/i}"
 
     hikaru "We’re getting somewhere, aren’t we?"
@@ -1069,6 +1056,8 @@ label loop1_hikaru:
     hikaru "{k=2}You’re serious about this?{/k}"
 
     MC smug "Of course, never been more sure!"
+
+    pause 0.5
 
 
 
@@ -1236,7 +1225,7 @@ label loop1_redmoon_eve:
 
     show yam annoyed at left, shakey:
 
-        zoom 0.23
+        zoom 0.22
         yalign -0.04
         xzoom 1.0
         yzoom 1.0
@@ -1610,6 +1599,7 @@ label hikaru_distrust:
 
     play sound "sfx/suzu.mp3"
 
+
     show hik rage:
         zoom 0.5
         xalign 0.5
@@ -1764,6 +1754,7 @@ label hikaru_distrust:
 
 
     stop music
+    stop muzak
 
 
     play sound "sfx/slurrp.mp3"

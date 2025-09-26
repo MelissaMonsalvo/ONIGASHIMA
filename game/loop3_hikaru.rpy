@@ -234,6 +234,8 @@ label loop3_hikaru:
 
     n2 "Hkk--!"
 
+    $ hsword = True
+
     scene black
 
     play sound "swing.wav"
@@ -548,6 +550,13 @@ label loop3_hikaru:
     pause 0.5
 
     play sound "sfx/tearflesh.wav"
+
+    scene cg_loop3hikaru:
+        zoom 0.8
+        xalign 0.5
+        yalign 0.5
+
+        linear 0.4 zoom 0.5
 
 
 

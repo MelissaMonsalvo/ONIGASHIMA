@@ -313,7 +313,7 @@ label loop2_yamato:
             linear 0.13 xalign 0.9
             linear 0.10 xalign 0.7
             linear 0.10 xalign 0.8
-        show yam eldritch behind darken2:
+        show yam eldritch1 behind darken2:
             zoom 0.3
             xanchor 0.5
             xalign 0.6
@@ -361,7 +361,7 @@ label loop2_yamato:
 
         hikaru "Yamato, this isn’t you {i}at all--{/i}"
 
-        show yam eldritch:
+        show yam eldritch1:
             zoom 0.3
             xanchor 0.5
             xalign 0.2
@@ -389,7 +389,7 @@ label loop2_yamato:
 
         yamato "And I fuckin’ {i}got it.{/i}"
 
-        show yam eldritch:
+        show yam eldritch1:
             zoom 0.3
             xanchor 0.5
             xalign 0.2
@@ -418,7 +418,7 @@ label loop2_yamato:
 
         hikaru "{sc=7}What did you CALL!?{/sc}"
 
-        show yam eldritch:
+        show yam eldritch1:
             zoom 0.3
             xanchor 0.5
             xalign 0.2
@@ -1046,7 +1046,7 @@ label loop2_yamato:
     show expression Text("地", style="jojo_bigtext") at wriggle_zoomout(1.30, start_x+spacing*13, y_center, 2.1) as rev14
     show expression Text("大", style="jojo_bigtext") at wriggle_zoomout(1.40, start_x+spacing*14, y_center, 2.1) as rev15
 
-    MC "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.ekawa ,ekawa ,htrae eht fo retsaM{/sc}{/outlinecolor}{/color}{/size}{/cps}"
+    MC yan "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.ekawa ,ekawa ,htrae eht fo retsaM{/sc}{/outlinecolor}{/color}{/size}{/cps}"
 
     $ renpy.pause(2.6)
 
@@ -1089,7 +1089,7 @@ label loop2_yamato:
     show expression Text("に", style="jojo_bigtext") at wriggle_zoomout(0.99, start_x+spacing*11, y_center, 2.1) as revc12
     show expression Text("我", style="jojo_bigtext") at wriggle_zoomout(1.08, start_x+spacing*12, y_center, 2.1) as revc13
 
-    yamato "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.emalf em tnarG ,htgnerts em tnarG{/sc}{/outlinecolor}{/color}{/size}{/cps}"
+    MC yan "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.emalf em tnarG ,htgnerts em tnarG{/sc}{/outlinecolor}{/color}{/size}{/cps}"
 
     $ renpy.pause(2.6)
 
@@ -1269,7 +1269,7 @@ label loop2_yamato:
     show moon7 glitched behind yam:
         zoom 1.3
         # Optionally, add center shift if you ever use xalign/yalign/xoffset/yoffset
-        linear 0.25 zoom 1.7
+        linear 0.1 zoom 1.7
     show yam glitched:
         zoom 0.25
         xalign 0.5
@@ -1280,7 +1280,7 @@ label loop2_yamato:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
         # Lunge forward (zoom in, center, reduce offset)
-        linear 0.25 zoom 0.65 xoffset 0 yoffset 0
+        linear 0.01 zoom 0.65 xoffset 0 yoffset 0
     pause 0.3
 
     scene black
@@ -1399,8 +1399,5 @@ label loop2_yamato:
 
     $ persistent.loop2 = True
 
-    ## at the end of the route yamato dies
-
-    yamato "I ded."
 
     return

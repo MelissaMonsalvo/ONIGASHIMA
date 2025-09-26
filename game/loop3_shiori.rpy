@@ -359,6 +359,10 @@ label loop3_shiori:
 
     n2 "..."
 
+    scene cg_loop3shiori:
+        zoom 0.5
+    with in_212
+
     shiori "It was dark, I was brought to the forest to die alone."
 
     shiori "I couldn't remember the priests's face, so I'm sure you ate him... {w}or her? Ah, that doesn't matter anymore."
@@ -427,6 +431,11 @@ label loop3_shiori:
     with flashred
 
     MC happy3 "BeCAuSe iT TasTED BEttER."
+
+    scene shrine night:
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+        zoom 0.5
+    with in_212
 
 
 

@@ -80,7 +80,7 @@ label loop1_hikaru_mandatory1:
 
     n "This... {w=0.2}this part doesn’t feel familiar. But it sounds like it should be."
 
-    show hik worried:
+    show hik sad:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -96,7 +96,7 @@ label loop1_hikaru_mandatory1:
         yalign 0.5
 
         ease 0.5 zoom 0.55
-    show hik worried:
+    show hik sad:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -165,7 +165,7 @@ label loop1_hikaru_mandatory1:
 
     n "If you're together, then it should be okay to stay close like this {w}right?"
 
-    MC confused "{size=*0.95}Hikaru, when did we...?{/size}"
+    MC nervous "{size=*0.95}Hikaru, when did we...?{/size}"
 
     show hik normal
     with dissolve
@@ -185,7 +185,7 @@ label loop1_hikaru_mandatory1:
 
     MC nervous "{w=0.2}Right. I remember."
 
-    show hik worried
+    show hik sad
     with dissolve
 
     hikaru "Do you? {w=0.2}Did the Yamakui knock your head so hard you had amnesia?"
@@ -208,9 +208,7 @@ label loop1_hikaru_mandatory1:
 
     n "You regret the question the moment it leaves your mouth."
 
-    n "Hikaru's expression sharpens for half a second before settling back into softness."
-
-    show hik ex_blush
+    show hik blush
     with dissolve
 
     hikaru "I missed you so much, [persistent.player_name]..."
@@ -267,7 +265,7 @@ label loop1_hikaru_mandatory1:
 
     $ loop1_hikaru_mandatory1 = True
 
-    #return
+    return
 
 label loop1_hikaru_mandatory2:
 
@@ -518,7 +516,7 @@ label loop1_hikaru_mandatory2:
 
     $ loop1_hikaru_mandatory2 = True
 
-    #Return
+    return
 
 label loop1_hikaru_mandatory3:
 
@@ -705,7 +703,7 @@ label loop1_hikaru_mandatory3:
 
     ## uncomfortable silence
 
-    show hik sad2
+    show hik sad
     with dissolve
 
     hikaru "It doesn’t matter. I hope it'll get your memory back someday, maybe it... doesn't work immediately."
@@ -793,7 +791,7 @@ label loop1_hikaru_mandatory3:
 
     $ loop1_hikaru_mandatory3 = True
 
-    #return
+    return
 
 label loop1_hikaru_mandatory4:
 
@@ -817,7 +815,7 @@ label loop1_hikaru_mandatory4:
 
     n "Hikaru."
 
-    MC ysan "..."
+    MC yan "..."
 
     play sound "sfx/knock.wav"
 
@@ -848,6 +846,8 @@ label loop1_hikaru_mandatory4:
 
     ## so like, the mouse drags to yes, to open the door, but you can still pick no
 
+    pause 0.5
+
     call screen horror_forced_menu(items=[
     ("Yes", Jump("hikaru_visit_continued"), False),
     ("No", Jump("hikaru_visit_rejected"), False)
@@ -877,6 +877,7 @@ label hikaru_visit_rejected:
     n "After a series of repeated knocks with no avail, it stops."
 
     n "And you sit in the darkness alone again."
+    $ loop1_hikaru_mandatory4 = True
 
     scene black with fade
     $ renpy.pause(1.0)
@@ -925,6 +926,8 @@ label hikaru_visit_continued:
 
     ## mouse creeps toward yes
 
+    pause 0.5
+
     call screen horror_forced_menu(items=[
     ("Yes", Jump("hikaru_inside"), False),
     ("No", Jump("hikaru_doorclose"), False)
@@ -952,6 +955,8 @@ label hikaru_doorclose:
     n "You closed the door in their face."
 
     n "Shame, now we won't know the real reason why they're here."
+
+    $ loop1_hikaru_mandatory4 = True
 
     scene black with fade
     $ renpy.pause(1.0)
@@ -988,6 +993,8 @@ label hikaru_inside:
     n "{i}There it is.{/i}"
 
     n "I guess just taking a peek at the armor won't cause any harm, {w=0.3}{i}right?{/i}"
+
+    pause 0.5
 
     call screen horror_forced_menu_two(items=[
     ("No", Jump("hikaru_armorrefuse"), False),
@@ -1046,6 +1053,7 @@ label hikaru_armorrefuse:
 
     scene black with fade
     $ renpy.pause(1.0)
+    $ loop1_hikaru_mandatory4 = True
     return
 
 
@@ -1118,6 +1126,8 @@ label hikaru_armor:
     n "You serve the tea for the both of you afterwards."
 
     n "Since you brew it yourself... {i}it will be fine if you drink it, right?{/i}"
+
+    pause 0.5
 
     call screen horror_forced_menu_two(items=[
     ("No", Jump("hikaru_teareject"), False),
@@ -1195,6 +1205,7 @@ label hikaru_teareject:
 
     scene black with fade
     $ renpy.pause(1.0)
+    $ loop1_hikaru_mandatory4 = True
     return
 
 
@@ -1426,7 +1437,7 @@ label hikaru_teadrink:
             linear 0.2 xoffset -100
             repeat
 
-    MC "{sc=3}...Disgusting... {w}Disgusting... {w}Disgusting...{/sc}"
+    MC mad "{sc=3}...Disgusting... {w}Disgusting... {w}Disgusting...{/sc}"
 
     n "You carry the tray outside and rip the door open and--"
 
@@ -1468,7 +1479,7 @@ label hikaru_teadrink:
 
     $ loop1_hikaru_mandatory4 = True
 
-    #return
+    return
 
 label loop1_hikaru_mandatory5:
 
@@ -1641,7 +1652,7 @@ label loop1_hikaru_mandatory5:
 
     "Woman" "Please... I pray [persistent.player_name]-sama doesn’t get too close to that one..."
 
-    show yam angry:
+    show yam angry behind darken:
         zoom 0.23
         xanchor 0.5
         yalign -0.04

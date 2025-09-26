@@ -106,7 +106,7 @@ label loop2_hikaru_mandatory1:
 
     show hik worried
     with dissolve
-    
+
     hikaru "It’ll just be us. No one else has to know."
 
     n2 "...They’re planning something."
@@ -122,7 +122,7 @@ label loop2_hikaru_mandatory1:
 
     n "You follow Hikaru into the woods, heart skipping for all the wrong reasons."
 
-    scene forest night with fade:
+    scene forest day with fade:
         xpos 0
         blur 2
         linear 15 xpos -1920  # Move left by one screen width over 8 seconds (adjust speed)
@@ -251,7 +251,7 @@ label loop2_hikaru_mandatory1:
 
     MC shocked2 "....!"
 
-    play music "sfx/ forest night.wav"
+    play music "sfx/forest night.wav"
 
     n "The boar lies beneath your hands, your hands are already digging into it, almost ripping into flesh."
 
@@ -275,9 +275,9 @@ label loop2_hikaru_mandatory1:
 
     n "You wipe your blade on the grass. Your stomach lurches, but you help Hikaru clean the boar and carry it."
 
-    play sound "Sfx/walk grass.mp3"
+    play sound "sfx/walk grass.mp3"
 
-    scene forest night with fade:
+    scene forest day with fade:
         xpos 0
         blur 2
         linear 15 xpos -1920  # Move left by one screen width over 8 seconds (adjust speed)
@@ -326,7 +326,7 @@ label loop2_hikaru_mandatory1:
 
     $ loop2_hikaru_mandatory1 = True
 
-    #return
+    return
 
 label loop2_hikaru_mandatory2:
 
@@ -438,6 +438,8 @@ label loop2_hikaru_mandatory2:
 
     MC yan2 "...I..."
 
+    pause 0.5
+
     menu:
         "Say you don’t know":
             MC yan2 "...I’ve never seen these before."
@@ -525,7 +527,7 @@ label loop2_hikaru_mandatory2:
 
     show hik shocked
     with dissolve
-    
+
     hikaru "{k=2}Did you--?{/k}"
 
     show hik sad
@@ -611,7 +613,7 @@ label loop2_hikaru_mandatory2:
 
     $ loop2_hikaru_mandatory2 = True
 
-    #return
+    return
 
 label loop2_hikaru_mandatory3:
 
@@ -822,7 +824,7 @@ label loop2_hikaru_mandatory3:
     MC evil2 "..." ## change to eerie expression
     $ loop2_hikaru_mandatory3 = True
 
-    #return
+    return
 
 label loop2_hikaru_mandatory4:
 
@@ -969,7 +971,7 @@ label loop2_hikaru_mandatory4:
 
     n2 "{i}That’s the real name under the skin.{/i}"
 
-    play sound "sfx/stumble.mp3"
+    play sound "sfx/stumble.wav"
 
     show hik shocked:
         zoom 0.47
@@ -986,7 +988,7 @@ label loop2_hikaru_mandatory4:
         linear 0.04 xoffset 14 yoffset 172
         linear 0.06 xoffset 0 yoffset 180
 
-    play sound "sfx/stumble.mp3"
+    play sound "sfx/stumble.wav"
     $ renpy.pause(0.3)
 
     hikaru "{k=2}You killed [persistent.player_name]...{/k}"
@@ -1027,7 +1029,6 @@ label loop2_hikaru_mandatory4:
 
     $ loop2_hikaru_mandatory4 = True
 
-    jump loop2_hikaru
 
     ## all characters vanish from map, but the ghost still appear
 

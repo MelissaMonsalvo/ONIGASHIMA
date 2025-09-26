@@ -1,5 +1,7 @@
 label loop3_yamato:
 
+    stop muzak
+
     $ ysword = True
 
     scene village day:
@@ -46,7 +48,7 @@ label loop3_yamato:
 
     yamato "{sc=3}SHUT YOUR MOUTH!{/sc}"
 
-    play sound "sfx/shing.mp3"
+    play sound "sfx/shing.wav"
     with hpunch
 
 
@@ -400,6 +402,7 @@ label loop3_yamato:
     $ renpy.pause(2.5)
 
     stop music
+    stop muzak
 
     pause 0.3
 
@@ -575,6 +578,13 @@ label loop3_yamato:
 
     MC evil3 "hHhhAhhh-- {w}iT hUrTs sO nIcE."
 
+    scene cg_loop3yamato:
+        zoom 1
+        xalign 0.5
+
+        linear 0.2 zoom 0.5
+    with sshake
+
     yamato "Why t'hell are ya laughin'?!"
 
     MC evil3 "I liKE PlaYIng WiTh FooD."
@@ -654,34 +664,19 @@ label loop3_yamato:
     show combo_slash_3red
     $ renpy.pause(0.2, hard=True)
     with vpunch
+    pause 0.5
+    scene cg_loop3yamato:
+        zoom 1
+        xalign 0.5
+
+        linear 0.2 zoom 0.5
+    pause 0.5
 
     play sound "swing.wav"
     show combo_slash_1red
     $ renpy.pause(0.2, hard=True)
     show darken2
     with vpunch
-
-    scene village night:
-        zoom 0.5
-        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
-
-    show yam rage:
-        zoom 0.47
-        align (0.5, 0.005)
-        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
-
-
-        linear 0.01 xalign 0.5 yalign 0.1
-
-        linear 0.16 zoom 0.29 xalign 0.41 yalign -0.09 xoffset 122
-
-        linear 0.12 zoom 0.25 xalign 0.4 yalign 0 xoffset 144 yoffset 0
-
-        linear 0.07 yoffset 8
-        linear 0.09 yoffset 0
-    show darken2
-    with vpunch
-
 
     n2 "sTiLL sWiNgInG?"
 
@@ -705,6 +700,10 @@ label loop3_yamato:
     n2 "iT’s fAlLiNg oFf."
 
     n2 "jUsT lIkE mY sKiN."
+
+    scene village night:
+        zoom 0.5
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
     show yam panic behind darken2:
         zoom 0.25
@@ -754,7 +753,8 @@ label loop3_yamato:
 
     MC yansm3 "yOu’rE oN yOuR kNeEs."
 
-    ## CG HERE
+    scene black
+    with fade
 
     yamato "{cps=14}I know, {w=0.1}damn it...{/cps}"
 

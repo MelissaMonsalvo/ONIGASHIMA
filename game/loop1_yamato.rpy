@@ -221,7 +221,7 @@ label loop1_yamato:
 
     MC annoyed "Yamato."
 
-    play sound "sfx/suzu.wav"
+    play sound "sfx/suzu.mp3"
 
     show yam panic:
         zoom 0.6
@@ -391,7 +391,7 @@ label loop1_yamato:
 
     yamato "...I just don't wanna see ya keel over, alright?"
 
-    MC smgcl "Really~?"
+    MC smugcl "Really~?"
 
     scene black
 
@@ -674,7 +674,7 @@ label loop1_yamato:
 
     n "You were getting ready for tonight's patrol when you hear a soft knock."
 
-    MC neutral "...Come in."
+    MC normal "...Come in."
 
     play sound "sfx/sliding door.mp3"
 
@@ -696,11 +696,11 @@ label loop1_yamato:
 
     stop sound
 
-    play muzak "sfx/forest night.mp3"
+    play muzak "sfx/forest night.wav"
 
     yamato "Yo. Ya aready for patrol or ya still nappin'?"
 
-    MC neutral "You're early."
+    MC normal "You're early."
 
     show yam smug
     with dissolve
@@ -1016,7 +1016,7 @@ label loop1_yamato:
     MC happy "So that's a yes."
 
 
-    show yam blush:
+    show yam panicbl:
         zoom 0.5
         xalign 0.4
         yalign -0.15
@@ -1079,7 +1079,7 @@ label loop1_yamato:
 
     n "You're used to Yamato's knocking pattern by now."
 
-    MC neutral "Come in."
+    MC normal "Come in."
 
     play sound "sfx/sliding door.mp3"
 
@@ -1127,7 +1127,7 @@ label loop1_yamato:
 
     yamato "{k=1}...Tch. Whatever. Ain't like I believe in fate 'n shit.{/k}"
 
-    MC curious "What is it?"
+    MC surprised "What is it?"
 
     yamato "{k=2}Ya wanna be on guard with me?{/k}"
 
@@ -1316,7 +1316,7 @@ label loop1_yamato:
     play sound "sfx/gag2.mp3"
 
 
-    MC "...Urk..."
+    MC hurt "...Urk..."
 
     yamato "Oi. Ya alright?"
 

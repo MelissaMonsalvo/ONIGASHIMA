@@ -322,7 +322,7 @@ label loop1_yamato_mandatory1:
 
     $ loop1_yamato_mandatory1 = True
 
-    #return
+    return
 
 label loop1_yamato_mandatory2:
 
@@ -600,7 +600,7 @@ label loop1_yamato_mandatory2:
 
 
 
-    #return
+    return
 
 label loop1_yamato_mandatory3:
 
@@ -908,9 +908,10 @@ label loop1_yamato_mandatory3:
 
     pause 0.3
 
-    #return
+    return
 
 label loop1_yamato_mandatory4:
+    $ hmask = True
     $ ysword = False
 
     $ loop1_yamato_mandatory4 = True
@@ -1014,7 +1015,7 @@ label loop1_yamato_mandatory4:
 
     yamato "...Yeah. I did."
 
-    show yam ngh:
+    show yam sad:
         zoom 0.23
         xanchor 0.5
         yalign -0.04
@@ -1036,7 +1037,7 @@ label loop1_yamato_mandatory4:
 
     stop music
 
-    #return
+    return
 
 label loop1_yamato_mandatory5:
 

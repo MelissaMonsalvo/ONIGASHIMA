@@ -545,7 +545,7 @@ label loop2_hikaru:
     stop sound fadeout 1.0
     stop muzak
 
-    play sound "sfx/shing.mp3"
+    play sound "sfx/shing.wav"
 
     scene forest night:
         zoom 0.5
@@ -569,7 +569,7 @@ label loop2_hikaru:
 
     ## shing sai draw
 
-    play sound "sfx/shing.mp3"
+    play sound "sfx/shing.wav"
     with hpunch
 
     n "Hikaru draws their sai now,{w=0.2} ready to fight to the death{w=0.3} and bring you down with them."
@@ -722,8 +722,6 @@ label loop2_hikaru:
     play sound "sfx/pain.mp3"
     hikaru "{sc=7}Aahh--ghhk--{/sc}"
 
-    show hik rage
-
     show darken2
     with dissolve
 
@@ -750,6 +748,7 @@ label loop2_hikaru:
     n2 "It's time to feast."
 
     ## erratic mouse
+    pause 1.0
 
     call screen horror_forced_menu_jitter(items=[
     ("Save Hikaru", Jump("yesyeysysyqsad222"), False),

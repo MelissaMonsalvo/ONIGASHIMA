@@ -795,7 +795,7 @@ image yam ngh= LiveComposite(
     (0,0), WhileSpeaking(
             "yama",
             Animation("Yamato/mouth/m_rage.webp", .2, "Yamato/mouth/m_rage_open.webp", .2),
-            "Yamato/mouth/m_rage.webp"
+            "Yamato/mouth/m_angry.webp"
         ),
 
     )
@@ -932,7 +932,7 @@ image yam kiss = LiveComposite(
     (0,0), WhileSpeaking(
             "yama",
             Animation("Yamato/mouth/m_surprised.webp", .2, "Yamato/mouth/m_surprised_open.webp", .2),
-            "Yamato/mouth/m_surprised.webp"
+            "Yamato/mouth/m_serious_open.webp"
         ),
     (0,0), "Yamato/extra/ex_blush2.webp"
 
@@ -990,7 +990,7 @@ image yam eldritch= LiveComposite(
 
     )
 
-image yam eldritch= LiveComposite(
+image yam eldritch2= LiveComposite(
     (3638,6926),
     (0,0), Animation(
             "Yamato/tail/tail_raised1.png", 4.5,
@@ -1089,14 +1089,15 @@ image yam eldritch1= LiveComposite(
     (0,0), "Yamato/brow/b_happy.webp",
     (0,0), WhileSpeaking(
             "yama",
-            Animation("Yamato/mouth/m_shout.webp", .2, "Yamato/mouth/m_shout_open.webp", .2),
-            "Yamato/mouth/m_shout_open.webp"
-        )
+            Animation("Yamato/mouth/m_panic.webp", .2, "Yamato/mouth/m_panic_open.webp", .2),
+            "Yamato/mouth/m_panic_open.webp"
+        ),
+    (0,0), "Yamato/extra/ex_eldritch.webp"
 
     )
 image yam glitched:
-    glitch("yam eldritch") # reliable slicing
+    glitch("yam eldritch1") # reliable slicing
     pause 1.0
-    glitch("yam eldritch", offset=100, randomkey=None) # bigger and always-random slicing
+    glitch("yam eldritch1", offset=100, randomkey=None) # bigger and always-random slicing
     pause 0.1
     repeat
