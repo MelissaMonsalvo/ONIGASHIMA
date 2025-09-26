@@ -551,7 +551,7 @@ label after_get_name:
 
     n "Yamato wanted to guard the village gates as a samurai, sword in hand and pride in his chest."
 
-    n "And Hikaru… {w=0.4}Hikaru never said much, always just listening to you three ramble."
+    n "And Hikaru...{w=0.4}Hikaru never said much, always just listening to you three ramble."
 
     show shi happyblush
     with dissolve
@@ -573,6 +573,9 @@ label after_get_name:
     MC normal "C’mon, you both know tradition. Oni slayer’s gotta go alone."
 
     yamato "Tch."
+
+    show hik happy
+    with dissolve
 
     hikaru "Welcome home, [persistent.player_name]-san."
 
@@ -648,13 +651,16 @@ label after_get_name:
 
     n "It feels just like before you left..."
 
+    show hik worried
+    with dissolve
+
     hikaru "...Don’t you forget something, [persistent.player_name]?"
 
     MC nervous "Huh? What, like a souvenir? I brought the armor, didn’t I?"
 
     hikaru "...I see."
 
-    n "Hikaru's voice drops, their eyes slides slowly. From you… to the ground. {w=0.2}No-"
+    n "Hikaru's voice drops, their eyes slides slowly. From you...to the ground. {w=0.2}No-"
 
     $ _prev_music_volume = _preferences.volumes["music"]
 
@@ -667,6 +673,9 @@ label after_get_name:
     play sound "sfx/suzu.mp3"
 
     n "To the armor."
+
+    show hik angry
+    with dissolve
 
     hikaru "...It's rather... {w}small for Yamakui, isn't it?"
 
@@ -684,7 +693,7 @@ label after_get_name:
 
     hikaru "...Forget it."
 
-    show hik normal behind darken:
+    show hik angry behind darken:
 
         zoom 0.231
         yoffset 460
