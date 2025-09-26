@@ -115,7 +115,7 @@ screen fake_name_input():
 
 label start:
     #call screen name_input
-    call screen fake_name_input
+    #call screen fake_name_input
     $ ysword = False
     $ hmask = False
     $ hsword = False
