@@ -15,6 +15,9 @@ init python:
             store.original_music_volume = None
 
 
+### CURSOR ###
+define config.mouse = { }
+define config.mouse['default'] = [ ( "gui/cursor.png", 0, 0) ]
 ################################################################################
 ## Initialization
 ################################################################################
@@ -393,12 +396,13 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
+        add "gui/quick menu/nav_line.png" pos (1835, 8)
         vbox:
             at ts_qm_fadein(-80)
             xsize 90
             spacing 5
 
-            pos (1788, 55)
+            pos (1800, 55)
 
             imagebutton auto "gui/quick menu/auto_%s.png":
                 action Preference("auto-forward", "toggle")
