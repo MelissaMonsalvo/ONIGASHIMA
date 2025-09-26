@@ -273,7 +273,7 @@ image hik smileblush = LiveComposite(
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
         ),
-    (0,0). "Hikaru/extra/ex_blush.webp"
+    (0,0), "Hikaru/extra/ex_blush.webp"
 
     )
 image hik sad = LiveComposite(
@@ -427,7 +427,7 @@ image hik cry = LiveComposite(
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
         ),
-    (0,0). "Hikaru/extra/ex_tears.webp"
+    (0,0), "Hikaru/extra/ex_tears.webp"
 
     )
 
@@ -484,7 +484,7 @@ image hik madcry = LiveComposite(
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
         ),
-    (0,0). "Hikaru/extra/ex_tears.webp"
+    (0,0), "Hikaru/extra/ex_tears.webp"
 
     )
 image hik worried = LiveComposite(
@@ -595,7 +595,7 @@ image hik surprised = LiveComposite(
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
         ),
-    (0,0). "Hikaru/extra/ex_tears.webp"
+    (0,0), "Hikaru/extra/ex_tears.webp"
 
     )
 image hik shocked = LiveComposite(
@@ -651,7 +651,7 @@ image hik shocked = LiveComposite(
             "Hikaru/bangs1.png", .25,
             "Hikaru/bangs2.png", .25,
         ),
-    (0,0). "Hikaru/extra/ex_tears.webp"
+    (0,0), "Hikaru/extra/ex_tears.webp"
 
     )
 image hik serious = LiveComposite(

@@ -393,20 +393,50 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
+        vbox:
+            at ts_qm_fadein(-80)
+            xsize 90
+            spacing 5
 
-        hbox:
-            style_prefix "quick"
-            style "quick_menu"
+            pos (1788, 55)
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            imagebutton auto "gui/quick menu/auto_%s.png":
+                action Preference("auto-forward", "toggle")
 
+            imagebutton auto "gui/quick menu/back_%s.png":
+                action Rollback()
+
+            imagebutton auto "gui/quick menu/skip_%s.png":
+                action Skip() alternate Skip(fast=True, confirm=True)
+
+            imagebutton auto "gui/quick menu/save_%s.png":
+                action ShowMenu('save')
+
+            # imagebutton auto "gui/quick menu/pause_%s.png":
+            #     action ShowMenu('pause_menu')
+
+
+
+        # hbox:
+            # style_prefix "quick"
+            # style "quick_menu"
+
+            # textbutton _("Back") action Rollback()
+            # textbutton _("History") action ShowMenu('history')
+            # textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("Auto") action Preference("auto-forward", "toggle")
+            # textbutton _("Save") action ShowMenu('save')
+            # textbutton _("Q.Save") action QuickSave()
+            # textbutton _("Q.Load") action QuickLoad()
+            # textbutton _("Prefs") action ShowMenu('preferences')
+
+
+
+transform ts_qm_fadein(dist):
+    alpha 0.5
+    yoffset dist
+
+    ease 1.0 yoffset 0 alpha 1.0
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
