@@ -1,0 +1,1 @@
+Shiori's attack hand should be layered over the monster mouth, please disregard how its layer is assembled in the PSD file. Please refer to "roughs" in the PSD or Discord for reference
