@@ -38,17 +38,67 @@ init python:
             name_display += true_name_target[name_input_index]
             name_input_index += 1
 
+# screen fake_name_input():
+#     frame:
+#         xalign 0.5
+#         yalign 0.5
+#         background None
+#         has vbox
+#         spacing 30
+
+#         text "Say your name" size 40 color "#CCCCCC" xalign 0.5
+
+#         text "> [name_display]|" size 40 color "#FFFFFF" xalign 0.5
+
+#     key "K_RETURN" action Return()
+#     key "K_BACKSPACE" action NullAction()
+
+#     # Capture most key presses (alphanumeric)
+#     for key in ("a","b","c","d","e","f","g","h","i","j","k",
+#                 "l","m","n","o","p","q","r","s","t","u","v",
+#                 "w","x","y","z",
+#                 "K_a","K_b","K_c","K_d","K_e","K_f","K_g","K_h",
+#                 "K_i","K_j","K_k","K_l","K_m","K_n","K_o","K_p",
+#                 "K_q","K_r","K_s","K_t","K_u","K_v","K_w","K_x",
+#                 "K_y","K_z", "K_SPACE"):
+#         key key action Function(_fake_type_char)
+
 screen fake_name_input():
-    frame:
-        xalign 0.5
-        yalign 0.5
-        background None
-        has vbox
-        spacing 30
+    fixed:
+        xysize (config.screen_width, config.screen_height)
+            
+        add "gui/menu_background.jpg"
 
-        text "Say your name" size 40 color "#CCCCCC" xalign 0.5
+        add "gui/name_input_background.png" ypos 188
 
-        text "> [name_display]|" size 40 color "#FFFFFF" xalign 0.5
+        text "Say your name":
+            pos (55, 200)
+            font "NotoSerifJP-VariableFont_wght.ttf"
+            bold False
+            italic False
+            size 80
+        frame:
+            xysize (1350, 135)
+            pos (300, 430)
+            background None
+            text "> [name_display]|": #size 40 color "#FFFFFF" xalign 0.5
+                align (0.5, 0.5)
+                size 100
+                font "NotoSerifJP-VariableFont_wght.ttf"
+                bold False
+                italic False
+                color '#cc0000'
+            ### CONFIRM/REVERT ###
+        frame:
+            style_prefix "ni"
+            hbox:
+                button:
+                    text "CONFIRM"
+                    action Confirm("Choose this name?", Return(), Hide())
+                button:
+                    text "CLEAR"
+                    action SetVariable("persistent.player_name", "")
+
 
     key "K_RETURN" action Return()
     key "K_BACKSPACE" action NullAction()
@@ -64,10 +114,12 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    #call screen name_input
+    call screen fake_name_input
     $ ysword = False
     $ hmask = False
     $ hsword = False
-    jump map
+    #jump map
     #jump get_player_name
     #jump prologue_loop1
     #jump prologue_loop2
