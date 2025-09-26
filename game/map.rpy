@@ -143,9 +143,13 @@ default offset_x_a = 0
 screen map_screen():
 
 
-    #BG
-    add "images/map/bg.png"
 
+    #BG
+    #$ check_rutes()
+    add "images/map/bg.png"
+    if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
+        timer 0.1 action Function(check_rutes) repeat True
+    #textbutton "" xsize 1920 ysize 1080 action Function (check_rutes)
 
     #Shrine
     #imagebutton auto "images/map/shrine_%s.png" focus_mask True action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/audio/buttons/active_s.mp3"
@@ -233,6 +237,9 @@ python early:
     def visit_location_func(location):
         # Incrementar visitas
         store.visits_toDay += 1
+
+        #check_rutes()
+
         # Verificar eventos obligatorios primero
         current_mandatory = store.check_mandatory_events(location)
 
@@ -385,6 +392,31 @@ python early:
         store.shiori_ghost_events_completed = 0
         store.hikaru_ghost_events_completed = 0
 
+    def check_rutes():
+        print(f"Yamato {store.yamato_events_completed}")
+        print(f"Shiori {store.shiori_events_completed}")
+        print(f"hikaru {store.hikaru_events_completed}")
+
+        if store.yamato_events_completed >= 5:
+            #renpy.hide_screen("map")
+            print("Rute Yamato")
+            label_name = f"loop{store.current_loop}_yamatob"
+            renpy.call_in_new_context(label_name)
+            #renpy.call_in_new_context(label_name)
+
+        elif store.shiori_events_completed >= 5:
+            #renpy.hide_screen("map")
+            print("Rute Shiori")
+            label_name = f"loop{store.current_loop}_shiorib"
+            renpy.call_in_new_context(label_name)
+            #renpy.call_in_new_context(label_name)
+        elif store.hikaru_events_completed >= 5:
+            #renpy.hide_screen("map")
+            print("Rute Hikaru")
+            label_name = f"loop{store.current_loop}_hikarub"
+            renpy.call_in_new_context(label_name)
+            #renpy.call_in_new_context(label_name)
+
 
 
 # Label for when there are no events
@@ -392,7 +424,38 @@ label location_empty(location):
     "There is nothing interesting in [location]" # [locations[location]] at this moment."
     return
 
+
+
+
+
+
+
 ###########################
+
+
+#Rutes
+
+label loop1_yamatob:
+    "Rute Yamato loop1_yamatob"
+    return
+label loop2_yamatob:
+    "Rute Yamato loop2_yamatob"
+    return
+
+label loop1_shiorib:
+    "Rute shiori loop1_shiorib"
+    return
+
+label loop2_shiorib:
+    "Rute shiori loop2_shiorib"
+    return
+
+label loop1_hikarub:
+    "Rute hikaru loop1_hikarub"
+    return
+label loop2_hikarub:
+    "Rute hikaru loop2_hikarub"
+    return
 
 # MANDATORY EVENTS - LOOP 1
 
@@ -423,7 +486,7 @@ label loop1_yamato_mandatory5b:
     "Yamato - Night - Forest"
     "Tag: loop1_yamato_mandatory5b"
     $ persistent.yamato_dies = True
-    $ nextloop()
+    #$ nextloop()
     return
 
 # Hikaru - Loop 1
@@ -451,7 +514,7 @@ label loop1_hikaru_mandatory5b:
     "Hikaru - Day - Shrine"
     "Tag: loop1_hikaru_mandatory5b"
     $ persistent.hikaru_dies = True
-    $ nextloop()
+    #$ nextloop()
     return
 
 # Shiori - Loop 1
@@ -479,7 +542,7 @@ label loop1_shiori_mandatory5b:
     "Shiori - Day - Forest"
     "Tag: loop1_shiori_mandatory5b"
     $ persistent.shiori_dies = True
-    $ nextloop()
+    #$ nextloop()
     return
 
 # MANDATORY EVENTS - LOOP 2
