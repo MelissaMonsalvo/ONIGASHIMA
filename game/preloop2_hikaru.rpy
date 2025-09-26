@@ -4,6 +4,9 @@
 
 label loop2_hikaru_mandatory1:
 
+    $ hsword = False
+    $ hmask = True
+
     scene village day with in_182:
         zoom 0.5
 
@@ -54,7 +57,7 @@ label loop2_hikaru_mandatory1:
 
     n "Has Hikaru always talked to you like this?"
 
-    show hik normal:
+    show hik worried:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -82,23 +85,28 @@ label loop2_hikaru_mandatory1:
 
     hikaru "Ah."
 
+    show hik sad
+    with dissolve
+
     hikaru "I... {w=0.1}can relate."
 
     MC sadcl2 "Yeah, sorry."
 
+    show hik normal
+    with dissolve
+
     hikaru "Don't be. {w}Hey, what if we go hunting instead?"
 
     hikaru "You know, like the old times? Your favorite pastime?"
-
-    n "Even Hikaru looks at you with a little glint of disbelief..."
-
-    n2 "Yes..."
 
     if not persistent.shiori_dies:
         MC "Sounds nice, is Yamato coming with us?"
     else:
         MC "Sounds nice, is Shiori coming too?"
 
+    show hik worried
+    with dissolve
+    
     hikaru "It’ll just be us. No one else has to know."
 
     n2 "...They’re planning something."
@@ -232,7 +240,7 @@ label loop2_hikaru_mandatory1:
 
     scene forest day:
         zoom 0.5
-    show hik normal:
+    show hik panic:
         zoom 0.3
         xalign 0.5
         yoffset 150
@@ -247,9 +255,15 @@ label loop2_hikaru_mandatory1:
 
     n "The boar lies beneath your hands, your hands are already digging into it, almost ripping into flesh."
 
+    show hik sad
+    with dissolve
+
     hikaru "{w=0.1}...Are you alright?"
 
     MC nervous2 "I-I'm {w}just a little hungry."
+
+    show hik normal
+    with dissolve
 
     hikaru "Then let’s bring it back quickly. We’ll cook it together."
 
@@ -285,6 +299,9 @@ label loop2_hikaru_mandatory1:
 
     n "The boar swings gently between you, strung on a shared pole."
 
+    show hik worried
+    with dissolve
+
     hikaru "You... {w=0.5}You're sure you're {i}okay?{/i}"
 
     MC sad2 "...Sorry. Just thinking."
@@ -296,6 +313,9 @@ label loop2_hikaru_mandatory1:
     hikaru "Hungry already?"
 
     MC yan2 "...Yeah."
+
+    show hik normal
+    with dissolve
 
     hikaru "Don't worry, I'll make sure it'll taste good for everyone."
 
@@ -317,7 +337,7 @@ label loop2_hikaru_mandatory2:
 
 
         ease 0.5 zoom 0.55
-    show hik normal:
+    show hik serious:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -336,6 +356,9 @@ label loop2_hikaru_mandatory2:
     n "There's a hidden room, it reeks with mold, old rot, and... Ugh."
 
     n "A horrible smell envelops the room immediately."
+
+    show hik panic
+    with dissolve
 
     hikaru "{sc=1}...Kami-sama.{/sc}"
 
@@ -375,7 +398,7 @@ label loop2_hikaru_mandatory2:
         n "...the smell of sake in your mouth?"
 
     hide gore
-    show hik normal:
+    show hik cry:
         zoom 0.4
         xanchor 0.5
         xalign 0.4
@@ -434,6 +457,9 @@ label loop2_hikaru_mandatory2:
 
     MC happy2 "But don't worry, I killed it! So there's no way anyone will get eaten again!"
 
+    show hik sad
+    with dissolve
+
     hikaru "{k=2}Y-Yes... That's right..{/k}"
 
     MC happycl2 "Let's just go home, you look pale, Hikaru."
@@ -453,7 +479,7 @@ label loop2_hikaru_mandatory2:
 
 
         ease 0.5 zoom 0.55
-    show hik normal:
+    show hik serious:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -465,7 +491,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "{sc=2}It's {b}gone.{/b}{/sc}"
 
-    show hik normal:
+    show hik serious:
         zoom 0.4
         xanchor 0.5
         xalign 0.4
@@ -497,14 +523,20 @@ label loop2_hikaru_mandatory2:
 
         hikaru "{k=2}No... I told Shiori that I'll bury it myself...{/k}"
 
+    show hik shocked
+    with dissolve
+    
     hikaru "{k=2}Did you--?{/k}"
+
+    show hik sad
+    with dissolve
 
     hikaru "...No. You wouldn’t."
 
 
     n "They turn toward you, slowly."
 
-    show hik normal:
+    show hik sad:
         zoom 0.4
         xanchor 0.5
         xalign 0.4
@@ -526,11 +558,17 @@ label loop2_hikaru_mandatory2:
 
     MC happy2 "Okay, I'll stay here then."
 
+    show hik surprised
+    with dissolve
+
     hikaru "...You're not... {w=0.2}{i}curious?{/i}"
 
     hikaru "I mean...{w=0.1} you used to be."
 
     MC happycl2 "Nah, it's probably just someone the Yamakui ate a long time ago."
+
+    show hik worried
+    with dissolve
 
     hikaru "..."
 
@@ -538,7 +576,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "...Nevermind. {w=0.2}I'll see you later."
 
-    show hik normal:
+    show hik worried:
 
         zoom 0.5
         xanchor 0.5
@@ -579,8 +617,10 @@ label loop2_hikaru_mandatory3:
 
     play music "Night.mp3"
 
+    $ hmask = False
+
     scene moon3
-    show hik normal:
+    show hik sad:
         zoom 0.5
         xalign 0.5
         yalign 0.2
@@ -592,13 +632,16 @@ label loop2_hikaru_mandatory3:
 
     hikaru "You know what, I think you've changed since the mountains."
 
-    hikaru "You're... a lot calmer now, and a lot less affectionate."
+    hikaru "You're... {w=0.1}a lot calmer now, and a lot less affectionate."
 
     hikaru "Are you mad at me?"
 
     n "Their hand moves slowly and stops over your chest, right above where your heartbeat should be."
 
     n2 "Hhhh..."
+
+    show hik worried
+    with dissolve
 
     hikaru "I feel like something’s missing."
 
@@ -613,7 +656,7 @@ label loop2_hikaru_mandatory3:
     scene moon3:
         easein 0.33 zoom 1.4
 
-    show hik normal:
+    show hik shocked:
         zoom 0.5
         xalign 0.5
         yalign 0.2
@@ -663,7 +706,7 @@ label loop2_hikaru_mandatory3:
     scene moon3:
         easeout 0.1 zoom 1
 
-    show hik normal:
+    show hik panic:
         zoom 1.25
         xalign 0.5
         yalign 0.08
@@ -699,14 +742,13 @@ label loop2_hikaru_mandatory3:
 
     hikaru "I-{w=0.1}I..."
 
-    show hik normal:
+    show hik panic:
         zoom 0.5
         xalign 0.5
         yalign 0.08
         xoffset 0
         yoffset 50
 
-        # Rapid shake sequence
         linear 0.05 xoffset -30 yoffset 30
         linear 0.05 xoffset 35 yoffset 65
         linear 0.04 xoffset -20 yoffset 42
@@ -719,14 +761,13 @@ label loop2_hikaru_mandatory3:
 
     MC yan2 "I don't understand."
 
-    show hik normal:
+    show hik panic:
         zoom 0.5
         xalign 0.5
         yalign 0.08
         xoffset 0
         yoffset 50
 
-        # Rapid shake sequence
         linear 0.05 xoffset -30 yoffset 30
         linear 0.05 xoffset 35 yoffset 65
         linear 0.04 xoffset -20 yoffset 42
@@ -736,14 +777,13 @@ label loop2_hikaru_mandatory3:
 
     hikaru "I... {w=0.5}I just remembered--"
 
-    show hik normal:
+    show hik panic:
         zoom 0.5
         xalign 0.5
         yalign 0.08
         xoffset 0
         yoffset 50
 
-        # Rapid shake sequence
         linear 0.05 xoffset -30 yoffset 30
         linear 0.05 xoffset 35 yoffset 65
         linear 0.04 xoffset -20 yoffset 42
@@ -755,17 +795,15 @@ label loop2_hikaru_mandatory3:
 
     n "They gesture vaguely toward the trail, not even looking that direction."
 
-    show hik normal:
+    show hik panic:
         zoom 0.5
         xalign 0.5
         yalign 0.08
         xoffset 0
         yoffset 50
 
-        # Sudden, sharp jerk back and down, with a bit of zoom out
         linear 0.11 zoom 0.38 yoffset 20 xoffset 60
         linear 0.09 zoom 0.34 yoffset 100 xoffset -40
-        # Settle at the new, farther (lower) position
         linear 0.07 zoom 0.3 yoffset 170 xoffset 0
 
 
@@ -806,7 +844,7 @@ label loop2_hikaru_mandatory4:
 
     pause 0.3
 
-    show hik normal:
+    show hik angry:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -839,7 +877,7 @@ label loop2_hikaru_mandatory4:
 
     show darken2
 
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -868,7 +906,7 @@ label loop2_hikaru_mandatory4:
     scene house night:
         zoom 0.5
         easein 0.4 zoom 0.7
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -877,6 +915,8 @@ label loop2_hikaru_mandatory4:
         xoffset 0
         easein 0.4 zoom 0.47 yoffset 20
     show darken2
+
+    $ hsword = True
 
     play sound "sfx/shing.wav"
 
@@ -907,7 +947,7 @@ label loop2_hikaru_mandatory4:
 
     scene house night:
         zoom 0.7
-    show hik normal:
+    show hik shocked:
         xanchor 0.5
         xalign 0.5
         yalign 0
@@ -931,7 +971,7 @@ label loop2_hikaru_mandatory4:
 
     play sound "sfx/stumble.mp3"
 
-    show hik normal:
+    show hik shocked:
         zoom 0.47
         xanchor 0.5
         xalign 0.5
@@ -946,8 +986,6 @@ label loop2_hikaru_mandatory4:
         linear 0.04 xoffset 14 yoffset 172
         linear 0.06 xoffset 0 yoffset 180
 
-    n "Hikaru stumbles back, hands trembling. Their mouth hanging open, wanting to scream but can’t."
-
     play sound "sfx/stumble.mp3"
     $ renpy.pause(0.3)
 
@@ -955,7 +993,7 @@ label loop2_hikaru_mandatory4:
 
     MC shocked2 "{w=0.1}Hikaru--"
 
-    show hik normal:
+    show hik madcry:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -963,7 +1001,6 @@ label loop2_hikaru_mandatory4:
         yoffset 180
         xoffset 0
 
-        # Huge, rapid shake for a shout
         linear 0.04 xoffset -44 yoffset 194
         linear 0.03 xoffset 38 yoffset 166
         linear 0.03 xoffset -29 yoffset 192

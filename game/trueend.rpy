@@ -1,93 +1,169 @@
 label truend:
 
+    scene bg shrine_night with fade
 
-    n "The shrine lanterns burn low as three silhouettes move under the shadows."
+    # Show all three characters in their exact positions
+    show hik normal:
+        zoom 0.231
+        xanchor 0.5
+        yalign -0.09
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 460
 
-    n "Hikaru has called the other two for a secret meeting, without you."
+    show yam normal:
+        zoom 0.23
+        xanchor 0.5
+        yalign -0.04
+        xzoom 1.0
+        yzoom 1.0
+        yoffset 0
 
+    show shi normal:
+        zoom 0.26
+        xanchor 0.5
+        xalign 0.5
+        yalign -0.60
+        yoffset 0
+        xzoom 1.0
+        yzoom 1.0
+
+    with dissolve
+
+    n "They called this meeting without you."
+
+    n "but you let them, anyway."
+
+    show hik serious
+    with dissolve
     hikaru "Yamato. Shiori. I... need you to listen."
 
+    show yam annoyed
+    with dissolve
     yamato "Oi, what’s this ‘bout draggin’ us here in the middle o’ the damn night?"
-    yamato "Ya better make it good."
+    yamato "Ya better make it good, Hikaru."
 
-    shiori "Yaaawn~ I only come because you said this is important, Hikaru-san~"
+    show shi surprised
+    with dissolve
+    shiori "Yaaawn~ I only came because you said this is important, Hikaru-san~"
 
+    show hik worried
+    with dissolve
     hikaru "...It is about [persistent.player_name]."
 
-    n "Yamato crosses his arms, scowling."
+    n "Yamato crosses his arms, scowling. Shiori’s eyes wander to the dark corners."
 
-    yamato "So ya thinkin' of what I'm thinkin'. [persistent.player_name] is hella odd."
+    show yam serious
+    with dissolve
+    yamato "So ya thinkin' what I'm thinkin'. [persistent.player_name]'s hella odd lately."
 
-    hikaru "Yes. More than off, even... I think it's not really [persistent.player_name] that's coming back from the mountains."
+    show hik sad
+    with dissolve
+    hikaru "Yes. More than off, even... I think it's not really [persistent.player_name] that came back from the mountains."
 
-    shiori "Huh? What do you mean?"
+    shiori "Huh? What do you mean, Hikaru-san?"
 
+    show hik sad
+    with dissolve
     hikaru "Listen... I... have a confession."
 
-    hikaru "I'm with [persistent.player_name]. For a long time, more than a year even."
+    pause 1.0
+    hikaru "I'm with [persistent.player_name]. For a long time, more than a year."
 
+    show yam surprised
+    with dissolve
     yamato "With...?"
 
-    shiori "As in {i}in love{/i}, Yamato=kun."
+    show shi happyblush
+    with dissolve
+    shiori "As in {i}in love{/i}, Yamato~"
 
+    show yam shocked
+    with dissolve
     yamato "Wha--"
 
+    show yam rage
+    with dissolve
     yamato "WHAAAAAAAAAAAAAAAAAAT!? The hell did ya just say?!"
     yamato "Ya mean t’tell me, all this time... you and that idiot were--?"
 
+    show hik sad
+    with dissolve
     hikaru "Yes. [persistent.player_name] was my partner. My... {w}lover."
 
-    n "Shiori tilts her head, her mouth curls into a mischievous smile."
+    n "Shiori tilts her head, her mouth curling into a mischievous smile. Yamato’s voice cracks, rough with something like betrayal."
 
+    show shi smug
+    with dissolve
     shiori "Ehehe... I had my suspicions~"
     shiori "You two were always soooo awkward around each other, all blushy and stuff. I thought maybe..."
 
+    show yam annoyed
+    with dissolve
     yamato "Tch... t’hell... Why the secrets, then?"
 
+
     hikaru "Because of my father, the man who was branded a traitor. No one would accept me with [persistent.player_name]."
+
+    show hik sad with dissolve
     hikaru "So we kept it hidden, even from you guys."
     hikaru "I'm... sorry about that."
 
-    n "Hikaru’s voice cracks, but Shiori just waves her hand as if she doesn't care."
-
+    show hik worried with dissolve
     hikaru "So... That's why I know it's not [persistent.player_name], because [persistent.player_name] didn't even know we're together."
     hikaru "Because only the two of us are supposed to know."
     hikaru "This... thing wears their face, but it is {i}not{/i} [persistent.player_name]."
 
-    n "The shrine is silent again for a while, save Yamato’s ragged breath."
-
+    show yam shocked with dissolve
+    # Shiori stays normal for transition
     shiori "...Then what will you do, Hikaru?"
 
+    show hik serious with dissolve
     hikaru "I think... we cannot ignore it anymore."
     hikaru "Or we'll all die."
     hikaru "My theory... That [persistent.player_name] may be possessed by Yamakui. Or worse, [persistent.player_name]'s body has been stolen."
 
+    show yam angry with dissolve
     yamato "Tch... fuck... Don’t say it like that, Hikaru."
     yamato "But... yeah. I been thinkin’ the same damn thing. Somethin’s off. Ain’t just me bein’ jealous."
 
+    show shi sad with dissolve
     shiori "...I thought so to."
     shiori "But... I don't want to stop it."
 
+    show yam shocked with dissolve
     n "What? Did she just--?!"
 
+    show yam angry with dissolve
     yamato "...Oi. The hell did ya just say, Shiori-chan?"
 
+    show hik surprised with dissolve
     hikaru "Shiori-chan...?"
 
+    show shi worried with dissolve
     shiori "Because I think it's not that bad!"
     shiori "Do you remember that night where I was missing and you guys were looking for me?"
+
+    show shi sad with dissolve
     shiori "I was left in the forest that night... tied up, wrists bleeding, gagged. I was about to be sacrificed."
     shiori "I think... it was the old priest? Or maybe someone else. I forgot their face."
     shiori "But the Yamakui came and spared me, ate the priest instead! Even though I was the easier meal!"
 
+    show yam shocked with dissolve
     n "Bound in the forest? As a child...?"
 
+    show shi happyblush with dissolve
     shiori "That’s when I knew. Yamakui only eats bad people."
     shiori "I believe that it spares the ones it loves."
 
+    show yam rage with dissolve
     yamato "Ya’ve lost it. Ya’ve completely lost it, Shiori!"
 
+    show hik panic with dissolve
     hikaru "Shiori-chan, why didn't you tell us!?"
+
+    return
+
 
     shiori "Well, you know whoever that was eaten got forgotten, right? You'd just say I was crazy!"
 

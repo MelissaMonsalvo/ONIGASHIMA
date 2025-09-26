@@ -719,6 +719,9 @@ label LI_intro_noshiori:
 
     yamato "Tch. Look who finally shows up."
 
+    show hik happy
+    with dissolve
+
     hikaru "Welcome home, [persistent.player_name]-san."
 
     MC smug2 "Oi. That how you greet a hero?"
@@ -735,6 +738,9 @@ label LI_intro_noshiori:
 
     n "..."
 
+    show hik worried
+    with dissolve
+
     hikaru "...Don’t you forget something, [persistent.player_name]?"
 
     MC surprised2 "Huh? What, like a souvenir? I brought the armor, didn’t I?"
@@ -742,6 +748,9 @@ label LI_intro_noshiori:
     hikaru "...I see."
 
     n "Hikaru’s voice lowers, eyes drifting slowly to the armor."
+
+    show hik angry
+    with dissolve
 
     hikaru "...It's rather small for something like the Yamakui, isn’t it?"
 
@@ -764,7 +773,7 @@ label LI_intro_noshiori:
 
     n2 "...She is {w}D E A D."
 
-    show hik normal behind darken:
+    show hik angry behind darken:
 
         zoom 0.231
         yoffset 460
@@ -1040,6 +1049,9 @@ label LI_intro_noyamato:
 
     MC annoyed2 "Oi, rude. I’m tougher than I look."
 
+    show hik happy
+    with dissolve
+
     hikaru "Welcome home, [persistent.player_name]-san."
 
     n "There should be someone grumbling now, that you left them to fight the Yamakui all by yourself..."
@@ -1056,6 +1068,9 @@ label LI_intro_noyamato:
         xalign 0.44
 
     shiori "Muuuu, why are you so stingy, [persistent.player_name]???"
+
+    show hik sad
+    with dissolve
 
     hikaru "..."
 
@@ -1075,6 +1090,9 @@ label LI_intro_noyamato:
 
     shiori "Eh...? I don't think I have... {w}that...."
 
+    show hik angry
+    with dissolve
+
     hikaru "..."
 
     pause 0.5
@@ -1084,6 +1102,9 @@ label LI_intro_noyamato:
     hikaru "{w=0.5}...Do you feel like something’s missing?"
 
     MC nervous2 "Huh?"
+
+    show hik angry
+    with dissolve
 
     hikaru "I don’t know. I keep thinking there should be..."
 

@@ -1,18 +1,19 @@
 label loop3_hikaru:
 
+    $ hmask = True
+
     scene village day:
         zoom 0.5
     show darken
 
     n2 "tHe dOOrs aRe sHuT."
 
-    play sound "sfx/woodcreak.ogg"
 
     n2 "i sEe eYeS tHrOuGh thE sLatS."
 
     n2 "tHeY aRe WaTChIng..."
 
-    show hik normal behind darken:
+    show hik shocked behind darken:
         zoom 0.3
         xalign 0.65
         yalign 0
@@ -37,7 +38,7 @@ label loop3_hikaru:
 
     hikaru "{sc=5}That's [persistent.player_name]'s face...{/sc}"
 
-    show hik normal behind darken:
+    show hik rage behind darken:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -57,7 +58,7 @@ label loop3_hikaru:
 
     n "Don’t say it. Don’t remember. Don’t look--"
 
-    show hik normal behind darken:
+    show hik rage behind darken:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -90,7 +91,7 @@ label loop3_hikaru:
 
     play sound "sfx/whip.mp3"
 
-    show hik normal behind darken:
+    show hik rage behind darken:
         zoom 0.3
         xalign 0.55
         yalign 0
@@ -244,7 +245,7 @@ label loop3_hikaru:
     scene village day:
         zoom 0.5
 
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -271,7 +272,7 @@ label loop3_hikaru:
 
     hikaru "WHY--"
 
-    show hik normal behind darken:
+    show hik rage behind darken:
         zoom 0.25
         xalign 0.4
         xoffset 144
@@ -301,7 +302,7 @@ label loop3_hikaru:
 
     hikaru "Ngh--"
 
-    show hik normal behind darken:
+    show hik shocked behind darken:
         zoom 0.25
         xalign 0.4
         xoffset 144
@@ -317,7 +318,7 @@ label loop3_hikaru:
 
         pause 0.10
 
-    hikaru "Damn it, has the kami-sama abandoned us!?"
+    hikaru "Has the kami-sama abandoned us!?"
 
     MC happy3 "{size=+5}{color=#ff0000}Y E S.{/color}{/size}"
 
@@ -337,7 +338,7 @@ label loop3_hikaru:
 
     play sound "sfx/whip.mp3"
 
-    show hik normal behind darken:
+    show hik shocked behind darken:
         zoom 0.25
         xalign 0.4
         xoffset 144
@@ -401,7 +402,7 @@ label loop3_hikaru:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     show darken2
 
-    MC "Oh HikaRuuUuUUu~"
+    MC evil3 "Oh HikaRuuUuUUu~"
 
     scene village night:
         zoom 0.5
@@ -415,7 +416,8 @@ label loop3_hikaru:
         linear 0.15 zoom 0.69 xoffset 18
 
 
-    MC "ComE Out, cOmE ouT, wheReVer yOu ARe~"
+    MC evil3 "ComE Out, cOmE ouT, wheReVer yOu ARe~"
+
 
 
     scene black
@@ -433,9 +435,9 @@ label loop3_hikaru:
     show darken2
     with vpunch
 
-    MC "Khh-- {w}yoU GoT mE."
+    MC nervous3 "Khh-- {w}yoU GoT mE."
 
-    MC "BuT NoT ENouGH, BiRD."
+    MC evil3 "BuT NoT ENouGH, BiRD."
 
     scene village night:
         zoom 0.67
@@ -443,7 +445,7 @@ label loop3_hikaru:
         yalign 0.5
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-    show hik normal:
+    show hik panic:
         zoom 0.47
         align (0.5, 0.005)
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -465,19 +467,17 @@ label loop3_hikaru:
 
     play music "Goodbye.mp3"
 
-    MC "..."
+    MC sad3 "..."
 
-    MC "HeLp mE."
+    MC sad3 "Help me."
 
-    MC "Hikaru... please--"
+    MC sad3 "Hikaru... {w}please--"
 
-    play sound "sfx/hiccup_choke.ogg"
+    MC sad3 "I’m still in here--{w} they’re controlling me--"
 
-    MC "I’m still in here--{w} they’re controlling me--"
+    MC sad3 "You can still save me--"
 
-    MC "You can still save me--"
-
-    show hik normal behind darken2:
+    show hik panic behind darken2:
         zoom 0.25
         xalign 0.4
         yalign 0
@@ -502,7 +502,7 @@ label loop3_hikaru:
 
     hikaru "You’re lying--no, wait--"
 
-    MC "I don’t want to die, Hikaru..."
+    MC sadcl3 "I don’t want to die, Hikaru..."
 
     n "RUN..."
 
@@ -529,7 +529,7 @@ label loop3_hikaru:
         # Abrupt lunge to center, very fast
         linear 0.14 zoom 1.14
 
-    show hik normal behind darken2:
+    show hik madcry behind darken2:
         zoom 0.25
         xalign 0.4
         yalign 0
@@ -567,8 +567,6 @@ label loop3_hikaru:
 
     hikaru "{sc=1}I’ll see you again, right?{/sc}"
     hikaru "...The real you?"
-
-    play sound "sfx/heartbeat_soft.ogg"
 
     n "...Hikaru..."
 

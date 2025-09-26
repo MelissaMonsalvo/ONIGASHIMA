@@ -1,11 +1,13 @@
 label loop2_hikaru:
 
+    $ hsword = True
+
     play music "Battora.mp3"
 
     scene house night:
         zoom 0.5
 
-    show hik normal:
+    show hik rage:
         zoom 0.24
         xalign 0.4
         xoffset 120
@@ -36,7 +38,7 @@ label loop2_hikaru:
     show magic_circle at spin_forever behind hik:
         anchor (0.5, 0.5)
         pos (0.5, 0.5)
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -53,7 +55,7 @@ label loop2_hikaru:
 
     n2 "It's {i}useless.{/i}"
 
-    show hik normal:
+    show hik madcry:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -75,7 +77,7 @@ label loop2_hikaru:
 
     hikaru "{sc=5}Y-you stole [persistent.player_name]'s face, you monster...{/sc}"
 
-    show hik normal:
+    show hik madcry:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -130,7 +132,7 @@ label loop2_hikaru:
 
     MC "Why? As long as it's me,{w=0.2} you don't mind... Do you, Hikaru?"
 
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -174,7 +176,7 @@ label loop2_hikaru:
     n "With one simple swoosh of your hand,{w=0.2} the whole binding circle {glitch=8}shatters{/glitch}."
 
 
-    show hik normal:
+    show hik panic:
         zoom 0.3
         xalign 0.4
         xoffset 120
@@ -214,7 +216,7 @@ label loop2_hikaru:
 
     play sound "sfx/stumble.mp3"
 
-    show hik normal:
+    show hik panic:
         zoom 0.25
         xalign 0.4
         xoffset 120
@@ -230,7 +232,7 @@ label loop2_hikaru:
         pause 0.07
     play sound "sfx/run.mp3"
 
-    show hik normal:
+    show hik panic:
         zoom 0.25
         xalign 0.4
         xoffset 38
@@ -268,7 +270,7 @@ label loop2_hikaru:
         yoffset 400
     with dissolve
 
-    show hik normal at midleft :
+    show hik panic at midleft :
         zoom 0.25
         yoffset 100
         xzoom -1
@@ -280,12 +282,11 @@ label loop2_hikaru:
 
     "Woman" "What’s all the noise?"
 
-    show hik normal at midleft:
+    show hik panic at midleft:
         zoom 0.25
         yoffset 100
         xzoom -1
 
-        # Subtle, repeating panic shake (repeat or call again as needed)
         linear 0.08 xoffset -9
         linear 0.07 xoffset 8
         linear 0.08 xoffset -7
@@ -297,12 +298,11 @@ label loop2_hikaru:
 
     hikaru "{sc=1}It’s Yamakui!!!{/sc}{w} IT’S STILL HERE--"
 
-    show hik normal at midleft:
+    show hik panic at midleft:
         zoom 0.25
         yoffset 100
         xzoom -1
 
-        # Subtle, repeating panic shake (repeat or call again as needed)
         linear 0.08 xoffset -9
         linear 0.07 xoffset 8
         linear 0.08 xoffset -7
@@ -316,12 +316,11 @@ label loop2_hikaru:
 
     "Man" "...What?"
 
-    show hik normal at midleft:
+    show hik rage at midleft:
         zoom 0.25
         yoffset 100
         xzoom -1
 
-        # Subtle, repeating panic shake (repeat or call again as needed)
         linear 0.08 xoffset -9
         linear 0.07 xoffset 8
         linear 0.08 xoffset -7
@@ -333,12 +332,10 @@ label loop2_hikaru:
 
     hikaru "{sc=2}WE HAVE TO KILL THAT THING--THAT THING WEARING [persistent.player_name] !{/sc}"
 
-    show hik normal at midleft:
+    show hik panic at midleft:
         zoom 0.25
         yoffset 100
         xzoom -1
-
-        # Subtle, repeating panic shake (repeat or call again as needed)
         linear 0.08 xoffset -9
         linear 0.07 xoffset 8
         linear 0.08 xoffset -7
@@ -364,12 +361,11 @@ label loop2_hikaru:
 
     hikaru "{color=#ff002e}NO!{/color}"
 
-    show hik normal at midleft:
+    show hik rage at midleft:
         zoom 0.25
         yoffset 100
         xzoom -1
 
-        # Subtle, repeating panic shake (repeat or call again as needed)
         linear 0.08 xoffset -9
         linear 0.07 xoffset 8
         linear 0.08 xoffset -7
@@ -400,7 +396,7 @@ label loop2_hikaru:
         pause 0.07
         linear 0.10 xpos 0.7
 
-    show hik normal at midleft:
+    show hik shocked at midleft:
         zoom 0.25
         yoffset 100
         xzoom -1
@@ -436,7 +432,7 @@ label loop2_hikaru:
 
     MC nervous2 "But...{w=0.2} I think Hikaru's gone mad. Just like Karasuma-san."
 
-    show hik normal at midleft:
+    show hik shocked at midleft:
         zoom 0.25
         yoffset 100
         xoffset -100
@@ -468,7 +464,7 @@ label loop2_hikaru:
         xpos 0.7
         linear 0.16 xpos 0.8
         linear 0.13 xpos 1.1 alpha 0.0
-    show hik normal at midleft:
+    show hik shocked at midleft:
         zoom 0.25
         yoffset 100
         xoffset -100
@@ -554,7 +550,7 @@ label loop2_hikaru:
     scene forest night:
         zoom 0.5
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
-    show hik normal:
+    show hik panic:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.47
         align (0.5, 0.005)
@@ -580,9 +576,12 @@ label loop2_hikaru:
 
     n2 "{b}Like that will help.{/b}"
 
+    show hik madcry
+    with dissolve
+
     hikaru "I don’t care if I die."
 
-    show hik normal:
+    show hik madcry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.25
         xalign 0.4
@@ -604,6 +603,7 @@ label loop2_hikaru:
 
     MC smug2 "Why don't you try...?"
 
+
     hikaru "Kami-sama should’ve struck you down--"
 
     hikaru "But they didn’t.{w=0.2} Just like the rest of them--those cowards back in the village."
@@ -614,7 +614,7 @@ label loop2_hikaru:
 
     hikaru "{color=#ff002e}They left me ALONE--!{/color}"
 
-    show hik normal:
+    show hik madcry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.25
         xalign 0.4
@@ -633,7 +633,7 @@ label loop2_hikaru:
 
     hikaru "{sc=3}A L O N E--!!{/sc}"
 
-    show hik normal:
+    show hik madcry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.25
         xalign 0.4
@@ -668,7 +668,7 @@ label loop2_hikaru:
 
     hikaru "You want me?"
 
-    show hik normal:
+    show hik rage:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.25
         xalign 0.4
@@ -721,6 +721,8 @@ label loop2_hikaru:
 
     play sound "sfx/pain.mp3"
     hikaru "{sc=7}Aahh--ghhk--{/sc}"
+
+    show hik rage
 
     show darken2
     with dissolve

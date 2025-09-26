@@ -36,7 +36,7 @@ label loop1_hikaru_mandatory1:
 
     scene shrine day with out_32:
         zoom 0.5
-    show hik normal:
+    show hik happy:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -69,6 +69,9 @@ label loop1_hikaru_mandatory1:
 
     hikaru "Surprise."
 
+    show hik worried
+    with dissolve
+
     hikaru "..."
 
     MC nervous "..."
@@ -77,7 +80,7 @@ label loop1_hikaru_mandatory1:
 
     n "This... {w=0.2}this part doesn’t feel familiar. But it sounds like it should be."
 
-    show hik normal:
+    show hik worried:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -93,7 +96,7 @@ label loop1_hikaru_mandatory1:
         yalign 0.5
 
         ease 0.5 zoom 0.55
-    show hik normal:
+    show hik worried:
         zoom 0.5
         xanchor 0.5
         xalign 0.4
@@ -111,6 +114,9 @@ label loop1_hikaru_mandatory1:
 
     MC normal "Yeah, I'm fine. Can you step back?"
 
+    show hik shocked
+    with dissolve
+
     hikaru "Eh?"
 
     n "Wait. Why did you say that?"
@@ -118,6 +124,9 @@ label loop1_hikaru_mandatory1:
     hikaru "Are you mad of me because I said the armor's too small?"
 
     MC surprised "What?"
+
+    show hik sad
+    with dissolve
 
     hikaru "You’ve been off ever since you've returned from slaying the Yamakui..."
 
@@ -129,6 +138,9 @@ label loop1_hikaru_mandatory1:
 
     MC nervous "{bt=1}I don’t know why this feels so strange right now.{/bt}"
 
+    show hik angry
+    with dissolve
+
     hikaru "But you remember what we are, {w=0.2}right?"
 
     n "Your stomach turns. What are you supposed to say to that?"
@@ -139,7 +151,7 @@ label loop1_hikaru_mandatory1:
 
     hikaru "Really now?"
 
-    show hik normal:
+    show hik angry:
         zoom 0.4
         xanchor 0.5
         xalign 0.4
@@ -155,7 +167,13 @@ label loop1_hikaru_mandatory1:
 
     MC confused "{size=*0.95}Hikaru, when did we...?{/size}"
 
+    show hik normal
+    with dissolve
+
     hikaru "...got together?"
+
+    show hik happycl
+    with dissolve
 
     hikaru "Our anniversary is next month, Dummy. Or did you forget that, too?"
 
@@ -166,6 +184,9 @@ label loop1_hikaru_mandatory1:
     n "You can find out later."
 
     MC nervous "{w=0.2}Right. I remember."
+
+    show hik worried
+    with dissolve
 
     hikaru "Do you? {w=0.2}Did the Yamakui knock your head so hard you had amnesia?"
 
@@ -189,11 +210,17 @@ label loop1_hikaru_mandatory1:
 
     n "Hikaru's expression sharpens for half a second before settling back into softness."
 
+    show hik ex_blush
+    with dissolve
+
     hikaru "I missed you so much, [persistent.player_name]..."
 
     hikaru "I'm really glad you got to return, even though you're...{w=0.1} weird now."
 
     MC sad "Yeah. I’m sorry."
+
+    show hik sad
+    with dissolve
 
     hikaru "Don't be. I think... {w}I think you just need to rest."
 
@@ -213,7 +240,7 @@ label loop1_hikaru_mandatory1:
         yalign 0.5
 
         ease 0.5 zoom 0.5
-    show hik normal:
+    show hik sad:
         zoom 0.48
         xanchor 0.5
         xalign 0.4
@@ -244,9 +271,11 @@ label loop1_hikaru_mandatory1:
 
 label loop1_hikaru_mandatory2:
 
+    $ hsword = True
+
     scene dojo day with in_182:
         zoom 0.5
-    show hik normal:
+    show hik serious:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -257,26 +286,25 @@ label loop1_hikaru_mandatory2:
 
     hikaru "Hey."
 
-    n "Hikaru is wearing a scarf today while they're training, it looks a little worn at the ends, but clearly they took care of it."
+    n "Hikaru is training today, their scarf is billowing eveyr time they move."
 
-    n "You’ve seen it before. Haven’t you?"
+    n "You wonder why they are wearing a scarf. Isn't it unconvenient for battles?"
 
-    MC annoyed "Is that new?"
+    MC annoyed "Why do you wear a scarf to battle?"
+
+    show hik worried
+    with dissolve
 
     hikaru "...Huh?"
 
     n "Hikaru's eyes alternate between you and the scarf, brows furrowing, as if you're asking a ridiculous question."
-
-    hikaru "You mean the scarf?"
-
-    MC normal "Yeah."
 
     play music "Tense.ogg"
 
     show darken
     with dissolve
 
-    hikaru "[persistent.player_name], you gave it to me."
+    hikaru "It's because you gave it to me."
 
     MC surprised "...I did?"
 
@@ -284,9 +312,12 @@ label loop1_hikaru_mandatory2:
 
     MC annoyed "...I really don’t remember."
 
+    show hik shocked
+    with dissolve
+
     hikaru "...What?"
 
-    show hik normal:
+    show hik shocked:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -310,7 +341,7 @@ label loop1_hikaru_mandatory2:
 
     n "Wrong thing to say."
 
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -339,7 +370,7 @@ label loop1_hikaru_mandatory2:
 
     hikaru "{k=-1}But not {w}{i}me?{/i}{/k}"
 
-    show hik normal:
+    show hik rage:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -368,7 +399,7 @@ label loop1_hikaru_mandatory2:
 
 
 
-    show hik normal behind darken2:
+    show hik rage behind darken2:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -393,6 +424,9 @@ label loop1_hikaru_mandatory2:
 
     hikaru "{sc=3}--and it gave you hope that we'll get through it!{/sc}"
 
+    show hik panic
+    with vpunch
+
     hikaru "You said I looked beautiful in it. {b}You said--{/b}"
 
     MC panic "{size=*0.95}{cps=30}Hikaru, I... {w}I don’t know what’s happening.{/cps}{/size}"
@@ -415,16 +449,22 @@ label loop1_hikaru_mandatory2:
 
     MC surprised "{cps=40}Why?{/cps}"
 
+    show hik rage
+    with vpunch
+
     hikaru "*scoffs*"
 
     hikaru "{size=*0.95}...You're scaring me.{/size}"
 
     MC hurt "{w=0.2}You’re the one scaring me."
 
+    show hik sad
+    with dissolve
+
     hikaru "{k=-1}...This isn't you.{/k}"
 
 
-    show hik normal behind darken2:
+    show hik panic behind darken2:
         zoom 0.55
         xanchor 0.5
         xalign 0.5
@@ -450,7 +490,7 @@ label loop1_hikaru_mandatory2:
 
     n "Hikaru stares at you, breathing hard. Their face contorts into something... Is it grief? Suspicion? Anger?"
 
-    show hik normal behind darken2:
+    show hik panic behind darken2:
         zoom 0.55
         xanchor 0.5
         xalign 0.5
@@ -467,10 +507,9 @@ label loop1_hikaru_mandatory2:
 
         linear 0.4 zoom 0.3 yoffset 120 xoffset -60 alpha 0.0
 
-    # Remain gone
     pause 0.5
 
-    hide hik normal
+    hide hik
 
     n "Before you could make something out of it, they turn and storm off."
 
@@ -486,6 +525,8 @@ label loop1_hikaru_mandatory3:
     scene village day with in_182:
         zoom 0.5
     with fade
+
+    $ hsword = False
 
     pause
 
@@ -527,9 +568,15 @@ label loop1_hikaru_mandatory3:
 
     MC annoyed "What do you want now?"
 
+    show hik sad
+    with dissolve
+
     hikaru "Sorry for yelling at you yesterday, I was... {w=0.2}frustrated."
 
     MC normal "..."
+
+    show hik serious
+    with dissolve
 
     hikaru "I asked for help and Shiori told me to give this to you."
 
@@ -566,7 +613,7 @@ label loop1_hikaru_mandatory3:
 
     n "You pocket it and the odd smell dissapears immediately."
 
-    show hik normal:
+    show hik panic:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -607,13 +654,22 @@ label loop1_hikaru_mandatory3:
     $ decrease_music_volume(0.5)
     $ renpy.block_rollback()
 
+    show hik worried
+    with dissolve
+
     hikaru "{cps=50}I was hoping it would react.{/scps}"
 
     MC surprised "{w=0.2}React?"
 
+    show hik panic
+    with dissolve
+
     hikaru "{k=-1}I mean--help. {w}I meant {i}help.{/i}{/k}"
 
     MC annoyed "Where did Shiori get this, again?"
+
+    show hik serious
+    with dissolve
 
     hikaru "She said the old priest gave it to her."
 
@@ -648,6 +704,9 @@ label loop1_hikaru_mandatory3:
 
 
     ## uncomfortable silence
+
+    show hik sad2
+    with dissolve
 
     hikaru "It doesn’t matter. I hope it'll get your memory back someday, maybe it... doesn't work immediately."
 
@@ -737,6 +796,8 @@ label loop1_hikaru_mandatory3:
     #return
 
 label loop1_hikaru_mandatory4:
+
+    $ hmask = False
 
     scene house night:
         zoom 0.5
@@ -829,7 +890,7 @@ label hikaru_visit_continued:
 
     pause 0.3
 
-    show hik normal:
+    show hik serious:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -846,7 +907,7 @@ label hikaru_visit_continued:
 
     MC normal "Hey, hikaru. Did you need something?"
 
-    hikaru "I was just walking by... and wondered if I should, uh, pay a visit."
+    hikaru "I was just walking by... {w=0.1}and wondered if I should, uh, pay a visit."
 
     n "That's not true."
 
@@ -874,6 +935,9 @@ label hikaru_doorclose:
 
     MC sad "It's a bad time... Sorry."
 
+    show hik sad
+    with dissolve
+
     hikaru "Oh, I-I see. My apologies for intruding."
 
     play sound "sfx/doorslam.wav"
@@ -899,6 +963,9 @@ label hikaru_inside:
 
     MC sad "Sorry it's messy."
 
+    show hik happy
+    with dissolve
+
     hikaru "It's a lot cleaner than usual, actually."
 
     hikaru "Or do you not remember that too?"
@@ -908,6 +975,9 @@ label hikaru_inside:
     n "You don't remember ever inviting them, though. Odd."
 
     n "Well, that doesn't matter."
+
+    show hik serious
+    with dissolve
 
     hikaru "{w=0.2}...Is the armor still here?"
 
@@ -938,13 +1008,20 @@ label hikaru_armorrefuse:
 
     MC normal "I'm trying to understand it before anyone else gets hurt."
 
+
     hikaru "{w=0.3}...Hmm."
+
+    show hik normal
+    with dissolve
 
     hikaru "I see. But if the Yamakui's dead, then it should be safe, right?"
 
     hikaru "And... {w=0.3}If it’s really that dangerous, why keep it at all?"
 
     MC smug "Because I slayed the damn thing. If anyone's protecting the village from it, it should be {b}me.{/b}"
+
+    show hik worried
+    with dissolve
 
     hikaru "..."
 
@@ -954,7 +1031,7 @@ label hikaru_armorrefuse:
 
     n "They turn to leave, but hesitates just past your shoulder."
 
-    show hik normal:
+    show hik worried:
         linear 0.5 xzoom -1
 
     hikaru "...Still, be careful. Things like that tend to change people."
@@ -978,7 +1055,7 @@ label hikaru_armor:
 
     MC normal "Fine, I guess just a peek wouldn't hurt."
 
-    hide hik normal
+    hide hik serious
     with dissolve
 
     scene house night:
@@ -1022,11 +1099,17 @@ label hikaru_armor:
 
     MC normal "All right, since you're here... {w}Want some tea?"
 
+    show hik happy
+    with dissolve
+
     hikaru "Oh, speaking of tea... {w=0.1}I brought some for you."
 
     MC happycl "Oh, thank you."
 
     n "You brew the tea hikaru gave you. It looks like a perfectly normal green tea."
+
+    show hik normal
+    with dissolve
 
     hikaru "Shiori said to add the dried ume and dried kombu before you pour the tea over."
 
@@ -1058,9 +1141,15 @@ label hikaru_teareject:
 
     n "You decide not to."
 
+    show hik worried
+    with dissolve
+
     hikaru "What's wrong?"
 
     MC "Nothing. I'm... {w=0.1}full."
+
+    show hik normal
+    with dissolve
 
     hikaru "Hmm."
 
@@ -1084,9 +1173,15 @@ label hikaru_teareject:
 
     MC nervous "You should probably head back."
 
+    show hik serious
+    with dissolve
+
     hikaru "Yes. {w}Of course."
 
     n "Hikaru places the empty cup slowly on the table, eyes never leaving yours."
+
+    show hik smilesad
+    with dissolve
 
     hikaru "Thanks for... letting me see the armor."
 
@@ -1134,6 +1229,9 @@ label hikaru_teadrink:
     show haze_effect at haze_transform
     with dissolve
 
+    show hik normal
+    with dissolve
+
     hikaru "Well?"
 
     n "The cup touches your lips, and you immediately drink it."
@@ -1163,6 +1261,9 @@ label hikaru_teadrink:
 
     MC hurt "{cps=10}...Aah--{/cps}"
 
+    show hik worried
+    with dissolve
+
     hikaru "Is it too strong for you?"
 
     MC nervous "{size=*0.9}...No. It’s... {w=0.2}{cps=10}fine.{/cps}{/size}"
@@ -1176,11 +1277,17 @@ label hikaru_teadrink:
 
     n "Down, down, down from your throat, into your chest, then ripping your gut apart."
 
+    show hik panic
+    with dissolve
+
     hikaru "Are you okay, [persistent.player_name]?"
 
     MC sad "{cps=10}...I'm... {w}fine...{/cps}"
 
     hikaru "Really? You look... mortified."
+
+    show hik worried
+    with dissolve
 
     hikaru "If you hated it that much, maybe--"
 
@@ -1189,6 +1296,7 @@ label hikaru_teadrink:
     with dissolve
 
     play sound "sfx/gulp.wav"
+    show hik shocked
     with flashred
 
     MC mad "{b}I'M FINE.{/b}"
@@ -1216,6 +1324,9 @@ label hikaru_teadrink:
 
     MC nervous "{cps=10}...Hhh--D-Did you say what this was? I didn't remember--{/cps}"
 
+    show hik worried
+    with dissolve
+
     hikaru "You drank it last year, and before that. On fact, the four of us did."
 
     hikaru "Remember the new year's celebration?"
@@ -1232,7 +1343,9 @@ label hikaru_teadrink:
     MC nervous "{k=-1}Oh, really? Uh, what did--What did we drink again?{/k}"
 
     stop music
+    show hik normal
     play sound "sfx/suzu.mp3"
+    with vpunch
 
     hikaru "It’s only Obukucha, [persistent.player_name]-san."
 
@@ -1244,13 +1357,16 @@ label hikaru_teadrink:
 
     MC normal "{w=0.2}You should probably head out. It’s late."
 
+    show hik smilesad
+    with dissolve
+
     hikaru "Of course."
 
     hikaru "Feel better soon, okay?"
 
     MC normal "{size=*0.9}...Mm.{/size}"
 
-    show hik normal behind darken2:
+    show hik smilesad behind darken2:
         zoom 0.3
         xanchor 0.5
         xalign 0.5
@@ -1263,6 +1379,8 @@ label hikaru_teadrink:
 
         linear 0.4 zoom 0.3 yoffset 120 xoffset -60 alpha 0.0
     play sound "sfx/sliding door.mp3"
+
+    $ hmask = True
 
 
 
@@ -1354,6 +1472,8 @@ label hikaru_teadrink:
 
 label loop1_hikaru_mandatory5:
 
+    $ ysword = False
+
     play music "Idle.mp3"
 
     scene shrine day with in_212:
@@ -1383,13 +1503,23 @@ label loop1_hikaru_mandatory5:
 
     shiori "Ara~ Good morning [persistent.player_name]-sama!"
 
+    show yam serious
+    with dissolve
+
     yamato "Tch..."
 
     MC normal "Shiori-chan, I have something to ask you. Might as well ask Yamato as well."
 
+    show shi smug
+    with dissolve
+
     shiori "Oho~? Sounds serious."
 
     MC nervous "...Was I ever... {w}with hikaru?"
+
+    show shi surprised
+    show yam surprised
+    with vpunch
 
     shiori "Eh?"
 
@@ -1403,9 +1533,12 @@ label loop1_hikaru_mandatory5:
 
     shiori "Did something happen, [persistent.player_name]-sama?"
 
+    show yam happy
+    with dissolve
+
     yamato "Pffft... Keh."
 
-    show yam normal at left:
+    show yam happycl at left:
         zoom 0.23
         xanchor 0.5
         yalign -0.04
@@ -1423,12 +1556,16 @@ label loop1_hikaru_mandatory5:
 
     yamato "{sc=8}AhahahaHHAHAHhahaha!{/sc}"
 
+
     yamato "{k=-1}[persistent.player_name]? With hikaru!?{/k}"
 
     MC annoyed "{size=*0.95}What's that supposed to mean?{/size}"
 
     yamato "{b}No fuckin' way!{/b}"
     with vpunch
+
+    show yam evil
+    with dissolve
 
     yamato "You’re loud and anoying. Hikaru won't talk unless ya kill 'er pet or somethin'!"
 
@@ -1453,14 +1590,25 @@ label loop1_hikaru_mandatory5:
         linear 0.05 xoffset 8
 
         ease 0.2 xoffset 0
+    show shi annoyed
+    with vpunch
 
     shiori "{cps=12}Yamato-kun~ don’t be rude!{/cps}"
+
+    show yam annoyed
+    with dissolve
 
     yamato "Oi, I’m just sayin’ the truth."
 
     yamato "{k=-1}If you two were hidin’ somethin’, I’d have noticed. Shiori too.{/k}"
 
+    show shi worried
+    with dissolve
+
     shiori "{cps=12}Mm... I think so, right?{/cps}"
+
+    show yam serious
+    with dissolve
 
     yamato "{bt=1}Did the Yamakui hit yer head so hard ya start hallucinating a damn relationship?{/bt}"
 
@@ -1493,7 +1641,7 @@ label loop1_hikaru_mandatory5:
 
     "Woman" "Please... I pray [persistent.player_name]-sama doesn’t get too close to that one..."
 
-    show yam normal:
+    show yam angry:
         zoom 0.23
         xanchor 0.5
         yalign -0.04
@@ -1519,7 +1667,7 @@ label loop1_hikaru_mandatory5:
 
     "Granny" "How would you know that?"
 
-    show shi normal at right, bounci:
+    show shi annoyed at right, bounci:
         zoom 0.26
         xanchor 0.5
         xalign 0.5
@@ -1539,6 +1687,8 @@ label loop1_hikaru_mandatory5:
 
     play sound "sfx/shing.wav"
     with vpunch
+
+    $ ysword = True
 
     n "Yamato unsheathes his blade. Just a little."
 
