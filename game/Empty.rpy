@@ -2,6 +2,7 @@ label empty_village_day:
     scene village day:
         zoom 0.5
     n "No one is here..."
+    jump map
     return
 
 label empty_village_night:
@@ -83,12 +84,14 @@ label empty_village_night:
         with fade
 
         stop sound
+    jump map
     return
 
 label empty_house_day:
     scene house day:
         zoom 0.5
     n "No one is here..."
+    jump map
     return
 
 label empty_house_night:
@@ -170,13 +173,14 @@ label empty_house_night:
         with fade
 
         stop sound
-    return
+    jump map
     return
 
 label empty_forest_day:
     scene forest day:
         zoom 0.5
     n "No one is here..."
+    jump map
     return
 
 label empty_forest_night:
@@ -258,13 +262,14 @@ label empty_forest_night:
         with fade
 
         stop sound
-    return
+    jump map
     return
 
 label empty_shrine_day:
     scene shrine day:
         zoom 0.5
     n "No one is here..."
+    jump map
     return
 
 label empty_shrine_night:
@@ -346,13 +351,14 @@ label empty_shrine_night:
         with fade
 
         stop sound
-    return
+    jump map
     return
 
 label empty_dojo_day:
     scene dojo day:
         zoom 0.5
     n "No one is here..."
+    jump map
     return
 
 label empty_dojo_night:
@@ -434,4 +440,5 @@ label empty_dojo_night:
         with fade
 
         stop sound
+    jump map
     return
