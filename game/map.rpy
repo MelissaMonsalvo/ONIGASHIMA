@@ -173,14 +173,10 @@ screen map_screen():
             # Obtener posición en el mapa
             $ pos_x, pos_y = location_positions.get(char_location, (0, 0))
 
-            # Ajustar posición para el icono (centrado)
-            $ icon_x = pos_x - 50  # Ajusta según el tamaño de tus iconos
-            $ icon_y = pos_y - 50  # Ajusta según el tamaño de tus iconos
+            $ icon_x = pos_x + 150   # 284 = button width, 16 = margin
 
-            # Desplazamiento para evitar encimarse
-            $ offset_x = i * 50   # 20 px de separación horizontal
-
-            $ icon_x += offset_x
+            # button height 122, icon height 150 so like
+            $ icon_y = pos_y + (122 // 2) - (150 // 2)
 
 
             $ character_icons = character_icons_yellow if persistent.loop1 else character_icons_red
@@ -208,10 +204,16 @@ screen map_screen():
         yalign 0.5
         xpadding 50
         ypadding 50
+        xsize 600
+        ysize 250
+        background "map/question_frame.png"   # <- This sets your custom image
 
         vbox:
-            label "Map - Day [current_Day] - [current_time_block]"
-            text "Where do you want to go?"
+            xalign 0.5
+            yalign 0.5
+            spacing 10
+            label "Day [current_Day]" xalign 0.5
+            text "Where do you want to go?" xalign 0.5
 
 
 
