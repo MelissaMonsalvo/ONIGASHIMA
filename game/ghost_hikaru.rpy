@@ -130,7 +130,7 @@ label ghost_hikaru_2:
 
     # Jumpscare position (sudden front face)
     show ghost_hikaru idle at c_show_9 with vpunch
-    
+
     ## screen shakes
 
     #$ renpy.pause(0.5)
@@ -187,20 +187,20 @@ label ghost_hikaru_3:
                 MC "What should i do?"
                 "Pull their hands away" :
                     "Nothing happend."
-                    jump ghost_hikaru_3_next 
+                    jump ghost_hikaru_3_next
                 "Kick them":
                     "Nothing happend."
-                    jump ghost_hikaru_3_next 
+                    jump ghost_hikaru_3_next
         "Kick them":
             "Nothing happend."
             menu:
                 MC "What should i do?"
                 "Pull their hands away" :
                     "Nothing happend."
-                    jump ghost_hikaru_3_next 
+                    jump ghost_hikaru_3_next
                 "Kick them":
                     "Nothing happend."
-                    jump ghost_hikaru_3_next 
+                    jump ghost_hikaru_3_next
 
     label ghost_hikaru_3_next:
 
@@ -264,7 +264,7 @@ label ghost_hikaru_4:
     n "You can't make the edges anymore."
 
     hikaru "{cps=9}I know that voice, but not that look...{/cps}"
-    
+
     show normal_hikaru normal at c_show_16
     show ghost_hikaru attack at c_show_17
     ## hikaru's normal sprite dissolves to their ghost sprite slowly
@@ -372,7 +372,9 @@ label ghost_hikaru_5:
 
     ## show hikaru's ghost but only shadowed
     hide ghost_hikaru with fade
-    show ghost_hikaru normal shadow at c_show_21
+    show ghost_hikaru normal at c_show_21:
+        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
+
 
     $ renpy.pause(2.0)
 

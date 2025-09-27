@@ -20,10 +20,11 @@ label ghost_yamato_1:
     # Yamato ghost jumpscare
     # show yamato_ghost_attack >> appears, zoomos in to your face, then dissapears
 
+    show ghost_yamato normal at c_show_31
 
-    $ renpy.pause(0.4)
+    $ renpy.pause(1.2)
 
-    hide yamato_ghost_attack with dissolve
+    #hide yamato_ghost_attack with dissolve
     stop sound fadeout 0.5
     stop music fadeout 1.5
 
@@ -37,7 +38,8 @@ label ghost_yamato_1:
 
 label ghost_yamato_2:
 
-    # Yamato’s ghost slowly slides from behind screen, his limbs first, then his head comes to view , unsettlign crawl onamotopeia text, squelch squelch, black liquid drips from his mouth
+    # Yamato’s ghost slowly slides from behind screen, his limbs first, then his head comes to view ,
+    # unsettlign crawl onamotopeia text, squelch squelch, black liquid drips from his mouth
 
     $ ghost_yamato_2 = True
 
@@ -47,16 +49,19 @@ label ghost_yamato_2:
     $ renpy.pause(1.5)
 
     # Limb 1 slides in
+    show ghost_yamato normal at c_show_37
     show text "{cps=5}{size=+10}{color=#222}Squelch...{/color}{/size}" at Position(xpos=0.65, ypos=0.75) zorder 100
-    $ renpy.pause(1.2)
+    $ renpy.pause(3.5)
     hide text
 
     # Limb 2 slides in
+    show ghost_yamato normal at c_show_38
     show text "{cps=5}{size=+10}{color=#111}Squelch...{/color}{/size}" at Position(xpos=0.6, ypos=0.78) zorder 100
-    $ renpy.pause(1.0)
+    $ renpy.pause(2.5)
     hide text
 
     # Head slides into view
+    show ghost_yamato normal at c_show_39
     show text "{cps=4}{size=+12}{color=#000000}Sssqqquueellchh...{/color}{/size}" at Position(xpos=0.58, ypos=0.74) zorder 101
     $ renpy.pause(1.5)
     hide text
@@ -68,6 +73,7 @@ label ghost_yamato_2:
     ### everything dissapears
 
     scene black with fade
+    hide ghost_yamato with fade
     $ renpy.pause(1.0)
 
     n "You don’t want to know what it tasted like."
@@ -79,9 +85,13 @@ label ghost_yamato_3:
     # players must free themselves by clicking the screen several times (advancing dialogue)
     # show zoomed in to yamato ghost face but it's veyr blurry and shakey
 
+    scene house night at c_show_33
+
     n "The night is young."
 
     n "You close your eyes."
+
+    show black_screen with fade
 
     $ renpy.pause(1.0)
 
@@ -96,24 +106,33 @@ label ghost_yamato_3:
     # First moment: panic starts
     ## you open your eyes, yamato's ghost face is zoomed in and shakey
 
+    hide black_screen with fade
+
+    show ghost_yamato normal at c_show_32
+
     ## first click
     play sound "sfx/gasp1.ogg"
     MC "{size=+10}{cps=6}Ghhk--{/cps}"
 
     ## second click
+    show ghost_yamato with vpunch
     n "{cps=7}Y-You--can’t--breathe--{/cps}"
 
     ## third click
     MC "Ah--Haaaa--!!!!"
 
     ## fourth click
+    show ghost_yamato with vpunch
     n "{cps=6}WHO ARE YOU--{/cps}"
 
     ## fifth click
     MC "{color=#111}{size=+12}Gghkh--!!{/size}{/color}"
 
     ### sicth click
+    show ghost_yamato with vpunch
     MC "MOVE--{w}MOVE--{w}Get--off--"
+
+    hide ghost_yamato normal with fade
 
     ## yamato dissapears
 
@@ -127,9 +146,14 @@ label ghost_yamato_3:
 
 label ghost_yamato_4:
 
-    # the day of the red moon and you are forced to relieve your betrayal, with Yamato about to kiss you, but in his ghostly form, everything melts, his mouth starts dripping in
+    # the day of the red moon and you are forced to relieve your betrayal,
+    # with Yamato about to kiss you, but in his ghostly form, everything melts, his mouth starts dripping in
 
     $ ghost_yamato_4 = True
+
+    scene village night:
+        zoom 0.5 alpha 0
+        linear 1 alpha 1
 
     n "..."
 
@@ -138,6 +162,7 @@ label ghost_yamato_4:
     n "The moon's already red..."
 
     ## yamato's ghost sprite is right in front of you
+    show ghost_yamato normal at c_show_34
     $ renpy.pause(1.0)
 
     yamato "{cps=14}LoOk... iF ThIs iSN’t wHaT yA wANt...{/cps}"
@@ -149,6 +174,8 @@ label ghost_yamato_4:
     n "Your mouth stays closed. {w}Head tilts slightly. {w}Fingers lie frozen."
 
     play sound "sfx/shift_closer.ogg"
+
+    show ghost_yamato normal at c_show_35
 
     n "He leans in..."
 
@@ -174,9 +201,13 @@ label ghost_yamato_4:
 
     yamato "{cps=8}{size=+6}--mghh--{/size}{/cps}"
 
+    show ghost_yamato normal with vpunch
+
     ## the screen shakes with red and black, frantic
 
     $ renpy.pause(0.3)
+
+    show ghost_yamato normal at c_show_36
 
     n "His body jerks, and scrapes against yours. Nails searching for escape."
 
@@ -188,11 +219,15 @@ label ghost_yamato_4:
 
     ## RETCHING SOUND
 
+    show black_screen with fade
+
     ## black
 
     n "Then darkness."
 
     n "Was that a dream?"
+
+    return
 
 label ghost_yamato_5:
 
@@ -200,11 +235,17 @@ label ghost_yamato_5:
 
     $ ghost_yamato_5 = True
 
+    scene house night at c_show_33
+
     n "You’re sitting...{w} Wait."
 
     n "Did the floor rise up, or did your knees fold without asking?"
 
     ## show your home and yamato's ghost sprite
+
+    show ghost_yamato normal at c_show_40
+    pause 1.0
+    show ghost_yamato normal at c_show_41
 
     n "Yamato has prepared a meal."
 
@@ -218,6 +259,9 @@ label ghost_yamato_5:
 
     ## camera zooms in to yamato's ghost
 
+    show ghost_yamato normal at c_show_42
+    pause 0.5
+    show ghost_yamato normal at c_show_41
     yamato "{size=+6}{cps=7}Heh... THat’S bEttER.{/cps}{/size}"
 
     play sound "sfx/bowl_placed.ogg"
@@ -270,7 +314,7 @@ label ghost_yamato_5:
     MC "GAH--"
 
     MC "Hahh... Hahh..."
-
+    hide ghost_yamato normal with fade
     n "You open your eyes and your room is back to normal."
 
     MC "Blerghhhhh--"

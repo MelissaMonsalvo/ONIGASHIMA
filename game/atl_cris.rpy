@@ -6,9 +6,9 @@ transform c_show_1: #fade slowly at center
     delay 3.0
     xalign 0.5 yalign 0.5
     zoom 0.1
-    alpha 0.1    
+    alpha 0.1
     linear 0.5 alpha 1.0 zoom 0.17
-    
+
 
 transform c_show_2: #fade slowly at center
     linear 0.8 xalign 0.5 yalign 0.5  zoom 0.17
@@ -16,7 +16,7 @@ transform c_show_2: #fade slowly at center
 transform c_show_3: #fade and glitching
     xalign 0.5 yalign 0.5
     zoom 0.1
-    alpha 0.1    
+    alpha 0.1
     linear 0.5 alpha 1.0 zoom 0.13
 
     xzoom 0.2 yzoom 0.7 yalign 0.2
@@ -91,7 +91,7 @@ transform c_show_16:
     linear 1 alpha 0.0
 
 transform c_show_17:
-    alpha 0.0 zoom 0.17 xalign 0.5 yalign 0.5 
+    alpha 0.0 zoom 0.17 xalign 0.5 yalign 0.5
     pause 1.2
     linear 1 alpha 1.1 xalign 0.5 yalign 0.5
 
@@ -106,7 +106,7 @@ transform c_show_20:
     linear 1.0 zoom 0.18
 
 transform c_show_21:
-    alpha 0.0 zoom 0.17 xalign 0.5 yalign 0.5 
+    alpha 0.0 zoom 0.17 xalign 0.5 yalign 0.5
     linear 1 alpha 1
 
 transform c_show_22:
@@ -124,7 +124,7 @@ transform c_show_25:
     linear 0.5 zoom 0.2 xalign 0.5 yalign 0.2
 
 transform c_show_26:
-    linear 0.4 yalign 0.0 zoom 0.9 
+    linear 0.4 yalign 0.0 zoom 0.9
     linear 0.5 alpha 0
 
 transform c_show_27:
@@ -149,3 +149,76 @@ transform c_show_29:
 
 transform c_show_30:
     linear 0.5 zoom 0.20 alpha 1
+
+transform c_show_31:
+    xalign 0.5 yalign 0.6 zoom 0.18 alpha 1
+    pause 0.4
+    linear 0.4 zoom 1 yalign 0.06
+    linear 0.2 alpha 0
+
+transform c_show_32:
+    zoom 0.6 yalign 0.06 xalign 0.5 alpha 0
+    linear 1 alpha 1
+
+
+transform c_show_33:
+    zoom 0.5 alpha 0
+    linear 1 alpha 1
+
+transform c_show_34:
+    zoom 0.6 yalign 0.06 xalign 0.5 alpha 0
+    linear 1 alpha 1
+
+transform c_show_35:
+    linear 1 zoom 0.7
+
+transform c_show_36:
+    linear 1 zoom 0.8
+
+transform c_show_37:
+    alpha 0 zoom 0.5 ypos -2000 xpos -700
+    linear 1 alpha 1
+    linear 3 ypos -1000
+
+transform c_show_38:
+    linear 3 ypos -400
+
+transform c_show_39:
+    linear 2 yalign 0.05
+
+transform c_show_40:
+    alpha 0 zoom 0.19 yalign 0.1 xalign 0.9
+    linear 1 alpha 1
+
+transform c_show_41:
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset 0
+    pause 1
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    pause 1
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    linear 0.05 xoffset -10
+    linear 0.05 xoffset 10
+    pause 1
+    repeat
+
+transform c_show_42:
+    linear 1.0 zoom 0.4 xalign 0.5 yalign 0.05
