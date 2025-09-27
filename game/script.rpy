@@ -176,10 +176,9 @@ label start:
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
-        $ current_loop = 2
         jump prologue_loop2
     if persistent.loop1:
-        $ current_loop = 1
+        $ current_loop = 2
         jump prologue_loop1
     else:
         $ current_loop = 1
