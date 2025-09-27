@@ -19,6 +19,13 @@ init python early:
 ## CUSTOM EXIT CONFIRM PROMPT ##
 define config.quit_action = Show("exit_game")
 
+image logo = "gui/window_icon.png"
+
+image mm_background = ConditionSwitch(
+    "current_route == 'route1'", "gui/mm_background1.webp",
+    "current_route == 'route2'", "gui/mm_background2.webp"
+)
+
 image screen overlay = ConditionSwitch(
     "current_route == 'route1'", "gui/overlay/yellow_overlay.webp",
     "current_route == 'route2'", "gui/overlay/red_overlay.webp"
@@ -51,12 +58,19 @@ transform ts_qm_fadein(dist):
 transform ts_enterX(xoff, ts_speed=0.2):
     alpha 0.0
     xoffset xoff
-
     ease ts_speed xoffset 0 alpha 1.0
+
 
 transform ts_enterY(yoff, ts_speed=0.2):
     alpha 0.3
     yoffset yoff
-
     linear ts_speed yoffset 0 alpha 1.0
+    
+
+transform ts_text_fade():
+    alpha 0.3
+    block:
+        linear 1.5 alpha 1.0
+        linear 1.5 alpha 0.3
+        repeat
 
