@@ -26,6 +26,8 @@ image mm_background = ConditionSwitch(
     "current_route == 'route2'", "gui/mm_background2.webp"
 )
 
+
+
 image screen overlay = ConditionSwitch(
     "current_route == 'route1'", "gui/overlay/yellow_overlay.webp",
     "current_route == 'route2'", "gui/overlay/red_overlay.webp"
@@ -42,9 +44,21 @@ image long_btn_hover_no_frame = ConditionSwitch(
     "current_route == 'route2'", "gui/button/red_btn.webp"
 )
 
+image gm_btn_hover = ConditionSwitch(
+    "current_route == 'route1'", Frame("gui/game menu/btn_hover_background.png", 20, 10),
+    "current_route == 'route2'", Frame("gui/game menu/btn_red_hover_background.png", 20, 10)
+)
+
 image frame black = Frame("gui/frame.webp", 100, 85)
 
 define LONG_BTN_PADDING = (75, 30)
+
+define GM_TITLE_POS = (55, 42)
+define GM_TITLE_SIZE = 80
+### SAVE/LOAD ###
+image sl_thumb = Transform("frame black", xysize=(758, 476))
+define SL_BTN_PADDING = (300, 111, 415, 113)
+
 
 ############################################################
 ### ENTER/EXIT ###

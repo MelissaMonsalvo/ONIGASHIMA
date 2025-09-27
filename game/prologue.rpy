@@ -1,4 +1,5 @@
 label prologue:
+    $ save_name = "Prologue"
 
     $ loop1_shiori_mandatory1 = True
     $ loop1_shiori_mandatory2 = True
