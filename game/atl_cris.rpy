@@ -151,13 +151,13 @@ transform c_show_30:
     linear 0.5 zoom 0.20 alpha 1
 
 transform c_show_31:
-    xalign 0.5 yalign 0.6 zoom 0.18 alpha 1
-    pause 0.4
-    linear 0.4 zoom 1 yalign 0.06
+    xalign 0.5 yalign 0.2 zoom 0.18 alpha 1
+    pause 0.3
+    linear 0.1 zoom 1 xalign 0.5 yalign 0.1
     linear 0.2 alpha 0
 
 transform c_show_32:
-    zoom 0.6 yalign 0.06 xalign 0.5 alpha 0
+    zoom 0.6 yalign 0.06 xalign 0.5 alpha 0 xoffset -200
     linear 1 alpha 1
 
 
@@ -166,14 +166,14 @@ transform c_show_33:
     linear 1 alpha 1
 
 transform c_show_34:
-    zoom 0.6 yalign 0.06 xalign 0.5 alpha 0
+    zoom 0.6 yalign 0.06 xalign 0.5 alpha 0 xoffset -200
     linear 1 alpha 1
 
 transform c_show_35:
-    linear 1 zoom 0.7
+    linear 1 zoom 0.7  yalign 0.05 xalign 0.5 xoffset -200 yoffset -200
 
 transform c_show_36:
-    linear 1 zoom 0.8
+    linear 1 zoom 0.8  yalign 0.06 xalign 0.5 alpha 0 xoffset -200
 
 transform c_show_37:
     alpha 0 zoom 0.5 ypos -2000 xpos -700

@@ -5,13 +5,21 @@ label ghost_yamato_1:
 
     $ ghost_yamato_1 = True
 
+    play music "sfx/forest night.wav"
+
+    show forest day:
+        zoom 0.5
+    show particleFog with dissolve:
+        ypos 0.4
+    with fade
+
+
+
     n "..."
 
     n "...."
 
-    n "The forest sure is dark lately..."
-
-    n "And what's with all these mist?"
+    n "What's with all these mist?"
 
     $ renpy.pause(1.0)
 
@@ -19,6 +27,8 @@ label ghost_yamato_1:
 
     # Yamato ghost jumpscare
     # show yamato_ghost_attack >> appears, zoomos in to your face, then dissapears
+
+    play sound "sfx/jumpscare.mp3"
 
     show ghost_yamato normal at c_show_31
 
@@ -32,11 +42,16 @@ label ghost_yamato_1:
 
     n "W-What was that?"
 
-    MC "Ha. Ha. Verry funny."
+    MC yansm2 "Ha. Ha. Verry funny."
 
     return
 
 label ghost_yamato_2:
+
+    scene dojo day:
+        zoom 0.8
+        yalign 0.6
+    play music "Friends.mp3"
 
     # Yamato’s ghost slowly slides from behind screen, his limbs first, then his head comes to view ,
     # unsettlign crawl onamotopeia text, squelch squelch, black liquid drips from his mouth
@@ -49,20 +64,26 @@ label ghost_yamato_2:
     $ renpy.pause(1.5)
 
     # Limb 1 slides in
-    show ghost_yamato normal at c_show_37
-    show text "{cps=5}{size=+10}{color=#222}Squelch...{/color}{/size}" at Position(xpos=0.65, ypos=0.75) zorder 100
+    play sound "sfx/splurt.mp3"
+    show ghost_yamato attack at c_show_37
+    with flashred
+    n"{cps=5}{size=+10}Squelch...{/size}"
     $ renpy.pause(3.5)
     hide text
 
     # Limb 2 slides in
-    show ghost_yamato normal at c_show_38
-    show text "{cps=5}{size=+10}{color=#111}Squelch...{/color}{/size}" at Position(xpos=0.6, ypos=0.78) zorder 100
+    play sound "sfx/splurt.mp3"
+    show ghost_yamato attack at c_show_38
+    with flashred
+    n "{cps=5}{size=+10}Squelch...{/size}"
     $ renpy.pause(2.5)
     hide text
 
     # Head slides into view
-    show ghost_yamato normal at c_show_39
-    show text "{cps=4}{size=+12}{color=#000000}Sssqqquueellchh...{/color}{/size}" at Position(xpos=0.58, ypos=0.74) zorder 101
+    play sound "sfx/splurt.mp3"
+    show ghost_yamato attack at c_show_39
+    with flashred
+    n "{cps=4}{size=+12}Sssqqquueellchh...{/size}"
     $ renpy.pause(1.5)
     hide text
 
@@ -85,7 +106,11 @@ label ghost_yamato_3:
     # players must free themselves by clicking the screen several times (advancing dialogue)
     # show zoomed in to yamato ghost face but it's veyr blurry and shakey
 
-    scene house night at c_show_33
+    play music "spooky.mp3"
+
+    scene house night:
+        zoom 0.5
+    with fade
 
     n "The night is young."
 
@@ -111,7 +136,7 @@ label ghost_yamato_3:
     show ghost_yamato normal at c_show_32
 
     ## first click
-    play sound "sfx/gasp1.ogg"
+    play sound "sfx/shiori_eaten.wav"
     MC "{size=+10}{cps=6}Ghhk--{/cps}"
 
     ## second click
@@ -136,9 +161,11 @@ label ghost_yamato_3:
 
     ## yamato dissapears
 
-    MC "Haa... Ha... Haa..."
+    MC shocked2 "Haa... {w}Ha... {w}Haa..."
 
-    MC "Tch, persistent even in death."
+    stop sound
+
+    MC yan2 "Tch, persistent even in death."
 
     $ ghost_yamato_3 = True
 
@@ -149,11 +176,14 @@ label ghost_yamato_4:
     # the day of the red moon and you are forced to relieve your betrayal,
     # with Yamato about to kiss you, but in his ghostly form, everything melts, his mouth starts dripping in
 
+    play music "noinomai.mp3"
+
     $ ghost_yamato_4 = True
 
     scene village night:
-        zoom 0.5 alpha 0
-        linear 1 alpha 1
+        zoom 0.5
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+    with fade
 
     n "..."
 
@@ -162,65 +192,64 @@ label ghost_yamato_4:
     n "The moon's already red..."
 
     ## yamato's ghost sprite is right in front of you
-    show ghost_yamato normal at c_show_34
+    show ghost_yamato normal at c_show_34:
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     $ renpy.pause(1.0)
 
     yamato "{cps=14}LoOk... iF ThIs iSN’t wHaT yA wANt...{/cps}"
 
     n "He waits."
 
-    n "He always waits."
+    n "Always, always."
 
-    n "Your mouth stays closed. {w}Head tilts slightly. {w}Fingers lie frozen."
 
-    play sound "sfx/shift_closer.ogg"
 
-    show ghost_yamato normal at c_show_35
+    show ghost_yamato attack at c_show_35:
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-    n "He leans in..."
+    n "Then he leans in..."
 
     n "His breath brushes your cheek., but it no longer smells like sake..."
 
-    n "The smell of rot envelopes your nose."
+    n "...but rotting flesh."
 
-    n "His lips meet yours--hesitant, tender--"
+    n "His lips meet yours. Hesitant, tender..."
 
-    MC "Mm."
+    n "...just like before."
 
-    play sound "sfx/wet_snap.ogg"
 
-    n "--as you return the kiss."
+    play sound "sfx/swallow.mp3"
 
     n "Odd, has this happened before?"
 
     n "But he didn't look like this, he didn't look this..."
 
-    n "...D E A D."
+    n "{w=0.1}...D E A D."
 
-    play sound "sfx/gurgle_choke.ogg"
+    play sound "sfx/mmph.mp3"
+    with sshake
 
     yamato "{cps=8}{size=+6}--mghh--{/size}{/cps}"
 
-    show ghost_yamato normal with vpunch
+    with hpunch
 
     ## the screen shakes with red and black, frantic
 
     $ renpy.pause(0.3)
 
-    show ghost_yamato normal at c_show_36
-
-    n "His body jerks, and scrapes against yours. Nails searching for escape."
+    with vpunch
 
     n "His mouth widens far past what mouths should, black ooze filling your lungs."
 
-    play sound "sfx/drip_thick.ogg"
+
 
     n "Your own throat stretches to welcome it--"
 
     ## RETCHING SOUND
 
-    show black_screen with fade
+    play sound "sfx/gag2.mp3"
 
+    show black_screen with sshake
     ## black
 
     n "Then darkness."
@@ -235,15 +264,18 @@ label ghost_yamato_5:
 
     $ ghost_yamato_5 = True
 
-    scene house night at c_show_33
+    play music "spooky.mp3"
+
+    scene house night:
+        zoom 0.5
+    with fade
+    show darken2
 
     n "You’re sitting...{w} Wait."
 
-    n "Did the floor rise up, or did your knees fold without asking?"
-
     ## show your home and yamato's ghost sprite
 
-    show ghost_yamato normal at c_show_40
+    show ghost_yamato normal behind darken2 at c_show_40
     pause 1.0
     show ghost_yamato normal at c_show_41
 
@@ -264,7 +296,6 @@ label ghost_yamato_5:
     show ghost_yamato normal at c_show_41
     yamato "{size=+6}{cps=7}Heh... THat’S bEttER.{/cps}{/size}"
 
-    play sound "sfx/bowl_placed.ogg"
 
     yamato "{cps=10}AiN’t yA hUnGRy?{w=0.2} WhAt, fOrgOt aLL aBouT dInNeR?{w=0.3} YoU'rE wItH uS nOw, ReMeMbEr?{/cps}"
 
@@ -276,46 +307,56 @@ label ghost_yamato_5:
 
     n "The bite scrapes your teeth. Dry, slick... {w}Grainy? {w}The texture keeps cycling, over and over, you're not even sure what it is."
 
-    play sound "sfx/slop_squish1.ogg"
+    play sound "sfx/slurrp.mp3"
+    with flashred
     n "SKRCHCH-SSSPPTH"
 
     yamato "{size=+8}{cps=6}Awwww, {w=0.1}LoOk aT yA.{/cps}{/size}"
 
     yamato "{cps=12}LiTTle mONsteR wiTh a GoUrMeT mOuTh, eh? {/cps}"
 
-    play sound "sfx/gulp.ogg"
+    play sound "sfx/splurt.mp3"
+    with flashred
 
     n "You swallow as it wriggles down your throat."
 
-    #play sound "sfx/wet_clench.ogg"
+    play sound "sfx/tearflesh.wav"
+    with flashred
     n "GLRK—kkkkkKRRPH"
 
     yamato "{cps=9}eAt aNoThEr bIT.{w=0.2} CoME oN.{w=0.2} oPEn WiiiIIIiiiDe~{/cps}"
 
-    #play sound "sfx/spoon_clink.ogg"
+    play sound "sfx/splurt.mp3"
+    with flashred
     $ renpy.pause(0.3)
 
     n "He forces another spoon down on your mouth, your jaw splits open wide."
 
-    #play sound "sfx/slime_glop.ogg"
+    play sound "sfx/stretch.mp3"
+    with flashred
     n "GLRRCHHHH-SPLTK."
 
     n "Smething fat and wet slaps your tongue."
 
     yamato "{cps=8}DiD ya liKE ThaT oNE~?{w=0.2} hUH?{w=0.2} wAS iT tAsTy?{/cps}"
 
-    #play sound "sfx/chew_guts.ogg"
+    play sound "sfx/tearflesh.wav"
+    with flashred
     n "KRRRSHK-KHH—SPPLLT"
 
     n "It looks like a normal dinner... then why do you want to gag so bad?"
 
     yamato "{size=+10}{cps=5}SwALLoW iT.{/cps}{/size}"
 
-    MC "GAH--"
+    MC shocked2 "GAH--"
 
-    MC "Hahh... Hahh..."
+    MC "Hahh... {w=0.2}Hahh..."
     hide ghost_yamato normal with fade
+    hide darken2
     n "You open your eyes and your room is back to normal."
+
+    stop music
+    play sound "sfx/gag1.mp3"
 
     MC "Blerghhhhh--"
 

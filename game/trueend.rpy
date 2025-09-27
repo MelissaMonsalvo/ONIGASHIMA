@@ -163,7 +163,7 @@ label truend:
 
     play music "Tense.ogg"
 
-    play sound "sfx/stumblemp3"
+    play sound "sfx/stumble.mp3"
 
     show yam rage with vpunch
     yamato "{b}Ya’ve lost it.{/b} Ya’ve completely lost it, Shiori!"
