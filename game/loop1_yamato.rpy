@@ -1353,7 +1353,9 @@ label loop1_yamato:
 
     stop music fadeout 1.0
 
-    ## CG here
+    scene cg_loop1yamato:
+        zoom 0.5
+    with dissolve
 
     stop music
     play sound "sfx/hahh.mp3"
@@ -1379,6 +1381,9 @@ label loop1_yamato:
     n "{cps=13}And Yamato chokes at you. You hear that gurgle caught in his throat.{/cps}"
 
     play sound "sfx/struggle.mp3"
+    with flashred
+
+    scene black
 
     yamato "{sc=5}--mmgh--!{/sc}"
 

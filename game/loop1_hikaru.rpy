@@ -1347,14 +1347,15 @@ label loop1_redmoon_eve:
 
     MC happycl "See? I told you."
 
-    show hik smilesad
+    scene cg_loop1hikaru:
+        zoom 0.5
     with dissolve
 
     hikaru "Sorry that I didn't believe you."
 
     hikaru "You must think that's rich, coming from me..."
 
-    hikaru "But... Can we try again?"
+    hikaru "But... {w}Can we try again?"
 
     n "You let Hikaru lean against your shoulder now, and close your eyes."
 
@@ -1424,7 +1425,19 @@ label hikaru_trust:
 
     MC yansm "In the afterlife, when I’m done with you."
 
-    show hik panic
+    scene moon7
+
+    show hik panic:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.2
+        xoffset 0
+        yoffset 400
+
+
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
+
+    with sshake
 
     hikaru "{sc=5}...!{/sc}"
 
@@ -1582,8 +1595,17 @@ label hikaru_trust:
 
 label hikaru_distrust:
 
-    show hik shocked
-    with dissolve
+    scene moon7
+
+    show hik panic:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.2
+        xoffset 0
+        yoffset 400
+
+
+        matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
     hikaru "{i}...Wait.{/i}"
 
