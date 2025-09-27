@@ -1,3 +1,8 @@
+#########################
+# Map 3:34
+############################
+
+
 # Variables para el progreso del juego
 default current_Day = 1
 default current_time_block = "Day"  # "Day" o "Night"
@@ -187,9 +192,14 @@ define character_icons_yellow= {
 
 
 label map:
-    #show screen map_screen
-    #$ renpy.save("auto_save")
-    #$ persistent.trueendingunlocked = True
+
+    $ persistent.trueendingunlocked = True
+    if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
+        $ check_rutes()
+
+    if persistent.trueendingunlocked and current_Day > 5 and store.current_loop == 1:
+        jump truend
+
     call screen map_screen
     pause
 
@@ -199,11 +209,11 @@ default offset_x_a = 0
 # Pantalla del mapa
 screen map_screen():
 
-    if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
-        timer 0.05 action Function(check_rutes) repeat True
+    # if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
+    #     timer 0.05 action Function(check_rutes) repeat True
 
-    if persistent.trueendingunlocked and current_Day > 5 and store.current_loop == 1:
-        timer 0.05 action Function(truend) repeat True
+    # if persistent.trueendingunlocked and current_Day > 5 and store.current_loop == 1:
+    #     timer 0.05 action Function(truend) repeat True
 
     #BG
     #$ check_rutes()
@@ -259,7 +269,7 @@ screen map_screen():
             xalign 0.5
             yalign 0.5
             spacing 10
-            label "Day [current_Day]" xalign 0.5
+            label "Day [current_Day] loop [current_loop]" xalign 0.5
             text "Where do you want to go?" xalign 0.5
 
 
@@ -433,26 +443,26 @@ python early:
         #If persistent.trueendingunlocked is true and you are in loop 1
 
         if store.yamato_events_completed >= 5:
-            #renpy.hide_screen("map")
+
             print("Rute Yamato")
             label_name = f"loop{store.current_loop}_yamato"
-            renpy.call_in_new_context(label_name)
-            #renpy.call_in_new_context(label_name)
+            renpy.callt(label_name)
+
 
         elif store.shiori_events_completed >= 5:
-            #renpy.hide_screen("map")
+
             print("Rute Shiori")
             label_name = f"loop{store.current_loop}_shiori"
-            renpy.call_in_new_context(label_name)
-            #renpy.call_in_new_context(label_name)
+            renpy.call(label_name)
+
         elif store.hikaru_events_completed >= 5:
-            #renpy.hide_screen("map")
+
             print("Rute Hikaru")
             label_name = f"loop{store.current_loop}_hikaru"
-            renpy.call_in_new_context(label_name)
-            #renpy.call_in_new_context(label_name)
+            renpy.call(label_name)
+
     def truend():
-        renpy.call_in_new_context("truend")
+        renpy.call("truend")
 
 
 label inter:

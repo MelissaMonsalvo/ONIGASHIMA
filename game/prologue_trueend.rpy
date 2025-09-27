@@ -1,6 +1,6 @@
 label prologue_trueend:
 
-    play music "heavy_breathing.ogg"
+    play music "heavy breathing.mp3"
 
     n "{cps=18}It is dark.{/cps}"
     n "Something is caught in your throat. A {color=#ff0000}pool of blood{/color} lies at your feet."
