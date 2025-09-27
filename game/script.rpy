@@ -143,6 +143,7 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    jump map
     #call screen name_input
     #call screen fake_name_input
     $ ysword = False
