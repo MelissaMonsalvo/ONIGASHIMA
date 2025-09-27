@@ -60,23 +60,24 @@ screen name_input():
 ############################################################
 style ni_frame:
     #xysize (895, 95)
-    xminimum 895
+    xminimum GM_XMIN_FRAME
     ysize 95
 
     anchor (1.0, 1.0)
     pos (1920, 1060)
 
     background Frame("gui/game menu/btn_backgroud.png", 20, 10)
+    padding GM_LONG_BTN_PADDING
 
 style ni_hbox:
     xalign 1.0
     yalign 0.5
 
 style ni_button:
-    xysize (430, 58)
+    xysize GM_BUTTON_SIZE
 
     background Frame("gui/game menu/btn_idle_background.png", 20, 10)
-    hover_background Frame("gui/game menu/btn_hover_background.png", 20, 10)
+    hover_background "gm_btn_hover"
     insensitive_background Frame("gui/game menu/btn_insensitive_background.png", 20, 10)
 
 style ni_text:

@@ -27,7 +27,7 @@ screen help():
 
         add "gm navline"
 
-        label "CONTROLS"
+        label _("CONTROLS")
 
         vbox:
             button:
@@ -134,18 +134,17 @@ style help_text:
 
 style help_gm_frame:
     ysize 95
-    xminimum 400
+    xminimum GM_XMIN_FRAME
     anchor (1.0, 1.0)
     pos (1920, 1060)
     background Frame("gui/game menu/btn_backgroud.png", 20, 10)
-    padding LONG_BTN_PADDING
+    padding GM_LONG_BTN_PADDING
 
 style help_gm_hbox:
     is ni_hbox
 
 style help_gm_button:
     is ni_button
-    hover_background "gm_btn_hover"
 
 style help_gm_text:
     is ni_text
@@ -308,9 +307,8 @@ style help_tab_hbox:
 
 
 style help_tab_label_text:
-    font NOTO_JP
+    font NOTO_JP_BOLD
     color BLACK
-    bold True
     size 40
     text_align 0.0
     xsize 250
