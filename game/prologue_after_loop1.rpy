@@ -1209,4 +1209,6 @@ label beforesecondloop:
 
     n2 "No one should remember."
 
+    jump map
+
     return

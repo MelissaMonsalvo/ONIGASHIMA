@@ -435,4 +435,3 @@ label empty_dojo_night:
 
         stop sound
     return
-    return

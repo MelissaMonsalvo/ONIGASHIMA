@@ -621,7 +621,7 @@ label loop2_hikaru_mandatory3:
 
     $ hmask = False
 
-    scene moon3
+    scene cliff
     show hik sad:
         zoom 0.5
         xalign 0.5

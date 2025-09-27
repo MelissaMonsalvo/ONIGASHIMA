@@ -82,6 +82,8 @@ image gore = "images/gore.png"
 
 image cg_shioriloop1 = "images/cg_shioriloop1.png"
 image cg_trueending = "images/cg_trueending.png"
+image cg_loop1hikaru = "images/cg_loop1hikaru.png"
+image cg_loop1yamato = "images/cg_loop1yamato.png"
 image cg_loop3hikaru = "images/cg_loop3hikaru.png"
 image cg_loop3shiori = "images/cg_loop3shiori.png"
 image cg_loop3yamato = "images/cg_loop3yamato.png"
