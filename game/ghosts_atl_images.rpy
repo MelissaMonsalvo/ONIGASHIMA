@@ -60,13 +60,14 @@ image ghost_hikaru attack = LiveComposite(
 #shiori image
 image ghost_shiori normal = LiveComposite(
     (4265, 5166),
+    (0,0),"images/sprite_shiori_ghost/tail_spit.webp",
+    (0,0),"images/sprite_shiori_ghost/tail_base.webp",
     (0,0), Animation(
             "images/sprite_shiori_ghost/tail_mouth.PNG", 4.5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
             "images/sprite_shiori_ghost/tail_mouth.PNG", .5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
         ),
-    (0,0),"images/sprite_shiori_ghost/tail_base.webp",
     (0,0),"images/sprite_shiori_ghost/body_idle.webp",
     (0,0),"images/sprite_shiori_ghost/ear_left.webp",
     (0,0),"images/sprite_shiori_ghost/ear_right.webp",
@@ -80,13 +81,14 @@ image ghost_shiori normal = LiveComposite(
 
 image ghost_shiori idle = LiveComposite(
     (4265, 5166),
+    (0,0),"images/sprite_shiori_ghost/tail_spit.webp",
+    (0,0),"images/sprite_shiori_ghost/tail_base.webp",
     (0,0), Animation(
             "images/sprite_shiori_ghost/tail_mouth.PNG", 4.5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
             "images/sprite_shiori_ghost/tail_mouth.PNG", .5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
         ),
-    (0,0),"images/sprite_shiori_ghost/tail_base.webp",
     (0,0),"images/sprite_shiori_ghost/body_idle.webp",
     (0,0),"images/sprite_shiori_ghost/ear_left.webp",
     (0,0),"images/sprite_shiori_ghost/ear_right.webp",
@@ -100,13 +102,15 @@ image ghost_shiori idle = LiveComposite(
 
 image ghost_shiori attack = LiveComposite(
     (4265, 5166),
+    (0,0),"images/sprite_shiori_ghost/tail_spit.webp",
+    (0,0),"images/sprite_shiori_ghost/tail_base.webp",
     (0,0), Animation(
             "images/sprite_shiori_ghost/tail_mouth.PNG", 4.5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
             "images/sprite_shiori_ghost/tail_mouth.PNG", .5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
         ),
-    (0,0),"images/sprite_shiori_ghost/tail_base.webp",
+
     (0,0),"images/sprite_shiori_ghost/body_attack.webp",
     (0,0),"images/sprite_shiori_ghost/attack_arm_hand.webp",
     (0,0),"images/sprite_shiori_ghost/attack_arm_left.webp",
@@ -118,6 +122,7 @@ image ghost_shiori attack = LiveComposite(
         ),
     (0,0),"images/sprite_shiori_ghost/ear_left.webp",
     (0,0),"images/sprite_shiori_ghost/ear_right.webp",
+
     (0,0), Animation(
             "images/sprite_shiori_ghost/mouth.PNG", 4.5,
             "images/sprite_shiori_ghost/mouth1.PNG", .25,
@@ -154,10 +159,10 @@ image ghost_yamato idle = LiveComposite(
             "images/sprite_yamato_ghost/mouth1.PNG", .25,
         ),
     (0,0), Animation(
-            "images/sprite_yamato_ghost/arm_idle1.PNG", 4.5,
-            "images/sprite_yamato_ghost/arm_idle2.PNG", .25,
+            "images/sprite_yamato_ghost/arm_idle.PNG", 4.5,
             "images/sprite_yamato_ghost/arm_idle1.PNG", .25,
-            "images/sprite_yamato_ghost/arm_idle2.PNG", .25,
+            "images/sprite_yamato_ghost/arm_idle.PNG", .25,
+            "images/sprite_yamato_ghost/arm_idle1.PNG", .25,
         ),
 )
 image ghost_yamato normal = LiveComposite(
@@ -183,10 +188,10 @@ image ghost_yamato normal = LiveComposite(
             "images/sprite_yamato_ghost/mouth1.PNG", .25,
         ),
     (0,0), Animation(
-            "images/sprite_yamato_ghost/arm_idle1.PNG", 4.5,
-            "images/sprite_yamato_ghost/arm_idle2.PNG", .25,
+            "images/sprite_yamato_ghost/arm_idle.PNG", 4.5,
             "images/sprite_yamato_ghost/arm_idle1.PNG", .25,
-            "images/sprite_yamato_ghost/arm_idle2.PNG", .25,
+            "images/sprite_yamato_ghost/arm_idle.PNG", .25,
+            "images/sprite_yamato_ghost/arm_idle1.PNG", .25,
         ),
 )
 image ghost_yamato attack = LiveComposite(
@@ -213,9 +218,9 @@ image ghost_yamato attack = LiveComposite(
             "images/sprite_yamato_ghost/mouth1.PNG", .25,
         ),
     (0,0), Animation(
-            "images/sprite_yamato_ghost/arm_attack1.PNG", 4.5,
+            "images/sprite_yamato_ghost/arm_attack.PNG", 4.5,
             "images/sprite_yamato_ghost/arm_attack2.PNG", .25,
-            "images/sprite_yamato_ghost/arm_attack1.PNG", .25,
+            "images/sprite_yamato_ghost/arm_attack.PNG", .25,
             "images/sprite_yamato_ghost/arm_attack2.PNG", .25,
         ),
 )

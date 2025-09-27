@@ -16,21 +16,21 @@ label after_load:
 
 label saveprohibiteded_hikaru:
     scene black
-    show text "You can't save Hikaru eyyyy." at truecenter
+    show text "You can't save Hikaru." at truecenter
     with dissolve
     pause 3
     $ renpy.full_restart()
 
 label saveprohibiteded_yamato:
     scene black
-    show text "You can't save Yamato booo." at truecenter
+    show text "You can't save Yamato." at truecenter
     with dissolve
     pause 3
     $ renpy.full_restart()
 
 label saveprohibiteded_shiori:
     scene black
-    show text "You can't save Shiori nyaaa~." at truecenter
+    show text "You can't save Shiori." at truecenter
     with dissolve
     pause 3
     $ renpy.full_restart()

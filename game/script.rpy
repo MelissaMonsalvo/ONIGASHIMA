@@ -147,7 +147,6 @@ label start:
     $ ysword = False
     $ hmask = True
     $ hsword = False
-    jump prologue
     #jump loop3_hikaru
     #jump get_player_name
     #jump prologue_loop1

@@ -32,8 +32,8 @@ define locations = ["shrine", "forest", "dojo", "village","house"]
 #     "house": (400, 1000)
 # }
 define location_positions = {
-    "shrine": (850, 125),
-    "forest": (350, 390),
+    "shrine": (820, 200),
+    "forest": (350, 290),
     "dojo": (1620, 500),
     "village": (975, 950),
     "house": (325, 850)
@@ -154,50 +154,36 @@ screen map_screen():
         timer 0.1 action Function(check_rutes) repeat True
     #textbutton "" xsize 1920 ysize 1080 action Function (check_rutes)
 
-    imagebutton auto "images/map/shrine_%s.png" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 850 ypos 25
+    imagebutton auto "images/map/shrine_%s.png" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 820 ypos 200
     imagebutton auto "images/map/forest_%s.png" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
-    imagebutton auto "images/map/dojo_%s.png" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1620 ypos 400
+    imagebutton auto "images/map/dojo_%s.png" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1620 ypos 500
     imagebutton auto "images/map/village_%s.png" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
     imagebutton auto "images/map/house_%s.png" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
 
     # Mostrar iconos de personajes según su ubicación y estado
     for i, character in enumerate(["shiori", "yamato", "hikaru"]):
-    #for character in ["shiori"]:
 
-        # Obtener la ubicación actual del personaje
         $ char_location = get_character_location(character)
-
         if char_location:
-            #$ print(f"Sí hay char_location: {char_location}")
-
-            # Obtener posición en el mapa
             $ pos_x, pos_y = location_positions.get(char_location, (0, 0))
-
-            $ icon_x = pos_x + 150   # 284 = button width, 16 = margin
-
-            # button height 122, icon height 150 so like
-            $ icon_y = pos_y + (122 // 2) - (150 // 2)
-
+            $ icon_width = 120
+            $ icon_height = 190
+            $ button_width = 284
+            $ icon_x = pos_x + (button_width // 2) - (icon_width // 2)
+            $ icon_y = pos_y - icon_height - 2
 
             $ character_icons = character_icons_yellow if persistent.loop1 else character_icons_red
-
-            #btener Icono
             $ icon = character_icons.get(character)
 
-            # Determinar la imagen del icono según el estado
             if getattr(persistent, f"{character}_dies", False):
-
-                # Icono fantasma (transparente o con efecto fantasma)
-                add Transform(icon, size=(150, 150)):
+                add Transform(icon, size=(icon_width, icon_height)):
                     xpos icon_x
                     ypos icon_y
-                    alpha 0.7  # Más transparente para fantasmas
+                    alpha 0.7
             else:
-                # Icono normal
-                add Transform(icon, size=(150, 150)):
+                add Transform(icon, size=(icon_width, icon_height)):
                     xpos icon_x
                     ypos icon_y
-
 
     frame:
         xalign 0.5
@@ -222,28 +208,28 @@ screen map_screen():
 # Función para verificar eventos obligatorios
 python early:
 
-
     import math
 
-
-    #Función que se ejecuta al hacer click en alguna parte del mapa
-
     def visit_location_func(location):
-        # Incrementar visitas
         store.visits_toDay += 1
 
-        #check_rutes()
-
-        # Verificar eventos obligatorios primero
         current_mandatory = store.check_mandatory_events(location)
-
-        # Variable para el evento a ejecutar
         event_to_call = None
 
         if current_mandatory:
             event_to_call = current_mandatory
 
-        # Avanzar el tiempo
+        # === 1. Call event or empty label before advancing time block ===
+        if event_to_call:
+            renpy.call_in_new_context(event_to_call)
+        else:
+            label_name = f"empty_{location}_{store.current_time_block.lower()}"
+            if renpy.has_label(label_name):
+                renpy.call_in_new_context(label_name)
+            else:
+                renpy.call_in_new_context("location_empty", location)
+
+        # === 2. Now advance the time block for the next turn ===
         if store.visits_toDay >= 2:
             store.current_Day += 1
             store.visits_toDay = 0
@@ -251,21 +237,7 @@ python early:
         else:
             store.current_time_block = "Night" if store.current_time_block == "Day" else "Day"
 
-        # Llamar al evento si existe
-        if event_to_call:
-            renpy.call_in_new_context(event_to_call)
-        else:
-            # Mostrar mensaje de ubicación vacía o algo por defecto
-            #renpy.call_in_new_context("location_empty", location)
-            time_block = "Night" if store.current_time_block == "Day" else "Day"
 
-            label_name = f"empty_{location}_{time_block}"
-            # Verificamos si existe
-            if renpy.has_label(label_name):
-                #renpy.jump(label_name)
-                renpy.call_in_new_context(label_name)
-            else:
-                renpy.call_in_new_context("location_empty", location)
 
 #Checa en la lista de eventos de vivos y muertos
     def check_mandatory_events(location):

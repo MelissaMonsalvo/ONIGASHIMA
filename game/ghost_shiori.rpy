@@ -1,30 +1,46 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_shiori_1:
 
-    scene bg empty_room_dark with fade
-    ## refelection and ghosts are in the ghosts folder
+    play music "Friends.mp3"
 
-    n "You see yourself."
+    scene black
+    with fade
+    n "It's too dark to see anything...."
 
     # MC in front of glass/water reflection
-    MC "..."
+    MC shocked "..."
 
-    window hide
-    $ renpy.pause(0.5)
 
-    # blinks animation
-    show black_screen at c_show_13
-    $ renpy.pause(1)
+    show ghost_shiori normal:
+        zoom 0.3
+        xalign 0.5
 
-    ## then shiori’s ghost appears behind them
-    show ghost_shiori normal at c_show_14
+        block:
+            linear 0.3 matrixcolor BrightnessMatrix(-0.2)
+            linear 0.3 matrixcolor BrightnessMatrix(-0.5)
+            linear 0.3 matrixcolor BrightnessMatrix(0.0)
+            linear 0.3 matrixcolor BrightnessMatrix(-0.4)
+            linear 0.3 matrixcolor BrightnessMatrix(0.2)
+            linear 0.3 matrixcolor BrightnessMatrix(-0.6)
+            linear 0.3 matrixcolor BrightnessMatrix(-0.05)
+            repeat
     MC "...?"
 
-    $ renpy.pause(1.0)
+    $ renpy.pause(0.3)
 
-    ## MC Blinks again
-    scene black with fade
-    #show black_screen at c_show_13
+    n "There's{nw}"
+    play sound "sfx/jumpscare.mp3"
+
+    show ghost_shiori normal:
+        zoom 0.3
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 0
+
+        # Sudden jumpscare: zoom in fast, move up to focus on face
+        linear 0.13 zoom 1.26 yoffset -290 xoffset -500
+
     n "...!"
 
     hide ghost_shiori with dissolve
@@ -32,8 +48,7 @@ label ghost_shiori_1:
     $ renpy.pause(1.0)
     ## shiori's ghost dissapears
 
-    window show
-    n "There’s only the puddle now."
+    n "What was that?"
 
     $ ghost_shiori_1 = True
 
@@ -41,7 +56,10 @@ label ghost_shiori_1:
 
 label ghost_shiori_2:
 
-    scene shire night with fade
+    play music "Friends.mp3"
+
+    scene shrine day with fade:
+        zoom 0.5
 
     #blinking
     show black_screen zorder 5 with fade
@@ -51,7 +69,7 @@ label ghost_shiori_2:
 
     #blinking ghost appear
     show black_screen zorder 5 with fade
-    show ghost_shiori normal zorder 4 at c_show_22 
+    show ghost_shiori normal zorder 4 at c_show_22
     $ renpy.pause(0.3)
     hide black_screen zorder 5 with fade
     $ renpy.pause(0.3)
@@ -111,6 +129,7 @@ label ghost_shiori_2:
     #stop sound fadeout 1.5
 
     $ ghost_shiori_2 = True
+
     return
 
 screen force_mouse_move_ghost_shiori_3():
@@ -120,10 +139,13 @@ screen force_mouse_move_ghost_shiori_3():
 
 label ghost_shiori_3:
 
-    scene shrine night with fade
+    play music "Friends.mp3"
+
+    scene shrine night with fade:
+        zoom 0.5
     pause(0.2)
     call screen force_mouse_move_ghost_shiori_3
-    show ghost_shiori normal at c_show_24 
+    show ghost_shiori normal at c_show_24
 
     # ​Shiori's ghost is hidden from view in the shrine, we code force mouse move to her ghost location,
     #then she appears, blink, moves closer, and before she becomes too close, dissapears
@@ -142,7 +164,10 @@ label ghost_shiori_3:
     MC "Hmm?"
 
     # She creeps in
-    show ghost_shiori normal at c_show_25 
+    show ghost_shiori normal:
+        zoom 0.15
+        xalign 0.5
+        yalign 0.6
 
     n "A-Aah, she's coming at you!"
 
@@ -156,9 +181,21 @@ label ghost_shiori_3:
     n "Does she know you?"
 
     # Move closer
-    show ghost_shiori normal at c_show_26 
+    play sound "sfx/shighost.mp3"
+    show ghost_shiori attack:
+        zoom 0.15
+        xalign 0.5
+        yalign 0.6
 
+        # Staggering, irregular zoom-in
+        linear 0.01 zoom 0.22 xalign 0.49 yalign 0.52
+        linear 0.02 zoom 0.28 xalign 0.5 yalign 0.48
+        linear 0.03 zoom 0.33 xalign 0.43 yalign 0.44
+        linear 0.05 zoom 0.41 xalign 0.47 yalign 0.4
+        linear 0.08 zoom 0.50 xalign 0.4 yalign 0.3 xoffset -300
+        linear 0.13 zoom 0.62 xalign 0.3 yalign 0 xoffset -500
     $ renpy.pause(1.0)
+    hide ghost_shiori
 
     # Disappear just before
 
@@ -172,8 +209,11 @@ label ghost_shiori_3:
 
 label ghost_shiori_4:
 
+    stop music
+
     #scene bg shrine_empty with fade
-    scene shrine night with fade
+    scene shrine night with fade:
+        zoom 0.5
 
     n "No one is here."
 
@@ -188,12 +228,12 @@ label ghost_shiori_4:
     show black_screen with fade
 
     $ renpy.pause(2.5)
+    centered "S T A Y  W I T H  M E"
 
     # Whisper
-    scene circle_ghost
     hide black_screen
     #play voice "sfx/whisper_staywithme.ogg"
-    centered "S T A Y  W I T H  M E"
+
 
     # Flicker screen effect ATL
 
@@ -212,7 +252,6 @@ label ghost_shiori_4:
     window show
     n "..."
 
-    return
 
     $ ghost_shiori_4 = True
     return
@@ -240,29 +279,41 @@ screen ghost_shiori_5_open3():
 
 label ghost_shiori_5:
 
+    play music "heavy breathing.mp3"
+
     # Instead of the room, there’s a flickering room with the sound of a rattling doorknob.
     # Each click to “open” makes the rattling more frantic.
     # Shiori’s ghost sprite is shown with low opacity
 
     # shrine only for temporary
-    scene shrine night with fade
+    scene shrine night with fade:
+        zoom 0.7
+        xalign 0.5
+        yalign 0.6
 
-    MC "I'm locked in."
+    MC shocked2 "I'm locked in...!?"
 
     call screen ghost_shiori_5_open1()
 
     ## you click "open" image button
+
+    play sound "sfx/rattle.mp3"
+    with sshake
 
     ## rattling intensifies
 
     ## shiori's ghost appears with low opacity
     show ghost_shiori normal at c_show_28
 
-    MC "Let me out!"
+    MC angry2 "Let me out!"
+    with sshake
 
     call screen ghost_shiori_5_open2()
 
     ## you click "open" image button
+
+    play sound "sfx/rattle.mp3"
+    with sshake
 
     ## rattling intensifies
 
@@ -276,11 +327,18 @@ label ghost_shiori_5:
     call screen ghost_shiori_5_open3()
 
     ## rattling intensifies
+    play sound "sfx/rattle.mp3"
+    with sshake
 
     ## shiori's ghost image creeps in
     show ghost_shiori normal at c_show_30
 
-    MC "YoU ArE DEaD, I Ate YOu!"
+    MC angry2 "YoU ArE DEaD, I Ate YOu!"
+
+    scene black
+
+    play sound "sfx/prang.mp3"
+    with sshake
 
     ## bam, everything stops
     #play sound bam
