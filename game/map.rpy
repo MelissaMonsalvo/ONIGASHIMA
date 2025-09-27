@@ -258,7 +258,8 @@ screen map_screen():
             xalign 0.5
             yalign 0.5
             spacing 10
-            label "Day [current_Day] loop [current_loop]" xalign 0.5
+            #label "Day [current_Day] loop [current_loop]" xalign 0.5
+            label "Day [current_Day]" xalign 0.5
             text "Where do you want to go?" xalign 0.5
 
 
