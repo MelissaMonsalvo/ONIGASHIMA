@@ -1,20 +1,23 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_hikaru_1:
 
-label hikaru_ghost_loveloop_unhinged:
 
 
     ##show hikaru's ghost zoooming very very slowly and distorts (use xzoom or yzoom for distortion)
     #show ghost_hikaru_idle at show_1
     #show ghost_hikaru_idle at Glitch(_fps=12., color_range1="c00a", color_range2="f00", glitch_strength=.5)
     #show ghost_hikaru_idle at show_1
-    show ghost_hikaru idle at c_show_3
+    scene forest day:
+        zoom 0.5
+    show ghost_hikaru idle at c_show_3 behind darken2
+    show darken2
+    play music "spooky.mp3"
 
     n "Huh? What is--"
 
     hikaru "...You came back."
 
-    MC "Hikaru?"
+    MC shocked "Hikaru?"
 
     n "Who's that?"
 
@@ -25,6 +28,7 @@ label hikaru_ghost_loveloop_unhinged:
     n "Their voice is as soft as a lullaby."
 
     hikaru "I love you."
+
 
     show ghost_hikaru idle at c_show_5
 
@@ -44,47 +48,57 @@ label hikaru_ghost_loveloop_unhinged:
 
     show ghost_hikaru idle at c_show_6
 
-    hikaru "{cps=5}{size=+8}I lOvE yOu—{/size}{/cps}"
+    hikaru "{cps=5}{size=+8}I lOvE yOu--{/size}{/cps}"
 
-    hikaru "{cps=16}{color=#111}I LOVE YOU I LOVE YOU ILOVEYOUILOVEYOUILOVE—{/color}{/cps}"
+    hikaru "{cps=16}I LOVE YOU I LOVE YOU ILOVEYOUILOVEYOUILOVE--{/cps}"
 
     MC "Stop it."
 
-    hikaru "eVeRy DaY wIThOuT yOu FeLt LiKe—"
+    hikaru "eVeRy DaY wIThOuT yOu FeLt LiKe--"
 
-    hikaru "{size=+10}{cps=4}—hELL—{/cps}{/size}"
+    hikaru "{size=+10}{cps=4}--hELL--{/cps}{/size}"
 
     show ghost_hikaru idle at c_show_2
 
-    hikaru "{color=#111}So sTAY{/color}"
+    hikaru "So sTAY wITh Me"
 
-    hikaru "{color=#000}sTAYsTAYsTAYsTAYsTAY{/color}"
+    hikaru "sTAYsTAYsTAYsTAYsTAY"
 
-    n "No—stop—"
+    n "No--stop--"
 
     hikaru "{size=+12}{cps=2}I’M ALREADY INSIDE{/cps}{/size}"
+
+    play sound "sfx/screech.mp3"
 
     ## hikaru's ghost is at maximum zooming
     show ghost_hikaru idle at c_show_4
 
     $ renpy.pause(1.5)
 
+    stop sound
+
+    scene black
+    with dissolve
+
     ## hikaru's ghost is gone
 
     n "No one is there."
 
-    return
+
 
 
     $ ghost_hikaru_1 = True
 
-    return
+    #return
 
 label ghost_hikaru_2:
 
     $ config.rollback_enabled = False
-    scene bg empty_room_dark with fade
-    play music "bgm/lowhum.ogg" fadein 2.0
+    scene shrine night:
+        zoom 0.6
+        xalign 0.5
+        linear 0.3 zoom 0.5
+    play music "Friends.mp3"
 
     n "You step inside."
 
@@ -97,7 +111,7 @@ label ghost_hikaru_2:
 
     n "..."
 
-    n "Wait. {w}Was something—"
+    n "Wait. {w}Was something--"
 
     #hide hikaru ghost
     hide ghost_hikaru
@@ -106,8 +120,13 @@ label ghost_hikaru_2:
 
     # show hikaru's ghost moving fast across the screen
     show ghost_hikaru idle at c_show_8
+    pause 0.1
+
+    hide ghost_hikaru idle
 
     n "No. That’s nothing."
+
+    with fade
 
     n "You blink."
 
@@ -129,6 +148,7 @@ label ghost_hikaru_2:
     $ renpy.pause(0.2)
 
     # Jumpscare position (sudden front face)
+    play sound "sfx/jumpscare.mp3"
     show ghost_hikaru idle at c_show_9 with vpunch
 
     ## screen shakes
@@ -147,19 +167,24 @@ label ghost_hikaru_2:
 
     $ ghost_hikaru_2 = True
 
-    return
+    #return
 
 label ghost_hikaru_3:
+
+    play music "Friends.mp3"
+
+    $ haze_active = True
+    show haze_effect at haze_transform
+    with dissolve
 
 
     n "You’re dreaming..."
 
     $ renpy.pause(1.5)
 
-    MC "Ghkk--!"
+    MC shocked "Ghkk--!"
 
-    play sound "sfx/soft_choke.ogg"
-
+    with sshake
     n "There are hands around your throat."
 
     ## show hikaru's ghost above you (top down view)
@@ -179,32 +204,14 @@ label ghost_hikaru_3:
     ## Fake choices appear but can't be picked : "Pull their hands away" "Kick them"
     ## giving the sense of helplessness
     menu:
-        MC "What should i do?"
 
-        "Pull their hands away" :
+        "Pull their hands away":
             "Nothing happend."
-            menu:
-                MC "What should i do?"
-                "Pull their hands away" :
-                    "Nothing happend."
-                    jump ghost_hikaru_3_next
-                "Kick them":
-                    "Nothing happend."
-                    jump ghost_hikaru_3_next
         "Kick them":
             "Nothing happend."
-            menu:
-                MC "What should i do?"
-                "Pull their hands away" :
-                    "Nothing happend."
-                    jump ghost_hikaru_3_next
-                "Kick them":
-                    "Nothing happend."
-                    jump ghost_hikaru_3_next
-
     label ghost_hikaru_3_next:
 
-    MC "I-I can't do anything!!!!"
+    MC hurt "I-I can't do anything!!!!"
 
     hikaru "{size=+8}{cps=5}You're wearing their skin, aren't you?{/cps}{/size}"
 
@@ -212,24 +219,48 @@ label ghost_hikaru_3:
 
     $ renpy.pause(1.5)
 
+    $ haze_active = False
+    hide haze_effect
+    with dissolve
+
     ## gone again
     show ghost_hikaru idle at c_show_11
 
     MC "Hahhh--!"
 
+    scene black
+    hide screen drunk_haze
+    with sshake
+
+    pause 0.1
+
     n "They're gone..."
 
-    return
 
     $ ghost_hikaru_3 = True
 
-    return
+    #return
 
 label ghost_hikaru_4:
 
-    show normal_hikaru normal at c_show_15
 
+    play music "Friends.mp3"
+
+    scene white_bg
+
+    $ haze_active = True
+    show haze_effect at haze_transform
+    with dissolve
     n "You’re dreaming again..."
+
+    show hik happy:
+        zoom 0.3
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+    with dissolve
 
     n "It's that person again. You called them Hikaru."
 
@@ -239,13 +270,33 @@ label ghost_hikaru_4:
 
     hikaru "I was waiting. You said you'd be back."
 
-    MC "I am back."
+    MC sad "I am back."
 
     hikaru "...No."
 
-    n "The edges of their face blur... Slowly... Slowly..."
+    show hik happy:
+        zoom 0.3
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
 
-    n "The lines slide off... Again... Again..."
+        linear 0.5 blur 2
+
+    n "The edges of their face blur... {w=0.1}Slowly... {w=0.1}Slowly..."
+
+    show hik happy:
+        zoom 0.3
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+
+        linear 0.5 blur 10
+
+    n "The lines slide off... {w=0.1}Again... {w=0.1}Again..."
 
     hikaru "{cps=12}Why are you wearing their face?{/cps}"
 
@@ -253,34 +304,41 @@ label ghost_hikaru_4:
 
     hikaru "{cps=10}Who are you?{/cps}"
 
-    n "Their nose flattens, then the skin peels."
-
-    n "A hard ridge pushes forward."
-
-    n "Beak."
-
-    n "Mask."
-
-    n "You can't make the edges anymore."
-
     hikaru "{cps=9}I know that voice, but not that look...{/cps}"
 
-    show normal_hikaru normal at c_show_16
-    show ghost_hikaru attack at c_show_17
-    ## hikaru's normal sprite dissolves to their ghost sprite slowly
-    ## you can check dissolve.rpy for the transition you like
+    hide hik
+    show ghost_hikaru idle:
+        zoom 0.32
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+
+        linear 0.5 blur 2
+    with in_212
 
     n "Their mouth stretches wide, then clamps shut as their bones starts to warp."
 
-    hikaru "{cps=8}You’re not them. {/cps}{w=0.3}{cps=5}You’re nOt Them—{/cps}"
+    hikaru "{cps=8}You’re not them. {/cps}{w=0.3}{cps=5}You’re nOt Them--{/cps}"
 
     n "The serene face you knew is gone."
 
+    play sound "sfx/screech.mp3"
+
     hikaru "{size=+8}{cps=6}Give [persistent.player_name] BACK.{/cps}{/size}"
 
-    hikaru "{size=+12}{cps=4}GIVE—[persistent.player_name] —BACK—{/cps}{/size}"
+    with sshake
 
-    play sound "sfx/screech.ogg"
+    hikaru "{size=+12}{cps=4}GIVE--[persistent.player_name] --BACK--{/cps}{/size}"
+    scene black
+    with sshake
+
+    $ haze_active = False
+    hide haze_effect
+    with dissolve
+
+
 
     n "..."
 
@@ -292,7 +350,16 @@ label ghost_hikaru_4:
 
 label ghost_hikaru_5:
 
-    play sound "sfx/footsteps_slow.ogg"
+    show village night at walkinn:
+
+        zoom 0.6
+        xalign 0.5
+        yalign 0.5
+
+
+
+    play sound "sfx/walk grass.mp3"
+    pause 0.4
 
     n "You’re walking home."
 
@@ -300,11 +367,14 @@ label ghost_hikaru_5:
 
     n "The sun dipped quickly, so you didn’t notice until it was gone."
 
-    play sound "sfx/second_steps.ogg"
+    play muzak "sfx/walk grass.mp3"
 
     n "..."
 
+    stop sound
+
     n "You hear it."
+    play music "sfx/walk grass.mp3"
 
     n "A second pair of footsteps"
 
@@ -312,12 +382,18 @@ label ghost_hikaru_5:
 
     $ renpy.pause(2.0)
 
+    stop music
+    stop muzak
+
+    show village night:
+
+        zoom 0.6
+        xalign 0.5
+        yalign 0.5
+
     n "You stop walking."
 
-    MC "...?"
-
-    stop sound fadeout 1.0
-    $ renpy.pause(1.0)
+    MC surprised2 "...?"
 
     n "It stops too."
 
@@ -325,26 +401,52 @@ label ghost_hikaru_5:
 
     n "Silence."
 
+    with vpunch
+
     n "You turn around."
 
     n "No one."
 
-    $ renpy.pause(1.0)
+    with vpunch
 
     n "You turn back."
 
-    play sound "sfx/air_cut.ogg"
-    show ghost_hikaru idle at c_show_18
+    play sound "sfx/whip.mp3"
+    show ghost_hikaru idle:
+        zoom 0.23
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+
     $ renpy.pause(1.0)
 
     MC "...Hikaru?"
 
     n "No answer."
 
+    show village night at walkinn:
+
+        zoom 0.6
+        xalign 0.5
+        yalign 0.5
+
     n "You walk forward. Slowly."
 
+    play muzak "sfx/walk grass.mp3"
+
+
     #show hikaru ghost at Position(xpos=0.5, ypos=0.85) with move
-    show ghost_hikaru idle at c_show_19
+    show ghost_hikaru idle:
+        zoom 0.23
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+
+        linear 0.5 zoom 0.28
     $ renpy.pause(2.0)
 
     n "It still follows you with the same pace and rythm."
@@ -353,40 +455,47 @@ label ghost_hikaru_5:
 
     $ renpy.pause(2.0)
 
-    n "You walk faster."
-
-    play sound "sfx/steps_dirt.ogg"
     #show hikaru ghost at Position(xpos=0.5, ypos=0.85) with move
-    show ghost_hikaru idle at c_show_20
+    show ghost_hikaru idle:
+        zoom 0.28
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+
+        linear 0.5 zoom 0.32
     $ renpy.pause(1.5)
+
+    play music "sfx/walk grass.mp3"
 
     n "They're still there."
 
+    show village night:
+
+        zoom 0.6
+        xalign 0.5
+        yalign 0.5
+    show ghost_hikaru idle:
+        zoom 0.32
+        xanchor 0.5
+        xalign 0.5
+        yalign 0
+        yoffset 60
+        xoffset 0
+
+        linear 0.5 zoom 0.32
+    $ renpy.pause(1.5)
+
+    stop sound
+    stop music
+    stop muzak
+
     n "You stop. So do they."
-
-    n "You check your shadow."
-
-    n "You can’t see it."
-
-    n "There's a pair of wings on your shadow."
-
-    ## show hikaru's ghost but only shadowed
-    hide ghost_hikaru with fade
-    show ghost_hikaru normal at c_show_21:
-        matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
-
-
-    $ renpy.pause(2.0)
-
-    play sound "sfx/heartbeat_slow.ogg"
-    scene black with fade
-    $ renpy.pause(2.0)
-
-    n "..."
 
     scene black
 
-    centered "I A M A L W A Y S W I T H Y O U "
+    centered "{cps=10}I A M A L W A Y S W I T H Y O U {/cps}"
 
     $ renpy.pause(3.0)
 

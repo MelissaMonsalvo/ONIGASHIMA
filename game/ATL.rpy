@@ -164,6 +164,12 @@ transform bg_run_shake:
     pause 0.05
     repeat
 
+transform walkinn:
+        linear 0.3 xoffset 34 yoffset 12
+        linear 0.3 xoffset -28 yoffset 0
+        linear 0.3 xoffset 21 yoffset 11
+        linear 0.3 xoffset 0 yoffset 0
+        repeat
 screen drunk_haze():
     add "haze_overlay" at haze_loop:
         xalign 0.5
@@ -172,7 +178,16 @@ screen drunk_haze():
         alpha 0.3
         blur 4
 
-
+transform haze_loop:
+    parallel:
+        linear 1.5 xoffset -4 yoffset 4 zoom 1.01
+        linear 1.5 xoffset 4 yoffset -4 zoom 0.99
+        repeat
+    parallel:
+        linear 1.5 alpha 0.25 blur 3
+        linear 1.5 alpha 0.35 blur 5
+        linear 1.5 alpha 0.25 blur 3
+        repeat
 transform camera_tilt:
     rotate 0
     easein 0.1 rotate 5   # quick tilt right
