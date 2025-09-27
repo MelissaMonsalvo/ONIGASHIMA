@@ -406,7 +406,7 @@ screen pref_dialogue():
                     
                     text "[persistent.dialogue_line_spacing]" xalign 0.0
 
-                    bar value FieldValue(persistent, "dialogue_line_spacing", max_is_zero=False, step=0.5, min=2, max=30) alt "Change dialogue line spacing":
+                    bar value FieldValue(persistent, "dialogue_line_spacing", max_is_zero=False, step=0.5, min=2, max=80) alt "Change dialogue line spacing":
                         style "bar"
                         left_bar bar_skin
                         right_bar "gui/game menu/right.png"

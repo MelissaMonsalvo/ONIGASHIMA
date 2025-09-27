@@ -10,6 +10,8 @@ init python:
 ### PAUSE MENU SCREEN ###
 ############################################################
 screen pause_menu():
+    tag menu
+    
     style_prefix "pm"
     default tt_color = BLACK
 
@@ -39,6 +41,10 @@ screen pause_menu():
             button:
                 text _("RESUME") hover_color tt_color
                 action Return()
+
+            button:
+                text _("HISTORY") hover_color tt_color
+                action ShowMenu("history")
 
             button:
                 text _("SETTINGS") hover_color tt_color
