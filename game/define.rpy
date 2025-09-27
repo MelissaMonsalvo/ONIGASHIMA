@@ -70,7 +70,7 @@ define n2 = Character(None, what_color="#ff5277", what_font="LibreBaskerville-Re
 
 define shiori = Character("Shiori", color="#c78b12", callback=speaker("shio"))
 define yamato = Character("Yamato", color="#00d44a", callback=speaker("yama"))
-define hikaru = Character("Hikaru", color="#092a43",callback=speaker("hika"))
+define hikaru = Character("Hikaru", color="#ebabff",callback=speaker("hika"))
 
 image flesh = "BG/Flesh.png"
 image flesh2 = "BG/Flesh2.png"
@@ -82,6 +82,9 @@ image gore = "images/gore.png"
 
 image cg_shioriloop1 = "images/cg_shioriloop1.png"
 image cg_trueending = "images/cg_trueending.png"
+image cg_loop3hikaru = "images/cg_loop3hikaru.png"
+image cg_loop3shiori = "images/cg_loop3shiori.png"
+image cg_loop3yamato = "images/cg_loop3yamato.png"
 
 image terumc = "images/terumc.webp"
 image terumc_left = "images/terumc_left.png"
@@ -102,6 +105,10 @@ image forest night = "BG/Forest Night.png"
 image teru night = "BG/Teru Night.png"
 image shrine night = "BG/Shrine.jpg"
 image village night = "BG/Village Night.png"
+
+image cliff = "BG/cliff.jpg"
+image past = "BG/past.jpg"
+
 
 image child = "NPC/npc_child.webp"
 image man = "NPC/npc_man.webp"

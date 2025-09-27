@@ -27,15 +27,17 @@ default load_redirect = None
 default just_loaded = False
 
 init -1 python:
-
     def auto_redirect_check():
-        if just_loaded and load_redirect:
-            _tmp = load_redirect
-            store.just_loaded = False
-            store.load_redirect = None
-            renpy.call_in_new_context(_tmp)
+        if store.was_loaded_from_save:
+            if not persistent.hikaru_dies and store.hikaru_alive:
+                renpy.call_in_new_context("saveprohibiteded_hikaru")
+            elif not persistent.yamato_dies and store.yamato_alive:
+                renpy.call_in_new_context("saveprohibiteded_yamato")
+            elif not persistent.shiori_dies and store.shiori_alive:
+                renpy.call_in_new_context("saveprohibiteded_shiori")
 
-    config.periodic_callback = auto_redirect_check
+            # prevent future triggering
+            store.was_loaded_from_save = False
 
 
 
@@ -145,6 +147,7 @@ label start:
     $ ysword = False
     $ hmask = True
     $ hsword = False
+    jump prologue
     #jump loop3_hikaru
     #jump get_player_name
     #jump prologue_loop1
@@ -179,40 +182,3 @@ label start:
     else:
         $ current_loop = 1
         jump prologue
-
-label after_load:
-
-    if not persistent.hikaru_dies and hikaru_alive:
-        $ load_redirect = "blocked_hikaru"
-        $ just_loaded = True
-
-    elif not persistent.yamato_dies and yamato_alive:
-        $ load_redirect = "blocked_yamato"
-        $ just_loaded = True
-
-    elif not persistent.shiori_dies and shiori_alive:
-        $ load_redirect = "blocked_shiori"
-        $ just_loaded = True
-
-    return
-
-label blocked_hikaru:
-    scene black
-    show text "You can't save Hikaru eyyyy." at truecenter
-    with dissolve
-    pause 3
-    $ renpy.full_restart()
-
-label blocked_yamato:
-    scene black
-    show text "You can't save Yamato booo." at truecenter
-    with dissolve
-    pause 3
-    $ renpy.full_restart()
-
-label blocked_shiori:
-    scene black
-    show text "You can't save Shiori nyaaa~." at truecenter
-    with dissolve
-    pause 3
-    $ renpy.full_restart()

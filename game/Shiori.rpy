@@ -11,12 +11,7 @@ image shi normal = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
 
     (0,0), "Shiori/body.png",
@@ -63,13 +58,9 @@ image shi happy = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -115,13 +106,9 @@ image shi happyblush = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -158,13 +145,9 @@ image shi sad = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), "Shiori/ear_left2.png",
@@ -193,13 +176,9 @@ image shi blush = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), "Shiori/ear_left2.png",
@@ -229,13 +208,9 @@ image shi worried = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), "Shiori/ear_left2.png",
@@ -259,13 +234,9 @@ image shi fear = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), "Shiori/ear_left2.png",
@@ -296,13 +267,9 @@ image shi surprised = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -347,13 +314,9 @@ image shi shocked = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -398,13 +361,9 @@ image shi annoyed = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -449,13 +408,9 @@ image shi angry = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -500,13 +455,9 @@ image shi yansm = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -551,13 +502,9 @@ image shi yan = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -602,13 +549,9 @@ image shi yanbl = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -654,13 +597,9 @@ image shi yansmbl = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(
@@ -706,13 +645,9 @@ image shi smug = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
             "Shiori/tail1.png", 4.5,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail3.png", .25,
             "Shiori/tail4.png", 2.25,
-            "Shiori/tail3.png", .25,
-            "Shiori/tail2.png", .25,
-            "Shiori/tail1.png", 2.25,
         ),
+
 
     (0,0), "Shiori/body.png",
     (0,0), Animation(

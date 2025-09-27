@@ -348,7 +348,7 @@ label get_player_name:
             $ persistent.player_name = "Kagami"
 
         $ persistent.seen_true_end = False
-        n "[persistent.player_name]"
+        n "[persistent.player_name]."
 
 
     jump after_get_name
