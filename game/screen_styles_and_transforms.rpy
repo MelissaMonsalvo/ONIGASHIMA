@@ -10,6 +10,7 @@ init python early:
     BLACK = "#000000"
     WHITE = "#ffffff"
 
+    NOTO_JP_BOLD = "NotoSerifJP-SemiBold.ttf"
     NOTO_JP = "NotoSerifJP-VariableFont_wght.ttf"
 
 
@@ -51,12 +52,15 @@ image gm_btn_hover = ConditionSwitch(
 
 image frame black = Frame("gui/frame.webp", 100, 85)
 
-define LONG_BTN_PADDING = (20, 30, 75, 30)
+define LONG_BTN_PADDING = (75, 30)
+define GM_LONG_BTN_PADDING = (20, 30, 75, 30)
 
+define GM_XMIN_FRAME = 400
 define GM_TITLE_POS = (55, 42)
 define GM_TITLE_SIZE = 80
+define GM_BUTTON_SIZE = (411, 60)
 define GM_SPACING = 30
-define GM_VP_SIZE = (1090, 500)
+define GM_VP_SIZE = (1100, 550)
 define GM_VP_POS = (670, 332)
 image gm navline = Transform("gui/game menu/nav_line.png", pos=(90, 215))
 

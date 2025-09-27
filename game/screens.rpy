@@ -61,9 +61,12 @@ style prompt_text is gui_text:
 
 
 style bar:
-    ysize gui.bar_size
-    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+    ysize 68
+    xsize 525
+    left_bar Frame("gui/game menu/left.png", 20, 5, tile=False)
+    right_bar Frame("gui/game menu/right.png", 20, 5, tile=False)
+    #left_bar "gui/game menu/left.png"
+    #right_bar "gui/game menu/right.png"
 
 style vbar:
     xsize gui.bar_size
@@ -76,6 +79,7 @@ style scrollbar:
     thumb Frame("gui/scrollbar/horizontal_[prefix_]thumb.webp", 5, 5, tile=False)
 
     thumb_offset 10
+    unscrollable 'hide'
 
 style vscrollbar:
     xsize 29
@@ -83,6 +87,7 @@ style vscrollbar:
     thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.webp", 5, 5, tile=False)
 
     thumb_offset 10
+    unscrollable 'hide'
 
 style slider:
     ysize gui.slider_size
@@ -131,7 +136,10 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        text what id "what":
+            line_spacing persistent.dialogue_line_spacing
+            font persistent.dialogue_font
+            size persistent.dialogue_text_size
 
 
     ## If there's a side image, display it above the text. Do not display on
@@ -177,7 +185,7 @@ style say_label:
     yalign 0.5
 
 style say_dialogue:
-    properties gui.text_properties("dialogue")
+    #properties gui.text_properties("dialogue")
 
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
@@ -751,7 +759,7 @@ define selected1 = 1
 # persistent.loop1:
 
 
-screen preferences():
+screen preferences_old():
 
     tag menu
 
@@ -1297,9 +1305,7 @@ screen config_general():
 #                             style "mute_all_button"
 
 
-style pref_label is gui_label
-style pref_label_text is gui_label_text
-style pref_vbox is vbox
+
 
 style radio_label is pref_label
 style radio_label_text is pref_label_text
@@ -1323,15 +1329,8 @@ style slider_pref_vbox is pref_vbox
 style mute_all_button is check_button
 style mute_all_button_text is check_button_text
 
-style pref_label:
-    top_margin gui.pref_spacing
-    bottom_margin 3
 
-style pref_label_text:
-    yalign 1.0
 
-style pref_vbox:
-    xsize 338
 
 style radio_vbox:
     spacing gui.pref_button_spacing

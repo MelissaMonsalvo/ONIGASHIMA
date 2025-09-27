@@ -211,6 +211,8 @@ style sl_vbox:
 
 style sl_label:
     pos GM_TITLE_POS
+    ysize 60
+    margin (0, 0)
 
 style sl_label_text:
     font NOTO_JP
@@ -251,11 +253,12 @@ style sl_thumb_text:
 
 ### NAV ###
 style sl_gm_frame:
-    xysize (1330, 95)
+    xysize (1385, 95)
     anchor (1.0, 1.0)
     pos (1920, 1060)
 
     background Frame("gui/game menu/btn_backgroud.png", 20, 10)
+    padding GM_LONG_BTN_PADDING
 
 
 style sl_gm_hbox:
@@ -263,7 +266,6 @@ style sl_gm_hbox:
 
 style sl_gm_button:
     is ni_button
-    hover_background "gm_btn_hover"
 
 style sl_gm_text:
     is ni_text

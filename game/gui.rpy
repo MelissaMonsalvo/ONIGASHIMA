@@ -55,19 +55,23 @@ define gui.interface_text_color = '#ffffff'
 
 
 ## Fonts and Font Sizes ########################################################
+## ONLY FOR DIALOGUE
+default persistent.dialogue_text_size = 33
+
+## DIALOGUE LINE SPACING
+default persistent.dialogue_line_spacing = 1
 
 ## The font used for in-game text.
 define gui.text_font = persistent.dialogue_font #"DejaVuSans.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = NOTO_JP #"DejaVuSans.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = NOTO_JP #"DejaVuSans.ttf"
 
 ## The size of normal dialogue text.
-#default gui.text_size = 33
-define gui.text_size = 33#persistent.dialogue_size
+default gui.text_size = 33 # TODO: Remove insstances of this later
 
 ## The size of character names.
 define gui.name_text_size = 45
