@@ -1842,9 +1842,18 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "screen overlay"
+
+    ## TEXT COLOR CHANGE ##
+
+    if current_route == "route1":
+        $ tt_color = BLACK
+    elif current_route == "route2":
+        $ tt_color = WHITE
+
 
     frame:
+        at ts_enterY(80)
 
         vbox:
             xalign .5
@@ -1852,41 +1861,76 @@ screen confirm(message, yes_action, no_action):
             spacing 45
 
             label _(message):
-                style "confirm_prompt"
                 xalign 0.5
 
             hbox:
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                button:
+                    text _("Yes") hover_color tt_color
+                    action yes_action
+
+                if no_action:
+                    button:
+                        text _("No") hover_color tt_color
+                        action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
 
 
-style confirm_frame is gui_frame
-style confirm_prompt is gui_prompt
-style confirm_prompt_text is gui_prompt_text
-style confirm_button is gui_medium_button
-style confirm_button_text is gui_medium_button_text
-
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
-    padding gui.confirm_frame_borders.padding
-    xalign .5
-    yalign .5
+    background "frame black"
+    xminimum 1114
+    yminimum 700
 
-style confirm_prompt_text:
-    textalign 0.5
-    layout "subtitle"
+    align (0.5, 0.5)
+    yoffset -40
+
+    padding (100, 90)
 
 style confirm_button:
-    properties gui.button_properties("confirm_button")
+    xysize (280, 120)
+    background None
+    hover_background Transform("long_btn_hover_no_frame", xysize=(280, 120))
 
-style confirm_button_text:
-    properties gui.text_properties("confirm_button")
+
+style confirm_text:
+    is pm_text
+    align (0.5, 0.5)
+
+style confirm_label_text:
+    color WHITE
+    size 60
+    font NOTO_JP
+    bold False
+    italic False
+    xsize 700
+    text_align 0.5
+    
+
+# style confirm_frame is gui_frame
+# style confirm_prompt is gui_prompt
+# style confirm_prompt_text is gui_prompt_text
+# style confirm_button is gui_medium_button
+# style confirm_button_text is gui_medium_button_text
+
+# style confirm_frame:
+#     background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+#     padding gui.confirm_frame_borders.padding
+#     xalign .5
+#     yalign .5
+
+# style confirm_prompt_text:
+#     textalign 0.5
+#     layout "subtitle"
+
+# style confirm_button:
+#     properties gui.button_properties("confirm_button")
+
+# style confirm_button_text:
+#     properties gui.text_properties("confirm_button")
 
 
 ## Skip indicator screen #######################################################
