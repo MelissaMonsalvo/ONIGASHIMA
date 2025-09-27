@@ -5,11 +5,7 @@ label loop1_hikaru_mandatory1:
         zoom 0.5
 
 
-    n "Everyone is tense because of the red moon."
-
-    n "You feel like more people will be at the shrine for prayers, so naturally you go there."
-
-    n "The shrine is eerily quiet, though. It's as if something can just appear and you{nw}"
+    n "The forest is eerily quiet. It's as if something can just appear and you{nw}"
 
     scene black with in_32
 
@@ -34,7 +30,7 @@ label loop1_hikaru_mandatory1:
 
     play music "Hikaru.mp3"
 
-    scene shrine day with out_32:
+    scene forest day with out_32:
         zoom 0.5
     show hik happy:
         zoom 0.5
@@ -90,7 +86,7 @@ label loop1_hikaru_mandatory1:
 
         linear 0.4 zoom 0.55 yoffset 35
     pause 0.5
-    scene shrine day:
+    scene forest day:
         zoom 0.7
         xalign 0.5
         yalign 0.5
@@ -189,11 +185,6 @@ label loop1_hikaru_mandatory1:
     with dissolve
 
     hikaru "Do you? {w=0.2}Did the Yamakui knock your head so hard you had amnesia?"
-
-    show shrine2 as wave_overlay behind hik:
-        function WaveShader(amp = 0, melt="both", melt_params=(10,1.0,0.1))
-        zoom 0.5
-    with dissolve
 
     $ decrease_music_volume(0.3)
     $ renpy.block_rollback()

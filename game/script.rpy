@@ -23,8 +23,9 @@ default hikaru_alive = True
 default yamato_alive = True
 default shiori_alive = True
 
-default load_redirect = None
-default just_loaded = False
+
+default should_block_label = None
+default block_scheduled = False
 
 init -1 python:
     def auto_redirect_check():

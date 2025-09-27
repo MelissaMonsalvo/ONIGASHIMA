@@ -94,14 +94,14 @@ image terumc_right = "images/terumc_right.png"
 
 image shrine2 = "BG/Shrine2.jpg"
 
-image dojo day = "BG/Dojo.jpg"
+image dojo day = "BG/Dojo Day.png"
 image house day = "BG/House.jpg"
 image forest day = "BG/Forest Day.png"
 image teru day = "BG/Teru Day.png"
 image shrine day = "BG/Shrine Day.png"
 image village day = "BG/Village Day.png"
 
-image dojo night = "BG/Dojo.jpg"
+image dojo night = "BG/Dojo Night.png"
 image house night = "BG/House.jpg"
 image forest night = "BG/Forest Night.png"
 image teru night = "BG/Teru Night.png"

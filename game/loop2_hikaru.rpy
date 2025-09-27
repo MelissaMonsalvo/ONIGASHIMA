@@ -888,5 +888,7 @@ label yesyeysysyqsad222:
 
     $ persistent.loop2 = True
 
+    $ renpy.full_restart()
+
 
     return
