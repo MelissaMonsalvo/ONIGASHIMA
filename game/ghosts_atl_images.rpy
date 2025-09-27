@@ -4,7 +4,7 @@
 image black_screen = "images/black_screen.png"
 
 #hikaru image
-image ghost_hikaru idle = Live Composite(
+image ghost_hikaru idle = LiveComposite(
     (6118, 5846),
     (0,0), Animation(
             "images/sprite_hikaru_ghost/ghost_torso_idle.PNG", .25,
@@ -12,14 +12,15 @@ image ghost_hikaru idle = Live Composite(
             "images/sprite_hikaru_ghost/ghost_torso_idle.PNG", .25,
             "images/sprite_hikaru_ghost/ghost_torso_idle1.PNG", .25,
         ),
-    (0,0),"images/sprite_hikaru_ghost/ghost_legs.webp"
+    (0,0),"images/sprite_hikaru_ghost/ghost_legs.webp",
     (0,0), Animation(
             "images/sprite_hikaru_ghost/ghost_bang.PNG", 4.25,
             "images/sprite_hikaru_ghost/ghost_bang2.PNG", .25,
             "images/sprite_hikaru_ghost/ghost_bang.PNG", .25,
             "images/sprite_hikaru_ghost/ghost_bang2.PNG", .25,
-        )
-image ghost_hikaru normal = Live Composite(
+        ))
+
+image ghost_hikaru normal = LiveComposite(
     (6118, 5846),
     (0,0), Animation(
             "images/sprite_hikaru_ghost/ghost_torso_idle.PNG", .25,
@@ -27,7 +28,7 @@ image ghost_hikaru normal = Live Composite(
             "images/sprite_hikaru_ghost/ghost_torso_idle.PNG", .25,
             "images/sprite_hikaru_ghost/ghost_torso_idle1.PNG", .25,
         ),
-    (0,0),"images/sprite_hikaru_ghost/ghost_legs.webp"
+    (0,0),"images/sprite_hikaru_ghost/ghost_legs.webp",
     (0,0), Animation(
             "images/sprite_hikaru_ghost/ghost_bang.PNG", 4.25,
             "images/sprite_hikaru_ghost/ghost_bang2.PNG", .25,
@@ -37,7 +38,7 @@ image ghost_hikaru normal = Live Composite(
 )
 
 
-image ghost_hikaru attack = Live Composite(
+image ghost_hikaru attack = LiveComposite(
     (6118, 5846),
     (0,0), Animation(
             "images/sprite_hikaru_ghost/ghost_torso_attack0.PNG", .25,
@@ -45,7 +46,7 @@ image ghost_hikaru attack = Live Composite(
             "images/sprite_hikaru_ghost/ghost_torso_attack2.PNG", .25,
             "images/sprite_hikaru_ghost/ghost_torso_attack1.PNG", .25,
         ),
-    (0,0),"images/sprite_hikaru_ghost/ghost_legs.webp"
+    (0,0),"images/sprite_hikaru_ghost/ghost_legs.webp",
     (0,0), Animation(
             "images/sprite_hikaru_ghost/ghost_bang.PNG", 4.25,
             "images/sprite_hikaru_ghost/ghost_bang2.PNG", .25,
@@ -57,7 +58,7 @@ image ghost_hikaru attack = Live Composite(
 
 
 #shiori image
-image ghost_shiori normal = Live Composite(
+image ghost_shiori normal = LiveComposite(
     (4265, 5166),
     (0,0), Animation(
             "images/sprite_shiori_ghost/tail_mouth.PNG", 4.5,
@@ -77,7 +78,7 @@ image ghost_shiori normal = Live Composite(
         ),
 )
 
-image ghost_shiori idle = Live Composite(
+image ghost_shiori idle = LiveComposite(
     (4265, 5166),
     (0,0), Animation(
             "images/sprite_shiori_ghost/tail_mouth.PNG", 4.5,
@@ -97,7 +98,7 @@ image ghost_shiori idle = Live Composite(
         ),
 )
 
-image ghost_shiori attack = Live Composite(
+image ghost_shiori attack = LiveComposite(
     (4265, 5166),
     (0,0), Animation(
             "images/sprite_shiori_ghost/tail_mouth.PNG", 4.5,
@@ -130,7 +131,7 @@ image ghost_shiori attack = Live Composite(
 #yamato image
 
 #image ghost_yamato_idle = "Ghosts/ghost_yamato_idle.png"
-image ghost_yamato idle = Live Composite(
+image ghost_yamato idle = LiveComposite(
     (6062, 7035),
     (0,0),"images/sprite_yamato_ghost/tendril_1.webp",
     (0,0),"images/sprite_yamato_ghost/tendril_2.webp",
@@ -159,7 +160,7 @@ image ghost_yamato idle = Live Composite(
             "images/sprite_yamato_ghost/arm_idle2.PNG", .25,
         ),
 )
-image ghost_yamato normal = Live Composite(
+image ghost_yamato normal = LiveComposite(
     (6062, 7035),
     (0,0),"images/sprite_yamato_ghost/tendril_1.webp",
     (0,0),"images/sprite_yamato_ghost/tendril_2.webp",
@@ -188,7 +189,7 @@ image ghost_yamato normal = Live Composite(
             "images/sprite_yamato_ghost/arm_idle2.PNG", .25,
         ),
 )
-image ghost_yamato attack = Live Composite(
+image ghost_yamato attack = LiveComposite(
     (6062, 7035),
     (0,0),"images/sprite_yamato_ghost/tendril_1.webp",
     (0,0),"images/sprite_yamato_ghost/tendril_2.webp",
