@@ -28,13 +28,6 @@ default preferences.skip_unseen=True
 
 define locations = ["shrine", "forest", "dojo", "village","house"]
 
-# define location_positions = {
-#     "shrine": (1500, 900),
-#     "forest": (400, 425),
-#     "dojo": (900, 1000),
-#     "village": (1200, 425),
-#     "house": (400, 1000)
-# }
 define location_positions = {
     "shrine": (820, 200),
     "forest": (350, 290),
@@ -42,116 +35,51 @@ define location_positions = {
     "village": (975, 950),
     "house": (325, 850)
 }
-# shrine
-# xpos 850 ypos 25
-# Forest
-# xpos 350 ypos 290
-# Dojo
-# xpos 1620 ypos 400
-# Village
-# xpos 975 ypos 850
-# House
-# xpos 325 ypos 750
-
-# Eventos obligatorios por loop y personaje
-# define mandatory_events = {
-#     1: {
-#         "yamato": [
-#             {"location": "dojo", "time": "Day", "event": "loop1_yamato_mandatory1"},
-#             {"location": "dojo", "time": "Night", "event": "loop1_yamato_mandatory2"},
-#             {"location": "house", "time": "Night", "event": "loop1_yamato_mandatory3"},
-#             {"location": "village", "time": "Day", "event": "loop1_yamato_mandatory4"},
-#             {"location": "forest", "time": "Night", "event": "loop1_yamato_mandatory5"}
-#         ],
-#         "hikaru": [
-#             {"location": "forest", "time": "Day", "event": "loop1_hikaru_mandatory1"},
-#             {"location": "dojo", "time": "Day", "event": "loop1_hikaru_mandatory2"},
-#             {"location": "village", "time": "Night", "event": "loop1_hikaru_mandatory3"},
-#             {"location": "house", "time": "Day", "event": "loop1_hikaru_mandatory4"},
-#             {"location": "shrine", "time": "Day", "event": "loop1_hikaru_mandatory5"}
-#         ],
-#         "shiori": [
-#             {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory1"},
-#             {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory2"},
-#             {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory3"},
-#             {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory4"},
-#             {"location": "forest", "time": "Day", "event": "loop1_shiori_mandatory5"}
-#         ]
-#     },
-#     2: {
-#         "yamato": [
-#             {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory1"},
-#             {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory2"},
-#             {"location": "shrine", "time": "Night", "event": "loop2_yamato_mandatory3"},
-#             {"location": "forest", "time": "Night", "event": "loop2_yamato_mandatory4"}
-#         ],
-#         "hikaru": [
-#             {"location": "forest", "time": "Day", "event": "loop2_hikaru_mandatory1"},
-#             {"location": "shrine", "time": "Night", "event": "loop2_hikaru_mandatory2"},
-#             {"location": "shrine", "time": "Day", "event": "loop2_hikaru_mandatory3"},
-#             {"location": "house", "time": "Day", "event": "loop2_hikaru_mandatory4"}
-#         ],
-#         "shiori": [
-#             {"location": "village", "time": "Day", "event": "loop2_shiori_mandatory1"},
-#             {"location": "shrine", "time": "Day", "event": "loop2_shiori_mandatory2"},
-#             {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory3"},
-#             {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory4"}
-#         ]
-#     }
-# }
 
 
-# # Definir los eventos fantasmas
-# define ghost_events = {
-#     "shiori": ["ghost_shiori_1", "ghost_shiori_2", "ghost_shiori_3", "ghost_shiori_4", "ghost_shiori_5"],
-#     "yamato": ["ghost_yamato_1", "ghost_yamato_2", "ghost_yamato_3", "ghost_yamato_4", "ghost_yamato_5"],
-#     "hikaru": ["ghost_hikaru_1", "ghost_hikaru_2", "ghost_hikaru_3", "ghost_hikaru_4", "ghost_hikaru_5"]
-# }
-
-
-
+#Eventos obligatorios por loop y personaje
 define mandatory_events = {
     1: {
         "yamato": [
-            {"location": "dojo", "time": "Day", "event": "loop1_yamato_mandatory1b"},
-            {"location": "dojo", "time": "Night", "event": "loop1_yamato_mandatory2b"},
-            {"location": "house", "time": "Night", "event": "loop1_yamato_mandatory3b"},
-            {"location": "village", "time": "Day", "event": "loop1_yamato_mandatory4b"},
-            {"location": "forest", "time": "Night", "event": "loop1_yamato_mandatory5b"}
+            {"location": "dojo", "time": "Day", "event": "loop1_yamato_mandatory1"},
+            {"location": "dojo", "time": "Night", "event": "loop1_yamato_mandatory2"},
+            {"location": "house", "time": "Night", "event": "loop1_yamato_mandatory3"},
+            {"location": "village", "time": "Day", "event": "loop1_yamato_mandatory4"},
+            {"location": "forest", "time": "Night", "event": "loop1_yamato_mandatory5"}
         ],
         "hikaru": [
-            {"location": "forest", "time": "Day", "event": "loop1_hikaru_mandatory1b"},
-            {"location": "dojo", "time": "Day", "event": "loop1_hikaru_mandatory2b"},
-            {"location": "village", "time": "Night", "event": "loop1_hikaru_mandatory3b"},
-            {"location": "house", "time": "Day", "event": "loop1_hikaru_mandatory4b"},
-            {"location": "shrine", "time": "Day", "event": "loop1_hikaru_mandatory5b"}
+            {"location": "forest", "time": "Day", "event": "loop1_hikaru_mandatory1"},
+            {"location": "dojo", "time": "Day", "event": "loop1_hikaru_mandatory2"},
+            {"location": "village", "time": "Night", "event": "loop1_hikaru_mandatory3"},
+            {"location": "house", "time": "Day", "event": "loop1_hikaru_mandatory4"},
+            {"location": "shrine", "time": "Day", "event": "loop1_hikaru_mandatory5"}
         ],
         "shiori": [
-            {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory1b"},
-            {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory2b"},
-            {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory3b"},
-            {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory4b"},
-            {"location": "forest", "time": "Day", "event": "loop1_shiori_mandatory5b"}
+            {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory1"},
+            {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory2"},
+            {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory3"},
+            {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory4"},
+            {"location": "forest", "time": "Day", "event": "loop1_shiori_mandatory5"}
         ]
     },
     2: {
         "yamato": [
-            {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory1b"},
-            {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory2b"},
-            {"location": "shrine", "time": "Night", "event": "loop2_yamato_mandatory3b"},
-            {"location": "forest", "time": "Night", "event": "loop2_yamato_mandatory4b"}
+            {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory1"},
+            {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory2"},
+            {"location": "shrine", "time": "Night", "event": "loop2_yamato_mandatory3"},
+            {"location": "forest", "time": "Night", "event": "loop2_yamato_mandatory4"}
         ],
         "hikaru": [
-            {"location": "forest", "time": "Day", "event": "loop2_hikaru_mandatory1b"},
-            {"location": "shrine", "time": "Night", "event": "loop2_hikaru_mandatory2b"},
-            {"location": "shrine", "time": "Day", "event": "loop2_hikaru_mandatory3b"},
-            {"location": "house", "time": "Day", "event": "loop2_hikaru_mandatory4b"}
+            {"location": "forest", "time": "Day", "event": "loop2_hikaru_mandatory1"},
+            {"location": "shrine", "time": "Night", "event": "loop2_hikaru_mandatory2"},
+            {"location": "shrine", "time": "Day", "event": "loop2_hikaru_mandatory3"},
+            {"location": "house", "time": "Day", "event": "loop2_hikaru_mandatory4"}
         ],
         "shiori": [
-            {"location": "village", "time": "Day", "event": "loop2_shiori_mandatory1b"},
-            {"location": "shrine", "time": "Day", "event": "loop2_shiori_mandatory2b"},
-            {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory3b"},
-            {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory4b"}
+            {"location": "village", "time": "Day", "event": "loop2_shiori_mandatory1"},
+            {"location": "shrine", "time": "Day", "event": "loop2_shiori_mandatory2"},
+            {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory3"},
+            {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory4"}
         ]
     }
 }
@@ -159,17 +87,72 @@ define mandatory_events = {
 
 # Definir los eventos fantasmas
 define ghost_events = {
-    "shiori": ["ghost_shiori_1b", "ghost_shiori_2b", "ghost_shiori_3b", "ghost_shiori_4b", "ghost_shiori_5b"],
-    "yamato": ["ghost_yamato_1b", "ghost_yamato_2b", "ghost_yamato_3b", "ghost_yamato_4b", "ghost_yamato_5b"],
-    "hikaru": ["ghost_hikaru_1b", "ghost_hikaru_2b", "ghost_hikaru_3b", "ghost_hikaru_4b", "ghost_hikaru_5b"]
+    "shiori": ["ghost_shiori_1", "ghost_shiori_2", "ghost_shiori_3", "ghost_shiori_4", "ghost_shiori_5"],
+    "yamato": ["ghost_yamato_1", "ghost_yamato_2", "ghost_yamato_3", "ghost_yamato_4", "ghost_yamato_5"],
+    "hikaru": ["ghost_hikaru_1", "ghost_hikaru_2", "ghost_hikaru_3", "ghost_hikaru_4", "ghost_hikaru_5"]
 }
 
+####################################################################
+#Labels for testing Map 
+####################################################################
 
-# define character_icons = {
-#     "shiori": "images/map/shiori.png",
-#     "yamato": "images/map/yamato.png",
-#     "hikaru": "images/map/hikaru.png"
+#Dont Delete
+
+
+# define mandatory_events = {
+#     1: {
+#         "yamato": [
+#             {"location": "dojo", "time": "Day", "event": "loop1_yamato_mandatory1b"},
+#             {"location": "dojo", "time": "Night", "event": "loop1_yamato_mandatory2b"},
+#             {"location": "house", "time": "Night", "event": "loop1_yamato_mandatory3b"},
+#             {"location": "village", "time": "Day", "event": "loop1_yamato_mandatory4b"},
+#             {"location": "forest", "time": "Night", "event": "loop1_yamato_mandatory5b"}
+#         ],
+#         "hikaru": [
+#             {"location": "forest", "time": "Day", "event": "loop1_hikaru_mandatory1b"},
+#             {"location": "dojo", "time": "Day", "event": "loop1_hikaru_mandatory2b"},
+#             {"location": "village", "time": "Night", "event": "loop1_hikaru_mandatory3b"},
+#             {"location": "house", "time": "Day", "event": "loop1_hikaru_mandatory4b"},
+#             {"location": "shrine", "time": "Day", "event": "loop1_hikaru_mandatory5b"}
+#         ],
+#         "shiori": [
+#             {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory1b"},
+#             {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory2b"},
+#             {"location": "shrine", "time": "Day", "event": "loop1_shiori_mandatory3b"},
+#             {"location": "shrine", "time": "Night", "event": "loop1_shiori_mandatory4b"},
+#             {"location": "forest", "time": "Day", "event": "loop1_shiori_mandatory5b"}
+#         ]
+#     },
+#     2: {
+#         "yamato": [
+#             {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory1b"},
+#             {"location": "dojo", "time": "Day", "event": "loop2_yamato_mandatory2b"},
+#             {"location": "shrine", "time": "Night", "event": "loop2_yamato_mandatory3b"},
+#             {"location": "forest", "time": "Night", "event": "loop2_yamato_mandatory4b"}
+#         ],
+#         "hikaru": [
+#             {"location": "forest", "time": "Day", "event": "loop2_hikaru_mandatory1b"},
+#             {"location": "shrine", "time": "Night", "event": "loop2_hikaru_mandatory2b"},
+#             {"location": "shrine", "time": "Day", "event": "loop2_hikaru_mandatory3b"},
+#             {"location": "house", "time": "Day", "event": "loop2_hikaru_mandatory4b"}
+#         ],
+#         "shiori": [
+#             {"location": "village", "time": "Day", "event": "loop2_shiori_mandatory1b"},
+#             {"location": "shrine", "time": "Day", "event": "loop2_shiori_mandatory2b"},
+#             {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory3b"},
+#             {"location": "shrine", "time": "Night", "event": "loop2_shiori_mandatory4b"}
+#         ]
+#     }
 # }
+
+
+# # Definir los eventos fantasmas
+# define ghost_events = {
+#     "shiori": ["ghost_shiori_1b", "ghost_shiori_2b", "ghost_shiori_3b", "ghost_shiori_4b", "ghost_shiori_5b"],
+#     "yamato": ["ghost_yamato_1b", "ghost_yamato_2b", "ghost_yamato_3b", "ghost_yamato_4b", "ghost_yamato_5b"],
+#     "hikaru": ["ghost_hikaru_1b", "ghost_hikaru_2b", "ghost_hikaru_3b", "ghost_hikaru_4b", "ghost_hikaru_5b"]
+# }
+
 
 define character_icons_idle = {
     "shiori": "images/map/map_shiori_idle.png",
@@ -193,7 +176,13 @@ define character_icons_yellow= {
 
 label map:
 
-    $ persistent.trueendingunlocked = True
+    # if persistent.loop1:
+    #     $ current_loop = 1
+    # elif persistent.loop2:
+    #     $  current_loop = 2
+
+
+    #$ persistent.trueendingunlocked = True
     if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
         $ check_rutes()
 
@@ -460,6 +449,35 @@ python early:
             print("Rute Hikaru")
             label_name = f"loop{store.current_loop}_hikaru"
             renpy.call(label_name)
+
+    # def check_rutes():
+    #     print(f"Yamato {store.yamato_events_completed}")
+    #     print(f"Shiori {store.shiori_events_completed}")
+    #     print(f"hikaru {store.hikaru_events_completed}")
+
+    #     #If persistent.trueendingunlocked is true and you are in loop 1
+
+    #     if store.yamato_events_completed >= 5:
+
+    #         print("Rute Yamato")
+    #         label_name = f"loop{store.current_loop}_yamatob"
+    #         renpy.callt(label_name)
+
+
+    #     elif store.shiori_events_completed >= 5:
+
+    #         print("Rute Shiori")
+    #         label_name = f"loop{store.current_loop}_shiorib"
+    #         renpy.call(label_name)
+
+    #     elif store.hikaru_events_completed >= 5:
+
+    #         print("Rute Hikaru")
+    #         label_name = f"loop{store.current_loop}_hikarub"
+    #         renpy.call(label_name)
+
+
+
 
     def truend():
         renpy.call("truend")
