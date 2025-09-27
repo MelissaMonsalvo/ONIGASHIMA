@@ -416,8 +416,8 @@ screen quick_menu():
             imagebutton auto "gui/quick menu/save_%s.png":
                 action ShowMenu('save')
 
-            # imagebutton auto "gui/quick menu/pause_%s.png":
-            #     action ShowMenu('pause_menu')
+            imagebutton auto "gui/quick menu/pause_%s.png":
+                action ShowMenu('pause_menu')
 
 
 
@@ -435,12 +435,6 @@ screen quick_menu():
             # textbutton _("Prefs") action ShowMenu('preferences')
 
 
-
-transform ts_qm_fadein(dist):
-    alpha 0.5
-    yoffset dist
-
-    ease 1.0 yoffset 0 alpha 1.0
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
