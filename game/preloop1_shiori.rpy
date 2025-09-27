@@ -322,6 +322,83 @@ label loop1_shiori_mandatory2:
 
     n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive it."
 
+    stop music
+    scene black
+    with fade
+    if current_Day == 1:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon1
+        with fade
+        pause 0.2
+        scene moon2
+        with fade
+
+        stop sound
+    if current_Day == 2:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon2
+        with fade
+        pause 0.2
+        scene moon3
+        with fade
+
+        stop sound
+    if current_Day == 3:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+    if current_Day == 4:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+
+
     $ loop1_shiori_mandatory2 = True
     return
 
@@ -566,7 +643,7 @@ label gulgulp:
 
 label loop1_shiori_mandatory4:
 
-    scene shrine day with in_182:
+    scene shrine night with in_182:
         zoom 0.7
         xalign 0.5
         yalign 0.5
@@ -645,7 +722,7 @@ label loop1_shiori_mandatory4:
 
     shiori "Let’s begin~"
 
-    scene shrine day:
+    scene shrine night:
         zoom 0.7
         xalign 0.5
         yalign 0.5
@@ -728,7 +805,7 @@ label loop1_shiori_mandatory4:
 
 
     MC mad "{sc=10}{size=50}STOP!{/size}{/sc}"
-    scene shrine day:
+    scene shrine night:
         zoom 0.5
     show shi fear:
         xanchor 0.5
@@ -781,6 +858,81 @@ label loop1_shiori_mandatory4:
 
     $ loop1_shiori_mandatory4 = True
 
+    stop music
+    scene black
+    with fade
+    if current_Day == 1:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon1
+        with fade
+        pause 0.2
+        scene moon2
+        with fade
+
+        stop sound
+    if current_Day == 2:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon2
+        with fade
+        pause 0.2
+        scene moon3
+        with fade
+
+        stop sound
+    if current_Day == 3:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+    if current_Day == 4:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
     return
 
 

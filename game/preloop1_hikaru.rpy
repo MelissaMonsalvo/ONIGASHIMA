@@ -1,7 +1,7 @@
 ############# LOOP 1 WHERE EVERYONE IS ALIVE ###########################
 label loop1_hikaru_mandatory1:
 
-    scene shrine day with in_182:
+    scene forest day with in_182:
         zoom 0.5
 
 
@@ -232,7 +232,7 @@ label loop1_hikaru_mandatory1:
 
     hikaru "It’s okay. You’ll remember again."
 
-    scene shrine day:
+    scene forest day:
         zoom 0.55
         xalign 0.5
         yalign 0.5
@@ -351,10 +351,8 @@ label loop1_hikaru_mandatory2:
 
         linear 0.07 yoffset 40
 
-        # Bounce up slightly (recoil)
         linear 0.07 yoffset 18
 
-        # Settle back down
         linear 0.10 yoffset 25
     with vpunch
 
@@ -520,7 +518,7 @@ label loop1_hikaru_mandatory2:
 
 label loop1_hikaru_mandatory3:
 
-    scene village day with in_182:
+    scene village night with in_182:
         zoom 0.5
     with fade
 
@@ -619,18 +617,14 @@ label loop1_hikaru_mandatory3:
         yoffset 25
         xoffset 0
 
-        # Inhale (shoulders lift quickly)
         linear 0.10 yoffset 10
 
-        # Sharp exhale/tremor
         linear 0.08 yoffset 32
 
-        # Quick shudder (tiny up/down for breath catch)
         linear 0.06 yoffset 20
         linear 0.07 yoffset 29
         linear 0.05 yoffset 25
 
-    # Settle
     pause 0.18
 
     hikaru "{cps=10}....{/cps}"
@@ -786,6 +780,79 @@ label loop1_hikaru_mandatory3:
 
     n "{blur}Let's just hope hikaru never finds out what you did.{/blur}"
 
+    if current_Day == 1:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon1
+        with fade
+        pause 0.2
+        scene moon2
+        with fade
+
+        stop sound
+    if current_Day == 2:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon2
+        with fade
+        pause 0.2
+        scene moon3
+        with fade
+
+        stop sound
+    if current_Day == 3:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+    if current_Day == 4:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+
 
 
 
@@ -797,7 +864,7 @@ label loop1_hikaru_mandatory4:
 
     $ hmask = False
 
-    scene house night:
+    scene house day:
         zoom 0.5
 
     n "You’ve just finished cleaning yourself when--"
@@ -1066,7 +1133,7 @@ label hikaru_armor:
     hide hik serious
     with dissolve
 
-    scene house night:
+    scene house day:
         zoom 0.5
         xanchor 1
         yanchor 1
@@ -1082,7 +1149,7 @@ label hikaru_armor:
 
     n "That's because you haven't washed it at all and left it bloodied like that."
 
-    scene house night:
+    scene house day:
         zoom 0.7
         xanchor 1
         yanchor 1
@@ -1422,7 +1489,7 @@ label hikaru_teadrink:
 
     play music "heavy breathing.mp3"
 
-    scene house night:
+    scene house day:
         zoom 0.8
         xoffset -100
         xalign 0.5
@@ -1467,7 +1534,7 @@ label hikaru_teadrink:
 
     play sound "sfx/doorslam.wav"
 
-    scene house night:
+    scene house day:
         zoom 0.5
 
     with hpunch

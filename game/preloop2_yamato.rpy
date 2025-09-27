@@ -5,20 +5,10 @@ label loop2_yamato_mandatory1:
 
     play music "sfx/forest night.wav"
 
-    scene forest day:
+    scene dojo day:
         zoom 0.5
-    $ haze_active = True
-    show haze_effect at haze_transform
-    with dissolve
-
-    play sound "sfx/walk grass.mp3"
-
 
     $ loop2_yamato_mandatory1 = True
-
-    n "Hmm? Why is the path curved?"
-
-    n "You don't remember it curving like this..."
 
     stop sound
 
@@ -29,12 +19,6 @@ label loop2_yamato_mandatory1:
         yoffset 0
         xzoom -1
         yzoom 1.0
-
-    n2 "Or maybe the trees moved, because they don’t like what’s inside you now."
-
-    $ haze_active = False
-    hide haze_effect
-    with dissolve
 
 
     yamato "{sc=3}Oi.{/sc}"
@@ -599,7 +583,7 @@ label loop2_yamato_mandatory3:
 
     show darken
 
-    n "You see Yamato kneeling before the graves without names."
+    n "You see Yamato kneeling before the urns without names."
 
     n "He lights the incense, then presses both fists together... They're still shaking."
 
@@ -623,7 +607,7 @@ label loop2_yamato_mandatory3:
 
         n "You see her before you hear anything."
 
-        n "She’s standing between the gravestones, her mouth stretches open, then splits slowly."
+        n "She’s standing between the urns, her mouth stretches open, then splits slowly."
 
         n "Who...?"
 
@@ -705,6 +689,79 @@ label loop2_yamato_mandatory3:
     n2 "But we {i}do.{/i}"
 
     n2 "{cps=10}Because the meat is always with us.{/cps}"
+
+    if current_Day == 1:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon1
+        with fade
+        pause 0.2
+        scene moon2
+        with fade
+
+        stop sound
+    if current_Day == 2:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon2
+        with fade
+        pause 0.2
+        scene moon3
+        with fade
+
+        stop sound
+    if current_Day == 3:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+    if current_Day == 4:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
 
 
     $ loop2_yamato_mandatory3 = True
@@ -830,5 +887,78 @@ label yesyeysysyqsad:
     n2 "I am."
 
     n2 "I A M {w=0.1}W A T C H I N G {w=0.1}Y O U."
+
+    if current_Day == 1:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}SIX DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon1
+        with fade
+        pause 0.2
+        scene moon2
+        with fade
+
+        stop sound
+    if current_Day == 2:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FIVE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon2
+        with fade
+        pause 0.2
+        scene moon3
+        with fade
+
+        stop sound
+    if current_Day == 3:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}FOUR DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
+    if current_Day == 4:
+        pause 0.3
+
+        play sound "sfx/day change.mp3"
+
+        centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}THREE DAYS UNTIL THE NEXT RED MOON{/color}{/atl}{/color}"
+
+        with fade
+
+        pause 0.5
+
+        scene moon3
+        with fade
+        pause 0.2
+        scene moon4
+        with fade
+
+        stop sound
 
     return
