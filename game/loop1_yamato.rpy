@@ -1539,5 +1539,6 @@ label loop1_yamato:
     $ persistent.loop1 = True
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived
+    $ renpy.full_restart()
 
     return

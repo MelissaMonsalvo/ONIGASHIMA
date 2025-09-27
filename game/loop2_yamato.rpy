@@ -1399,5 +1399,7 @@ label loop2_yamato:
 
     $ persistent.loop2 = True
 
+    $ renpy.full_restart()
+
 
     return

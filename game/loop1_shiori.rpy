@@ -884,6 +884,8 @@ label loop1_shiori:
 
     $ persistent.loop1 = True
 
+    $ renpy.full_restart()
+
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived
 
