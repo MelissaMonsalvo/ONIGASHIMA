@@ -551,7 +551,7 @@ label after_many_clicks:
 
     shiori "Shiori's so alone, you know?"
 
-    shiori "I know that [persistent.player_name] and Hikaru has something special going on, but they won't confess to each other."
+    shiori "I know that [persistent.player_name] and Hikaru have something special going on, but they won't confess to each other."
 
     shiori "Yamato-kun only cares about being the best."
 
