@@ -78,7 +78,7 @@ screen main_menu():
 
     # Hikaru
     if persistent.hikaru_dies:
-        add "gui/Main Menu/hikaru_idle.webp" xpos 900 ypos 100 zoom 0.2 at fadein1
+        add "gui/Main Menu/hikaru_idle.webp" xpos 700 ypos 100 zoom 0.2 at fadein1
     else:
         add "gui/Main Menu/hikaru_static.webp" xpos 900 ypos 100 zoom 0.2 at fadein1
 
