@@ -12,7 +12,7 @@ label loop3_yamato:
 
     n2 "nO oNe sPeAks mY nAmE."
 
-    n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG--"
+    n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG–"
 
     show yam rage behind darken:
         zoom 0.3
@@ -36,7 +36,7 @@ label loop3_yamato:
 
     n2 "GaMeY mEAt."
 
-    yamato "Goddamnit, [persistent.player_name]. {w=0.1}Ya go to the mountains yerself and came back with this thing weain' ya?"
+    yamato "Goddamnit, [persistent.player_name]. {w=0.1}Ya go to the mountains yerself and came back with this thing wearin' ya?"
 
     yamato "{i}Oi, bastard!{/i} That ain't yer face!"
 
@@ -90,7 +90,7 @@ label loop3_yamato:
     show combo_slash_3
     $ renpy.pause(0.1, hard=True)
 
-    n2 "TtKk--"
+    n2 "TtKk–"
 
     n2 "tOo sLoW, mUtt."
 
@@ -117,7 +117,7 @@ label loop3_yamato:
 
 
 
-    yamato "Bastard--"
+    yamato "Bastard–"
 
     yamato "{cps=14}The hell's with {b}THAT{/b} speed?{/cps}"
 
@@ -142,7 +142,7 @@ label loop3_yamato:
         pause 0.08
     with vpunch
 
-    yamato "{glitch=8}I'LL RIP YOU APART, YOU FUCKIN--{/glitch}"
+    yamato "{glitch=8}I'LL RIP YOU APART, YOU FUCKIN–{/glitch}"
 
     MC yan3 "{w=0.1}...nO nEeD tO sWeAr."
 
@@ -196,7 +196,7 @@ label loop3_yamato:
 
     show darken
 
-    yamato "{sc=6}Gh--!{/sc}"
+    yamato "{sc=6}Gh–!{/sc}"
 
     n2 "ThAt’s bEtTeR."
 
@@ -283,7 +283,7 @@ label loop3_yamato:
 
 
 
-    yamato "{i}You... {w=0.1}freak--{/i}"
+    yamato "{i}You... {w=0.1}freak–{/i}"
 
     MC happycl3 "{sc=1}RuN. RuN, lITttLE mUTt.{/sc}"
 
@@ -351,7 +351,7 @@ label loop3_yamato:
 
     n2 "lOoK aT tHE mOOn, sPiLLiNg {w}bLoOd fOr mE."
 
-    n2 "hHhAhhh~ {w}hHhHAhHhAha--"
+    n2 "hHhAhhh~ {w}hHhHAhHhAha–"
 
     n "..."
 
@@ -439,7 +439,7 @@ label loop3_yamato:
 
     n2 "nO oNe sPeAks mY nAmE."
 
-    n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG--"
+    n2 "tHe sKiN sTaRtS tO bUbBlE. {w}It’s RoTtInG–"
 
 
     show yam panic behind darken2:
@@ -496,7 +496,7 @@ label loop3_yamato:
 
     yamato "A-And... For the others, too."
 
-    yamato "{cps=14}I--I can’t remember their damned faces...{/cps}"
+    yamato "{cps=14}I–I can’t remember their damned faces...{/cps}"
 
     show yam rage behind darken2:
         zoom 0.3
@@ -516,7 +516,7 @@ label loop3_yamato:
 
     yamato "{glitch=8}That just means ya ate 'em!{/glitch}"
 
-    yamato "I can't bring 'em back, but I sure hell can avenge 'em!"
+    yamato "I can't bring 'em back, but I sure as hell can avenge 'em!"
 
     n "I always thought you hated me..."
 
@@ -530,11 +530,11 @@ label loop3_yamato:
 
     yamato "{sc=5}COME!{/sc}"
 
-    n "You don’t have to do this--"
+    n "You don’t have to do this–"
 
-    n "Yamato, please--"
+    n "Yamato, please–"
 
-    n "{cps=13}Just run--{/cps}"
+    n "{cps=13}Just run–{/cps}"
 
     show village night:
         zoom 0.5
@@ -576,7 +576,7 @@ label loop3_yamato:
     show darken2
     with vpunch
 
-    MC evil3 "hHhhAhhh-- {w}iT hUrTs sO nIcE."
+    MC evil3 "hHhhAhhh– {w}iT hUrTs sO nIcE."
 
     scene cg_loop3yamato:
         zoom 1
@@ -589,7 +589,7 @@ label loop3_yamato:
 
     MC evil3 "I liKE PlaYIng WiTh FooD."
 
-    yamato "{sc=7}The hell--!{/sc}"
+    yamato "{sc=7}The hell–!{/sc}"
 
 
     play sound "swing.wav"
@@ -608,7 +608,7 @@ label loop3_yamato:
 
     with vpunch
 
-    n "{cps=14}Please stop playing with him--{/cps}"
+    n "{cps=14}Please stop playing with him–{/cps}"
 
     scene village night:
         zoom 0.5
@@ -631,20 +631,20 @@ label loop3_yamato:
     show darken2
     with vpunch
 
-    yamato "{sc=6}Ghh--!!{/sc}"
+    yamato "{sc=6}Ghh–!!{/sc}"
 
     show yam panic
     with hpunch
 
-    yamato "You--"
+    yamato "You–"
 
-    yamato "You’re enjoying this--"
+    yamato "You’re enjoying this–"
 
     stop music fadeout 1.0
 
     n2 "iT’s a dAaaaAaAaAanCe."
 
-    n "{i}Yamato doesn't have any hope of winning--{/i}"
+    n "{i}Yamato doesn't have any hope of winning–{/i}"
 
     play music "Goodbye.mp3"
 
@@ -692,7 +692,7 @@ label loop3_yamato:
 
     MC yansm3 "I AM fIgHtInG. {w}SerIOuSLy. {w}So YoUR MeaT iS TEndeRIzeD."
 
-    n2 "aNd lOoK--"
+    n2 "aNd lOoK–"
 
     play sound "sfx/stretch.mp3"
     with flashred
@@ -768,11 +768,11 @@ label loop3_yamato:
 
     MC yansm3 "yOu cAn’T eVeN rUn aNyMoRe."
 
-    n "{sc=7}DON’T--{/sc}"
+    n "{sc=7}DON’T–{/sc}"
 
-    n "{sc=6}PLEASE--{/sc}"
+    n "{sc=6}PLEASE–{/sc}"
 
-    n "{sc=7}YAMATO--GET UP--{/sc}"
+    n "{sc=7}YAMATO–GET UP–{/sc}"
 
     yamato "..."
 
@@ -795,13 +795,13 @@ label loop3_yamato:
 
     n2 "bEcAuSe nOw yOu’LL tAsTe lIkE mEmOrIeS."
 
-    n "{sc=7}DON’T--{/sc}"
+    n "{sc=7}DON’T–{/sc}"
 
-    n "{sc=8}STOP--STOP--{/sc}"
+    n "{sc=8}STOP–STOP–{/sc}"
 
     play sound "sfx/yamato_eaten.wav"
 
-    yamato "{sc=6}GHHHH--HHAKK--HHHHH!!{/sc}"
+    yamato "{sc=6}GHHHH–HHAKK–HHHHH!!{/sc}"
 
     play sound "sfx/tearflesh.wav"
 

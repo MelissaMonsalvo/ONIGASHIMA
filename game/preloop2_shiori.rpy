@@ -44,7 +44,7 @@ label loop2_shiori_mandatory1:
         linear 0.08 yoffset 80
         pause 0.05
 
-    shiori "Oh, woow~ You just defeated the big scary oni and you're unfazed?"
+    shiori "Oh, woow~ You just defeated the big scary Oni and you're unfazed?"
 
     MC smug2 "Guess I'm awesome like that!"
 
@@ -62,7 +62,7 @@ label loop2_shiori_mandatory1:
     show shi happy
     with dissolve
 
-    shiori "I just... I want to understand. I want to know how you get to kill the fearsome oni~"
+    shiori "I just... I want to understand. I want to know how you get to kill the fearsome Oni~"
 
     shiori "{i}Where did you strike first? What's the color of it's blood? Did it go down without a fight?{/i}"
 
@@ -79,7 +79,7 @@ label loop2_shiori_mandatory1:
         "I decapitated it":
             MC evil2 "{i}I snapped it's spine in half.{/i}"
 
-    n "Wait, what? That's not even what you thought of--"
+    n "Wait, what? That's not even what you thought of–"
 
     n2 "{i}I say what I want.{/i}"
 
@@ -115,9 +115,9 @@ label loop2_shiori_mandatory1:
 
     menu:
         "It cursed me":
-            MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I {glitch}stabbed it in this neck to kill it.{/glitch}"
+            MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I {glitch}stabbed it in the neck to kill it.{/glitch}"
         "It cried":
-            MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I stabbed it in this neck to kill it."
+            MC yansm2 "It didn’t say anything, Shiori. Just gurgling noises. Probably because I stabbed it in the neck to kill it."
 
     show shi happy
     with dissolve
@@ -162,7 +162,7 @@ label loop2_shiori_mandatory1:
 
     n2 "Slipped up.{w} But not really."
 
-    n "What--"
+    n "What–"
 
     n2 "This mouth. {w}{i}So much fun.{/i}"
 
@@ -187,7 +187,7 @@ label loop2_shiori_mandatory1:
 
     shiori "It’s still alive, {w=0.2}isn’t it?"
 
-    n "Oh no--"
+    n "Oh no–"
 
     show shi yansm:
         zoom 0.6
@@ -210,7 +210,7 @@ label loop2_shiori_mandatory1:
 
     shiori "And if it’s still alive... {w=0.2}maybe it’s listening {i}right now?{/i}"
 
-    n "Don’t say anything. Don’t respond. Please--"
+    n "Don’t say anything. Don’t respond. Please–"
 
     MC yan2 "..."
 
@@ -271,7 +271,7 @@ label loop2_shiori_mandatory1:
 
     n "Shiori...?"
 
-    n "Have she always been like this?"
+    n "Has she always been like this?"
 
     n "Or am I the one losing grip on reality?"
 
@@ -295,7 +295,7 @@ label loop2_shiori_mandatory2:
         yoffset 80
     with dissolve
 
-    n "You see her again, waiting on the same spot, wearing the same smile."
+    n "You see her again, waiting at the same spot, wearing the same smile."
 
     n "She's being normal... {w}Yesterday doesn't mean anything. {w}She was just being curious, is all...."
 
@@ -347,7 +347,7 @@ label loop2_shiori_mandatory2:
 
     shiori "Was it surrounded by mist?"
 
-    shiori "Everyone says that leaving the village is impossible because there's mist that swallow people."
+    shiori "Everyone says that leaving the village is impossible because there's a mist that swallows people."
 
     shiori "I wonder if the mist is Yamakui itself~"
 
@@ -397,11 +397,11 @@ label loop2_shiori_mandatory2:
 
     MC evil2 "Basically, yes, a feast."
 
-    n "{i}What are you saying? How do you know this--{/i}"
+    n "{i}What are you saying? How do you know this–{/i}"
 
-    MC panic2 "I--I mean, that’s what I heard."
+    MC panic2 "I–I mean, that’s what I heard."
 
-    MC panic2 "{k=2}That’s what it did. {w}Not me. {w}I mean--{/k}"
+    MC panic2 "{k=2}That’s what it did. {w}Not me. {w}I mean–{/k}"
 
     n "{w}Why is your mouth running off by itself? Get a grip already!"
 
@@ -505,7 +505,7 @@ label loop2_shiori_mandatory2:
 
     n "Your throat feels dry. You are {cps=10}parched.{/cps}"
 
-    n "{sc=2}You haven't eaten or drunk anything since--{/sc}{nw}"
+    n "{sc=2}You haven't eaten or drunk anything since–{/sc}{nw}"
 
     n2 "Say {b}one more{/b} word."
 
@@ -538,7 +538,7 @@ label loop2_shiori_mandatory3:
 
     shiori "...Protect [persistent.player_name]-sama, okay? And um... everyone else.{w=0.2} {i}Please.{/i}"
 
-    shiori "And--{w=0.2}and someone else. I think."
+    shiori "And–{w=0.2}and someone else. I think."
 
     shiori "There was a friend of mine who died..."
 
@@ -549,18 +549,18 @@ label loop2_shiori_mandatory3:
     play sound "sfx/sniffle.mp3"
 
     if persistent.hikaru_dead:
-        shiori "Me, [persistent.player_name]-sama, and Yamato-kun, and--{w=0.2}and..."
+        shiori "Me, [persistent.player_name]-sama, and Yamato-kun, and–{w=0.2}and..."
         shiori "{k=1}Who else?{/k}"
         shiori "It’s right there.{w=0.2} Like, on the tip of my tongue, you know?"
         shiori "They... they used to walk with us. {i}I think.{/i}"
         shiori "They always glared when I teased Yamato too hard.{w=0.2} Or maybe they just never smiled much?"
     if persistent.yamato_dead:
-        shiori "Me, [persistent.player_name]-sama, and Hikaru-san and--{w=0.2}and..."
+        shiori "Me, [persistent.player_name]-sama, and Hikaru-san and–{w=0.2}and..."
         shiori "{k=1}Who else?{/k}"
         shiori "It’s right there.{w=0.2} Like, on the tip of my tongue, you know?"
         shiori "They... {w=0.2}they used to teach us how to use a sword. {i}I think.{/i}"
-        shiori "They're louder than me,{w=0.2} and I think of them like an older sibling..."
-    shiori "They sat under the sakura tree with us!{w=0.2} Right?"
+        shiori "They were louder than me,{w=0.2} and I thought of them like an older sibling..."
+    shiori "They sat under the cherry blossom tree with us!{w=0.2} Right?"
 
     n "Your chest aches."
 
@@ -589,7 +589,7 @@ label loop2_shiori_mandatory3:
     with fade
 
 
-    n "Wait, was that--"
+    n "Wait, was that–"
 
     pause 0.5
 
@@ -610,7 +610,7 @@ label loop2_shiori_mandatory3:
     scene black
     with out_212
 
-    n "If she remembered who they were--{nw}"
+    n "If she remembered who they were–{nw}"
 
     n2 "{cps=20}No one cares enough to remember.{/cps}"
 
@@ -712,7 +712,7 @@ label loop2_shiori_mandatory4:
 
     n2 "I don't sleep."
 
-    MC nervous2 "Yeah. The red moon is coming, so I--"
+    MC nervous2 "Yeah. The red moon is coming, so I–"
 
     show shi happy:
         zoom 0.35
@@ -774,7 +774,7 @@ label loop2_shiori_mandatory4:
         linear 0.03 xoffset 0
         pause 0.05
 
-    shiori "I-I mean!{w=0.2} It's been alone all these time, right?"
+    shiori "I-I mean!{w=0.2} It's been alone all this time, right?"
 
     show shi sad
     with dissolve
@@ -813,7 +813,7 @@ label loop2_shiori_mandatory4:
     show shi fear
     with dissolve
 
-    shiori "{sc=5}No!{/sc} That’s not--{w=0.2}I mean--"
+    shiori "{sc=5}No!{/sc} That’s not–{w=0.2}I mean–"
 
     show shi fear:
         zoom 0.35
@@ -889,7 +889,7 @@ label loop2_shiori_mandatory4:
 
     n2 "{b}LOVE?{/b}"
 
-    n2 "{b}{i}HHHHRRAKkkKhh--HHHHK!{w=0.2} HhA!--KKAHhHAAHH!{/i}{/b}"
+    n2 "{b}{i}HHHHRRAKkkKhh–HHHHK!{w=0.2} HhA!–KKAHhHAAHH!{/i}{/b}"
 
     play sound "sfx/jumpscare.mp3"
 
@@ -901,7 +901,7 @@ label loop2_shiori_mandatory4:
 
     n2 "{b}Hold the GULLET while it feeds?!{/b}"
 
-    n2 "{b}BAHAHA--{/b}"
+    n2 "{b}BAHAHA–{/b}"
 
     play sound "sfx/jumpscare.mp3"
 
@@ -915,7 +915,7 @@ label loop2_shiori_mandatory4:
 
     n "Your hands {i}twitch{/i}.{w=0.2} Your spine {glitch=8}locks.{/glitch}"
 
-    MC happy "That’s...{w=0.2} ngh--"
+    MC happy "That’s...{w=0.2} ngh–"
 
     show shi worried
     with dissolve
@@ -924,7 +924,7 @@ label loop2_shiori_mandatory4:
 
     MC nervous2 "I’m fine."
 
-    MC nervous2 "Kh.{w=0.2} I’m--fine."
+    MC nervous2 "Kh.{w=0.2} I’m–fine."
 
     n2 "This girl.{w=0.2} So {b}warm{/b} when she talks."
 
@@ -953,11 +953,11 @@ label loop2_shiori_mandatory4:
 
     shiori "You're so cruel!"
 
-    MC hurt2 "No,{w=0.2} sorry,{w=0.2} I just--!"
+    MC hurt2 "No,{w=0.2} sorry,{w=0.2} I just–!"
 
     shiori "{sc=2}Hmph!{/sc}{w=0.2} I can't believe you laughed when I was trying to be nice!"
 
-    shiori "YOU {sc=2}BAKA!{/sc}"
+    shiori "YOU {sc=2}MEANIE!{/sc}"
 
     show shi angry:
         zoom 0.35
@@ -985,11 +985,11 @@ label loop2_shiori_mandatory4:
 
     n "{cps=14}She’s gone.{/cps}"
 
-    n2 "See if she still says that when the hugging arm’s {b}missing.{/b}"
+    n2 "See if she still says that when the hugging arms are {b}missing.{/b}"
 
     n "{sc=1}Shut up.{/sc}"
 
-    n "{sc=1}Shut up shut up shut up--{/sc}"
+    n "{sc=1}Shut up shut up shut up–{/sc}"
 
     $ loop2_shiori_mandatory4 = True
 

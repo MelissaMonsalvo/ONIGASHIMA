@@ -23,7 +23,7 @@ label loop2_hikaru:
 
     play music "Battora.mp3"
 
-    n "You wake up to see hikaru already barging in into your house."
+    n "You wake up to see Hikaru already barging in into your house."
 
     hikaru "I don’t care if it's forbidden{w=0.2} or if it kills me..."
 
@@ -99,17 +99,17 @@ label loop2_hikaru:
 
     hikaru "You dare use {i}that mouth{/i} to kiss me!"
 
-    n "Wait--"
+    n "Wait–"
 
-    n "{sc=1}Wait--{w=0.2} Hikaru--{/sc}"
+    n "{sc=1}Wait–{w=0.2} Hikaru–{/sc}"
 
-    n "Please--{w=0.3} don’t do this--"
+    n "Please–{w=0.3} don’t do this–"
 
     n2 "HeheHAHAHAHEHhehe.{w=0.2} Let them {b}try.{/b}"
 
-    n "Hikaru,{w=0.2} it’s me--{w=0.2} it's really {i}me{/i} in here--"
+    n "Hikaru,{w=0.2} it’s me–{w=0.2} it's really {i}me{/i} in here–"
 
-    n "I’m still here!{w=0.2} I’m--"
+    n "I’m still here!{w=0.2} I’m–"
 
     n2 "{b}{i}D{w} E{w} A{w} D.{/i}{/b}"
 
@@ -124,9 +124,9 @@ label loop2_hikaru:
 
     MC yansm2 "You’re cute when you’re desperate."
 
-    n "{i}No, stop this madness at once! Let me speak--{/i}"
+    n "{i}No, stop this madness at once! Let me speak–{/i}"
 
-    n "Hikaru,{w=0.2} I love you.{w=0.3} I’ve always--"
+    n "Hikaru,{w=0.2} I love you.{w=0.3} I’ve always–"
 
     n "{cps=15}...Run.{/cps}"
 
@@ -161,7 +161,7 @@ label loop2_hikaru:
 
     n "The circle glows.{w=0.3} You feel it {sc=5}cutting{/sc} into you."
 
-    n2 "AhhhHH--{w=0.2} {i}YES--{/i}"
+    n2 "AhhhHH–{w=0.2} {i}YES–{/i}"
 
     hikaru "{cps=13}Give me back [persistent.player_name] !{/cps}"
 
@@ -200,9 +200,9 @@ label loop2_hikaru:
         linear 0.11 yoffset 70
 
 
-    hikaru "{i}No--{/i}"
+    hikaru "{i}No–{/i}"
 
-    hikaru "{cps=14}No, please--{/cps}"
+    hikaru "{cps=14}No, please–{/cps}"
 
     hikaru "{sc=2}I did everything right...{/sc}"
 
@@ -210,7 +210,7 @@ label loop2_hikaru:
 
     MC yansm2 "{cps=30}Time to say goodbye, Hikaru~{/cps}"
 
-    n "{color=#ff002e}No--{/color}"
+    n "{color=#ff002e}No–{/color}"
 
     hikaru "{sc=7}Damn it...!{/sc}"
 
@@ -256,7 +256,7 @@ label loop2_hikaru:
     scene black
     with sshake
 
-    hikaru "{sc=8}SOMEONE--PLEASE--!!{/sc}"
+    hikaru "{sc=8}SOMEONE–PLEASE–!!{/sc}"
 
     scene village night with in_212:
         zoom 0.5
@@ -296,7 +296,7 @@ label loop2_hikaru:
         linear 0.09 xoffset 0
         pause 0.06
 
-    hikaru "{sc=1}It’s Yamakui!!!{/sc}{w} IT’S STILL HERE--"
+    hikaru "{sc=1}It’s Yamakui!!!{/sc}{w} IT’S STILL HERE–"
 
     show hik panic at midleft:
         zoom 0.25
@@ -312,7 +312,7 @@ label loop2_hikaru:
         linear 0.09 xoffset 0
         pause 0.06
 
-    hikaru "It’s wearing [persistent.player_name] ’s face--{w=0.2} {sc=2}YOU HAVE TO LISTEN!{/sc}"
+    hikaru "It’s wearing [persistent.player_name] ’s face–{w=0.2} {sc=2}YOU HAVE TO LISTEN!{/sc}"
 
     "Man" "...What?"
 
@@ -330,7 +330,7 @@ label loop2_hikaru:
         linear 0.09 xoffset 0
         pause 0.06
 
-    hikaru "{sc=2}WE HAVE TO KILL THAT THING--THAT THING WEARING [persistent.player_name] !{/sc}"
+    hikaru "{sc=2}WE HAVE TO KILL THAT THING–THAT THING WEARING [persistent.player_name]!{/sc}"
 
     show hik panic at midleft:
         zoom 0.25
@@ -345,7 +345,7 @@ label loop2_hikaru:
         linear 0.09 xoffset 0
         pause 0.06
 
-    hikaru "Please...{w=0.3} please, believe me--"
+    hikaru "Please...{w=0.3} please, believe me–"
 
     n2 "{b}Foolish.{w=0.2} Foolish.{w=0.2} FOOLISH.{/b}"
 
@@ -375,7 +375,7 @@ label loop2_hikaru:
         linear 0.09 xoffset 0
         pause 0.06
 
-    hikaru "My father wasn’t a coward--{w=0.2} HE WAS TRYING TO FIND A WAY OUT--{w=0.2} YOU KNOW THAT!"
+    hikaru "My father wasn’t a coward–{w=0.2} HE WAS TRYING TO FIND A WAY OUT–{w=0.2} YOU KNOW THAT!"
 
     n2 "{cps=30}No one listens to the traitor’s child.{/cps}"
 
@@ -383,7 +383,7 @@ label loop2_hikaru:
 
     hikaru "You're all going to {sc=1}DIE!{/sc}"
 
-    hikaru "DON’T YOU UNDERSTAND?!{w=0.3} IT’S IN [persistent.player_name] ! IT’S WEARING [persistent.player_name] 'S SKIN!"
+    hikaru "DON’T YOU UNDERSTAND?!{w=0.3} IT’S IN [persistent.player_name]! IT’S WEARING [persistent.player_name]'S SKIN!"
 
     hikaru "I’M TRYING TO {sc=1}SAVE YOU!{/sc}"
 
@@ -452,7 +452,7 @@ label loop2_hikaru:
 
     hikaru "...You..."
 
-    hikaru "{sc=2}You LIAR--{/sc}"
+    hikaru "{sc=2}You LIAR–{/sc}"
 
     MC sadcl2 "Go home, Hikaru.{w=0.3} Before you hurt someone."
 
@@ -491,7 +491,7 @@ label loop2_hikaru:
 
     hikaru "{cps=30}{w=0.1}...You all deserve what’s coming...{/cps}"
 
-    hikaru "You all--"
+    hikaru "You all–"
 
     hikaru "You all deserve to be {glitch=9}devoured...{/glitch}"
     scene black
@@ -525,14 +525,14 @@ label loop2_hikaru:
 
     play music "Blood Ritual.mp3"
 
-    n "{glitch=7}And so are you--{/glitch}"
+    n "{glitch=7}And so are you–{/glitch}"
 
     scene village night at bg_run_shake:
         matrixcolor TintMatrix(Color(rgb=(0.60, 0.20, 0.20))) * BrightnessMatrix(-0.1)
 
     play muzak "sfx/run.mp3"
 
-    hikaru "{sc=6}Hahh--hahh--hahhh--{/sc}"
+    hikaru "{sc=6}Hahh–hahh–hahhh–{/sc}"
 
     n2 "{b}I can hear it.{/b}"
 
@@ -540,7 +540,7 @@ label loop2_hikaru:
 
     n2 "Run, little thing."
 
-    n2 "I’ll follow the footprints made in your blood."
+    n2 "I’ll follow the footprints made from your blood."
 
     stop sound fadeout 1.0
     stop muzak
@@ -604,15 +604,15 @@ label loop2_hikaru:
     MC smug2 "Why don't you try...?"
 
 
-    hikaru "Kami-sama should’ve struck you down--"
+    hikaru "Kami-sama should’ve struck you down–"
 
-    hikaru "But they didn’t.{w=0.2} Just like the rest of them--those cowards back in the village."
+    hikaru "But they didn’t.{w=0.2} Just like the rest of them–those cowards back in the village."
 
-    hikaru "They turned their backs on me--"
+    hikaru "They turned their backs on me–"
 
-    hikaru "Let you walk free--"
+    hikaru "Let you walk free–"
 
-    hikaru "{color=#ff002e}They left me ALONE--!{/color}"
+    hikaru "{color=#ff002e}They left me ALONE–!{/color}"
 
     show hik madcry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -631,7 +631,7 @@ label loop2_hikaru:
 
         pause 0.06
 
-    hikaru "{sc=3}A L O N E--!!{/sc}"
+    hikaru "{sc=3}A L O N E–!!{/sc}"
 
     show hik madcry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -652,13 +652,13 @@ label loop2_hikaru:
 
     hikaru "{glitch=12}WHILE YOU ATE MY LOVER!!{/glitch}"
 
-    n "Hikaru--{w=0.2} please--"
+    n "Hikaru–{w=0.2} please–"
 
-    n "RUN--"
+    n "RUN–"
 
-    n "{sc=7}RUN BEFORE I CAN’T STOP THIS--{/sc}"
+    n "{sc=7}RUN BEFORE I CAN’T STOP THIS–{/sc}"
 
-    n "I’m still here, inside this body--{w=0.1}I still love you--"
+    n "I’m still here, inside this body–{w=0.1}I still love you–"
 
     n2 "{b}Shut up.{/b}"
 
@@ -689,7 +689,7 @@ label loop2_hikaru:
 
     n2 "...Time to eat."
 
-    n "STOP--{nw}"
+    n "STOP–{nw}"
 
     # Optional: Play sound effects in sync
     scene black
@@ -712,7 +712,7 @@ label loop2_hikaru:
 
     n "Metal {sc=6}screams{/sc} against clawed hands."
 
-    n "Their arm twists back{w=0.2} and you catch it easily,{w=0.2} snaps it."
+    n "Their arm twists back{w=0.2} and you catch it easily,{w=0.2} snapping it."
 
     play sound "sfx/crack.mp3"
     pause 0.1
@@ -720,7 +720,7 @@ label loop2_hikaru:
     pause 0.5
 
     play sound "sfx/pain.mp3"
-    hikaru "{sc=7}Aahh--ghhk--{/sc}"
+    hikaru "{sc=7}Aahh–ghhk–{/sc}"
 
     show darken2
     with dissolve
@@ -729,7 +729,7 @@ label loop2_hikaru:
 
     n "But their other hand {sc=4}claws{/sc} the ground, still trying to reach you."
 
-    n "{cps=13}You're over them now.{/cps}"
+    n "{cps=13}You're towering over them now.{/cps}"
 
     play sound "sfx/heartbeat.mp3"
 
@@ -770,7 +770,7 @@ label yesyeysysyqsad222:
     pause 0.1
 
 
-    hikaru "When...{w=0.5} the sakura...{w=0.5} blooms--"
+    hikaru "When...{w=0.5} the cherry blossoms...{w=0.5} bloom–"
 
     n2 "{cps=10}Open wide.{cps=10}"
 
@@ -809,13 +809,13 @@ label yesyeysysyqsad222:
 
 
     play sound "sfx/tearflesh.wav"
-    n2 "Gkkk--chk--krRRSHK."
+    n2 "Gkkk–chk–krRRSHK."
 
     play sound "sfx/swallow.mp3"
     n2 "Ghhhlk... glkk...{w=0.2} *gulp*."
 
     play sound "sfx/splurt.mp3"
-    n2 "{cps=11}Nghh--skrrk--ssLLLK...{/cps}"
+    n2 "{cps=11}Nghh–skrrk–ssLLLK...{/cps}"
 
     play sound "sfx/slurrp.mp3"
 
@@ -836,17 +836,17 @@ label yesyeysysyqsad222:
 
     n "...No."
 
-    n "{sc=5}No no no no--{/sc}"
+    n "{sc=5}No no no no–{/sc}"
 
-    n "{glitch=10}What did you--{/glitch}"
+    n "{glitch=10}What did you–{/glitch}"
 
-    n "{sc=7}WHAT DID YOU DO--{/sc}"
+    n "{sc=7}WHAT DID YOU DO–{/sc}"
 
-    n "{glitch=11}HIKARU WAS--{/glitch}"
+    n "{glitch=11}HIKARU WAS–{/glitch}"
 
     pause(1.0)
 
-    n "{cps=15}Hikaru was my--{/cps}"
+    n "{cps=15}Hikaru was my–{/cps}"
 
     n2 "Ah, you remember now that Hikaru's inside us?{w=0.2} About who you are?"
 
@@ -860,7 +860,7 @@ label yesyeysysyqsad222:
 
     pause(0.5)
 
-    n "...forgot about Hikaru, then you won't eat--{nw}"
+    n "...forgot about Hikaru, then you won't eat–{nw}"
 
     pause(1.0)
 
@@ -887,8 +887,6 @@ label yesyeysysyqsad222:
     $ persistent.hikaru_dies = True
 
     $ persistent.loop2 = True
-
-    $ renpy.full_restart()
 
 
     return

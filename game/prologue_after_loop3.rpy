@@ -22,7 +22,7 @@ label prologue_loop3:
 
     n2 "BeCAuSE I deVOuReD WhAT iS LeFt Of YOu."
 
-    n2 "aNd wHeN tHe mOoN tUrNs fUlL--"
+    n2 "aNd wHeN tHe mOoN tUrNs fUlL–"
 
     n2 "i tEAr aNoThEr oNe aPaRt."
 
@@ -39,12 +39,12 @@ label prologue_loop3:
     n2 "tHe mEaT gEtS tHiN."
 
 
-    n2 "mAyBe oNe dAy--"
+    n2 "mAyBe oNe dAy–"
 
     n2 "a sLaYeR wILL rIsE aGaIn."
 
 
-    n2 "bUt mAyBe--"
+    n2 "bUt mAyBe–"
 
     n2 "tHeRe iSn’T aNyOnE lEfT wHo WaNTs tO."
 
@@ -194,7 +194,7 @@ label prologue_loop5:
 
     play sound "sfx/monstermunch.mp3"
 
-    n2 "EaT. EaT. EateATEateATeaTeateAt--"
+    n2 "EaT. EaT. EateATEateATeaTeateAt–"
 
 
     n2 "i sLeEp lEsS tHeSe dAyS."
@@ -210,7 +210,7 @@ label prologue_loop5:
 
     n2 "aNNoyInG. sOft. {w}aLiVe."
 
-    n2 "nOW yOu’Re--"
+    n2 "nOW yOu’Re–"
 
     n2 "..."
 
@@ -267,13 +267,13 @@ label prologue_loop6:
 
     n2 "i’M mAkInG iT uP."
 
-    n2 "bUt iF i dOn’T tAlK tO sOmEtHiNg, i’LL--"
+    n2 "bUt iF i dOn’T tAlK tO sOmEtHiNg, i’LL–"
 
     n2 "..."
 
     n2 "tHe mEaT dIeS SoooOoOo fAsT nOw."
 
-    n2 "tHe mEaT dOn’T sAy mUcH, NoT LiKE yOU."
+    n2 "tHe mEaT dOeSn’T sAy mUcH, NoT LiKE yOU."
 
     n2 "tHe mOoN iS fUlL aGaIn."
 
@@ -360,7 +360,7 @@ label prologue_loop8:
 
     n2 "tHe sIlEnCe iS sCrEaMiNg iN mY EaRS."
 
-    n2 "I’M... {w}i’m gOnNa--"
+    n2 "I’M... {w}i’m gOnNa–"
 
     pause 1.0
 
@@ -380,7 +380,7 @@ label prologue_loop8:
 
     n2 "i’LL sToP."
 
-    n2 "i’LL sToP--i’LL sToP--"
+    n2 "i’LL sToP–i’LL sToP–"
 
     menu:
         "Repent?"
@@ -430,15 +430,15 @@ label prologue_loop8:
 
             n2 "i fOrgOt mY nAmE."
 
-            n2 "I. I. I. I. I. i. i. i. i--"
+            n2 "I. I. I. I. I. i. i. i. i–"
 
-            n2 "sKrTchSkRkGh--"
-
-            n2 "eAt."
+            n2 "sKrTchSkRkGh–"
 
             n2 "eAt."
 
-            n2 "eAt--"
+            n2 "eAt."
+
+            n2 "eAt–"
 
             n2 "EATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEAT"
 

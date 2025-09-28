@@ -98,7 +98,7 @@ label loop1_yamato_mandatory1:
         linear 0.09 yoffset 0
     with vpunch
 
-    yamato "{sc=1}Tch! Swingin’ like a drunk ox, kusogaki!{/sc}"
+    yamato "{sc=1}Tch! Swingin’ like a drunk ox, lil' shit!{/sc}"
 
     n "You charge in, but he easily slips past you."
 
@@ -164,7 +164,7 @@ label loop1_yamato_mandatory1:
 
     yamato "{sc=1}Oi, don’t get cocky. Ain’t doin’ shit like that!{/sc}"
 
-    n "Your sword sings again, he manage to parry once but you shifted your weight and swing one more time."
+    n "Your sword sings again, he manages to parry once but you shifted your weight and swing one more time."
 
     show yam rage behind slash_fx:
         zoom 0.26
@@ -180,7 +180,7 @@ label loop1_yamato_mandatory1:
     $ renpy.pause(0.1, hard=True)
     with vpunch
 
-    n "It almost hits, but--"
+    n "It almost hits, but–"
 
     play sound "sfx/fall.mp3"
     show yam panic:
@@ -198,7 +198,7 @@ label loop1_yamato_mandatory1:
     with vpunch
 
 
-    n "Yamato’s foot trips on something, and he slips down, accidentally avoiding your swing."
+    n "Yamato’s foot trips on something, and he slips, accidentally avoiding your swing."
 
     n "..."
 
@@ -219,7 +219,7 @@ label loop1_yamato_mandatory1:
 
     yamato "Lost my footing, ’s all. Ain’t my lucky day."
 
-    MC normal "...Yamato kun--"
+    MC normal "...Yamato-kun–"
 
     $ ysword = False
     show yam annoyed
@@ -232,15 +232,15 @@ label loop1_yamato_mandatory1:
 
     yamato "Me? Just some mutt still barkin’ out orders to trees."
 
-    MC annoyed "What are you talking about? Are you still mad that I get to kill the oni?"
+    MC annoyed "What are you talking about? Are you still mad that I get to kill the Oni?"
 
-    MC normal "Everyone knows that you're just as strong! No one will look down on you even though--"
+    MC normal "Everyone knows that you're just as strong! No one will look down on you, even though–"
 
     yamato "Tch. Don’t feed me that fluffy crap."
 
     play music "Tense.ogg"
 
-    MC hurt "I’m not--"
+    MC hurt "I’m not–"
 
     show yam ngh
     with dissolve
@@ -268,7 +268,7 @@ label loop1_yamato_mandatory1:
 
     MC smug "{cps=10}Ha!{/cps} Say whatever you want, I brought back the armor! Everyone saw it!"
 
-    yamato "Yeah? Armor’s just scrap metal if ya ask me. Coulda been anyone’s, or {i}planted--{/i}"
+    yamato "Yeah? Armor’s just scrap metal if ya ask me. Coulda been anyone’s, or {i}planted–{/i}"
 
     show yam ngh
     with dissolve
@@ -277,7 +277,7 @@ label loop1_yamato_mandatory1:
 
     MC surprised "{cps=9}What?{/cps}"
 
-    n "Yamato pauses, then looks down before staring you right at the eyes. He's hesitating...?"
+    n "Yamato pauses, then looks down before staring you right in the eye. He's hesitating...?"
 
     yamato "{sc=5}Tch, nevermind.{/sc}"
 
@@ -289,7 +289,7 @@ label loop1_yamato_mandatory1:
 
     n "Weird... Yamato is usually not like this..."
 
-    n "He was kind and always ready to help anyone in need of sparring partner, but now..."
+    n "He was kind and always ready to help anyone in need of a sparring partner, but now..."
 
     n "What's gotten into him?"
 
@@ -334,7 +334,7 @@ label loop1_yamato_mandatory2:
 
     pause 1.0
 
-    n "No one uses the dojo anymore after you return."
+    n "No one uses the dojo anymore after you returned."
 
     play music "Night.mp3"
 
@@ -366,7 +366,7 @@ label loop1_yamato_mandatory2:
 
     yamato "'cause Hikaru said it was too damn small to belong to the Oni."
 
-    MC annoyed "{sc=0.5}Have either of you or Hikaru seen the oni?{/sc}"
+    MC annoyed "{sc=0.5}Have either of you or Hikaru seen the Oni?{/sc}"
 
     MC mad "{sc=0.5}I was the only one who did and stayed alive!{/sc}"
 
@@ -527,9 +527,9 @@ label loop1_yamato_mandatory2:
     play music "Narukami.mp3"
     yamato "{sc=2}...Heh...{/sc}"
 
-    yamato "{sc=3}{k=2}...Heh... hehh... hhhhehhh--{/k}{/sc}"
+    yamato "{sc=3}{k=2}...Heh... hehh... hhhhehhh–{/k}{/sc}"
 
-    yamato "{sc=4}{size=+2}{k=1}Haaaahh... HHHahh--!!{/k}{/size}{/sc}"
+    yamato "{sc=4}{size=+2}{k=1}Haaaahh... HHHahh–!!{/k}{/size}{/sc}"
 
     with vpunch
 
@@ -582,9 +582,9 @@ label loop1_yamato_mandatory2:
 
     n "You're sure the Oni's blood was {color=#ff082d}red{/color}."
 
-    n "It was {color=#ff082d}red{/color}. You saw it--{w} didn’t you?"
+    n "It was {color=#ff082d}red{/color}. You saw it–{w} didn’t you?"
 
-    n "You stabbed it. {w}The liquid was dipping from your hands when you stabbed it. {w}{color=#ff082d}Red{/color}. {w}{color=#ff082d}Red{/color}. It HAD to be {color=#ff082d}red{/color}."
+    n "You stabbed it. {w}The liquid was dripping from your hands when you stabbed it. {w}{color=#ff082d}Red{/color}. {w}{color=#ff082d}Red{/color}. It HAD to be {color=#ff082d}red{/color}."
 
     n "It was very dark at the time, sure. But your sword was {color=#ff082d}red{/color}, right? You remember that, right?"
 
@@ -695,7 +695,7 @@ label loop1_yamato_mandatory3:
 
     n "You are in your house when you hear footsteps outside."
 
-    n "Why are you not asleep at this hour? Do you ever sleep? Does the fight haunt you so much that--"
+    n "Why are you not asleep at this hour? Do you ever sleep? Does the fight haunt you so much that–"
 
     n "Ah, that doesn't matter."
 
@@ -723,11 +723,11 @@ label loop1_yamato_mandatory3:
 
     n "Today is not Yamato's patrol schedule."
 
-    n "You immediately grab your sword, ready to fight--"
+    n "You immediately grab your sword, ready to fight–"
 
     n "Why? It's just Yamato. Your childhood friend. Even though he is more irritable lately, surely he is not trying to harm you."
 
-    n "You don’t make a sound until--"
+    n "You don’t make a sound until–"
 
     show yam normal:
         zoom 0.23
@@ -750,7 +750,7 @@ label loop1_yamato_mandatory3:
 
     MC yan "{sc=2}...Tch.{/sc}"
 
-    n "You almost growls as the blade presses to his back."
+    n "You almost growl as the blade presses into his back."
 
     play music "sfx/forest night.wav"
 
@@ -784,7 +784,7 @@ label loop1_yamato_mandatory3:
 
     yamato "..."
 
-    MC yansm "Are you trying to steal--"
+    MC yansm "Are you trying to steal–"
 
     yamato "Why would I give a shit about your old junk?"
 
@@ -801,7 +801,7 @@ label loop1_yamato_mandatory3:
 
     n "Your grip tightens, and your whole body wants to fight."
 
-    n "But instead, you take a very deep breath... and walks closer to him."
+    n "But instead, you take a very deep breath... and walk closer to him."
 
     scene house night:
         zoom 0.5
@@ -831,7 +831,7 @@ label loop1_yamato_mandatory3:
     show yam panic
     with dissolve
 
-    yamato "Uh... I--"
+    yamato "Uh... I–"
 
     MC annoyed "I'll prove that it's authentic, that you and Hikaru are just looking for a reason to doubt me."
 
@@ -895,7 +895,7 @@ label loop1_yamato_mandatory3:
 
     MC normal "I mean, the thing is dead. So if you're looking for some sort of evil aura, there'd be none left."
 
-    yamato "{w=0.2}...If this is real, then you really--"
+    yamato "{w=0.2}...If this is real, then you really–"
 
     MC normal "Yeah."
 
@@ -973,7 +973,7 @@ label loop1_yamato_mandatory3:
     hide yam
     with dissolve
 
-    n "He stands up then gives a half-hearted wave sheepishly as he vanishes into the dark."
+    n "He stands up then sheepishly gives a half-hearted wave as he vanishes into the dark."
 
     MC sad "..."
 
@@ -1073,7 +1073,7 @@ label loop1_yamato_mandatory4:
     scene village day:
         zoom 0.5
 
-    n "You were just walking from your house when you hear people arguing nearby."
+    n "You were just walking away from your house when you hear people arguing nearby."
 
     play music "Tense.ogg"
 
@@ -1101,7 +1101,7 @@ label loop1_yamato_mandatory4:
 
     hikaru "{w=0.1}{k=-1}...Are you saying I was wrong about the armor?{/k}"
 
-    yamato "Tch. I dunno. Maybe... {w=0.3}{sc=1}maybe th' armor don’t matter after all.{sc}"
+    yamato "Tch. I dunno. Maybe... {w=0.3}{sc=1}maybe th' armor doesn’t matter after all.{sc}"
 
     n "That’s strange. {w=0.1}Yamato’s the one who always doubted you and always swore that you couldn’t have done it..."
 
@@ -1141,9 +1141,9 @@ label loop1_yamato_mandatory4:
 
     yamato "Felt like maybe... {w}{i}maybe we’re barkin’ up the wrong damn tree.{/i}"
 
-    n "Hikaru goes still. Even from here you see the falter in their posture."
+    n "Hikaru goes still. Even from here, you see the falter in their posture."
 
-    hikaru "{b}...You don’t mean--{/b}"
+    hikaru "{b}...You don’t mean–{/b}"
 
     yamato "I mean... maybe we’re wrong this time. {w=0.3}Maybe [persistent.player_name] {b}did{/i} kill th' damn thing after all."
 
@@ -1204,9 +1204,9 @@ label loop1_yamato_mandatory5:
     scene black
     with fade
 
-    n "You decide to patrol tonight even though Yamato don't ask you to."
+    n "You decide to patrol tonight, even though Yamato didn't ask you to."
 
-    n "It's closer to the red moon, of course, but--"
+    n "It's closer to the red moon, of course, but–"
 
     n "You hear mutterings, prayers in ancient language... And it's a voice that you're too familiar with."
 
@@ -1237,7 +1237,7 @@ label loop1_yamato_mandatory5:
 
 
     play music "noinomai.mp3"
-    n "You see Yamato, kneeling at the clearing. His hands on his sword, shaking. Head bowed so low he looks like a broken puppet."
+    n "You see Yamato, kneeling at the clearing. His hands on his sword, shaking. Head bowed so low, he looks like a broken puppet."
 
     scene black
 
@@ -1274,7 +1274,7 @@ label loop1_yamato_mandatory5:
 
     yamato "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Master of the earth,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6} awake,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6} awake...{/sc}{/color}{/size}{/cps}"
 
-    n "--No...."
+    n "–No...."
 
     $ renpy.pause(2.6)
 
@@ -1381,7 +1381,7 @@ label loop1_yamato_mandatory5:
     with in_212
     hide screen eyessss
 
-    yamato "{color=#ff1111}{b}Wha--!!!{/b}{/color}"
+    yamato "{color=#ff1111}{b}Wha–!!!{/b}{/color}"
 
     n "The thing folds out of existence as soon as Yamato's chanting stops."
 
@@ -1433,14 +1433,14 @@ label loop1_yamato_mandatory5:
 
     yamato "Yeah, but that wasn't Yamakui either!"
 
-    MC yan "You're gonna fight an oni with something worse?"
+    MC yan "You're gonna fight an Oni with something worse?"
 
     show yam ngh
     with dissolve
 
     yamato "{sc=0.2}Shit, you don't know anything, do ya?{/sc}"
 
-    n "Yamato's voice breaks, his sword is clattering in the ground now. {w=0.2}"
+    n "Yamato's voice breaks, his sword is clattering onto the ground now. {w=0.2}"
 
     yamato "{k=-1}...Ever since ya came back, people look at me like I’m some leftover.{/k}"
 
@@ -1453,7 +1453,7 @@ label loop1_yamato_mandatory5:
 
     yamato "‘Course [persistent.player_name] came back stronger, faced the Yamakui and lived.'"
 
-    yamato "Then they look at me like I’m--like I'm just a jealous bloke. {w=0.2}"
+    yamato "Then they look at me like I’m–like I'm just a jealous bloke. {w=0.2}"
 
     show yam ngh
     with dissolve
@@ -1481,12 +1481,12 @@ label loop1_yamato_mandatory5:
         ease 0.3 xoffset 1000
 
 
-    yamato "...I didn’t mean to summon--{nw}"
+    yamato "...I didn’t mean to summon–{nw}"
 
     show yam sad
     with dissolve
 
-    yamato "{glitch=1.1}I thought maybe if I got stronger--if I had just a bit {i}more{/i}--maybe I'd be--{/glitch}"
+    yamato "{glitch=1.1}I thought maybe if I got stronger–if I had just a bit {i}more{/i}–maybe I'd be–{/glitch}"
 
     MC annoyed "Haaaah...."
 
@@ -1531,7 +1531,7 @@ label loop1_yamato_mandatory5:
 
     yamato "...Hh."
 
-    MC nervous "'Cmon, let's go back before whatever that thing was decide to return."
+    MC nervous "'Cmon, let's go back before whatever that thing was decides to return."
 
     scene black
     with dissolve

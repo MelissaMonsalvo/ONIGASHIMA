@@ -1,7 +1,7 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_yamato_1:
 
-    # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then dissapears
+    # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then disappears
 
     $ ghost_yamato_1 = True
 
@@ -19,14 +19,14 @@ label ghost_yamato_1:
 
     n "...."
 
-    n "What's with all these mist?"
+    n "What's with all that mist?"
 
     $ renpy.pause(1.0)
 
     window hide
 
     # Yamato ghost jumpscare
-    # show yamato_ghost_attack >> appears, zoomos in to your face, then dissapears
+    # show yamato_ghost_attack >> appears, zoomos in to your face, then disappears
 
     play sound "sfx/jumpscare.mp3"
 
@@ -42,7 +42,7 @@ label ghost_yamato_1:
 
     n "W-What was that?"
 
-    MC yansm2 "Ha. Ha. Verry funny."
+    MC yansm2 "Ha. Ha. Very funny."
 
     return
 
@@ -91,7 +91,7 @@ label ghost_yamato_2:
 
     $ renpy.pause(2.0)
 
-    ### everything dissapears
+    ### everything disappears
 
     scene black with fade
     hide ghost_yamato with fade
@@ -137,29 +137,29 @@ label ghost_yamato_3:
 
     ## first click
     play sound "sfx/shiori_eaten.wav"
-    MC "{size=+10}{cps=6}Ghhk--{/cps}"
+    MC "{size=+10}{cps=6}Ghhk–{/cps}"
 
     ## second click
     show ghost_yamato with vpunch
-    n "{cps=7}Y-You--can’t--breathe--{/cps}"
+    n "{cps=7}Y-You–can’t–breathe–{/cps}"
 
     ## third click
-    MC "Ah--Haaaa--!!!!"
+    MC "Ah–Haaaa–!!!!"
 
     ## fourth click
     show ghost_yamato with vpunch
-    n "{cps=6}WHO ARE YOU--{/cps}"
+    n "{cps=6}WHO ARE YOU–{/cps}"
 
     ## fifth click
-    MC "{color=#111}{size=+12}Gghkh--!!{/size}{/color}"
+    MC "{color=#111}{size=+12}Gghkh–!!{/size}{/color}"
 
     ### sicth click
     show ghost_yamato with vpunch
-    MC "MOVE--{w}MOVE--{w}Get--off--"
+    MC "MOVE–{w}MOVE–{w}Get–off–"
 
     hide ghost_yamato normal with fade
 
-    ## yamato dissapears
+    ## yamato disappears
 
     MC shocked2 "Haa... {w}Ha... {w}Haa..."
 
@@ -187,7 +187,7 @@ label ghost_yamato_4:
 
     n "..."
 
-    n "Where is it? is it a dream?"
+    n "Where is it? Is it a dream?"
 
     n "The moon's already red..."
 
@@ -229,7 +229,7 @@ label ghost_yamato_4:
     play sound "sfx/mmph.mp3"
     with sshake
 
-    yamato "{cps=8}{size=+6}--mghh--{/size}{/cps}"
+    yamato "{cps=8}{size=+6}–mghh–{/size}{/cps}"
 
     with hpunch
 
@@ -239,11 +239,11 @@ label ghost_yamato_4:
 
     with vpunch
 
-    n "His mouth widens far past what mouths should, black ooze filling your lungs."
+    n "His mouth widens far past how mouths should, black ooze filling your lungs."
 
 
 
-    n "Your own throat stretches to welcome it--"
+    n "Your own throat stretches to welcome it–"
 
     ## RETCHING SOUND
 
@@ -301,7 +301,7 @@ label ghost_yamato_5:
 
     n "He pushes the bowl forward, the sweet smell hits you and makes you nauseous."
 
-    MC "Urk--"
+    MC "Urk–"
 
     yamato "EaT."
 
@@ -344,11 +344,11 @@ label ghost_yamato_5:
     with flashred
     n "KRRRSHK-KHH—SPPLLT"
 
-    n "It looks like a normal dinner... then why do you want to gag so bad?"
+    n "It looks like a normal dinner... then why do you want to gag so badly?"
 
     yamato "{size=+10}{cps=5}SwALLoW iT.{/cps}{/size}"
 
-    MC shocked2 "GAH--"
+    MC shocked2 "GAH–"
 
     MC "Hahh... {w=0.2}Hahh..."
     hide ghost_yamato normal with fade
@@ -358,7 +358,7 @@ label ghost_yamato_5:
     stop music
     play sound "sfx/gag1.mp3"
 
-    MC "Blerghhhhh--"
+    MC "Blerghhhhh–"
 
     ## mc retches
 

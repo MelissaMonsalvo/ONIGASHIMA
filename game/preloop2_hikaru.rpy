@@ -49,7 +49,7 @@ label loop2_hikaru_mandatory1:
 
     n "Hikaru calls out to you casually. They usually call you by -san."
 
-    n "But now it sounded... different. Their tone sounds different too."
+    n "But now it sounds... different. Their tone sounds different too."
 
     MC annoyed2 "Yeah?"
 
@@ -67,7 +67,7 @@ label loop2_hikaru_mandatory1:
 
         linear 0.4 zoom 0.4 yalign -40
 
-    n "Hikaru's hand moves closer, almost brushing your arm. You feel uncoomfortable immediately."
+    n "Hikaru's hand moves closer, almost brushing your arm. You immediately feel uncomfortable."
 
     hikaru "You haven’t eaten properly in days. {w}Did something happen?"
 
@@ -77,7 +77,7 @@ label loop2_hikaru_mandatory1:
 
     n "{sc=1}Did you...?{/sc}"
 
-    n "{sc=1}Did we--?{/sc}"
+    n "{sc=1}Did we–?{/sc}"
 
     n2 "Just go with it."
 
@@ -213,23 +213,23 @@ label loop2_hikaru_mandatory1:
 
     n "Except... {w}Hey..."
 
-    n "Stop, you're drawing too much blood--"
+    n "Stop, you're drawing too much blood–"
 
     n2 "{i}Yessss... more...{/i} {w}let's pull it open."
 
     n2 "{i}Succulent ribs, juicy eyeballs.{/i}"
 
-    n "No--{w}no, stop."
+    n "No–{w}no, stop."
 
     play sound "sfx/hahh.mp3"
 
     n2 "{b}The smell...{/b} Hhahhh...."
 
-    n2 "So {i}easy{/i} to chew--"
+    n2 "So {i}easy{/i} to chew–"
 
-    n "Please--"
+    n "Please–"
 
-    n2 "{size=+8}DON’T INTERRUPT--{/size}"
+    n2 "{size=+8}DON’T INTERRUPT–{/size}"
 
     play sound "sfx/stumble.p3"
 
@@ -348,9 +348,9 @@ label loop2_hikaru_mandatory2:
         linear 0.4 zoom 0.4 yoffset 20
 
 
-    n "When you arrive at the shrine, you see hikaru crouching down beside a curtain."
+    n "When you arrive at the shrine, you see Hikaru crouching down beside a curtain."
 
-    hikaru "There’s... something here. Can you help me with--Ah!"
+    hikaru "There’s... something here. Can you help me with–Ah!"
     with vpunch
 
     n "There's a hidden room, it reeks with mold, old rot, and... Ugh."
@@ -379,19 +379,19 @@ label loop2_hikaru_mandatory2:
     show darken2
 
 
-    n "Bones are scattered on the floor. Somene's remains, and some still has rotten meat on it."
+    n "Bones are scattered on the floor. Someone's remains, and some still have rotten meat on it."
 
     if persistent.shiori_eaten:
         n "There are ribbons tied with bells..."
 
-        n "You’ve seen it in someone’s hair--"
+        n "You’ve seen it in someone’s hair–"
 
         n "And ankle bracelets too..."
 
         n "No. Who?"
 
     elif persistent.yamato_eaten:
-        n "You see a dark red sash, frayed at the end, alongside a bottle of sake."
+        n "You see a dark brown sash, frayed at the end, alongside a bottle of sake."
 
         n "Someone wore that around their waist. You remember..."
 
@@ -505,7 +505,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "Weird... {w}{i}It was here yesterday...{/i}"
 
-    hikaru "Do you know where the bones are? I'm about to bury them--"
+    hikaru "Do you know where the bones are? I'm about to bury them–"
 
     MC yan2 "No idea."
 
@@ -528,7 +528,7 @@ label loop2_hikaru_mandatory2:
     show hik shocked
     with dissolve
 
-    hikaru "{k=2}Did you--?{/k}"
+    hikaru "{k=2}Did you–?{/k}"
 
     show hik sad
     with dissolve
@@ -574,7 +574,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "..."
 
-    hikaru "But--"
+    hikaru "But–"
 
     hikaru "...Nevermind. {w=0.2}I'll see you later."
 
@@ -602,7 +602,7 @@ label loop2_hikaru_mandatory2:
 
     n "You {b}should{/b} remember."
 
-    n "Whoever owned the bones... {w=0.5}They used to laugh with you, {blur}didn't they...?{/blur}"
+    n "To whoever belonged those bones... {w=0.5}They used to laugh with you, {blur}didn't they...?{/blur}"
 
     scene black
     with out_182
@@ -647,7 +647,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "I feel like something’s missing."
 
-    hikaru "Are you bored of me? Sorry that I got too paranoid about the bones, but--"
+    hikaru "Are you bored of me? Sorry that I got too paranoid about the bones, but–"
 
     hikaru "Don't you think that even the Yamakui is dead now, everything's still not how it's supposed to be?"
 
@@ -672,7 +672,7 @@ label loop2_hikaru_mandatory3:
 
     ##3 squelching kiss
 
-    n "Hikaru's mouth tries to follow, but--"
+    n "Hikaru's mouth tries to follow, but–"
 
     show darken2
 
@@ -681,29 +681,29 @@ label loop2_hikaru_mandatory3:
     play sound "sfx/mmph.mp3"
     with sshake
 
-    hikaru "Mmmph--"
+    hikaru "Mmmph–"
 
-    n2 "The tounge will know the path.{w=0.}.{w=0.1}.{w=0.1}"
+    n2 "The tongue will know the path.{w=0.}.{w=0.1}.{w=0.1}"
 
-    n "{sc}The hell{/sc} are you talking about--"
+    n "{sc}The hell{/sc} are you talking about–"
 
     n2 "Hmm.{w} Still ripe."
 
     play sound "sfx/mmph2.mp3"
     with sshake
 
-    n "Stop. Please. PLEASE--"
+    n "Stop. Please. PLEASE–"
 
     n2 "Down. {w=0.2}Slide down. {w=0.2}Make room. {w=0.2}There's the soft windpipe{nw}"
 
     n2 "Warm, warm, warm all the way in.{nw}"
 
-    n "Stopstopstopstopstopstopstop--"
+    n "Stopstopstopstopstopstopstop–"
 
     play sound "sfx/gag1.mp3"
     $ renpy.pause(0.4)
 
-    hikaru "--ghhk--!"
+    hikaru "–ghhk–!"
 
     scene moon3:
         easeout 0.1 zoom 1
@@ -732,7 +732,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "That... {w=0.1}that {sc=1}wasn’t...{/sc}"
 
-    n2 "Once more--"
+    n2 "Once more–"
 
     n "NO!"
 
@@ -777,7 +777,7 @@ label loop2_hikaru_mandatory3:
         linear 0.04 xoffset -8 yoffset 49
         linear 0.04 xoffset 0 yoffset 50
 
-    hikaru "I... {w=0.5}I just remembered--"
+    hikaru "I... {w=0.5}I just remembered–"
 
     show hik panic:
         zoom 0.5
@@ -793,9 +793,9 @@ label loop2_hikaru_mandatory3:
         linear 0.04 xoffset -8 yoffset 49
         linear 0.04 xoffset 0 yoffset 50
 
-    hikaru "The, uh--{w}fire. I left my irori still burning--"
+    hikaru "The, uh–{w}fire. I left my irori still burning–"
 
-    n "They gesture vaguely toward the trail, not even looking that direction."
+    n "They gesture vaguely toward the trail, not even looking in that direction."
 
     show hik panic:
         zoom 0.5
@@ -859,7 +859,7 @@ label loop2_hikaru_mandatory4:
 
     stop sound
 
-    MC happycl2 "Hey, Hikaru. Come in--"
+    MC happycl2 "Hey, Hikaru. Come in–"
 
     n "Hikaru doesn't budge."
 
@@ -871,7 +871,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{k=2}Last night... {w}that wasn’t you, was it?{/k}"
 
-    hikaru "{sc=3}The way you kissed me. That--{/sc}"
+    hikaru "{sc=3}The way you kissed me. That–{/sc}"
 
     hikaru "{i}That feels... {w}wrong.{/i}"
 
@@ -897,7 +897,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{w=0.2}Your tongue is not that long, isn't it?"
 
-    hikaru "{i}I've always known how your body feels like--{/i}"
+    hikaru "{i}I've always known how your body feels like–{/i}"
 
     hikaru "{sc=3}[persistent.player_name] would never kiss like that.{/sc}"
 
@@ -924,7 +924,7 @@ label loop2_hikaru_mandatory4:
 
     n "You step forward, but Hikaru unsheates their sai."
 
-    n "{i}No, just... {w}Run. Stay away from me, from us--{/i}"
+    n "{i}No, just... {w}Run. Stay away from me, from us–{/i}"
 
     hikaru "{k=2}Who are you...?{/k}"
 
@@ -941,9 +941,9 @@ label loop2_hikaru_mandatory4:
 
     $ name = name_display
 
-    n "You feel your mouth move. Your jaw feels like it wants to unhinge--"
+    n "You feel your mouth move. Your jaw feels like it wants to unhinge–"
 
-    n "Your name is--"
+    n "Your name is–"
 
     n2 "{size=+6}{w=0.1}Y {w}a {w}m {w}a {w}k {w}u {w}i.{/size}"
 
@@ -965,7 +965,7 @@ label loop2_hikaru_mandatory4:
     with flashred
     $ renpy.pause(0.5)
 
-    hikaru "{sc=3}No--no--{/sc}"
+    hikaru "{sc=3}No–no–{/sc}"
 
     MC evil2 "{size=+6}{w=0.1}Y {w}a {w}m {w}a {w}k {w}u {w}i.{/size}"
 
@@ -993,7 +993,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{k=2}You killed [persistent.player_name]...{/k}"
 
-    MC shocked2 "{w=0.1}Hikaru--"
+    MC shocked2 "{w=0.1}Hikaru–"
 
     show hik madcry:
         zoom 0.3
@@ -1013,7 +1013,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{sc=5}STAND BACK!{/sc}"
 
-    hikaru "{sc=3}I’ll--I’ll kill you--{/sc}"
+    hikaru "{sc=3}I’ll–I’ll kill you–{/sc}"
 
     hide hik
     with hpunch

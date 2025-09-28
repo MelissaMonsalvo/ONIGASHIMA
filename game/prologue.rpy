@@ -1,5 +1,4 @@
 label prologue:
-    $ save_name = "Prologue"
 
     $ loop1_shiori_mandatory1 = True
     $ loop1_shiori_mandatory2 = True
@@ -56,7 +55,7 @@ label prologue:
 
     n "How many times until it stops twitching? Until your hands do?"
 
-    n "As you grip the hilt tighter, it makes an {i}obscene{/i} sound beneath your fingers. That’s not right. {w=0.3}That’s not--"
+    n "As you grip the hilt tighter, it makes an {i}obscene{/i} sound beneath your fingers. That’s not right. {w=0.3}That’s not–"
 
     n "You’ll have to wash it later. Scrub hard. Maybe burn it."
 
@@ -81,7 +80,7 @@ label prologue:
 
     n "Blood? No, it's thicker. Syrup? Bile? Wait... {w=0.2}Does it even smell right?"
 
-    n "You watch it fall and lsten for the sound it makes when it hits the pool under your boots."
+    n "You watch it fall and listen for the sound it makes when it hits the pool under your boots."
 
     play sound "sfx/drip.wav"
 
@@ -101,9 +100,9 @@ label prologue:
 
     n "And... it looked smaller than the legends said."
 
-    n "It had {i}hands.{/i} Smooth hands, without claws. {w=0.2}Mortal's hands?"
+    n "It had {i}hands.{/i} Smooth hands, without claws. {w=0.2}Mortal hands?"
 
-    n "No. No, that can’t be right. The sound it made when you cut through it... {w=0.3}that wasn’t--"
+    n "No. No, that can’t be right. The sound it made when you cut through it... {w=0.3}that wasn’t–"
 
     n "You heard it scream, right? {w=0.2}Or did it cry?"
 
@@ -123,7 +122,7 @@ label prologue:
 
     n "You’re sure it’s dead now. You can go. Return to the village."
 
-    n "Stand up tall. Lift your head."
+    n "Stand tall. Lift your head."
 
     n "You’re a hero now. A good person."
 
@@ -145,7 +144,7 @@ label prologue:
     play sound"sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
-    n "You begin your slow descent from the mountains. Your legs know the motion already, but it feels wrong on the muscles."
+    n "You begin your slow descent from the mountains. Your legs know the motion already, but it feels wrong for the muscles."
 
 
     n "{w=0.2}The sound of armor dragging follows behind you. It grinds the stone path as you drag it along with one hand."
@@ -175,7 +174,7 @@ label prologue:
 
     n "Shouldn’t it be warmer now? Shouldn’t the wind carry your heroic feats?"
 
-    n "You imagine sunlight parting cloud, gold light on your bloodstained hands as you walk out from the forest."
+    n "You imagine sunlight parting clouds, gold light on your bloodstained hands as you walk out of the forest."
 
     n "But in reality... {w=0.2}It's... empty. You can't even hear birds singing in this mountain."
 
@@ -199,7 +198,7 @@ label prologue:
 
     n "You were told to."
 
-    n "{w=0.2}That’s all that matters. {w=0.2}That’s all that matters. {size=*0.9}{k=-1}That’s all that--{/k}{/size}"
+    n "{w=0.2}That’s all that matters. {w=0.2}That’s all that matters. {size=*0.9}{k=-1}That’s all that–{/k}{/size}"
 
     play sound "sfx/metal drag.wav"
     $ renpy.pause(0.8)
@@ -220,9 +219,9 @@ label village_entrance:
 
     n "Finally."
 
-    n "Once you step on the village borders, everything changes."
+    n "Once you cross the village borders, everything changes."
 
-    n "The sky looks like it splits into two once the treeline dissapears... {w}The heavenly shine that you've imagined."
+    n "The sky looks like it splits into two once the treeline disappears... {w}The heavenly shine that you've imagined."
 
     show woman:
         xzoom -1
@@ -256,7 +255,7 @@ label village_entrance:
 
     play sound "sfx/walk grass.mp3"
 
-    n "You walk toward a familliar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
+    n "You walk toward a familiar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
 
     pause 1.0
 
@@ -271,7 +270,7 @@ label village_entrance:
 
     "Elder" "Im-Impossible..."
 
-    "Elder" "This couldn't be--Ahem!"
+    "Elder" "This couldn't be–Ahem!"
 
     "Elder" "Yes... {w=0.4}I believe this is truly the Yamakui's armor."
 
@@ -300,7 +299,7 @@ label village_entrance:
         ypos 1.67
     with dissolve
 
-    n "Suddenly hands reach for you. Claps on yourback, with smiles on their face."
+    n "Suddenly, hands reach for you. Clapping on your back, with smiles on their face."
 
     n "Ah, there it is."
 
@@ -429,11 +428,11 @@ label after_get_name:
 
     "Elder" "We have boarded our windows, whispered our prayers, and buried too many graves with {size=*0.95}no names.{/size}"
 
-    "Elder" "The Yamakui haunted these hills longer than {i}memory.{/i}"
+    "Elder" "The Yamakui haunted these hills longer than {i}memory itself.{/i}"
 
     "Elder" "{w=0.4}And yet..."
 
-    "Elder" "{size=*1.05}[persistent.player_name]{/size} climbed that mountain and came back. {w=0.3}Where no one else {i}couldn't.{/i}"
+    "Elder" "{size=*1.05}[persistent.player_name]{/size} climbed that mountain and came back. {w=0.3}Where no one else {i}could.{/i}"
 
     play sound "sfx/cheer.mp3"
 
@@ -447,7 +446,7 @@ label after_get_name:
 
     "Elder" "{b}And never again{/b} will we... {w=0.3}{i}forget.{/i}"
 
-    "Girl" "Speech, [persistent.player_name]!"
+    "Girl" "A speech, [persistent.player_name]!"
 
     n "Someone shouts from the back, it might've been your friend, Shiori."
 
@@ -475,7 +474,7 @@ label after_get_name:
 
     with fade
 
-    n "As the crowds part as you walk, you hear whispering."
+    n "As the crowd partd as you walk, you hear whispering."
 
     $ _prev_music_volume = _preferences.volumes["music"]
 
@@ -521,7 +520,7 @@ label after_get_name:
 
     n "And that red ooze is still dripping."
 
-    n "But of course, you don't get far."
+    n "But, of course, you don't get far."
 
     n "Because Shiori, Yamato, and Hikaru immediately finds you."
 
@@ -544,7 +543,7 @@ label after_get_name:
 
     n "They are your childhood friends and confidants."
 
-    n "You grew up running through rice paddies together, shouting at the sky, skipping stone at puddles, and laughing with no care in the world."
+    n "You grew up running through rice paddies together, shouting at the sky, skipping stones at puddles, and laughing with no care in the world."
 
     n "The four of you once chased the shrine cat for hours, caught the priest’s omamori instead."
 
@@ -557,7 +556,7 @@ label after_get_name:
     show shi happyblush
     with dissolve
 
-    shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi seems like~!"
+    shiori "Welcome back~! You really came home! You didn’t get eaten or squished into mochi it seems~!"
 
     MC smugcl "Oi, give me a little credit! I’m not that easy to mash, y’know."
 
@@ -635,7 +634,7 @@ label after_get_name:
 
     yamato "Tch. Shaddup."
 
-    yamato "I'm just sayin’... Yer' too reckless to be able t' defeat the goddamn Yamakui. Not even a scratch in ya."
+    yamato "I'm just sayin’... Yer' too reckless to be able t' defeat the goddamn Yamakui. Not even a scratch on ya."
 
     show shi smug with dissolve
 
@@ -644,9 +643,9 @@ label after_get_name:
     show yam angry
     with dissolve
 
-    yamato "Can it. I stayed behind to protect the damned village! Some of us don’t get to play th' hero."
+    yamato "Shut it. I stayed behind to protect the damned village! Some of us don’t get to play th' hero."
 
-    MC happy "Hey hey! C’mon, don’t fight. The Yamakui's dead, I'm alive, and we're all safe now! isn't that more important?"
+    MC happy "Hey, hey! C’mon, don’t fight. The Yamakui's dead, I'm alive, and we're all safe now! isn't that more important?"
 
     n "They're bickering again. Like always."
 
@@ -661,7 +660,7 @@ label after_get_name:
 
     hikaru "...I see."
 
-    n "Hikaru's voice drops, their eyes slides slowly. From you...to the ground. {w=0.2}No-"
+    n "Hikaru's voice drops, their eyes slide slowly. From you...to the ground. {w=0.2}No-"
 
     $ _prev_music_volume = _preferences.volumes["music"]
 
@@ -739,7 +738,7 @@ label after_get_name:
 
     n "Your fingers ache from gripping it. You thought you cleaned it better than this."
 
-    n "But the stain’s still there."
+    n "But the stain is still there."
 
 
 
@@ -771,7 +770,7 @@ label beforefirstloop:
 
     n "Shiori still skips around beside you. She's still cheerful. Always. {w=0.3}Always."
 
-    n "But she starts to leave white flowers-petals at the shrine."
+    n "But she starts to leave white flower petals at the shrine."
 
     n "She always welcome you with her smile already in place."
 
@@ -801,15 +800,15 @@ label beforefirstloop:
 
     n "The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl} {w=0.3}Isn’t it?"
 
-    n "So what’s he still protecting them from? You don't need to train as vigorously anymore, do you?"
+    n "So what is he still protecting them from? You don't need to train as vigorously anymore, do you?"
 
-    n "Maybe he doesn’t believe you killed the Yamakui."
+    n "Maybe he doesn’t believe that you killed the Yamakui."
 
     n "Sometimes you feel him staring. At the way you walk... or perhaps the way the villagers looks at you now."
 
     n "You can't tell, but one thing is for sure..."
 
-    n "You never look back, even though you always feel his stares in your bones."
+    n "You never look back, even though you always feel his stares deep in your bones."
 
     show yam serious:
         zoom 0.7
@@ -831,7 +830,7 @@ label beforefirstloop:
 
         ease 0.7 xpos 0.5 alpha 1.0
 
-    n "Hikaru sits with you sometimes, calm as always. They don’t talk much. They never did."
+    n "Hikaru sits with you sometimes, calm as ever. They don’t talk much. They never did."
 
     n "But their eyes..."
 
@@ -849,11 +848,11 @@ label beforefirstloop:
     pause 0.9
     hide hik
 
-    n "What did you miss, [persistent.player_name]? {w=0.3}What didn’t you bring back down?"
+    n "What did you miss, [persistent.player_name]? {w=0.3}What did you not bring back down?"
 
     n "You used to gather together, the four of you."
 
-    n "Under the sakura tree. Right? That’s what you remember."
+    n "Under the cherry blossom tree. Right? That’s what you remember."
 
     n "...But the petals are gone now. No one sits there anymore."
 
@@ -895,11 +894,11 @@ label beforefirstloop:
 
     n "It should rise. {w=0.2}And pass."
 
-    n "No one should vanish, or die, or scream, or--"
+    n "No one should vanish, or die, or scream, or–"
 
-    n "{size=*0.95}No one should--{/size}"
+    n "{size=*0.95}No one should–{/size}"
 
-    n "{size=*0.9}{alpha=0.7}They should--{/alpha}{/size}"
+    n "{size=*0.9}{alpha=0.7}They should–{/alpha}{/size}"
 
     n "..."
 
@@ -911,7 +910,7 @@ label beforefirstloop:
 
     n "You keep saying it {i}IS{/i} fine."
 
-    n "{size=*0.95}Again, {w=0.5}again, {w=0.4}again, {w=0.3}again, {w=0.2}again, {w=0.1}again, {w=0.01}again--{/size}"
+    n "{size=*0.95}Again, {w=0.5}again, {w=0.4}again, {w=0.3}again, {w=0.2}again, {w=0.1}again, {w=0.01}again–{/size}"
 
     MC normal "{size=*0.95}{alpha=0.8}It’s fine.{/alpha}{/size}"
 

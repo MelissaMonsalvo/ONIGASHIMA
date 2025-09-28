@@ -13,7 +13,7 @@ label ghost_hikaru_1:
     show darken2
     play music "spooky.mp3"
 
-    n "Huh? What is--"
+    n "Huh? What is–"
 
     hikaru "...You came back."
 
@@ -44,19 +44,19 @@ label ghost_hikaru_1:
 
     hikaru "{size=+6}{cps=6}StAY sTAY sTAY{/cps}{/size}"
 
-    MC "Get away, you--"
+    MC "Get away, you–"
 
     show ghost_hikaru idle at c_show_6
 
-    hikaru "{cps=5}{size=+8}I lOvE yOu--{/size}{/cps}"
+    hikaru "{cps=5}{size=+8}I lOvE yOu–{/size}{/cps}"
 
-    hikaru "{cps=16}I LOVE YOU I LOVE YOU ILOVEYOUILOVEYOUILOVE--{/cps}"
+    hikaru "{cps=16}I LOVE YOU I LOVE YOU ILOVEYOUILOVEYOUILOVE–{/cps}"
 
     MC "Stop it."
 
-    hikaru "eVeRy DaY wIThOuT yOu FeLt LiKe--"
+    hikaru "eVeRy DaY wIThOuT yOu FeLt LiKe–"
 
-    hikaru "{size=+10}{cps=4}--hELL--{/cps}{/size}"
+    hikaru "{size=+10}{cps=4}–hELL–{/cps}{/size}"
 
     show ghost_hikaru idle at c_show_2
 
@@ -64,7 +64,7 @@ label ghost_hikaru_1:
 
     hikaru "sTAYsTAYsTAYsTAYsTAY"
 
-    n "No--stop--"
+    n "No–stop–"
 
     hikaru "{size=+12}{cps=2}I’M ALREADY INSIDE{/cps}{/size}"
 
@@ -111,7 +111,7 @@ label ghost_hikaru_2:
 
     n "..."
 
-    n "Wait. {w}Was something--"
+    n "Wait. {w}Was something–"
 
     #hide hikaru ghost
     hide ghost_hikaru
@@ -155,7 +155,7 @@ label ghost_hikaru_2:
 
     #$ renpy.pause(0.5)
 
-    ## dissapears
+    ## disappears
 
     stop music fadeout 2.0
 
@@ -182,7 +182,7 @@ label ghost_hikaru_3:
 
     $ renpy.pause(1.5)
 
-    MC shocked "Ghkk--!"
+    MC shocked "Ghkk–!"
 
     with sshake
     n "There are hands around your throat."
@@ -195,9 +195,9 @@ label ghost_hikaru_3:
     ## screen shakes as MC struggles
     show ghost_hikaru idle with vpunch
 
-    n "You try to speak, lift your arms but can't--"
+    n "You try to speak, lift your arms but can't–"
 
-    hikaru "{cps=9}Bring back.{w=0.4} Bring back.{w=0.3} bring [persistent.player_name] back.{/cps}"
+    hikaru "{cps=9}Bring back.{w=0.4} Bring back.{w=0.3} Bring [persistent.player_name] back.{/cps}"
 
     $ renpy.pause(2.0)
 
@@ -226,7 +226,7 @@ label ghost_hikaru_3:
     ## gone again
     show ghost_hikaru idle at c_show_11
 
-    MC "Hahhh--!"
+    MC "Hahhh–!"
 
     scene black
     hide screen drunk_haze
@@ -264,7 +264,7 @@ label ghost_hikaru_4:
 
     n "It's that person again. You called them Hikaru."
 
-    n "Their face looks normal this time, hair swaying under the wind."
+    n "Their face looks normal this time, hair swaying in the wind."
 
     hikaru "...Hey."
 
@@ -320,7 +320,7 @@ label ghost_hikaru_4:
 
     n "Their mouth stretches wide, then clamps shut as their bones starts to warp."
 
-    hikaru "{cps=8}You’re not them. {/cps}{w=0.3}{cps=5}You’re nOt Them--{/cps}"
+    hikaru "{cps=8}You’re not them. {/cps}{w=0.3}{cps=5}You’re nOt Them–{/cps}"
 
     n "The serene face you knew is gone."
 
@@ -330,7 +330,7 @@ label ghost_hikaru_4:
 
     with sshake
 
-    hikaru "{size=+12}{cps=4}GIVE--[persistent.player_name] --BACK--{/cps}{/size}"
+    hikaru "{size=+12}{cps=4}GIVE–[persistent.player_name] –BACK–{/cps}{/size}"
     scene black
     with sshake
 
@@ -376,7 +376,7 @@ label ghost_hikaru_5:
     n "You hear it."
     play music "sfx/walk grass.mp3"
 
-    n "A second pair of footsteps"
+    n "A second pair of footsteps."
 
     n "Every time your heel hits the stone, something echoes behind it."
 
@@ -449,7 +449,7 @@ label ghost_hikaru_5:
         linear 0.5 zoom 0.28
     $ renpy.pause(2.0)
 
-    n "It still follows you with the same pace and rythm."
+    n "It still follows you with the same pace and rhythm."
 
     n "You try to speak again. Nothing comes out."
 
