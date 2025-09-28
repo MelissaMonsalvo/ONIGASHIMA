@@ -17,6 +17,15 @@ init python early:
     NOTO_JP = "NotoSerifJP-VariableFont_wght.ttf"
 
 
+init python:
+    def save_choices(caption, chosen=None):
+        """A function which will save the choice caption to the History log."""
+        # Create an entry for the history list. kind="choice" so we can
+        # differentiate it on the history screens.
+        store.narrator.add_history(kind="choice", who=None,
+            what=renpy.substitute((">>> " + caption)))
+
+
 ############################################################
 ### DEFAULTS/DEFINES ###
 ############################################################

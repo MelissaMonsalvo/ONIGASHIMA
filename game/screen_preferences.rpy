@@ -6,7 +6,11 @@
 ############################################################
 ### PYTHON ###
 ############################################################
-
+init python:
+    def reset_volume():
+        preferences.set_mixer("voice", 0.5)
+        preferences.set_mixer("sfx", 0.5)
+        preferences.set_mixer("music", 0.5)
 
 
 ############################################################
@@ -19,10 +23,10 @@ screen preferences():
 
     default tab = "general"
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ skin = btn_skin_yellow
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ skin = btn_skin_red
         $ tt_color = WHITE
 
@@ -128,7 +132,7 @@ screen preferences():
                 button:
                     text _("REVERT ALL") hover_color tt_color
 
-                    action Return()
+                    action Function(reset_volume)
 
 
                 button:
@@ -278,10 +282,10 @@ screen pref_audio():
             ### MUSIC ###
             frame:
                 xsize 635
-                xoffset -50
+                xoffset -70
 
                 hbox:
-                    spacing -5
+                    spacing 5
 
                     $ mvol = int(preferences.get_mixer("music") * 100)
                     text "[mvol]" xalign 0.0
@@ -299,10 +303,10 @@ screen pref_audio():
             ### SOUND ###
             frame:
                 xsize 635
-                xoffset -50
+                xoffset -70
 
                 hbox:
-                    spacing -5
+                    spacing 5
 
                     $ svol = int(preferences.get_mixer("sfx") * 100)
                     text "[svol]" xalign 0.0
@@ -321,10 +325,10 @@ screen pref_audio():
             if config.has_voice:
                 frame:
                     xsize 635
-                    xoffset -50
+                    xoffset -70
 
                     hbox:
-                        spacing -5
+                        spacing 5
 
                         $ vvol = int(preferences.get_mixer("voice") * 100)
                         text "[vvol]" xalign 0.0
@@ -366,12 +370,20 @@ screen pref_dialogue():
             style_prefix "pref_tab2"
             frame:
                 xsize 635
-                xoffset -50
+                xoffset -70
                 hbox:
-                    spacing -5
+                    spacing 5
                     
-                    $ spd = int(preferences.text_cps)
-                    text "[spd]" xalign 0.0
+                    frame:
+                        xsize 50
+                        xalign 0.0
+                        $ spd = int(preferences.text_cps)
+                        if spd == 0:
+                            $ spd = "Instant"
+                        
+                            text "[spd]" xalign 0.0 xoffset -80
+                        else:
+                            text "[spd]" xalign 0.0
                     
                     bar value Preference("text speed") alt "Change dialogue text speed":
                         style "bar"
@@ -384,9 +396,9 @@ screen pref_dialogue():
         
             frame:
                 xsize 635
-                xoffset -50
+                xoffset -70
                 hbox:
-                    spacing -5
+                    spacing 5
                     
                     text "[persistent.dialogue_text_size]" xalign 0.0
 
@@ -400,9 +412,9 @@ screen pref_dialogue():
 
             frame:
                 xsize 635
-                xoffset -50
+                xoffset -70
                 hbox:
-                    spacing -5
+                    spacing 5
                     
                     text "[persistent.dialogue_line_spacing]" xalign 0.0
 
@@ -416,9 +428,9 @@ screen pref_dialogue():
 
             frame:
                 xsize 635
-                xoffset -50
+                xoffset -70
                 hbox:
-                    spacing -5
+                    spacing 5
                     
                     $ afm = int(preferences.afm_time)
                     text "[afm]" xalign 0.0
@@ -498,7 +510,7 @@ style pref_tab_text:
 style pref_tab_frame:
     xsize 500
     background None
-    #ysize 70
+    ysize 70
 
 
 ### PREF 2 ##

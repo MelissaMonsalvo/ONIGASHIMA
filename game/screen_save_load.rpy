@@ -25,20 +25,6 @@ init python:
         return f"{h:02}:{m:02}:{s:02}"
 
 
-    def format_playtime_days(seconds):
-        # get days
-        d = int(seconds // 86400)
-
-        # get hours
-        h = int((seconds % 86400) // 3600)
-
-        return f"{d} days - {h:02} hours"
-
-
-
-
-
-
 ## The width and height of thumbnails used by the save slots.
 define config.thumbnail_width = 652
 define config.thumbnail_height = 367
@@ -156,8 +142,11 @@ screen file_slots(title):
 
                 add FileScreenshot(selected_slot) align (0.5, 0.5)
 
-            text "Time Played" bold True xalign 0.5
-            text "{}".format(format_playtime_days(renpy.get_game_runtime())) xalign 0.5
+            text FileSaveName(selected_slot):
+                xalign 0.5
+                font NOTO_JP_BOLD
+                size 60
+            
 
 
     # This means the player can hover this save

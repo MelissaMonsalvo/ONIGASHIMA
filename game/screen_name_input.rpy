@@ -36,6 +36,8 @@ screen name_input():
                 bold False
                 italic False
 
+                caret Transform("#cc0000", xysize=(3, 100), ypos=35)
+
                 exclude "*$#!{}()-@+=/^%"
 
         ### CONFIRM/REVERT ###
