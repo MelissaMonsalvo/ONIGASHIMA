@@ -4,17 +4,42 @@
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
+transform mc_slidein:
+    xalign 1.3
+    yalign 0.5
+    zoom 0.45
+    xoffset 300
+    linear 0.7 xalign 0.9
+
+transform fadein0:
+    alpha 0.0
+    pause 0.2
+    linear 0.5 alpha 1.0
+
+transform fadein1:
+    alpha 0.0
+    pause 0.8
+    linear 0.5 alpha 1.0
+
+transform fadein2:
+    alpha 0.0
+    pause 1.4
+    linear 0.5 alpha 1.0
+
 
 
 screen press_anything_to_continue():
-    add "mm_background"
+    if not persistent.loop1:
+        add "MOON/moon1.jpg"
+    else:
+        add "MOON/moon6.jpg"
     button:
         xysize (config.screen_width, config.screen_height)
         background None
 
         text "Press Enter to Continue":
             font NOTO_JP
-            xpos 10
+            xalign 0.5
             yalign 0.55
             outlines [(2, "#000000", 0, 0)]
 
@@ -38,7 +63,40 @@ screen main_menu():
         $ tt_color = WHITE
 
 
-    add "mm_background"
+
+
+    if not persistent.loop1:
+        add "MOON/moon1.jpg"
+    else:
+        add "MOON/moon6.jpg"
+
+    # Yamato
+    if persistent.yamato_dies:
+        add "gui/Main Menu/yamato_idle.webp" xpos 400 ypos 0 zoom 0.2 at fadein0
+    else:
+        add "gui/Main Menu/yamato_static.webp" xpos 400 ypos 0 zoom 0.2 at fadein0
+
+    # Hikaru
+    if persistent.hikaru_dies:
+        add "gui/Main Menu/hikaru_idle.webp" xpos 900 ypos 100 zoom 0.2 at fadein1
+    else:
+        add "gui/Main Menu/hikaru_static.webp" xpos 900 ypos 100 zoom 0.2 at fadein1
+
+    # Shiori
+    if persistent.shiori_dies:
+        add "gui/Main Menu/shiori_idle.webp" xpos 660 ypos 200 zoom 0.2 at fadein2
+    else:
+        add "gui/Main Menu/shiori_static.webp" xpos 660 ypos 200 zoom 0.2 at fadein2
+
+    # MC sliding in (after others for maximum impact)
+    if not persistent.loop1:
+        add 'mc_mm_loop1' at mc_slidein
+    elif persistent.loop1 and not persistent.loop2:
+        add 'mc_mm_loop2' at mc_slidein
+    elif persistent.loop1 and persistent.loop2:
+        add 'mc_mm_loop3' at mc_slidein
+    else:
+        add 'mc_mm_loop1' at mc_slidein
 
     fixed:
         xysize (config.screen_width, config.screen_height)
@@ -108,7 +166,7 @@ label splashscreen:
     scene expression "splashscreen/seizure.jpg" with fade
 
     # Block all input for 3 seconds WHILE first image is shown
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(0.5, hard=True)
     # Show first image a bit longer (adjust this to your liking)
     $ renpy.pause(1.0)   # This CAN be clicked/fast-forwarded, or set to 0 if you want exactly 3 sec
 

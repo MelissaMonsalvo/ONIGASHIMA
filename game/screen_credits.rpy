@@ -8,14 +8,14 @@
 ############################################################
 init python:
     CREDITS_LIST = {
-        "AzureXTwilight": ["Writer / Main Programmer / Lead", "SOCIALS HERE"],
-        "Akua": ["Sprite Artist & Monster Colorist / Character & Mask Design / Cover & Banner", "SOCIALS HERE"],
-        "Pauline Reinacher": ["CG Artist / Monster & Oni Design / Monster Sketch & Lineart", "SOCIALS HERE"],
-        "Otoke Neko": ["UI / Programmer / Itch Page", "SOCIALS HERE"],
-        "Mel": ["Programmer", "SOCIALS HERE"],
-        "ChrisD": ["Programmer", "SOCIALS HERE"],
-        "Captain Sho": ["Logo Designer", "SOCIALS HERE"],
-        "CyborgNekoSica": ["Background Artist", "SOCIALS HERE"],
+        "AzureXTwilight": ["Writer / Main Programmer / Lead", "azurextwilight.itch.io"],
+        "Akua": ["Sprite Artist & Monster Colorist / Character & Mask Design / Cover & Banner", "akua-kourin.itch.io"],
+        "Pauline Reinacher": ["CG Artist / Monster & Oni Design / Monster Sketch & Lineart", "pollyrein.itch.io"],
+        "Otoke Neko": ["UI / Programmer / Itch Page", "otojang.itch.io"],
+        "Mel": ["Programmer", "melomell.itch.io"],
+        "ChrisD": ["Programmer", "eddyc.itch.io"],
+        "Captain Sho": ["Logo Designer", "shiogames.itch.io"],
+        "CyborgNekoSica": ["Background Artist", "cyborgnekosica.itch.io"],
         "FreeSound.org, Pixabay": ["SFX", ""],
         "FreePix.com": ["Extra Art", ""],
     }
@@ -33,7 +33,7 @@ screen credits():
 
     viewport:
         style_prefix "credits_vp"
-        
+
         xysize (1327, 590)
         pos (286, 320)
         xfill False
@@ -74,7 +74,7 @@ screen credits():
 
 
         style_prefix "help_gm"
-    
+
         hbox:
 
             button:
