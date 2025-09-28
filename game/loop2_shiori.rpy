@@ -691,6 +691,8 @@ label after_many_clicks:
 
     $ persistent.loop2 = True
 
+    $ MainMenu(confirm=False)()
+
     ## at the end of the route shiori dies
 
     $ renpy.full_restart()

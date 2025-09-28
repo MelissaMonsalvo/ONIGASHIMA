@@ -1830,8 +1830,16 @@ label hikaru_distrust:
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived
 
-    $ persistent.trueending.unlocked = False
+    if persistent.trueendingunlocked:
+        $ persistent.trueendingunlocked = False
+
+    $ MainMenu(confirm=False)()
+
+    jump main_menu
 
     $ renpy.full_restart()
+
+
+
 
     return
