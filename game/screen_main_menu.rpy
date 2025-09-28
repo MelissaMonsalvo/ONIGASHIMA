@@ -192,12 +192,66 @@ style mm_text:
     bold False
     italic False
 
+
+screen content_warning():
+    vbox:
+        at ts_fadein()
+
+        align (0.5, 0.5)
+        xsize 1100
+
+        text "Content Warning":
+            font NOTO_JP_BOLD
+            color BLACK
+            size 50
+            xalign 0.5
+
+        null height 100
+
+        text "This game contains depictions of violence, gore, mild profanity, alcohol, drugs, smoking, and possibly severe frightening and intense scenes.\nIf you feel uncomfortable at any point, please take a break from playing.":
+            font NOTO_JP
+            color BLACK
+            size 50
+            xalign 0.5
+
+        null height 50
+        hbox:
+            xsize 800
+            xalign 0.5
+
+            button:
+                text _("I understand."):
+                    align (0.5, 0.5)
+                    font NOTO_JP_BOLD
+                    color BLACK
+
+                xysize (280, 120)
+                background None
+                hover_background Transform("long_btn_hover_no_frame", xysize=(280, 120))
+                
+                action Hide(), Return()
+
+            button:
+                text _("Leave."):
+                    align (0.5, 0.5)
+                    font NOTO_JP_BOLD
+                    color BLACK
+
+                xysize (280, 120)
+                background None
+                hover_background Transform("long_btn_hover_no_frame", xysize=(280, 120))
+                
+                action Quit(confirm=False)
+
+
+
+
 screen seizure():
     vbox:
         at ts_fadein()
 
         align (0.5, 0.5)
-        xsize 1000
+        xsize 1100
 
         text "Photosensitivity Seizure Warning":
             font NOTO_JP_BOLD
@@ -217,6 +271,9 @@ screen seizure():
 label splashscreen:
     $ _window_hide()
     scene gm bg1 with fade
+
+    call screen content_warning()
+
     # Show first image instantly, with fade
     #scene expression "splashscreen/seizure.jpg" with fade
     show screen seizure()
