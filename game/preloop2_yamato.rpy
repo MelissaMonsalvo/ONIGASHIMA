@@ -607,6 +607,10 @@ label loop2_yamato_mandatory3:
 
         n "You see her before you hear anything."
 
+        show ghost_shiori normal at c_show_28 behind yam:
+            xoffset +20
+        with dissolve
+
         n "She’s standing between the urns, her mouth stretches open, then splits slowly."
 
         n "Who...?"
@@ -631,6 +635,8 @@ label loop2_yamato_mandatory3:
 
         n "The incense smoke trails toward her, as if she's inhaling it."
 
+        hide ghost_shiori
+
         show screen black_flicker
         with Pause(0.45)  # 0.05*8 + buffer for full duration (optional)
         hide screen black_flicker
@@ -646,6 +652,10 @@ label loop2_yamato_mandatory3:
         show screen black_flicker
         with Pause(0.45)  # 0.05*8 + buffer for full duration (optional)
         hide screen black_flicker
+
+        show ghost_hikaru normal at c_show_28 behind yam:
+            xoffset +20
+        with dissolve
 
         n "There’s something standing by the incense..."
 
@@ -668,6 +678,8 @@ label loop2_yamato_mandatory3:
         yamato "{w=0.1}I shoulda said goodbye properly."
 
         yamato "{i}Now I gotta light this stupid stick and hope it gets to ya somehow.{/i}"
+
+        hide ghost_hikaru
 
         show screen black_flicker
         with Pause(0.45)  # 0.05*8 + buffer for full duration (optional)

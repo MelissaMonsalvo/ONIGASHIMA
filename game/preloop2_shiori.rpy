@@ -544,6 +544,8 @@ label loop2_shiori_mandatory3:
 
     shiori "{i}But I can't remember who...{/i}"
 
+    $ persistent.hikaru_dead = True
+
     shiori "{i}There were four of us, I swear!{/i}"
 
     play sound "sfx/sniffle.mp3"
@@ -580,10 +582,14 @@ label loop2_shiori_mandatory3:
     show darken
     with Pause(0.45)
 
-    #if persistent.hikaru_dead:
-        #show hikaru sad at farleft with dissolve
-    #if persistent.yamato_dead:
-        #show yamato sad at farleft with dissolve
+    if persistent.hikaru_dead:
+        show ghost_hikaru normal at c_show_28 behind shi:
+            xoffset +300
+        with dissolve
+    if persistent.yamato_dead:
+        show ghost_yamato normal at c_show_28 behind shi:
+            xoffset +300
+        with dissolve
     hide screen black_flicker
     hide darken
     with fade
@@ -592,6 +598,10 @@ label loop2_shiori_mandatory3:
     n "Wait, was that–"
 
     pause 0.5
+
+    hide ghost_yamato
+    hide ghost_hikaru
+    with fade
 
     n "Ah, it's gone."
 
