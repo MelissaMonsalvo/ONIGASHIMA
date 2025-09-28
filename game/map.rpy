@@ -229,6 +229,9 @@ screen map_screen():
 
     # Mostrar iconos de personajes según su ubicación y estado
     for i, character in enumerate(["shiori", "yamato", "hikaru"]):
+        # === HIDE ICONS IF DEAD ===
+        if getattr(persistent, f"{character}_dies", False):
+            continue  # skip this character if dead
 
         $ char_location = get_character_location(character)
         if char_location:
@@ -244,15 +247,10 @@ screen map_screen():
             $ character_icons = character_icons_yellow if persistent.loop1 else character_icons_red
             $ icon = character_icons.get(character)
 
-            if getattr(persistent, f"{character}_dies", False):
-                add Transform(icon, size=(icon_width, icon_height)):
-                    xpos icon_x
-                    ypos icon_y
-                    alpha 0.7
-            else:
-                add Transform(icon, size=(icon_width, icon_height)):
-                    xpos icon_x
-                    ypos icon_y
+            add Transform(icon, size=(icon_width, icon_height)):
+                xpos icon_x
+                ypos icon_y
+
 
     frame:
         xalign 0.5
@@ -439,31 +437,34 @@ python early:
         store.shiori_ghost_events_completed = 0
         store.hikaru_ghost_events_completed = 0
 
+
     def check_rutes():
         print(f"Yamato {store.yamato_events_completed}")
         print(f"Shiori {store.shiori_events_completed}")
         print(f"hikaru {store.hikaru_events_completed}")
 
-        #If persistent.trueendingunlocked is true and you are in loop 1
-
         if store.yamato_events_completed >= 5:
-
             print("Rute Yamato")
             label_name = f"loop{store.current_loop}_yamato"
-            renpy.call(label_name)
-
+            renpy.jump(label_name)
 
         elif store.shiori_events_completed >= 5:
-
             print("Rute Shiori")
             label_name = f"loop{store.current_loop}_shiori"
-            renpy.call(label_name)
+            renpy.jump(label_name)
 
         elif store.hikaru_events_completed >= 5:
-
             print("Rute Hikaru")
             label_name = f"loop{store.current_loop}_hikaru"
-            renpy.call(label_name)
+            renpy.jump(label_name)
+
+        else:
+            # Default to Shiori's route if no one else meets the requirement
+            print("No route reached 5 events. Default to Shiori.")
+            label_name = f"loop{store.current_loop}_shiori"
+            renpy.jump(label_name)
+
+
 
     # def check_rutes():
     #     print(f"Yamato {store.yamato_events_completed}")

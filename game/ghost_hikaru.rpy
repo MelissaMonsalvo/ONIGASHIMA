@@ -1,5 +1,10 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_hikaru_1:
+    scene black
+
+    n "You walk to the forest instead."
+
+    n "And sleeps until  the middle of the night..."
 
 
 
@@ -7,7 +12,7 @@ label ghost_hikaru_1:
     #show ghost_hikaru_idle at show_1
     #show ghost_hikaru_idle at Glitch(_fps=12., color_range1="c00a", color_range2="f00", glitch_strength=.5)
     #show ghost_hikaru_idle at show_1
-    scene forest day:
+    scene forest night:
         zoom 0.5
     show ghost_hikaru idle at c_show_3 behind darken2
     show darken2
@@ -89,18 +94,25 @@ label ghost_hikaru_1:
 
     $ ghost_hikaru_1 = True
 
-    #return
+    return
 
 label ghost_hikaru_2:
+
+    scene black
+
+    MC yan2 "...Don't tell me where to go."
+
+    n "You sleep at the shrine until night falls."
 
     $ config.rollback_enabled = False
     scene shrine night:
         zoom 0.6
         xalign 0.5
         linear 0.3 zoom 0.5
+
     play music "Friends.mp3"
 
-    n "You step inside."
+    n "You step inside the shrine instead."
 
     n "Empty. {w}Still. {w}No windows open."
 
@@ -167,7 +179,7 @@ label ghost_hikaru_2:
 
     $ ghost_hikaru_2 = True
 
-    #return
+    return
 
 label ghost_hikaru_3:
 
@@ -239,7 +251,7 @@ label ghost_hikaru_3:
 
     $ ghost_hikaru_3 = True
 
-    #return
+    return
 
 label ghost_hikaru_4:
 
@@ -349,6 +361,10 @@ label ghost_hikaru_4:
     return
 
 label ghost_hikaru_5:
+
+    scene black
+
+    MC yan2 "...I want to go home instead."
 
     show village night at walkinn:
 

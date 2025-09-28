@@ -1,5 +1,7 @@
 label loop2_yamato:
 
+    n "Something brings you to the shrine..."
+
 
     scene shrine night with in_212:
         zoom 0.5

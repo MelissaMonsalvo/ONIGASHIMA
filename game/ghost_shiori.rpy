@@ -56,10 +56,19 @@ label ghost_shiori_1:
 
 label ghost_shiori_2:
 
+    scene black
+
+    MC yan2 "...Sleepy."
+
+    MC yan2 "Let's go sleep at the shrine until night comes."
+
+    MC yan2 "Annoying meat is gone."
+
     play music "Friends.mp3"
 
-    scene shrine day with fade:
+    scene shrine night with fade:
         zoom 0.5
+
 
     #blinking
     show black_screen zorder 5 with fade
@@ -139,10 +148,17 @@ screen force_mouse_move_ghost_shiori_3():
 
 label ghost_shiori_3:
 
+    scene black
+
+    MC yan2 "...Sleepy."
+
+    MC yan2 "Let's go to the shrine again to sleep."
+
     play music "Friends.mp3"
 
     scene shrine night with fade:
         zoom 0.5
+    n "Ah, it's late already."
     pause(0.2)
     call screen force_mouse_move_ghost_shiori_3
     show ghost_shiori normal at c_show_24
@@ -208,6 +224,14 @@ label ghost_shiori_3:
     return
 
 label ghost_shiori_4:
+
+    scene black
+
+    MC yan2 "I want to go to the shrine..."
+
+    MC yan2 "Because it's quiet now..."
+
+    n "You sleep until night falls."
 
     stop music
 
@@ -278,6 +302,12 @@ screen ghost_shiori_5_open3():
         action Return()
 
 label ghost_shiori_5:
+
+    scene black
+
+    n "You keep going to the shrine to sleep until night..."
+
+    n "...You'll piss someone off, you know."
 
     play music "heavy breathing.mp3"
 

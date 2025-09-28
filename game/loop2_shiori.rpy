@@ -14,7 +14,7 @@ label loop2_shiori:
 
     play music "Dark.mp3"
 
-    n "Night falls."
+    n "Later on, you decide to go to the shrine."
 
     n "Shiori's head leans against your shoulder like it always belonged there."
 

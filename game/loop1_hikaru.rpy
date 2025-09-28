@@ -6,6 +6,8 @@ label loop1_hikaru:
 
     ## STILL IN DAY 5, HAPPENS AT THE END OF DAY 5
 
+    n "Your legs bring you to the forest while searching for Hikaru."
+
     scene forest day:
         zoom 0.5
     pause 0.2

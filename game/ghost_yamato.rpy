@@ -1,6 +1,12 @@
 ############# GHOST ENCOUNTERS ###########################
 label ghost_yamato_1:
 
+    scene black
+
+    MC yan2 "...Sleepy."
+
+    MC yan2 "Let's go sleep at the woods instead."
+
     # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then disappears
 
     $ ghost_yamato_1 = True
@@ -48,7 +54,13 @@ label ghost_yamato_1:
 
 label ghost_yamato_2:
 
-    scene dojo day:
+    scene black
+
+    MC yan2 "I wonder how the dojo is without the gamey meat."
+
+    n "You sleep in the dojo until night comes."
+
+    scene dojo night:
         zoom 0.8
         yalign 0.6
     play music "Friends.mp3"
@@ -101,6 +113,10 @@ label ghost_yamato_2:
     return
 
 label ghost_yamato_3:
+
+    scene black
+
+    n "You go to sleep instead."
 
     # MC sleeps and something starts choking them
     # players must free themselves by clicking the screen several times (advancing dialogue)
@@ -261,6 +277,12 @@ label ghost_yamato_4:
 label ghost_yamato_5:
 
     ## code in pulsating effect or heartbeat effect, or shaking every time mc eats
+
+    scene black
+
+    n "Seriously, if you don't listen to me and just sleep, I might not as well be given a choice."
+
+    n2 "Shut up."
 
     $ ghost_yamato_5 = True
 
