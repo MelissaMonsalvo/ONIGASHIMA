@@ -150,7 +150,7 @@ label loop3_hikaru:
 
     n "{cps=13}Please,{/cps} I’m begging you."
 
-    n "You already took Shiori, {w=0.1}then Yamato..."
+    n "You already took Shiori, {w=0.1} Yamato..."
 
     n "But please...{w} Just {i}this one...{/i}"
 
@@ -362,7 +362,7 @@ label loop3_hikaru:
     play sound "sfx/heartbeat.mp3"
     with flashred
 
-    n2 "ThEn I WiLL GOUge YoUr EYeS."
+    n2 "ThEn I WiLL GOUge oUt YoUr EYeS."
 
     stop music
 

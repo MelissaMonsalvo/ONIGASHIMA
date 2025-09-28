@@ -530,7 +530,7 @@ label mist_fall:
         linear 0.2 xoffset 300
     yamato "{b}OI!!{/b}{w=0.1}"
 
-    n "Yamato lunges, arm hooking around Hikaru’s waist. He manage to save Hikaru, barely."
+    n "Yamato lunges, arm hooking around Hikaru’s waist. He manages to save Hikaru, barely."
 
     show yam rage with dissolve
     yamato "Tch–hold on, {sc=1}dammit!!{/sc} Don’t ya dare–"
