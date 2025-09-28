@@ -64,7 +64,7 @@ label loop2_shiori_mandatory1:
 
     shiori "I just... I want to understand. I want to know how you get to kill the fearsome Oni~"
 
-    shiori "{i}Where did you strike first? What's the color of it's blood? Did it go down without a fight?{/i}"
+    shiori "{i}Where did you strike first? What's the color of its blood? Did it go down without a fight?{/i}"
 
     n "That voice is far too soft for someone asking something that gruesome."
 
@@ -75,9 +75,9 @@ label loop2_shiori_mandatory1:
 
     menu:
         "I stabbed it":
-            MC evil2 "{i}I snapped it's spine in half.{/i}"
+            MC evil2 "{i}I snapped its spine in half.{/i}"
         "I decapitated it":
-            MC evil2 "{i}I snapped it's spine in half.{/i}"
+            MC evil2 "{i}I snapped its spine in half.{/i}"
 
     n "Wait, what? That's not even what you thought of–"
 
@@ -98,7 +98,7 @@ label loop2_shiori_mandatory1:
         "I watched it bleed out":
             MC evil2 "I tore the arms off..."
 
-    MC yan2 "...and bent the legs backwards so it'll be on the wrong angle."
+    MC yan2 "...and bent the legs backwards so it'd be at the wrong angle."
 
     MC happy2 "It looked like {i}a beautiful flower~{/i}"
 
@@ -509,7 +509,7 @@ label loop2_shiori_mandatory2:
 
     n2 "Say {b}one more{/b} word."
 
-    n2 "And I’ll use the {i}tongue{/i} for something else."
+    n2 "And I’ll use that {i}tongue{/i} for something else."
 
 
     n "..."
@@ -615,7 +615,7 @@ label loop2_shiori_mandatory3:
 
     shiori "{i}I think I loved you too.{/i}"
 
-    shiori "So...{w=0.2} wherever you are,{w=0.2} I hope you’re in peace now."
+    shiori "So...{w=0.2} wherever you are,{w=0.2} I hope you’re at peace now."
 
     scene black
     with out_212
@@ -917,7 +917,7 @@ label loop2_shiori_mandatory4:
 
     with flashred
 
-    MC happy "Mmmph!"
+    MC happy2 "Mmmph!"
 
     with vpunch
 
@@ -925,7 +925,7 @@ label loop2_shiori_mandatory4:
 
     n "Your hands {i}twitch{/i}.{w=0.2} Your spine {glitch=8}locks.{/glitch}"
 
-    MC happy "That’s...{w=0.2} ngh–"
+    MC happy2 "That’s...{w=0.2} ngh–"
 
     show shi worried
     with dissolve

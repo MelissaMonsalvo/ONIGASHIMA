@@ -5,7 +5,7 @@ label ghost_yamato_1:
 
     MC yan2 "...Sleepy."
 
-    MC yan2 "Let's go sleep at the woods instead."
+    MC yan2 "Let's go sleep in the woods instead."
 
     # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then disappears
 
@@ -160,7 +160,7 @@ label ghost_yamato_3:
     n "{cps=7}Y-You–can’t–breathe–{/cps}"
 
     ## third click
-    MC "Ah–Haaaa–!!!!"
+    MC scared2"Ah–Haaaa–!!!!"
 
     ## fourth click
     show ghost_yamato with vpunch
@@ -225,7 +225,7 @@ label ghost_yamato_4:
 
     n "Then he leans in..."
 
-    n "His breath brushes your cheek., but it no longer smells like sake..."
+    n "His breath brushes your cheek, but it no longer smells like sake..."
 
     n "...but rotting flesh."
 
@@ -323,7 +323,7 @@ label ghost_yamato_5:
 
     n "He pushes the bowl forward, the sweet smell hits you and makes you nauseous."
 
-    MC "Urk–"
+    MC hurt2"Urk–"
 
     yamato "EaT."
 
@@ -352,13 +352,13 @@ label ghost_yamato_5:
     with flashred
     $ renpy.pause(0.3)
 
-    n "He forces another spoon down on your mouth, your jaw splits open wide."
+    n "He forces another spoon down in your mouth, your jaw splits wide open."
 
     play sound "sfx/stretch.mp3"
     with flashred
     n "GLRRCHHHH-SPLTK."
 
-    n "Smething fat and wet slaps your tongue."
+    n "Something fat and wet slaps your tongue."
 
     yamato "{cps=8}DiD ya liKE ThaT oNE~?{w=0.2} hUH?{w=0.2} wAS iT tAsTy?{/cps}"
 

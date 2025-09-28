@@ -427,7 +427,7 @@ label after_get_name:
 
     "Elder" "{w=0.3}For years, we have lived in {i}shadow.{/i}"
 
-    "Elder" "We have boarded our windows, whispered our prayers, and buried too many graves with {size=*0.95}no names.{/size}"
+    "Elder" "We have boarded up our windows, whispered our prayers, and buried too many graves with {size=*0.95}no names.{/size}"
 
     "Elder" "The Yamakui haunted these hills longer than {i}memory itself.{/i}"
 

@@ -43,7 +43,7 @@ label LI_intro_noshiori:
 
     n "You remember the rice paddies, the muddy sandals, the laughters and the paper effigies–"
 
-    n "Someone used to hang those paper effigies."
+    n "Someone used to hang up those paper effigies."
 
     n "There were four of you. Weren’t there {glitch}four?{/glitch}"
 
