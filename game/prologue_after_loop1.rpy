@@ -651,8 +651,7 @@ label speechhh2noshiori:
 
     n "And that red ooze is still dripping."
 
-    #jump check_who_ded
-    jump LI_intro_noshiori
+    jump check_who_ded
 
 label check_who_ded:
 
