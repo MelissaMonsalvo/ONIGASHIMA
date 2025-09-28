@@ -160,7 +160,7 @@ label ghost_yamato_3:
     n "{cps=7}Y-You–can’t–breathe–{/cps}"
 
     ## third click
-    MC "Ah–Haaaa–!!!!"
+    MC scared2"Ah–Haaaa–!!!!"
 
     ## fourth click
     show ghost_yamato with vpunch
