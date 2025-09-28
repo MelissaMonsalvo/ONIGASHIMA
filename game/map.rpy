@@ -2,6 +2,40 @@
 # Map 4:20 Mel v
 ############################
 
+python early:
+    def find_nearest_mandatory_event(time_block):
+        """
+        Returns the label name of the nearest available mandatory event that matches the current time block (Day/Night)
+        Prioritizes in Yamato > Shiori > Hikaru order if all else equal.
+        """
+        current_loop = store.current_loop
+        candidates = []
+        for char in ["yamato", "shiori", "hikaru"]:
+            is_dead = getattr(persistent, f"{char}_dies", False)
+            # Only check alive characters
+            if not is_dead and char in mandatory_events.get(current_loop, {}):
+                events_completed = getattr(store, f"{char}_events_completed", 0)
+                events_list = mandatory_events[current_loop][char]
+                # Find next event that matches current time block
+                for idx in range(events_completed, len(events_list)):
+                    next_event = events_list[idx]
+                    if next_event["time"] == time_block:
+                        candidates.append({
+                            "char": char,
+                            "idx": idx,
+                            "event_label": next_event["event"],
+                            "events_completed": events_completed
+                        })
+                        break  # Only take the next one per character
+        # Sort by most completed, then priority order: yamato, shiori, hikaru
+        candidates.sort(key=lambda c: (-c["events_completed"], ["yamato", "shiori", "hikaru"].index(c["char"])))
+        if candidates:
+            # Progress the event counter for the character
+            selected = candidates[0]
+            setattr(store, f"{selected['char']}_events_completed", selected["idx"] + 1)
+            return selected["event_label"]
+        return None
+
 image black_screen = "#000"
 # Variables para el progreso del juego
 default current_Day = 1
@@ -36,38 +70,7 @@ define location_positions = {
     "house": (325, 750)
 }
 
-def find_nearest_mandatory_event(time_block):
-    """
-    Returns the label name of the nearest available mandatory event that matches the current time block (Day/Night)
-    Prioritizes in Yamato > Shiori > Hikaru order if all else equal.
-    """
-    current_loop = store.current_loop
-    candidates = []
-    for char in ["yamato", "shiori", "hikaru"]:
-        is_dead = getattr(persistent, f"{char}_dies", False)
-        # Only check alive characters
-        if not is_dead and char in mandatory_events.get(current_loop, {}):
-            events_completed = getattr(store, f"{char}_events_completed", 0)
-            events_list = mandatory_events[current_loop][char]
-            # Find next event that matches current time block
-            for idx in range(events_completed, len(events_list)):
-                next_event = events_list[idx]
-                if next_event["time"] == time_block:
-                    candidates.append({
-                        "char": char,
-                        "idx": idx,
-                        "event_label": next_event["event"],
-                        "events_completed": events_completed
-                    })
-                    break  # Only take the next one per character
-    # Sort by most completed, then priority order: yamato, shiori, hikaru
-    candidates.sort(key=lambda c: (-c["events_completed"], ["yamato", "shiori", "hikaru"].index(c["char"])))
-    if candidates:
-        # Progress the event counter for the character
-        selected = candidates[0]
-        setattr(store, f"{selected['char']}_events_completed", selected["idx"] + 1)
-        return selected["event_label"]
-    return None
+
 
 #Eventos obligatorios por loop y personaje
 define mandatory_events = {
