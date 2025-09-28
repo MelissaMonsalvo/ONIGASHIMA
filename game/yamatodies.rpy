@@ -119,7 +119,7 @@ label LI_intro_noyamato:
 
     hikaru "I don’t know. I keep thinking there should be..."
 
-    hikaru "{w=0.5}...four of us "
+    hikaru "{w=0.5}...four of us."
 
     MC sad2 "..."
 

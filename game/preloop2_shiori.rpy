@@ -64,7 +64,7 @@ label loop2_shiori_mandatory1:
 
     shiori "I just... I want to understand. I want to know how you get to kill the fearsome Oni~"
 
-    shiori "{i}Where did you strike first? What's the color of it's blood? Did it go down without a fight?{/i}"
+    shiori "{i}Where did you strike first? What's the color of its blood? Did it go down without a fight?{/i}"
 
     n "That voice is far too soft for someone asking something that gruesome."
 

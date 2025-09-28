@@ -258,7 +258,7 @@ label prologue_loop1:
 
     "Elder" "The Oni is... dead?"
 
-    n "Insteade of cheering, people just stare..."
+    n "Instead of cheering, people just stare..."
 
     hide elder
     with dissolve
