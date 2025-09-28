@@ -436,7 +436,7 @@ python early:
 
             print("Rute Yamato")
             label_name = f"loop{store.current_loop}_yamato"
-            renpy.callt(label_name)
+            renpy.call(label_name)
 
 
         elif store.shiori_events_completed >= 5:
