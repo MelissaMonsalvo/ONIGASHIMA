@@ -94,7 +94,7 @@ label prologue:
 
     n "Sorry, sorry. Let me try again. {w=0.2}Let me remember..."
 
-    n "Ah yes. The Yamakui. The oni that has terrorized your village for years."
+    n "Ah yes. The Yamakui. The Oni that has terrorized your village for years."
 
     n "But it bled red. Aren’t onis supposed to bleed black?"
 
@@ -236,7 +236,7 @@ label village_entrance:
 
 
 
-    n "Someone sees you, drops their bucket. Everyone stops what they are doing to look at you."
+    n "Someone sees you, dropping their bucket. Everyone stops what they are doing to look at you."
 
 
 
@@ -405,7 +405,7 @@ label after_get_name:
         linear 0.15 zoom 0.62
         pause 0.3
 
-    n "Later, you are pulled to stand in front of everyone, almost stumbling on your feet."
+    n "Later, you are pulled to stand in front of everyone, almost stumbling over your feet."
 
     n "You wonder why the Elder's hand is shaking when he tugs your arm."
 
@@ -432,7 +432,7 @@ label after_get_name:
 
     "Elder" "{w=0.4}And yet..."
 
-    "Elder" "{size=*1.05}[persistent.player_name]{/size} climbed that mountain and came back. {w=0.3}Where no one else {i}could.{/i}"
+    "Elder" "{size=*1.05}[persistent.player_name]{/size} climbed that mountain and came back. {w=0.3}When no one else {i}could.{/i}"
 
     play sound "sfx/cheer.mp3"
 
@@ -474,7 +474,7 @@ label after_get_name:
 
     with fade
 
-    n "As the crowd partd as you walk, you hear whispering."
+    n "As the crowd parts as you walk, you hear whispering."
 
     $ _prev_music_volume = _preferences.volumes["music"]
 
@@ -495,11 +495,11 @@ label after_get_name:
     show darken
     with dissolve
 
-    "Man" "{size=*0.95}{alpha=0.8}The next Red Moon’s coming soon, isn’t it?{/alpha}{/size}"
+    "Man" "{size=*0.95}{alpha=0.8}The next Red Moon is coming soon, isn’t it?{/alpha}{/size}"
 
     "Woman" "{size=*0.95}{alpha=0.8}Think we’ll be safe this time?{/alpha}{/size}"
 
-    "Man" "{size=*0.95}{alpha=0.8}Of course we will, [persistent.player_name] killed it.{/alpha}{/size}"
+    "Man" "{size=*0.95}{alpha=0.8}Of course we will be, [persistent.player_name] killed it.{/alpha}{/size}"
 
     "Man" "{size=*0.95}{alpha=0.8}There’s nothing left to hide from. Right?{/alpha}{/size}"
 
@@ -522,7 +522,7 @@ label after_get_name:
 
     n "But, of course, you don't get far."
 
-    n "Because Shiori, Yamato, and Hikaru immediately finds you."
+    n "Because Shiori, Yamato, and Hikaru immediately find you."
 
 
 
@@ -570,7 +570,7 @@ label after_get_name:
 
     shiori "Mou~ Yamato, don’t be mean. [persistent.player_name]-sama’s super cool!"
 
-    MC normal "C’mon, you both know tradition. Oni slayer’s gotta go alone."
+    MC normal "C’mon, you both know tradition. Oni Slayer’s gotta go alone."
 
     yamato "Tch."
 
@@ -654,7 +654,7 @@ label after_get_name:
     show hik worried
     with dissolve
 
-    hikaru "...Don’t you forget something, [persistent.player_name]?"
+    hikaru "...Didn’t you forget something, [persistent.player_name]?"
 
     MC nervous "Huh? What, like a souvenir? I brought the armor, didn’t I?"
 

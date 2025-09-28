@@ -29,7 +29,7 @@ label loop2_yamato:
 
     n "You can feel the voices crawling up your spine... Someone praying at the shrine."
 
-    n "Not to the kami-sama, but to something more ancient and sinister.. Blasphemous at it's core."
+    n "Not to the kami-sama, but to something more ancient and sinister.. Blasphemous at its core."
 
     n "And it draws you right to it, your blood feeling right at home."
 

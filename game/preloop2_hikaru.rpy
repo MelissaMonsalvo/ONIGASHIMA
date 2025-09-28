@@ -231,7 +231,7 @@ label loop2_hikaru_mandatory1:
 
     n2 "{size=+8}DON’T INTERRUPT–{/size}"
 
-    play sound "sfx/stumble.p3"
+    play sound "sfx/stumble.mp3"
 
     hikaru "...[persistent.player_name]?"
 
@@ -353,7 +353,7 @@ label loop2_hikaru_mandatory2:
     hikaru "There’s... something here. Can you help me with–Ah!"
     with vpunch
 
-    n "There's a hidden room, it reeks with mold, old rot, and... Ugh."
+    n "There's a hidden room, it reeks of mold, old rot, and... Ugh."
 
     n "A horrible smell envelops the room immediately."
 

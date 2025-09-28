@@ -218,7 +218,7 @@ label prologue_loop1:
     play sound "sfx/bucketdrop.wav"
     $ renpy.pause(0.8)
 
-    n "Someone sees you, drops their bucket  Everyone stops what they are doing to look at you."
+    n "Someone sees you, dropping their bucket. Everyone stops what they are doing to look at you."
 
     n2 "{blur}{color=#ff2b54}So many necks to snap.{/color}{/blur}"
 
@@ -374,13 +374,13 @@ label speechhh2shiori:
 
     "Elder" "{b}For years, we have lived in shadows.{/b}{w=0.2}"
 
-    "Elder" "We boarded our windows, {i}whispered our prayers{/i}, and cremated ashes without names.{w=0.2}"
+    "Elder" "We boarded up our windows, {i}whispered our prayers{/i}, and cremated ashes without names.{w=0.2}"
 
     "Elder" "{b}The Yamakui haunted us longer than memory itself.{/b}{w=0.4}"
 
     "Elder" "{b}And yet...{/b}{w=0.4}"
 
-    "Elder" "{b}[persistent.player_name] climbed that mountain and came back.{/b} {i}Where no one else could.{/i}{w=0.3}"
+    "Elder" "{b}[persistent.player_name] climbed that mountain and came back.{/b} {i}When no one else could.{/i}{w=0.3}"
 
     play sound "sfx/clap.mp3"
 

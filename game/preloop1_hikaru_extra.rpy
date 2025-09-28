@@ -2,11 +2,11 @@
 
 label loop1_hikaru_nonmandatory1:
 
-    n "You are wandering in the forest at night, because Ymakui's dead, so why not?"
+    n "You are wandering in the forest at night, because Yamakui's dead, so why not?"
 
     n "But then something stops you."
 
-    n "You hear a slow, shaking breath..."
+    n "You hear a slow, shaky breath..."
 
     n "Then... {w}a strangled sob?"
 
@@ -24,7 +24,7 @@ label loop1_hikaru_nonmandatory1:
 
     pause 1.0
 
-    n "It's moving--"
+    n "It's moving–"
 
     hikaru "...Why...?"
 
@@ -54,7 +54,7 @@ label loop1_hikaru_nonmandatory1:
 
     hikaru "Tired."
 
-    n "They leap back without another word and dissapears into the trees like smoke."
+    n "They leap back without another word and dissapear into the trees like smoke."
 
     n "What was that about...?"
 
@@ -62,13 +62,13 @@ label loop1_hikaru_nonmandatory1:
 
 label loop1_hikaru_nonmandatory2:
 
-    n "There are a lot of tombstones on the shrine."
+    n "There are a lot of tombstones around the shrine."
 
-    n "All of them are blank tombstones, some said those are the victims of Yamakui."
+    n "All of them are blank tombstones, some say those are the victims of Yamakui."
 
-    n "Now they're just nameless and faceless souls that dissolves from memory once they got eaten."
+    n "Now they're just nameless and faceless souls that dissolve from memory once they got eaten."
 
-    n "Hikaru stands in front of the grave, with their hands folded in prayer."
+    n "Hikaru stands in front of a grave, with their hands folded in prayer."
 
     n "They clearly are too absorbed in their own thoughts."
 
@@ -98,7 +98,7 @@ label loop1_hikaru_nonmandatory2:
 
     n "You glance toward the stones without names."
 
-    n "Their names might be forgotten, but you don't forget your own."
+    n "Their names might be forgotten, but you didn't forget your own."
 
     n "Your name...{w} is..."
 
@@ -116,7 +116,7 @@ label loop1_hikaru_nonmandatory3:
 
     shiori "Mhm. I noticed~"
 
-    n "Hikaru ties off the charm’s final knot and stack it with the others."
+    n "Hikaru ties off the charm’s final knot and stacks it with the others."
 
     shiori "Cuz you made a lot for [persistent.player_name] before leaving, riiight?"
 
@@ -126,7 +126,7 @@ label loop1_hikaru_nonmandatory3:
 
     shiori "Aww, Hikaru~ Deep down you really care, don't you?"
 
-    hikaru "That's... That's just because [persistent.player_name] didn’t say goodbye, so I thought--"
+    hikaru "That's... That's just because [persistent.player_name] didn’t say goodbye, so I thought–"
 
     hikaru "I... I just didn’t know if [persistent.player_name] would come back."
 
@@ -176,7 +176,7 @@ label loop1_hikaru_nonmandatory3:
 
     shiori "Mmkay, if you said so."
 
-    shiori "If you're truly in love with [persistent.player_name], though. You shoud say it before it's too late..."
+    shiori "If you're truly in love with [persistent.player_name], though. You should say it before it's too late..."
 
     hikaru "..."
 
