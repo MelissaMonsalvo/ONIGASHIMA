@@ -103,7 +103,12 @@ label prologue_loop2:
 
     n2 "{sc=1}aND I sTiLL hAvE oNe mOre of YOuR FRieNdS tO eAt.{/sc}"
 
-    jump loop3_hikaru
+    if not persistent.shiori_dies:
+        jump loop3_shiori
+    if not persistent.hikaru_dies:
+        jump loop3_hikaru
+    if not persistent.yamato_dies:
+        jump loop3_yamato
 
 
 
