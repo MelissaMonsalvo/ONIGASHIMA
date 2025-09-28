@@ -52,6 +52,9 @@ label ghost_shiori_1:
 
     $ ghost_shiori_1 = True
 
+    stop sound
+    stop music
+
     return
 
 label ghost_shiori_2:
@@ -136,6 +139,9 @@ label ghost_shiori_2:
 
     hide ghost_shiori normal with dissolve
     #stop sound fadeout 1.5
+
+    stop sound
+    stop music
 
     $ ghost_shiori_2 = True
 
@@ -271,7 +277,8 @@ label ghost_shiori_4:
     hide black_screen
     #hide screen shrine_flicker
 
-    stop sound fadeout 1.0
+    stop sound
+    stop music
 
     window show
     n "..."
@@ -376,6 +383,9 @@ label ghost_shiori_5:
     hide ghost_shiori
 
     "..."
+
+    stop sound
+    stop music
 
     $ ghost_shiori_5 = True
     return

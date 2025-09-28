@@ -50,6 +50,9 @@ label ghost_yamato_1:
 
     MC yansm2 "Ha. Ha. Very funny."
 
+    stop sound
+    stop music
+
     return
 
 label ghost_yamato_2:
@@ -105,9 +108,14 @@ label ghost_yamato_2:
 
     ### everything disappears
 
+
+
     scene black with fade
     hide ghost_yamato with fade
     $ renpy.pause(1.0)
+
+    stop sound
+    stop music
 
     n "You don’t want to know what it tasted like."
     return
@@ -184,6 +192,9 @@ label ghost_yamato_3:
     MC yan2 "Tch, persistent even in death."
 
     $ ghost_yamato_3 = True
+
+    stop sound
+    stop music
 
     return
 
@@ -271,6 +282,9 @@ label ghost_yamato_4:
     n "Then darkness."
 
     n "Was that a dream?"
+
+    stop sound
+    stop music
 
     return
 
@@ -385,6 +399,9 @@ label ghost_yamato_5:
     ## mc retches
 
     n "Your stomach is empty, but you're starving and full at the same time."
+
+    stop sound
+    stop music
 
 
     return

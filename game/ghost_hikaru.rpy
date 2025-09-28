@@ -81,6 +81,7 @@ label ghost_hikaru_1:
     $ renpy.pause(1.5)
 
     stop sound
+    stop music
 
     scene black
     with dissolve
@@ -169,7 +170,8 @@ label ghost_hikaru_2:
 
     ## disappears
 
-    stop music fadeout 2.0
+    stop sound
+    stop music
 
     n "..."
 
@@ -247,6 +249,9 @@ label ghost_hikaru_3:
     pause 0.1
 
     n "They're gone..."
+
+    stop sound
+    stop music
 
 
     $ ghost_hikaru_3 = True
@@ -349,6 +354,9 @@ label ghost_hikaru_4:
     $ haze_active = False
     hide haze_effect
     with dissolve
+
+    stop sound
+    stop music
 
 
 
