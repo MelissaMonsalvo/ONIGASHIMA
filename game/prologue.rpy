@@ -256,7 +256,7 @@ label village_entrance:
 
     play sound "sfx/walk grass.mp3"
 
-    n "You walk toward a familiar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
+    n "You walk toward a familiar-looking elder and hand the armor out. He steps forward and examines the armor, brows furrowing."
 
     pause 1.0
 
