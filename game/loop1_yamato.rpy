@@ -1,5 +1,24 @@
 label loop1_yamato:
 
+    scene black
+    with fade
+
+    scene white_bg
+    with out_182
+
+    show petals_dense2
+    show petals_scatter2
+
+    n "These past few days have been odd, to say the least."
+
+    n "You spent your days with Yamato the most."
+
+    n "...Wait, where is Yamato right now?"
+
+    scene black
+
+    with fade
+
     $ ysword = False
 
     ## YAMATO'S ROUTE GOES HERE FOR LOOP 1 AFTER CLEARING ALL MANDATORY EVENTS
