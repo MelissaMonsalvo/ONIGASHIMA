@@ -1,6 +1,24 @@
 label loop2_yamato:
+    scene black
+    with fade
 
-    n "Something brings you to the shrine..."
+    pause 0.2
+
+    scene white_bg
+    with out_182
+
+    show petals_dense
+    show petals_scatter
+
+    n2 "...I spent most of my days with the gamey one."
+
+    n2 "No choice but to go for gamey meat..."
+
+    scene black
+    with fade
+
+    pause 0.3
+
 
 
     scene shrine night with in_212:
