@@ -200,7 +200,6 @@ label truend:
     show hik worried with dissolve
     hikaru "If we do nothing, it will come for all of us!"
 
-    play sound "thud.mp3"
 
     show shi annoyed with vpunch
     shiori "Mouu~ You two don’t understand anything!"
@@ -324,7 +323,6 @@ label truend:
     yamato "Oi, Shiori! Open yer damn eyes already!"
     yamato "Ya think this monster’s some savior? Some lover? Tch... {b}bullshit!{/b}"
 
-    play sound "thud.mp3"
     with sshake
 
     n "Yamato slams his fist into the shrine pillar, making Shiori {glitch=7}jolt.{/glitch}"
