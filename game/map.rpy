@@ -35,6 +35,8 @@ python early:
             setattr(store, f"{selected['char']}_events_completed", selected["idx"] + 1)
             return selected["event_label"]
         return None
+default redirect_event_label = None
+default redirect_message = ""
 
 image black_screen = "#000"
 # Variables para el progreso del juego
@@ -340,18 +342,12 @@ python early:
             renpy.take_screenshot()
             renpy.save("after_event", extra_info=f" {event_to_call}")
         else:
-            # Try to find the nearest mandatory event matching current time block
             nearest_event = find_nearest_mandatory_event(store.current_time_block)
             if nearest_event:
-                # Show the redirect message (will be quick if auto-advance)
-                renpy.scene("black_screen")
-                renpy.say(None, "There is nothing interesting happening here, so you go somewhere else...")
-                renpy.call(nearest_event)
-                # Save state after being redirected
-                renpy.take_screenshot()
-                renpy.save("after_event", extra_info=f" {nearest_event}")
+                store.redirect_event_label = nearest_event
+                store.redirect_message = "There is nothing interesting happening here, so you go somewhere else..."
+                renpy.jump("redirect_to_event")
             else:
-                # Fallback, no events available at all
                 renpy.call("location_empty", location)
 
 
@@ -871,4 +867,14 @@ label ghost_hikaru_4b:
 
 label ghost_hikaru_5b:
     "ghost_hikaru_5"
+    return
+
+label redirect_to_event:
+    scene black_screen
+    with fade
+    "[redirect_message]"
+    with dissolve
+    call expression redirect_event_label
+    $ redirect_event_label = None
+    $ redirect_message = ""
     return
