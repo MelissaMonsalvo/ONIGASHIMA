@@ -41,7 +41,7 @@ screen press_anything_to_continue():
             font NOTO_JP
             xalign 0.5
             yalign 0.55
-            outlines [(2, "#000000", 0, 0)]
+            outlines [(4, "#000000", 0, 0)]
 
             at ts_text_fade()
 
@@ -109,7 +109,7 @@ screen main_menu():
 
             pos (40, 40)
 
-            add "logo"
+            add "logo" xpos 40 ypos -30
             null height 20
 
             button:
@@ -152,6 +152,7 @@ style mm_button:
 style mm_text:
     font NOTO_JP
     color WHITE
+    outlines [(3, "#000000", 0, 0)]
 
     #idle_outlines [(1, BLACK, 0, 0)]
     #hover_outlines [(0, BLACK, 0, 0)]
