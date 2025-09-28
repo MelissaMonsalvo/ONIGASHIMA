@@ -10,6 +10,9 @@ init python early:
     BLACK = "#000000"
     WHITE = "#ffffff"
 
+    YELLOW = "#E1BE3E"
+    RED = "#860C01"
+
     NOTO_JP_BOLD = "NotoSerifJP-SemiBold.ttf"
     NOTO_JP = "NotoSerifJP-VariableFont_wght.ttf"
 
@@ -52,6 +55,12 @@ image gm_btn_hover = ConditionSwitch(
 
 image frame black = Frame("gui/frame.webp", 100, 85)
 
+image frame gal = Transform("gui/frame.webp", xysize=(480, 302))
+image frame gal hover = ConditionSwitch(
+    "current_route == 'route1'", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(YELLOW, YELLOW)),
+    "current_route == 'route2'", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(RED, RED))
+)
+
 define LONG_BTN_PADDING = (75, 30)
 define GM_LONG_BTN_PADDING = (20, 30, 75, 30)
 
@@ -68,6 +77,7 @@ image gm navline = Transform("gui/game menu/nav_line.png", pos=(90, 215))
 ### SAVE/LOAD ###
 image sl_thumb = Transform("frame black", xysize=(758, 476))
 define SL_BTN_PADDING = (300, 111, 415, 113)
+
 
 
 ############################################################

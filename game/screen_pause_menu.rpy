@@ -34,7 +34,7 @@ screen pause_menu():
 
 
         vbox:
-            ypos 215
+            ypos 170
             xpos 5
             spacing -5
 

@@ -49,7 +49,7 @@ screen main_menu():
             
             spacing -20
 
-            pos (40, 47)
+            pos (40, 40)
 
             add "logo"
             null height 20
@@ -69,6 +69,10 @@ screen main_menu():
             button:
                 text _("CONTROLS") hover_color tt_color
                 action ShowMenu("help")
+
+            button:
+                text _("EXTRAS") hover_color tt_color
+                action ShowMenu("extras")
 
             button:
                 text _("CREDITS") hover_color tt_color
