@@ -299,7 +299,7 @@ label village_entrance:
         ypos 1.67
     with dissolve
 
-    n "Suddenly, hands reach for you. Clapping on your back, with smiles on their face."
+    n "Suddenly, hands reach for you. Clapping on your back, with smiles on their faces."
 
     n "Ah, there it is."
 
