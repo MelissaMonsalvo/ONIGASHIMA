@@ -628,7 +628,7 @@ label loop1_yamato:
     show yam annoyedbl
     with dissolve
 
-    yamato "Yer goin' in patrol tonight, right?"
+    yamato "Yer goin' on patrol tonight, right?"
 
     MC normal "Yeah, obviously, the red moon is coming."
 
@@ -705,7 +705,7 @@ label loop1_yamato:
     show yam smug
     with dissolve
 
-    yamato "No, yer lazy. Ya eatin' yet?"
+    yamato "No, yer lazy. Ya hav' eaten yet?"
 
     show frame2:
         zoom 0.4

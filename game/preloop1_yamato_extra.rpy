@@ -6,12 +6,12 @@ label loop1_yamato_nonmandatory1:
 
     n "Of course, since the Yamakui is not around anymore, it really isn't needed."
 
-    n "But some of the paranoid townspeople--including Yamato--decides that night patrols are still mandatory, at least until the next red moon proves that it's gone."
+    n "But some of the paranoid townspeople–including Yamato–decide that night patrols are still mandatory, at least until the next red moon proves that it's gone."
 
     play sound "sfx/steps_dirt.ogg"
     $ renpy.pause(0.4)
 
-    n "You're about to doze off when you hear leaves cracking behind you."
+    n "You're about to doze off when you hear leaves rustling behind you."
 
     n "Maybe it's the wind? But you feel like it has weight, though."
 
@@ -19,7 +19,7 @@ label loop1_yamato_nonmandatory1:
 
     n "You stop and tries to listen again."
 
-    MC "Hey--?"
+    MC "Hey–?"
 
     n "That was clearly a footstep."
 
@@ -31,7 +31,7 @@ label loop1_yamato_nonmandatory1:
 
     MC "AHHH!"
 
-    yamat "Pft--"
+    yamat "Pft–"
 
     yamato "Ffffuckin’ hell, did ya just squeal like a damn sissy!?"
 
@@ -39,7 +39,7 @@ label loop1_yamato_nonmandatory1:
 
     yamato "BWAH! Ya shoulda seen yer face just now!"
 
-    MC "You--! Kami-sama, why are you even out here?!"
+    MC "You–! Kami-sama, why are you even out here?!"
 
     yamato "Patrollin'. Same as ya "
 
@@ -53,7 +53,7 @@ label loop1_yamato_nonmandatory1:
 
     yamato "Tch. Ya ain’t got the stones."
 
-    MC "I thought something--"
+    MC "I thought something–"
 
     yamato "What? The Yamakui crawled back outta its pit?"
 
@@ -101,7 +101,7 @@ label loop1_yamato_nonmandatory1:
 
     MC "..."
 
-    n "That sounds like a lot of crap, isn't it?"
+    n "That sounds like a lot of crap, doesn't it?"
 
     n "You remember those footsteps. The ones that stopped when yours did, it was matching your pace."
 
@@ -121,7 +121,7 @@ label loop1_yamato_nonmandatory1:
 
     MC "Yeah, right. What kind of bullcrap is that?"
 
-    n "He doesn't answer your question and walk away again."
+    n "He doesn't answer your question and walks away again."
 
     n "You wait for his steps to fade, then longer. Until you can't even smell him in the air."
 
@@ -147,7 +147,7 @@ label loop1_yamato_nonmandatory2:
 
     yamato "Tch. Ya two keep talkin' shit and I’ll offer ya next."
 
-    MC "The last time you go to the shrine to pray was-3as-I don't even remember, Shiori. Has he gone to the shrine in his life at all?"
+    MC "The last time you go to the shrine to pray was- was- I don't even remember, Shiori. Has he gone to the shrine in his life at all?"
 
     shiori "Not if he's not bleeding. He's only here to be patched up, usually."
 
@@ -161,7 +161,7 @@ label loop1_yamato_nonmandatory2:
 
     n "It flares red, then black, then red again. As if the gods are angry for some reason."
 
-    shiori "KYAAA--"
+    shiori "KYAAA–"
 
     MC "GAH! Whoa!! That’s not normal, right?! That’s definitely not normal!"
 
@@ -177,7 +177,7 @@ label loop1_yamato_nonmandatory2:
 
     shiori "Did you thought of something dirty mid-prayer~?"
 
-    yamato "OI! I said nothing weird! It just--went off!"
+    yamato "OI! I said nothing weird! It just–went off!"
 
     shiori "Or... the gods saw all your sins and your thoughts then decide you are blasphemous, Yamato-kun..."
 
@@ -251,7 +251,7 @@ label loop1_yamato_nonmandatory3:
 
     yamato "What, ya think I can’t cook?"
 
-    MC "No, I just--"
+    MC "No, I just–"
 
     yamato "Don’t get weird about it."
 
