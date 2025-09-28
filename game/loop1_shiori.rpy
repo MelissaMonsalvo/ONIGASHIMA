@@ -893,12 +893,12 @@ label loop1_shiori:
     centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}{font=LibreBaskerville-Regular.ttf}{size=40}T W O M O R E T O G O{/size}{/font}{/color}{/atl}{/color}"
 
     with fade
-
     n2 "...."
 
-    n2 "Let's go back to the entrance... and you should pick to start again."
+    n2 "Let's go back to the entrance... and start again."
 
     n2 "Still hungry."
+    
 
     pause 0.5
 

@@ -1850,10 +1850,11 @@ label hikaru_distrust:
 
     n2 "...."
 
-    n2 "Let's go back to the entrance... and you should pick to start again."
+    n2 "Let's go back to the entrance... and start again."
 
     n2 "Still hungry."
 
+    pause 0.5
     stop sound
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived

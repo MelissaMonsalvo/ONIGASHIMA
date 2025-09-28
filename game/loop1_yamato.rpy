@@ -1554,9 +1554,11 @@ label loop1_yamato:
 
     n2 "...."
 
-    n2 "Let's go back to the entrance... and you should pick to start again."
+    n2 "Let's go back to the entrance... and start again."
 
     n2 "Still hungry."
+
+    pause 0.5
 
     $ persistent.yamato_dies = True
 
