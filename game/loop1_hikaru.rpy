@@ -184,7 +184,7 @@ label loop1_hikaru:
     menu:
         "I got bitten":
             $ hikaru_belief += 1
-            MC "{sc=4}I got bitten by the Yamakui, passed out, then lost half of my memories.{/sc}"
+            MC sad "{sc=4}I got bitten by the Yamakui, passed out, then lost half of my memories.{/sc}"
 
             show hik worried
             with dissolve
@@ -193,7 +193,7 @@ label loop1_hikaru:
 
         "My head hit something":
             $ hikaru_belief -= 1
-            MC "{cps=12}I hit my head on something on the way back to the mountain...{/cps}"
+            MC sad "{cps=12}I hit my head on something on the way back to the mountain...{/cps}"
             show hik worried
             with dissolve
             hikaru "{sc=3}But your head wasn't bleeding when you returned.{/sc}"
@@ -672,7 +672,7 @@ label loop1_hikaru:
     with sshake
     pause 0.1
 
-    scene dojo day:
+    scene house night:
         zoom 0.5
 
     show yam rage:
@@ -1532,6 +1532,8 @@ label hikaru_trust:
     with in_212
 
     stop sound
+    stop music
+    stop muzak
 
     n "The {color=#ff0000}red{/color} streaks and shadows are gone."
 
@@ -1558,11 +1560,11 @@ label hikaru_trust:
     n "{k=1}Who are you, really?{/k}"
 
 
-    MC "..."
+    MC yan2 "..."
 
-    MC "I DO remember where I saw the other red scarf, even if you don't."
+    MC yan2 "I DO remember where I saw the other red scarf, even if you don't."
 
-    MC "We left it right next to your body."
+    MC yan2 "We left it right next to your body."
 
     n "...!?"
 
