@@ -1,11 +1,11 @@
-label empty_village_day:
+label empty_village_Day:
     scene village day:
         zoom 0.5
     n "No one is here..."
     jump map
     return
 
-label empty_village_night:
+label empty_village_Night:
     scene village night:
         zoom 0.5
     n "No one is here..."
@@ -87,14 +87,14 @@ label empty_village_night:
     jump map
     return
 
-label empty_house_day:
+label empty_house_Day:
     scene house day:
         zoom 0.5
     n "No one is here..."
     jump map
     return
 
-label empty_house_night:
+label empty_house_Night:
     scene house night:
         zoom 0.5
     n "No one is here..."
@@ -176,14 +176,14 @@ label empty_house_night:
     jump map
     return
 
-label empty_forest_day:
+label empty_forest_Day:
     scene forest day:
         zoom 0.5
     n "No one is here..."
     jump map
     return
 
-label empty_forest_night:
+label empty_forest_Night:
     scene forest night:
         zoom 0.5
     n "No one is here..."
@@ -265,14 +265,14 @@ label empty_forest_night:
     jump map
     return
 
-label empty_shrine_day:
+label empty_shrine_Day:
     scene shrine day:
         zoom 0.5
     n "No one is here..."
     jump map
     return
 
-label empty_shrine_night:
+label empty_shrine_Night:
     scene shrine night:
         zoom 0.5
     n "No one is here..."
@@ -354,14 +354,14 @@ label empty_shrine_night:
     jump map
     return
 
-label empty_dojo_day:
+label empty_dojo_Day:
     scene dojo day:
         zoom 0.5
     n "No one is here..."
     jump map
     return
 
-label empty_dojo_night:
+label empty_dojo_Night:
     scene dojo night:
         zoom 0.5
     n "No one is here..."
