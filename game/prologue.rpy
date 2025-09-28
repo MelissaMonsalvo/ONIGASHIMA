@@ -935,7 +935,10 @@ label beforefirstloop:
     stop sound
 
     #jump loop1_yamato_mandatory1
-    jump map
+    if persistent.trueendingunlocked:
+        jump truend:
+    else:
+        jump map
 
 
     return

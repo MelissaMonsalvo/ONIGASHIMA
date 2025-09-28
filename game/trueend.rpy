@@ -1,5 +1,16 @@
 label truend:
 
+    scene black
+    with dissolve
+
+    n "...This body does not move."
+    n "You stay at home."
+    n "You do nothing."
+    n "You don't even greet your friends."
+    n "Why?"
+
+    pause 0.5
+
     $ ysword = False
     $ hmask = False
     $ hsword = False
