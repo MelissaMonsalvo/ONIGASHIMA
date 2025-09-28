@@ -61,6 +61,8 @@ image frame gal hover = ConditionSwitch(
     "current_route == 'route2'", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(RED, RED))
 )
 
+image gm bg1 = "gui/menu_background.jpg"
+
 define LONG_BTN_PADDING = (75, 30)
 define GM_LONG_BTN_PADDING = (20, 30, 75, 30)
 
@@ -83,6 +85,15 @@ define SL_BTN_PADDING = (300, 111, 415, 113)
 ############################################################
 ### ENTER/EXIT ###
 ############################################################
+transform ts_fadein():
+    on show:
+        alpha 0.0
+
+        linear 1.0 alpha 1.0
+    on hide:
+        alpha 1.0
+        linear 1.0 alpha 0.0
+
 transform ts_qm_fadein(dist):
     alpha 0.5
     yoffset dist

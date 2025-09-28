@@ -59,8 +59,10 @@ screen main_menu():
 
     if current_route == "route1":
         $ tt_color = BLACK
+        $ tt_out = BLACK
     elif current_route == "route2":
         $ tt_color = WHITE
+        $ tt_out = RED
 
 
 
@@ -113,31 +115,59 @@ screen main_menu():
             null height 20
 
             button:
-                text _("START") hover_color tt_color
+                text _("START"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action Start()
 
             button:
-                text _("LOAD") hover_color tt_color
+                text _("LOAD"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action ShowMenu("load")
 
             button:
-                text _("SETTINGS") hover_color tt_color
+                text _("SETTINGS"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action Show("preferences")
 
             button:
-                text _("CONTROLS") hover_color tt_color
+                text _("CONTROLS"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action ShowMenu("help")
 
             button:
-                text _("EXTRAS") hover_color tt_color
+                text _("EXTRAS"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action ShowMenu("extras")
 
             button:
-                text _("CREDITS") hover_color tt_color
+                text _("CREDITS"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action ShowMenu("credits")
 
             button:
-                text _("QUIT TO DESKTOP") hover_color tt_color
+                text _("QUIT TO DESKTOP"):
+                    hover_color tt_color
+                    idle_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines [(3, tt_out, 0, 0)]
+
                 action Quit()
 
 ############################################################
@@ -150,9 +180,8 @@ style mm_button:
     padding LONG_BTN_PADDING
 
 style mm_text:
-    font NOTO_JP
+    font NOTO_JP_BOLD
     color WHITE
-    outlines [(3, "#000000", 0, 0)]
 
     #idle_outlines [(1, BLACK, 0, 0)]
     #hover_outlines [(0, BLACK, 0, 0)]
@@ -161,37 +190,63 @@ style mm_text:
     bold False
     italic False
 
+screen seizure():
+    vbox:
+        at ts_fadein()
+
+        align (0.5, 0.5)
+        xsize 1000
+
+        text "Photosensitivity Seizure Warning":
+            font NOTO_JP_BOLD
+            color BLACK
+            size 50
+            xalign 0.5
+
+        null height 100
+
+        text "Some individuals may experience epileptic seizures when exposed to certain visual images, including light patterns or flashing light.":
+            font NOTO_JP
+            color BLACK
+            size 50
+            xalign 0.5
+    
+
 label splashscreen:
     $ _window_hide()
+    scene gm bg1 with fade
     # Show first image instantly, with fade
-    scene expression "splashscreen/seizure.jpg" with fade
+    #scene expression "splashscreen/seizure.jpg" with fade
+    show screen seizure()
 
     # Block all input for 3 seconds WHILE first image is shown
-    $ renpy.pause(0.5, hard=True)
+    $ renpy.pause(1.0, hard=True)
     # Show first image a bit longer (adjust this to your liking)
-    $ renpy.pause(1.0)   # This CAN be clicked/fast-forwarded, or set to 0 if you want exactly 3 sec
+    $ renpy.pause(1.5)   # This CAN be clicked/fast-forwarded, or set to 0 if you want exactly 3 sec
 
+    hide screen seizure
+    pause 0.3
     # Show the rest of the splash images, clickable as normal
     scene expression "splashscreen/ss1.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene expression "splashscreen/ss2.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene expression "splashscreen/ss3.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene expression "splashscreen/ss3a.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene expression "splashscreen/ss4.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene expression "splashscreen/ss4a.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene expression "splashscreen/ss5.jpg" with fade
-    $ renpy.pause(0.4)
+    $ renpy.pause(0.7)
 
     scene black with fade
     call screen press_anything_to_continue()
