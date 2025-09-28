@@ -35,7 +35,7 @@ label loop3_epilogue:
 
     n2 "i pReTeNd tO pRaY aT tHe sHrInE."
 
-    n2 "aNd wHeN tHe mOoN tUrNs fUlL--"
+    n2 "aNd wHeN tHe mOoN tUrNs fUlL–"
 
     n2 "i tEAr aNoThEr oNe aPaRt."
 
@@ -54,14 +54,14 @@ label loop3_epilogue:
     play sound "sfx/gurgle_mouth.ogg"
     $ renpy.pause(0.3)
 
-    n2 "mAyBe oNe dAy--"
+    n2 "mAyBe oNe dAy–"
 
     n2 "a sLaYeR wILL rIsE aGaIn."
 
     play sound "sfx/sword_unsheath.ogg"
     $ renpy.pause(0.3)
 
-    n2 "bUt mAyBe--"
+    n2 "bUt mAyBe–"
 
     n2 "tHeRe iSn’T aNyOnE lEfT wHo rEmEmBeRs hOw."
 
@@ -211,7 +211,7 @@ label loop5_start:
 
     n2 "aNNoyInG. sOft. {w}aLiVe."
 
-    n2 "nOW yOu’Re--"
+    n2 "nOW yOu’Re–"
 
     n2 "..."
 
@@ -288,7 +288,7 @@ label loop6_start:
 
     n2 "i’M mAkInG iT uP."
 
-    n2 "bUt iF i dOn’T tAlK tO sOmEtHiNg, i’LL--"
+    n2 "bUt iF i dOn’T tAlK tO sOmEtHiNg, i’LL–"
 
     n2 "..."
 
@@ -298,7 +298,7 @@ label loop6_start:
 
     n2 "tHe mEaT dIeS fAsT nOw."
 
-    n2 "tHe mEaT dOn’T sAy nAmEs. tHe mEaT dOn’T sAy yOu."
+    n2 "tHe mEaT dOeSn’T sAy nAmEs. tHe mEaT dOeSn’T sAy yOuRs."
 
     scene bg shrine_field_night with slow_dissolve
     show screen red_moon_effect
@@ -308,7 +308,7 @@ label loop6_start:
 
     n2 "i wEnT dOwN."
 
-    n2 "tHe cHiLd sCrEaMeD."
+    n2 "a cHiLd sCrEaMeD."
 
     play sound "sfx/wet_crunch2.ogg"
     $ renpy.pause(0.4)
@@ -363,9 +363,9 @@ label loop7_start:
 
     n2 "iT hUrTs {i}iNsIdE.{/i}"
 
-    n2 "tHe qUiEt-- {w}iT sCrAtChEs."
+    n2 "tHe qUiEt– {w}iT sCrAtChEs."
 
-    n2 "tHe lOoPs-- {w}iT rOtS."
+    n2 "tHe lOoPs– {w}iT rOtS."
 
     scene bg forest_clearing_dead with slow_dissolve
     show screen blood_fog_overlay
@@ -374,7 +374,7 @@ label loop7_start:
 
     n2 "tHe bLoOd tAsTeS lIkE sAlT."
 
-    n2 "tHe vOiCe iN mY hEaD-- {w}iSn’T yOu."
+    n2 "tHe vOiCe iN mY hEaD– {w}iSn’T yOu."
 
     n2 "...wHeRe aRe yOu."
 
@@ -408,9 +408,9 @@ label loop8_start:
 
     n2 "i fOrgOt mY nAmE."
 
-    n2 "I. I. I. I. I. i. i. i. i--"
+    n2 "I. I. I. I. I. i. i. i. i–"
 
-    n2 "sKrTchSkRkGh--"
+    n2 "sKrTchSkRkGh–"
 
     n2 "tHeY dOn’T sCrEaM rIgHt aNyMoRe."
 
@@ -418,7 +418,7 @@ label loop8_start:
 
     n2 "eAt."
 
-    n2 "eAt--"
+    n2 "eAt–"
 
     n2 "EATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEATEAT"
 

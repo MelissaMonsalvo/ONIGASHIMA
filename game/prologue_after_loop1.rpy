@@ -55,7 +55,7 @@ label prologue_loop1:
 
     n "Who was that? Was that you?"
 
-    n "You grip the hilt harder, your sword is sticky now, covered with blood."
+    n "You grip the hilt harder, your sword is sticky now, covered in blood."
 
     n "You’ll need to clean it. Later. Burn it maybe."
 
@@ -67,13 +67,13 @@ label prologue_loop1:
 
     n "Isn't this supposed to be Yamakui? But wait..."
 
-    n "It has red blood? And doesn't it supposed to have claws? A-and this is Yamakui's lair. And you're alive."
+    n "It has red blood? And isn't it supposed to have claws? A-and this is Yamakui's lair. And you're alive."
 
     n "This makes no sense."
 
     n "No, no, that can’t be right. The sound that it made when you cut through it was {i}NOT{/i} human at all."
 
-    n "You heard it screamed, right? {w=0.2}Or did it cry out?"
+    n "You heard it scream, right? {w=0.2}Or did it cry out?"
 
     n "Did it say your name with its dying breath?"
 
@@ -132,9 +132,9 @@ label prologue_loop1:
 
     n "This... this is your proof. You dragged it with you, so they'd believe you."
 
-    n "Because there was {i}nothing else{/i} left. {w=0.2}Because you--"
+    n "Because there was {i}nothing else{/i} left. {w=0.2}Because you–"
 
-    n2 "{size=+2}{color=#880000}{glitch=1.1}--stole it.{/glitch}{/color}{/size}"
+    n2 "{size=+2}{color=#880000}{glitch=1.1}–stole it.{/glitch}{/color}{/size}"
 
     n "..."
 
@@ -161,11 +161,11 @@ label prologue_loop1:
 
     n2 "Pfft... hkkk-HRAHAHAH."
 
-    n "--!"
+    n "–!"
 
     n2 "Gold light. Pretty lie. {w}Ha."
 
-    n "What--"
+    n "What–"
 
     n2 "Keep telling that lie to yourself, won't you?"
 
@@ -201,9 +201,9 @@ label prologue_loop1:
 
     n "Finally."
 
-    n "Once you step on the village borders, everything changes."
+    n "Once you cross the village borders, everything changes."
 
-    n "The sky looks like it splits into two once the treeline dissapears... The heavenly shine that you've imagined."
+    n "The sky looks like it splits into two once the treeline disappears... The heavenly shine that you've imagined."
 
     MC happy2 "Hey, guys. I'm back."
 
@@ -241,7 +241,7 @@ label prologue_loop1:
 
     stop sound
 
-    n "You walk toward a familliar-looking elder and hands the armor out. He steps forward and examines the armor, brows furrowing."
+    n "You walk toward a familiar-looking elder and hand the armor out. He steps forward and examines the armor, brows furrowing."
 
     show elder:
         xzoom -1
@@ -291,11 +291,11 @@ label prologue_loop1:
 
     n "NO."
 
-    n2 "{cps=201}Yamakui. Yamakui. Yamakui--"
+    n2 "{cps=201}Yamakui. Yamakui. Yamakui–"
 
     n "No, that’s-{w}That’s NOT-!"
 
-    "Man" "Did you really kill the yamakui, [persistent.player_name]?"
+    "Man" "Did you really kill the Yamakui, [persistent.player_name]?"
 
     MC smug2 "Yeah! I took down that Oni in one blow! Well... maybe two! Or ten! Who’s counting?!"
 
@@ -307,7 +307,7 @@ label prologue_loop1:
 
     n2 "{cps=201}Hungry hungry hungry."
 
-    n "{cps=201}Shut up {size=+3}shut up{/size} {size=+6}shut up{/size} {size=+9}shut up{/size} {size=+12}shut up{/size}--"
+    n "{cps=201}Shut up {size=+3}shut up{/size} {size=+6}shut up{/size} {size=+9}shut up{/size} {size=+12}shut up{/size}–"
 
     "Woman" "Great job, [persistent.player_name]-san..."
 
@@ -315,9 +315,9 @@ label prologue_loop1:
 
     n "{cps=57}No one looks at the armor.{/cps}"
 
-    n "They looked worried still, because someone was recently devoured. Someone by the name of--"
+    n "They looked worried still, because someone was recently devoured. Someone by the name of–"
 
-    n "--huh?"
+    n "–huh?"
 
     n "Why can't I remember their name? That's odd, let me think again. Were they your friend?"
 
@@ -347,7 +347,7 @@ label speechhh2shiori:
         linear 0.15 zoom 0.62
         pause 0.3
 
-    n "Later, you are pulled to stand in front of everyone, almost stumbling on your feet."
+    n "Later, you are pulled to stand in front of everyone, almost stumbling over your feet."
 
     n "You wonder why the Elder's hand is shaking when he tugs your arm."
 
@@ -372,7 +372,7 @@ label speechhh2shiori:
 
     "Elder" "{b}Look well, all of you.{/b}{w=0.3}"
 
-    "Elder" "{b}For years, we have lived in shadow.{/b}{w=0.2}"
+    "Elder" "{b}For years, we have lived in shadows.{/b}{w=0.2}"
 
     "Elder" "We boarded our windows, {i}whispered our prayers{/i}, and cremated ashes without names.{w=0.2}"
 
@@ -399,7 +399,7 @@ label speechhh2shiori:
     hide elder
     with fade
 
-    "Girl" "Speech, [persistent.player_name]!"
+    "Girl" "A speech, [persistent.player_name]!"
 
     n "A voice rises from the crowd. Shiori’s, maybe."
 
@@ -460,7 +460,7 @@ label speechhh2shiori:
 
     n "You can still hear the scared whispers of the villagers ringing in your ears."
 
-    "Man" "The next Red Moon’s coming soon, isn’t it?"
+    "Man" "The next Red Moon is coming soon, isn’t it?"
 
     "Woman" "Think we’ll be safe this time?"
 
@@ -578,13 +578,13 @@ label speechhh2noshiori:
 
     n "Wait, {w=0.2}shouldn't someone say something by now?"
 
-    n "Someone always says something here. {blur}A girl’s voice{/blur} I think her name was--"
+    n "Someone always says something here. {blur}A girl’s voice{/blur} I think her name was–"
 
     n "No, I can't remember her..."
 
     n "She should be laughing with her sweet voice by now, but you don't hear it."
 
-    n "{blur}Someone{/blur} should ask you to say a speech now, right?"
+    n "{blur}Someone{/blur} should ask you to give a speech now, right?"
 
     n2 "The stringy one."
 
@@ -624,7 +624,7 @@ label speechhh2noshiori:
 
     n "You can still hear the scared whispers of the villagers ringing in your ears."
 
-    "Man" "The next Red Moon’s coming soon, isn’t it?"
+    "Man" "The next Red Moon is coming soon, isn’t it?"
 
     "Woman" "Think we’ll be safe this time?"
 
@@ -651,7 +651,8 @@ label speechhh2noshiori:
 
     n "And that red ooze is still dripping."
 
-    jump check_who_ded
+    #jump check_who_ded
+    jump LI_intro_noshiori
 
 label check_who_ded:
 
@@ -672,7 +673,7 @@ label LI_intro_noshiori:
     show hik normal at hikaru_zoom, right
     with dissolve
 
-    n "Because Yamato and Hikaru find you, they are your childhood friends--"
+    n "Because Yamato and Hikaru find you, they are your childhood friends–"
 
     n "Wait a second."
 
@@ -705,7 +706,7 @@ label LI_intro_noshiori:
 
     n "Wasn’t there {glitch}someone else?{/glitch}"
 
-    n "You remember the rice paddies, the muddy sandals, the laughters and the paper effigies--"
+    n "You remember the rice paddies, the muddy sandals, the laughters and the paper effigies–"
 
     n "Someone used to hang those paper effigies."
 
@@ -727,11 +728,11 @@ label LI_intro_noshiori:
 
     yamato "Hero my ass. Ya ran off alone, idiot."
 
-    MC smugcl2 "C’mon, tradition’s tradition. Oni slayer always goes solo."
+    MC smugcl2 "C’mon, tradition is tradition. Oni Slayer always goes solo."
 
     yamato "Fuckin' tradition..."
 
-    n "Wait... {w}There should be another voice now, someone who usually tease Yamato..."
+    n "Wait... {w}There should be another voice now, someone who usually teases Yamato..."
 
     n "No, wait... {w}Not Hikaru... {w}Hikaru's a quiet person."
 
@@ -740,7 +741,7 @@ label LI_intro_noshiori:
     show hik worried
     with dissolve
 
-    hikaru "...Don’t you forget something, [persistent.player_name]?"
+    hikaru "...Didn’t you forget something, [persistent.player_name]?"
 
     MC surprised2 "Huh? What, like a souvenir? I brought the armor, didn’t I?"
 
@@ -764,7 +765,7 @@ label LI_intro_noshiori:
 
     n "The silence stretches again."
 
-    n "Someone should occupy this space right now."
+    n "Someone should occupy this space right there."
 
     n "Someone should've said something to fill the quiet."
 
@@ -884,14 +885,14 @@ label LI_intro_nohikaru:
 
     yamato "Hnh. Coulda fooled me, dumbass. Leavin’ us without a word, ya promised ya'd bring me along!"
 
-    MC smugcl2 "C’mon, you know how it is. Oni slayer tradition."
+    MC smugcl2 "C’mon, you know how it is. Oni Slayer tradition."
 
-    yamato "Tradition’s for corpses."
+    yamato "Tradition is for corpses."
 
     show shi annoyed at shakey:
         xalign 0.44
 
-    shiori "Mou~ Yamato-kun's just mad he didn’t get to do anything cool~"
+    shiori "Mou~ Yamato-kun is just mad he didn’t get to do anything cool~"
 
     yamato "Tch. I stayed behind t’guard the goddamn village."
 
@@ -900,9 +901,9 @@ label LI_intro_nohikaru:
 
     shiori "Did you now? Aren't you just sulky [persistent.player_name] didn't bring you along?"
 
-    n "There should be someone cutting the conversation right now, someone who observe, someone who is--"
+    n "There should be someone cutting into this conversation right now, someone who observes, someone who is–"
 
-    n2 "--Tender "
+    n2 "–Tender "
 
     n "...What?"
 
@@ -968,14 +969,14 @@ label LI_intro_nohikaru:
 
     yamato "Almost like ya ain’t fought anything at all, eh?"
 
-    MC happycl2 "Ehh, just got Lucky's all!"
+    MC happycl2 "Ehh, just got lucky that's all!"
 
-    yamato "What, damned oni bonked their head on a stone and dropped dead?"
+    yamato "What, damned Oni bonked their head on a stone and dropped dead?"
 
     MC nervous2 "{k=-1}Something like that, yeah...!{/k}"
 
 
-    n "Yamato and Shiori says nothing else, but their smile fades as yours does."
+    n "Yamato and Shiori says nothing else, but their smile fade as yours does."
     scene black
     show darken2
     with fade
@@ -1005,7 +1006,7 @@ label LI_intro_noyamato:
 
     n "Because Shiori and Hikaru, your childhood friends find you."
 
-    n "You grew up together, train together, sit under the same tree together, and chase each other on the paddy fields."
+    n "You grew up together, trained together, sat under the same tree together, and chased each other on the paddy fields."
 
     n "There were always four sets of muddy shoes by the door."
 
@@ -1053,7 +1054,7 @@ label LI_intro_noyamato:
 
     hikaru "Welcome home, [persistent.player_name]-san."
 
-    n "There should be someone grumbling now, that you left them to fight the Yamakui all by yourself..."
+    n "There should be someone grumbling now, that you left to fight the Yamakui all by yourself..."
 
     n2 "That one stopped moving halfway down the throat."
 
@@ -1118,7 +1119,7 @@ label LI_intro_noyamato:
     show shi worried at shakey:
         xalign 0.44
 
-    shiori "Ah, mou... Let's go eat before Hikaru's making odd theories again!"
+    shiori "Ah, mou... Let's go eat before Hikaru is making odd theories again!"
 
     MC normal2 "Yeah, agreed."
 
@@ -1168,7 +1169,7 @@ label beforesecondloop:
 
     n "Instead, they light incense more often, close their doors faster..."
 
-    n "...and never once stare at you in the eye."
+    n "...and never once stare you in the eye."
 
     n "You never ask why."
 
@@ -1202,7 +1203,7 @@ label beforesecondloop:
 
     n "So the Red Moon shouldn’t mean anything this time."
 
-    n "It should rise, and pass, and no one should vanish or be forgotten--"
+    n "It should rise, and pass, and no one should vanish or be forgotten–"
 
     n "No one should{nw}"
 

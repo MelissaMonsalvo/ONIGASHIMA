@@ -25,7 +25,7 @@ label loop1_shiori:
 
     shiori "Good morning, [persistent.player_name]-sama~"
 
-    shiori "I was just about to prepare the shrine for the red moon, and--"
+    shiori "I was just about to prepare the shrine for the red moon, and–"
 
     MC normal "Shiori-chan."
 
@@ -43,7 +43,7 @@ label loop1_shiori:
         easein 0.1 yoffset 90 xzoom 0.97 yzoom 1.03
         easeout 0.1 yoffset 80 xzoom 1.0 yzoom 1.0
 
-    shiori "I--"
+    shiori "I–"
 
     show shi yansm
     with dissolve
@@ -61,11 +61,11 @@ label loop1_shiori:
     show shi happyblush
     with dissolve
 
-    shiori "That's what Hikaru and Yamato keeps telling me anyway..."
+    shiori "That's what Hikaru and Yamato keep telling me anyway..."
 
 
 
-    n "None of you speak again for a while."
+    n "Neither of you speak again for a while."
 
     n "..."
 
@@ -201,16 +201,16 @@ label loop1_shiori:
 
     n "It burned through the cloth, and you smell something foul. Is your flesh burning?"
 
-    MC panic "{sc}Shiori, help--{/sc}"
+    MC panic "{sc}Shiori, help–{/sc}"
     with vpunch
 
     n "She should be helping, or reach for something, anything, but..."
 
-    n "She’s just watching you burn with that wide eyes of hers."
+    n "She’s just watching you burn with these wide eyes of hers."
 
     shiori "{w=0.2}You remember the charm I gave you, right?"
 
-    MC panic "Seriously, is this the right time to talk about this--"
+    MC panic "Seriously, is this the right time to talk about this–"
 
     shiori "The one I hid in your sleeve before you climbed the mountain...."
 
@@ -243,7 +243,7 @@ label loop1_shiori:
     show haze_effect at haze_transform
     with dissolve
 
-    n "You feel lightheaded immediately."
+    n "You feel light-headed immediately."
 
     MC nervous "R-Really?"
 
@@ -258,7 +258,7 @@ label loop1_shiori:
 
     n "...but her hand closes around your wrist before you can move."
 
-    shiori "{w=0.2}Um, wait--!"
+    shiori "{w=0.2}Um, wait–!"
 
     show shi worried
     with dissolve
@@ -286,7 +286,7 @@ label loop1_shiori:
 
     shiori "{i}It's just wine~{/i}"
 
-    n "Her hand shakes slightly as she hands you a cup, you can see a thick line runing down the outside."
+    n "Her hand shakes slightly as she hands you a cup, you can see a thick line running down the outside."
 
     n "Your fingers feel sticky where it touches."
 
@@ -366,7 +366,7 @@ label loop1_shiori:
 
     n "You’re alone now, with the cup in your hand, the {glitch=12}thick residue{/glitch} sliding down your throat..."
 
-    n "... and the taste of {color=#ff002e}{i}iron{/i}{/color} still curling at the back of your mouth."
+    n "... and the taste of {color=#ff002e}{i}iron{/i}{/color} still curling at the back of your throat."
 
     scene black
 
@@ -400,7 +400,7 @@ label loop1_shiori:
 
     play music "Dark.mp3"
 
-    n "The {glitch=8}villagers starts whispering{/glitch}, you can hear it everywhere you walk."
+    n "The {glitch=8}villagers start whispering{/glitch}, you can hear them everywhere you walk."
 
     $ decrease_music_volume(0.2)
     $ renpy.block_rollback()
@@ -432,7 +432,7 @@ label loop1_shiori:
 
     n "Of course no one dares asking you directly, but you can feel their glances when they think you’re not looking."
 
-    n "Everywhere you go, people walks away, and your friends are nowhere to be found."
+    n "Everywhere you go, people walk away, and your friends are nowhere to be found."
 
     n "No Yamato or Hikaru around, either."
 
@@ -474,11 +474,11 @@ label loop1_shiori:
 
     shiori "It’s scary, you know~ All this talk of the Oni possibly returning..."
 
-    shiori "{glitch=1.1}I need my big, strong Oni slayer to protect me~{/glitch}"
+    shiori "{glitch=1.1}I need my big, strong Oni Slayer to protect me~{/glitch}"
 
     n "Odd..."
 
-    n "Her hand no longer shakes as she looks at you, as if something had changed overnight."
+    n "Her hand no longer shake as she looks at you, as if something had changed overnight."
 
     shiori "{i}Nee, nee, you wouldn’t leave me alone on a night like this... Right...?{/i}"
 
@@ -514,7 +514,7 @@ label loop1_shiori:
 
     n "The red moon comes as always. When it does, everything looks washed in blood."
 
-    n "Everyone's holed in their own house. No one dares make a sound, not even for breathing."
+    n "Everyone's holed up in their own home. No one dares make a sound, not even for breathing."
 
     n "The athmosphere feels wrong."
 
@@ -542,7 +542,7 @@ label loop1_shiori:
 
     shiori "I'm so {i}happy{/i} you came~"
 
-    n "Her voice turns {i}{bt=h1-s0.5-p1.0}singy-songy{/bt}{/i}, even more unhinged than the last time you saw her."
+    n "Her voice turns {i}{bt=h1-s0.5-p1.0}sing-songy{/bt}{/i}, even more unhinged than the last time you saw her."
 
     n "What on? This {glitch=10}isn't{/glitch} the Shiori you know."
 
@@ -557,7 +557,7 @@ label loop1_shiori:
 
     shiori "{i}You risked your life for the village, and this is the thanks you get?{/i}"
 
-    shiori "Hikaru and Yamato won't talk to you, and everyone doubts you really killed the oni..."
+    shiori "Hikaru and Yamato won't talk to you, and everyone doubts you really killed the Oni..."
 
     shiori "They keep telling me {color=#ff002e}something is wrong with you...{/color}"
 
@@ -583,7 +583,7 @@ label loop1_shiori:
             ease 1 xoffset 25 yoffset 70
 
 
-    n "She takes one excrucistingly slow step forward."
+    n "She takes one excruciating slow step forward."
 
     shiori "But it’s okay~"
 
@@ -677,7 +677,7 @@ label loop1_shiori:
 
     n "She kisses you eagerly, as if she’s waited for years for this... or maybe she has. You don't know."
 
-    n "This... feels wrong, somehow. How did--"
+    n "This... feels wrong, somehow. How did–"
 
     MC "Shut up."
 
@@ -691,7 +691,7 @@ label loop1_shiori:
 
     shiori "Ah-"
 
-    n "Are you sure this is the right time to do this? The red--"
+    n "Are you sure this is the right time to do this? The red–"
 
     MC yan "{sc=7}I said shut up.{/sc}"
 
@@ -720,7 +720,7 @@ label loop1_shiori:
 
     n "She reaches up to your back, trembling, nails raking across your back. But you {i}feel none of it.{/i}."
 
-    MC "You said you love me, right Shiori? So I’m returning the favor."
+    MC "You said you love me, right, Shiori? So I’m returning the favor."
 
     MC "Isn’t that what {glitch=12}love{/glitch} is?"
 
@@ -823,7 +823,7 @@ label loop1_shiori:
 
     n "{sc=1}The blood tastes exactly like the wine she gave you weeks ago.{/sc}"
 
-    n "{sc=1}You like now it as much as you liked it then--{/sc}"
+    n "{sc=1}You like now it as much as you liked it then–{/sc}"
 
     shiori "{sc=3}I'm... {w=0.5}dizzy...{/sc}"
 
@@ -853,7 +853,7 @@ label loop1_shiori:
 
     n "You don't even feel her pulse anymore."
 
-    n "All you can feel now is the blood in your mouth, the slick feelings between your fingers, and the red goo dripping from your lips to now her dangling arms."
+    n "All you can feel now is the blood in your mouth, the slick feeling between your fingers, and the red goo dripping from your lips to her now dangling arms."
 
     n "..."
 
@@ -883,8 +883,6 @@ label loop1_shiori:
     $ persistent.shiori_dies = True
 
     $ persistent.loop1 = True
-
-    $ renpy.full_restart()
 
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived

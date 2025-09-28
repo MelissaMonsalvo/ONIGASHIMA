@@ -7,7 +7,7 @@ label truend:
     scene shrine night:
         zoom 0.5
 
-    # Show all three characters
+    # Show all three characterssssss
     show hik normal at hikaru_zoom, right
 
     show yam normal at left:
@@ -81,12 +81,12 @@ label truend:
 
     show yam shocked
     with dissolve
-    yamato "Wha--"
+    yamato "Wha–"
 
     show yam rage
     with vpunch
     yamato "{sc=7}WHAAAAAAAAAAAAAAAAAAT!?{/sc} The hell did ya just say?!"
-    yamato "Ya mean t’tell me, all this time... you and that idiot were--?"
+    yamato "Ya mean t’tell me, all this time... you and that idiot were–?"
 
     show hik sad
     with dissolve
@@ -113,13 +113,12 @@ label truend:
     hikaru "This... thing wears their face, but it is {color=#b10000}{i}not{/i}{/color} [persistent.player_name]."
 
     show yam serious with dissolve
-    # Shiori stays normal for transition
     shiori "...Then what will you do, Hikaru?"
 
     show hik serious with dissolve
     hikaru "I think... we cannot ignore it anymore."
     hikaru "Or we'll all die."
-    hikaru "My theory... That [persistent.player_name] may be {i}possessed{/i} by Yamakui. Or worse, [persistent.player_name]'s body has been stolen."
+    hikaru "My theory is... That [persistent.player_name] may be {i}possessed{/i} by Yamakui. Or worse, [persistent.player_name]'s body has been stolen."
 
     show yam annoyed with dissolve
     yamato "Tch... fuck... Don’t say it like that, Hikaru."
@@ -130,7 +129,7 @@ label truend:
     shiori "But... I don't want to stop it."
 
     show yam surprised with dissolve
-    n "{cps=14}What? Did she just--?!{/cps}"
+    n "{cps=14}What? Did she just–?!{/cps}"
 
     show yam angry with dissolve
     yamato "...Oi. The hell did ya just say, Shiori-chan?"
@@ -260,7 +259,7 @@ label truend:
 
     with fade
 
-    n "Hikaru and Yamato returns again to the Shrine as Shiori is absentmindedly sweeping dirt."
+    n "Hikaru and Yamato return again to the Shrine as Shiori is absentmindedly sweeping dirt."
 
     play music "Hope2.mp3"
 
@@ -289,20 +288,20 @@ label truend:
         yzoom 1.0
 
     show hik worried with dissolve
-    hikaru "Shiori-chan--"
+    hikaru "Shiori-chan–"
 
     show shi annoyed with dissolve
     shiori "What now?"
 
     show hik sad with dissolve
     hikaru "We were all friends, weren't we? The four of us."
-    hikaru "{i}Don't you forget all about{/i} [persistent.player_name]?"
+    hikaru "{i}Didn't you forget all about{/i} [persistent.player_name]?"
 
     n "Hikaru hands her a letter written by... [persistent.player_name]. You.{w} Me?"
 
     show hik sad with dissolve
-    hikaru "Remember these letters and {i}whishes{/i} we used to write down when we were kids?"
-    hikaru "And this scarf--"
+    hikaru "Remember these letters and {i}wishes{/i} we used to write down when we were kids?"
+    hikaru "And this scarf–"
 
     show darken
     $ decrease_music_volume(0.2)
@@ -310,7 +309,7 @@ label truend:
 
     n "The red scarf...."
     n "{cps=13}I remember that...{/cps}"
-    n "I was wearing that, when I--"
+    n "I was wearing that, when I–"
 
     pause 1
     n "{cps=10}Wait.{/cps}"
@@ -336,7 +335,7 @@ label truend:
     yamato "Who the hell protected ya from bullies, huh? Who stood between ya an’ the bigger kids? It was [persistent.player_name]!"
 
     show hik worried with dissolve
-    hikaru "{i}Our friend who never hurt anyone, Shiori-chan. Please, just try to remember.{/i}"
+    hikaru "{i}Our friend who never hurts anyone, Shiori-chan. Please, just try to remember.{/i}"
 
     show yam serious with dissolve
     yamato "Yeah. That bastard didn’t deserve to die!"
@@ -347,7 +346,7 @@ label truend:
     n "{i}Shiori’s lips tremble. Her eyes dart between them. For once... she is speechless.{/i}"
 
     show shi surprised with dissolve
-    shiori "I--"
+    shiori "I–"
 
     show hik serious with dissolve
     hikaru "Please. Shiori-chan. Don’t let your feelings blind you."
@@ -400,14 +399,14 @@ label truend:
         xzoom 1.0
         yzoom 1.0
 
-    n "Later, Shiori brings them to where old documents reside."
+    n "Later, Shiori brings them to where the old scrolls reside."
 
     show shi worried with dissolve
     shiori "I think we can start from these if we want to find clues about the Yamakui."
     shiori "I was looking into the Yamakui but someone... {w=0.1}tried to stop me from it."
 
     show yam annoyed with dissolve
-    yamato "Tch. Half of it’s rotted. What’s it say?"
+    yamato "Tch. Half of it’s rotten. What’s it say?"
 
     show shi sad with dissolve
     shiori "Something about... {w}famine, and long winters when nothing grew.'"
@@ -417,20 +416,20 @@ label truend:
     hikaru "Did they stay in the village?"
 
     show shi worried with dissolve
-    shiori "I don't think so... It says 'offerings made at the altar, so our children would not starve.'"
+    shiori "I don't think so... It says 'offerings' made at the altar, so our children would not starve.'"
 
     show yam angry with dissolve
     yamato "Damned sacrifices."
 
     show shi surprised with dissolve
     shiori "There’s more. Look here. The priests wrote... {w}'Kami-sama grew silent after.'"
-    shiori "'We are forever condemned from their light'"
+    shiori "'We are forever condemned from their light.'"
 
     show hik sad with dissolve
-    hikaru "{i}The kami-sama turned their face away.{/i}"
+    hikaru "{i}The kami-sama turned their faces away.{/i}"
 
     show shi normal with dissolve
-    shiori "'And a new god rose from the mountains'"
+    shiori "'And a new god rose from the mountains.'"
 
     show hik shocked with dissolve
     hikaru "{b}...Yamakui.{/b}"
@@ -439,7 +438,7 @@ label truend:
     shiori "That was all I managed to find, I'll look into it more..."
 
     show yam annoyed with dissolve
-    yamato "Tch... So all this is just a punishment for what our damned ancestors did?"
+    yamato "Tch... So all this is just a punishment for what, our damned ancestors did?"
 
     show shi sad with dissolve
     shiori "..."
@@ -449,7 +448,7 @@ label truend:
     hikaru "Yamato, we'll try to find a way out of the village."
 
     show yam surprised with dissolve
-    yamato "Huh? But there ain't a way out, the elders said--"
+    yamato "Huh? But there ain't a way out, the elders said–"
 
     show hik serious with dissolve
     hikaru "My father went out to look for it. And even though no one knew what happened to him..."
@@ -493,13 +492,13 @@ label mist_fall:
         yzoom 1.0
 
     n "The mountain path should’ve led out. But the farther they walk, the whiter the air becomes."
-    n "A thick mist is swallowing everything. Rocks vanish, trees blur, even sound feels muffled and strange."
+    n "A thick mist is swallowing everything. Rocks vanish, trees blur, even sounds feel muffled and strange."
 
     show yam surprised with dissolve
     yamato "{sc=1}Oi...{/sc} this ain’t right. I walked this trail before. Where the hell’s the gate?"
 
     show hik worried  with dissolve
-    hikaru "It should be here. The road leads straight--{w=0.1}"
+    hikaru "It should be here. The road leads straight–{w=0.1}"
 
     n "Their words cut off as the mist parts, just for a second. A drop rumbles beneath Hikaru’s feet."
 
@@ -516,10 +515,10 @@ label mist_fall:
         xzoom 1.0
         yzoom 1.0
         linear 0.2 yoffset 400
-    hikaru "{sc=1}Ah--!{/sc}{w=0.1}"
+    hikaru "{sc=1}Ah–!{/sc}{w=0.1}"
     with vpunch
 
-    n "They stumble, tries to flap their wings but it seems like the air is dragging Hikaru down."
+    n "They stumble, triy to flap their wings but it seems like the air is dragging Hikaru down."
 
     show yam shocked with sshake:
         zoom 0.29
@@ -536,7 +535,7 @@ label mist_fall:
     n "Yamato lunges, arm hooking around Hikaru’s waist. He manage to save Hikaru, barely."
 
     show yam rage with dissolve
-    yamato "Tch--hold on, {sc=1}dammit!!{/sc} Don’t ya dare--"
+    yamato "Tch–hold on, {sc=1}dammit!!{/sc} Don’t ya dare–"
 
     hikaru "{i}My wings... What's going on!?{/i}{w=0.1}"
 
@@ -562,7 +561,7 @@ label mist_fall:
         xzoom 1.0
         yzoom 1.0
         linear 0.5 yoffset 50
-    n "Hikaru claws back onto solid ground, as yamato pulls Hikaru back above."
+    n "Hikaru claws back onto solid ground, as Yamato pulls Hikaru back above."
 
     show hik sad  with dissolve
     hikaru "Haa... {w=0.1}Haa..."
@@ -622,7 +621,7 @@ label mist_fall:
     shiori "I didn't find much, but I think this part explains more."
     shiori "So this part talks about 'The bargain for food that never failed and wombs that never emptied.'"
 
-    hikaru "That is how the fields flourished... how the children were always strong. Even thought the Yamakui is picking off the villagers one by one."
+    hikaru "That is how the fields flourished... how the children were always strong. Even though the Yamakui is picking off the villagers one by one."
 
     show shi sad with dissolve
     shiori "That's because it's the price."
@@ -635,7 +634,7 @@ label mist_fall:
     yamato "No wonder the elders told us never to leave. They knew. They fuckin’ knew."
 
     show shi annoyed with dissolve
-    shiori "It is considered an act so blasphemous, to pray to a god other than Kami-sama."
+    shiori "It is considered an act so blasphemous, to pray to a god other than the Kami-sama."
 
     show yam annoyed with dissolve
     yamato "Tch. That all ya found, Shiori?"
@@ -671,10 +670,10 @@ label mist_fall:
     shiori "{i}[persistent.player_name] was never supposed to win.{/i}"
 
     show hik shocked with dissolve
-    hikaru "{b}No way--!{/b}"
+    hikaru "{b}No way–!{/b}"
 
     show yam rage with dissolve
-    yamato "{sc=1}Damn it all t' hell!{/sc} I'm gonna get that damned old man--"
+    yamato "{sc=1}Damn it all t' hell!{/sc} I'm gonna get that damned old man–"
 
     show hik serious with dissolve
     hikaru "Yamato, stop. All we need to do now is to find the blade."
@@ -692,14 +691,14 @@ label mist_fall:
     shiori "Am I gonna be okay?"
 
     show hik normal with dissolve
-    hikaru "The red moon's still in a few days, as long as you stay in public, you'd be fine."
+    hikaru "The red moon's still in a few days, as long as you stay in public, you'll be fine."
     hikaru "All you need to do is use the villagers to distract them."
 
     show shi worried with dissolve
     shiori "...{w=0.1}Okay."
 
     show hik serious with dissolve
-    hikaru "Then it is settled. Yamato-kun and I go to the mountain. Shiori-chan holds the village."
+    hikaru "Then it is settled. Yamato-kun and I go to the mountain. Shiori-chan holds back the village."
 
     show shi sad with dissolve
     shiori "{i}Don’t die on me before we get the chance, you two.{/i}"
@@ -752,10 +751,10 @@ label body_discovery:
     n "The stench of {color=#ff002e}sweet rot{/color} fills their lungs until both gag.{w=0.3}"
 
     show yam panic at shakey
-    yamato "{sc=7}Ghh--fuck--!{/sc}"
+    yamato "{sc=7}Ghh–fuck–!{/sc}"
 
     show hik worried with dissolve
-    hikaru "Cover your nose--!"
+    hikaru "Cover your nose–!"
 
     n "But it doesn’t help, as the air itself {i}tastes{/i} spoiled."
     n "They walk deeper and deeper into heaps of flesh {glitch=12}shifting as if alive{/glitch}."
@@ -763,27 +762,27 @@ label body_discovery:
     show yam serious with dissolve
     yamato "The blade’s here. Has t’be. Somewhere in this godforsaken filth."
     show hik worried with dissolve
-    hikaru "Can you still--?"
+    hikaru "Can you still–?"
     show yam annoyed with dissolve
     yamato "Yeah, yeah, ya worry about yerself."
 
     n "They crouch, hands trembling as they dig through meat and viscera, shoving aside organs and whatever was left of Yamakui's meals.{w=0.2}"
 
-    yamato "Urk, how come that thing lives in a place like this--"
+    yamato "Urk, how come that thing lives in a place like this–"
 
     show hik surprised with dissolve
-    hikaru "{cps=18}Hold on--{/cps}"
+    hikaru "{cps=18}Hold on–{/cps}"
     show hik surprised with vpunch
-    hikaru "There--!"
+    hikaru "There–!"
 
     n "Something glints under piles and piles of flesh, but then blood sloughs down in {sc=4}wet waves{/sc}, swallowing it."
 
     show yam panic with dissolve
-    yamato "{b}Goddammit--keep diggin’!{/b}"
+    yamato "{b}Goddammit–keep diggin’!{/b}"
 
     show hik shocked with dissolve
     hikaru "...!"
-    hikaru "{glitch=16}That's--{/glitch}"
+    hikaru "{glitch=16}That's–{/glitch}"
     hikaru "{color=#ff002e}NO...!{/color}"
 
 
@@ -808,10 +807,10 @@ label body_discovery:
     hide gore
     with dissolve
 
-    hikaru "You said you'd come back. You promised me--"
+    hikaru "You said you'd come back. You promised me–"
 
     show yam sad with dissolve
-    yamato "Th'.. {w=0.1}Th' fucker really took away [persistent.player_name]'s skin by some batshit crazy magic..."
+    yamato "Th'.. {w=0.1}Th' fucker really took away [persistent.player_name]'s skin through some batshit crazy magic..."
 
     show hik madcry with dissolve
     hikaru "You didn’t deserve this...! You were... {w=0.1}You were... {w=0.1}the only one who trusted me..."
@@ -968,7 +967,7 @@ label confrontation:
 
     yamato "Get lost, Oni!"
 
-    yamato "{sc=3}Haaaaaaaaaaaaaaaaa--!{/sc}"
+    yamato "{sc=3}Haaaaaaaaaaaaaaaaa–!{/sc}"
 
     n "Yamato drives the broken Oni Slayer blade straight through your chest. You don't even try to dodge."
 
@@ -977,7 +976,7 @@ label confrontation:
     n2 "{b}FiNaLlY.{/b}"
 
     n2 "I cOuLd'vE mOvEd. cOuLd’vE tEaR yOu ApArT.{w=0.2}"
-    n2 "bUt--{w=0.2}"
+    n2 "bUt–{w=0.2}"
     n2 "{i}I dOn'T wAnNa.{/i}{w=0.2}"
 
     n2 "I'M tIrEd."
@@ -989,7 +988,7 @@ label confrontation:
     n2 "nO mOrE yOu."
     n2 "nO mOrE Me."
 
-    n2 "bUt--"
+    n2 "bUt–"
     n2 "HeY."
 
     n2 "It WaS fUn."
@@ -1155,7 +1154,7 @@ label confrontation:
     hikaru "How about you two?"
 
     show yam serious with dissolve
-    yamato "Tche, someone needs to protect the damn village."
+    yamato "Tch, someone needs to protect the damn village."
 
     show shi happyblush with dissolve
     shiori "And I'd have to be here so Yamato doesn't stab himself~"
@@ -1260,5 +1259,7 @@ label confrontation:
     $ persistent.loop2_hikaru_ghost5 = False
 
     $ persistent.seen_true_end = True
+
+    ## My arms are crying bye
 
     return

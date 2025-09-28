@@ -83,7 +83,7 @@ label loop1_shiori_mandatory1:
 
     shiori "It’s strange how different things feel now."
 
-    shiori "When you're gone, Yamato-kun was yelling about how you’d get yourself killed. Hikaru-san wouldn’t stop writing charms for your safety."
+    shiori "When you were gone, Yamato-kun was yelling about how you’d get yourself killed. Hikaru-san wouldn’t stop writing charms for your safety."
 
     shiori "But now? They're being weird with you."
 
@@ -100,7 +100,7 @@ label loop1_shiori_mandatory1:
 
     shiori "And you came back. That’s all that matters."
 
-    MC happy "Of course I do. I promised you, didn’t I?"
+    MC happy "Of course I did. I promised you, didn’t I?"
 
     n "{i}Did you?{/i}"
 
@@ -144,7 +144,7 @@ label loop1_shiori_mandatory1:
     $ decrease_music_volume(0.2)
     $ renpy.block_rollback()
 
-    n "{size=*0.95}...Or maybe {atl=-#,#,fade_in_text~0.5}not all the memories are yours.{/atl}{/size}"
+    n "{size=*0.95}...Or maybe {atl=-#,#,fade_in_text~0.5}not all these memories are yours.{/atl}{/size}"
 
     n "Maybe it's fine, as long as Shiori remembers the same thing."
 
@@ -185,7 +185,7 @@ label loop1_shiori_mandatory2:
 
     n "People say the gods watch this place most closely when the moon turns red."
 
-    n "They say it’s the last place the Yamakui dares enter."
+    n "They say it’s the last place the Yamakui dares to enter."
 
     show shi normal:
         zoom 0.5
@@ -251,7 +251,7 @@ label loop1_shiori_mandatory2:
 
     n "Who was taken last? {w=0.2}A child? {w=0.2}A friend? {w=0.5}{i}{sc=1}Your parents?{/sc}{/i}"
 
-    n "Because you came back home and there's no parents at home. {w=0.2}{cps=52}Did they get eaten, too?{/cps}"
+    n "Because you came back home and there are no parents at home. {w=0.2}{cps=52}Did they get eaten, too?{/cps}"
 
     $ restore_music_volume()
 
@@ -299,14 +299,14 @@ label loop1_shiori_mandatory2:
 
     MC nervous "Shiori?"
 
-    n "Suddenly, the smell of insence makes you want to gag."
+    n "Suddenly, the smell of incense makes you want to gag."
 
     show shi yan
     with dissolve
 
     shiori "They’re for the... {w}ones who are gone, like I said."
 
-    n "She says nothing else, and you decide it's not worth pressing."
+    n "She says nothing else, and you decide it's not worth pressing further."
 
     stop music fadeout 0.3
 
@@ -413,9 +413,9 @@ label loop1_shiori_mandatory3:
         zoom 0.5
     play music "Dark.mp3"
 
-    n "This morning, you come into the smell of rot lingering on the shrine."
+    n "This morning, you come in to the smell of rot lingering in the shrine."
 
-    n "It reminds you to the smell of the mountains when you left Yamakui's lair."
+    n "It reminds you of the smell of the mountains when you left Yamakui's lair."
 
     scene shrine day:
         zoom 0.5
@@ -469,16 +469,16 @@ label loop1_shiori_mandatory3:
 
     shiori "Mm. It should be."
 
-    MC annoyed "You butcher this yourself?"
+    MC annoyed "You butchered this yourself?"
 
     show shi yansm
     with dissolve
 
-    shiori "Ara~ You think little ol' me have the strength to do it?"
+    shiori "Ara~ You think little ol' me has the strength to do it?"
 
     n "There's no right answer to that."
 
-    n "She lays out four flat plates.  The red liquid seeps out and follows the grain."
+    n "She lays out four flat plates. The red liquid seeps out and follows the grain."
 
     show shi happy:
         zoom 0.5
@@ -492,7 +492,7 @@ label loop1_shiori_mandatory3:
 
     MC normal "What are the two other plates for?"
 
-    shiori "It's for Yamato and Hikaru! But, ummm.. They said they can't come so might as well be just the two of us."
+    shiori "It's for Yamato and Hikaru! But, ummm.. They said they can't come, so might as well be just the two of us."
 
 
     show darken2
@@ -565,7 +565,7 @@ label chew_loop2:
         "Chew":
             show screen red_squelch_overlay
             play sound "sfx/splurt.mp3"
-            n "You keep chewing. It stretches and shreds coil between your teeth."
+            n "You keep chewing. It stretches and the shreds coil between your teeth."
             hide screen red_squelch_overlay
             n "There’s something rubbery stuck behind your molars. You keep working it, gagging slightly."
             jump chew_loop2
@@ -616,20 +616,20 @@ label gulgulp:
     show darken2
     with dissolve
 
-    n "You lift another even though Shiori doesn't ask you to. You don’t even attempt to chew on this one and immediately swallows."
+    n "You lift another, even though Shiori doesn't ask you to. You don’t even attempt to chew on this one and immediately swallow."
 
     play sound "sfx/swallow.mp3"
 
     n "It slides down with a thick gulp."
 
-    n "Shiori watches you eating, staring. Her mouth still open, with a strand of red hanging from her lip."
+    n "Shiori watches you eating, staring. Her mouth still open, with a strand of red hanging from her lips."
 
     n "She wipes it with blood under her fingernails."
 
     hide darken2
     with dissolve
 
-    n "There's almost nothing left on the bowl."
+    n "There's almost nothing left in the bowl."
 
     stop music fadeout 1.0
 
@@ -672,7 +672,7 @@ label loop1_shiori_mandatory4:
         easeout 0.03 yoffset 80
         easein 0.03 yoffset 80
     with vpunch
-    MC shocked "--!?"
+    MC shocked "–!?"
 
     show shi yansm:
         zoom 0.5
@@ -697,7 +697,7 @@ label loop1_shiori_mandatory4:
 
     shiori "Did I startle you, [persistent.player_name]-sama?"
 
-    MC nervous "Y-yeah, kinda! You didn’t give me any warning--"
+    MC nervous "Y-yeah, kinda! You didn’t give me any warning–"
 
     shiori "Hikaru said ceremonial bells drive evil spirits away."
 
@@ -713,7 +713,7 @@ label loop1_shiori_mandatory4:
 
     n "She raises the bell again."
 
-    MC panic "Wait, maybe we don’t have to--"
+    MC panic "Wait, maybe we don’t have to–"
 
     show shi yansm
     with dissolve
@@ -770,7 +770,7 @@ label loop1_shiori_mandatory4:
 
 
 
-    MC hurt "{cps=8}{sc=6}{color=#ff0000}Ghh--{/color}{/sc}{/cps}"
+    MC hurt "{cps=8}{sc=6}{color=#ff0000}Ghh–{/color}{/sc}{/cps}"
 
     with sshake
 
@@ -790,7 +790,7 @@ label loop1_shiori_mandatory4:
 
 
 
-    MC yan "{cps=7}{alpha=0.7}{i}Shiori--!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
+    MC yan "{cps=7}{alpha=0.7}{i}Shiori–!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
 
     hide expression Text
     hide expression Text
@@ -832,7 +832,7 @@ label loop1_shiori_mandatory4:
 
     shiori "You sure? You look like you saw something just now, [persistent.player_name]-sama."
 
-    MC nervous "I'm--fine."
+    MC nervous "I'm–fine."
 
     shiori "Mm~ I’m glad."
 
@@ -956,7 +956,7 @@ label loop1_shiori_mandatory5:
 
     n "She’s already sitting there when you arrive."
 
-    n "The sakura tree hasn’t bloomed in years."
+    n "The cherry blossom tree hasn’t bloomed in years."
 
     n "You used to say it would, one day."
 
@@ -972,7 +972,7 @@ label loop1_shiori_mandatory5:
 
     menu:
         "We all cried.":
-            MC happy "We all cried because you all think I wouldn't make it."
+            MC happy "We all cried because you all thought I wouldn't make it."
             shiori "Mhm~ We did."
         "We said a prayer.":
             MC normal "We all said a prayer for my success. I think you were the one who suggested it."
@@ -984,7 +984,7 @@ label loop1_shiori_mandatory5:
 
     menu:
         "He wanted to go too":
-            MC smugcl "He wanted to go too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I was gone."
+            MC smugcl "He wanted to go too, didn't he? But I told him not to, 'cause no one's gonna protect the village when I'm gone."
             shiori "Yeah~"
         "He was crying":
             MC happy "The stupid oaf actually cried because he was so sure I was gonna die, right?"
@@ -1029,17 +1029,17 @@ label loop1_shiori_mandatory5:
 
     shiori "{cps=22}We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you."
 
-    n "Did you mixed your memories up? What's happening?"
+    n "Did you mix your memories up? What's happening?"
 
     play music "sfx/forest night.wav"
 
-    MC panic "{sc=1}N-no! That’s not-- I  said goodbye to you, at least... Right, Shiori?{/sc}"
+    MC panic "{sc=1}N-no! That’s not– I  said goodbye to you, at least... Right, Shiori?{/sc}"
 
     shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}"
 
     shiori "Don't try to make things up."
 
-    MC sad "{cps=59}{sc=3}I-- I just--{/sc}"
+    MC sad "{cps=59}{sc=3}I– I just–{/sc}"
 
     n "Guess you can't get yourself out of this situation."
 
@@ -1108,7 +1108,7 @@ label loop1_shiori_mandatory5:
         zoom 0.5
     with sshake
 
-    n "You slam the door on your house and scrambles towards the armor you brought back."
+    n "You slam the door on your house and scramble towards the armor you brought back."
 
     n "It’s still here, right where you left it."
 
@@ -1116,9 +1116,9 @@ label loop1_shiori_mandatory5:
 
     MC yan "{b}I killed it.{/b}"
 
-    MC yan "{color=#ff3333}I killed that kuso-yarou up there.{/color}"
+    MC yan "{color=#ff3333}I killed that piece of shit up there.{/color}"
 
-    MC mad "{size=+4}{sc=5}I brought this goddamn anmor{b} BACK.{/b}{/sc}{/size}"
+    MC mad "{size=+4}{sc=5}I brought this goddamn armor{b} BACK.{/b}{/sc}{/size}"
 
     play sound "sfx/kickmetal.mp3"
 
@@ -1136,7 +1136,7 @@ label loop1_shiori_mandatory5:
 
     MC yansm "{sc=3}You’ve been here this whole time.{/sc}"
 
-    MC yan "Narrating every step, whispering like a kami stuck in my spine."
+    MC yan "Narrating every step, whispering like a kami stuck in my head."
 
     MC yan "{size=+2}But now? Now you shut up?{/size}"
 

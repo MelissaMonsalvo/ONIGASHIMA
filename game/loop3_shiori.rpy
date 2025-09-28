@@ -114,7 +114,7 @@ label loop3_shiori:
     with flashred
     pause 0.3
 
-    n2 "tHe dAyS mElTs AwAY."
+    n2 "tHe dAyS mElT AwAY."
 
     scene moon3
     play sound "sfx/heartbeat.mp3"
@@ -167,7 +167,7 @@ label loop3_shiori:
 
     n "Why didn't I realize sooner?"
 
-    n "That Shiori was always in love with--{nw}"
+    n "That Shiori was always in love with–{nw}"
 
     stop music
 
@@ -200,7 +200,7 @@ label loop3_shiori:
 
     n2 "It’s tImE."
 
-    n2 "tHe mOon bUrNs dOwN to mE. {w} mE. {w} mE. {w} mEeEEEeeEe."
+    n2 "tHe mOon bUrNs dOwN oN mE. {w} mE. {w} mE. {w} mEeEEEeeEe."
 
     scene shrine night:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -507,7 +507,7 @@ label loop3_shiori:
 
     with vpunch
 
-    shiori "It wasn’t because you--{w}{i}cared?{/i}"
+    shiori "It wasn’t because you–{w}{i}cared?{/i}"
 
     show shi angry:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
@@ -526,7 +526,7 @@ label loop3_shiori:
 
         pause 0.07
 
-    shiori "{sc=7}I thought--I thought--{/sc}"
+    shiori "{sc=7}I thought–I thought–{/sc}"
 
     shiori "{size=+7}YAMAKUI!!{/size}"
 
@@ -579,7 +579,7 @@ label loop3_shiori:
 
     scene black
 
-    shiori "{size=+5}NO--{w}WAIT--{w=0.3}I--{/size}"
+    shiori "{size=+5}NO–{w}WAIT–{w=0.3}I–{/size}"
 
     show darken2
     with flashred
@@ -600,7 +600,7 @@ label loop3_shiori:
     hide blood
     with dissolve
 
-    n2 "Fsshhhkkhhh--"
+    n2 "Fsshhhkkhhh–"
 
     n2 "GglGGhhkkk... {w}Krrsshhhhh..."
 

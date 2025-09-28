@@ -27,11 +27,11 @@ label loop2_yamato:
 
     n "You can feel the voices crawling up your spine... Someone praying at the shrine."
 
-    n "Not to the kami-sama, but to something more anicent and sinister.. Blasphemous at it's core."
+    n "Not to the kami-sama, but to something more ancient and sinister.. Blasphemous at it's core."
 
     n "And it draws you right to it, your blood feeling right at home."
 
-    n "You're familliar with the voice. Of course it's Yamato."
+    n "You're familiar with the voice. Of course it's Yamato."
 
 
     show yam eldritch:
@@ -59,7 +59,7 @@ label loop2_yamato:
 
 
 
-    n "He’s... bent forward in a wrong angle. Spine curled like a beast crawling toward a scent."
+    n "He’s... bent forward at a wrong angle. Spine curled like a beast crawling toward a scent."
 
     n "He's clutching his stomach."
 
@@ -353,13 +353,13 @@ label loop2_yamato:
 
         yamato "Tch... Look at ya screamin’ like it matters now."
 
-        yamato "{cps=50}Ya people always looked at [persistent.player_name] like they was gonna save us, but no, they returned {i}a monster.{/i}{/cps}"
+        yamato "{cps=50}Ya people always looked at [persistent.player_name] like they were gonna save us, but no, they returned as {i}a monster.{/i}{/cps}"
 
         hikaru "What!?"
 
         MC smug2 "He's gone insane because of his jealousy."
 
-        hikaru "Yamato, this isn’t you {i}at all--{/i}"
+        hikaru "Yamato, this isn’t you {i}at all–{/i}"
 
         show yam eldritch1:
             zoom 0.3
@@ -381,7 +381,7 @@ label loop2_yamato:
 
         yamato "I trained twice as {i}hard{/i}. I've bled myself {i}stupid{/i} for this place. And what do I get?"
 
-        hikaru "So you--"
+        hikaru "So you–"
 
         hikaru "You thought summoning something worse was the answer?"
 
@@ -409,7 +409,7 @@ label loop2_yamato:
 
         yamato "{sc=2}Th' damn Yamakui is still alive, so I'll have the power to kill it!{/sc}"
 
-        hikaru "Yamato, please--"
+        hikaru "Yamato, please–"
 
         play sound "sfx/quake.mp3"
         with sshake
@@ -443,7 +443,7 @@ label loop2_yamato:
 
 
 
-        hikaru "Yamato--!!"
+        hikaru "Yamato–!!"
 
     elif persistent.hikaru_dies:
 
@@ -639,11 +639,11 @@ label loop2_yamato:
         pause 0.10
     play sound "sfx/glitch.wav"
 
-    yamato "{sc=6}T-tonight--{w=0.2}t--{w=0.2}tonight--{/sc}"
+    yamato "{sc=6}T-tonight–{w=0.2}t–{w=0.2}tonight–{/sc}"
 
     yamato "{glitch=8}...Red moon...{/glitch}"
 
-    yamato "{i}I will--{/i}"
+    yamato "{i}I will–{/i}"
     show yam glitched:
         zoom 0.4
         xalign 0.5
@@ -663,11 +663,11 @@ label loop2_yamato:
         pause 0.10
     play sound "sfx/glitch.wav"
 
-    yamato "Tear {w=0.2}you--"
+    yamato "Tear {w=0.2}you–"
 
-    yamato "Tear--"
+    yamato "Tear–"
 
-    yamato "{sc=7}{w=0.2}YOU--{/sc}"
+    yamato "{sc=7}{w=0.2}YOU–{/sc}"
 
     MC evil2 "Growl all you want, {i}mutt.{/i}"
     show yam glitched:
@@ -695,7 +695,7 @@ label loop2_yamato:
 
     yamato "{sc=6}K-k-k-k-KILL.{/sc}"
 
-    yamato "{sc=8}TONIGHT--{/sc}"
+    yamato "{sc=8}TONIGHT–{/sc}"
     show yam glitched:
         zoom 0.4
         xalign 0.5
@@ -715,9 +715,9 @@ label loop2_yamato:
         pause 0.10
     play sound "sfx/glitch.wav"
 
-    yamato "{size=+10}{color=#ff2200}{b}TONIIIIIIIIIIIIIIIIIIIIIGHT--{/b}{/color}{/size}"
+    yamato "{size=+10}{color=#ff2200}{b}TONIIIIIIIIIIIIIIIIIIIIIGHT–{/b}{/color}{/size}"
 
-    n "He lunges--"
+    n "He lunges–"
 
     show yam glitched:
         zoom 0.4
@@ -753,7 +753,7 @@ label loop2_yamato:
 
     n "{sc=2}His sword makes a screaming sound.{/sc}"
 
-    n "I’ve never heard metal scream.{w=0.2} I--I don’t know what that was."
+    n "I’ve never heard metal scream.{w=0.2} I–I don’t know what that was."
 
     yamato "{sc=2}Oni.{/sc}"
 
@@ -761,7 +761,7 @@ label loop2_yamato:
 
     n "That is no longer Yamato's voice anymore..."
 
-    n "No. Yamato, stop. Please--{w=0.1}just--{w=0.1}stop this--"
+    n "No. Yamato, stop. Please–{w=0.1}just–{w=0.1}stop this–"
 
     n "That’s not you talking!"
 
@@ -769,7 +769,7 @@ label loop2_yamato:
 
     yamato "The master of the earth has blessed me!"
 
-    n "Yamato raises his sword in an unexpected speed, and zig-zagged towards you."
+    n "Yamato raises his sword at an unexpected speed, and zig-zagged towards you."
 
     scene black
     play sound "sfx/screech.wav"
@@ -800,11 +800,11 @@ label loop2_yamato:
 
     n "Yamato used to spar with me under this same moonlight."
 
-    n "We used to laugh. He used to swear when I tackle him down."
+    n "We used to laugh. He used to swear when I tackled him down."
 
-    n "Now he’s... he’s--"
+    n "Now he’s... he’s–"
 
-    yamato "{glitch=12}ThE ReD MoON wiLL be YoUR FuNeRAl--{/glitch}"
+    yamato "{glitch=12}ThE ReD MoON wiLL be YoUR FuNeRAl–{/glitch}"
 
     # Optional: Play sound effects in sync
     scene black
@@ -823,11 +823,11 @@ label loop2_yamato:
     $ renpy.pause(0.1, hard=True)
     show darken2
 
-    n "You block, parry, twirl--"
+    n "You block, parry, twirl–"
 
     n "The blade in your hands splits Yamato’s in two, but it was only an afterimage."
 
-    n2 "{i}Still too slow--!{/i}"
+    n2 "{i}Still too slow–!{/i}"
 
     show yam glitched:
         zoom 0.23
@@ -850,9 +850,9 @@ label loop2_yamato:
         linear 0.1 zoom 1.3
     with sshake
 
-    yamato "...Nnn--!"
+    yamato "...Nnn–!"
 
-    n "He retches,{w=0.2} out comes string of black, twitching, writhing things."
+    n "He retches,{w=0.2} out come string of black, twitching, writhing things."
 
     show yam glitched:
         zoom 0.4
@@ -873,9 +873,9 @@ label loop2_yamato:
         pause 0.10
     play sound "sfx/glitch.wav"
 
-    yamato "{sc=6}Still--still ain’t done--!{/sc}"
+    yamato "{sc=6}Still–still ain’t done–!{/sc}"
 
-    yamato "I’ll break ya in pieces. One piece for the friend I can't remember, and another for [persistent.player_name]--"
+    yamato "I’ll break ya in pieces. One piece for the friend I can't remember, and another for [persistent.player_name]–"
 
     play sound "sfx/fall.mp3"
 
@@ -931,7 +931,7 @@ label loop2_yamato:
 
     yamato "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Master of the earth,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6} awake,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6} awake...{/sc}{/color}{/size}{/cps}"
 
-    n "--No...."
+    n "–No...."
 
     $ renpy.pause(2.6)
 
@@ -1009,7 +1009,7 @@ label loop2_yamato:
     hide ch13
 
 
-    n "He keeps chanting it, again and again and again--"
+    n "He keeps chanting it, again and again and again–"
 
     n2 "{i}Ahhh, little mutt prays so sweetly.{/i}"
 
@@ -1136,7 +1136,7 @@ label loop2_yamato:
 
     MC evil2 "Your prayers, don't they go something like this?"
 
-    yamato "You’re... saying it backwards--"
+    yamato "You’re... saying it backwards–"
 
     MC evil2  "Yamato-kun..."
 
@@ -1159,7 +1159,7 @@ label loop2_yamato:
 
         pause 0.08
 
-    yamato "{sc=8}No--!{/sc}"
+    yamato "{sc=8}No–!{/sc}"
 
     show yam glitched:
         zoom 0.25
@@ -1178,7 +1178,7 @@ label loop2_yamato:
 
         pause 0.08
 
-    yamato "{sc=7}No--!{/sc}"
+    yamato "{sc=7}No–!{/sc}"
 
     show yam glitched:
         zoom 0.25
@@ -1200,13 +1200,13 @@ label loop2_yamato:
 
         pause 0.10
 
-    yamato "{glitch=8}NOOOOOOOO--!{/glitch}"
+    yamato "{glitch=8}NOOOOOOOO–!{/glitch}"
 
-    yamato "{sc=8}YOU’RE--{/sc}"
+    yamato "{sc=8}YOU’RE–{/sc}"
 
     MC evil2 "{size=+4}{color=#aa0000}Mountains. Earth. Same thing{/color}{/size}"
 
-    MC evil2 "The mountains belongs to me, Yamato."
+    MC evil2 "The mountains belong to me, Yamato."
 
     n "Yamato scrambles back immediately as realization slaps him in the face."
 
@@ -1230,7 +1230,7 @@ label loop2_yamato:
 
         pause 0.10
 
-    yamato "{sc=8}GHhhAAAGhghh--{/sc}"
+    yamato "{sc=8}GHhhAAAGhghh–{/sc}"
 
     MC evil2 "I gave you teeth, claws, power, eeeeverything you wanted."
 
@@ -1257,7 +1257,7 @@ label loop2_yamato:
 
         pause 0.08
 
-    yamato "{glitch=8}I WASN'T TRYING TO--{/glitch}"
+    yamato "{glitch=8}I WASN'T TRYING TO–{/glitch}"
 
     MC yansm2 "But you prayed to me."
 
@@ -1327,7 +1327,7 @@ label loop2_yamato:
 
     n "Your foot lands beside his cheek."
 
-    n "The one that used to sneer at you, call you dumbass, and taught you how to--"
+    n "The one that used to sneer at you, call you dumbass, and taught you how to–"
 
     n2 "No. He taught YOU."
 
@@ -1339,7 +1339,7 @@ label loop2_yamato:
     n2 "{cps=7}O N L Y   M E A T.{/cps}"
 
 
-    n "I--"
+    n "I–"
 
     play sound "sfx/swallow.mp3"
     with flashred
@@ -1351,30 +1351,30 @@ label loop2_yamato:
     play sound "sfx/tearflesh.wav"
     with flashred
 
-    n2 "Mmmmgh--hhhnnnHH."
+    n2 "Mmmmgh–hhhnnnHH."
 
     n "Please stop."
 
-    n "Stop. He's my friend. My friend. My best friend--"
+    n "Stop. He's my friend. My friend. My best friend–"
 
     n2 "A friend? Really?"
 
     n2 "He was so ready to tear this face apart."
 
-    n "I am going to puke, urk--"
+    n "I am going to puke, urk–"
 
     play sound "sfx/slurrp.mp3"
     $ renpy.pause(0.2)
 
     n2 "GLLLRHkkk... HHhhhehhehh..."
 
-    n "I can’t--I can’t watch this--"
+    n "I can’t–I can’t watch this–"
 
     n2 "LOOK. LOOK. {w=0.2}SEE."
 
-    n2 "There is no god to pray to."
+    n2 "There are no gods to pray to."
 
-    n2 "Your kami-sama has turned his back on you."
+    n2 "Your kami-sama have turned their backs on you."
 
     scene black
 
@@ -1398,8 +1398,6 @@ label loop2_yamato:
     $ persistent.yamato_dies = True
 
     $ persistent.loop2 = True
-
-    $ renpy.full_restart()
 
 
     return

@@ -16,7 +16,7 @@ label loop2_shiori:
 
     n "Night falls."
 
-    n "Shiori's head leans against your shoulder like it’s always belonged there."
+    n "Shiori's head leans against your shoulder like it always belonged there."
 
     shiori "...I used to do this, you know?"
 
@@ -59,11 +59,11 @@ label loop2_shiori:
 
     n "She lifts her head just a little and stares at you with a knowing smile."
 
-    n2 "Hee--{w=0.3}heeH--{w=0.3}hhhh--{w=0.3}KCH--KKHahHhahhh--"
+    n2 "Hee–{w=0.3}heeH–{w=0.3}hhhh–{w=0.3}KCH–KKHahHhahhh–"
 
     n "Your hand clenches,{w=0.2} you want to move, to push Shiori away,{w=0.3} but you can't."
 
-    n "If you do,{w=0.2} then--"
+    n "If you do,{w=0.2} then–"
 
     n2 "{b}{cps=2}CaaaAAANNN’T.{/cps}{/b}"
 
@@ -139,9 +139,9 @@ label loop2_shiori:
 
     play muzak "sfx/rain.mp3"
 
-    n "It's raining today, you're drenched in mud and dirt, and--"
+    n "It's raining today, you're drenched in mud and dirt, and–"
 
-    n "--is that blood? Whose blood?"
+    n "–is that blood? Whose blood?"
 
     scene shrine night with in_182:
         zoom 0.5
@@ -222,13 +222,13 @@ label loop2_shiori:
 
     n "That was {sc=2}mine.{/sc}"
 
-    n "My muscle, my skin, my--"
+    n "My muscle, my skin, my–"
 
     n "{glitch=10}...You're wearing my face...{/glitch}"
 
     n2 "{cps=20}YOU'RE GETTING IT NOW, LITTLE GHOST~{/cps}"
 
-    n2 "{cps=20}TOOK YOU LONG ENOUGH--{w=0.1}KkkkhHrrA--{w=01}Hahha--{/cps}"
+    n2 "{cps=20}TOOK YOU LONG ENOUGH–{w=0.1}KkkkhHrrA–{w=01}Hahha–{/cps}"
 
     n2 "{cps=20}Your face fit SO WELL.{/cps}"
 
@@ -254,7 +254,7 @@ label loop2_shiori:
 
     n "...."
 
-    n "{sc=7}NO--{/sc}{nw}"
+    n "{sc=7}NO–{/sc}{nw}"
 
     show shi yansm behind darken2
     with dissolve
@@ -263,7 +263,7 @@ label loop2_shiori:
 
     shiori "Let’s take this part too."
 
-    n "Shiori,{w=0.2} stop,{w=0.2} run.{w=0.2} Get away from me--!"
+    n "Shiori,{w=0.2} stop,{w=0.2} run.{w=0.2} Get away from me–!"
 
     play sound "sfx/stretch.mp3"
     with flashred
@@ -277,7 +277,7 @@ label loop2_shiori:
 
     MC normal3 "Mm."
 
-    n "I can't move,{w=0.2} my mouth won't say anything, but it's smiling--"
+    n "I can't move,{w=0.2} my mouth won't say anything, but it's smiling–"
 
     n "{cps=14}Why are you smiling!?{/cps}"
 
@@ -289,18 +289,18 @@ label loop2_shiori:
 
     n "{sc=3}I’m still ME!{/sc}"
 
-    n "{sc=3}I can still fight--! These are my muscles, so I can--{/sc}"
+    n "{sc=3}I can still fight–! These are my muscles, so I can–{/sc}"
 
     call screen multi_click_button(total_clicks=7, next_label="after_many_clicks")
     return
 
 label after_many_clicks:
 
-    n "I--"
+    n "I–"
 
-    n "I almost--"
+    n "I almost–"
 
-    n "{cps=13}I’m taking it back. This body--of mine--{/cps}"
+    n "{cps=13}I’m taking it back. This body–of mine–{/cps}"
 
     pause 1.0
 
@@ -314,7 +314,7 @@ label after_many_clicks:
 
     n2 "{cps=20}T O O L A T E{/cps}"
 
-    n "No--"
+    n "No–"
 
     show shi happyblush
     with dissolve
@@ -344,7 +344,7 @@ label after_many_clicks:
     with out_eye
 
 
-    n "She spreads her arm and hugged you--{w}me--{w}what--"
+    n "She spreads her arm and hugged you–{w}me–{w}what–"
 
     n "What is happening?"
 
@@ -396,11 +396,11 @@ label after_many_clicks:
 
     n2 "HUNGRY."
 
-    n2 "Hungryhungryhungry--"
+    n2 "Hungryhungryhungry–"
 
     n2 "I want it. {w=0.1}I want {i}her.{/i}"
 
-    n2 "GIVE IT TO ME--{nw}"
+    n2 "GIVE IT TO ME–{nw}"
 
     n "No, stop, stop putting those thoughts in my head!"
 
@@ -415,7 +415,7 @@ label after_many_clicks:
 
     n "{sc=1}Run, run away,{/sc} Shiori-chan...!"
 
-    n "Tonight is--"
+    n "Tonight is–"
 
     stop music
     stop muzak
@@ -440,7 +440,7 @@ label after_many_clicks:
 
     n "Ah, I passed out again..."
 
-    n "Did Shiori-chan knocked me out, or did you--"
+    n "Did Shiori-chan knock me out, or did you–"
     scene shrine night:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         zoom 0.5
@@ -466,7 +466,7 @@ label after_many_clicks:
 
     n2 "I smell it."
 
-    n2 "I smell it{w=0.1} I smell it{w=0.1} {sc=7}I SMELL IT--{/sc}"
+    n2 "I smell it{w=0.1} I smell it{w=0.1} {sc=7}I SMELL IT–{/sc}"
 
     n "She kneels in front of the altar and unfolds the cloth she's been carrying."
 
@@ -483,11 +483,11 @@ label after_many_clicks:
         yzoom -1.0
     with dissolve
 
-    n "{cps=13}Three tiny bones rest inside...{w=0.2} those look too small for an anima--{/cps}{nw}"
+    n "{cps=13}Three tiny bones rest inside...{w=0.2} those look too small for an animal–{/cps}{nw}"
 
     n "Oh....{w=0.3} no."
 
-    n "{glitch=8}Those are her--{/glitch}"
+    n "{glitch=8}Those are her–{/glitch}"
 
     hide frame2
     hide bone
@@ -505,20 +505,20 @@ label after_many_clicks:
 
     shiori "{cps=15}Bit by bit. Until we’re always together~{/cps}"
 
-    n "No. No, this isn’t--"
+    n "No. No, this isn’t–"
 
-    n "This isn't the Shiori-chan I know.{w=0.2} This can’t be--"
+    n "This isn't the Shiori-chan I know.{w=0.2} This can’t be–"
 
-    n "She--{w=0.2}she was always scared of blood--"
+    n "She–{w=0.2}she was always scared of blood–"
 
     show shi yan
     with dissolve
 
-    shiori "You won’t leave me, nee Yamakui-sama?"
+    shiori "You won’t leave me, nee, Yamakui-sama?"
 
     MC yansm3 "{w=0.2}...Never."
 
-    n "She doesn’t know what she’s saying--"
+    n "She doesn’t know what she’s saying–"
 
     shiori "Tonight, I want you to eat well."
 
@@ -527,9 +527,9 @@ label after_many_clicks:
 
     shiori "{glitch=1}So you stay strong~{/glitch}"
 
-    n "Shiori chan--"
+    n "Shiori-chan–"
 
-    MC yansm3 "--Thank you."
+    MC yansm3 "–Thank you."
 
     n "{i}What... What the hell is happening?{/i}"
 
@@ -537,7 +537,7 @@ label after_many_clicks:
 
     n "{sc=2}This isn’t the village I tried to save.{/sc}"
 
-    n "{cps=12}Am I going insane, or is everyone is insane from the start?{/cps}"
+    n "{cps=12}Am I going insane, or is everyone insane from the start?{/cps}"
 
     shiori "Yamakui-sama, everyone said that you're evil."
 
@@ -692,7 +692,5 @@ label after_many_clicks:
     $ persistent.loop2 = True
 
     ## at the end of the route shiori dies
-
-    $ renpy.full_restart()
 
     return

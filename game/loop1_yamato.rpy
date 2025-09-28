@@ -30,7 +30,7 @@ label loop1_yamato:
 
     n "The sun's almost gone, with a blood-colored light sinking into the current."
 
-    n "Yamato's hunched, a half-empty bottle of sake in his right arm. Eyes liddled, gaze unfocused, and a bit woozy."
+    n "Yamato's hunched, a half-empty bottle of sake in his right hand. Eyes liddled, gaze unfocused, and a bit woozy."
 
     MC surprised "...Drinking alone?"
 
@@ -64,7 +64,7 @@ label loop1_yamato:
 
     yamato "{w=0.2}Can't believe you forgot..."
 
-    MC sad "...Yamato--"
+    MC sad "...Yamato–"
 
     yamato "Tch... {w=0.1}We were, what, eleven?"
 
@@ -114,7 +114,7 @@ label loop1_yamato:
 
     yamato "So what, ya think we're weak? Think I can't take a hit?"
 
-    MC hurt "...I didn't mean to--"
+    MC hurt "...I didn't mean to–"
 
     show yam annoyedbl
     with dissolve
@@ -133,13 +133,13 @@ label loop1_yamato:
 
     yamato "Feels like I'm gonna open my mouth and someone else's voice is gonna crawl out."
 
-    MC "...Is that a figure of speech, or--"
+    MC "...Is that a figure of speech, or–"
 
     stop music fadeout 1.0
 
     n "He looks up, his eyes are glassy. You wonder if it's because he is drunk... or something else is shifting beneath those eyes."
 
-    yamato "Like th--{nw}"
+    yamato "Like th–{nw}"
 
     play sound "sfx/jumpscare.mp3"
 
@@ -202,19 +202,19 @@ label loop1_yamato:
 
     show darken2
     play music "sfx/forest night.wav"
-    yamato "{cps=180}Teeth in the dark, teeth in the mud, teeth in the spine--{w=0.2}gotta eat, gotta chew, gotta tear, gotta bite, gotta bite--{/cps}{nw}"
+    yamato "{cps=180}Teeth in the dark, teeth in the mud, teeth in the spine–{w=0.2}gotta eat, gotta chew, gotta tear, gotta bite, gotta bite–{/cps}{nw}"
 
-    yamato "{cps=150}Names {w=0.1}slide down the throat--{w=0.2}they don't come back up, {i}not once{/i} {w=0.15}names go soft and sweet in the belly, {k=2}rotten with memory{/k}--{/cps}{nw}"
+    yamato "{cps=150}Names {w=0.1}slide down the throat–{w=0.2}they don't come back up, {i}not once{/i} {w=0.15}names go soft and sweet in the belly, {k=2}rotten with memory{/k}–{/cps}{nw}"
 
-    yamato "{cps=140}Stomachs full of holes, empty, always {sc=4}empty{/sc}, {w=0.1}hunger's a song in my bones {w=0.2}can't stop can't stop can't--{/cps}{nw}"
+    yamato "{cps=140}Stomachs full of holes, empty, always {sc=4}empty{/sc}, {w=0.1}hunger's a song in my bones {w=0.2}can't stop can't stop can't–{/cps}{nw}"
 
-    yamato "{cps=100}Mouths in the walls, eyes in the roots, {sc=3}who are you when you're all eaten up?{/sc} {i}Who am I?{/i}--{/cps}{nw}"
+    yamato "{cps=100}Mouths in the walls, eyes in the roots, {sc=3}who are you when you're all eaten up?{/sc} {i}Who am I?{/i}–{/cps}{nw}"
 
-    MC surprised "Yamato--"
+    MC surprised "Yamato–"
 
-    yamato "{cps=100}Feed it, {w=0.1}feed it, {w=0.1}feed it, never full, never done--{k=2}starving starving always starving {/k}{/cps}{nw}"
+    yamato "{cps=100}Feed it, {w=0.1}feed it, {w=0.1}feed it, never full, never done–{k=2}starving starving always starving {/k}{/cps}{nw}"
 
-    yamato "{cps=50}mouthsinthewatermouthsinthetreesmouthsundertheskininthe{/cps}{cps=10}SKIIIIIIIN--{/cps}{nw}"
+    yamato "{cps=50}mouthsinthewatermouthsinthetreesmouthsundertheskininthe{/cps}{cps=10}SKIIIIIIIN–{/cps}{nw}"
 
 
     n "What is happening!? That doesn't sound like Yamato at all...!?"
@@ -257,7 +257,7 @@ label loop1_yamato:
 
     MC yansm "You're gonna be {glitch}okay.{/glitch}"
 
-    n "Why--"
+    n "Why–"
 
     n "Why are you so calm about this?"
 
@@ -321,7 +321,7 @@ label loop1_yamato:
 
     yamato "What? Ya lookin' funny. Grab a sword, will ya?"
 
-    n "...Wait. Where's the Yamato last night? Does he even remember what happened?"
+    n "...Wait. Where's the Yamato from last night? Does he even remember what happened?"
 
     MC nervous "Are you okay?"
 
@@ -330,7 +330,7 @@ label loop1_yamato:
 
     yamato "Haaa? What'd ya mean?"
 
-    MC nervous "{sc=1}It's just... You were drunk last night and I--{/sc}"
+    MC nervous "{sc=1}It's just... You were drunk last night and I–{/sc}"
 
     yamato "Tch, I don't get ya. Red Moon's tomorrow, remember? I ain't lettin' ya slack off."
 
@@ -378,14 +378,14 @@ label loop1_yamato:
     with hpunch
 
 
-    n "He swings lightly this time. A soft tap in your side instead of a full-blown strike, you feel he's holding back."
+    n "He swings lightly this time. A soft tap into your side instead of a full-blown strike, you feel that he's holding back."
 
     MC smugcl "You're going easy on me."
 
     show yam annoyedbl
     with dissolve
 
-    yamato "{sc=1}Wha--hell I am!{/sc} If ya think this is easy, yer gettin' soft.."
+    yamato "{sc=1}Wha–hell I am!{/sc} If ya think this is easy, yer gettin' soft.."
 
     n "He looks everywhere else but your eyes, focusing on your stance, a soft blush creeping to his ears."
 
@@ -426,11 +426,11 @@ label loop1_yamato:
 
     n "He swings again, you feel no weight on it as you parry."
 
-    n "This isn't the same Yamato who broke in front of you yesterday."
+    n "This isn't the same Yamato who broke down in front of you yesterday."
 
     n "What is going on? {k=-1}Which one's the real Yamato?{/k}"
 
-    n "And why don't that scare you...?"
+    n "And why doesn't that scare you...?"
 
     n "You're done sparring now. Yamato taps his side as you sit down."
 
@@ -461,7 +461,7 @@ label loop1_yamato:
 
     n "He brings it to the whetstone he used to keep at the dojo."
 
-    MC surprised "Oi, there's no need--"
+    MC surprised "Oi, there's no need–"
 
     yamato "Shut it. Just don't want the damn thing falling apart on ya mid-swing and me havin' to pick up yer pieces."
 
@@ -470,7 +470,7 @@ label loop1_yamato:
     show yam serious
     with dissolve
 
-    n "You say nothing else and listen to the whetstone whispers against steel."
+    n "You say nothing else and listen to the whetstone whisper against steel."
 
     play muzak "sfx/whetstone.mp3"
 
@@ -516,7 +516,7 @@ label loop1_yamato:
 
     n "Wait, you're not listening to the steel anymore are you."
 
-    n "That's--"
+    n "That's–"
 
     n "...Wait."
 
@@ -542,7 +542,7 @@ label loop1_yamato:
 
     n "He's talking now, rambling about something you don't care about."
 
-    yamato "--and the look on his face, swear to hell, like the noodles betrayed him--"
+    yamato "–and the look on his face, swear to hell, like the noodles betrayed him–"
 
     play sound "sfx/heartbeat.mp3"
 
@@ -623,7 +623,7 @@ label loop1_yamato:
 
     n "Then he pulls away with a jerk, as if he feels this is bordering on inappropriate."
 
-    yamato "See ya around--{w}Uh, {w=0.2}umm..."
+    yamato "See ya around–{w}Uh, {w=0.2}umm..."
 
     show yam annoyedbl
     with dissolve
@@ -719,7 +719,7 @@ label loop1_yamato:
         yalign 0.33
     with dissolve
 
-    n "He takes out two packs of bento."
+    n "He takes out two bento boxes."
 
     MC surprised "What's that?"
 
@@ -735,7 +735,7 @@ label loop1_yamato:
 
     yamato "Don't start smilin', dumbass. I ain't tryna marry you."
 
-    MC happycl "Actually, I haven't eaten--"
+    MC happycl "Actually, I haven't eaten–"
 
     n "Now that I think of it, you haven't eaten for DAYS, have you?"
 
@@ -747,9 +747,9 @@ label loop1_yamato:
     show yam annoyedbl
     with dissolve
 
-    yamato "Get some before ya go and ya die hungry or somethin'"
+    yamato "Get some before ya go and ya die hungry or somethin'."
 
-    n "He starts unwrapping the bento and shoves some to your hand."
+    n "He starts unwrapping the bento and shoves one into your hand."
 
     yamato "Half's yours. Don't drop it or I'll kick yer spine straight."
 
@@ -764,7 +764,7 @@ label loop1_yamato:
 
     n "It actually looks... {w=0.1}decent. MORE then decent, even."
 
-    MC nervous "{k=2}I-{w=0.1}Itadakimatsu...{/k}"
+    MC nervous "{k=2}I-{w=0.1}Itadakimasu...{/k}"
 
     scene black
 
@@ -775,9 +775,9 @@ label loop1_yamato:
 
     n "..."
 
-    n "The first bite sinks. Your teeth drag slow, {i}pulling{/i} instead of tearing."
+    n "The first bite sinks in. Your teeth drag slow, {i}pulling{/i} instead of tearing."
 
-    n "It feels {sc=3}gummy{/sc} in places, and {i}slippery{/i} in others. Binds to your molars like glue stretched thin."
+    n "It feels {sc=3}gummy{/sc} in places, and {i}slippery{/i} in others. Bound to your molars like glue stretched thin."
 
     n "The act of chewing itself spreads it across your tongue in layers. Tastes like...{w}damp cloth?{w}{sc=2} Sour milk?{/sc}"
 
@@ -817,7 +817,7 @@ label loop1_yamato:
 
     n "Yamato begins unwrapping his own bento and eats without a care in the world."
 
-    n "You don't understand how he manage to do that."
+    n "You don't understand how he manages to do that."
 
     n "You take another bite, the seaweed {sc=3}lashes{/sc} the inside of your cheek. A sharp crack, followed by a wet snap."
 
@@ -836,7 +836,7 @@ label loop1_yamato:
 
     yamato "Oi. 'S that bad?"
 
-    MC hurt "{sc=3}No, no--It's really good! I'm actually not...{w} really hungry.{/sc}"
+    MC hurt "{sc=3}No, no–It's really good! I'm actually not...{w} really hungry.{/sc}"
 
     n "You nod as your gut {i}sloshes{/i}. The taste lingers, you want to drink something to wash it off since swallowing doesn't clear it and chewing doesn't help."
 
@@ -867,7 +867,7 @@ label loop1_yamato:
 
     n "..."
 
-    n "No, that's not--"
+    n "No, that's not–"
 
     play sound "sfx/stomp.mp3"
     stop music
@@ -954,13 +954,13 @@ label loop1_yamato:
 
     play music "Night.mp3"
 
-    yamato "Tch... This kinda quiet's the worst."
+    yamato "Tch... This kinda quiet 's the worst."
 
-    MC normal "Why? Peaceful's bad now?"
+    MC normal "Why? Is peaceful bad now?"
 
     yamato "It's the waitin' I hate."
 
-    MC normal "Still think something's out here?"
+    MC normal "Still think something is out here?"
 
     yamato "Maybe."
 
@@ -979,7 +979,7 @@ label loop1_yamato:
 
     yamato "Say we live past tomorrow."
 
-    yamato "I was thinkin' maybe we--"
+    yamato "I was thinkin' maybe we–"
 
     yamato "{cps=10}Hnh...{/cps}"
 
@@ -990,7 +990,7 @@ label loop1_yamato:
 
     yamato "Tch. {w}Forget it."
 
-    MC happycl "--wanna go cherry blossom viewing?"
+    MC happycl "–wanna go cherry blossom viewing?"
 
     show yam annoyedbl
     with dissolve
@@ -1109,7 +1109,7 @@ label loop1_yamato:
 
     yamato "Couldn't get a damn sleep."
 
-    n "He leans on the frame, arms crossed, eyes tired. Clearly he had been thinking too much and didn't like any of it."
+    n "He leans against the frame, arms crossed, eyes tired. Clearly he had been thinking too much and didn't like any of it."
 
     yamato "That time of th' year again. Damn red moon and all."
 
@@ -1118,7 +1118,7 @@ label loop1_yamato:
     show yam sad
     with dissolve
 
-    yamato "{sc=2}Thought maybe...{/sc}"
+    yamato "{sc=2}Though maybe...{/sc}"
 
     pause(0.4)
 
@@ -1169,9 +1169,9 @@ label loop1_yamato:
 
     yamato "I ain't good at sayin' soft shit."
 
-    yamato "{k=1}I just mean--{/k}"
+    yamato "{k=1}I just mean–{/k}"
 
-    yamato "{i}--Guess I'd be glad.{/i}{w} If ya really killed the damn thing."
+    yamato "{i}–Guess I'd be glad.{/i}{w} If ya really killed the damn thing."
 
     MC happy "Same with me."
 
@@ -1214,11 +1214,11 @@ label loop1_yamato:
 
     yamato "{k=1}Look... I was a dick. Ya know it, I know it.{/k}"
 
-    yamato "Ya came back alive, did everything right. And I couldn't stop actin' like a jealous little shit."
+    yamato "Ya came back alive, did everything right. And I couldn't stop actin' like a jealous lil' shit."
 
     yamato "I kept barkin' at'cha 'cause I didn't know what else to do."
 
-    MC normal "Yeah, but I did forgot our promise. Understandable."
+    MC normal "Yeah, but I did forget our promise. Understandable."
 
     show yam ngh
     with dissolve
@@ -1230,7 +1230,7 @@ label loop1_yamato:
     show yam sad
     with dissolve
 
-    yamato "{w=0.2}So... all I can think is--if ya die out there and I never said any of this, I'd never forgive myself."
+    yamato "{w=0.2}So... all I can think is–if ya die out there and I never said any of this, I'd never forgive myself."
 
     show yam blush
     with dissolve
@@ -1324,9 +1324,9 @@ label loop1_yamato:
 
     n "You're shaking now, there's a crawling itch in the inside of your skin."
 
-    yamato "Look, if this ain't what you want--"
+    yamato "Look, if this ain't what you want–"
 
-    n "He waits, searching for an answer in your face. And yet you stay silent, never once shaking your head, so yamato takes it as a yes."
+    n "He waits, searching for an answer in your face. And yet you stay silent, never once shaking your head, so Yamato takes it as a yes."
 
     show yam kiss:
         zoom 0.5
@@ -1345,7 +1345,7 @@ label loop1_yamato:
 
     n "His breath brushes your cheek now, you're frozen in place."
 
-    n "You feel the world tilts again faster."
+    n "You feel the world tilt again faster."
 
     scene black
 
@@ -1364,11 +1364,11 @@ label loop1_yamato:
 
     play sound "sfx/heartbeat.mp3"
 
-    n "Right at that moment, {i}something underneath your skin wants out.{/i}"
+    n "Right at that moment, {i}something underneath your skin wants to get out.{/i}"
 
     n "You kiss him back because that's what happens next. That's the part you know."
 
-    n "{cps=14}That's what people does--{/cps}"
+    n "{cps=14}That's what people do–{/cps}"
 
     n "{sc=4}Wait, what? You really think that?{/sc}"
 
@@ -1378,16 +1378,16 @@ label loop1_yamato:
 
     n "... a {i}hunger{/i} that wasn't there before."
 
-    n "{cps=13}And Yamato chokes at you. You hear that gurgle caught in his throat.{/cps}"
+    n "{cps=13}And Yamato chokes on you. You hear that gurgle caught in his throat.{/cps}"
 
     play sound "sfx/struggle.mp3"
     with flashred
 
     scene black
 
-    yamato "{sc=5}--mmgh--!{/sc}"
+    yamato "{sc=5}–mmgh–!{/sc}"
 
-    n "But his hands are gripping your arms now, tightly, then thighter, then he starts clawing."
+    n "But his hands are gripping your arms now, tightly, then tighter, then he starts clawing."
 
     n "{w}You hold him in place."
 
@@ -1399,11 +1399,11 @@ label loop1_yamato:
 
     play sound "sfx/sticky.mp3"
 
-    n "{cps=11}There's a pull in your mouth--no, from your mouth--that feels wet, deep and wrong.{/cps}"
+    n "{cps=11}There's a pull in your mouth–no, from your mouth–that feels wet, deep and wrong.{/cps}"
 
-    n "{sc=4}His mouth won't leave yours... You're still kissing--why are you still kissing..!?{/sc}"
+    n "{sc=4}His mouth won't leave yours... You're still kissing–why are you still kissing..!?{/sc}"
 
-    n "You feel his body jerk once, then shakes violently."
+    n "You feel his body jerk once, then shake violently."
 
     scene flesh:
         matrixcolor BrightnessMatrix(-0.5)
@@ -1442,29 +1442,29 @@ label loop1_yamato:
 
     stop sound
 
-    n "{i}Something is inside him now.{w} Wait, no. you're inside him--{/i}"
+    n "{i}Something is inside him now.{w} Wait, no. you're inside him–{/i}"
 
     play sound "sfx/yamato_eaten.wav"
 
-    yamato "{sc=6}GHHHH--HHAKK--HHHHH!!{/sc}"
+    yamato "{sc=6}GHHHH–HHAKK–HHHHH!!{/sc}"
 
     n "{sc=5}He's screaming.{/sc}"
 
     n "He's... trying to scream through the kiss."
 
-    n "{sc=5}I-Oh kami-sama--{/sc}"
+    n "{sc=5}I-Oh kami-sama–{/sc}"
 
     n "{cps=12}You can hear it in his throat. In your teeth...{/cps}"
 
     n "{cps=15}INSIDE YOUR STOMACH.{/cps}"
 
-    yamato "{sc=6}NNNRRGHH--!--LET--LET--HHHHH--{/sc}"
+    yamato "{sc=6}NNNRRGHH–!–LET–LET–HHHHH–{/sc}"
 
     n "{i}...Let him go.{/i}"
 
-    n "{sc=4}Please--let him go--!{/sc}"
+    n "{sc=4}Please–let him go–!{/sc}"
 
-    n "{w}Please--!"
+    n "{w}Please–!"
 
     play sound "sfx/tearflesh.wav"
 
@@ -1478,31 +1478,31 @@ label loop1_yamato:
 
     n "T-The red moon is over now."
 
-    n "{k=2}Yamato was--{/k}"
+    n "{k=2}Yamato was–{/k}"
 
-    n "...He was--"
+    n "...He is–"
 
-    n "...He--"
+    n "...He–"
 
     play sound "sfx/slurrp.mp3"
 
     n "{cps=14}Gone?{/cps}"
 
-    n "{sc=3}You--{/sc}"
+    n "{sc=3}You–{/sc}"
 
     MC yan "Yeah, he's gone now. Don't pretend you didn't see that."
 
-    n "{w}You're supposed to be--"
+    n "{w}You're supposed to be–"
 
-    n "{sc=4}You were--{/sc}"
+    n "{sc=4}You were–{/sc}"
 
     MC yan "..."
 
-    n "--the hero, right?"
+    n "–the hero, right?"
 
     n "{i}Oh no.{/i}"
 
-    n "{w}But just now you--Why? Why did you do that?"
+    n "{w}But just now you–Why? Why did you do that?"
 
     MC yansm "Eh."
 
@@ -1539,6 +1539,5 @@ label loop1_yamato:
     $ persistent.loop1 = True
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived
-    $ renpy.full_restart()
 
     return

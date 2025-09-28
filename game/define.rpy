@@ -105,7 +105,7 @@ image dojo night = "BG/Dojo Night.png"
 image house night = "BG/House.jpg"
 image forest night = "BG/Forest Night.png"
 image teru night = "BG/Teru Night.png"
-image shrine night = "BG/Shrine.jpg"
+image shrine night = "BG/Shrine Night.png"
 image village night = "BG/Village Night.png"
 
 image cliff = "BG/cliff.jpg"

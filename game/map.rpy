@@ -1,5 +1,5 @@
 #########################
-# Map 3:34
+# Map 4:20 Mel v
 ############################
 
 
@@ -31,7 +31,7 @@ define locations = ["shrine", "forest", "dojo", "village","house"]
 define location_positions = {
     "shrine": (820, 200),
     "forest": (350, 290),
-    "dojo": (1620, 500),
+    "dojo": (1420, 500),
     "village": (975, 950),
     "house": (325, 850)
 }
@@ -214,7 +214,7 @@ screen map_screen():
 
     imagebutton auto "images/map/shrine_%s.png" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 820 ypos 200
     imagebutton auto "images/map/forest_%s.png" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
-    imagebutton auto "images/map/dojo_%s.png" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1620 ypos 500
+    imagebutton auto "images/map/dojo_%s.png" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1420 ypos 500
     imagebutton auto "images/map/village_%s.png" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
     imagebutton auto "images/map/house_%s.png" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
 
@@ -258,7 +258,8 @@ screen map_screen():
             xalign 0.5
             yalign 0.5
             spacing 10
-            label "Day [current_Day] loop [current_loop]" xalign 0.5
+            #label "Day [current_Day] loop [current_loop]" xalign 0.5
+            label "Day [current_Day]" xalign 0.5
             text "Where do you want to go?" xalign 0.5
 
 
@@ -435,7 +436,7 @@ python early:
 
             print("Rute Yamato")
             label_name = f"loop{store.current_loop}_yamato"
-            renpy.callt(label_name)
+            renpy.call(label_name)
 
 
         elif store.shiori_events_completed >= 5:

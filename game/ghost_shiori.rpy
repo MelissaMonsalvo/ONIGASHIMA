@@ -46,7 +46,7 @@ label ghost_shiori_1:
     hide ghost_shiori with dissolve
 
     $ renpy.pause(1.0)
-    ## shiori's ghost dissapears
+    ## shiori's ghost disappears
 
     n "What was that?"
 
@@ -148,7 +148,7 @@ label ghost_shiori_3:
     show ghost_shiori normal at c_show_24
 
     # ​Shiori's ghost is hidden from view in the shrine, we code force mouse move to her ghost location,
-    #then she appears, blink, moves closer, and before she becomes too close, dissapears
+    #then she appears, blink, moves closer, and before she becomes too close, disappears
     # Say she is at the right edge of the screen then slowly creeps in
 
     # Hide Shiori initially at alpha 0?

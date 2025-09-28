@@ -26,24 +26,24 @@ label loop1_hikaru:
     with vpunch
     play sound "Sfx/landing.mp3"
 
-    n "You find Hikaru, perched atop a tree. They jumps down as you come into view."
+    n "You find Hikaru, perched atop a tree. They jump down as you come into view."
 
     hikaru "...[persistent.player_name]."
 
     play music "Doubt.mp3"
 
-    MC nervous "Hikaru, I--"
+    MC nervous "Hikaru, I–"
 
     hikaru "Yes?"
 
-    MC nervous "I asked Yamato and Shiori, and they said they don't know that there's something between us, so--"
+    MC nervous "I asked Yamato and Shiori, and they said they don't know that there's something between us, so–"
 
     show hik sad
     with dissolve
 
-    hikaru "That's because my father is branded traitor."
+    hikaru "That's because my father is a branded traitor."
 
-    hikaru "He tried to run away from the village, so he tried to find out a way out among the mist..."
+    hikaru "He tried to run away from the village, so he tried to find out a way out of the mist..."
 
     hikaru "But his body was never found."
 
@@ -81,7 +81,7 @@ label loop1_hikaru:
 
     hikaru "{i}You smiled at me like I was just like the others.{/i}"
 
-    hikaru "And I--I thought maybe... {cps=13}maybe something came back in your place.{/cps}"
+    hikaru "And I–I thought maybe... {cps=13}maybe something came back in your place.{/cps}"
 
     hikaru "Maybe it wore your face, and that’s why it didn’t know me."
 
@@ -98,7 +98,7 @@ label loop1_hikaru:
 
     hikaru "{sc=1}Maybe you just hit your head... {w}Or...{/sc}"
 
-    hikaru "{sc=1}...the fight was so traumatizing you wiped out some of your recent memories.{/sc}"
+    hikaru "{sc=1}...the fight was so traumatizing it wiped out some of your recent memories.{/sc}"
 
     show hik worried
     with dissolve
@@ -184,12 +184,12 @@ label loop1_hikaru:
     menu:
         "I got bitten":
             $ hikaru_belief += 1
-            MC "{sc=4}I got bitten by the Yamakui, passed out, then lose half of my memory.{/sc}"
+            MC "{sc=4}I got bitten by the Yamakui, passed out, then lost half of my memories.{/sc}"
 
             show hik worried
             with dissolve
             hikaru "{i}Then why'd you pretend nothing happened?{/i}"
-            MC "I just don't want to concern you guys!"
+            MC "I just didn't want to concern you guys!"
 
         "My head hit something":
             $ hikaru_belief -= 1
@@ -207,7 +207,7 @@ label loop1_hikaru:
             n "It looks crooked."
 
         "Hug them":
-            n "You step forward and hug Hikaru, their body stiffs in your arms, but they don't push you away."
+            n "You step forward and hug Hikaru, their body stiffens in your arms, but they don't push you away."
             $ hikaru_belief += 1
 
     hikaru "...I..."
@@ -259,18 +259,18 @@ label loop1_hikaru:
 
     pause 0.5
 
-    n "You start to seek Hikaru afterward, to show them that you stay true to your words."
+    n "You start to seek out Hikaru afterward, to show them that you stayed true to your word."
 
     scene forest day:
         zoom 0.5
     show teru day:
         zoom 0.5
 
-    n "Hikaru told you to meet up in the forest later in the day."
+    n "Hikaru told you to meet up in the forest later that day."
 
     play music "Hikaru.mp3"
 
-    n "When you arrive, you see hundreds of paper effigies hung on the trees. They're perfectly aligned, all but one."
+    n "When you arrive, you see hundreds of paper effigies hung up on the trees. They're perfectly aligned, all but one."
     show frame2:
         zoom 0.4
         xanchor 0.5
@@ -350,7 +350,7 @@ label loop1_hikaru:
     menu:
         "Mock Hikaru":
             MC smugcl "I think you're being too {i}paranoid{/i}. I mean, Shiori could've just cut it unevenly or something."
-            MC normal "{k=-1}It fell wrong, maybe, or the string slips. It happens.{/k}"
+            MC normal "{k=-1}It fell wrong, maybe, or the string slipped. It happens.{/k}"
             hikaru "It's not like Shiori-chan to make mistakes like this. She had always been good at crafting."
             hikaru "{i}She even taught me how to make paper crafts....{/i}"
 
@@ -359,10 +359,10 @@ label loop1_hikaru:
             MC sadcl "Or... Do you think I'm {glitch=8}lying{/glitch}?"
 
             $ hikaru_belief += 1
-            n "You let your voice heave and falters for a bit while looking straight at Hikaru's eyes."
+            n "You let your voice heave and falter for a bit while looking straight into Hikaru's eyes."
             show hik panic
             with dissolve
-            hikaru "{cps=11}No, I--{/cps}"
+            hikaru "{cps=11}No, I–{/cps}"
 
     n "The paper still hangs upside down. You want to reach up and fix it, but your hand won’t move."
 
@@ -379,7 +379,7 @@ label loop1_hikaru:
 
     hikaru "...Sorry. Forget I asked."
 
-    n "Hikaru stares for your face uncomfortably longer than it should, before looking away with a small nod."
+    n "Hikaru stares at your face uncomfortably longer than they should, before looking away with a small nod."
 
     show hik serious:
         zoom 0.4
@@ -431,7 +431,7 @@ label loop1_hikaru:
 
     pause 1.5
 
-    n "You reach to it and forcibly try to flip it again, but it turns even though there's no wind."
+    n "You reach for it and forcibly try to flip it again, but it turns, even though there's no wind."
 
     stop music
 
@@ -481,22 +481,22 @@ label loop1_hikaru:
 
     n "What you said about an omen suddenly comes true, moments later."
 
-    n "You see the villages folk gather on the town square."
+    n "You see the village folk gather at the town square."
 
     show flesh2 at scary_flicker
     n "They circle around a dog... or what remains of it."
 
-    n "Its belly is torn wide, skin hangs in pieces, ribs pulled apart."
+    n "Its belly is torn wide open, skin hangs in pieces, ribs pulled apart."
 
     n "The head is twisted at an unnatural angle, slack-jawed and one eye missing."
 
-    n "Whatever attacked it was definitely has large claws."
+    n "Whatever attacked it definitely has large claws."
 
     hikaru "{cps=13}...[persistent.player_name].{/cps}"
 
     hikaru "Something ate it..."
 
-    hikaru "{sc=4}I think it’s the Oni. I think Yamakui--{/sc}"
+    hikaru "{sc=4}I think it’s the Oni. I think Yamakui–{/sc}"
 
     MC nervous "Hikaru, I killed it."
 
@@ -508,7 +508,7 @@ label loop1_hikaru:
 
     hikaru "But what did this...?"
 
-    hikaru "...T-That can't be a bear, right? We have no bears in this mountain, so it could only be--"
+    hikaru "...T-That can't be a bear, right? We have no bears in this mountain, so it could only be–"
 
     scene village night:
         zoom 0.5
@@ -535,7 +535,7 @@ label loop1_hikaru:
 
     "Man" "Why'd we trust {i}Karasuma's child{/i} than the person who brought the Oni's armor back?"
 
-    hikaru "{glitch=7}I--{/glitch}"
+    hikaru "{glitch=7}I–{/glitch}"
 
     show hik panic at midleft :
         zoom 0.25
@@ -619,7 +619,7 @@ label loop1_hikaru:
     scene house night:
         zoom 0.5
     with sshake
-    MC hurt "...Gh--!"
+    MC hurt "...Gh–!"
 
     n "Your back slams the wall, red trickles down your shoulder. A figure steps forward fast, blade already swinging again."
 
@@ -641,22 +641,22 @@ label loop1_hikaru:
 
     yamato "Tch, knew it. Knew somethin’ was off the second I saw ya back!"
 
-    MC mad "Yamato--"
+    MC mad "Yamato–"
 
     yamato "Nah. Nah. I ain’t listenin’ to that fake-ass voice comin’ outta your mouth."
 
     yamato "I saw ya, ya were standin’ there starin’ at the body all bloodied up. Same fuckin’ face, but not ya."
 
-    n "Wait, I don't remember you--"
+    n "Wait, I don't remember you–"
 
     pause 0.5
 
     menu:
         "Attack Yamato":
-            n "You're going at his throat, and Yamato swings once more, aiming at your neck--"
+            n "You're going at his throat, and Yamato swings once more, aiming at your neck–"
 
         "Defend yourself":
-            n "You step back and brace for Yamato's next attack--"
+            n "You step back and brace for Yamato's next attack–"
             $ hikaru_belief += 1
 
     scene black
@@ -712,7 +712,7 @@ label loop1_hikaru:
 
     yamato "{size=+2}{sc=4}Ya serious right now? Ya blockin’ for 'em!?{/sc}{/size}"
 
-    yamato "I saw [persistent.player_name] near the damned mutt before everyone found it! {size=+4}Pretty sure [persistent.player_name] killed it, damnmit!{/size}"
+    yamato "I saw [persistent.player_name] near the damned mutt before everyone found it! {size=+4}Pretty sure [persistent.player_name] killed it, damnit!{/size}"
 
     hikaru "{i}Are you sure you're not just seeing things because you're jealous of [persistent.player_name]-san?{/i}"
 
@@ -720,9 +720,9 @@ label loop1_hikaru:
 
     yamato "{size=+6}Just fuckin' look at 'em!{/size}"
 
-    n "There is a faint trace of red in your sleeve, it looks older than the blood from your own wound."
+    n "There is a faint trace of red on your sleeve, it looks older than the blood from your own wound."
 
-    n "No one would see it if you fold your arms, but they are now stretched out in combat stance."
+    n "No one would see it if you fold your arms, but they are now stretched out in a combat stance."
 
     hikaru "...That wound could be from your attack!"
 
@@ -734,7 +734,7 @@ label loop1_hikaru:
 
     MC panic "Come on, you know me."
 
-    MC panic "I didn’t do that. I wouldn't. Hikaru--"
+    MC panic "I didn’t do that. I wouldn't. Hikaru–"
 
     show hik angry2
     with dissolve
@@ -778,7 +778,7 @@ label loop1_hikaru:
     stop music
 
 
-    n "Yamato retreats and vanishes to the dark. Your knees weaken, but Hikaru’s hand catches your arm immediately."
+    n "Yamato retreats and vanishes into the dark. Your knees weaken, but Hikaru’s hand catches your arm immediately."
 
     n "You're stil bleeding."
 
@@ -794,9 +794,9 @@ label loop1_hikaru:
         linear 0.15 zoom 0.35 xalign 0.6 yalign 0.15 xoffset 30 yoffset 300
         linear 0.13 zoom 0.4 xalign 0.5 yalign 0.28 xoffset 0 yoffset 400
 
-    hikaru "Don’t move. Please. Let me--{w}just let me take care of it."
+    hikaru "Don’t move. Please. Let me–{w}just let me take care of it."
 
-    n "Hikaru rips cloth fast. Their hands shake as they presses it to your shoulder "
+    n "Hikaru rips cloth fast. Their hands shake as they press it to your shoulder "
 
     hikaru "{k=-2}It’s {color=#ff002e}red{/color}. It’s...{w}{sc=4}it’s {color=#ff002e}red{/color}.{/sc}{/k}"
 
@@ -808,7 +808,7 @@ label loop1_hikaru:
 
     hikaru "They said the blood turned dark before it hit the ground. But...{w}Your blood looks normal."
 
-    hikaru "{k=2}I just have to tell Yamato, {w=0.3}maybe he's not thinking straight, {w=0.3}maybe he's--{/k}"
+    hikaru "{k=2}I just have to tell Yamato, {w=0.3}maybe he's not thinking straight, {w=0.3}maybe he's–{/k}"
 
     MC sadcl "...Hikaru."
 
@@ -823,7 +823,7 @@ label loop1_hikaru:
 
     n "Silence again."
 
-    n "You take both of Hikaru's hands, pulling it away from their face and moves closer."
+    n "You take both of Hikaru's hands, pulling it away from their face and move closer."
 
     scene house night:
         zoom 0.5
@@ -862,9 +862,9 @@ label loop1_hikaru:
     show darken2
     with dissolve
 
-    n "The blood spreads into their sleeves now, but Hikaru just close their eyes."
+    n "The blood spreads into their sleeves now, but Hikaru just closes their eyes."
 
-    n "You hold them as they slowly stop shaking, and you u listen to the rhythm of their breath..."
+    n "You hold them as they slowly stop shaking, and you listen to the rhythm of their breath..."
 
     stop music
 
@@ -958,7 +958,7 @@ label loop1_hikaru:
 
 
 
-    n "Hikaru never left your side, you wake to them still clinging to your shoulder."
+    n "Hikaru never left your side, you wake up to them still clinging to your shoulder."
 
     MC normal "Mh..."
 
@@ -969,9 +969,9 @@ label loop1_hikaru:
 
     hikaru "Oh no, your wounds are bleeding again."
 
-    MC hurt "I'm okay--"
+    MC hurt "I'm okay–"
 
-    hikaru "Wait--hold on. Let me change the bandage."
+    hikaru "Wait–hold on. Let me change the bandage."
 
     play sound "sfx/riip.mp3"
     with hpunch
@@ -996,20 +996,20 @@ label loop1_hikaru:
 
     hikaru "{k=2}...!{/k}"
 
-    hikaru "{sc=3}[persistent.player_name]--{w=0.2}that--{/sc}"
+    hikaru "{sc=3}[persistent.player_name]–{w=0.2}that–{/sc}"
 
     MC surprised "Mmm?"
 
-    hikaru "{i}You remembered that? I thought--{w=0.2}I thought maybe you wouldn’t.{/i}"
+    hikaru "{i}You remembered that? I thought–{w=0.2}I thought maybe you wouldn’t.{/i}"
 
     MC normal "Of course I remember."
 
     show hik blush
     with dissolve
 
-    hikaru "{k=2}We used to--{/k}"
+    hikaru "{k=2}We used to–{/k}"
 
-    hikaru "Ah, {w=0.1}well, my mom used to sing it when I couldn't sleep because of the oni, so.."
+    hikaru "Ah, {w=0.1}well, my mom used to sing it when I couldn't sleep because of the Oni, so.."
 
     hikaru "I taught you that, and you used to tease me that I should sing in public more often..."
 
@@ -1017,7 +1017,7 @@ label loop1_hikaru:
 
     MC happy "Well, at least I remember how it used to sound like."
 
-    hikaru "Right... yeah. Of course. I just--{w=0.2}I didn’t want to assume. I didn’t know how much you lost, or if maybe it all got... {w=0.2}scrambled."
+    hikaru "Right... yeah. Of course. I just–{w=0.2}I didn’t want to assume. I didn’t know how much you lost, or if maybe it all got... {w=0.2}scrambled."
 
     show hik smileblush
     with dissolve
@@ -1028,7 +1028,7 @@ label loop1_hikaru:
 
     MC normal "Yeah, I think we're getting close."
 
-    MC nervous "Actually... When the red moon is over, maybe we should come out on the open."
+    MC nervous "Actually... When the red moon is over, maybe we should come out in the open."
 
     show hik blush
     with dissolve
@@ -1072,7 +1072,7 @@ label loop1_hikaru:
 
 label shame:
 
-    MC yan "Or... are you the one ashamed on me?"
+    MC yan "Or... are you the one ashamed of me?"
 
     show hik panic:
         zoom 0.5
@@ -1091,7 +1091,7 @@ label shame:
             linear 0.04 xoffset -3
             linear 0.04 xoffset 0
 
-    hikaru "{sc=4}No, no, I would never--!{/sc}"
+    hikaru "{sc=4}No, no, I would never–!{/sc}"
 
     hikaru "I just don't want them to look at you differently..."
 
@@ -1112,7 +1112,7 @@ label shame:
 
     hikaru "I’ve wanted that for a long time. I just... {w}I thought we agreed it was safer this way."
 
-    hikaru "I didn’t know you still--"
+    hikaru "I didn’t know you still–"
 
     MC yan "Still what?"
 
@@ -1219,7 +1219,7 @@ label loop1_redmoon_eve:
 
     hikaru "I reinforced the barriers, but I... {w}I don't think it'll work... If-if..."
 
-    hikaru "...If the Yamakui really comes back--"
+    hikaru "...If the Yamakui really comes back–"
 
     yamato "{sc=4}Oi.{/sc}"
 
@@ -1242,7 +1242,7 @@ label loop1_redmoon_eve:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
         linear 0.2 xalign 0.7
 
-    hikaru "Yamato-kun--"
+    hikaru "Yamato-kun–"
 
     yamato "If shit starts happenin’ tonight or I find another dead body..."
 
@@ -1256,7 +1256,7 @@ label loop1_redmoon_eve:
 
     yamato "{i}So if it ain't...? Then you lied to all of us, to Hikaru.{/i}"
 
-    MC hurt "Yamato--"
+    MC hurt "Yamato–"
 
     yamato "{glitch=8}Don’t.{/glitch}"
 
@@ -1270,7 +1270,7 @@ label loop1_redmoon_eve:
     with fade
 
 
-    n "Yamato leaves immediately without waiting for a response and dissapears into the forest."
+    n "Yamato leaves immediately without waiting for a response and disappears into the forest."
 
     show hik sad
     with dissolve
@@ -1283,11 +1283,11 @@ label loop1_redmoon_eve:
 
     MC mad "No one's getting killed lately right?"
 
-    MC yan "I'm with you, if there's another oni out there, it’s not stronger than us."
+    MC yan "I'm with you, if there's another Oni out there, it’s not stronger than us."
 
     MC happycl "I defeated the Yamakui, remember?"
 
-    n "You press your hand against theirs, then grips it so tight your nails leave marks to steady them."
+    n "You press your hand against theirs, then grip it so tight your nails leave marks to steady them."
 
     show hik smilesad
     with dissolve
@@ -1443,18 +1443,18 @@ label hikaru_trust:
 
     with sshake
 
-    n "Wait, what are you doing? Why--"
+    n "Wait, what are you doing? Why–"
 
     scene black
     with fade
 
     play muzak "sfx/hikaru_eaten.wav"
 
-    n "Hikaru--"
+    n "Hikaru–"
 
     play sound "sfx/hikaru_Scream.mp3"
 
-    hikaru "{k=-2}Aah--!{/k}"
+    hikaru "{k=-2}Aah–!{/k}"
 
     scene flesh:
         matrixcolor BrightnessMatrix(-0.5)
@@ -1513,11 +1513,11 @@ label hikaru_trust:
     hide blood
     with dissolve
 
-    n "{sc=3}I can’t--{/sc}"
+    n "{sc=3}I can’t–{/sc}"
 
     n "{blur}I don’t want to see it...!{/blur}"
 
-    n "{k=2}Please--!{/k}"
+    n "{k=2}Please–!{/k}"
 
     n "{size=+3}{color=#ff0000}Please make it stop.{/color}{/size}"
 
@@ -1574,7 +1574,7 @@ label hikaru_trust:
 
     play sound "sfx/day change.mp3"
 
-    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}{font=LibreBaskerville-Regular.ttf}{size=40}SHIORI IS DEVOURED{/size}{/font}{/color}{/atl}{/color}"
+    centered "{color=#9a0000}{atl=0.3,drop_text~#~ 1.5, bounce_text~5}{color=#FF0000}{font=LibreBaskerville-Regular.ttf}{size=40}HIKARU IS DEVOURED{/size}{/font}{/color}{/atl}{/color}"
 
     pause 0.2
 
@@ -1639,15 +1639,15 @@ label hikaru_distrust:
 
     hikaru "{size=+4}{sc=5}Where is it!?{/sc}{/size}"
 
-    MC "Hikaru--"
+    MC "Hikaru–"
 
-    hikaru "{sc=4}No! Stay back--!{/sc}"
+    hikaru "{sc=4}No! Stay back–!{/sc}"
 
-    hikaru "{k=2}I trusted you. I let myself believe--{/k}"
+    hikaru "{k=2}I trusted you. I let myself believe–{/k}"
 
     MC sadcl "*sigh* I was so close."
 
-    hikaru "{sc=4}You’re not [persistent.player_name]. You’re not--{/sc}"
+    hikaru "{sc=4}You’re not [persistent.player_name]. You’re not–{/sc}"
 
     n "Wait a minute."
 
@@ -1706,15 +1706,15 @@ label hikaru_distrust:
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
     with sshake
 
-    hikaru "{k=2}...ngh--{/k}"
+    hikaru "{k=2}...ngh–{/k}"
 
     n "There is a dark gash on their shoulder... resembling the one on the dead dog ..."
 
-    n "You did it? But how come I don't--"
+    n "You did it? But how come I don't–"
 
     MC yansm "You done?"
 
-    hikaru "{sc=5}N-no--!{/sc}"
+    hikaru "{sc=5}N-no–!{/sc}"
 
     MC "Well, at least I can reunite the both of you now."
 
@@ -1723,9 +1723,9 @@ label hikaru_distrust:
 
     play muzak "sfx/hikaru_eaten.wav"
 
-    n "Hikaru--"
+    n "Hikaru–"
 
-    hikaru "{k=-2}Ngh--!{/k}"
+    hikaru "{k=-2}Ngh–!{/k}"
 
     scene flesh:
         matrixcolor BrightnessMatrix(-0.5)
@@ -1756,7 +1756,7 @@ label hikaru_distrust:
 
     n "It’s wet again. Louder this time. Closer."
 
-    hikaru "{k=3}S-stay--...!{w} a-away...!{/k}"
+    hikaru "{k=3}S-stay–...!{w} a-away...!{/k}"
 
     n "They’re crying now.... You..."
 
@@ -1788,7 +1788,7 @@ label hikaru_distrust:
 
     n "Why did you let me see it?"
 
-    n "Why did you make me watch--"
+    n "Why did you make me watch–"
 
     n "...Why do I still remember them?"
 
@@ -1796,7 +1796,7 @@ label hikaru_distrust:
 
     n "...Why do I care?"
 
-    n "{b}Why--{/b}"
+    n "{b}Why–{/b}"
 
     n "..."
 
@@ -1827,7 +1827,5 @@ label hikaru_distrust:
     stop sound
 
     ## if any character dies in loop 1, you are locked out of true ending and must play again until everyone is revived
-
-    $ renpy.full_restart()
 
     return

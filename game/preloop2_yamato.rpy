@@ -69,7 +69,7 @@ label loop2_yamato_mandatory1:
 
     yamato "{i}Bit?{/i}"
 
-    MC yan2 "Yeah, the damn Yamakui bit me. That’s why I--"
+    MC yan2 "Yeah, the damn Yamakui bit me. That’s why I–"
 
     show yam annoyed
     with dissolve
@@ -98,7 +98,7 @@ label loop2_yamato_mandatory1:
     show darken2
     with vpunch
 
-    n "{cps=14}Oh wait, it’s actually melting--{/cps}"
+    n "{cps=14}Oh wait, it’s actually melting–{/cps}"
 
 
     hide gore
@@ -125,7 +125,7 @@ label loop2_yamato_mandatory1:
 
     yamato "{w}What the hell is that?!"
 
-    yamato "That ain’t a wound. That’s... That’s--"
+    yamato "That ain’t a wound. That’s... That’s–"
 
     $ ysword = True
 
@@ -144,7 +144,7 @@ label loop2_yamato_mandatory1:
     show yam shocked
     with dissolve
 
-    yamato "{sc=5}That ain’t--That's a corpse...!{/sc}"
+    yamato "{sc=5}That ain’t–That's a corpse...!{/sc}"
 
     MC evil2 "I thought you wanted proof?"
 
@@ -183,7 +183,7 @@ label loop2_yamato_mandatory1:
 
     yamato "{i}If the fuckin' Yamakui's dead then the curse would fuck off!{/i}"
 
-    MC annoyed2 "No--"
+    MC annoyed2 "No–"
 
 
     show yam panic:
@@ -216,7 +216,7 @@ label loop2_yamato_mandatory1:
 
     n2 "Let's shut him up."
 
-    n "DO NOT. Don’t touch him. Don’t even think about it--"
+    n "DO NOT. Don’t touch him. Don’t even think about it–"
 
 
     yamato "Tch..."
@@ -261,7 +261,7 @@ label loop2_yamato_mandatory1:
 
     n2 "He’ll come back."
 
-    n2 "They always do. {w}Meat don’t wander far."
+    n2 "They always do. {w}Meat doesn’t wander far."
 
     n "You look down at your shoulder."
 
@@ -337,9 +337,9 @@ label loop2_yamato_mandatory2:
     show yam ngh
     with dissolve
 
-    yamato "{k=1}Wh--{/k}"
+    yamato "{k=1}Wh–{/k}"
 
-    MC smug2 "Can't believe the guy who used to shout he'd kill the Yamakui now {i}run away with his tails between his legs.{/i}"
+    MC smug2 "Can't believe the guy who used to shout he'd kill the Yamakui now {i}runs away with his tails between his legs.{/i}"
 
     MC yansm2 "What are you, {sc=1}coward?{/sc}"
 
@@ -358,7 +358,7 @@ label loop2_yamato_mandatory2:
         linear 0.04 xoffset -90 yoffset 148
         linear 0.04 xoffset -100 yoffset 150
         repeat
-    yamato "{sc=2}Damn you--{/sc}"
+    yamato "{sc=2}Damn you–{/sc}"
 
     show yam rage:
         zoom 0.2
@@ -403,16 +403,16 @@ label loop2_yamato_mandatory2:
 
     n "Parry, then twist."
 
-    n "Your blade dances gracefully and you reappears behind him."
+    n "Your blade dances gracefully and you reappear behind him."
 
-    n "Yamato swings backwards in desperation, as instict."
+    n "Yamato swings backwards in desperation, instinctually."
 
     play sound "swing.wav"
     show slash_x1
     $ renpy.pause(0.1, hard=True)
     with vpunch
 
-    n "But you're faster and trips his legs."
+    n "But you're faster and trip his legs."
 
     scene dojo day:
         zoom 0.5
@@ -436,7 +436,7 @@ label loop2_yamato_mandatory2:
         linear 0.09 yoffset 0
     with sshake
 
-    yamato "{k=2}Wha--!{/k}"
+    yamato "{k=2}Wha–!{/k}"
 
     show darken2
     with flashred
@@ -452,7 +452,7 @@ label loop2_yamato_mandatory2:
 
     n2 "{sc=4}Break it.{/sc}"
 
-    n "You slam the sword forward--"
+    n "You slam the sword forward–"
 
     scene dojo day:
         zoom 1
@@ -485,11 +485,11 @@ label loop2_yamato_mandatory2:
         repeat
     with hpunch
 
-    yamato "{i}Ghk--! Fuck!{/i}"
+    yamato "{i}Ghk–! Fuck!{/i}"
 
     n "He’s kneeling, wheezing and clutching his side."
 
-    yamato "{k=2}Y-you--{/k}"
+    yamato "{k=2}Y-you–{/k}"
 
     yamato "{w}You’re not even breakin’ a sweat. Since when...?"
 
@@ -515,9 +515,9 @@ label yyyesss:
 
     n2 "Look at him. Little animal is cornered."
 
-    n "Stop. Stop thinking like that. That’s not--"
+    n "Stop. Stop thinking like that. That’s not–"
 
-    MC yan2 "Yamato--"
+    MC yan2 "Yamato–"
 
 
 
@@ -528,7 +528,7 @@ label yyyesss:
 
     yamato "{sc=4}You ain’t foolin’ anyone anymore!{/sc}"
 
-    yamato "{i}Whatever curse ya brought down that mountain--{/i}"
+    yamato "{i}Whatever curse ya brought down that mountain–{/i}"
 
     yamato "{sc=3}Tch, damn it!{/sc}"
 
@@ -555,7 +555,7 @@ label yyyesss:
 
     n "Yamato scrambles away frantically, but still heavily wounded."
 
-    n "What are you doing...? He's going to tell the others and--"
+    n "What are you doing...? He's going to tell the others and–"
 
     n2 "Let him, let them aaallllll come."
 
@@ -607,6 +607,10 @@ label loop2_yamato_mandatory3:
 
         n "You see her before you hear anything."
 
+        show ghost_shiori normal at c_show_28 behind yam:
+            xoffset +20
+        with dissolve
+
         n "She’s standing between the urns, her mouth stretches open, then splits slowly."
 
         n "Who...?"
@@ -631,6 +635,8 @@ label loop2_yamato_mandatory3:
 
         n "The incense smoke trails toward her, as if she's inhaling it."
 
+        hide ghost_shiori
+
         show screen black_flicker
         with Pause(0.45)  # 0.05*8 + buffer for full duration (optional)
         hide screen black_flicker
@@ -647,6 +653,10 @@ label loop2_yamato_mandatory3:
         with Pause(0.45)  # 0.05*8 + buffer for full duration (optional)
         hide screen black_flicker
 
+        show ghost_hikaru normal at c_show_28 behind yam:
+            xoffset +20
+        with dissolve
+
         n "There’s something standing by the incense..."
 
         n "Their mask has melted into the bone. You can see the skull beneath it."
@@ -657,7 +667,7 @@ label loop2_yamato_mandatory3:
 
         n2 "That's your favorite."
 
-        n "The eye sockets are dark. Empty. But you know they see you."
+        n "The eye sockets are dark. But you know they see you."
 
         n "You can feel it on your skin."
 
@@ -668,6 +678,8 @@ label loop2_yamato_mandatory3:
         yamato "{w=0.1}I shoulda said goodbye properly."
 
         yamato "{i}Now I gotta light this stupid stick and hope it gets to ya somehow.{/i}"
+
+        hide ghost_hikaru
 
         show screen black_flicker
         with Pause(0.45)  # 0.05*8 + buffer for full duration (optional)
@@ -866,7 +878,7 @@ label loop2_yamato_mandatory4:
 ])
 
 label yesyeysysyqsad:
-    n "No, no, no, stop--"
+    n "No, no, no, stop–"
     n2 "AhhhhHHHhh... He SPEAKS now."
 
     n2 "Little boy thinks he's brave."
@@ -875,9 +887,9 @@ label yesyeysysyqsad:
 
     yamato "{sc=3}I’m stronger now. {w=0.2}Don’t need skin to hold me back anymore.{/sc}"
 
-    yamato "You come near, [persistent.player_name], I’ll drag you through yer own blood.."
+    yamato "You come near me, [persistent.player_name], I’ll drag you through yer own blood.."
 
-    MC evil2 "Try. {w=0.1}{w=0.1}TRY. {cps=150}TRY. TRY TRY TRY TRY {w=0.1}TRY--{/cps}{nw}"
+    MC evil2 "Try. {w=0.1}{w=0.1}TRY. {cps=150}TRY. TRY TRY TRY TRY {w=0.1}TRY–{/cps}{nw}"
 
     yamato "{sc=3}Tch. WATCH me.{/sc}"
 

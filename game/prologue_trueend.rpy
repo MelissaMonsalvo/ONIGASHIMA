@@ -14,11 +14,11 @@ label prologue_trueend:
     n2 "I aM, I aM! {w}cHokIng oN jOy, oN yOuR sOuNd!"
     n2 "[persistent.player_name]... yOu sPeAk aGaiN."
 
-    n "What? I didn’t-- {w}I don’t know what you’re talking about."
+    n "What? I didn’t– {w}I don’t know what you’re talking about."
     n "I don’t even... remember. Anything."
     n "Wh-who am I?"
 
-    n2 "HhhhHHaaaahhh--sWeEt, lOsT. {w}FoRgOtTeN, wIpEd cLeAn."
+    n2 "HhhhHHaaaahhh–sWeEt, lOsT. {w}FoRgOtTeN, wIpEd cLeAn."
     n2 "DoEsN’t MaTtEr. {w}YoU’Re hErE. {w}YoU’Re bAcK."
     n2 "tHaT’s EnOuGh."
 
@@ -39,7 +39,7 @@ label prologue_trueend:
 
     n "I don’t... I don’t even know who I am."
 
-    n2 "YoU’Ll ReMeMbEr. {w}AnD iF nOt--{w}I'lL rEmEmBeR eNoUgH fOr Us BoTh."
+    n2 "YoU’Ll ReMeMbEr. {w}AnD iF nOt–{w}I'lL rEmEmBeR eNoUgH fOr Us BoTh."
 
     play sound "sfx/wind_cave.ogg"
     $ renpy.pause(1.0)

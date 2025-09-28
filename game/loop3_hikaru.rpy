@@ -32,9 +32,9 @@ label loop3_hikaru:
 
     n2 "tHe tEnDeR mEaT."
 
-    n "No--"
+    n "No–"
 
-    n "Hikaru, run--"
+    n "Hikaru, run–"
 
     hikaru "{sc=5}That's [persistent.player_name]'s face...{/sc}"
 
@@ -54,9 +54,9 @@ label loop3_hikaru:
         linear 0.04 xoffset 21 yoffset -15
         linear 0.05 xoffset 0 yoffset 50   # Back to original
 
-    hikaru "{glitch=7}THAT’S--{w}that’s--{/glitch}"
+    hikaru "{glitch=7}THAT’S–{w}that’s–{/glitch}"
 
-    n "Don’t say it. Don’t remember. Don’t look--"
+    n "Don’t say it. Don’t remember. Don’t look–"
 
     show hik rage behind darken:
         zoom 0.3
@@ -77,7 +77,7 @@ label loop3_hikaru:
 
     hikaru "{size=+7}WHERE IS MY LOVER?!{/size}"
 
-    hikaru "{sc=7}WHERE IS--WHERE ARE--{/sc}"
+    hikaru "{sc=7}WHERE IS–WHERE ARE–{/sc}"
 
     MC happycl3 "It'S Me, HiKARu."
 
@@ -105,7 +105,7 @@ label loop3_hikaru:
         linear 0.07 xoffset -560 yoffset -32 zoom 0.12 alpha 0.0
     with hpunch
 
-    n "Hikaru, no--You won't win against the Yamakui!"
+    n "Hikaru, no–You won't win against the Yamakui!"
 
     n2 "HraHhaHAHAHA!"
 
@@ -116,7 +116,7 @@ label loop3_hikaru:
 
     stop sound
 
-    n2 "tHe dAyS paSSes."
+    n2 "tHe dAys paSS."
 
     scene moon2
     play sound "sfx/heartbeat.mp3"
@@ -144,7 +144,7 @@ label loop3_hikaru:
 
     n2 "i wEar iT bAckwArDs sOmEtImEs. {w}fUnNy."
 
-    n "{i}I don't care what ever you are doing to my face...{/i}"
+    n "{i}I don't care whatever you are doing to my face...{/i}"
 
     n "But let Hikaru go..."
 
@@ -173,13 +173,13 @@ label loop3_hikaru:
 
     n "Just leave Hikaru, let me save JUST ONE."
 
-    n "{glitch=1}Everyone else is gone and I can’t--{/glitch}"
+    n "{glitch=1}Everyone else is gone and I can’t–{/glitch}"
 
     n2 "tEnDeR mEAt iS sWeEtEsT wHeN iT knEw yOu bEfOrE."
 
     n "{sc=5}NO!!{/sc}"
 
-    n "{cps=14}PLEASE--{/cps}"
+    n "{cps=14}PLEASE–{/cps}"
 
     scene moon5
     play sound "sfx/heartbeat.mp3"
@@ -230,9 +230,9 @@ label loop3_hikaru:
 
     play sound "sfx/whip.mp3"
 
-    hikaru "NOW--!"
+    hikaru "NOW–!"
 
-    n2 "Hkk--!"
+    n2 "Hkk–!"
 
     $ hsword = True
 
@@ -272,7 +272,7 @@ label loop3_hikaru:
 
     n2 "TcH. ReLENtlESS."
 
-    hikaru "WHY--"
+    hikaru "WHY–"
 
     show hik rage behind darken:
         zoom 0.25
@@ -302,7 +302,7 @@ label loop3_hikaru:
 
     n2 "..."
 
-    hikaru "Ngh--"
+    hikaru "Ngh–"
 
     show hik shocked behind darken:
         zoom 0.25
@@ -320,17 +320,17 @@ label loop3_hikaru:
 
         pause 0.10
 
-    hikaru "Has the kami-sama abandoned us!?"
+    hikaru "Have the kami-sama abandoned us!?"
 
     MC happy3 "{size=+5}{color=#ff0000}Y E S.{/color}{/size}"
 
-    MC happy3 "YoUR KamMI-sAMa HaS AbANDonED YoU."
+    MC happy3 "YoUR KaMI-sAMa HaVe AbANDonED YoU."
 
     n2 "i'LL eAt yOu."
 
     n2 "oN tHe rEd mOoN."
 
-    n "HIKARU--"
+    n "HIKARU–"
 
     n2 "yOu wAnT tO sAvE tHeM?"
 
@@ -353,9 +353,9 @@ label loop3_hikaru:
 
     n "They’re retreating..."
 
-    n "I can’t--"
+    n "I can’t–"
 
-    n "I can’t watch this again--"
+    n "I can’t watch this again–"
 
     pause 0.1
 
@@ -437,7 +437,7 @@ label loop3_hikaru:
     show darken2
     with vpunch
 
-    MC nervous3 "Khh-- {w}yoU GoT mE."
+    MC nervous3 "Khh– {w}yoU GoT mE."
 
     MC evil3 "BuT NoT ENouGH, BiRD."
 
@@ -463,9 +463,9 @@ label loop3_hikaru:
         linear 0.09 yoffset 190
     show darken2
     with vpunch
-    hikaru "Wh--That was a direct hit!"
+    hikaru "Wh–That was a direct hit!"
 
-    hikaru "Why are you still standing--!?"
+    hikaru "Why are you still standing–!?"
 
     play music "Goodbye.mp3"
 
@@ -473,11 +473,11 @@ label loop3_hikaru:
 
     MC sad3 "Help me."
 
-    MC sad3 "Hikaru... {w}please--"
+    MC sad3 "Hikaru... {w}please–"
 
-    MC sad3 "I’m still in here--{w} they’re controlling me--"
+    MC sad3 "I’m still in here–{w} they’re controlling me–"
 
-    MC sad3 "You can still save me--"
+    MC sad3 "You can still save me–"
 
     show hik panic behind darken2:
         zoom 0.25
@@ -496,13 +496,13 @@ label loop3_hikaru:
 
     hikaru "...!"
 
-    n "No! Don't! That's not me--!"
+    n "No! Don't! That's not me–!"
 
     hikaru "I..."
 
-    hikaru "That voice--"
+    hikaru "That voice–"
 
-    hikaru "You’re lying--no, wait--"
+    hikaru "You’re lying–no, wait–"
 
     MC sadcl3 "I don’t want to die, Hikaru..."
 
@@ -514,7 +514,7 @@ label loop3_hikaru:
 
     hikaru "...I..."
 
-    n "{sc=1}MOVE--{/sc}"
+    n "{sc=1}MOVE–{/sc}"
 
     n2 "tOo lAtE."
 
@@ -570,7 +570,7 @@ label loop3_hikaru:
 
     hikaru "{cps=13}I still keep the scarf, you know?{w=0.1}{/cps}"
 
-    hikaru "{sc=1}The one you gave before you left?{/sc}"
+    hikaru "{sc=1}The one you gave me before you left?{/sc}"
 
     hikaru "{cps=13}It still feels like you're here...{w=0.1}{/cps}"
 
