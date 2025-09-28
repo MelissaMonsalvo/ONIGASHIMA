@@ -1,5 +1,26 @@
 label loop2_hikaru:
 
+    scene black
+    with fade
+
+    pause 0.2
+
+    scene white_bg
+    with out_182
+
+    show petals_dense
+    show petals_scatter
+
+    n2 "...Hikaru noticed us."
+
+    n2 "{cps=10}So let's kill them."
+
+    scene black
+    with fade
+
+    pause 0.3
+
+
     $ hsword = True
 
     play music "Battora.mp3"

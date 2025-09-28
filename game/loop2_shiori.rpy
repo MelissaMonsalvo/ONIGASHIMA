@@ -2,6 +2,26 @@ label loop2_shiori:
 
     ## SHIORI'S ROUTE GOES HERE FOR LOOP 1 AFTER CLEARING ALL MANDATORY EVENTS OR DEFAULT ROUTE IF YOU DIDN'T UNLOCK YAMATO AND HIKARU
 
+    scene black
+    with fade
+
+    pause 0.2
+
+    scene white_bg
+    with out_182
+
+    show petals_dense
+    show petals_scatter
+
+    n2 "...I spent most of my days with the stringy one."
+
+    n2 "Want stringy meat...."
+
+    scene black
+    with fade
+
+    pause 0.3
+
     scene shrine night with in_182:
         zoom 0.5
 
