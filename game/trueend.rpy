@@ -1073,6 +1073,17 @@ label confrontation:
 
     play music "Ending.mp3"
 
+    pause 0.5
+
+    scene white_bg
+    with out_182
+
+    show petals_dense3
+    show petals_scatter3
+
+    pause 0.5
+
+
 
 
 

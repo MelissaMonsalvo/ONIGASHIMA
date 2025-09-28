@@ -505,6 +505,22 @@ image petals_scatter2 = SnowBlossom(
     start=0.0,            # Start near the top, so they scatter as they rise
     border=40
 )
+image petals_dense3 = SnowBlossom(
+    "ppetal3.png",
+    count=40,             # More particles for density
+    xspeed=(-10, 10),     # Not much horizontal movement
+    yspeed=(-60, -110),   # Gentle, slow rise
+    start=0.85,           # Lower part of screen (0.0 = top, 1.0 = bottom)
+    border=40
+)
+image petals_scatter3 = SnowBlossom(
+    "ppetal3.png",
+    count=20,             # Fewer particles
+    xspeed=(-50, 50),     # More horizontal spread
+    yspeed=(-150, -230),  # Faster upward movement
+    start=0.0,            # Start near the top, so they scatter as they rise
+    border=40
+)
 
 
 ### horror circle
