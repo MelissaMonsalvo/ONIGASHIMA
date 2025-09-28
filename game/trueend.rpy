@@ -244,8 +244,9 @@ label truend:
 
         linear 0.4 xzoom -1 matrixcolor (BrightnessMatrix(-0.5) * TintMatrix("#1A1A1A"))
 
-        linear 0.2 zoom 0.13 alpha 0.0
-
+    hide shi
+    with fade
+    
     n "And with that, she turns away, dragging her feet as if daring them to call her back."
     n "{i}The shrine doors creak as Shiori disappears into the dark.{/i} The silence left behind is unbearable."
 
