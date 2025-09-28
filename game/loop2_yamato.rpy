@@ -1206,7 +1206,7 @@ label loop2_yamato:
 
     yamato "{sc=8}YOU’RE–{/sc}"
 
-    MC evil2 "{size=+4}{color=#aa0000}Mountains. Earth. Same thing{/color}{/size}"
+    MC evil2 "{size=+4}{color=#aa0000}Mountains. Earth. Same thing.{/color}{/size}"
 
     MC evil2 "The mountains belong to me, Yamato."
 

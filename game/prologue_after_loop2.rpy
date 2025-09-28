@@ -64,7 +64,7 @@ label prologue_loop2:
 
     n2 "YoUR FlEsH coMEs oFf in rIbBonS wHeN i SmiLE."
 
-    n2 "tHe sKin wAs tOo rOTteD aNywAy~"
+    n2 "tHe sKin wAs tOo rOTteN aNywAy~"
 
     scene village day with in_182:
         zoom 0.5
