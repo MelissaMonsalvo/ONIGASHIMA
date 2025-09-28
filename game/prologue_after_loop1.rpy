@@ -250,7 +250,7 @@ label prologue_loop1:
         ypos 0.25
     with dissolve
 
-    MC "So?"
+    MC smug2"So?"
 
     "Elder" "Im-Impossible..."
 

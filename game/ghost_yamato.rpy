@@ -5,7 +5,7 @@ label ghost_yamato_1:
 
     MC yan2 "...Sleepy."
 
-    MC yan2 "Let's go sleep at the woods instead."
+    MC yan2 "Let's go sleep in the woods instead."
 
     # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then disappears
 
@@ -225,7 +225,7 @@ label ghost_yamato_4:
 
     n "Then he leans in..."
 
-    n "His breath brushes your cheek., but it no longer smells like sake..."
+    n "His breath brushes your cheek, but it no longer smells like sake..."
 
     n "...but rotting flesh."
 
