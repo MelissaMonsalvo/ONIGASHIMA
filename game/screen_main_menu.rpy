@@ -76,7 +76,7 @@ screen main_menu():
 
     # Yamato
     if persistent.yamato_dies:
-        add "gui/Main Menu/yamato_idle.webp" xpos 400 ypos 0 zoom 0.2 at fadein0
+        add "gui/Main Menu/yamato_idle.webp" xpos -100 ypos 0 zoom 0.2 at fadein0
     else:
         add "gui/Main Menu/yamato_static.webp" xpos 400 ypos 0 zoom 0.2 at fadein0
 
@@ -88,7 +88,7 @@ screen main_menu():
 
     # Shiori
     if persistent.shiori_dies:
-        add "gui/Main Menu/shiori_idle.webp" xpos 660 ypos 200 zoom 0.2 at fadein2
+        add "gui/Main Menu/shiori_idle.webp" xpos 500 ypos 200 zoom 0.2 at fadein2
     else:
         add "gui/Main Menu/shiori_static.webp" xpos 660 ypos 200 zoom 0.2 at fadein2
 
@@ -228,7 +228,7 @@ screen content_warning():
                 xysize (280, 120)
                 background None
                 hover_background Transform("long_btn_hover_no_frame", xysize=(280, 120))
-                
+
                 action Hide(), Return()
 
             button:
@@ -240,7 +240,7 @@ screen content_warning():
                 xysize (280, 120)
                 background None
                 hover_background Transform("long_btn_hover_no_frame", xysize=(280, 120))
-                
+
                 action Quit(confirm=False)
 
 
@@ -266,7 +266,7 @@ screen seizure():
             color BLACK
             size 50
             xalign 0.5
-    
+
 
 label splashscreen:
     $ _window_hide()

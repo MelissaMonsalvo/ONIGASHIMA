@@ -26,7 +26,7 @@ label prologue_loop3:
 
     n2 "i tEAr aNoThEr oNe aPaRt."
 
-    scene bg moon7
+    scene moon7
     show darken2
     with fade
 
@@ -89,13 +89,13 @@ label prologue_loop4:
 
     n2 "iT’s qUiEt."
 
-    scene bg moon4
+    scene moon4
     show darken2
     with fade
 
     n2 "i wAiT fOr tHe mOoN."
 
-    scene bg moon7
+    scene moon7
     show darken2
     with fade
 
@@ -106,11 +106,11 @@ label prologue_loop4:
     n2 "nEw fAcEs."
 
 
-    n "nEw sMeLlS."
+    n2 "nEw sMeLlS."
 
-    n "sAmE tAsTe."
+    n2 "sAmE tAsTe."
 
-    n "SaMe FeAR."
+    n2 "SaMe FeAR."
 
 
     n2 "eAt. {w}SwAlLoW. {w}SlEeP."
@@ -151,7 +151,7 @@ label prologue_loop5:
 
     n2 "sTiLL hErE."
 
-    scene bg moon7
+    scene moon7
     show darken2
     with fade
 
@@ -229,6 +229,9 @@ label prologue_loop5:
 
     n2 "HoLLoW."
 
+    scene black
+    with fade
+
     n2 "BoRedBorEDbOredBOoooooooooooooooOOOOOOOred."
 
     $ persistent.loop6 = True
@@ -240,23 +243,25 @@ label prologue_loop6:
     scene black
     with fade
 
+    play music "sfx/forest night.wav"
+
     n2 "I wOkE uP tOdAy."
 
     n2 "i sAiD:"
 
-    MC "\"It’s dark...\""
+    n2 "\"It’s dark...\""
 
 
     n2 "...yOu uSeD tO sAy tHaT."
 
-    MC "\"It’s dark. We’re here again?\""
+    n2 "\"It’s dark. We’re here again?\""
 
     n2 "hHhAHa."
 
     n2 "iT sOuNdS fUnNy wHeN i sAy iT."
 
 
-    MC "\"Stop stabbing it. You saved the village.\""
+    n2 "\"Stop stabbing it. You saved the village.\""
 
     n2 "ThAt wAs a gOoD oNe."
 
@@ -291,7 +296,7 @@ label prologue_loop6:
 
     n2 "i aSkEd:"
 
-    MC "\"dO yOu rEmEmBeR [persistent.player_name]?\""
+    n2 "\"dO yOu rEmEmBeR [persistent.player_name]?\""
 
     n2 "tHe mEaT dIdN’t aNsWeR ME."
 
@@ -309,6 +314,8 @@ label prologue_loop7:
 
     scene black
     with fade
+
+    stop music
 
     n2 "..."
 
@@ -348,6 +355,8 @@ label prologue_loop8:
     scene black
     with fade
 
+    stop music
+
     n2 "[persistent.player_name]."
 
     n2 "yOu wErE..."
@@ -383,10 +392,10 @@ label prologue_loop8:
     n2 "i’LL sToP–i’LL sToP–"
 
     menu:
-        "Repent?"
 
-        "YEs":
+        "Repent":
             $ persistent.trueendingunlocked = True
+
 
             ### EVERYTHING IS HARD RESET
             $ persistent.shiori_dies = False
@@ -418,10 +427,16 @@ label prologue_loop8:
             if persistent.first_playthrough == True:
                 $ persistent.first_playthrough = False
 
-            n "Repent! Repent!"
+            n2 "...ThE nExT TiME..."
+            n2 "I wOn'T eAt aNyoNE."
+            n2 "Won'T eVeN TAlK to ANYone."
+            n2 "...ProMIsE..."
+            n2 "LeT's StART CleAN."
+            $ delete_all_saves()
+            $ renpy.full_restart()
             return
             ## after this, you are kicked to main menu and everyone are alive again
-        "NO.":
+        "Continue":
             n2 "..."
 
             n2 "...."

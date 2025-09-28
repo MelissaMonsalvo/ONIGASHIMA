@@ -443,26 +443,37 @@ python early:
         print(f"Shiori {store.shiori_events_completed}")
         print(f"hikaru {store.hikaru_events_completed}")
 
-        if store.yamato_events_completed >= 5:
-            print("Rute Yamato")
-            label_name = f"loop{store.current_loop}_yamato"
-            renpy.jump(label_name)
-
-        elif store.shiori_events_completed >= 5:
-            print("Rute Shiori")
-            label_name = f"loop{store.current_loop}_shiori"
-            renpy.jump(label_name)
-
-        elif store.hikaru_events_completed >= 5:
-            print("Rute Hikaru")
-            label_name = f"loop{store.current_loop}_hikaru"
-            renpy.jump(label_name)
-
+        if persistent.shiori_dies:
+            # Prioritize Yamato if Shiori is dead
+            if store.yamato_events_completed >= 5:
+                print("Rute Yamato (Shiori is dead)")
+                label_name = f"loop{store.current_loop}_yamato"
+                renpy.jump(label_name)
+            elif store.hikaru_events_completed >= 5:
+                print("Rute Hikaru (Shiori is dead)")
+                label_name = f"loop{store.current_loop}_hikaru"
+                renpy.jump(label_name)
+            else:
+                print("No route reached 5 events. Default to Yamato (Shiori is dead).")
+                label_name = f"loop{store.current_loop}_yamato"
+                renpy.jump(label_name)
         else:
-            # Default to Shiori's route if no one else meets the requirement
-            print("No route reached 5 events. Default to Shiori.")
-            label_name = f"loop{store.current_loop}_shiori"
-            renpy.jump(label_name)
+            if store.yamato_events_completed >= 5:
+                print("Rute Yamato")
+                label_name = f"loop{store.current_loop}_yamato"
+                renpy.jump(label_name)
+            elif store.shiori_events_completed >= 5:
+                print("Rute Shiori")
+                label_name = f"loop{store.current_loop}_shiori"
+                renpy.jump(label_name)
+            elif store.hikaru_events_completed >= 5:
+                print("Rute Hikaru")
+                label_name = f"loop{store.current_loop}_hikaru"
+                renpy.jump(label_name)
+            else:
+                print("No route reached 5 events. Default to Shiori.")
+                label_name = f"loop{store.current_loop}_shiori"
+                renpy.jump(label_name)
 
 
 

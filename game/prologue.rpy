@@ -128,7 +128,7 @@ label prologue:
 
     n "You’re not going to turn around and see it still breathing."
 
-    n "...Because it’s {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}. {w=0.3}You made sure."
+    n "...Because it’s {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl} {w=0.3}You made sure."
 
     stop muzak
     stop music

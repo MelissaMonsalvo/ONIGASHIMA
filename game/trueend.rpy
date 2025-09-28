@@ -205,8 +205,6 @@ label truend:
     show shi annoyed with vpunch
     shiori "Mouu~ You two don’t understand anything!"
 
-    play sound "thud.mp3"
-
     show shi angry with vpunch
     shiori "You have never been saved by Yamakui-sama!"
 
@@ -1216,13 +1214,13 @@ label confrontation:
 
     pause 2.0
 
-    show expression Text("We will remember your name", style="jojo_bigtext") at Position(xalign=0.5, yalign=0.5)
+    show expression Text("We will remember your name", style="jojo_bigtext") at Position(xalign=0.5, yalign=0.5) as wewe
 
 
 
     pause 2.5
 
-    hide expression Text
+    hide wewe
 
     show expression Text("[persistent.player_name]", style="jojo_bigtext") at Position(xalign=0.5, yalign=0.5)
 
@@ -1230,7 +1228,6 @@ label confrontation:
     with dissolve
     $ renpy.pause(3.5)
 
-    return
 
     $ persistent.shiori_dies = False
     $ persistent.yamato_dies = False
@@ -1261,5 +1258,11 @@ label confrontation:
     $ persistent.seen_true_end = True
 
     ## My arms are crying bye
+
+    $ MainMenu(confirm=False)()
+
+    jump main_menu
+
+    $ renpy.full_restart()
 
     return

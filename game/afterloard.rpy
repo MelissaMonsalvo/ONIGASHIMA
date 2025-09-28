@@ -23,6 +23,8 @@ image afterloadyam glitched:
     pause 0.1
     repeat
 
+init python:
+    import random
 
 label after_load:
     $ should_block_label = None
@@ -31,29 +33,41 @@ label after_load:
     if persistent.trueending_unlocked:
         return
 
-    if persistent.loop3 and loopflag < 4:
-        if persistent.hikaru_dies:
-            $ should_block_label = "saveprohibiteded_hikaru"
-        elif persistent.shiori_dies:
-            $ should_block_label = "saveprohibiteded_shiori"
-        elif persistent.yamato_dies:
-            $ should_block_label = "saveprohibiteded_yamato"
-    elif persistent.loop2 and loopflag < 3:
-        if persistent.hikaru_dies:
-            $ should_block_label = "saveprohibiteded_hikaru"
-        elif persistent.shiori_dies:
-            $ should_block_label = "saveprohibiteded_shiori"
-        elif persistent.yamato_dies:
-            $ should_block_label = "saveprohibiteded_yamato"
-    elif persistent.loop1 and loopflag < 2:
-        if persistent.hikaru_dies:
-            $ should_block_label = "saveprohibiteded_hikaru"
-        elif persistent.shiori_dies:
-            $ should_block_label = "saveprohibiteded_shiori"
-        elif persistent.yamato_dies:
-            $ should_block_label = "saveprohibiteded_yamato"
+    python:
+        dead_labels = []
+
+        if persistent.loop3 and loopflag < 4:
+            if persistent.hikaru_dies:
+                dead_labels.append("saveprohibiteded_hikaru")
+            if persistent.shiori_dies:
+                dead_labels.append("saveprohibiteded_shiori")
+            if persistent.yamato_dies:
+                dead_labels.append("saveprohibiteded_yamato")
+            if dead_labels:
+                should_block_label = random.choice(dead_labels)
+
+        elif persistent.loop2 and loopflag < 3:
+            if persistent.hikaru_dies:
+                dead_labels.append("saveprohibiteded_hikaru")
+            if persistent.shiori_dies:
+                dead_labels.append("saveprohibiteded_shiori")
+            if persistent.yamato_dies:
+                dead_labels.append("saveprohibiteded_yamato")
+            if dead_labels:
+                should_block_label = random.choice(dead_labels)
+
+        elif persistent.loop1 and loopflag < 2:
+            if persistent.hikaru_dies:
+                dead_labels.append("saveprohibiteded_hikaru")
+            if persistent.shiori_dies:
+                dead_labels.append("saveprohibiteded_shiori")
+            if persistent.yamato_dies:
+                dead_labels.append("saveprohibiteded_yamato")
+            if dead_labels:
+                should_block_label = random.choice(dead_labels)
 
     return
+
 # screens.rpy
 screen safe_block_redirect():
     if should_block_label and not block_scheduled:

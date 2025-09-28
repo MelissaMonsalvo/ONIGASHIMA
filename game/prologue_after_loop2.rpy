@@ -21,7 +21,7 @@ label prologue_loop2:
 
     n "..."
 
-    MC "STay quIeT iN tHeRre."
+    MC yan3 "STay quIeT iN tHeRre."
 
     n2 "I’M wALkINg. {w} bReAthInG. {w} SMiLing."
 
@@ -31,7 +31,7 @@ label prologue_loop2:
 
     n "...you..."
 
-    MC "HhHHRaAAHaHhAH!"
+    MC yansm3 "HhHHRaAAHaHhAH!"
 
     n2 "OnE MOre."
 

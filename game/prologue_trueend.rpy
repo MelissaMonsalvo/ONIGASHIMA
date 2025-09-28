@@ -22,8 +22,6 @@ label prologue_trueend:
     n2 "DoEsN’t MaTtEr. {w}YoU’Re hErE. {w}YoU’Re bAcK."
     n2 "tHaT’s EnOuGh."
 
-    play sound "sfx/heartbeat_soft.ogg"
-    $ renpy.pause(0.5)
 
     n "Back? {w}From where?"
 
@@ -41,8 +39,6 @@ label prologue_trueend:
 
     n2 "YoU’Ll ReMeMbEr. {w}AnD iF nOt–{w}I'lL rEmEmBeR eNoUgH fOr Us BoTh."
 
-    play sound "sfx/wind_cave.ogg"
-    $ renpy.pause(1.0)
 
     n "..."
 

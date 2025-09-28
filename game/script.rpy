@@ -9,7 +9,10 @@ init:
     $ wipeup2 = CropMove(0.07, "wipeup")
     $ wipedown2 = CropMove(0.07, "wipedown")
 
-
+init python:
+    def delete_all_saves():
+        for savegame in renpy.list_saved_games(fast=True):
+            renpy.unlink_save(savegame)
 
 
 # AFTER LOAD STUFF
@@ -138,36 +141,46 @@ label start:
     #jump prologue_loop2
     $ _prev_music_volume = _preferences.volumes["music"]
     if persistent.trueendingunlocked:
+        $ current_route = "route1"
         $ loopflag = 5
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
         jump prologue_trueend
     if persistent.loop8:
+        $ current_route = "route2"
         $ loopflag = 4
         jump prologue_loop8
     if persistent.loop7:
+        $ current_route = "route2"
         $ loopflag = 4
         jump prologue_loop7
     if persistent.loop6:
+        $ current_route = "route2"
         $ loopflag = 4
         jump prologue_loop6
     if persistent.loop5:
+        $ current_route = "route2"
         $ loopflag = 4
         jump prologue_loop5
     if persistent.loop4:
+        $ current_route = "route2"
         $ loopflag = 4
         jump prologue_loop4
     if persistent.loop3:
+        $ current_route = "route2"
         $ loopflag = 4
         jump prologue_loop3
     if persistent.loop2:
+        $ current_route = "route2"
+        $ current_loop = 2
         $ loopflag = 3
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
         jump prologue_loop2
     if persistent.loop1:
+        $ current_route = "route2"
         $ loopflag = 2
         $ current_loop = 2
         jump prologue_loop1

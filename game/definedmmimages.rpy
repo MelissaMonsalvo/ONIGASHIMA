@@ -26,7 +26,6 @@ image mc_mm_loop3 = LiveComposite(
     (2870, 2902),
     (0,0), "gui/Main Menu/base.webp",
     (0,0), "gui/Main Menu/ONI/face.webp",
-    (0,0), "gui/Main Menu/EXPRESSIONS/eye_white_evil.webp",
     (0,0), "gui/Main Menu/necklace.webp",
     (0,0), "gui/Main Menu/mask.webp",
     (0,0), "gui/Main Menu/ONI/hand_oni.webp",
