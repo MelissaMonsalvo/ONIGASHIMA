@@ -32,8 +32,8 @@ define location_positions = {
     "shrine": (820, 200),
     "forest": (350, 290),
     "dojo": (1420, 500),
-    "village": (975, 950),
-    "house": (325, 850)
+    "village": (975, 850),
+    "house": (325, 750)
 }
 
 
@@ -93,7 +93,7 @@ define ghost_events = {
 }
 
 ####################################################################
-#Labels for testing Map 
+#Labels for testing Map
 ####################################################################
 
 #Dont Delete
@@ -228,7 +228,7 @@ screen map_screen():
             $ icon_height = 190
             $ button_width = 284
             $ icon_x = pos_x + (button_width // 2) - (icon_width // 2)
-            $ offset_x = i * 50  
+            $ offset_x = i * 50
             $ icon_x += offset_x
             $ icon_y = pos_y - icon_height - 2
 
@@ -744,7 +744,7 @@ label loop2_shiori_mandatory4b:
 ###########Ghost###
 label ghost_shiori_1b:
     "ghost_shiori_1"
-    
+
     return
 
 label ghost_shiori_2b:
