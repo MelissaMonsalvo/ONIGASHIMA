@@ -120,7 +120,7 @@ screen main_menu():
                 text _("START"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action Start()
 
@@ -128,7 +128,7 @@ screen main_menu():
                 text _("LOAD"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("load")
 
@@ -136,7 +136,7 @@ screen main_menu():
                 text _("SETTINGS"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action Show("preferences")
 
@@ -144,7 +144,7 @@ screen main_menu():
                 text _("CONTROLS"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("help")
 
@@ -152,7 +152,7 @@ screen main_menu():
                 text _("EXTRAS"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("extras")
 
@@ -160,7 +160,7 @@ screen main_menu():
                 text _("CREDITS"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("credits")
 
@@ -168,7 +168,7 @@ screen main_menu():
                 text _("QUIT TO DESKTOP"):
                     hover_color tt_color
                     idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines [(3, tt_out, 0, 0)]
+                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action Quit()
 
