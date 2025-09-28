@@ -13,8 +13,9 @@ init python:
     ## The size of gallery buttons/thumbnails
     gallery_thumb_size = (415, 233)
     gallery_button_size = (480, 302)
-    gallery_thumb_pos = (0, 0)
-    gallery_bg_pos = (-32, -34)
+    gallery_thumb_pos = (32, 34)
+    #gallery_bg_pos = (-32, -34)
+    gallery_bg_pos = (0, 0)
     ## For convenience's sake: list off all the gallery image
     ## names we're going to use in this gallery
     gallery_buttons = [
@@ -42,81 +43,129 @@ init python:
     ## These use the names declared in the gallery_buttons list
     g.button("shiori cg1")
     g.unlock_image("cg_shioriloop1")
+    g.transform(Transform(xysize=(1920, 1080)))
 
     g.button("shiori cg3")
     g.unlock_image("cg_loop3shiori")
+    g.transform(Transform(xysize=(1920, 1080)))
 
 
     g.button("yamato cg1")
     g.unlock_image("cg_loop1yamato")
+    g.transform(Transform(xysize=(1920, 1080)))
 
     g.button("yamato cg3")
     g.unlock_image("cg_loop3yamato")
+    g.transform(Transform(xysize=(1920, 1080)))
 
 
 
     g.button("hikaru cg1")
     g.unlock_image("cg_loop1hikaru")
+    g.transform(Transform(xysize=(1920, 1080)))
 
     g.button("hikaru cg3")
     g.unlock_image("cg_loop3hikarui")
+    g.transform(Transform(xysize=(1920, 1080)))
 
 
 
     g.button("cg final")
     g.unlock_image("cg_trueending")
+    g.transform(Transform(xysize=(1920, 1080)))
 
 ############################################################
 ### THUMBNAILS ###
 ############################################################
-image cg final_thumb = Transform("images/cg_trueending.png", xysize=gallery_thumb_size)
+image cg final_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_trueending.png", xysize=gallery_thumb_size)
+)
+
 image cg final_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "cg_final_thumb"
+    gallery_thumb_pos, Transform("images/cg_trueending.png", xysize=gallery_thumb_size)
 )
 
-image shiori cg1_thumb = Transform("images/cg_shioriloop1.png", xysize=gallery_thumb_size)
+
+image shiori cg1_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_shioriloop1.png", xysize=gallery_thumb_size)
+)
+
 image shiori cg1_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "shiori cg1_thumb"
+    gallery_thumb_pos, Transform("images/cg_shioriloop1.png", xysize=gallery_thumb_size)
 )
 
-image hikaru cg1_thumb = Transform("images/cg_loop1hikaru.png", xysize=gallery_thumb_size)
+
+image hikaru cg1_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_loop1hikaru.png", xysize=gallery_thumb_size)
+)
+
 image hikaru cg1_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "hikaru cg1_thumb"
+    gallery_thumb_pos, Transform("images/cg_loop1hikaru.png", xysize=gallery_thumb_size)
 )
 
-image yamato cg1_thumb = Transform("images/cg_loop1yamato.png", xysize=gallery_thumb_size)
+
+image yamato cg1_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_loop1yamato.png", xysize=gallery_thumb_size)
+)
+
 image yamato cg1_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "yamato cg1_thumb"
+    gallery_thumb_pos, Transform("images/cg_loop1yamato.png", xysize=gallery_thumb_size)
 )
 
 
-image shiori cg3_thumb = Transform("images/cg_loop3shiori.png", xysize=gallery_thumb_size)
+
+image shiori cg3_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_loop3shiori.png", xysize=gallery_thumb_size)
+)
+
 image shiori cg3_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "shiori cg3_thumb"
+    gallery_thumb_pos, Transform("images/cg_loop3shiori.png", xysize=gallery_thumb_size)
 )
 
-image hikaru cg3_thumb = Transform("images/cg_loop3hikaru.png", xysize=gallery_thumb_size)
+
+image hikaru cg3_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_loop3hikaru.png", xysize=gallery_thumb_size)
+)
+
 image hikaru cg3_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "hikaru cg3_thumb"
+    gallery_thumb_pos, Transform("images/cg_loop3hikaru.png", xysize=gallery_thumb_size)
 )
 
-image yamato cg3_thumb = Transform("images/cg_loop3yamato.png", xysize=gallery_thumb_size)
+
+image yamato cg3_thumb = Composite(
+    gallery_button_size,
+    gallery_bg_pos, "frame gal",
+    gallery_thumb_pos, Transform("images/cg_loop3yamato.png", xysize=gallery_thumb_size)
+)
+
 image yamato cg3_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, "yamato cg3_thumb"
+    gallery_thumb_pos, Transform("images/cg_loop3yamato.png", xysize=gallery_thumb_size)
 )
     
 ############################################################
@@ -147,9 +196,7 @@ style gal_grid:
 style gal_button:
     xysize gallery_button_size
     
-    background "frame gal"
-    hover_background "frame gal hover"
-    insensitive_background Transform("frame gal", matrixcolor=ColorizeMatrix("#838383", "#838383"))
+    background None
 
     padding (50, 50)
 
