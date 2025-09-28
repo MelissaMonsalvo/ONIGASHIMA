@@ -1048,7 +1048,7 @@ label loop2_yamato:
     show expression Text("地", style="jojo_bigtext") at wriggle_zoomout(1.30, start_x+spacing*13, y_center, 2.1) as rev14
     show expression Text("大", style="jojo_bigtext") at wriggle_zoomout(1.40, start_x+spacing*14, y_center, 2.1) as rev15
 
-    MC yan "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.ekawa ,ekawa ,htrae eht fo retsaM{/sc}{/outlinecolor}{/color}{/size}{/cps}"
+    MC yan2 "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.ekawa ,ekawa ,htrae eht fo retsaM{/sc}{/outlinecolor}{/color}{/size}{/cps}"
 
     $ renpy.pause(2.6)
 
@@ -1091,7 +1091,7 @@ label loop2_yamato:
     show expression Text("に", style="jojo_bigtext") at wriggle_zoomout(0.99, start_x+spacing*11, y_center, 2.1) as revc12
     show expression Text("我", style="jojo_bigtext") at wriggle_zoomout(1.08, start_x+spacing*12, y_center, 2.1) as revc13
 
-    MC yan "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.emalf em tnarG ,htgnerts em tnarG{/sc}{/outlinecolor}{/color}{/size}{/cps}"
+    MC yan2 "{cps=30}{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}.emalf em tnarG ,htgnerts em tnarG{/sc}{/outlinecolor}{/color}{/size}{/cps}"
 
     $ renpy.pause(2.6)
 

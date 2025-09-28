@@ -323,7 +323,7 @@ label ghost_yamato_5:
 
     n "He pushes the bowl forward, the sweet smell hits you and makes you nauseous."
 
-    MC "Urk–"
+    MC hurt2"Urk–"
 
     yamato "EaT."
 
@@ -352,13 +352,13 @@ label ghost_yamato_5:
     with flashred
     $ renpy.pause(0.3)
 
-    n "He forces another spoon down on your mouth, your jaw splits open wide."
+    n "He forces another spoon down in your mouth, your jaw splits wide open."
 
     play sound "sfx/stretch.mp3"
     with flashred
     n "GLRRCHHHH-SPLTK."
 
-    n "Smething fat and wet slaps your tongue."
+    n "Something fat and wet slaps your tongue."
 
     yamato "{cps=8}DiD ya liKE ThaT oNE~?{w=0.2} hUH?{w=0.2} wAS iT tAsTy?{/cps}"
 
