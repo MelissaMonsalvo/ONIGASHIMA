@@ -376,10 +376,10 @@ label truend:
     show darken2
     with fade
 
-    show hik normal at hikaru_zoom, right
+    show hik normal at hikaru_zoom, right behind darken 2
     with dissolve
 
-    show yam normal at left:
+    show yam normal at left behind darken 2:
         xalign 0.25
         zoom 0.23
         xanchor 0.5
@@ -388,7 +388,7 @@ label truend:
         yzoom 1.0
         yoffset 0
 
-    show shi normal:
+    show shi normal behind darken 2:
         zoom 0.26
         xanchor 0.5
         xalign 0.44
@@ -465,6 +465,17 @@ label truend:
     with fade
 
 label mist_fall:
+
+    scene black
+    with fade
+
+    n "...And off they go."
+
+    scene black
+
+    with fade
+
+    pause 2.5
 
     scene cliff
     show particleFog with dissolve:
@@ -1222,11 +1233,24 @@ label confrontation:
 
     hide wewe
 
-    show expression Text("[persistent.player_name]", style="jojo_bigtext") at Position(xalign=0.5, yalign=0.5)
+    show expression Text("[persistent.player_name]", style="jojo_bigtext") at Position(xalign=0.5, yalign=0.5) as nononoo
 
 
     with dissolve
     $ renpy.pause(3.5)
+
+    hide nononoo
+
+    show expression Text("Thank You", style="jojo_bigtext") at Position(xalign=0.5, yalign=0.5) as nononooeee
+
+    pause 3.5
+
+    hide nononooeee
+
+    scene black
+
+    with fade
+
 
 
     $ persistent.shiori_dies = False
