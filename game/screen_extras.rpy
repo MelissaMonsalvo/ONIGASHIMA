@@ -110,8 +110,8 @@ screen extras():
 
 
     # Restore the main menu music upon leaving.
-    on "replaced" action Play("music", "Main Menu.mp3")
-
+    #on "replaced" action Play("music", "Main Menu.mp3")
+    # TODO: Play correct track based on route
 
 
 

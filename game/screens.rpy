@@ -322,7 +322,7 @@ screen choice(items):
         for idx, (caption, action, chosen) in enumerate(items):
 
             button:
-                action action
+                action action, Function(save_choices, caption)
                 xalign 0.5
                 xsize 1301
                 ysize 426
@@ -1401,21 +1401,29 @@ screen history():
 
             for h in _history_list:
 
-                frame:
-                    has vbox
-                    if h.who:
-                        label h.who:
-                            substitute False
-                            ## Take the color of the who text
-                            ## from the Character, if set
-                            if "color" in h.who_args:
-                                text_color h.who_args["color"]
-                            xsize 280   # this number and the null width
-                                        # number should be the same
+                if h.kind == "choice":
+                    vbox:
+                        text "CHOSEN:":
+                            color RED
+                        text "       [h.what]"
 
-                    $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                    text what:
-                        substitute False
+                else:
+
+                    frame:
+                        has vbox
+                        if h.who:
+                            label h.who:
+                                substitute False
+                                ## Take the color of the who text
+                                ## from the Character, if set
+                                if "color" in h.who_args:
+                                    text_color h.who_args["color"]
+                                xsize 280   # this number and the null width
+                                            # number should be the same
+
+                        $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                        text what:
+                            substitute False
 
                 null height 50
                 add "gui/history_divider.webp"
@@ -1475,10 +1483,12 @@ style history_text:
     font NOTO_JP
 
 style history_label:
-    is sl_label
+    xalign 0.0
 
 style history_label_text:
-    is sl_label_text
+    font NOTO_JP_BOLD
+    size 60
+    color BLACK
 
 
 

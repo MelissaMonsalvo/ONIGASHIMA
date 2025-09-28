@@ -59,10 +59,10 @@ screen main_menu():
     on "show" action Function(play_menu_music)
 
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ tt_color = BLACK
         $ tt_out = BLACK
-    elif current_route == "route2":
+    else:
         $ tt_color = WHITE
         $ tt_out = RED
 
@@ -109,66 +109,66 @@ screen main_menu():
             at ts_enterX(-80, 1.0)
 
 
-            spacing -20
+            spacing -40
 
             pos (40, 40)
 
             add "logo" xpos 40 ypos -30
-            null height 20
+            null height 80
 
             button:
                 text _("START"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action Start()
 
             button:
                 text _("LOAD"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("load")
 
             button:
                 text _("SETTINGS"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action Show("preferences")
 
             button:
                 text _("CONTROLS"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("help")
 
             button:
                 text _("EXTRAS"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("extras")
 
             button:
                 text _("CREDITS"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action ShowMenu("credits")
 
             button:
                 text _("QUIT TO DESKTOP"):
                     hover_color tt_color
-                    idle_outlines [(3, tt_out, 0, 0)]
-                    hover_outlines ([(3, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
+                    idle_outlines [(2, tt_out, 0, 0)]
+                    hover_outlines ([(2, RED, 0, 0)] if persistent.loop1 else [(0, BLACK, 0, 0)])
 
                 action Quit()
 
@@ -188,9 +188,10 @@ style mm_text:
     #idle_outlines [(1, BLACK, 0, 0)]
     #hover_outlines [(0, BLACK, 0, 0)]
 
-    size 40
+    size 35
     bold False
     italic False
+    kerning 5
 
 
 screen content_warning():
