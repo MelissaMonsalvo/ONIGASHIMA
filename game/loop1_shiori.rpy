@@ -4,6 +4,25 @@ label loop1_shiori:
 
     ## TWO DAYS BEFORE THE RED MOON
 
+    scene black
+    with fade
+
+    scene white_bg
+    with out_182
+
+    show petals_dense2
+    show petals_scatter2
+
+    n "These past few days have been odd, to say the least."
+
+    n "You spent your days with Shiori the most."
+
+    n "You worry for her mental state as the red moon is coming."
+
+    scene black
+
+    with fade
+
 
     scene shrine day:
         zoom 0.5
