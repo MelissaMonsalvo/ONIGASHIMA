@@ -246,7 +246,7 @@ label truend:
 
     hide shi
     with fade
-    
+
     n "And with that, she turns away, dragging her feet as if daring them to call her back."
     n "{i}The shrine doors creak as Shiori disappears into the dark.{/i} The silence left behind is unbearable."
 
@@ -733,6 +733,11 @@ label mist_fall:
     scene black
     n "And on they went.{w=0.3}"
     n "The mountain air is suffocating, the mist here is {color=#ff002e}blood red{/color}, a different color than at the village borders."
+
+    pause 0.4
+    scene black
+    with fade
+    pause 0.3
 
 label body_discovery:
 
