@@ -936,7 +936,7 @@ label beforefirstloop:
 
     #jump loop1_yamato_mandatory1
     if persistent.trueendingunlocked:
-        jump truend:
+        jump truend
     else:
         jump map
 
