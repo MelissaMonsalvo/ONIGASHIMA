@@ -181,10 +181,19 @@ label map:
     # elif persistent.loop2:
     #     $  current_loop = 2
 
-
-    #$ persistent.trueendingunlocked = True
     if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
         $ check_rutes()
+
+    if current_Day > 5:
+        if persistent.trueendingunlocked and store.current_loop == 1:
+            jump truend
+        else:
+            $ check_rutes()
+        return
+
+
+    #$ persistent.trueendingunlocked = True
+
 
     if persistent.trueendingunlocked and current_Day > 5 and store.current_loop == 1:
         jump truend
@@ -308,61 +317,66 @@ python early:
 
 #Checa en la lista de eventos de vivos y muertos
     def check_mandatory_events(location):
-        #print("\n\n\nBuscando nuevo evento")
-        # Guardar candidatos vivos y muertos
-        alive_candidates = []
-        dead_candidates = []
-        priority = []
-
+        candidates = []
         characters = ["shiori", "yamato", "hikaru"]
-        priority = [char for char in characters if not getattr(persistent, f"{char}_dies", False)]
-        priority.extend(char for char in characters if getattr(persistent, f"{char}_dies", False))
 
-        for char in priority:
+        for char in characters:
+            is_dead = getattr(persistent, f"{char}_dies", False)
 
-            if getattr(persistent, f"{char}_dies", False):
+            if is_dead:
                 events_completed = getattr(store, f"{char}_ghost_events_completed", 0)
-                #print(f"{char} muerto")
+                events_list = ghost_events.get(char, [])
+
+                # If you want ghost events to require location/time, uncomment below and adjust
+                # if events_completed < len(mandatory_events[store.current_loop][char]):
+                #     next_event = mandatory_events[store.current_loop][char][events_completed]
+                #     if next_event["location"] == location and next_event["time"] == store.current_time_block:
+                #         candidates.append({
+                #             "char": char,
+                #             "is_dead": True,
+                #             "events_completed": events_completed,
+                #             "event_label": events_list[events_completed]
+                #         })
+
+                # If ghost events can always be triggered, just check length
+                if events_completed < len(events_list):
+                    candidates.append({
+                        "char": char,
+                        "is_dead": True,
+                        "events_completed": events_completed,
+                        "event_label": events_list[events_completed]
+                    })
+
             else:
                 events_completed = getattr(store, f"{char}_events_completed", 0)
-                #print(f"{char} vivo")
+                events_list = mandatory_events[store.current_loop][char]
 
+                if events_completed < len(events_list):
+                    next_event = events_list[events_completed]
+                    if (next_event["location"] == location and
+                        next_event["time"] == store.current_time_block):
+                        candidates.append({
+                            "char": char,
+                            "is_dead": False,
+                            "events_completed": events_completed,
+                            "event_label": next_event["event"]
+                        })
 
-            #print(f"Eventos luego de dar click:  {events_completed}")
-            #print(f"{char} eventos completos {events_completed}")
+        if not candidates:
+            return None
 
-            if events_completed < len(mandatory_events[store.current_loop][char]):
+        # Sort: most events completed first, then alive before dead
+        candidates.sort(key=lambda c: (-c["events_completed"], c["is_dead"]))
 
-                next_event = mandatory_events[store.current_loop][char][events_completed]
+        selected = candidates[0]
 
-                #print(f"{char} next_event {next_event["event"]} in {next_event["location"]} at {next_event["time"]}")
+        # Progress their event counter
+        if selected["is_dead"]:
+            setattr(store, f"{selected['char']}_ghost_events_completed", selected["events_completed"] + 1)
+        else:
+            setattr(store, f"{selected['char']}_events_completed", selected["events_completed"] + 1)
 
-                if (next_event["location"] == location and next_event["time"] == store.current_time_block):
-
-                    if getattr(persistent, f"{char}_dies", False):
-                        # Muerto → mandar a fantasma
-                        ghost_event = get_next_ghost_event(char)
-                        if ghost_event:
-                            dead_candidates.append(ghost_event)
-                    else:
-                        # Vivo → evento normal
-                        setattr(store, f"{char}_events_completed", events_completed + 1)
-                        alive_candidates.append(next_event["event"])
-                        #print(f"{char}_dies = False")
-
-            # Prioridad: primero vivos, luego muertos
-            if alive_candidates:
-                #print(f"Evento vivo: {alive_candidates[0]}******************************************")
-                return alive_candidates[0]
-            elif dead_candidates:
-
-                ghost_completed = getattr(store, f"{char}_ghost_events_completed", 0)
-                setattr(store, f"{char}_ghost_events_completed", ghost_completed + 1)
-
-                #print(f"Evento Muerto: {dead_candidates[0]}******************************************")
-                return dead_candidates[0]
-
-        return None
+        return selected["event_label"]
 
 
     #Funcion para obtener eventos fantasma
