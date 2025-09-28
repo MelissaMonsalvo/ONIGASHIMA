@@ -77,7 +77,7 @@ label loop1_yamato:
         "I gave it to you":
             MC nervous "Did I give it to you during sparring?"
             yamato "Ya? {w=0.15}Hah, nah."
-        "You get bitten by a wolf":
+        "You got bitten by a wolf":
             MC surprised "Did you get bitten by a wolf during patrol?"
             yamato "{cps=13}What'cha mean? All the wolves around here got eaten by the damn Yamakui.{/cps}"
 
