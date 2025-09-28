@@ -705,6 +705,12 @@ label after_many_clicks:
 
     stop sound
 
+    n2 "HUngRy HunGRy HuNGrY."
+
+    n2 "StARt AgAIn."
+
+    pause 0.5
+
 
 
     $ persistent.shiori_dies = True

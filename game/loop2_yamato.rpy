@@ -1414,7 +1414,11 @@ label loop2_yamato:
 
     stop sound
 
-    n "I don’t want to exist anymore."
+    n2 "HUngRy HunGRy HuNGrY."
+
+    n2 "StARt AgAIn."
+
+    pause 0.5
     $ persistent.yamato_dies = True
 
     $ persistent.loop2 = True
