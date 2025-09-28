@@ -417,7 +417,7 @@ label truend:
     yamato "Tch. Half of it’s rotten. What’s it say?"
 
     show shi sad with dissolve
-    shiori "Something about... {w}famine, and long winters when nothing grew.'"
+    shiori "Something about... {w}'famine, and long winters when nothing grew.'"
     shiori "{i}It says... outsiders were 'invited' to the village.{/i} But... no one was ever recorded leaving."
 
     show hik serious with dissolve
@@ -537,7 +537,7 @@ label mist_fall:
     hikaru "{sc=1}Ah–!{/sc}{w=0.1}"
     with vpunch
 
-    n "They stumble, triy to flap their wings but it seems like the air is dragging Hikaru down."
+    n "They stumble, trying to flap their wings but it seems like the air is dragging Hikaru down."
 
     show yam shocked with sshake:
         zoom 0.29
