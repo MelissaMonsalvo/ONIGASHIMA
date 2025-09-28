@@ -56,6 +56,8 @@ screen main_menu():
     on "show" action Function(restore_all_volumes) ### DO NOT DELETE
     tag menu
 
+    on "show" action Function(play_menu_music)
+
 
     if current_route == "route1":
         $ tt_color = BLACK

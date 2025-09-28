@@ -62,7 +62,12 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "music/MainMenu.mp3"
+init python:
+    def play_menu_music():
+        if not persistent.loop1:
+            renpy.music.play("music/MainMenu.mp3", channel='music', loop=True, fadein=1.0)
+        else:
+            renpy.music.play("music/MainMenu2.mp3", channel='music', loop=True, fadein=1.0)
 
 
 ## Transitions #################################################################
