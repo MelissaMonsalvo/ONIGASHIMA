@@ -46,7 +46,7 @@ screen main_menu():
         vbox:
             at ts_enterX(-80, 1.0)
 
-            
+
             spacing -20
 
             pos (40, 40)
@@ -76,7 +76,7 @@ screen main_menu():
 
             button:
                 text _("CREDITS") hover_color tt_color
-                action ShowMenu("credits") 
+                action ShowMenu("credits")
 
             button:
                 text _("QUIT TO DESKTOP") hover_color tt_color
@@ -94,7 +94,7 @@ style mm_button:
 style mm_text:
     font NOTO_JP
     color WHITE
-    
+
     #idle_outlines [(1, BLACK, 0, 0)]
     #hover_outlines [(0, BLACK, 0, 0)]
 
@@ -103,5 +103,37 @@ style mm_text:
     italic False
 
 label splashscreen:
+    $ _window_hide()
+    # Show first image instantly, with fade
+    scene expression "splashscreen/seizure.jpg" with fade
+
+    # Block all input for 3 seconds WHILE first image is shown
+    $ renpy.pause(3.0, hard=True)
+    # Show first image a bit longer (adjust this to your liking)
+    $ renpy.pause(1.0)   # This CAN be clicked/fast-forwarded, or set to 0 if you want exactly 3 sec
+
+    # Show the rest of the splash images, clickable as normal
+    scene expression "splashscreen/ss1.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene expression "splashscreen/ss2.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene expression "splashscreen/ss3.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene expression "splashscreen/ss3a.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene expression "splashscreen/ss4.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene expression "splashscreen/ss4a.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene expression "splashscreen/ss5.jpg" with fade
+    $ renpy.pause(0.4)
+
+    scene black with fade
     call screen press_anything_to_continue()
     return
