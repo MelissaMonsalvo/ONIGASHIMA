@@ -9,40 +9,14 @@ init:
     $ wipeup2 = CropMove(0.07, "wipeup")
     $ wipedown2 = CropMove(0.07, "wipedown")
 
-# =========================
-# ROUTE FLAGS
-# =========================
-default persistent.route1 = True
-default persistent.route2 = False
 
-#######
-#SAVE FLAGS
-########
 
-default hikaru_alive = True
-default yamato_alive = True
-default shiori_alive = True
 
+# AFTER LOAD STUFF
+default loopflag = 1  # Use this to track which playthrough (set at start of game/loop)
 
 default should_block_label = None
 default block_scheduled = False
-
-init -1 python:
-    def auto_redirect_check():
-        if store.was_loaded_from_save:
-            if not persistent.hikaru_dies and store.hikaru_alive:
-                renpy.call_in_new_context("saveprohibiteded_hikaru")
-            elif not persistent.yamato_dies and store.yamato_alive:
-                renpy.call_in_new_context("saveprohibiteded_yamato")
-            elif not persistent.shiori_dies and store.shiori_alive:
-                renpy.call_in_new_context("saveprohibiteded_shiori")
-
-            # prevent future triggering
-            store.was_loaded_from_save = False
-
-
-
-
 
 # Use a normal store variable, not config
 default current_route = "route1"
@@ -143,6 +117,14 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
+    if persistent.shiori_dies:
+        $ shiori_alive = False
+    else:
+        if persistent.hikaru_dies:
+            $ hikaru_alive = False
+        else:
+            if persistent.yamato_dies:
+                $ yamato_alive = False
     #jump map
     #call screen name_input
     #call screen fake_name_input
@@ -156,30 +138,40 @@ label start:
     #jump prologue_loop2
     $ _prev_music_volume = _preferences.volumes["music"]
     if persistent.trueendingunlocked:
+        $ loopflag = 5
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
         jump prologue_trueend
     if persistent.loop8:
+        $ loopflag = 4
         jump prologue_loop8
     if persistent.loop7:
+        $ loopflag = 4
         jump prologue_loop7
     if persistent.loop6:
+        $ loopflag = 4
         jump prologue_loop6
     if persistent.loop5:
+        $ loopflag = 4
         jump prologue_loop5
     if persistent.loop4:
+        $ loopflag = 4
         jump prologue_loop4
     if persistent.loop3:
+        $ loopflag = 4
         jump prologue_loop3
     if persistent.loop2:
+        $ loopflag = 3
         $ persistent.route1 = True
         $ persistent.route2 = False
         $ update_route()
         jump prologue_loop2
     if persistent.loop1:
+        $ loopflag = 2
         $ current_loop = 2
         jump prologue_loop1
     else:
+        $ loopflag = 1
         $ current_loop = 1
         jump prologue
