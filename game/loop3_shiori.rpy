@@ -646,4 +646,6 @@ label loop3_shiori:
 
     $ persistent.loop3 = True
 
+    $ renpy.full_restart()
+
     return

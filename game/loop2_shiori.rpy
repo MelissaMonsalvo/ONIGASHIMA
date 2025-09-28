@@ -693,4 +693,6 @@ label after_many_clicks:
 
     ## at the end of the route shiori dies
 
+    $ renpy.full_restart()
+
     return

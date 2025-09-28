@@ -839,4 +839,6 @@ label loop3_yamato:
 
     ## at the end of the route yamato dies
 
+    $ renpy.full_restart()
+
     return

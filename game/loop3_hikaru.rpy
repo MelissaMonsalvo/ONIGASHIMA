@@ -639,4 +639,6 @@ label loop3_hikaru:
 
     $ persistent.loop3 = True
 
+    $ renpy.full_restart()
+
     return
