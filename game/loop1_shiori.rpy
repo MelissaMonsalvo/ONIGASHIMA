@@ -884,6 +884,8 @@ label loop1_shiori:
 
     $ persistent.loop1 = True
 
+    $ persistent.trueending.unlocked = False
+
     $ renpy.full_restart()
 
 
