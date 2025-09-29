@@ -104,8 +104,8 @@ init:
             linear 1.5 alpha 0.25 blur 3
             repeat
 
-    image magic_circle = "images/magic_circle.png"
-    image magic_circle_red = "images/magic_circle_red.png"
+    image magic_circle = "images/magic_circle.webp"
+    image magic_circle_red = "images/magic_circle_red.webp"
 transform spin_forever:
     rotate 0
     linear 2.5 rotate 360

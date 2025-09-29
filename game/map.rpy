@@ -193,22 +193,22 @@ define ghost_events = {
 
 
 define character_icons_idle = {
-    "shiori": "images/map/map_shiori_idle.png",
-    "yamato": "images/map/map_yamato_idle.png",
-    "hikaru": "images/map/map_hikaru_idle.png"
+    "shiori": "images/map/map_shiori_idle.webp",
+    "yamato": "images/map/map_yamato_idle.webp",
+    "hikaru": "images/map/map_hikaru_idle.webp"
 }
 
 define character_icons_red = {
-    "shiori": "images/map/map_shiori_red_hover.png",
-    "yamato": "images/map/map_yamato_red_hover.png",
-    "hikaru": "images/map/map_hikaru_red_hover.png"
+    "shiori": "images/map/map_shiori_red_hover.webp",
+    "yamato": "images/map/map_yamato_red_hover.webp",
+    "hikaru": "images/map/map_hikaru_red_hover.webp"
 }
 
 
 define character_icons_yellow= {
-    "shiori": "images/map/map_shiori_yellow_hover.png",
-    "yamato": "images/map/map_yamato_yellow_hover.png",
-    "hikaru": "images/map/map_hikaru_yellow_hover.png"
+    "shiori": "images/map/map_shiori_yellow_hover.webp",
+    "yamato": "images/map/map_yamato_yellow_hover.webp",
+    "hikaru": "images/map/map_hikaru_yellow_hover.webp"
 }
 
 
@@ -283,16 +283,16 @@ screen map_screen():
     #BG
     #$ check_rutes()
     if current_time_block == "Day":
-        add "images/map/map_day.png"
+        add "images/map/map_day.webp"
     else:
-        add "images/map/map_night.png"
+        add "images/map/map_night.webp"
     #textbutton "" xsize 1920 ysize 1080 action Function (check_rutes)
 
-    imagebutton auto "images/map/shrine_%s.png" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 820 ypos 200
-    imagebutton auto "images/map/forest_%s.png" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
-    imagebutton auto "images/map/dojo_%s.png" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1420 ypos 500
-    imagebutton auto "images/map/village_%s.png" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
-    imagebutton auto "images/map/house_%s.png" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
+    imagebutton auto "images/map/shrine_%s.webp" action Function(visit_location_func, "shrine") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 820 ypos 200
+    imagebutton auto "images/map/forest_%s.webp" action Function(visit_location_func, "forest") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 350 ypos 290
+    imagebutton auto "images/map/dojo_%s.webp" action Function(visit_location_func, "dojo") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 1420 ypos 500
+    imagebutton auto "images/map/village_%s.webp" action Function(visit_location_func, "village") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 975 ypos 850
+    imagebutton auto "images/map/house_%s.webp" action Function(visit_location_func, "house") hover_sound "/sfx/hover_s.mp3" activate_sound "/sfx/active_s.mp3" xpos 325 ypos 750
 
     # Mostrar iconos de personajes según su ubicación y estado
     for i, character in enumerate(["shiori", "yamato", "hikaru"]):
@@ -326,7 +326,7 @@ screen map_screen():
         ypadding 50
         xsize 600
         ysize 250
-        background "map/question_frame.png"   # <- This sets your custom image
+        background "map/question_frame.webp"   # <- This sets your custom image
 
         vbox:
             xalign 0.5

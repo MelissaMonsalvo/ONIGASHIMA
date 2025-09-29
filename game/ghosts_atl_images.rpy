@@ -1,7 +1,7 @@
 #image ghost_hikaru_idle = "Ghosts/ghost_hikaru_idle.png"
 
 #scene here
-image black_screen = "images/black_screen.png"
+image black_screen = "#000"
 
 #hikaru image
 image ghost_hikaru idle = LiveComposite(

@@ -363,7 +363,8 @@ label ghost_shiori_5:
     ## shiori's ghost appears with low opacity
     show ghost_shiori normal at c_show_28
 
-    MC angry2 "Let me out!"
+    #MC angry2 "Let me out!"
+    MC mad "Let me out!"
     with sshake
 
     call screen ghost_shiori_5_open2()
@@ -391,7 +392,7 @@ label ghost_shiori_5:
     ## shiori's ghost image creeps in
     show ghost_shiori normal at c_show_30
 
-    MC angry2 "YoU ArE DEaD, I Ate YOu!"
+    MC mad "YoU ArE DEaD, I Ate YOu!"
 
     scene black
 

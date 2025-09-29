@@ -1,5 +1,5 @@
 
-image mc_mm_loop2 = LiveComposite(
+image mc_mm_loop2 = Composite(
     (2870, 2902),
     (0,0), "gui/Main Menu/base.webp",
     (0,0), "gui/Main Menu/face.webp",
@@ -22,7 +22,7 @@ image mc_mm_loop2 = LiveComposite(
 
     )
 
-image mc_mm_loop3 = LiveComposite(
+image mc_mm_loop3 = Composite(
     (2870, 2902),
     (0,0), "gui/Main Menu/base.webp",
     (0,0), "gui/Main Menu/ONI/face.webp",
@@ -32,7 +32,7 @@ image mc_mm_loop3 = LiveComposite(
 
     )
 
-image mc_mm_loop1 = LiveComposite(
+image mc_mm_loop1 = Composite(
     (2870, 2902),
     (0,0), "gui/Main Menu/base.webp",
     (0,0), "gui/Main Menu/face.webp",
