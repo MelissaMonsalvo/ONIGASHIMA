@@ -112,7 +112,6 @@ label ghost_shiori_2:
     #$ renpy.pause(0.2)
 
     # Silence, no dialogue yet
-    window hide
     $ renpy.pause(1.5)
 
     # Eyes slowly open, fade in Shiori crawling from below
@@ -131,7 +130,6 @@ label ghost_shiori_2:
     # SOME WHISPERING SFX
 
     # Only now allow input
-    window show
 
     n "...Was that....?"
 
@@ -280,7 +278,6 @@ label ghost_shiori_4:
     stop sound
     stop music
 
-    window show
     n "..."
 
 

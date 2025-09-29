@@ -68,9 +68,10 @@ image ghost_shiori normal = LiveComposite(
             "images/sprite_shiori_ghost/tail_mouth.PNG", .5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
         ),
-    (0,0),"images/sprite_shiori_ghost/body_idle.webp",
     (0,0),"images/sprite_shiori_ghost/ear_left.webp",
     (0,0),"images/sprite_shiori_ghost/ear_right.webp",
+    (0,0),"images/sprite_shiori_ghost/body_idle.webp",
+
     (0,0), Animation(
             "images/sprite_shiori_ghost/mouth.PNG", 4.5,
             "images/sprite_shiori_ghost/mouth1.PNG", .25,
@@ -89,9 +90,9 @@ image ghost_shiori idle = LiveComposite(
             "images/sprite_shiori_ghost/tail_mouth.PNG", .5,
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
         ),
-    (0,0),"images/sprite_shiori_ghost/body_idle.webp",
     (0,0),"images/sprite_shiori_ghost/ear_left.webp",
     (0,0),"images/sprite_shiori_ghost/ear_right.webp",
+    (0,0),"images/sprite_shiori_ghost/body_idle.webp",
     (0,0), Animation(
             "images/sprite_shiori_ghost/mouth.PNG", 4.5,
             "images/sprite_shiori_ghost/mouth1.PNG", .25,
@@ -111,6 +112,8 @@ image ghost_shiori attack = LiveComposite(
             "images/sprite_shiori_ghost/tail_mouth2.PNG", .25,
         ),
 
+    (0,0),"images/sprite_shiori_ghost/ear_left.webp",
+    (0,0),"images/sprite_shiori_ghost/ear_right.webp",
     (0,0),"images/sprite_shiori_ghost/body_attack.webp",
     (0,0),"images/sprite_shiori_ghost/attack_arm_hand.webp",
     (0,0),"images/sprite_shiori_ghost/attack_arm_left.webp",
@@ -120,8 +123,7 @@ image ghost_shiori attack = LiveComposite(
             "images/sprite_shiori_ghost/attack_arm_right.PNG", .5,
             "images/sprite_shiori_ghost/attack_arm_right1.PNG", .25,
         ),
-    (0,0),"images/sprite_shiori_ghost/ear_left.webp",
-    (0,0),"images/sprite_shiori_ghost/ear_right.webp",
+
 
     (0,0), Animation(
             "images/sprite_shiori_ghost/mouth.PNG", 4.5,

@@ -495,7 +495,7 @@ label loop2_yamato:
         scene shrine night with in_212:
             zoom 0.5
 
-        show shi normal:
+        show shi sad:
             zoom 0.8
             xalign 0.1
             yoffset -20

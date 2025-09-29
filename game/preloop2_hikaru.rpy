@@ -969,7 +969,6 @@ label loop2_hikaru_mandatory4:
 
     n2 "{i}That’s the real name under the skin.{/i}"
 
-    play sound "sfx/stumble.wav"
 
     show hik shocked:
         zoom 0.47
@@ -986,7 +985,6 @@ label loop2_hikaru_mandatory4:
         linear 0.04 xoffset 14 yoffset 172
         linear 0.06 xoffset 0 yoffset 180
 
-    play sound "sfx/stumble.wav"
     $ renpy.pause(0.3)
 
     hikaru "{k=2}You killed [persistent.player_name]...{/k}"
