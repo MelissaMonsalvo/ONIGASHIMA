@@ -898,7 +898,7 @@ label loop1_shiori:
     n2 "Let's go back to the entrance... and start again."
 
     n2 "Still hungry."
-    
+
 
     pause 0.5
 
@@ -911,7 +911,10 @@ label loop1_shiori:
 
     if persistent.trueendingunlocked:
         $ persistent.trueendingunlocked = False
+
     $ MainMenu(confirm=False)()
+
+    jump main_menu
 
     $ renpy.full_restart()
 

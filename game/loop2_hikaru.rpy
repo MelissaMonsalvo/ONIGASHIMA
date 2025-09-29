@@ -905,6 +905,12 @@ label yesyeysysyqsad222:
 
     stop sound
 
+    n2 "HUngRy HunGRy HuNGrY."
+
+    n2 "StARt AgAIn."
+
+    pause 0.5
+
     $ persistent.hikaru_dies = True
 
     $ persistent.loop2 = True

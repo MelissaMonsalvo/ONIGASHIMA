@@ -5,37 +5,36 @@
 python early:
     def find_nearest_mandatory_event(time_block):
         """
-        Returns the label name of the nearest available mandatory event that matches the current time block (Day/Night)
-        Prioritizes in Yamato > Shiori > Hikaru order if all else equal.
+        Returns a tuple: (event_label, character_name) of the nearest available mandatory event
+        that matches the current time block (Day/Night).
+        Prioritizes Yamato > Shiori > Hikaru if all else equal.
+        Does NOT increment counters here!
         """
         current_loop = store.current_loop
         candidates = []
         for char in ["yamato", "shiori", "hikaru"]:
             is_dead = getattr(persistent, f"{char}_dies", False)
-            # Only check alive characters
             if not is_dead and char in mandatory_events.get(current_loop, {}):
                 events_completed = getattr(store, f"{char}_events_completed", 0)
                 events_list = mandatory_events[current_loop][char]
-                # Find next event that matches current time block
                 for idx in range(events_completed, len(events_list)):
                     next_event = events_list[idx]
                     if next_event["time"] == time_block:
                         candidates.append({
                             "char": char,
                             "idx": idx,
-                            "event_label": next_event["event"],
-                            "events_completed": events_completed
+                            "event_label": next_event["event"]
                         })
-                        break  # Only take the next one per character
-        # Sort by most completed, then priority order: yamato, shiori, hikaru
-        candidates.sort(key=lambda c: (-c["events_completed"], ["yamato", "shiori", "hikaru"].index(c["char"])))
+                        break  # Only consider the next event for each character
+        # Sort by order in event list (progress), then by preference: Yamato, Shiori, Hikaru
+        candidates.sort(key=lambda c: (c["idx"], ["yamato", "shiori", "hikaru"].index(c["char"])))
         if candidates:
-            # Progress the event counter for the character
             selected = candidates[0]
-            setattr(store, f"{selected['char']}_events_completed", selected["idx"] + 1)
-            return selected["event_label"]
-        return None
+            return (selected["event_label"], selected["char"])
+        return (None, None)
+
 default redirect_event_label = None
+default redirect_event_char = None
 default redirect_message = ""
 
 image black_screen = "#000"
@@ -342,13 +341,17 @@ python early:
             renpy.take_screenshot()
             renpy.save("after_event", extra_info=f" {event_to_call}")
         else:
-            nearest_event = find_nearest_mandatory_event(store.current_time_block)
+            # Only advance time block if an actual event is called
+            nearest_event, nearest_char = find_nearest_mandatory_event(store.current_time_block)
             if nearest_event:
                 store.redirect_event_label = nearest_event
+                store.redirect_event_char = nearest_char
                 store.redirect_message = "There is nothing interesting happening here, so you go somewhere else..."
                 renpy.jump("redirect_to_event")
             else:
+                # No event for this time block—DO NOT advance day or visits
                 renpy.call("location_empty", location)
+
 
 
 #Checa en la lista de eventos de vivos y muertos
@@ -874,7 +877,27 @@ label redirect_to_event:
     with fade
     "[redirect_message]"
     with dissolve
+
+    # Actually increment event counter here!
+    if redirect_event_char == "yamato":
+        $ yamato_events_completed += 1
+    elif redirect_event_char == "shiori":
+        $ shiori_events_completed += 1
+    elif redirect_event_char == "hikaru":
+        $ hikaru_events_completed += 1
+
+    # Advance visits and day/time as normal
+    $ visits_toDay += 1
+    if visits_toDay >= 2:
+        $ current_Day += 1
+        $ visits_toDay = 0
+        $ current_time_block = "Day"
+    else:
+        $ current_time_block = "Night" if current_time_block == "Day" else "Day"
+
     call expression redirect_event_label
+
     $ redirect_event_label = None
+    $ redirect_event_char = None
     $ redirect_message = ""
     return
