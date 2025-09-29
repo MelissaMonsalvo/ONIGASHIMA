@@ -212,12 +212,14 @@ define character_icons_yellow= {
 
 label map:
 
+    # Optional: update current_loop if needed, e.g.:
     # if persistent.loop1:
     #     $ current_loop = 1
     # elif persistent.loop2:
-    #     $  current_loop = 2
+    #     $ current_loop = 2
 
-    if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
+    # Route jump if any character completed all mandatory events
+    if yamato_events_completed >= 5 or shiori_events_completed >= 5 or hikaru_events_completed >= 5:
         $ check_rutes()
 
     if current_Day > 5:
@@ -227,15 +229,40 @@ label map:
             $ check_rutes()
         return
 
-
-    #$ persistent.trueendingunlocked = True
-
-
-    if persistent.trueendingunlocked and current_Day > 5 and store.current_loop == 1:
-        jump truend
-
+    # Call the map screen (player picks location)
     call screen map_screen
-    pause
+    # (After a location has been picked and handled...)
+
+    # Check: is there any valid event for this time block?
+    $ event_exists = False
+    python:
+        for char in ["yamato", "shiori", "hikaru"]:
+            is_dead = getattr(persistent, f"{char}_dies", False)
+            if not is_dead and char in mandatory_events.get(store.current_loop, {}):
+                events_completed = getattr(store, f"{char}_events_completed", 0)
+                events_list = mandatory_events[store.current_loop][char]
+                for idx in range(events_completed, len(events_list)):
+                    next_event = events_list[idx]
+                    if next_event["time"] == current_time_block:
+                        event_exists = True
+                        break
+                if event_exists:
+                    break
+
+    if not event_exists:
+        # If there are no events for anyone at this time, auto-advance time block
+        if current_time_block == "Day":
+            $ current_time_block = "Night"
+            "Nothing important happens during the day. Night falls."
+        else:
+            $ current_Day += 1
+            $ current_time_block = "Day"
+            "The night passes quietly. A new day begins."
+        jump map
+
+    # If at least one event exists for the current time block, allow normal progression
+    return
+
 
 
 default offset_x_a = 0
