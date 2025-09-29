@@ -89,8 +89,11 @@ screen file_slots(title):
                     style_prefix "sl_btn"
 
                     if FileLoadable(slot):
-
-                        action SetLocalVariable("selected_slot", slot)
+                        
+                        if selected_slot == slot:
+                            action FileAction(slot)
+                        else:
+                            action SetLocalVariable("selected_slot", slot)
 
                         hbox:
                             text _("Slot #{}".format(slot)):
@@ -122,8 +125,10 @@ screen file_slots(title):
                     else:
                         hbox:
                             text _("NO DATA") xalign 0.0
-
-                        action SetLocalVariable("selected_slot", slot)
+                        if selected_slot == slot:
+                            action FileAction(slot)
+                        else:
+                            action SetLocalVariable("selected_slot", slot)
 
     bar value YScrollValue("sl_vp"):
         style "vscrollbar"
