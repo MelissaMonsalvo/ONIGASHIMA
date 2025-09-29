@@ -109,13 +109,13 @@ transform ts_qm_fadein(dist):
 
     ease 1.0 yoffset 0 alpha 1.0
 
-transform ts_enterX(xoff, ts_speed=0.2):
+transform ts_enterX(xoff, ts_speed=0.3):
     alpha 0.0
     xoffset xoff
-    ease ts_speed xoffset 0 alpha 1.0
+    linear ts_speed xoffset 0 alpha 1.0
 
 
-transform ts_enterY(yoff, ts_speed=0.2):
+transform ts_enterY(yoff, ts_speed=0.5):
     alpha 0.3
     yoffset yoff
     linear ts_speed yoffset 0 alpha 1.0

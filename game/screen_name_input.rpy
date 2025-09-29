@@ -1,7 +1,8 @@
 ### NAME INPUT ############################################################
 ##
 ##
-
+## Names players cannot use
+define EXCLUDE_NAMES = ["yamakui", "hikaru", "shiori", "yamato", "fuck", "bitch", "ass" ]
 screen name_input():
     fixed:
         xysize (config.screen_width, config.screen_height)
@@ -40,6 +41,9 @@ screen name_input():
 
                 exclude "*$#!{}()-@+=/^%"
 
+        if persistent.player_name.lower().replace(" ", "") in EXCLUDE_NAMES:
+            text "You cannot choose this name." color RED size 25 xalign 0.5 yalign 0.6 yoffset 80
+
         ### CONFIRM/REVERT ###
         frame:
             style_prefix "ni"
@@ -47,6 +51,8 @@ screen name_input():
             hbox:
                 button:
                     text "CONFIRM"
+
+                    sensitive (persistent.player_name.lower().replace(" ", "") not in EXCLUDE_NAMES)
 
                     action Confirm("Choose this name?", Return(), Hide())
 
