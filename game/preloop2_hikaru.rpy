@@ -364,8 +364,6 @@ label loop2_hikaru_mandatory2:
 
     play music "spooky.mp3"
 
-    play sound "sfx/suzu.wav"
-
     show screen black_flicker
     with Pause(0.45)
 

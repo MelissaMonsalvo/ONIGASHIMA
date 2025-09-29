@@ -1320,6 +1320,7 @@ label confrontation:
         "Yes":
             n "I would like to be traumatized again."
             $ persistent.trueendingunlocked = False
+            $ delete_all_saves()
         "No":
             n "No, I want to stay dead."
 
