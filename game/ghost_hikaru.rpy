@@ -4,7 +4,7 @@ label ghost_hikaru_1:
 
     n "You walk to the forest instead."
 
-    n "And sleeps until  the middle of the night..."
+    n "And sleeps until the middle of the night..."
 
 
 
@@ -410,7 +410,7 @@ label ghost_hikaru_5:
     play sound "sfx/walk grass.mp3"
     pause 0.4
 
-    n "You’re walking home."
+    n "Night falls."
 
     n "You don’t know why it’s this path again."
 

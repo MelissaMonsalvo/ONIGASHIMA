@@ -849,7 +849,7 @@ label loop1_shiori_mandatory4:
 
     pause 3
 
-    n "But nothing comes out "
+    n "But nothing comes out."
 
 
     scene black
