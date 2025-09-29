@@ -545,7 +545,7 @@ label speechhh2noshiori:
 
     "Elder" "{b}And yet...{/b}{w=0.4}"
 
-    "Elder" "{b}[persistent.player_name] climbed that mountain and came back.{/b} {i}Where no one else could.{/i}{w=0.3}"
+    "Elder" "{b}[persistent.player_name] climbed that mountain and came back.{/b} {i}When no one else could.{/i}{w=0.3}"
 
     play sound "sfx/clap.mp3"
 
