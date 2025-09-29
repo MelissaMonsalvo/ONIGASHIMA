@@ -368,7 +368,6 @@ python early:
             renpy.take_screenshot()
             renpy.save("after_event", extra_info=f" {event_to_call}")
         else:
-            # Only advance time block if an actual event is called
             nearest_event, nearest_char = find_nearest_mandatory_event(store.current_time_block)
             if nearest_event:
                 store.redirect_event_label = nearest_event
@@ -376,7 +375,6 @@ python early:
                 store.redirect_message = "There is nothing interesting happening here, so you go somewhere else..."
                 renpy.jump("redirect_to_event")
             else:
-                # No event for this time block—DO NOT advance day or visits
                 renpy.call("location_empty", location)
 
 
@@ -905,26 +903,27 @@ label redirect_to_event:
     "[redirect_message]"
     with dissolve
 
-    # Actually increment event counter here!
-    if redirect_event_char == "yamato":
-        $ yamato_events_completed += 1
-    elif redirect_event_char == "shiori":
-        $ shiori_events_completed += 1
-    elif redirect_event_char == "hikaru":
-        $ hikaru_events_completed += 1
+    # Actually increment event counter here, only if there IS an event
+    if redirect_event_label is not None and redirect_event_char is not None:
+        if redirect_event_char == "yamato":
+            $ yamato_events_completed += 1
+        elif redirect_event_char == "shiori":
+            $ shiori_events_completed += 1
+        elif redirect_event_char == "hikaru":
+            $ hikaru_events_completed += 1
 
-    # Advance visits and day/time as normal
-    $ visits_toDay += 1
-    if visits_toDay >= 2:
-        $ current_Day += 1
-        $ visits_toDay = 0
-        $ current_time_block = "Day"
-    else:
-        $ current_time_block = "Night" if current_time_block == "Day" else "Day"
+        # Also advance visit counters, day/time only if a real event played
+        $ visits_toDay += 1
+        if visits_toDay >= 2:
+            $ current_Day += 1
+            $ visits_toDay = 0
+            $ current_time_block = "Day"
+        else:
+            $ current_time_block = "Night" if current_time_block == "Day" else "Day"
 
-    call expression redirect_event_label
+        call expression redirect_event_label
 
     $ redirect_event_label = None
     $ redirect_event_char = None
     $ redirect_message = ""
-    return
+    jump map
