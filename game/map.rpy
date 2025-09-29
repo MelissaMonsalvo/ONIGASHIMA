@@ -272,6 +272,8 @@ default offset_x_a = 0
 # Pantalla del mapa
 screen map_screen():
 
+    key "h" action NullAction()
+
     # if yamato_events_completed >= 5 or shiori_events_completed >= 5 or yamato_events_completed >= 5:
     #     timer 0.05 action Function(check_rutes) repeat True
 
