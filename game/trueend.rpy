@@ -1307,6 +1307,17 @@ label confrontation:
 
     $ persistent.seen_true_end = True
 
+    pause 0.5
+
+    n "Restart?"
+
+    menu:
+        "Yes":
+            n "I would like to be traumatized again."
+            $ persistent.trueendingunlocked = False
+        "No":
+            n "No, I want to stay dead."
+
     ## My arms are crying bye
 
     $ MainMenu(confirm=False)()
