@@ -1286,6 +1286,11 @@ label confrontation:
     $ persistent.loop1 = False
     $ persistent.loop2 = False
     $ persistent.loop3 = False
+    $ persistent.loop4 = False
+    $ persistent.loop5 = False
+    $ persistent.loop6 = False
+    $ persistent.loop7 = False
+    $ persistent.loop8 = False
 
     $ persistent.loop2_shiori_ghost1 = False
     $ persistent.loop2_shiori_ghost2 = False
