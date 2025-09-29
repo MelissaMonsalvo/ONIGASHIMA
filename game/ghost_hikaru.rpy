@@ -103,7 +103,7 @@ label ghost_hikaru_2:
 
     MC yan2 "...Don't tell me where to go."
 
-    n "But--"
+    n "But–"
 
     MC yan2 "Shut up."
 
@@ -194,7 +194,7 @@ label ghost_hikaru_3:
 
     n "..."
 
-    n "Seriously, why won't you listen--"
+    n "Seriously, why won't you listen–"
 
     MC yan2 "I want to sleep. Make me listen."
 
@@ -322,7 +322,6 @@ label ghost_hikaru_4:
         yoffset 60
         xoffset 0
 
-        linear 0.5 blur 2
 
     n "The edges of their face blur... {w=0.1}Slowly... {w=0.1}Slowly..."
 
@@ -333,9 +332,6 @@ label ghost_hikaru_4:
         yalign 0
         yoffset 60
         xoffset 0
-
-        linear 0.5 blur 10
-
     n "The lines slide off... {w=0.1}Again... {w=0.1}Again..."
 
     hikaru "{cps=12}Why are you wearing their face?{/cps}"
