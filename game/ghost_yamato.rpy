@@ -3,9 +3,7 @@ label ghost_yamato_1:
 
     scene black
 
-    MC yan2 "...Sleepy."
-
-    MC yan2 "Let's go sleep in the woods instead."
+    n "You don't mean to go here, but something keeps whispering in your ears..."
 
     # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then disappears
 
@@ -57,7 +55,11 @@ label ghost_yamato_2:
 
     scene black
 
-    MC yan2 "I wonder how the dojo is without the gamey meat."
+    n "Hmm?"
+
+    n "Why'd you walk the other way?"
+
+    MC yan2 "Heard voices from inside my stomach."
 
     n "You sleep in the dojo until night comes."
 
@@ -122,7 +124,11 @@ label ghost_yamato_3:
 
     scene black
 
-    n "You go to sleep instead."
+    n "Wait, wait, why'd you go to sleep?"
+
+    n "You were supposed--"
+
+    MC2 "Shut up."
 
     # MC sleeps and something starts choking them
     # players must free themselves by clicking the screen several times (advancing dialogue)
@@ -200,6 +206,12 @@ label ghost_yamato_4:
 
     # the day of the red moon and you are forced to relieve your betrayal,
     # with Yamato about to kiss you, but in his ghostly form, everything melts, his mouth starts dripping in
+
+    n "Your leg walks forward, but you lose conciousness immediately."
+
+    n "Nothing is going on as planned lately--"
+
+    yamato "SssHHHHHKKKKKK...."
 
     play music "noinomai.mp3"
 

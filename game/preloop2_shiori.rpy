@@ -546,13 +546,13 @@ label loop2_shiori_mandatory3:
 
     play sound "sfx/sniffle.mp3"
 
-    if persistent.hikaru_dead:
+    if persistent.hikaru_dies:
         shiori "Me, [persistent.player_name]-sama, and Yamato-kun, and–{w=0.2}and..."
         shiori "{k=1}Who else?{/k}"
         shiori "It’s right there.{w=0.2} Like, on the tip of my tongue, you know?"
         shiori "They... they used to walk with us. {i}I think.{/i}"
         shiori "They always glared when I teased Yamato too hard.{w=0.2} Or maybe they just never smiled much?"
-    if persistent.yamato_dead:
+    if persistent.yamato_dies:
         shiori "Me, [persistent.player_name]-sama, and Hikaru-san and–{w=0.2}and..."
         shiori "{k=1}Who else?{/k}"
         shiori "It’s right there.{w=0.2} Like, on the tip of my tongue, you know?"
