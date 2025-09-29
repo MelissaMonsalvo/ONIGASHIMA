@@ -249,7 +249,7 @@ label loop1_hikaru_mandatory1:
     scene black with out_212
     stop music fadeout 1.0
 
-    n "You feel watched all the way down until Hikaru disapears from view."
+    n "You feel watched all the way down until Hikaru disappears from view."
 
     n "You try to shake that feeling away, but you can't forget how Hikaru's eyes look like watching you leave."
 
