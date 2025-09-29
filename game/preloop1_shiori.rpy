@@ -821,7 +821,7 @@ label loop1_shiori_mandatory4:
 
     MC annoyed "I think that's enough, no evil spirits are here tonight."
 
-    MC normal "See? Nothing "
+    MC normal "See? Nothing. "
 
     show shi yansm
     with dissolve
