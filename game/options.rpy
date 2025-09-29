@@ -199,6 +199,9 @@ init python:
     build.archive("font", "all")
     build.archive("vidya", "all")
 
+
+    # TODO: Once ATL for circle_ghost works, remove this
+    build.classify("game/Ghosts/**", None)
     # Put script files into the scripts archive.
     build.classify("game/**.rpy", "scripts")
     build.classify("game/**.rpyc", "scripts")
