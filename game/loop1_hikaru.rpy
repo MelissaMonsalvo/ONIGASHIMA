@@ -1662,7 +1662,7 @@ label hikaru_distrust:
 
     hikaru "{size=+4}{sc=5}Where is it!?{/sc}{/size}"
 
-    MC "Hikaru–"
+    MC shocked "Hikaru–"
 
     hikaru "{sc=4}No! Stay back–!{/sc}"
 

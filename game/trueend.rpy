@@ -918,7 +918,7 @@ label confrontation:
     shiori "You should recognize this, [persistent.player_name]."
 
     show hik serious with dissolve
-    MC "..."
+    MC yan3 "..."
 
     show yam rage with dissolve
     yamato "{sc=4}This is the real [persistent.player_name].{/sc}"
