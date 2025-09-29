@@ -755,9 +755,9 @@ label loop1_shiori_mandatory4:
 
     n "She chants clearly, loudly. The bell in her hand sways slightly with her rhythm."
 
-    hide expression Text
-    hide expression Text
-    hide expression Text
+    # hide expression Text
+    # hide expression Text
+    # hide expression Text
 
     show expression Text("山の鬼よ", style="jojo_text") at jojo_attack4
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5
@@ -774,9 +774,9 @@ label loop1_shiori_mandatory4:
 
     with sshake
 
-    hide expression Text
-    hide expression Text
-    hide expression Text
+    # hide expression Text
+    # hide expression Text
+    # hide expression Text
 
     show expression Text("山の鬼よ", style="jojo_text") at jojo_scatter1
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_scatter2
@@ -792,9 +792,9 @@ label loop1_shiori_mandatory4:
 
     MC yan "{cps=7}{alpha=0.7}{i}Shiori–!{/i}{/alpha}{/cps}"  # grimacing faaaaaceeee
 
-    hide expression Text
-    hide expression Text
-    hide expression Text
+    # hide expression Text
+    # hide expression Text
+    # hide expression Text
 
     show expression Text("山の鬼よ", style="jojo_text") at jojo_attack4 as o1
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5 as o2
@@ -1025,9 +1025,9 @@ label loop1_shiori_mandatory5:
 
     MC surprised "{cps=9}{alpha=0.7}Huh?{/alpha}{/cps}"
 
-    shiori "{cps=44}You left without saying goodbye to us, [persistent.player_name]."
+    shiori "{cps=44}You left without saying goodbye to us, [persistent.player_name].{/cps}"
 
-    shiori "{cps=22}We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you."
+    shiori "{cps=22}We only knew because the village elder told us you left. Said you did it on purpose so no one would come after you.{/cps}"
 
     n "Did you mix your memories up? What's happening?"
 
@@ -1035,11 +1035,11 @@ label loop1_shiori_mandatory5:
 
     MC panic "{sc=1}N-no! That’s not– I  said goodbye to you, at least... Right, Shiori?{/sc}"
 
-    shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}"
+    shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}{/cps}"
 
     shiori "Don't try to make things up."
 
-    MC sad "{cps=59}{sc=3}I– I just–{/sc}"
+    MC sad "{cps=59}{sc=3}I– I just–{/sc}{/cps}"
 
     n "Guess you can't get yourself out of this situation."
 
@@ -1048,7 +1048,7 @@ label loop1_shiori_mandatory5:
 
     shiori "But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you."
 
-    shiori "{cps=52}Even if Yamato and Hikaru told me otherwise."
+    shiori "{cps=52}Even if Yamato and Hikaru told me otherwise.{/cps}"
 
     n "You extend your hand, about to grab Shiori's wrist as she moves away."
 
@@ -1066,11 +1066,11 @@ label loop1_shiori_mandatory5:
 
     n "What are you doing? Stop it. Stop."
 
-    shiori "{cps=53}I should go. It’s getting late~"
+    shiori "{cps=53}I should go. It’s getting late~{/cps}"
 
     shiori "{sc=3}{color=#ff0026}{i}The Red Moon is coming, [persistent.player_name]-sama.{/i}{/color}{/sc}"
 
-    shiori "{alpha=0.8}Let’s be honest then, okay?"
+    shiori "{alpha=0.8}Let’s be honest then, okay?{/alpha}"
 
     show shi yansm:
         zoom 0.3

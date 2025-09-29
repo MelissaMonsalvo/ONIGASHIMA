@@ -10,30 +10,30 @@ transform shiori_zoom:
 image shi normal = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -57,31 +57,31 @@ image shi normal = LiveComposite(
 image shi happy = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -105,31 +105,31 @@ image shi happy = LiveComposite(
 image shi happyblush = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -144,15 +144,15 @@ image shi happyblush = LiveComposite(
 image shi sad = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
-    (0,0), "Shiori/ear_left2.png",
-    (0,0), "Shiori/ear_right2.png",
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/body.webp",
+    (0,0), "Shiori/ear_left2.webp",
+    (0,0), "Shiori/ear_right2.webp",
+    (0,0), "Shiori/bangs.webp",
     (0,0), "Shiori/brow/b_sad.webp",
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -175,15 +175,15 @@ image shi sad = LiveComposite(
 image shi blush = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
-    (0,0), "Shiori/ear_left2.png",
-    (0,0), "Shiori/ear_right2.png",
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/body.webp",
+    (0,0), "Shiori/ear_left2.webp",
+    (0,0), "Shiori/ear_right2.webp",
+    (0,0), "Shiori/bangs.webp",
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
     (0,0), Animation(
@@ -207,15 +207,15 @@ image shi blush = LiveComposite(
 image shi worried = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
-    (0,0), "Shiori/ear_left2.png",
-    (0,0), "Shiori/ear_right2.png",
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/body.webp",
+    (0,0), "Shiori/ear_left2.webp",
+    (0,0), "Shiori/ear_right2.webp",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -233,15 +233,15 @@ image shi worried = LiveComposite(
 image shi fear = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
-    (0,0), "Shiori/ear_left2.png",
-    (0,0), "Shiori/ear_right2.png",
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/body.webp",
+    (0,0), "Shiori/ear_left2.webp",
+    (0,0), "Shiori/ear_right2.webp",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
@@ -266,31 +266,31 @@ image shi fear = LiveComposite(
 image shi surprised = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -313,31 +313,31 @@ image shi surprised = LiveComposite(
 image shi shocked = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
@@ -360,31 +360,31 @@ image shi shocked = LiveComposite(
 image shi annoyed = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -407,31 +407,31 @@ image shi annoyed = LiveComposite(
 image shi angry = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_iris.webp",             # iris
@@ -454,31 +454,31 @@ image shi angry = LiveComposite(
 image shi yansm = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
@@ -501,31 +501,31 @@ image shi yansm = LiveComposite(
 image shi yan = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
@@ -548,31 +548,31 @@ image shi yan = LiveComposite(
 image shi yanbl = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_normal_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
@@ -596,31 +596,31 @@ image shi yanbl = LiveComposite(
 image shi yansmbl = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris
@@ -644,31 +644,31 @@ image shi yansmbl = LiveComposite(
 image shi smug = LiveComposite(
     (2000,5637),
     (-2200,0), Animation(
-            "Shiori/tail1.png", 4.5,
-            "Shiori/tail4.png", 2.25,
+            "Shiori/tail1.webp", 4.5,
+            "Shiori/tail4.webp", 2.25,
         ),
 
 
-    (0,0), "Shiori/body.png",
+    (0,0), "Shiori/body.webp",
     (0,0), Animation(
-            "Shiori/ear_left.png", 4.5,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left.png", 2.25,
-            "Shiori/ear_left2.png", .1,
-            "Shiori/ear_left.png", .1,
-            "Shiori/ear_left2.png", .25,
+            "Shiori/ear_left.webp", 4.5,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left.webp", 2.25,
+            "Shiori/ear_left2.webp", .1,
+            "Shiori/ear_left.webp", .1,
+            "Shiori/ear_left2.webp", .25,
         ),
     (0,0), Animation(
-            "Shiori/ear_right.png", 4.5,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right.png", 2.25,
-            "Shiori/ear_right2.png", .1,
-            "Shiori/ear_right.png", .1,
-            "Shiori/ear_right2.png", .25,
+            "Shiori/ear_right.webp", 4.5,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right.webp", 2.25,
+            "Shiori/ear_right2.webp", .1,
+            "Shiori/ear_right.webp", .1,
+            "Shiori/ear_right2.webp", .25,
         ),
-    (0,0), "Shiori/bangs.png",
+    (0,0), "Shiori/bangs.webp",
 
     (0,0), "Shiori/eyes/e_wide_white.webp",              # whites
     (0,0), "Shiori/eyes/e_small_iris.webp",             # iris

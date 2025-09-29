@@ -244,7 +244,7 @@ label loop1_hikaru_mandatory1:
 
         linear 0.5 zoom 0.4 yoffset 30
 
-    MC nervous "{sc=1}Y-Yeah....{/sc} Yeah! {cps=200}I'm gonna go rest now, so see you, Hikaru!"
+    MC nervous "{sc=1}Y-Yeah....{/sc} Yeah! {cps=200}I'm gonna go rest now, so see you, Hikaru!{/cps}"
 
     scene black with out_212
     stop music fadeout 1.0
@@ -598,7 +598,7 @@ label loop1_hikaru_mandatory3:
 
     n "Still, you smell something faintly burning, it's coming from the talisman."
 
-    hide show red_flash_slow
+    hide red_flash_slow
     hide frame2
     hide charm
     with dissolve
@@ -645,7 +645,7 @@ label loop1_hikaru_mandatory3:
     show hik worried
     with dissolve
 
-    hikaru "{cps=50}I was hoping it would react.{/scps}"
+    hikaru "{cps=50}I was hoping it would react.{/cps}"
 
     MC surprised "{w=0.2}React?"
 

@@ -89,8 +89,8 @@ image cg_loop3shiori = "images/cg_loop3shiori.png"
 image cg_loop3yamato = "images/cg_loop3yamato.png"
 
 image terumc = "images/terumc.webp"
-image terumc_left = "images/terumc_left.png"
-image terumc_right = "images/terumc_right.png"
+image terumc_left = "images/terumc_left.webp"
+image terumc_right = "images/terumc_right.webp"
 
 image shrine2 = "BG/Shrine2.webp"
 

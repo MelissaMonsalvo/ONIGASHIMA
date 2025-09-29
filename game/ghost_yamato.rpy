@@ -84,7 +84,7 @@ label ghost_yamato_2:
     play sound "sfx/splurt.mp3"
     show ghost_yamato attack at c_show_37
     with flashred
-    n"{cps=5}{size=+10}Squelch...{/size}"
+    n"{cps=5}{size=+10}Squelch...{/size}{/cps}"
     $ renpy.pause(3.5)
     hide text
 
@@ -92,7 +92,7 @@ label ghost_yamato_2:
     play sound "sfx/splurt.mp3"
     show ghost_yamato attack at c_show_38
     with flashred
-    n "{cps=5}{size=+10}Squelch...{/size}"
+    n "{cps=5}{size=+10}Squelch...{/size}{/cps}"
     $ renpy.pause(2.5)
     hide text
 
@@ -100,7 +100,7 @@ label ghost_yamato_2:
     play sound "sfx/splurt.mp3"
     show ghost_yamato attack at c_show_39
     with flashred
-    n "{cps=4}{size=+12}Sssqqquueellchh...{/size}"
+    n "{cps=4}{size=+12}Sssqqquueellchh...{/size}{/cps}"
     $ renpy.pause(1.5)
     hide text
 
@@ -130,7 +130,7 @@ label ghost_yamato_3:
 
     n "You were supposed--"
 
-    MC2 "Shut up."
+    MC annoyed "Shut up."
 
     # MC sleeps and something starts choking them
     # players must free themselves by clicking the screen several times (advancing dialogue)
@@ -167,7 +167,7 @@ label ghost_yamato_3:
 
     ## first click
     play sound "sfx/shiori_eaten.wav"
-    MC shocked2 "{size=+10}{cps=6}Ghhk–{/cps}"
+    MC shocked2 "{size=+10}{cps=6}Ghhk–{/cps}{/size}"
 
     ## second click
     show ghost_yamato with vpunch
