@@ -5,13 +5,15 @@ label ghost_yamato_1:
 
     n "You don't mean to go here, but something keeps whispering in your ears..."
 
+    n "You sleep in the forest until night falls like the monster you are."
+
     # yamato jumpscares you while you are walking in the woods, like appearing to nowhere zooms in to the player pov then disappears
 
     $ ghost_yamato_1 = True
 
     play music "sfx/forest night.wav"
 
-    show forest day:
+    show forest night:
         zoom 0.5
     show particleFog with dissolve:
         ypos 0.4
