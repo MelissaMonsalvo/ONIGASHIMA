@@ -94,14 +94,14 @@ define SL_BTN_PADDING = (300, 111, 415, 113)
 ############################################################
 ### ENTER/EXIT ###
 ############################################################
-transform ts_fadein():
+transform ts_fadein(ts_speed=1.0):
     on show:
         alpha 0.0
 
-        linear 1.0 alpha 1.0
+        linear ts_speed alpha 1.0
     on hide:
         alpha 1.0
-        linear 1.0 alpha 0.0
+        linear ts_speed alpha 0.0
 
 transform ts_qm_fadein(dist):
     alpha 0.5

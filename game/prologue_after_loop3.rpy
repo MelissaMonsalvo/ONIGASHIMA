@@ -1,4 +1,5 @@
 label prologue_loop3:
+    $ save_name = "Devoured"
 
     ### this has the prologue after everyone has devoured
 

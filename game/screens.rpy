@@ -1604,7 +1604,7 @@ screen confirm(message, yes_action, no_action):
 
 
     frame:
-        at ts_enterY(80)
+        at ts_fadein(0.5)
 
         vbox:
             xalign .5

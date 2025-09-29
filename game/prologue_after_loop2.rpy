@@ -1,4 +1,5 @@
 label prologue_loop2:
+    $ save_name = "You're Next"
 
     ### this has the prologue after two peoples has been devoured
 

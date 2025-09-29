@@ -100,7 +100,7 @@ screen help():
         hbox:
             if device == "gamepad":
                 button:
-                    text _("CALIBRATE")
+                    text _("CALIBRATE") hover_color tt_color
 
                     action GamepadCalibrate()
 

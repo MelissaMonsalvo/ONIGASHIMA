@@ -26,7 +26,7 @@ screen exit_game():
 
 
     frame:
-        at ts_enterY(80)
+        at ts_fadein(0.5)
 
         vbox:
             xalign .5

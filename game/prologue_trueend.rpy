@@ -1,4 +1,5 @@
 label prologue_trueend:
+    $ save_name = "Almost There"
 
     play music "heavy breathing.mp3"
 

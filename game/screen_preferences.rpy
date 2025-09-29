@@ -8,9 +8,26 @@
 ############################################################
 init python:
     def reset_volume():
-        preferences.set_mixer("voice", 0.5)
-        preferences.set_mixer("sfx", 0.5)
-        preferences.set_mixer("music", 0.5)
+        preferences.set_mixer("voice", 0.8)
+        preferences.set_mixer("sfx", 0.8)
+        preferences.set_mixer("music", 0.8)
+
+    def reset_general():
+        preferences.fullscreen = False
+        preferences.skip_unseen = False
+        preferences.skip_after_choices = False
+        preferences.transitions = 2
+
+    def reset_dialogue():
+        persistent.dialogue_text_size = 33
+        persistent.dialogue_line_spacing = 1
+        preferences.afm_time = 15
+        preferences.text_cps = 80
+        persistent.dialogue_font = "NotoSans-Regular.ttf"
+
+    def reset_accessibility():
+        _preferences.self_voicing = False
+
 
 
 ############################################################
@@ -130,9 +147,16 @@ screen preferences():
             hbox:
 
                 button:
-                    text _("REVERT ALL") hover_color tt_color
+                    text _("REVERT PAGE") hover_color tt_color
 
-                    action Function(reset_volume)
+                    if tab == "general":
+                        action Confirm("Reset Page?", Function(reset_general), Hide())
+                    elif tab == "audio":
+                        action Confirm("Reset Page?", Function(reset_volume), Hide())
+                    elif tab == "dialogue":
+                        action Confirm("Reset Page?", Function(reset_dialogue), Hide())
+                    elif tab == "accessibility":
+                        action Confirm("Reset Page?", Function(reset_accessibility), Hide())
 
 
                 button:

@@ -17,9 +17,9 @@ screen pause_menu():
 
     ## TEXT COLOR CHANGE ##
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ tt_color = WHITE
 
 

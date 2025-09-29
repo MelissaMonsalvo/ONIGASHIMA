@@ -18,6 +18,9 @@ init python:
         "CyborgNekoSica": ["Background Artist", "cyborgnekosica.itch.io"],
         "FreeSound.org, Pixabay": ["SFX", ""],
         "FreePix.com": ["Extra Art", ""],
+        "Dova Syndrome": ["Music", "https://dova-s.jp/EN/_mobile/"],
+        "H/Mix Gallery": ["Music", "http://www.hmix.net/"],
+        "Hashimamiweb": ["Music", "https://hashimamiweb.com/"],
     }
 
 ############################################################
@@ -60,13 +63,15 @@ screen credits():
                     text_align 0.0
 
                 if sm:
-                    textbutton "Itch.io":
+                    textbutton "Link":
+                        text_font NOTO_JP_BOLD
+                        text_underline True
                         xalign 1.0
                         action Confirm("Open this link?", OpenURL(sm), Hide())
 
             null height 20
 
-    if persistent.loop1:
+    if not persistent.loop1:
         $ tt_color = BLACK
     else:
         $ tt_color = WHITE
