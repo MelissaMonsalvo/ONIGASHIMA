@@ -1620,13 +1620,13 @@ screen confirm(message, yes_action, no_action):
 
                 button:
                     text _("Yes"):
-                        color tt_color
+                        hover_color tt_color
                     action yes_action
 
                 if no_action:
                     button:
                         text _("No"):
-                            color tt_color
+                            hover_color tt_color
                         action no_action
 
     ## Right-click and escape answer "no".

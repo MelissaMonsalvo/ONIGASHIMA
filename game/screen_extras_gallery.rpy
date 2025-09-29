@@ -65,7 +65,7 @@ init python:
     g.transform(Transform(xysize=(1920, 1080)))
 
     g.button("hikaru cg3")
-    g.unlock_image("cg_loop3hikarui")
+    g.unlock_image("cg_loop3hikaru")
     g.transform(Transform(xysize=(1920, 1080)))
 
 

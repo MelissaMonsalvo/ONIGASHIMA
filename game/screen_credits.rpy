@@ -59,14 +59,16 @@ screen credits():
                     xsize 400
                     text_align 0.0
 
-                text "{}".format(sm):
-                    xalign 1.0
+                if sm:
+                    textbutton "Itch.io":
+                        xalign 1.0
+                        action Confirm("Open this link?", OpenURL(sm), Hide())
 
             null height 20
 
-    if current_route == "route1":
+    if persistent.loop1:
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ tt_color = WHITE
     ## NAV ## ## Use SAVE/LOAD ref
     frame:
