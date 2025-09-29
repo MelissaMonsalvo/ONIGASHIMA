@@ -103,6 +103,10 @@ label ghost_hikaru_2:
 
     MC yan2 "...Don't tell me where to go."
 
+    n "But--"
+
+    MC yan2 "Shut up."
+
     n "You sleep at the shrine until night falls."
 
     $ config.rollback_enabled = False
@@ -185,6 +189,15 @@ label ghost_hikaru_2:
 
 label ghost_hikaru_3:
 
+    scene black
+    with fade
+
+    n "..."
+
+    n "Seriously, why won't you listen--"
+
+    MC yan2 "I want to sleep. Make me listen."
+
     play music "Friends.mp3"
 
     $ haze_active = True
@@ -260,6 +273,16 @@ label ghost_hikaru_3:
 
 label ghost_hikaru_4:
 
+    scene black
+    with fade
+
+    n "Hhhh...."
+
+    n "At this rate I don't understand why'd you let me make decisions and not comply to them."
+
+    MC yan2 "I don't feel like listening to you."
+
+    MC yan2 "Let me sleep."
 
     play music "Friends.mp3"
 
@@ -372,7 +395,9 @@ label ghost_hikaru_5:
 
     scene black
 
-    MC yan2 "...I want to go home instead."
+    MC yan2 "...I want to go home."
+
+    n "Do it. I don't care."
 
     show village night at walkinn:
 

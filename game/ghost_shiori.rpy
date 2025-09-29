@@ -65,7 +65,11 @@ label ghost_shiori_2:
 
     MC yan2 "Let's go sleep at the shrine until night comes."
 
+    n "But--"
+
     MC yan2 "Annoying meat is gone."
+
+    n "{i}Fine.{/i}"
 
     play music "Friends.mp3"
 
@@ -158,6 +162,12 @@ label ghost_shiori_3:
 
     MC yan2 "Let's go to the shrine again to sleep."
 
+    n "Wait, I said--"
+
+    n "I picked--"
+
+    MC yan2 "Shut up."
+
     play music "Friends.mp3"
 
     scene shrine night with fade:
@@ -231,9 +241,13 @@ label ghost_shiori_4:
 
     scene black
 
-    MC yan2 "I want to go to the shrine..."
+    MC yan2 "I want to go to the shrine."
 
-    MC yan2 "Because it's quiet now..."
+    MC yan2 "Something in my stomach rumbles."
+
+    n "The one you just ate?"
+
+    MC yan2 "She misses me."
 
     n "You sleep until night falls."
 
@@ -308,6 +322,16 @@ screen ghost_shiori_5_open3():
 label ghost_shiori_5:
 
     scene black
+
+    n "Ah, you override my decisions again."
+
+    MC yan2 "Shiori's calling for me."
+
+    n "Who?"
+
+    n "..."
+
+    n "Doesn't matter."
 
     n "You keep going to the shrine to sleep until night..."
 
