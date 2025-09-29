@@ -467,7 +467,7 @@ label loop2_yamato:
 
     elif persistent.hikaru_dies:
 
-        show yam normal:
+        show yam eldritch1:
             zoom 0.3
             xanchor 0.5
             xalign 0.2
