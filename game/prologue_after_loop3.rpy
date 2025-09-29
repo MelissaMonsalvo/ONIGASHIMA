@@ -80,6 +80,16 @@ label prologue_loop3:
 
     $ persistent.loop4 = True
 
+    scene black
+
+    pause 0.1
+
+    show text "{color=#ff0000}{size=+10}I WANT TO START AGAIN {/size}{/color}"
+
+    with dissolve
+
+    pause 0.1
+
     return
 
 label prologue_loop4:
@@ -139,6 +149,16 @@ label prologue_loop4:
     stop music fadeout 3.0
 
     $ persistent.loop5 = True
+
+    scene black
+
+    pause 0.1
+
+    show text "{color=#ff0000}{size=+10}I wANT To STaRT AgaIN {/size}{/color}"
+
+    with dissolve
+
+    pause 0.1
 
     return
 
@@ -235,6 +255,16 @@ label prologue_loop5:
 
     n2 "BoRedBorEDbOredBOoooooooooooooooOOOOOOOred."
 
+    scene black
+
+    pause 0.1
+
+    show text "{color=#ff0000}{size=+10}STaRT AgaIN {/size}{/color}"
+
+    with dissolve
+
+    pause 0.1
+
     $ persistent.loop6 = True
 
     return
@@ -306,6 +336,16 @@ label prologue_loop6:
 
     n2 "nOtHiNg dOeS AnYMOrE."
 
+    scene black
+
+    pause 0.1
+
+    show text "{color=#ff0000}{size=+10}AgaIN {/size}{/color}"
+
+    with dissolve
+
+    pause 0.1
+
     $ persistent.loop7 = True
 
     return
@@ -345,6 +385,16 @@ label prologue_loop7:
     n2 "i dOn’T wAnT tO bE aLoNe."
 
     n2 "...."
+
+    scene black
+
+    pause 0.1
+
+    show text "{color=#ff0000}{size=+10}SsstttttttttaaaaRRRRRttttttt AgggAaaAAAIiiiINNN {/size}{/color}"
+
+    with dissolve
+
+    pause 0.1
 
     $ persistent.loop8 = True
 
