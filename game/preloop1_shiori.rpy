@@ -597,7 +597,7 @@ label gulgulp:
 
     n "Another strip slides off the tray, leaving a smear behind."
 
-    MC suprised "So, what is it? Boar? Deer?"
+    MC surprised "So, what is it? Boar? Deer?"
 
     play sound "sfx/suzu.mp3"
 
