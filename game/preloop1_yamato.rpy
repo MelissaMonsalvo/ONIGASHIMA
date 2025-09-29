@@ -479,7 +479,7 @@ label loop1_yamato_mandatory2:
 
     n "He doesn't look convinced and leans closer, shrinking the gap between you. You can't breathe right."
 
-    yamato "Say that {i}again?{/o}"
+    yamato "Say that {i}again?{/i}"
 
     menu:
         "{color=#ff082d}Red{/color}, I said.":
@@ -1101,7 +1101,7 @@ label loop1_yamato_mandatory4:
 
     hikaru "{w=0.1}{k=-1}...Are you saying I was wrong about the armor?{/k}"
 
-    yamato "Tch. I dunno. Maybe... {w=0.3}{sc=1}maybe th' armor doesn’t matter after all.{sc}"
+    yamato "Tch. I dunno. Maybe... {w=0.3}{sc=1}maybe th' armor doesn’t matter after all.{/sc}"
 
     n "That’s strange. {w=0.1}Yamato’s the one who always doubted you and always swore that you couldn’t have done it..."
 
