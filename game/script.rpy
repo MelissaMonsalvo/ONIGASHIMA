@@ -120,8 +120,7 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
-    scene cg_loop3hikaru
-    "test"
+
     if persistent.shiori_dies:
         $ shiori_alive = False
     else:
