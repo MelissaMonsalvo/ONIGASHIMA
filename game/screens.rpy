@@ -1488,6 +1488,7 @@ style history_name_text:
     ysize 200
     font NOTO_JP_BOLD
     size 60
+    color RED
 
 style history_text:
     textalign 0.0
