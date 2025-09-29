@@ -233,9 +233,9 @@ label ghost_hikaru_3:
     menu:
 
         "Pull their hands away":
-            "Nothing happend."
+            "Nothing happened."
         "Kick them":
-            "Nothing happend."
+            "Nothing happened."
     label ghost_hikaru_3_next:
 
     MC hurt "I-I can't do anything!!!!"

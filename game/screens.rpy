@@ -1412,12 +1412,22 @@ screen history():
                     frame:
                         has vbox
                         if h.who:
-                            label h.who:
+                            label h.who style "history_name":
                                 substitute False
-                                ## Take the color of the who text
-                                ## from the Character, if set
-                                if "color" in h.who_args:
+                              
+
+                                if h.who == "Shiori":
+                                    text_color "#A3710BFF"
+
+                                elif h.who == "Yamato":
+                                    text_color "#0E993FFF"
+
+                                elif h.who == "Hikaru":
+                                    text_color "#781795FF"
+
+                                elif "color" in h.who_args:
                                     text_color h.who_args["color"]
+
                                 xsize 280   # this number and the null width
                                             # number should be the same
 
@@ -1469,13 +1479,15 @@ style history_frame:
 style history_vbox:
     spacing 20
 
-# style history_name:
-#     xalign 1.0
-
-# style history_name_text:
-#     textalign 1.0
-#     align (1.0, 0.0)
-#     color '#f93c3e'
+style history_name:
+    xalign 0.0
+    
+style history_name_text:
+    textalign 0.0
+    align (0.0, 0.5)
+    ysize 200
+    font NOTO_JP_BOLD
+    size 60
 
 style history_text:
     textalign 0.0
