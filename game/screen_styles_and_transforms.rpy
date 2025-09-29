@@ -35,39 +35,39 @@ define config.quit_action = Show("exit_game")
 image logo = "gui/window_icon.png"
 
 image mm_background = ConditionSwitch(
-    "current_route == 'route1'", "gui/mm_background1.webp",
-    "current_route == 'route2'", "gui/mm_background2.webp"
+    "persistent.loop1 == False", "gui/mm_background1.webp",
+    "persistent.loop1 == True", "gui/mm_background2.webp"
 )
 
 
 
 image screen overlay = ConditionSwitch(
-    "current_route == 'route1'", "gui/overlay/yellow_overlay.webp",
-    "current_route == 'route2'", "gui/overlay/red_overlay.webp"
+    "persistent.loop1 == False", "gui/overlay/yellow_overlay.webp",
+    "persistent.loop1 == True", "gui/overlay/red_overlay.webp"
 )
 
 
 image long_btn_hover = ConditionSwitch(
-    "current_route == 'route1'", Frame("gui/button/yw_btn.webp", 70, 25),
-    "current_route == 'route2'", Frame("gui/button/red_btn.webp", 70, 25)
+    "persistent.loop1 == False", Frame("gui/button/yw_btn.webp", 70, 25),
+    "persistent.loop1 == True", Frame("gui/button/red_btn.webp", 70, 25)
 )
 
 image long_btn_hover_no_frame = ConditionSwitch(
-    "current_route == 'route1'", "gui/button/yw_btn.webp",
-    "current_route == 'route2'", "gui/button/red_btn.webp"
+    "persistent.loop1 == False", "gui/button/yw_btn.webp",
+    "persistent.loop1 == True", "gui/button/red_btn.webp"
 )
 
 image gm_btn_hover = ConditionSwitch(
-    "current_route == 'route1'", Frame("gui/game menu/btn_hover_background.png", 20, 10),
-    "current_route == 'route2'", Frame("gui/game menu/btn_red_hover_background.png", 20, 10)
+    "persistent.loop1 == False", Frame("gui/game menu/btn_hover_background.png", 20, 10),
+    "persistent.loop1 == True", Frame("gui/game menu/btn_red_hover_background.png", 20, 10)
 )
 
 image frame black = Frame("gui/frame.webp", 100, 85)
 
 image frame gal = Transform("gui/frame.webp", xysize=(480, 302))
 image frame gal hover = ConditionSwitch(
-    "current_route == 'route1'", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(YELLOW, YELLOW)),
-    "current_route == 'route2'", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(RED, RED))
+    "persistent.loop1 == False", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(YELLOW, YELLOW)),
+    "persistent.loop1 == True", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(RED, RED))
 )
 
 image gm bg1 = "gui/menu_background.jpg"
