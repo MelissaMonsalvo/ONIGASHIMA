@@ -763,7 +763,7 @@ label loop1_shiori_mandatory4:
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_attack6
 
-    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6}Back to the dark!{/sc}{/color}{/size}"
+    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6} Back to the dark!{/sc}{/color}{/size}"
 
 
 
