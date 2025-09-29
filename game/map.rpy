@@ -27,7 +27,9 @@ python early:
                         })
                         break  # Only consider the next event for each character
         # Sort by order in event list (progress), then by preference: Yamato, Shiori, Hikaru
-        candidates.sort(key=lambda c: (c["idx"], ["yamato", "shiori", "hikaru"].index(c["char"])))
+        # Sort by most events completed (progress) first, then preference
+        candidates.sort(key=lambda c: (-getattr(store, f"{c['char']}_events_completed", 0), ["yamato", "shiori", "hikaru"].index(c["char"])))
+
         if candidates:
             selected = candidates[0]
             return (selected["event_label"], selected["char"])
@@ -502,36 +504,40 @@ python early:
         print(f"hikaru {store.hikaru_events_completed}")
 
         if persistent.shiori_dies:
-            # Prioritize Yamato if Shiori is dead
             if store.yamato_events_completed >= 5:
-                print("Rute Yamato (Shiori is dead)")
                 label_name = f"loop{store.current_loop}_yamato"
                 renpy.jump(label_name)
             elif store.hikaru_events_completed >= 5:
-                print("Rute Hikaru (Shiori is dead)")
                 label_name = f"loop{store.current_loop}_hikaru"
                 renpy.jump(label_name)
             else:
-                print("No route reached 5 events. Default to Yamato (Shiori is dead).")
-                label_name = f"loop{store.current_loop}_yamato"
+                route_counts = [
+                    ("yamato", store.yamato_events_completed),
+                    ("hikaru", store.hikaru_events_completed),
+                ]
+                route_counts.sort(key=lambda x: (-x[1], x[0]))
+                label_name = f"loop{store.current_loop}_{route_counts[0][0]}"
                 renpy.jump(label_name)
         else:
             if store.yamato_events_completed >= 5:
-                print("Rute Yamato")
                 label_name = f"loop{store.current_loop}_yamato"
                 renpy.jump(label_name)
             elif store.shiori_events_completed >= 5:
-                print("Rute Shiori")
                 label_name = f"loop{store.current_loop}_shiori"
                 renpy.jump(label_name)
             elif store.hikaru_events_completed >= 5:
-                print("Rute Hikaru")
                 label_name = f"loop{store.current_loop}_hikaru"
                 renpy.jump(label_name)
             else:
-                print("No route reached 5 events. Default to Shiori.")
-                label_name = f"loop{store.current_loop}_shiori"
+                route_counts = [
+                    ("yamato", store.yamato_events_completed),
+                    ("shiori", store.shiori_events_completed),
+                    ("hikaru", store.hikaru_events_completed),
+                ]
+                route_counts.sort(key=lambda x: (-x[1], x[0]))  # Highest progress, then order
+                label_name = f"loop{store.current_loop}_{route_counts[0][0]}"
                 renpy.jump(label_name)
+
 
 
 
