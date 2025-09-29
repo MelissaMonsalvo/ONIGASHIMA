@@ -393,7 +393,7 @@ label loop3_yamato:
 
     n2 "TheY'Ll tAsTe sWeEtEr thaT WaY."
 
-    n "{glitch=8}You... monster.. .{/glitch}"
+    n "{glitch=8}You... monster...{/glitch}"
 
     n2 "cOrReCT."
 

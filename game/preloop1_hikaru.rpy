@@ -625,7 +625,7 @@ label loop1_hikaru_mandatory3:
 
     hikaru "{cps=10}....{/cps}"
 
-    n "You just heard hikaru's breath hitched, as if they had been holding their breath for a while."
+    n "You just heard Hikaru's breath hitch, as if they had been holding their breath for a while."
 
     MC nervous "{w=0.2}...What?"
 
@@ -1461,7 +1461,7 @@ label hikaru_teadrink:
     n "The door slides behind them."
 
 
-    n ",,,"
+    n "..."
 
     n "..."
 
