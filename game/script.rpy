@@ -120,10 +120,6 @@ screen fake_name_input():
         key key action Function(_fake_type_char)
 
 label start:
-    hikaru "hello"
-    yamato "Wassup"
-    shiori "heeeey"
-    "Lorem ipsum something somethiggnsf iehteirut fhesiuf er dfugrshgsiu ghserui gherg uersg hresog seigh eog esugh dg "
 
     if persistent.shiori_dies:
         $ shiori_alive = False
