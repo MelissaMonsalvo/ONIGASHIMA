@@ -30,9 +30,9 @@ transform fadein2:
 
 screen press_anything_to_continue():
     if not persistent.loop1:
-        add "MOON/moon1.jpg"
+        add "MOON/moon1.webp"
     else:
-        add "MOON/moon6.jpg"
+        add "MOON/moon6.webp"
     button:
         xysize (config.screen_width, config.screen_height)
         background None
@@ -70,9 +70,9 @@ screen main_menu():
 
 
     if not persistent.loop1:
-        add "MOON/moon1.jpg"
+        add "MOON/moon1.webp"
     else:
-        add "MOON/moon6.jpg"
+        add "MOON/moon6.webp"
 
     # Yamato
     if persistent.yamato_dies:

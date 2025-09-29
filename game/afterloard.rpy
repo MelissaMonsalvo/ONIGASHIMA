@@ -1,6 +1,6 @@
-image afterloadhik = "cgsaveblock/hikaru_idle.png"
-image afterloadshi = "cgsaveblock/shiori_idle.png"
-image afterloadyam = "cgsaveblock/yamato_idle.png"
+image afterloadhik = "cgsaveblock/hikaru_idle.webp"
+image afterloadshi = "cgsaveblock/shiori_idle.webp"
+image afterloadyam = "cgsaveblock/yamato_idle.webp"
 
 image afterloadhik glitched:
     glitch("afterloadhik") # reliable slicing

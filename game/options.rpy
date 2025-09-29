@@ -64,6 +64,7 @@ define config.has_voice = True
 
 init python:
     def play_menu_music():
+        renpy.music.stop("music", fadeout=1.0)
         if not persistent.loop1:
             renpy.music.play("music/MainMenu.mp3", channel='music', loop=True, fadein=1.0)
         else:
