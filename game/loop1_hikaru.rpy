@@ -13,7 +13,7 @@ label loop1_hikaru:
 
     n "You spent your days with Hikaru the most."
 
-    n "...Wait, where is Yamato right now?"
+    n "...Wait, where is Hikaru right now?"
 
     scene black
 

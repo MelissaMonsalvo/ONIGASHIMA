@@ -364,7 +364,7 @@ python early:
             if nearest_event:
                 store.redirect_event_label = nearest_event
                 store.redirect_event_char = nearest_char
-                store.redirect_message = "There is nothing interesting happening here, so you go somewhere else..."
+                store.redirect_message = "There is nothing interesting happening here, so you rest up and go somewhere else..."
                 renpy.jump("redirect_to_event")
             else:
                 renpy.call("location_empty", location)
