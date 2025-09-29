@@ -29,6 +29,7 @@ transform fadein2:
 
 
 screen press_anything_to_continue():
+    key "dismiss" action Return()
     if not persistent.loop1:
         add "MOON/moon1.webp"
     else:
