@@ -445,13 +445,13 @@ image charm2 = "images/charm2.png"
 image bento = "images/bento.png"
 image bone = "images/bone.png"
 
-image moon1 = "MOON/moon1.jpg"
-image moon2 = "MOON/moon2.jpg"
-image moon3 = "MOON/moon3.jpg"
-image moon4 = "MOON/moon4.jpg"
-image moon5 = "MOON/moon5.jpg"
-image moon6 = "MOON/moon6.jpg"
-image moon7 = "MOON/moon7.jpg"
+image moon1 = "MOON/moon1.webp"
+image moon2 = "MOON/moon2.webp"
+image moon3 = "MOON/moon3.webp"
+image moon4 = "MOON/moon4.webp"
+image moon5 = "MOON/moon5.webp"
+image moon6 = "MOON/moon6.webp"
+image moon7 = "MOON/moon7.webp"
 
 image moon7 glitched:
     glitch("moon7") # reliable slicing
