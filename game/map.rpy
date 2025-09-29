@@ -60,7 +60,7 @@ default hikaru_ghost_events_completed = 0
 # define persistent.hikaru_dies = False ## hikaru ded
 
 #! Quitar
-default preferences.skip_unseen=True
+#default preferences.skip_unseen=True
 
 define locations = ["shrine", "forest", "dojo", "village","house"]
 
