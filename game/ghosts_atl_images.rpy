@@ -198,13 +198,6 @@ image ghost_yamato attack = LiveComposite(
     (0,0),"images/sprite_yamato_ghost/torso_attack.webp",
     (0,0),"images/sprite_yamato_ghost/mouth_attack.webp",
     (0,0),"images/sprite_yamato_ghost/legs.webp",
-
-    (0,0), Animation(
-            "images/sprite_yamato_ghost/mouth.PNG", 4.5,
-            "images/sprite_yamato_ghost/mouth1.PNG", .25,
-            "images/sprite_yamato_ghost/mouth2.PNG", .25,
-            "images/sprite_yamato_ghost/mouth1.PNG", .25,
-        ),
     (0,0), Animation(
             "images/sprite_yamato_ghost/arm_attack.PNG", 4.5,
             "images/sprite_yamato_ghost/arm_attack2.PNG", .25,
