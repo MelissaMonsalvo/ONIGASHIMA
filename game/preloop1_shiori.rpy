@@ -750,7 +750,7 @@ label loop1_shiori_mandatory4:
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_scatter3
     pause 2.0
 
-    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6}begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6}begone!{/sc}{/color}{/size}"
+    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6} begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6} begone!{/sc}{/color}{/size}"
 
 
     n "She chants clearly, loudly. The bell in her hand sways slightly with her rhythm."
