@@ -653,7 +653,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "[persistent.player_name]...?"
 
-    scene moon3:
+    scene cliff:
         easein 0.33 zoom 1.4
 
     show hik shocked:
@@ -703,7 +703,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "–ghhk–!"
 
-    scene moon3:
+    scene cliff:
         easeout 0.1 zoom 1
 
     show hik panic:
