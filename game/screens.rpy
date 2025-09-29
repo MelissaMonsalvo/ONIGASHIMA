@@ -167,7 +167,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.webp", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -233,14 +233,14 @@ style input:
 
 # Top masks
 image mask_top = ConditionSwitch(
-    "current_route == 'route1'", "gui/choices/mask_separate/yellow_mask.png",
-    "current_route == 'route2'", "gui/choices/mask_separate/red_mask.png"
+    "current_route == 'route1'", "gui/choices/yellow_mask.webp",
+    "current_route == 'route2'", "gui/choices/red_mask.webp"
 )
 
 # Bottom masks
 image mask_bottom = ConditionSwitch(
-    "current_route == 'route1'", "gui/choices/mask_separate/yellow_mask.png",
-    "current_route == 'route2'", "gui/choices/mask_separate/red_mask.png"
+    "current_route == 'route1'", "gui/choices/yellow_mask.webp",
+    "current_route == 'route2'", "gui/choices/red_mask.webp"
 )
 
 # =========================
@@ -299,15 +299,15 @@ transform choice_text_fadein:
 # =========================
 
 # Route 1 (default theme)
-image top_half_idle_r1 = "gui/choices/mask_separate/choice_yellow_right_idle_background.png"
-image top_half_hover_r1 = "gui/choices/mask_separate/choice_yellow_right_hover_background.png"
-image bottom_half_idle_r1 = "gui/choices/mask_separate/choice_yellow_left_idle_background.png"
-image bottom_half_hover_r1 = "gui/choices/mask_separate/choice_yellow_left_hover_background.png"
+image top_half_idle_r1 = "gui/choices/choice_yellow_right_idle_background.webp"
+image top_half_hover_r1 = "gui/choices/choice_yellow_right_hover_background.webp"
+image bottom_half_idle_r1 = "gui/choices/choice_yellow_left_idle_background.webp"
+image bottom_half_hover_r1 = "gui/choices/choice_yellow_left_hover_background.webp"
 # Route 2 (alt theme)
-image top_half_idle_r2 = "gui/choices/mask_separate/choice_red_right_idle_background.png"
-image top_half_hover_r2 = "gui/choices/mask_separate/choice_red_right_hover_background.png"
-image bottom_half_idle_r2 = "gui/choices/mask_separate/choice_red_left_idle_background.png"
-image bottom_half_hover_r2 = "gui/choices/mask_separate/choice_red_left_hover_background.png"
+image top_half_idle_r2 = "gui/choices/choice_red_right_idle_background.webp"
+image top_half_hover_r2 = "gui/choices/choice_red_right_hover_background.webp"
+image bottom_half_idle_r2 = "gui/choices/choice_red_left_idle_background.webp"
+image bottom_half_hover_r2 = "gui/choices/choice_red_left_hover_background.webp"
 
 default hovered_choice = -1
 

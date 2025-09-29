@@ -70,7 +70,7 @@ image frame gal hover = ConditionSwitch(
     "persistent.loop1 == True", Transform("gui/frame.webp", xysize=(480, 302), matrixcolor=ColorizeMatrix(RED, RED))
 )
 
-image gm bg1 = "gui/menu_background.jpg"
+image gm bg1 = "gui/menu_background.webp"
 
 define LONG_BTN_PADDING = (75, 30)
 define GM_LONG_BTN_PADDING = (20, 30, 75, 30)

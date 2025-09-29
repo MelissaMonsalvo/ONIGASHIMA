@@ -7,9 +7,9 @@ screen name_input():
     fixed:
         xysize (config.screen_width, config.screen_height)
             
-        add "gui/menu_background.jpg"
+        add "gui/menu_background.webp"
 
-        add "gui/name_input_background.png" ypos 188
+        add "gui/name_input_background.webp" ypos 188
 
 
         text "Say your name out loud":

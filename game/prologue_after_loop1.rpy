@@ -292,7 +292,7 @@ label prologue_loop1:
 
     n "NO."
 
-    n2 "{cps=201}Yamakui. Yamakui. Yamakui–"
+    n2 "{cps=201}Yamakui. Yamakui. Yamakui–{/cps}"
 
     n "No, that’s-{w}That’s NOT-!"
 
@@ -306,9 +306,9 @@ label prologue_loop1:
 
     n "Shut up."
 
-    n2 "{cps=201}Hungry hungry hungry."
+    n2 "{cps=201}Hungry hungry hungry.{/cps}"
 
-    n "{cps=201}Shut up {size=+3}shut up{/size} {size=+6}shut up{/size} {size=+9}shut up{/size} {size=+12}shut up{/size}–"
+    n "{cps=201}Shut up {size=+3}shut up{/size} {size=+6}shut up{/size} {size=+9}shut up{/size} {size=+12}shut up{/size}–{/cps}"
 
     "Woman" "Great job, [persistent.player_name]-san..."
 

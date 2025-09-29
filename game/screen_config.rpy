@@ -6,7 +6,7 @@ default cell_hight_3 = cell_hight_4 * 4
 # Definimos las fuentes disponibles
 define fonts = ["DejaVuSans.ttf", "NotoSans-Regular.ttf", "TurretRoad-Regular.ttf"]
 default font_index = 0  # Índice actual
-define persistent.dialogue_font = "NotoSans-Regular.ttf"
+default persistent.dialogue_font = "NotoSans-Regular.ttf"
 
 
 
