@@ -1,8 +1,8 @@
 
 
-image slash1 = "vfx/slash1.png"
-image slash2 = "vfx/slash2.png"
-image slash3 = "vfx/slash3.png"
+image slash1 = "vfx/slash1.webp"
+image slash2 = "vfx/slash2.webp"
+image slash3 = "vfx/slash3.webp"
 
 image slash_anim:
     Solid("#FFFFFF")         # Pure white slash — change color if needed
