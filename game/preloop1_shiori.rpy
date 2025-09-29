@@ -597,7 +597,7 @@ label gulgulp:
 
     n "Another strip slides off the tray, leaving a smear behind."
 
-    MC suprised "So, what is it? Boar? Deer?"
+    MC surprised "So, what is it? Boar? Deer?"
 
     play sound "sfx/suzu.mp3"
 
@@ -750,7 +750,7 @@ label loop1_shiori_mandatory4:
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_scatter3
     pause 2.0
 
-    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6}begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6}begone!{/sc}{/color}{/size}"
+    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6} begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6} begone!{/sc}{/color}{/size}"
 
 
     n "She chants clearly, loudly. The bell in her hand sways slightly with her rhythm."
@@ -763,7 +763,7 @@ label loop1_shiori_mandatory4:
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_attack6
 
-    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6}Back to the dark!{/sc}{/color}{/size}"
+    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6} Back to the dark!{/sc}{/color}{/size}"
 
 
 
@@ -784,7 +784,7 @@ label loop1_shiori_mandatory4:
     pause 2.0
 
 
-    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6}begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6}begone!{/sc}{/color}{/size}"
+    shiori "{size=*1.1}{color=#ffffff}{outlinecolor=#000000}{sc=6}Oni of the mountains,{/sc}{/outlinecolor}{/color}{/size}{w=0.2}{fast}{size=+1}{color=#ff0000}{sc=6} begone,{/sc}{/color}{/size}{w=0.5}{fast}{size=+1}{color=#ff0000}{sc=6} begone!{/sc}{/color}{/size}"
 
 
 
@@ -800,7 +800,7 @@ label loop1_shiori_mandatory4:
     show expression Text("立ち去れ、立ち去れ！", style="jojo_text") at jojo_attack5 as o2
     show expression Text("深淵に、闇に帰れ", style="jojo_text") at jojo_attack6 as o3
 
-    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6}Back to the dark!{/sc}{/color}{/size}"
+    shiori "{cps=14}{alpha=0.8}{sc=6}Back to the depths.{/sc}{/alpha}{/cps}{w=0.3}{size=+10}{color=#aa0000}{sc=6} Back to the dark!{/sc}{/color}{/size}"
 
 
 
@@ -821,7 +821,7 @@ label loop1_shiori_mandatory4:
 
     MC annoyed "I think that's enough, no evil spirits are here tonight."
 
-    MC normal "See? Nothing "
+    MC normal "See? Nothing. "
 
     show shi yansm
     with dissolve
@@ -849,7 +849,7 @@ label loop1_shiori_mandatory4:
 
     pause 3
 
-    n "But nothing comes out "
+    n "But nothing comes out."
 
 
     scene black
