@@ -881,7 +881,7 @@ label beforefirstloop:
     play sound "sfx/suzu.mp3"
     with sshake
 
-    n "{cps=50}Because you killed it. The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}"
+    n "{cps=50}Because you killed it. The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl}{/cps}"
 
     n "You remember the blood, the sound of bone, of the lump of flesh being stabbed {w=0.1}over and over and over...."
 

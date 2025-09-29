@@ -474,7 +474,7 @@ image red_flash_slow:
 image tiledFog = im.Tile(im.Scale("fog.png", 1600, 600), size=(2400, 800))
 image particleFog = SnowBlossom("fog-particle.png", count=80, border=600, xspeed=50, yspeed=0, start=5, fast=True, horizontal=True)
 image petals_dense = SnowBlossom(
-    "ppetal.png",
+    "ppetal.webp",
     count=40,             # More particles for density
     xspeed=(-10, 10),     # Not much horizontal movement
     yspeed=(-60, -110),   # Gentle, slow rise
@@ -482,7 +482,7 @@ image petals_dense = SnowBlossom(
     border=40
 )
 image petals_scatter = SnowBlossom(
-    "ppetal.png",
+    "ppetal.webp",
     count=20,             # Fewer particles
     xspeed=(-50, 50),     # More horizontal spread
     yspeed=(-150, -230),  # Faster upward movement
@@ -490,7 +490,7 @@ image petals_scatter = SnowBlossom(
     border=40
 )
 image petals_dense2 = SnowBlossom(
-    "ppetal2.png",
+    "ppetal2.webp",
     count=40,             # More particles for density
     xspeed=(-10, 10),     # Not much horizontal movement
     yspeed=(-60, -110),   # Gentle, slow rise
@@ -498,7 +498,7 @@ image petals_dense2 = SnowBlossom(
     border=40
 )
 image petals_scatter2 = SnowBlossom(
-    "ppetal2.png",
+    "ppetal2.webp",
     count=20,             # Fewer particles
     xspeed=(-50, 50),     # More horizontal spread
     yspeed=(-150, -230),  # Faster upward movement
@@ -506,7 +506,7 @@ image petals_scatter2 = SnowBlossom(
     border=40
 )
 image petals_dense3 = SnowBlossom(
-    "ppetal3.png",
+    "ppetal3.webp",
     count=40,             # More particles for density
     xspeed=(-10, 10),     # Not much horizontal movement
     yspeed=(-60, -110),   # Gentle, slow rise
@@ -514,7 +514,7 @@ image petals_dense3 = SnowBlossom(
     border=40
 )
 image petals_scatter3 = SnowBlossom(
-    "ppetal3.png",
+    "ppetal3.webp",
     count=20,             # Fewer particles
     xspeed=(-50, 50),     # More horizontal spread
     yspeed=(-150, -230),  # Faster upward movement

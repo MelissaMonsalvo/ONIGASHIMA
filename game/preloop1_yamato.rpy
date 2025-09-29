@@ -1145,7 +1145,7 @@ label loop1_yamato_mandatory4:
 
     hikaru "{b}...You don’t mean–{/b}"
 
-    yamato "I mean... maybe we’re wrong this time. {w=0.3}Maybe [persistent.player_name] {b}did{/i} kill th' damn thing after all."
+    yamato "I mean... maybe we’re wrong this time. {w=0.3}Maybe [persistent.player_name] {i}did{/i} kill th' damn thing after all."
 
     pause 0.5
 

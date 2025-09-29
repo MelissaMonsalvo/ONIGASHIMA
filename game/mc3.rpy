@@ -3,7 +3,7 @@
 ######################################3
 
 image side main normal3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -31,7 +31,7 @@ image side main normal3 = Transform(
 )
 
 image side main yan3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -59,7 +59,7 @@ image side main yan3 = Transform(
 )
 
 image side main yansm3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -86,7 +86,7 @@ image side main yansm3 = Transform(
     zoom=0.31
 )
 image side main panic3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -113,7 +113,7 @@ image side main panic3 = Transform(
     zoom=0.31
 )
 image side main happy3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -141,7 +141,7 @@ image side main happy3 = Transform(
 )
 
 image side main happycl3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -162,7 +162,7 @@ image side main happycl3 = Transform(
 )
 
 image side main nervous3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -190,7 +190,7 @@ image side main nervous3 = Transform(
 )
 
 image side main sad3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -218,7 +218,7 @@ image side main sad3 = Transform(
 )
 
 image side main sadcl3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -239,7 +239,7 @@ image side main sadcl3 = Transform(
 )
 
 image side main annoyed3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -267,7 +267,7 @@ image side main annoyed3 = Transform(
 )
 
 image side main mad3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -295,7 +295,7 @@ image side main mad3 = Transform(
 )
 
 image side main hurt3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -316,7 +316,7 @@ image side main hurt3 = Transform(
 )
 
 image side main surprised3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -344,7 +344,7 @@ image side main surprised3 = Transform(
 )
 
 image side main shocked3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -372,7 +372,7 @@ image side main shocked3 = Transform(
 )
 
 image side main smug3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -400,7 +400,7 @@ image side main smug3 = Transform(
 )
 
 image side main smugcl3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base
@@ -421,7 +421,7 @@ image side main smugcl3 = Transform(
 )
 
 image side main evil3 = Transform(
-    LiveComposite(
+    Composite(
         (800, 1400),
         (-20, -140), "MC/side_oni_background.png",
         (260, 0), "MC/oni/base.png",                        # base

@@ -289,25 +289,25 @@ label splashscreen:
     hide screen seizure
     pause 0.3
     # Show the rest of the splash images, clickable as normal
-    scene expression "splashscreen/ss1.jpg" with fade
+    scene expression "splashscreen/ss1.webp" with fade
     $ renpy.pause(0.7)
 
-    scene expression "splashscreen/ss2.jpg" with fade
+    scene expression "splashscreen/ss2.webp" with fade
     $ renpy.pause(0.7)
 
-    scene expression "splashscreen/ss3.jpg" with fade
+    scene expression "splashscreen/ss3.webp" with fade
     $ renpy.pause(0.7)
 
-    scene expression "splashscreen/ss3a.jpg" with fade
+    scene expression "splashscreen/ss3a.webp" with fade
     $ renpy.pause(0.7)
 
-    scene expression "splashscreen/ss4.jpg" with fade
+    scene expression "splashscreen/ss4.webp" with fade
     $ renpy.pause(0.7)
 
-    scene expression "splashscreen/ss4a.jpg" with fade
+    scene expression "splashscreen/ss4a.webp" with fade
     $ renpy.pause(0.7)
 
-    scene expression "splashscreen/ss5.jpg" with fade
+    scene expression "splashscreen/ss5.webp" with fade
     $ renpy.pause(0.7)
 
     scene black with fade

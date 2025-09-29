@@ -158,7 +158,7 @@ label loop2_hikaru_mandatory1:
 
     hikaru "See that boar? One of its leg is limping."
 
-    MC neutral2 "Mmhmm."
+    MC normal2 "Mmhmm."
 
     hikaru "On my signal, okay?"
 

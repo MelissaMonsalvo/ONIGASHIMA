@@ -13,7 +13,7 @@ label loop2_hikaru:
 
     n2 "...Hikaru noticed us."
 
-    n2 "{cps=10}So let's kill them."
+    n2 "{cps=10}So let's kill them.{/cps}"
 
     scene black
     with fade
@@ -791,7 +791,7 @@ label yesyeysysyqsad222:
 
     hikaru "When...{w=0.5} the cherry blossoms...{w=0.5} bloom–"
 
-    n2 "{cps=10}Open wide.{cps=10}"
+    n2 "{cps=10}Open wide.{/cps}"
 
     scene flesh:
         matrixcolor BrightnessMatrix(-0.5)

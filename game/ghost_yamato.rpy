@@ -130,7 +130,7 @@ label ghost_yamato_3:
 
     n "You were supposed--"
 
-    MC annoyed "Shut up."
+    MC annoyed2 "Shut up."
 
     # MC sleeps and something starts choking them
     # players must free themselves by clicking the screen several times (advancing dialogue)
