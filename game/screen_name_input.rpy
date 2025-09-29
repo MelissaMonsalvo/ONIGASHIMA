@@ -74,7 +74,7 @@ style ni_frame:
     anchor (1.0, 1.0)
     pos (1920, 1060)
 
-    background Frame("gui/game menu/btn_backgroud.png", 20, 10)
+    background Frame("gui/game menu/btn_backgroud.webp", 20, 10)
     padding GM_LONG_BTN_PADDING
 
 style ni_hbox:
@@ -84,9 +84,9 @@ style ni_hbox:
 style ni_button:
     xysize GM_BUTTON_SIZE
 
-    background Frame("gui/game menu/btn_idle_background.png", 20, 10)
+    background Frame("gui/game menu/btn_idle_background.webp", 20, 10)
     hover_background "gm_btn_hover"
-    insensitive_background Frame("gui/game menu/btn_insensitive_background.png", 20, 10)
+    insensitive_background Frame("gui/game menu/btn_insensitive_background.webp", 20, 10)
 
 style ni_text:
     font "NotoSerifJP-VariableFont_wght.ttf"

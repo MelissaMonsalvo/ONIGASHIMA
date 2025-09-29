@@ -34,10 +34,10 @@ define config.quit_action = Show("exit_game")
 
 image logo = "gui/window_icon.png"
 
-image mm_background = ConditionSwitch(
-    "not persistent.loop1", "gui/mm_background1.webp",
-    "persistent.loop1 == True", "gui/mm_background2.webp"
-)
+# image mm_background = ConditionSwitch(
+#     "not persistent.loop1", "gui/mm_background1.webp",
+#     "persistent.loop1 == True", "gui/mm_background2.webp"
+# )
 
 
 
@@ -58,8 +58,8 @@ image long_btn_hover_no_frame = ConditionSwitch(
 )
 
 image gm_btn_hover = ConditionSwitch(
-    "not persistent.loop1", Frame("gui/game menu/btn_hover_background.png", 20, 10),
-    "persistent.loop1 == True", Frame("gui/game menu/btn_red_hover_background.png", 20, 10)
+    "not persistent.loop1", Frame("gui/game menu/btn_hover_background.webp", 20, 10),
+    "persistent.loop1 == True", Frame("gui/game menu/btn_red_hover_background.webp", 20, 10)
 )
 
 image frame black = Frame("gui/frame.webp", 100, 85)
@@ -82,7 +82,7 @@ define GM_BUTTON_SIZE = (411, 60)
 define GM_SPACING = 30
 define GM_VP_SIZE = (1100, 550)
 define GM_VP_POS = (670, 332)
-image gm navline = Transform("gui/game menu/nav_line.png", pos=(90, 215))
+image gm navline = Transform("gui/game menu/nav_line.webp", pos=(90, 215))
 
 
 ### SAVE/LOAD ###

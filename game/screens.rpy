@@ -63,8 +63,8 @@ style prompt_text is gui_text:
 style bar:
     ysize 68
     xsize 525
-    left_bar Frame("gui/game menu/left.png", 20, 5, tile=False)
-    right_bar Frame("gui/game menu/right.png", 20, 5, tile=False)
+    left_bar Frame("gui/game menu/left.webp", 20, 5, tile=False)
+    right_bar Frame("gui/game menu/right.webp", 20, 5, tile=False)
     #left_bar "gui/game menu/left.png"
     #right_bar "gui/game menu/right.png"
 
@@ -408,7 +408,7 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
-        add "gui/quick menu/nav_line.png" pos (1835, 8)
+        add "gui/quick menu/nav_line.webp" pos (1835, 8)
         vbox:
             at ts_qm_fadein(-80)
             xsize 90
@@ -416,19 +416,19 @@ screen quick_menu():
 
             pos (1800, 55)
 
-            imagebutton auto "gui/quick menu/auto_%s.png":
+            imagebutton auto "gui/quick menu/auto_%s.webp":
                 action Preference("auto-forward", "toggle")
 
-            imagebutton auto "gui/quick menu/back_%s.png":
+            imagebutton auto "gui/quick menu/back_%s.webp":
                 action Rollback()
 
-            imagebutton auto "gui/quick menu/skip_%s.png":
+            imagebutton auto "gui/quick menu/skip_%s.webp":
                 action Skip() alternate Skip(fast=True, confirm=True)
 
-            imagebutton auto "gui/quick menu/save_%s.png":
+            imagebutton auto "gui/quick menu/save_%s.webp":
                 action ShowMenu('save')
 
-            imagebutton auto "gui/quick menu/pause_%s.png":
+            imagebutton auto "gui/quick menu/pause_%s.webp":
                 action ShowMenu('pause_menu')
 
 
@@ -736,22 +736,22 @@ style preferencessidemenu_text:
 
 # En screens.rpy o antes del screen:
 define btn_skin_yellow = {
-    "idle" : "gui/game menu/btn_nav_idle_background.png",
-    "hover": "gui/game menu/btn_nav_hover_background.png",
-    "sel_idle": "gui/game menu/btn_nav_selected_idle_background.png",
-    "sel_hover": "gui/game menu/btn_nav_selected_hover_background.png",
-    "idle_2": "gui/game menu/btn_idle_background.png",
-    "hover_2": "gui/game menu/btn_hover_background.png",
+    "idle" : "gui/game menu/btn_nav_idle_background.webp",
+    "hover": "gui/game menu/btn_nav_hover_background.webp",
+    "sel_idle": "gui/game menu/btn_nav_selected_idle_background.webp",
+    "sel_hover": "gui/game menu/btn_nav_selected_hover_background.webp",
+    "idle_2": "gui/game menu/btn_idle_background.webp",
+    "hover_2": "gui/game menu/btn_hover_background.webp",
     "color": "#000000"
 }
 
 define btn_skin_red = {
-    "idle" : "gui/game menu/btn_nav_idle_background.png",
-    "hover": "gui/game menu/btn_nav_hover_background.png",
-    "sel_idle": "gui/game menu/btn_nav_red_selected_idle_background.png",
-    "sel_hover": "gui/game menu/btn_nav_red_selected_hover_background.png",
-    "idle_2": "gui/game menu/btn_idle_background.png",
-    "hover_2": "gui/game menu/btn_red_hover_background.png",
+    "idle" : "gui/game menu/btn_nav_idle_background.webp",
+    "hover": "gui/game menu/btn_nav_hover_background.webp",
+    "sel_idle": "gui/game menu/btn_nav_red_selected_idle_background.webp",
+    "sel_hover": "gui/game menu/btn_nav_red_selected_hover_background.webp",
+    "idle_2": "gui/game menu/btn_idle_background.webp",
+    "hover_2": "gui/game menu/btn_red_hover_background.webp",
     "color": "#ffffff"
 }
 
@@ -759,147 +759,147 @@ define selected1 = 1
 # persistent.loop1:
 
 
-screen preferences_old():
+# screen preferences_old():
 
-    tag menu
+#     tag menu
 
-    style_prefix "preferencessidemenu"
-    add "gui/menu_background2.jpg"
-
-
-    $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
+#     style_prefix "preferencessidemenu"
+#     add "gui/menu_background2.jpg"
 
 
-
-    text "SETTINGS":
-        font "NotoSerifJP-VariableFont_wght.ttf"
-        size 80
-        color "#ffffff"
-        xpos 55
-        ypos 30
-
-
-    hbox:
-        ypos 300
-        xpos 30
-        frame:
-            xsize 150
-            background None
-            add "gui/game menu/nav_line.png" xoffset 40
-            vbox:
-                spacing 40
-
-                fixed:
-                    xsize 250
-                    ysize 100
-                    imagebutton:
-                        idle skin["idle"]
-                        hover skin["hover"]
-                        selected_idle skin["sel_idle"]
-                        selected_hover skin["sel_hover"]
-                        action SetVariable("opconfig",1)
-                    if opconfig == 1:
-                        text "General" xpos 125 yalign 0.5 color skin["color"]
-                    else:
-                        text "General" xpos 125 yalign 0.5 color "#000000"
-                fixed:
-                    xsize 250
-                    ysize 100
-                    imagebutton:
-                        idle skin["idle"]
-                        hover skin["hover"]
-                        selected_idle skin["sel_idle"]
-                        selected_hover skin["sel_hover"]
-                        action SetVariable("opconfig",2)
-                    #text "Audio" xpos 125 yalign 0.5
-                    if opconfig == 2:
-                        text "Audio" xpos 125 yalign 0.5 color skin["color"]
-                    else:
-                        text "Audio" xpos 125 yalign 0.5 color "#000000"
-
-                fixed:
-                    xsize 250
-                    ysize 100
-                    imagebutton:
-                        idle skin["idle"]
-                        hover skin["hover"]
-                        selected_idle skin["sel_idle"]
-                        selected_hover skin["sel_hover"]
-                        action SetVariable("opconfig",3)
-                    #text "Dialogue" xpos 125 yalign 0.5
-                    if opconfig == 3:
-                        text "Dialogue" xpos 125 yalign 0.5 color skin["color"]
-                    else:
-                        text "Dialogue" xpos 125 yalign 0.5 color "#000000"
-
-                fixed:
-                    xsize 250
-                    ysize 100
-                    imagebutton:
-                        idle skin["idle"]
-                        hover skin["hover"]
-                        selected_idle skin["sel_idle"]
-                        selected_hover skin["sel_hover"]
-                        action SetVariable("opconfig",4), SetVariable("selected1",4)
-                    #text "Accessibility/\nControls" xpos 125 yalign 0.5
-                    if opconfig == 4:
-                        text "Accessibility/\nControls" xpos 125 yalign 0.5 color skin["color"]
-                    else:
-                        text "Accessibility/\nControls" xpos 125 yalign 0.5 color "#000000"
-        null width 500
-
-        if opconfig == 1:
-            use config_general2()
-        elif opconfig == 2:
-            use config_audio()
-        elif opconfig == 3:
-            use config_dialogue()
-        elif opconfig == 4:
-            use config_accessibility()
-
-    use confirm_config()
+#     $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
 
 
 
-screen confirm_config():
-    $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
-    frame:
-        xpos 1025
-        ypos 965
-        background "gui/game menu/btn_backgroud.png"
-        #background None
-        #Left button
-        hbox:
-            xoffset 30
-            frame:
-                xsize 411
-                ysize 60
-                yoffset 10
-                background None
-                imagebutton:
-                    idle skin["idle_2"]
-                    hover skin["hover_2"]
-                    xalign 0.5
-                    if main_menu:
-                        action ShowMenu("main_menu") #action Return()
-                    else:
-                        action Return() #Hide("preferences")
-                text "CONFIRM" xalign 0.3 yalign 0.5 size 30
-            #Right button
-            frame:
-                xsize 411
-                ysize 60
-                yoffset 10
-                background None
-                imagebutton:
-                    idle skin["idle_2"]
-                    hover skin["hover_2"]
-                    xalign 0.5
-                    if main_menu:
-                        action ShowMenu("main_menu") #Return()
-                    else:
-                        action Return() #Hide("preferences")
-                text "BACK" xalign 0.3 yalign 0.5 size 30
+#     text "SETTINGS":
+#         font "NotoSerifJP-VariableFont_wght.ttf"
+#         size 80
+#         color "#ffffff"
+#         xpos 55
+#         ypos 30
+
+
+#     hbox:
+#         ypos 300
+#         xpos 30
+#         frame:
+#             xsize 150
+#             background None
+#             add "gui/game menu/nav_line.webp" xoffset 40
+#             vbox:
+#                 spacing 40
+
+#                 fixed:
+#                     xsize 250
+#                     ysize 100
+#                     imagebutton:
+#                         idle skin["idle"]
+#                         hover skin["hover"]
+#                         selected_idle skin["sel_idle"]
+#                         selected_hover skin["sel_hover"]
+#                         action SetVariable("opconfig",1)
+#                     if opconfig == 1:
+#                         text "General" xpos 125 yalign 0.5 color skin["color"]
+#                     else:
+#                         text "General" xpos 125 yalign 0.5 color "#000000"
+#                 fixed:
+#                     xsize 250
+#                     ysize 100
+#                     imagebutton:
+#                         idle skin["idle"]
+#                         hover skin["hover"]
+#                         selected_idle skin["sel_idle"]
+#                         selected_hover skin["sel_hover"]
+#                         action SetVariable("opconfig",2)
+#                     #text "Audio" xpos 125 yalign 0.5
+#                     if opconfig == 2:
+#                         text "Audio" xpos 125 yalign 0.5 color skin["color"]
+#                     else:
+#                         text "Audio" xpos 125 yalign 0.5 color "#000000"
+
+#                 fixed:
+#                     xsize 250
+#                     ysize 100
+#                     imagebutton:
+#                         idle skin["idle"]
+#                         hover skin["hover"]
+#                         selected_idle skin["sel_idle"]
+#                         selected_hover skin["sel_hover"]
+#                         action SetVariable("opconfig",3)
+#                     #text "Dialogue" xpos 125 yalign 0.5
+#                     if opconfig == 3:
+#                         text "Dialogue" xpos 125 yalign 0.5 color skin["color"]
+#                     else:
+#                         text "Dialogue" xpos 125 yalign 0.5 color "#000000"
+
+#                 fixed:
+#                     xsize 250
+#                     ysize 100
+#                     imagebutton:
+#                         idle skin["idle"]
+#                         hover skin["hover"]
+#                         selected_idle skin["sel_idle"]
+#                         selected_hover skin["sel_hover"]
+#                         action SetVariable("opconfig",4), SetVariable("selected1",4)
+#                     #text "Accessibility/\nControls" xpos 125 yalign 0.5
+#                     if opconfig == 4:
+#                         text "Accessibility/\nControls" xpos 125 yalign 0.5 color skin["color"]
+#                     else:
+#                         text "Accessibility/\nControls" xpos 125 yalign 0.5 color "#000000"
+#         null width 500
+
+#         if opconfig == 1:
+#             use config_general2()
+#         elif opconfig == 2:
+#             use config_audio()
+#         elif opconfig == 3:
+#             use config_dialogue()
+#         elif opconfig == 4:
+#             use config_accessibility()
+
+#     use confirm_config()
+
+
+
+# screen confirm_config():
+#     $ skin = btn_skin_yellow if persistent.loop1 else btn_skin_red
+#     frame:
+#         xpos 1025
+#         ypos 965
+#         background "gui/game menu/btn_backgroud.webp"
+#         #background None
+#         #Left button
+#         hbox:
+#             xoffset 30
+#             frame:
+#                 xsize 411
+#                 ysize 60
+#                 yoffset 10
+#                 background None
+#                 imagebutton:
+#                     idle skin["idle_2"]
+#                     hover skin["hover_2"]
+#                     xalign 0.5
+#                     if main_menu:
+#                         action ShowMenu("main_menu") #action Return()
+#                     else:
+#                         action Return() #Hide("preferences")
+#                 text "CONFIRM" xalign 0.3 yalign 0.5 size 30
+#             #Right button
+#             frame:
+#                 xsize 411
+#                 ysize 60
+#                 yoffset 10
+#                 background None
+#                 imagebutton:
+#                     idle skin["idle_2"]
+#                     hover skin["hover_2"]
+#                     xalign 0.5
+#                     if main_menu:
+#                         action ShowMenu("main_menu") #Return()
+#                     else:
+#                         action Return() #Hide("preferences")
+#                 text "BACK" xalign 0.3 yalign 0.5 size 30
 
 
 

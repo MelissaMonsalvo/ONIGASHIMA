@@ -137,7 +137,7 @@ style help_gm_frame:
     xminimum GM_XMIN_FRAME
     anchor (1.0, 1.0)
     pos (1920, 1060)
-    background Frame("gui/game menu/btn_backgroud.png", 20, 10)
+    background Frame("gui/game menu/btn_backgroud.webp", 20, 10)
     padding GM_LONG_BTN_PADDING
 
 style help_gm_hbox:

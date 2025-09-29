@@ -525,58 +525,58 @@ image petals_scatter3 = SnowBlossom(
 
 ### horror circle
 
-image circle_ghost:
-    "Ghosts/Circle/1.jpg"
-    0.04
-    "Ghosts/Circle/2.jpg"
-    0.04
-    "Ghosts/Circle/3.jpg"
-    0.04
-    "Ghosts/Circle/4.jpg"
-    0.04
-    "Ghosts/Circle/5.jpg"
-    0.04
-    "Ghosts/Circle/6.jpg"
-    0.04
-    "Ghosts/Circle/7.jpg"
-    0.04
-    "Ghosts/Circle/8.jpg"
-    0.04
-    "Ghosts/Circle/9.jpg"
-    0.04
-    "Ghosts/Circle/10.jpg"
-    0.04
-    "Ghosts/Circle/11.jpg"
-    0.04
-    "Ghosts/Circle/12.jpg"
-    0.04
-    "Ghosts/Circle/13.jpg"
-    0.04
-    "Ghosts/Circle/14.jpg"
-    0.04
-    "Ghosts/Circle/15.jpg"
-    0.04
-    "Ghosts/Circle/16.jpg"
-    0.04
-    "Ghosts/Circle/17.jpg"
-    0.04
-    "Ghosts/Circle/18.jpg"
-    0.04
-    "Ghosts/Circle/19.jpg"
-    0.04
-    "Ghosts/Circle/20.jpg"
-    0.04
-    "Ghosts/Circle/21.jpg"
-    0.04
-    "Ghosts/Circle/22.jpg"
-    0.04
-    "Ghosts/Circle/23.jpg"
-    0.04
-    "Ghosts/Circle/24.jpg"
-    0.04
-    "Ghosts/Circle/25.jpg"
-    0.04
-    repeat
+# image circle_ghost:
+#     "Ghosts/Circle/1.jpg"
+#     0.04
+#     "Ghosts/Circle/2.jpg"
+#     0.04
+#     "Ghosts/Circle/3.jpg"
+#     0.04
+#     "Ghosts/Circle/4.jpg"
+#     0.04
+#     "Ghosts/Circle/5.jpg"
+#     0.04
+#     "Ghosts/Circle/6.jpg"
+#     0.04
+#     "Ghosts/Circle/7.jpg"
+#     0.04
+#     "Ghosts/Circle/8.jpg"
+#     0.04
+#     "Ghosts/Circle/9.jpg"
+#     0.04
+#     "Ghosts/Circle/10.jpg"
+#     0.04
+#     "Ghosts/Circle/11.jpg"
+#     0.04
+#     "Ghosts/Circle/12.jpg"
+#     0.04
+#     "Ghosts/Circle/13.jpg"
+#     0.04
+#     "Ghosts/Circle/14.jpg"
+#     0.04
+#     "Ghosts/Circle/15.jpg"
+#     0.04
+#     "Ghosts/Circle/16.jpg"
+#     0.04
+#     "Ghosts/Circle/17.jpg"
+#     0.04
+#     "Ghosts/Circle/18.jpg"
+#     0.04
+#     "Ghosts/Circle/19.jpg"
+#     0.04
+#     "Ghosts/Circle/20.jpg"
+#     0.04
+#     "Ghosts/Circle/21.jpg"
+#     0.04
+#     "Ghosts/Circle/22.jpg"
+#     0.04
+#     "Ghosts/Circle/23.jpg"
+#     0.04
+#     "Ghosts/Circle/24.jpg"
+#     0.04
+#     "Ghosts/Circle/25.jpg"
+#     0.04
+#     repeat
 
 
 ###EYEEESSSS####
@@ -590,16 +590,16 @@ transform blink_eye(delay=0.0, speed=0.4):
     repeat
 
 screen eyessss:
-    add "eyes/eye1.png" at blink_eye(delay=0.1, speed=0.3) xpos 0.1 ypos 0.2 zoom 0.3
-    add "eyes/eye2.png" at blink_eye(delay=0.6, speed=0.5) xpos 0.8 ypos 0.1 zoom 0.3
-    add "eyes/eye3.png" at blink_eye(delay=0.2, speed=0.6) xpos 0.4 ypos 0.7 zoom 0.3
-    add "eyes/eye4.png" at blink_eye(delay=0.0, speed=0.2) xpos 0.3 ypos 0.5 zoom 0.3
-    add "eyes/eye5.png" at blink_eye(delay=0.7, speed=0.3) xpos 0.6 ypos 0.8 zoom 0.3
-    add "eyes/eye1.png" at blink_eye(delay=0.4, speed=0.5) xpos 0.15 ypos 0.6 zoom 0.3
-    add "eyes/eye2.png" at blink_eye(delay=0.8, speed=0.4) xpos 0.85 ypos 0.3 zoom 0.3
-    add "eyes/eye3.png" at blink_eye(delay=0.5, speed=0.7) xpos 0.55 ypos 0.2 zoom 0.3
-    add "eyes/eye4.png" at blink_eye(delay=0.3, speed=0.3) xpos 0.2 ypos 0.85 zoom 0.3
-    add "eyes/eye5.png" at blink_eye(delay=0.6, speed=0.6) xpos 0.75 ypos 0.65 zoom 0.3
+    add "eyes/eye1.webp" at blink_eye(delay=0.1, speed=0.3) xpos 0.1 ypos 0.2 zoom 0.3
+    add "eyes/eye2.webp" at blink_eye(delay=0.6, speed=0.5) xpos 0.8 ypos 0.1 zoom 0.3
+    add "eyes/eye3.webp" at blink_eye(delay=0.2, speed=0.6) xpos 0.4 ypos 0.7 zoom 0.3
+    add "eyes/eye4.webp" at blink_eye(delay=0.0, speed=0.2) xpos 0.3 ypos 0.5 zoom 0.3
+    add "eyes/eye5.webp" at blink_eye(delay=0.7, speed=0.3) xpos 0.6 ypos 0.8 zoom 0.3
+    add "eyes/eye1.webp" at blink_eye(delay=0.4, speed=0.5) xpos 0.15 ypos 0.6 zoom 0.3
+    add "eyes/eye2.webp" at blink_eye(delay=0.8, speed=0.4) xpos 0.85 ypos 0.3 zoom 0.3
+    add "eyes/eye3.webp" at blink_eye(delay=0.5, speed=0.7) xpos 0.55 ypos 0.2 zoom 0.3
+    add "eyes/eye4.webp" at blink_eye(delay=0.3, speed=0.3) xpos 0.2 ypos 0.85 zoom 0.3
+    add "eyes/eye5.webp" at blink_eye(delay=0.6, speed=0.6) xpos 0.75 ypos 0.65 zoom 0.3
 
 
 

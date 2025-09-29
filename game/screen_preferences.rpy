@@ -318,7 +318,7 @@ screen pref_audio():
                         style "bar"
                         xalign 1.0
                         left_bar bar_skin
-                        right_bar "gui/game menu/right.png"
+                        right_bar "gui/game menu/right.webp"
                         ysize 68
                         thumb None
                         
@@ -339,7 +339,7 @@ screen pref_audio():
                         style "bar"
                         xalign 1.0
                         left_bar bar_skin
-                        right_bar "gui/game menu/right.png"
+                        right_bar "gui/game menu/right.webp"
                         ysize 68
                         thumb None
                         
@@ -361,7 +361,7 @@ screen pref_audio():
                             style "bar"
                             xalign 1.0
                             left_bar bar_skin
-                            right_bar "gui/game menu/right.png"
+                            right_bar "gui/game menu/right.webp"
                             ysize 68
                             thumb None
                             
@@ -412,7 +412,7 @@ screen pref_dialogue():
                     bar value Preference("text speed") alt "Change dialogue text speed":
                         style "bar"
                         left_bar bar_skin
-                        right_bar "gui/game menu/right.png"
+                        right_bar "gui/game menu/right.webp"
                         thumb None
                         ysize 68
                         xalign 1.0
@@ -429,7 +429,7 @@ screen pref_dialogue():
                     bar value FieldValue(persistent, "dialogue_text_size", step=5, min=25, max=45) alt "Change dialogue text size":
                         style "bar"
                         left_bar bar_skin
-                        right_bar "gui/game menu/right.png"
+                        right_bar "gui/game menu/right.webp"
                         thumb None
                         ysize 68
                         xalign 1.0
@@ -445,7 +445,7 @@ screen pref_dialogue():
                     bar value FieldValue(persistent, "dialogue_line_spacing", max_is_zero=False, step=0.5, min=2, max=80) alt "Change dialogue line spacing":
                         style "bar"
                         left_bar bar_skin
-                        right_bar "gui/game menu/right.png"
+                        right_bar "gui/game menu/right.webp"
                         thumb None
                         ysize 68
                         xalign 1.0
@@ -462,7 +462,7 @@ screen pref_dialogue():
                     bar value Preference("auto-forward time") alt "Change auto-delay time":
                         style "bar"
                         left_bar bar_skin
-                        right_bar "gui/game menu/right.png"
+                        right_bar "gui/game menu/right.webp"
                         thumb None
                         ysize 68
                         xalign 1.0
