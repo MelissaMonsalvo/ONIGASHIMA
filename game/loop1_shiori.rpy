@@ -698,7 +698,7 @@ label loop1_shiori:
 
     n "This... feels wrong, somehow. How did–"
 
-    MC "Shut up."
+    MC yan "Shut up."
 
     camera:
         linear 2.0 ypos -0.1
