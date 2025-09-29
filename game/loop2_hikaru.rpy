@@ -23,8 +23,6 @@ label loop2_hikaru:
 
     $ hsword = True
 
-    play music "Battora.mp3"
-
     scene house night:
         zoom 0.5
 
