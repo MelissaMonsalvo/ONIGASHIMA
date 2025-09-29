@@ -110,7 +110,7 @@ transform spin_forever:
     rotate 0
     linear 2.5 rotate 360
     repeat
-screen magic_circle_spin:
+screen magic_circle_spin():
     add "magic_circle" at spin_forever anchor (0.5, 0.5) pos (0.5, 0.5)
 
 init python:
@@ -150,7 +150,7 @@ style transparent_button:
     insensitive_background None
     padding (0, 0)
 
-screen struggle_qte_end:
+screen struggle_qte_end():
     timer 0.1 action [Hide("struggle_qte"), Return()]
 
 transform bg_run_shake:
@@ -372,7 +372,7 @@ screen horror_forced_menu_jitter(items):
 
                     text caption style "choice_text" xalign 0.5 yalign 0.6 at choice_text_fadein
 
-screen black_flicker:
+screen black_flicker():
     zorder 1000
     add Solid("#000") at horror_flicker
 
@@ -437,13 +437,13 @@ screen horror_forced_menu_two(items):
 
 ## images
 
-image frame2 = "images/frame.png"
-image matcha = "images/matcha.png"
-image wine = "images/wine.png"
-image charm = "images/charm.png"
-image charm2 = "images/charm2.png"
-image bento = "images/bento.png"
-image bone = "images/bone.png"
+image frame2 = "images/frame.webp"
+image matcha = "images/matcha.webp"
+image wine = "images/wine.webp"
+image charm = "images/charm.webp"
+image charm2 = "images/charm2.webp"
+image bento = "images/bento.webp"
+image bone = "images/bone.webp"
 
 image moon1 = "MOON/moon1.webp"
 image moon2 = "MOON/moon2.webp"
@@ -589,7 +589,7 @@ transform blink_eye(delay=0.0, speed=0.4):
     pause speed * 2
     repeat
 
-screen eyessss:
+screen eyessss():
     add "eyes/eye1.webp" at blink_eye(delay=0.1, speed=0.3) xpos 0.1 ypos 0.2 zoom 0.3
     add "eyes/eye2.webp" at blink_eye(delay=0.6, speed=0.5) xpos 0.8 ypos 0.1 zoom 0.3
     add "eyes/eye3.webp" at blink_eye(delay=0.2, speed=0.6) xpos 0.4 ypos 0.7 zoom 0.3

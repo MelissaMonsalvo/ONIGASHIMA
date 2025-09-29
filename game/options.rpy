@@ -193,6 +193,18 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
 
+
+
+    # TODO: Once ATL for circle_ghost works, remove this
+    build.classify("game/Ghosts/**", None)
+
+
+    ## INDIVIDUAL IMAGES THAT ARE UNUSED
+    # TODO: Remove this once images are used
+    build.classify("game/images/boar.webp", None)
+    build.classify("game/images/corpse.webp", None)
+
+
     # Declare two archives.
     build.archive("scripts", "all")
     build.archive("images", "all")
@@ -201,8 +213,7 @@ init python:
     build.archive("vidya", "all")
 
 
-    # TODO: Once ATL for circle_ghost works, remove this
-    build.classify("game/Ghosts/**", None)
+
     # Put script files into the scripts archive.
     build.classify("game/**.rpy", "scripts")
     build.classify("game/**.rpyc", "scripts")

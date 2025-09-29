@@ -78,7 +78,7 @@ image darken = "BG/darken.webp"
 image darken2 = "BG/darken2.webp"
 image blood = "BG/blood.webp"
 
-image gore = "images/gore.png"
+image gore = "images/gore.webp"
 
 image cg_shioriloop1 = "images/cg_shioriloop1.png"
 image cg_trueending = "images/cg_trueending.png"

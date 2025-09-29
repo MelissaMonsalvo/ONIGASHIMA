@@ -301,21 +301,21 @@ label ghost_shiori_4:
 screen ghost_shiori_5_open1():
     imagebutton:
         xalign 0.1 yalign 0.2
-        idle "images/button_open.png"
+        idle "images/button_open.webp"
         #action play sound ratling
         action Return()
 
 screen ghost_shiori_5_open2():
     imagebutton:
         xalign 0.1 yalign 0.2
-        idle "images/button_open.png"
+        idle "images/button_open.webp"
         #action play sound ratling
         action Return()
 
 screen ghost_shiori_5_open3():
     imagebutton:
         xalign 0.1 yalign 0.2
-        idle "images/button_open.png"
+        idle "images/button_open.webp"
         #action play sound ratling
         action Return()
 
