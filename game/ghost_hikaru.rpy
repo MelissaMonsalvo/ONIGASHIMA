@@ -103,7 +103,7 @@ label ghost_hikaru_2:
 
     MC yan2 "...Don't tell me where to go."
 
-    n "But--"
+    n "But–"
 
     MC yan2 "Shut up."
 
@@ -194,7 +194,7 @@ label ghost_hikaru_3:
 
     n "..."
 
-    n "Seriously, why won't you listen--"
+    n "Seriously, why won't you listen–"
 
     MC yan2 "I want to sleep. Make me listen."
 
