@@ -80,52 +80,52 @@ init python:
 image cg final_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_trueending.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_trueending.webp", xysize=gallery_thumb_size)
 )
 
 image cg final_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_trueending.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_trueending.webp", xysize=gallery_thumb_size)
 )
 
 
 image shiori cg1_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_shioriloop1.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_shioriloop1.webp", xysize=gallery_thumb_size)
 )
 
 image shiori cg1_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_shioriloop1.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_shioriloop1.webp", xysize=gallery_thumb_size)
 )
 
 
 image hikaru cg1_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_loop1hikaru.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop1hikaru.webp", xysize=gallery_thumb_size)
 )
 
 image hikaru cg1_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_loop1hikaru.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop1hikaru.webp", xysize=gallery_thumb_size)
 )
 
 
 image yamato cg1_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_loop1yamato.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop1yamato.webp", xysize=gallery_thumb_size)
 )
 
 image yamato cg1_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_loop1yamato.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop1yamato.webp", xysize=gallery_thumb_size)
 )
 
 
@@ -133,39 +133,39 @@ image yamato cg1_thumb_hover = Composite(
 image shiori cg3_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_loop3shiori.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop3shiori.webp", xysize=gallery_thumb_size)
 )
 
 image shiori cg3_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_loop3shiori.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop3shiori.webp", xysize=gallery_thumb_size)
 )
 
 
 image hikaru cg3_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_loop3hikaru.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop3hikaru.webp", xysize=gallery_thumb_size)
 )
 
 image hikaru cg3_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_loop3hikaru.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop3hikaru.webp", xysize=gallery_thumb_size)
 )
 
 
 image yamato cg3_thumb = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal",
-    gallery_thumb_pos, Transform("images/cg_loop3yamato.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop3yamato.webp", xysize=gallery_thumb_size)
 )
 
 image yamato cg3_thumb_hover = Composite(
     gallery_button_size,
     gallery_bg_pos, "frame gal hover",
-    gallery_thumb_pos, Transform("images/cg_loop3yamato.png", xysize=gallery_thumb_size)
+    gallery_thumb_pos, Transform("images/cg_loop3yamato.webp", xysize=gallery_thumb_size)
 )
     
 ############################################################

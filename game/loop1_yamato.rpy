@@ -49,7 +49,7 @@ label loop1_yamato:
 
     n "The sun's almost gone, with a blood-colored light sinking into the current."
 
-    n "Yamato's hunched, a half-empty bottle of sake in his right hand. Eyes liddled, gaze unfocused, and a bit woozy."
+    n "Yamato's hunched, a half-empty bottle of sake in his right hand. Eyes lidded, gaze unfocused, and a bit woozy."
 
     MC surprised "...Drinking alone?"
 
@@ -717,7 +717,7 @@ label loop1_yamato:
 
     play muzak "sfx/forest night.wav"
 
-    yamato "Yo. Ya aready for patrol or ya still nappin'?"
+    yamato "Yo. Ya already for patrol or ya still nappin'?"
 
     MC normal "You're early."
 
@@ -1016,7 +1016,7 @@ label loop1_yamato:
 
     yamato "Was gonna say drink 'till dawn, but that works too."
 
-    MC smugcl "I would conisder it since you're blushing so hard I almost want to pity you."
+    MC smugcl "I would consider it since you're blushing so hard I almost want to pity you."
 
     show yam panicbl
     with dissolve

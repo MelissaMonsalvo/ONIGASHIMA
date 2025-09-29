@@ -1531,7 +1531,7 @@ label loop1_yamato_mandatory5:
 
     yamato "...Hh."
 
-    MC nervous "'Cmon, let's go back before whatever that thing was decides to return."
+    MC nervous "C'mon, let's go back before whatever that thing was decides to return."
 
     scene black
     with dissolve

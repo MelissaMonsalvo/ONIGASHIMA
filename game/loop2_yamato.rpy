@@ -347,7 +347,7 @@ label loop2_yamato:
             linear 0.08 xalign 0.2
 
 
-        n "Hikaru rushes in, Sai in hand."
+        n "Hikaru rushes in, sai in hand."
 
         yamato "...!"
 

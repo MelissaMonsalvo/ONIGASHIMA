@@ -157,7 +157,7 @@ label ghost_hikaru_2:
 
     n "You swear something’s changed."
 
-    n "You’d rewind, but…"
+    n "You’d rewind, but..."
 
     n "You can’t."
 

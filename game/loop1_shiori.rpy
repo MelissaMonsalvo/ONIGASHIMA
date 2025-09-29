@@ -309,7 +309,7 @@ label loop1_shiori:
 
     n "Your fingers feel sticky where it touches."
 
-    n "You lift it to your mouth, something metallic fills your nose... {w=0.2}then the taste swells on your tounge."
+    n "You lift it to your mouth, something metallic fills your nose... {w=0.2}then the taste swells on your tongue."
 
     play sound "sfx/gulp.wav"
 
@@ -535,7 +535,7 @@ label loop1_shiori:
 
     n "Everyone's holed up in their own home. No one dares make a sound, not even for breathing."
 
-    n "The athmosphere feels wrong."
+    n "The atmosphere feels wrong."
 
     scene shrine night:
         zoom 0.5

@@ -209,7 +209,7 @@ label ghost_yamato_4:
     # the day of the red moon and you are forced to relieve your betrayal,
     # with Yamato about to kiss you, but in his ghostly form, everything melts, his mouth starts dripping in
 
-    n "Your leg walks forward, but you lose conciousness immediately."
+    n "Your leg walks forward, but you lose consciousness immediately."
 
     n "Nothing is going on as planned lately--"
 

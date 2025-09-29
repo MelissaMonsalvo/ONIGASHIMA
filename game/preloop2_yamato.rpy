@@ -139,7 +139,7 @@ label loop2_yamato_mandatory1:
 
 
 
-    n "Yamato unsheates his blades now."
+    n "Yamato unsheathes his blades now."
 
     show yam shocked
     with dissolve

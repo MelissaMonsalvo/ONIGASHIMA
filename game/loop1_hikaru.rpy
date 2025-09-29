@@ -45,7 +45,7 @@ label loop1_hikaru:
         easeout 0.1 yoffset 165 xzoom -1.05 yzoom 0.95
         easein 0.1 yoffset 150 xzoom -1.0 yzoom 1.0
     with vpunch
-    play sound "Sfx/landing.mp3"
+    play sound "sfx/landing.mp3"
 
     n "You find Hikaru, perched atop a tree. They jump down as you come into view."
 
@@ -1342,7 +1342,7 @@ label loop1_redmoon_eve:
     scene moon7
     with fade
 
-    n "You're both staring at the red moon now, wind sofly blowing at your faces. It's oddly serene..."
+    n "You're both staring at the red moon now, wind softly blowing at your faces. It's oddly serene..."
 
     show hik serious:
         zoom 0.5
@@ -1380,7 +1380,7 @@ label loop1_redmoon_eve:
 
     n "You let Hikaru lean against your shoulder now, and close your eyes."
 
-    n "There's the sound of their heatbeat again..."
+    n "There's the sound of their heartbeat again..."
 
     play sound "sfx/heartbeat.mp3"
     pause 0.2

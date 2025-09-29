@@ -282,7 +282,7 @@ label loop1_hikaru_mandatory2:
 
     n "Hikaru is training today, their scarf is billowing every time they move."
 
-    n "You wonder why they are wearing a scarf. Isn't it unconvenient for battles?"
+    n "You wonder why they are wearing a scarf. Isn't it inconvenient for battles?"
 
     MC annoyed "Why do you wear a scarf to battle?"
 

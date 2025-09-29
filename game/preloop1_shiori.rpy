@@ -492,7 +492,7 @@ label loop1_shiori_mandatory3:
 
     MC normal "What are the two other plates for?"
 
-    shiori "It's for Yamato and Hikaru! But, ummm.. They said they can't come, so might as well be just the two of us."
+    shiori "It's for Yamato and Hikaru! But, ummm... They said they can't come, so might as well be just the two of us."
 
 
     show darken2

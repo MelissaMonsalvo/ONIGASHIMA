@@ -12,7 +12,7 @@ label loop2_hikaru_mandatory1:
 
     pause
 
-    play sound "Sfx/walk grass.mp3"
+    play sound "sfx/walk grass.mp3"
     show hik normal:
         zoom 0.023
         xanchor 0.05
@@ -118,7 +118,7 @@ label loop2_hikaru_mandatory1:
     scene black
     with in_212
 
-    play sound "Sfx/walk grass.mp3"
+    play sound "sfx/walk grass.mp3"
 
     n "You follow Hikaru into the woods, heart skipping for all the wrong reasons."
 
@@ -920,7 +920,7 @@ label loop2_hikaru_mandatory4:
 
     play sound "sfx/shing.wav"
 
-    n "You step forward, but Hikaru unsheates their sai."
+    n "You step forward, but Hikaru unsheathes their sai."
 
     n "{i}No, just... {w}Run. Stay away from me, from us–{/i}"
 

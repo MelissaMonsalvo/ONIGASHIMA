@@ -758,7 +758,7 @@ label loop2_shiori_mandatory4:
 
     shiori "Did it ever just...{w=0.2} wonder what it's like {glitch=12}outside{/glitch} the mountain?"
 
-    n "The yamakui is not a {sc=1}dog.{/sc}"
+    n "The Yamakui is not a {sc=1}dog.{/sc}"
 
     MC annoyed2 "What the hell, Shiori?"
 
