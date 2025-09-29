@@ -13,10 +13,10 @@ screen help():
 
     
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ skin = btn_skin_yellow
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ skin = btn_skin_red
         $ tt_color = WHITE
 
@@ -32,7 +32,7 @@ screen help():
         vbox:
             button:
                 text _("Keyboard"):
-                    hover_color tt_color
+                    hover_color (tt_color if device == "keyboard" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -44,7 +44,7 @@ screen help():
 
             button:
                 text _("Mouse"):
-                    hover_color tt_color
+                    hover_color (tt_color if device == "mouse" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -56,7 +56,7 @@ screen help():
 
             button:
                 text _("Gamepad"):
-                    hover_color tt_color
+                    hover_color (tt_color if device == "gamepad" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]

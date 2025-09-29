@@ -225,6 +225,7 @@ screen content_warning():
                     align (0.5, 0.5)
                     font NOTO_JP_BOLD
                     color BLACK
+                    hover_color (WHITE if persistent.loop1 else BLACK)
 
                 xysize (280, 120)
                 background None
@@ -237,6 +238,7 @@ screen content_warning():
                     align (0.5, 0.5)
                     font NOTO_JP_BOLD
                     color BLACK
+                    hover_color (WHITE if persistent.loop1 else BLACK)
 
                 xysize (280, 120)
                 background None

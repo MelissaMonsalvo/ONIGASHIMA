@@ -70,6 +70,11 @@ init python:
 ############################################################
 screen extras_music(selected_song):
     style_prefix "music"
+    if not persistent.loop1:
+        $ tt_color = BLACK
+    else:
+        $ tt_color = WHITE
+        
 
     $ slot = 1
     for track_name, track in MUSIC_DICT.items(): 
@@ -79,12 +84,19 @@ screen extras_music(selected_song):
                         
                     text "Track #{}  -  {}".format(slot, track_name):
                         xalign 0.0
+                        selected_color tt_color
+                        hover_color tt_color
 
                     if renpy.music.get_playing() == track:
-                        text "Playing..." xalign 1.0
+                        text "Playing...":
+                            xalign 1.0
+                            selected_color tt_color
+                            hover_color tt_color
                 else:
                     text "Track #{}  -  ???".format(slot):
                         xalign 0.0
+                        selected_color tt_color
+                        hover_color tt_color
 
             action SetScreenVariable("selected_song", track)
 

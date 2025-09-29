@@ -14,10 +14,10 @@ screen extras():
     default tab = "gallery"
     default selected_song = None
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ skin = btn_skin_yellow
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ skin = btn_skin_red
         $ tt_color = WHITE
         
@@ -36,7 +36,7 @@ screen extras():
         vbox:
             button:
                 text "Gallery":
-                    hover_color tt_color
+                    hover_color (tt_color if tab == "gallery" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -49,7 +49,7 @@ screen extras():
             
             button:
                 text "Music":
-                    hover_color tt_color
+                    hover_color (tt_color if tab == "music" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]

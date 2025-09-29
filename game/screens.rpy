@@ -1433,9 +1433,9 @@ screen history():
                 label _("The dialogue history is empty.")
 
         ### NAV ###
-        if current_route == "route1":
+        if not persistent.loop1:
             $ tt_color = BLACK
-        elif current_route == "route2":
+        else:
             $ tt_color = WHITE
             
         frame:
@@ -1483,13 +1483,10 @@ style history_text:
     font NOTO_JP
 
 style history_label:
-    xalign 0.0
+    is sl_label
 
 style history_label_text:
-    font NOTO_JP_BOLD
-    size 60
-    color BLACK
-
+    is sl_label_text
 
 
 
@@ -1600,9 +1597,9 @@ screen confirm(message, yes_action, no_action):
 
     ## TEXT COLOR CHANGE ##
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ tt_color = WHITE
 
 
@@ -1622,12 +1619,14 @@ screen confirm(message, yes_action, no_action):
                 spacing 150
 
                 button:
-                    text _("Yes") hover_color tt_color
+                    text _("Yes"):
+                        color tt_color
                     action yes_action
 
                 if no_action:
                     button:
-                        text _("No") hover_color tt_color
+                        text _("No"):
+                            color tt_color
                         action no_action
 
     ## Right-click and escape answer "no".

@@ -53,9 +53,9 @@ screen file_slots(title):
     default skin = btn_skin_yellow
 
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ tt_color = WHITE
 
 
@@ -87,6 +87,7 @@ screen file_slots(title):
 
                 button:
                     style_prefix "sl_btn"
+                    selected selected_slot == slot
 
                     if FileLoadable(slot):
                         
@@ -124,7 +125,10 @@ screen file_slots(title):
 
                     else:
                         hbox:
-                            text _("NO DATA") xalign 0.0
+                            text _("NO DATA"):
+                                xalign 0.0
+                                hover_color tt_color
+                                selected_color tt_color
                         if selected_slot == slot:
                             action FileAction(slot)
                         else:

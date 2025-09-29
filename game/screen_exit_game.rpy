@@ -19,9 +19,9 @@ screen exit_game():
 
     ## TEXT COLOR CHANGE ##
 
-    if current_route == "route1":
+    if not persistent.loop1:
         $ tt_color = BLACK
-    elif current_route == "route2":
+    else:
         $ tt_color = WHITE
 
 
@@ -41,13 +41,15 @@ screen exit_game():
                 spacing 150
 
                 button:
-                    text _("Yes") hover_color tt_color
+                    text _("Yes"):
+                        hover_color tt_color
                     
                     action Quit(confirm=False)
                     
 
                 button:
-                    text _("No") hover_color tt_color
+                    text _("No"):
+                        hover_color tt_color
                     action Hide()
 
     ## Right-click and escape answer "no".

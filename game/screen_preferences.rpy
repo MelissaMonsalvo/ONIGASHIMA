@@ -47,7 +47,7 @@ screen preferences():
         vbox:
             button:
                 text _("General"):
-                    hover_color tt_color
+                    hover_color (tt_color if tab == "general" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -60,7 +60,7 @@ screen preferences():
 
             button:
                 text _("Audio"):
-                    hover_color tt_color
+                    hover_color (tt_color if tab == "audio" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -73,7 +73,7 @@ screen preferences():
 
             button:
                 text _("Dialogue"):
-                    hover_color tt_color
+                    hover_color (tt_color if tab == "dialogue" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -86,7 +86,7 @@ screen preferences():
 
             button:
                 text _("Accessibility"):
-                    hover_color tt_color
+                    hover_color (tt_color if tab == "accessibility" else BLACK)
                     selected_color tt_color
 
                 background skin["idle"]
@@ -275,7 +275,7 @@ screen pref_audio():
                     text _("Volume")
 
 
-        $ bar_skin = bar_skin_yellow if (current_route=="route1") else bar_skin_red
+        $ bar_skin = bar_skin_yellow if not persistent.loop1 else bar_skin_red
 
         vbox:
             style_prefix "pref_tab2"
@@ -364,7 +364,7 @@ screen pref_dialogue():
             frame:
                 text _("Typeface")
 
-        $ bar_skin = bar_skin_yellow if (current_route=="route1") else bar_skin_red
+        $ bar_skin = bar_skin_yellow if not persistent.loop1 else bar_skin_red
 
         vbox:
             style_prefix "pref_tab2"
