@@ -65,7 +65,7 @@ label ghost_shiori_2:
 
     MC yan2 "Let's go sleep at the shrine until night comes."
 
-    n "But--"
+    n "But–"
 
     MC yan2 "Annoying meat is gone."
 
@@ -162,9 +162,9 @@ label ghost_shiori_3:
 
     MC yan2 "Let's go to the shrine again to sleep."
 
-    n "Wait, I said--"
+    n "Wait, I said–"
 
-    n "I picked--"
+    n "I picked–"
 
     MC yan2 "Shut up."
 
