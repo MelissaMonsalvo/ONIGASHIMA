@@ -315,11 +315,11 @@ label loop2_shiori_mandatory2:
         yoffset 80
         yzoom 1.0
 
-        linear 0.19 zoom 0.54 yoffset 70   # Inching forward, slightly stretching
+        linear 0.19 zoom 0.54 yoffset 70
         pause 0.06
-        linear 0.16 zoom 0.57 yoffset 74 xoffset -50 # Even closer, a bit more y-stretch
+        linear 0.16 zoom 0.57 yoffset 74 xoffset -50
         pause 0.04
-        linear 0.13 zoom 0.6 yoffset 80 xoffset -100   # Final uneasy "lean", back to yoffset start
+        linear 0.13 zoom 0.6 yoffset 80 xoffset -100
 
 
     n "She’s inching closer again."
@@ -413,16 +413,14 @@ label loop2_shiori_mandatory2:
         yalign 0
         yoffset 80
         xoffset -100
-        yzoom 1.07
 
-        # Unsettling, sharp laugh-bounce
-        linear 0.10 yoffset 65 yzoom 1.11      # Quick, stiff bounce up and stretch
+        linear 0.10 yoffset 65
         pause 0.07
-        linear 0.09 yoffset 95 yzoom 1.06      # Drop sharply, almost like a puppet
+        linear 0.09 yoffset 95
         pause 0.05
-        linear 0.11 yoffset 73 yzoom 1.09      # Up again, not as far
+        linear 0.11 yoffset 73
         pause 0.06
-        linear 0.12 yoffset 80 yzoom 1.07      # Back to start, but a little lag on yzoom
+        linear 0.12 yoffset 80
         pause 0.09
 
 
@@ -475,8 +473,6 @@ label loop2_shiori_mandatory2:
         yalign 0
         yoffset 80
         xoffset -100
-        yzoom 1.07
-        xzoom 1.0
 
 
         # Backwards skip (up and away, shrinking, optional flip)
@@ -582,12 +578,12 @@ label loop2_shiori_mandatory3:
     show darken
     with Pause(0.45)
 
-    if persistent.hikaru_dead:
-        show ghost_hikaru normal at c_show_28 behind shi:
-            xoffset +300
-        with dissolve
-    if persistent.yamato_dead:
+    if not persistent.hikaru_dies:
         show ghost_yamato normal at c_show_28 behind shi:
+            xoffset +250
+        with dissolve
+    if not persistent.yamato_dies:
+        show ghost_hikaru normal at c_show_28 behind shi:
             xoffset +300
         with dissolve
     hide screen black_flicker
@@ -597,7 +593,7 @@ label loop2_shiori_mandatory3:
 
     n "Wait, was that–"
 
-    pause 0.5
+    pause 0.05
 
     hide ghost_yamato
     hide ghost_hikaru

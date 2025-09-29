@@ -29,12 +29,11 @@ label ghost_yamato_1:
 
     $ renpy.pause(1.0)
 
-    window hide
-
     # Yamato ghost jumpscare
     # show yamato_ghost_attack >> appears, zoomos in to your face, then disappears
 
     play sound "sfx/jumpscare.mp3"
+    pause 0.01
 
     show ghost_yamato normal at c_show_31
 
@@ -44,7 +43,6 @@ label ghost_yamato_1:
     stop sound fadeout 0.5
     stop music fadeout 1.5
 
-    window show
 
     n "W-What was that?"
 
@@ -161,14 +159,14 @@ label ghost_yamato_3:
 
     ## first click
     play sound "sfx/shiori_eaten.wav"
-    MC "{size=+10}{cps=6}Ghhk–{/cps}"
+    MC shocked2 "{size=+10}{cps=6}Ghhk–{/cps}"
 
     ## second click
     show ghost_yamato with vpunch
     n "{cps=7}Y-You–can’t–breathe–{/cps}"
 
     ## third click
-    MC scared2"Ah–Haaaa–!!!!"
+    MC "Ah–Haaaa–!!!!"
 
     ## fourth click
     show ghost_yamato with vpunch
