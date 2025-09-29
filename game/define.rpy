@@ -72,11 +72,11 @@ define shiori = Character("Shiori", color="#c78b12", callback=speaker("shio"))
 define yamato = Character("Yamato", color="#00d44a", callback=speaker("yama"))
 define hikaru = Character("Hikaru", color="#ebabff",callback=speaker("hika"))
 
-image flesh = "BG/Flesh.png"
-image flesh2 = "BG/Flesh2.png"
-image darken = "BG/darken.png"
-image darken2 = "BG/darken2.png"
-image blood = "BG/blood.png"
+image flesh = "BG/Flesh.webp"
+image flesh2 = "BG/Flesh2.webp"
+image darken = "BG/darken.webp"
+image darken2 = "BG/darken2.webp"
+image blood = "BG/blood.webp"
 
 image gore = "images/gore.png"
 
@@ -92,24 +92,24 @@ image terumc = "images/terumc.webp"
 image terumc_left = "images/terumc_left.png"
 image terumc_right = "images/terumc_right.png"
 
-image shrine2 = "BG/Shrine2.jpg"
+image shrine2 = "BG/Shrine2.webp"
 
-image dojo day = "BG/Dojo Day.png"
-image house day = "BG/House Day.png"
-image forest day = "BG/Forest Day.png"
-image teru day = "BG/Teru Day.png"
-image shrine day = "BG/Shrine Day.png"
-image village day = "BG/Village Day.png"
+image dojo day = "BG/Dojo Day.webp"
+image house day = "BG/House Day.webp"
+image forest day = "BG/Forest Day.webp"
+image teru day = "BG/Teru Day.webp"
+image shrine day = "BG/Shrine Day.webp"
+image village day = "BG/Village Day.webp"
 
-image dojo night = "BG/Dojo Night.png"
-image house night = "BG/House Night.png"
-image forest night = "BG/Forest Night.png"
-image teru night = "BG/Teru Night.png"
-image shrine night = "BG/Shrine Night.png"
-image village night = "BG/Village Night.png"
+image dojo night = "BG/Dojo Night.webp"
+image house night = "BG/House Night.webp"
+image forest night = "BG/Forest Night.webp"
+image teru night = "BG/Teru Night.webp"
+image shrine night = "BG/Shrine Night.webp"
+image village night = "BG/Village Night.webp"
 
-image cliff = "BG/cliff.jpg"
-image past = "BG/past.jpg"
+image cliff = "BG/cliff.webp"
+image past = "BG/past.webp"
 
 
 image child = "NPC/npc_child.webp"
