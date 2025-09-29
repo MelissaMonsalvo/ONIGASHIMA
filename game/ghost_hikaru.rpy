@@ -322,7 +322,6 @@ label ghost_hikaru_4:
         yoffset 60
         xoffset 0
 
-        linear 0.5 blur 2
 
     n "The edges of their face blur... {w=0.1}Slowly... {w=0.1}Slowly..."
 
@@ -333,9 +332,6 @@ label ghost_hikaru_4:
         yalign 0
         yoffset 60
         xoffset 0
-
-        linear 0.5 blur 10
-
     n "The lines slide off... {w=0.1}Again... {w=0.1}Again..."
 
     hikaru "{cps=12}Why are you wearing their face?{/cps}"
