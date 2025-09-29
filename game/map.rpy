@@ -261,7 +261,7 @@ label map:
         jump map
 
     # If at least one event exists for the current time block, allow normal progression
-    return
+    jump map
 
 
 
@@ -338,21 +338,14 @@ screen map_screen():
 
 # Función para verificar eventos obligatorios
 python early:
-
-    import math
-
     def visit_location_func(location):
         store.visits_toDay += 1
-
         current_mandatory = store.check_mandatory_events(location)
         event_to_call = None
-
         if current_mandatory:
             event_to_call = current_mandatory
 
-
-
-        # === 2. Now advance the time block for the next turn ===
+        # Advance the time block for the next turn
         if store.visits_toDay >= 2:
             store.current_Day += 1
             store.visits_toDay = 0
@@ -360,13 +353,10 @@ python early:
         else:
             store.current_time_block = "Night" if store.current_time_block == "Day" else "Day"
 
-        # === 1. Call event or empty label before advancing time block ===
+        # Call event or empty label before advancing time block
         if event_to_call:
-
             renpy.call(event_to_call)
-                    # Guardar estado después
-            renpy.take_screenshot()
-            renpy.save("after_event", extra_info=f" {event_to_call}")
+            renpy.jump("map")  # <---- ADD THIS to always go back to map after event
         else:
             nearest_event, nearest_char = find_nearest_mandatory_event(store.current_time_block)
             if nearest_event:
@@ -376,6 +366,8 @@ python early:
                 renpy.jump("redirect_to_event")
             else:
                 renpy.call("location_empty", location)
+                renpy.jump("map")  # <---- ADD THIS to always go back to map after empty
+
 
 
 
