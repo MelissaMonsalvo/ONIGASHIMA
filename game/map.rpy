@@ -904,17 +904,13 @@ label redirect_to_event:
     with dissolve
 
     if redirect_event_label is not None and redirect_event_char is not None:
-        current_completed = getattr(store, f"{redirect_event_char}_events_completed", 0)
-        event_idx = None
-        # Find correct event idx for this label in mandatory_events
-        for idx, ev in enumerate(mandatory_events[current_loop][redirect_event_char]):
-            if ev["event"] == redirect_event_label:
-                event_idx = idx
-                break
-        if event_idx is not None and current_completed <= event_idx:
-            setattr(store, f"{redirect_event_char}_events_completed", event_idx + 1)
+        if redirect_event_char == "yamato":
+            $ yamato_events_completed += 1
+        elif redirect_event_char == "shiori":
+            $ shiori_events_completed += 1
+        elif redirect_event_char == "hikaru":
+            $ hikaru_events_completed += 1
 
-        # Also advance visit counters, day/time only if a real event played
         $ visits_toDay += 1
         if visits_toDay >= 2:
             $ current_Day += 1
