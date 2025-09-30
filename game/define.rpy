@@ -89,6 +89,7 @@ image cg_loop3shiori = "images/cg_loop3shiori.webp"
 image cg_loop3yamato = "images/cg_loop3yamato.webp"
 
 image terumc = "images/terumc.webp"
+image boar = "images/boar.webp"
 image terumc_left = "images/terumc_left.webp"
 image terumc_right = "images/terumc_right.webp"
 
@@ -107,6 +108,7 @@ image forest night = "BG/Forest Night.webp"
 image teru night = "BG/Teru Night.webp"
 image shrine night = "BG/Shrine Night.webp"
 image village night = "BG/Village Night.webp"
+
 
 image cliff = "BG/cliff.webp"
 image past = "BG/past.webp"
