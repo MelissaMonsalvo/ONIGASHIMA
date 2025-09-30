@@ -3,6 +3,7 @@
 
 
 label loop2_hikaru_mandatory1:
+    $ renpy.block_rollback()
 
     $ hsword = False
     $ hmask = True
@@ -329,6 +330,7 @@ label loop2_hikaru_mandatory1:
     return
 
 label loop2_hikaru_mandatory2:
+    $ renpy.block_rollback()
 
     scene shrine day:
         zoom 0.7
@@ -614,6 +616,7 @@ label loop2_hikaru_mandatory2:
     return
 
 label loop2_hikaru_mandatory3:
+    $ renpy.block_rollback()
 
     play music "Night.mp3"
 
@@ -825,6 +828,7 @@ label loop2_hikaru_mandatory3:
     return
 
 label loop2_hikaru_mandatory4:
+    $ renpy.block_rollback()
 
     scene house night:
         zoom 0.5

@@ -1,5 +1,6 @@
 ############# LOOP 2 WHERE ONE DIED ###########################
 label loop2_shiori_mandatory1:
+    $ renpy.block_rollback()
 
     play music "Shiori.mp3"
 
@@ -280,10 +281,11 @@ label loop2_shiori_mandatory1:
     return
 
 label loop2_shiori_mandatory2:
+    $ renpy.block_rollback()
 
     play music "Shiori.mp3"
 
-## during this scene Shiori 's sprite leans closer very slowly almost unnoticeable and her eyes follow your mouse tracking
+    ## during this scene Shiori 's sprite leans closer very slowly almost unnoticeable and her eyes follow your mouse tracking
 
     scene shrine day with in_182:
         zoom 0.5
@@ -514,6 +516,7 @@ label loop2_shiori_mandatory2:
     return
 
 label loop2_shiori_mandatory3:
+    $ renpy.block_rollback()
 
     scene shrine night:
         zoom 0.5
@@ -697,6 +700,7 @@ label loop2_shiori_mandatory3:
     return
 
 label loop2_shiori_mandatory4:
+    $ renpy.block_rollback()
 
     scene shrine night:
         zoom 0.5

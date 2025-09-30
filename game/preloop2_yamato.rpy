@@ -1,5 +1,6 @@
 ############# LOOP 2 WHERE ONE DIED ###########################
 label loop2_yamato_mandatory1:
+    $ renpy.block_rollback()
 
     $ ysword = False
 
@@ -280,6 +281,7 @@ label loop2_yamato_mandatory1:
     return
 
 label loop2_yamato_mandatory2:
+    $ renpy.block_rollback()
 
     scene dojo day with in_182:
         zoom 0.5
@@ -569,6 +571,7 @@ label yyyesss:
     return
 
 label loop2_yamato_mandatory3:
+    $ renpy.block_rollback()
 
     play music "Sfx/forest night.wav"
 
@@ -781,6 +784,7 @@ label loop2_yamato_mandatory3:
     return
 
 label loop2_yamato_mandatory4:
+    $ renpy.block_rollback()
 
     scene black
 

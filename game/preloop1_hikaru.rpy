@@ -1,5 +1,6 @@
 ############# LOOP 1 WHERE EVERYONE IS ALIVE ###########################
 label loop1_hikaru_mandatory1:
+    $ renpy.block_rollback()
 
     scene forest day with in_182:
         zoom 0.5
@@ -264,6 +265,7 @@ label loop1_hikaru_mandatory1:
     return
 
 label loop1_hikaru_mandatory2:
+    $ renpy.block_rollback()
 
     $ hsword = True
 
@@ -513,6 +515,7 @@ label loop1_hikaru_mandatory2:
     return
 
 label loop1_hikaru_mandatory3:
+    $ renpy.block_rollback()
 
     scene village night with in_182:
         zoom 0.5
@@ -857,6 +860,7 @@ label loop1_hikaru_mandatory3:
     return
 
 label loop1_hikaru_mandatory4:
+    $ renpy.block_rollback()
 
     $ hmask = False
 
@@ -914,7 +918,7 @@ label loop1_hikaru_mandatory4:
     call screen horror_forced_menu(items=[
     ("Yes", Jump("hikaru_visit_continued"), False),
     ("No", Jump("hikaru_visit_rejected"), False)
-])
+    ])
 
 
 label hikaru_visit_rejected:
@@ -1545,6 +1549,7 @@ label hikaru_teadrink:
     return
 
 label loop1_hikaru_mandatory5:
+    $ renpy.block_rollback()
 
     $ ysword = False
 

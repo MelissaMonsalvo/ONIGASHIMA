@@ -1,5 +1,6 @@
 ############# LOOP 1 WHERE EVERYONE IS ALIVE ###########################
 label loop1_shiori_mandatory1:
+    $ renpy.block_rollback()
 
     $ loop1_shiori_mandatory1 = True
 
@@ -166,6 +167,7 @@ label loop1_shiori_mandatory1:
     return
 
 label loop1_shiori_mandatory2:
+    $ renpy.block_rollback()
 
 
 
@@ -403,6 +405,7 @@ label loop1_shiori_mandatory2:
     return
 
 label loop1_shiori_mandatory3:
+    $ renpy.block_rollback()
 
     $ loop1_shiori_mandatory3 = True
     ## day scene shrine (scene only appears at day 4/5)
@@ -642,6 +645,7 @@ label gulgulp:
     return
 
 label loop1_shiori_mandatory4:
+    $ renpy.block_rollback()
 
     scene shrine night with in_182:
         zoom 0.7
@@ -937,6 +941,7 @@ label loop1_shiori_mandatory4:
 
 
 label loop1_shiori_mandatory5:
+    $ renpy.block_rollback()
 
     scene forest day with in_182:
         zoom 0.5

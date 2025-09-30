@@ -213,6 +213,7 @@ define character_icons_yellow= {
 
 
 label map:
+    $ renpy.block_rollback()
 
     # Optional: update current_loop if needed, e.g.:
     # if persistent.loop1:

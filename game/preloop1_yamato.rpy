@@ -1,5 +1,6 @@
 ############# LOOP 1 WHERE EVERYONE IS ALIVE ###########################
 label loop1_yamato_mandatory1:
+    $ renpy.block_rollback()
 
     scene dojo day with in_182:
         zoom 0.5
@@ -325,6 +326,7 @@ label loop1_yamato_mandatory1:
     return
 
 label loop1_yamato_mandatory2:
+    $ renpy.block_rollback()
 
     $ loop1_yamato_mandatory2 = True
     $ ysword = False
@@ -680,6 +682,7 @@ label loop1_yamato_mandatory2:
     return
 
 label loop1_yamato_mandatory3:
+    $ renpy.block_rollback()
 
     $ loop1_yamato_mandatory3 = True
 
@@ -1065,6 +1068,7 @@ label loop1_yamato_mandatory3:
     return
 
 label loop1_yamato_mandatory4:
+    $ renpy.block_rollback()
     $ hmask = True
     $ ysword = False
 
@@ -1194,6 +1198,7 @@ label loop1_yamato_mandatory4:
     return
 
 label loop1_yamato_mandatory5:
+    $ renpy.block_rollback()
 
     $ ysword = False
 
