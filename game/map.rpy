@@ -969,35 +969,48 @@ label redirect_to_event:
     python:
         event_label = None
         char = None
-        checked_chars = set()
-        # Loop until all options are checked, or a valid event is found
-        while True:
-            event_label, char = find_flexible_mandatory_event()
-            if event_label and char:
-                # Prevent infinite loop by marking this char as checked if they're out of events
-                if char in checked_chars:
-                    event_label = None
-                    char = None
-                    break
-                # Increment their pointer as if this event was chosen
-                counter_name = f"{char}_events_completed"
-                idx = getattr(store, counter_name, 0)
-                events_list = mandatory_events.get(store.current_loop, {}).get(char, [])
-                if idx < len(events_list):
-                    next_event = events_list[idx]["event"]
-                    if next_event == event_label:
-                        setattr(store, counter_name, idx + 1)
-                    else:
-                        for i, ev in enumerate(events_list):
-                            if ev["event"] == event_label:
-                                setattr(store, counter_name, i + 1)
-                                break
-                break  # Found an event! Exit the loop.
-            else:
-                break  # No event found for any character
+        found_event = False
 
-    if event_label and char:
-        call expression event_label
+        # 1. Try to find the next MANDATORY event for ANY character that's
+        #    currently NOT available on the map (so we have to redirect to it)
+        for try_char in ["yamato", "shiori", "hikaru"]:
+            events_completed = getattr(store, f"{try_char}_events_completed", 0)
+            events_list = mandatory_events.get(store.current_loop, {}).get(try_char, [])
+            if events_completed >= len(events_list):
+                continue
+
+            next_event_obj = events_list[events_completed]
+            next_event_label = next_event_obj["event"]
+            # Only redirect to an event if its location is NOT available on this map
+            # i.e., if location does not match any available location for this time
+            # In your current design, all locations are always available. But if
+            # in the future you want to lock locations, you can change this logic.
+            # For now, let's assume redirect should only be used if the time does NOT match.
+            if next_event_obj["time"] != store.current_time_block:
+                setattr(store, f"{try_char}_events_completed", events_completed + 1)
+                event_label = next_event_label
+                char = try_char
+                found_event = True
+                break
+
+        # 2. If all remaining events are available on the map (so player skipped),
+        #    then just jump to the next one in order for any character.
+        if not found_event:
+            for try_char in ["yamato", "shiori", "hikaru"]:
+                events_completed = getattr(store, f"{try_char}_events_completed", 0)
+                events_list = mandatory_events.get(store.current_loop, {}).get(try_char, [])
+                if events_completed >= len(events_list):
+                    continue
+                next_event_obj = events_list[events_completed]
+                next_event_label = next_event_obj["event"]
+                if next_event_obj["time"] == store.current_time_block:
+                    event_label = next_event_label
+                    char = try_char
+                    found_event = True
+                    break
+
+    if event_label and char and found_event:
+        call expression event_label from _call_expression
     else:
         "There really is nothing left to do."
         jump map
