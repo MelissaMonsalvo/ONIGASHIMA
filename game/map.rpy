@@ -233,6 +233,13 @@ label map:
         return
 
     # Call the map screen (player picks location)
+
+    stop music fadeout 1.0
+    scene black
+    with fade
+    n "Time passes..."  # Or "Night falls...", "The next day...", etc.
+    pause 0.5
+    with dissolve
     call screen map_screen
     # (After a location has been picked and handled...)
 
@@ -920,7 +927,7 @@ label redirect_to_event:
         else:
             $ current_time_block = "Night" if current_time_block == "Day" else "Day"
 
-        call expression redirect_event_label
+        call expression redirect_event_label from _call_expression
 
     $ redirect_event_label = None
     $ redirect_event_char = None
