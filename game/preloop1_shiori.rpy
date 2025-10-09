@@ -158,7 +158,6 @@ label loop1_shiori_mandatory1:
     $ restore_music_volume()
     $ restore_music_volume()
 
-    $ loop1_shiori_mandatory1 = True
 
 
 
@@ -168,6 +167,8 @@ label loop1_shiori_mandatory1:
 
 label loop1_shiori_mandatory2:
     $ renpy.block_rollback()
+
+    $ loop1_shiori_mandatory2 = True
 
 
 
@@ -401,7 +402,7 @@ label loop1_shiori_mandatory2:
         stop sound
 
 
-    $ loop1_shiori_mandatory2 = True
+
     return
 
 label loop1_shiori_mandatory3:
@@ -1196,7 +1197,5 @@ label loop1_shiori_mandatory5:
     MC yan "{size=+6}{color=#993333}{blur}Don’t look away now.{/blur}{/color}{/size}"
 
 
-
-    $ loop1_shiori_mandatory5 = True
 
     return

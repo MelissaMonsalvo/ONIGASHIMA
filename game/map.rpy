@@ -1,6 +1,54 @@
 #########################
 # Map 4:20 Mel v
 ############################
+python early:
+    import random
+
+    def find_flexible_mandatory_event():
+        # Try nearest mandatory event for current time block first
+        event_label, char = find_nearest_mandatory_event(store.current_time_block)
+        if event_label:
+            return event_label, char
+
+        # If not found, find character with most progress but not finished
+        max_progress = -1
+        candidates = []
+        for char in ["yamato", "shiori", "hikaru"]:
+            is_dead = getattr(persistent, f"{char}_dies", False)
+            events_completed = getattr(store, f"{char}_events_completed", 0)
+            events_list = mandatory_events.get(store.current_loop, {}).get(char, [])
+            if not is_dead and events_completed < len(events_list):
+                if events_completed > max_progress:
+                    max_progress = events_completed
+                    candidates = [char]
+                elif events_completed == max_progress:
+                    candidates.append(char)
+
+        if candidates:
+            # Tie? Pick randomly among most advanced
+            char = random.choice(candidates)
+            idx = getattr(store, f"{char}_events_completed", 0)
+            events_list = mandatory_events.get(store.current_loop, {}).get(char, [])
+            if idx < len(events_list):
+                return events_list[idx]["event"], char
+
+        # If all are finished, pick randomly among any with events left
+        chars_with_events = []
+        for char in ["yamato", "shiori", "hikaru"]:
+            is_dead = getattr(persistent, f"{char}_dies", False)
+            events_completed = getattr(store, f"{char}_events_completed", 0)
+            events_list = mandatory_events.get(store.current_loop, {}).get(char, [])
+            if not is_dead and events_completed < len(events_list):
+                chars_with_events.append(char)
+        if chars_with_events:
+            char = random.choice(chars_with_events)
+            idx = getattr(store, f"{char}_events_completed", 0)
+            events_list = mandatory_events.get(store.current_loop, {}).get(char, [])
+            if idx < len(events_list):
+                return events_list[idx]["event"], char
+
+        # No events left at all
+        return None, None
 
 python early:
     def find_nearest_mandatory_event(time_block):
@@ -304,10 +352,13 @@ screen map_screen():
 
     # Mostrar iconos de personajes según su ubicación y estado
     for i, character in enumerate(["shiori", "yamato", "hikaru"]):
-        # === HIDE ICONS IF DEAD ===
-        if getattr(persistent, f"{character}_dies", False):
-            continue  # skip this character if dead
-
+        $ is_dead = getattr(persistent, f"{character}_dies", False)
+        $ events_completed = getattr(store, f"{character}_events_completed", 0)
+        $ events_list = mandatory_events.get(store.current_loop, {}).get(character, [])
+        # Clamp events_completed so you never go over the event list
+        $ events_completed = min(events_completed, len(events_list))
+        if is_dead or (events_completed >= len(events_list)):
+            continue
         $ char_location = get_character_location(character)
         if char_location:
             $ pos_x, pos_y = location_positions.get(char_location, (0, 0))
@@ -325,6 +376,10 @@ screen map_screen():
             add Transform(icon, size=(icon_width, icon_height)):
                 xpos icon_x
                 ypos icon_y
+
+            # (Optional, for debugging: shows progress above icon)
+            # text "[character] [events_completed]/[len(events_list)]" xpos icon_x ypos icon_y - 30 color "#f80"
+
 
 
     frame:
@@ -911,23 +966,41 @@ label redirect_to_event:
     "[redirect_message]"
     with dissolve
 
-    if redirect_event_label is not None and redirect_event_char is not None:
-        if redirect_event_char == "yamato":
-            $ yamato_events_completed += 1
-        elif redirect_event_char == "shiori":
-            $ shiori_events_completed += 1
-        elif redirect_event_char == "hikaru":
-            $ hikaru_events_completed += 1
+    python:
+        event_label = None
+        char = None
+        checked_chars = set()
+        # Loop until all options are checked, or a valid event is found
+        while True:
+            event_label, char = find_flexible_mandatory_event()
+            if event_label and char:
+                # Prevent infinite loop by marking this char as checked if they're out of events
+                if char in checked_chars:
+                    event_label = None
+                    char = None
+                    break
+                # Increment their pointer as if this event was chosen
+                counter_name = f"{char}_events_completed"
+                idx = getattr(store, counter_name, 0)
+                events_list = mandatory_events.get(store.current_loop, {}).get(char, [])
+                if idx < len(events_list):
+                    next_event = events_list[idx]["event"]
+                    if next_event == event_label:
+                        setattr(store, counter_name, idx + 1)
+                    else:
+                        for i, ev in enumerate(events_list):
+                            if ev["event"] == event_label:
+                                setattr(store, counter_name, i + 1)
+                                break
+                break  # Found an event! Exit the loop.
+            else:
+                break  # No event found for any character
 
-        $ visits_toDay += 1
-        if visits_toDay >= 2:
-            $ current_Day += 1
-            $ visits_toDay = 0
-            $ current_time_block = "Day"
-        else:
-            $ current_time_block = "Night" if current_time_block == "Day" else "Day"
-
-        call expression redirect_event_label from _call_expression
+    if event_label and char:
+        call expression event_label
+    else:
+        "There really is nothing left to do."
+        jump map
 
     $ redirect_event_label = None
     $ redirect_event_char = None
