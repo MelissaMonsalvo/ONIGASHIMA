@@ -209,7 +209,7 @@ label ghost_yamato_4:
     # the day of the red moon and you are forced to relieve your betrayal,
     # with Yamato about to kiss you, but in his ghostly form, everything melts, his mouth starts dripping in
 
-    n "Your leg walks forward, but you lose consciousness immediately."
+    n "Your leg moves forward, but you lose consciousness immediately."
 
     n "Nothing is going on as planned lately--"
 
@@ -331,7 +331,7 @@ label ghost_yamato_5:
 
     ## yamato's ghost sprite is twitching in this whole scene
 
-    n "Steam coils in the wrong direction, looks like it is crawling back into the food."
+    n "Steam coils in the wrong direction, looks like it's crawling back into the food."
 
     yamato "{cps=12}Oi, pRettYfaCE. SiT Up.{/cps}"
 

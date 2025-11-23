@@ -135,7 +135,7 @@ label ghost_shiori_2:
 
     # Only now allow input
 
-    n "...Was that....?"
+    n "...Was that...?"
 
     n "...."
 
@@ -205,7 +205,7 @@ label ghost_shiori_3:
 
     # Blink flicker
 
-    n "Wait, she's just staring...."
+    n "Wait, she's just staring..."
     #shiori blink animation
 
     n "Does she know you?"

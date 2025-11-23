@@ -278,7 +278,7 @@ label ghost_hikaru_4:
 
     n "Hhhh...."
 
-    n "At this rate I don't understand why'd you let me make decisions and not comply to them."
+    n "At this rate I don't understand why'd you let me make decisions, and not comply to them."
 
     MC yan2 "I don't feel like listening to you."
 
