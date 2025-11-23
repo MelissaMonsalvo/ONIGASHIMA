@@ -13,7 +13,7 @@ label loop2_shiori:
     show petals_dense
     show petals_scatter
 
-    n2 "...I spent most of my days with the stringy one."
+    n2 "... I spent most of my days with the stringy one."
 
     n2 "Want stringy meat...."
 
@@ -36,7 +36,7 @@ label loop2_shiori:
 
     n "Later on, you decide to go to the shrine."
 
-    n "Shiori's head leans against your shoulder like it always belonged there."
+    n "Shiori's head leans against your shoulder, as if always belonged there."
 
     shiori "...I used to do this, you know?"
 
@@ -81,7 +81,7 @@ label loop2_shiori:
 
     n2 "Hee–{w=0.3}heeH–{w=0.3}hhhh–{w=0.3}KCH–KKHahHhahhh–"
 
-    n "Your hand clenches,{w=0.2} you want to move, to push Shiori away,{w=0.3} but you can't."
+    n "Your hand clenches.{w=0.2} You want to move, to push Shiori away,{w=0.3} but you can't."
 
     n "If you do,{w=0.2} then–"
 
@@ -123,7 +123,7 @@ label loop2_shiori:
 
     with dissolve
 
-    shiori "But I'll try not to, so you'd feel better."
+    shiori "But I'll try not to, so you'll feel better."
 
     stop music
 
@@ -161,7 +161,7 @@ label loop2_shiori:
 
     n "It's raining today, you're drenched in mud and dirt, and–"
 
-    n "–is that blood? Whose blood?"
+    n "–Is that blood? Whose blood?"
 
     scene shrine night with in_182:
         zoom 0.5
@@ -209,7 +209,7 @@ label loop2_shiori:
     show darken2
     with flashred
 
-    n "...and peels the skin away."
+    n "...And peels the skin away."
 
     show shi yan
     with dissolve
@@ -254,7 +254,7 @@ label loop2_shiori:
 
     n "N-No, that can't be...!"
 
-    n "That was...{w=0.2} the fight...{w=0.3} The final battle...?"
+    n "That was...{w=0.2} The fight...{w=0.3} The final battle...?"
 
     stop muzak
     $ restore_music_volume()
@@ -289,7 +289,7 @@ label loop2_shiori:
     with flashred
     show darken2
 
-    shiori "There, better."
+    shiori "There. Better."
 
     shiori "You always try to hide, [persistent.player_name]-sama...{w=0.3} but I think you’re more beautiful like this."
 
@@ -328,9 +328,9 @@ label after_many_clicks:
 
     n2 "{cps=20}...Heh. HahahaHahRHRAHhahaahH!{/cps}"
 
-    n2 "{cps=20}You thought...{/cps}"
+    n2 "{cps=20}You think...{/cps}"
 
-    n2 "{cps=20}You thought you still have {i}control?{/i}{/cps}"
+    n2 "{cps=20}You think you still have {i}control?{/i}{/cps}"
 
     n2 "{cps=20}T O O L A T E{/cps}"
 
@@ -347,7 +347,7 @@ label after_many_clicks:
 
     shiori "Don't worry, Yamakui-sama. Even if you can't go out like this..."
 
-    shiori "You can stay with Shiori-chan until the red moon comes!"
+    shiori "You can stay with Shiori-chan until the Red Moon comes!"
 
     show shi happyblush:
         zoom 0.45
@@ -364,7 +364,7 @@ label after_many_clicks:
     with out_eye
 
 
-    n "She spreads her arm and hugged you–{w}me–{w}what–"
+    n "She spreads her arm and hugs you–{w}me–{w}what–"
 
     n "What is happening?"
 
@@ -529,14 +529,14 @@ label after_many_clicks:
 
     n "This isn't the Shiori-chan I know.{w=0.2} This can’t be–"
 
-    n "She–{w=0.2}she was always scared of blood–"
+    n "She-{w=0.2}she was always scared of blood–"
 
     show shi yan
     with dissolve
 
     shiori "You won’t leave me, nee, Yamakui-sama?"
 
-    MC yansm3 "{w=0.2}...Never."
+    MC yansm3 "{w=0.2}... Never."
 
     n "She doesn’t know what she’s saying–"
 
@@ -557,13 +557,13 @@ label after_many_clicks:
 
     n "{sc=2}This isn’t the village I tried to save.{/sc}"
 
-    n "{cps=12}Am I going insane, or is everyone insane from the start?{/cps}"
+    n "{cps=12}Am I going insane, or was is everyone insane from the start?{/cps}"
 
     shiori "Yamakui-sama, everyone said that you're evil."
 
     shiori "But I know that you only eat to survive..."
 
-    shiori "If I love you enough...{w=0.2} you’ll let me stay by your side, right?"
+    shiori "If I love you enough...{w=0.2} You’ll let me stay by your side, right?"
 
     show shi yan
 

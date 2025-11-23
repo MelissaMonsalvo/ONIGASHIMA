@@ -105,7 +105,7 @@ label loop3_hikaru:
         linear 0.07 xoffset -560 yoffset -32 zoom 0.12 alpha 0.0
     with hpunch
 
-    n "Hikaru, no–You won't win against the Yamakui!"
+    n "Hikaru, no– You won't win against the Yamakui!"
 
     n2 "HraHhaHAHAHA!"
 
@@ -144,7 +144,7 @@ label loop3_hikaru:
 
     n2 "i wEar iT bAckwArDs sOmEtImEs. {w}fUnNy."
 
-    n "{i}I don't care whatever you are doing to my face...{/i}"
+    n "{i}I don't care what you do to my face...{/i}"
 
     n "But let Hikaru go..."
 
@@ -320,7 +320,7 @@ label loop3_hikaru:
 
         pause 0.10
 
-    hikaru "Have the kami-sama abandoned us!?"
+    hikaru "Have the Kami-sama abandoned us!?"
 
     MC happy3 "{size=+5}{color=#ff0000}Y E S.{/color}{/size}"
 
@@ -473,9 +473,9 @@ label loop3_hikaru:
 
     MC sad3 "Help me."
 
-    MC sad3 "Hikaru... {w}please–"
+    MC sad3 "Hikaru... {w}Please–"
 
-    MC sad3 "I’m still in here–{w} they’re controlling me–"
+    MC sad3 "I’m still in here–{w} They’re controlling me–"
 
     MC sad3 "You can still save me–"
 
@@ -502,7 +502,7 @@ label loop3_hikaru:
 
     hikaru "That voice–"
 
-    hikaru "You’re lying–no, wait–"
+    hikaru "You’re lying–No, wait–"
 
     MC sadcl3 "I don’t want to die, Hikaru..."
 

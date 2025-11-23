@@ -36,7 +36,7 @@ label loop3_yamato:
 
     n2 "GaMeY mEAt."
 
-    yamato "Goddamnit, [persistent.player_name]. {w=0.1}Ya go to the mountains yerself and came back with this thing wearin' ya?"
+    yamato "Goddamnit, [persistent.player_name]. {w=0.1}Ya go to the mountains yerself and come back with this thing wearin' ya?"
 
     yamato "{i}Oi, bastard!{/i} That ain't yer face!"
 
@@ -317,7 +317,7 @@ label loop3_yamato:
 
     n "{cps=13}Yamato...{/cps}"
 
-    n "...don’t come back."
+    n "...Don’t come back."
 
     n "Don’t give it what it wants..."
 
@@ -780,7 +780,7 @@ label loop3_yamato:
 
     yamato "{cps=14}Even if I'll forget you in the end...{/cps}"
 
-    yamato "...I’ll remember this pain {w}in hell."
+    yamato "... I’ll remember this pain {w}in hell."
 
     scene black
     show darken2

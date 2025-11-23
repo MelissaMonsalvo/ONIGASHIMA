@@ -75,7 +75,7 @@ label loop3_shiori:
 
     n2 "sHE DoEs NOT cAre."
 
-    shiori "Let’s meet at the shrine when the red moon comes, okay~?"
+    shiori "Let’s meet at the shrine when the Red Moon comes, okay~?"
 
     shiori "I have something special to show you, [persistent.player_name]-sama."
 
@@ -251,7 +251,7 @@ label loop3_shiori:
 
         pause 0.08
 
-    shiori "{cps=13}Waiting, waiting...{/cps}{w=0.2} and I was always watching you, you know~?"
+    shiori "{cps=13}Waiting, waiting...{/cps}{w=0.2} And I was always watching you, you know~?"
 
     n "..."
 
@@ -363,9 +363,9 @@ label loop3_shiori:
         zoom 0.5
     with in_212
 
-    shiori "It was dark, I was brought to the forest to die alone."
+    shiori "It was dark. I was brought to the forest to die alone."
 
-    shiori "I couldn't remember the priests's face, so I'm sure you ate him... {w}or her? Ah, that doesn't matter anymore."
+    shiori "I couldn't remember the priest's face, so I'm sure you ate him... {w}or her? Ah, that doesn't matter anymore."
 
     shiori "The rope scratched my skin, I was hurt all over."
 
@@ -381,15 +381,15 @@ label loop3_shiori:
 
     $ renpy.pause(0.3)
 
-    shiori "But you ate them instead. {w=0.2}The sinner, {w=0.2}the evil person."
+    shiori "You ate them instead. {w=0.2}The sinner, {w=0.2}the evil person."
 
     n "..."
 
-    shiori "I remember standing there and watched... {w}I think I watched you eat."
+    shiori "I remember standing there and watching... {w}I think I watched you eat."
 
-    shiori "And I thought... {w}you were {i}beautiful.{/i} You saved my life. You only eat those who did wrongdoings!"
+    shiori "And I thought... {w}You were {i}beautiful.{/i} You saved my life. You only eat those who do wrongdoings!"
 
-    shiori "So I decided, right there... {w}that I would love you."
+    shiori "So I decided, right there... {w}That I would love you."
 
     shiori "Forever and ever."
 
@@ -503,7 +503,7 @@ label loop3_shiori:
     show shi angry
     with dissolve
 
-    shiori "{glitch=9}Then... then it wasn’t fate?{/glitch}"
+    shiori "{glitch=9}Then... Then it wasn’t fate?{/glitch}"
 
     with vpunch
 
@@ -604,7 +604,7 @@ label loop3_shiori:
 
     n2 "GglGGhhkkk... {w}Krrsshhhhh..."
 
-    n "Please... please..."
+    n "Please... Please..."
 
     n2 "GnnnrrhhH... {w}Too mUch hAir. sTuck iN tHe gUmS."
 

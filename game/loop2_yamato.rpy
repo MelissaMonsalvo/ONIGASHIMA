@@ -47,7 +47,7 @@ label loop2_yamato:
 
     n "You can feel the voices crawling up your spine... Someone praying at the shrine."
 
-    n "Not to the kami-sama, but to something more ancient and sinister.. Blasphemous at its core."
+    n "Not to the Kami-sama, but to something more ancient and sinister.. Blasphemous at its core."
 
     n "And it draws you right to it, your blood feeling right at home."
 
@@ -83,7 +83,7 @@ label loop2_yamato:
 
     n "He's clutching his stomach."
 
-    n "His skin ripples, something is moving underneath. A worm-like creature, crawling under the surface."
+    n "His skin ripples, something moving underneath. A worm-like creature, crawling under the surface."
 
     yamato "{sc}...rggna...{/sc}"
 
@@ -222,7 +222,7 @@ label loop2_yamato:
         linear 0.33 zoom 0.35 yzoom 1.03 xalign 0.65 yoffset -10
         linear 0.17 zoom 0.3 yzoom 1.0 xalign 0.6 yoffset 0
 
-    n "Yamato lifts his head,{w=0.2} you can see his eyes are {sc=6}rolled white.{/sc}"
+    n "Yamato lifts his head;{w=0.2} you can see his eyes are {sc=6}rolled back.{/sc}"
 
     n "Blood starts to drip from his mouth that doesn’t stop moving,{w=0.2} even when he’s no longer making sound."
 
@@ -369,7 +369,7 @@ label loop2_yamato:
 
         pause 0.05
 
-        hikaru "Yamato... What are you doing!?"
+        hikaru "Yamato... What are you doing?!"
 
         yamato "Tch... Look at ya screamin’ like it matters now."
 
@@ -436,7 +436,7 @@ label loop2_yamato:
 
         n "{glitch=7}The ground shudders.{w=0.2} and Hikaru stumbles backwards.{/glitch}"
 
-        hikaru "{sc=7}What did you CALL!?{/sc}"
+        hikaru "{sc=7}What did you CALL?!{/sc}"
 
         show yam eldritch1:
             zoom 0.3
@@ -512,7 +512,7 @@ label loop2_yamato:
 
         MC normal2 "...He’s gone, Shiori."
 
-        shiori "{sc=5}That wasn’t a kami, was it?{/sc}"
+        shiori "{sc=5}That wasn’t a Kami, was it?{/sc}"
 
         shiori "The prayers... The chanting's all wrong..."
 
@@ -522,7 +522,7 @@ label loop2_yamato:
 
         shiori "{cps=15}Stupid, stupid Yamato...{/cps}"
 
-        shiori "{i}Always acting like he's the only one who suffers...{/i} {w=0.2}always pretending he's strong..."
+        shiori "{i}Always acting like he's the only one who suffers...{/i} {w=0.2}Always pretending he's strong..."
 
         shiori "But he just needed someone to hug him. Someone to tell him it’s okay."
 
@@ -530,13 +530,13 @@ label loop2_yamato:
 
         shiori "Everything can be fixed."
 
-        shiori "Right? I mean... {w=0.2} if you just love someone enough..."
+        shiori "Right? I mean... {w=0.2} If you just love someone enough..."
 
-        shiori "{sc=6}Even the Yamakui... {w=0.2} it just needs someone to see it as it really is.{/sc}"
+        shiori "{sc=6}Even Yamakui... {w=0.2} It just needs someone to see it as it really is.{/sc}"
 
         shiori "{i}Maybe it’s angry because it’s lonely, and because we’re all so mean to it.{/i}"
 
-        shiori "But if we just... {w=0.2} sat down...{w=0.2}  maybe lit some incense... {w=0.2} and just talked..."
+        shiori "But if we just... {w=0.2} sat down...{w=0.2}  Maybe lit some incense... {w=0.2} and just talked..."
 
         shiori "It’d understand."
 
@@ -586,7 +586,7 @@ label loop2_yamato:
 
     pause 0.5
 
-    n "The sky is fully red now,{w=0.2} it's just mere hours before the red moon is full."
+    n "The sky is fully red now.{w=0.2} It's mere hours before the Red Moon is full."
 
     play music "Blood Ritual.mp3"
 
@@ -611,11 +611,11 @@ label loop2_yamato:
         linear 2 zoom 1.3
 
 
-    n "And of course, you saw the man {sc=5}practically crawling{/sc} towards you."
+    n "And of course, you see the man {sc=5}practically crawling{/sc} towards you."
 
-    n "Limbs jerking,{w=0.2} all bent up with one hand dragging behind,{w=0.2} flopping."
+    n "Limbs jerking,{w=0.2} bent with one hand dragging behind,{w=0.2} flopping."
 
-    n2 "Look, look who is crawling back."
+    n2 "Look, look who’s crawling back."
 
     hide yam
 
@@ -628,7 +628,6 @@ label loop2_yamato:
         alpha 1.0
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-        # Subtle, weird, not comical twitching
         linear 0.07 xoffset -19 yoffset 410
         linear 0.06 xoffset 13 yoffset 396
         linear 0.05 xoffset -11 yoffset 402
@@ -637,7 +636,7 @@ label loop2_yamato:
 
         pause 0.10
 
-    yamato "{cps=12}...tonight.{/cps}"
+    yamato "{cps=12}...Tonight.{/cps}"
 
     n "His voice folds in on itself,{w=0.2} another voice is speaking from behind him...{w=0.2} or from inside him."
     show yam glitched:
@@ -661,7 +660,7 @@ label loop2_yamato:
 
     yamato "{sc=6}T-tonight–{w=0.2}t–{w=0.2}tonight–{/sc}"
 
-    yamato "{glitch=8}...Red moon...{/glitch}"
+    yamato "{glitch=8}...Red Moon...{/glitch}"
 
     yamato "{i}I will–{/i}"
     show yam glitched:
@@ -673,7 +672,6 @@ label loop2_yamato:
         alpha 1.0
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-        # Subtle, weird, not comical twitching
         linear 0.07 xoffset -19 yoffset 410
         linear 0.06 xoffset 13 yoffset 396
         linear 0.05 xoffset -11 yoffset 402
@@ -725,7 +723,6 @@ label loop2_yamato:
         alpha 1.0
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-        # Subtle, weird, not comical twitching
         linear 0.07 xoffset -19 yoffset 410
         linear 0.06 xoffset 13 yoffset 396
         linear 0.05 xoffset -11 yoffset 402
@@ -748,8 +745,7 @@ label loop2_yamato:
         alpha 1.0
         matrixcolor TintMatrix(Color(rgb=(0.9, 0.12, 0.12), alpha=0.8))
 
-        easein 0.05 zoom 0.6 yoffset 180 xoffset 140   # Lurches up and forward
-
+        easein 0.05 zoom 0.6 yoffset 180 xoffset 140
     scene black with vpunch
 
 
@@ -781,15 +777,15 @@ label loop2_yamato:
 
     n "That is no longer Yamato's voice anymore..."
 
-    n "No. Yamato, stop. Please–{w=0.1}just–{w=0.1}stop this–"
+    n "No. Yamato, stop. Please–{w=0.1}just–{w=0.1}Stop this–"
 
     n "That’s not you talking!"
 
     n "You’re still in there! {sc=2}Please!{/sc}"
 
-    yamato "The master of the earth has blessed me!"
+    yamato "The Master of the Earth has blessed me!"
 
-    n "Yamato raises his sword at an unexpected speed, and zig-zagged towards you."
+    n "Yamato raises his sword at an unexpected speed, and zig-zags towards you."
 
     scene black
     play sound "sfx/screech.wav"
@@ -822,7 +818,7 @@ label loop2_yamato:
 
     n "We used to laugh. He used to swear when I tackled him down."
 
-    n "Now he’s... he’s–"
+    n "Now he’s... He’s–"
 
     yamato "{glitch=12}ThE ReD MoON wiLL be YoUR FuNeRAl–{/glitch}"
 
@@ -844,8 +840,6 @@ label loop2_yamato:
     show darken2
 
     n "You block, parry, twirl–"
-
-    n "The blade in your hands splits Yamato’s in two, but it was only an afterimage."
 
     n2 "{i}Still too slow–!{/i}"
 
@@ -872,7 +866,7 @@ label loop2_yamato:
 
     yamato "...Nnn–!"
 
-    n "He retches,{w=0.2} out come string of black, twitching, writhing things."
+    n "He retches,{w=0.2} out come strings of black, twitching, writhing things."
 
     show yam glitched:
         zoom 0.4
@@ -893,7 +887,7 @@ label loop2_yamato:
         pause 0.10
     play sound "sfx/glitch.wav"
 
-    yamato "{sc=6}Still–still ain’t done–!{/sc}"
+    yamato "{sc=6}Still–Still ain’t done–!{/sc}"
 
     yamato "I’ll break ya in pieces. One piece for the friend I can't remember, and another for [persistent.player_name]–"
 
@@ -1033,7 +1027,7 @@ label loop2_yamato:
 
     n2 "{i}Ahhh, little mutt prays so sweetly.{/i}"
 
-    n2 "Didn’t know he was feeding me."
+    n2 "Doesn’t know he was feeding me."
 
     n "You take one step forward."
 
@@ -1152,7 +1146,7 @@ label loop2_yamato:
         zoom 1.3
 
 
-    yamato "What...{w=0.2} what the fuck are you saying..."
+    yamato "What...{w=0.2} What the fuck are you saying..."
 
     MC evil2 "Your prayers, don't they go something like this?"
 
@@ -1160,7 +1154,7 @@ label loop2_yamato:
 
     MC evil2  "Yamato-kun..."
 
-    MC evil2 "Who do you think the master of the earth is?"
+    MC evil2 "Who do you think the Master of the Earth is?"
 
     show yam glitched:
         zoom 0.25
@@ -1254,7 +1248,7 @@ label loop2_yamato:
 
     MC evil2 "I gave you teeth, claws, power, eeeeverything you wanted."
 
-    MC evil2 "But it'll never be as strong as mine."
+    MC evil2 "But none of it'll never be as strong as mine."
 
     n "His fingers snap sideways as they claw at his own chest."
 
@@ -1347,7 +1341,7 @@ label loop2_yamato:
 
     n "Your foot lands beside his cheek."
 
-    n "The one that used to sneer at you, call you dumbass, and taught you how to–"
+    n "The one that used to sneer at you, who called you dumbass, and taught you how to–"
 
     n2 "No. He taught YOU."
 
@@ -1381,7 +1375,7 @@ label loop2_yamato:
 
     n2 "He was so ready to tear this face apart."
 
-    n "I am going to puke, urk–"
+    n "I’m going to puke, urk–"
 
     play sound "sfx/slurrp.mp3"
     $ renpy.pause(0.2)
@@ -1394,7 +1388,7 @@ label loop2_yamato:
 
     n2 "There are no gods to pray to."
 
-    n2 "Your kami-sama have turned their backs on you."
+    n2 "Your Kami-sama have turned their backs on you."
 
     scene black
 
