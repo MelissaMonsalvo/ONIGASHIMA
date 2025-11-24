@@ -2,23 +2,9 @@ label preloop2_scene1:
 
     n "Clear sky tonight, perfect for moon gazing."
 
-    n "So that's what you're doing, lying flat on your back. Even though you're alone in a dark forest."
+    n "So That's what you're doing, lying flat on your back. Even though you're alone in a dark forest."
 
     n2 "Hey."
-
-    n2 "Tell me."
-
-    n2 "Why become an Oni Slayer?"
-
-    n "...What?"
-
-    n2 "Was it for glory? The cheers?"
-
-    n2 "Or did you think you could {i}save{/i} someone?"
-
-    n2 "Ngh. Disgusting."
-
-    n2 "All that crying for nothing."
 
     n2 "Pathetic."
 
@@ -28,7 +14,7 @@ label preloop2_scene1:
 
     n2 "Rot-meat, stuck behind these eyes."
 
-    n "What? I’m not—"
+    n "What? I’m not–"
 
     n2 "Shut {i}up{/i}."
 
@@ -48,7 +34,7 @@ label preloop2_scene1:
 
     n "Why are you saying this?"
 
-    n2 "Because I'm BORED and you're still pretending."
+    n2 "Because I'm BORED, and you're still pretending."
 
     n2 "That this will end well."
 
@@ -60,7 +46,7 @@ label preloop2_scene1:
 
     n2 "Tell me again."
 
-    n2 "Why become an Oni Slayer?"
+    n2 "...Why become an Oni Slayer?"
 
     n "...I don’t remember."
 
@@ -88,9 +74,9 @@ label preloop2_scene2:
 
     n2 "Tch."
 
-    n2 "This house—"
+    n2 "This house–"
 
-    n2 "—is {i}boring.{/i}"
+    n2 "–is {i}boring.{/i}"
 
     n2 "Where’s the mess? Where’s the {i}you?{/i}"
 
@@ -122,7 +108,7 @@ label preloop2_scene2:
 
     n2 "Friends."
 
-    n2 "Hhnnnhhh—"
+    n2 "Hhnnnhhh–"
 
     n2 "Where are they now, meat?"
 
@@ -134,9 +120,9 @@ label preloop2_scene2:
 
     n "They used to leave things, you know."
 
-    n "You’d find it and laugh, then put it in the drawer. Say you'd return it later."
+    n "You’d find them and laugh, then put it in the drawer. Say you'd return it later."
 
-    n "But... you never get to do it."
+    n "But... You never get to do it."
 
     n "{i}We{/i} never get to do it."
 
@@ -148,9 +134,9 @@ label preloop2_scene2:
 
     n2 "Did you {i}feel{/i} it?"
 
-    n2 "Did you sweep because you were coming back—"
+    n2 "Did you sweep because you were coming back–"
 
-    n2 "—or because you {i}weren’t?{/i}"
+    n2 "–Or because you {i}weren’t?{/i}"
 
     n "..."
 
@@ -164,7 +150,7 @@ label preloop2_scene2:
 
     n2 "Smiled like {i}good{/i} neighbors."
 
-    n2 "And you—"
+    n2 "And you–"
 
     n2 "You cleaned your house like a {i}good little lamb.{/i}"
 
@@ -188,17 +174,17 @@ label preloop2_scene3:
 
     n "No one's around... Odd."
 
-    n "the next thing you know, your knees hit the ground. Too fast. You didn’t mean to kneel that hard."
+    n "The next thing you know, your knees hit the ground. You didn’t mean to kneel that hard."
 
     n "You fold your hands, you don’t know why."
 
     n "You used to pray here...{w} You think."
 
-    n2 "Pff—hhaahhh!"
+    n2 "Pff–hhaahhh!"
 
     n2 "Look at you, what, some holy little bug?"
 
-    n2 "Hhh—hhaha—"
+    n2 "Hhh–hhaha–"
 
     n2 "You think someone’s listening?"
 
@@ -206,7 +192,7 @@ label preloop2_scene3:
 
     n2 "Kami‑sama, please save me~"
 
-    n2 "Pfff—{i}haahhahaha!{/i}"
+    n2 "Pfff–{i}haahhahaha!{/i}"
 
     n2 "You think this place is HOLY?"
 
@@ -236,9 +222,9 @@ label preloop2_scene3:
 
     n2 "Let’s see if they answer now..."
 
-    n2 "Or if they just laugh...{w} like me."
+    n2 "Or if they just laugh...{w} Like me."
 
-    n2 "HhhhhhhaaaahahHhhaahhhHhhh—"
+    n2 "HhhhhhhaaaahahHhhaahhhHhhh–"
 
     $ preloop2_extra3 = True
 
@@ -258,9 +244,9 @@ label preloop2_scene4:
 
     n "You look around. The lights are out, even though the night is still young."
 
-    n "You can sort of see faint candle glow behind paper walls, but nobody moves."
+    n "You can faintly see candle glow behind paper walls, but nobody moves."
 
-    n2 "They see you—no—{i}us.{/i}"
+    n2 "They see you–no–{i}us.{/i}"
 
     n2 "Afraid the thing they fed might come knockin’."
 
@@ -282,7 +268,7 @@ label preloop2_scene4:
 
     n2 "Each one shut tight ‘cause of {i}you.{/i}"
 
-    n "No. You saved them. You—"
+    n "No. You saved them. You–"
 
     n2 "Saved?"
 
@@ -296,7 +282,7 @@ label preloop2_scene4:
 
     n "..."
 
-    n "...You decide to keep walking."
+    n "... You decide to keep walking."
 
     $ preloop2_extra4 = True
 
@@ -312,7 +298,7 @@ label preloop2_dojo_night:
 
     n "How do the movements go, again?"
 
-    n "One foot forward, elbow tight, and—"
+    n "One foot forward, elbow tight, and–"
 
     n2 "Hehhh."
 
@@ -356,11 +342,9 @@ label preloop2_dojo_night:
 
     n2 "You {i}loved{/i} it."
 
-    n2 "Even if it’s mine now."
+    n2 "Even if it’s my body now."
 
-    n2 "{i}Especially{/i} because it’s mine."
-
-    n "What—"
+    n "What–"
 
     n2 "I made you {i}me.{/i}"
 

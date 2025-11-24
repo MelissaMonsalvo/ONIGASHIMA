@@ -6,7 +6,7 @@ label loop1_hikaru_mandatory1:
         zoom 0.5
 
 
-    n "Everyone is tense because of the red moon."
+    n "Everyone is tense because of the Red Moon."
 
     n "You want to escape from everyone, so you hide in the forest."
 
@@ -27,7 +27,7 @@ label loop1_hikaru_mandatory1:
 
     "???" "Still jumpy, huh [persistent.player_name]?"
 
-    n "You hear a soft chuckle behind you, a voice that you've heard it a lot of times."
+    n "You hear a soft chuckle behind you, a voice that you've heard a lot of times."
 
     n "But that person doesn't usually giggle like that."
 
@@ -60,7 +60,7 @@ label loop1_hikaru_mandatory1:
 
     hikaru "Aw, did you forget about me while you were fighting the Yamakui?"
 
-    n "They finally let go of you, you turn around just to see Hikaru."
+    n "They finally let go, and you turn around just to see Hikaru."
 
     n "Didn't Hikaru greet you with a cold demeanor when you returned? Why is–"
 
@@ -79,7 +79,7 @@ label loop1_hikaru_mandatory1:
 
     hikaru "Hey, are you all right, [persistent.player_name]?"
 
-    n "This... {w=0.2}this part doesn’t feel familiar. But it sounds like it should be."
+    n "This... {w=0.2}This part doesn’t feel familiar. But it sounds like it should be."
 
     show hik sad:
         zoom 0.5
@@ -122,7 +122,7 @@ label loop1_hikaru_mandatory1:
 
     n "Wait. Why did you say that?"
 
-    hikaru "Are you mad of me because I said the armor's too small?"
+    hikaru "Are you mad AT me because I said the armor's too small?"
 
     MC surprised "What?"
 
@@ -164,14 +164,14 @@ label loop1_hikaru_mandatory1:
 
     n "They step closer and you feel like they're breaching your personal space. You want to leave."
 
-    n "If you're together, then it should be okay to stay close like this {w}right?"
+    n "If you're together, then it should be okay to stay close like this, {w}right?"
 
     MC nervous "{size=*0.95}Hikaru, when did we...?{/size}"
 
     show hik normal
     with dissolve
 
-    hikaru "...get together?"
+    hikaru "...Get together?"
 
     show hik happycl
     with dissolve
@@ -189,7 +189,7 @@ label loop1_hikaru_mandatory1:
     show hik sad
     with dissolve
 
-    hikaru "Do you? {w=0.2}Did the Yamakui knock your head so hard you had amnesia?"
+    hikaru "Do you? {w=0.2}Did the Yamakui knock your head so hard you got amnesia?"
 
 
     $ decrease_music_volume(0.3)
@@ -199,9 +199,9 @@ label loop1_hikaru_mandatory1:
 
     MC nervous "{bt=1}Yeah! Yeah, I just need time to readjust.{/bt}"
 
-    hikaru "Is that all there is?"
+    hikaru "Is that all this is?"
 
-    MC nervous "{k=-1}Of course. What else would it be?{/k}"
+    MC nervous "{k=-1}Of course. What else would there be?{/k}"
 
     n "You regret the question the moment it leaves your mouth."
 
@@ -250,13 +250,13 @@ label loop1_hikaru_mandatory1:
     scene black with out_212
     stop music fadeout 1.0
 
-    n "You feel watched all the way down until Hikaru disappears from view."
+    n "You feel you're being watched all the way down, until Hikaru disappears from view."
 
-    n "You try to shake that feeling away, but you can't forget how Hikaru's eyes look like watching you leave."
+    n "You try to shake that feeling away, but you can't forget how Hikaru's eyes looked as they watched you leave."
 
     n "Hey..."
 
-    n "What if Hikaru's the one being right and you just forgot?"
+    n "What if Hikaru's the one who's right and you just forgot?"
 
     n "Don't you think it's worth asking around for?"
 
@@ -284,7 +284,7 @@ label loop1_hikaru_mandatory2:
 
     n "Hikaru is training today, their scarf is billowing every time they move."
 
-    n "You wonder why they are wearing a scarf. Isn't it inconvenient for battles?"
+    n "You wonder why they're wearing a scarf. Isn't it inconvenient for battles?"
 
     MC annoyed "Why do you wear a scarf to battle?"
 
@@ -414,9 +414,9 @@ label loop1_hikaru_mandatory2:
 
     n "They grab the scarf with both hands and yank it off, thrusting it towards you."
 
-    hikaru "{sc=3}You picked it! You said the red matched the color of the red moon–{/sc}"
+    hikaru "{sc=3}You picked it! You said the red matched the color of the Red Moon–{/sc}"
 
-    hikaru "{sc=3}–and it gave you hope that we'll get through it!{/sc}"
+    hikaru "{sc=3}–and it gave you hope that we'll make it through!{/sc}"
 
     show hik panic
     with vpunch
@@ -450,7 +450,7 @@ label loop1_hikaru_mandatory2:
 
     hikaru "{size=*0.95}...You're scaring me.{/size}"
 
-    MC hurt "{w=0.2}You’re the one scaring me."
+    MC hurt "{w=0.2}You're the one scaring me."
 
     show hik sad
     with dissolve
@@ -482,7 +482,7 @@ label loop1_hikaru_mandatory2:
 
     hikaru "{sc=7}{b}Who ARE you!?{/b}{/sc}"
 
-    n "Hikaru stares at you, breathing hard. Their face contorts into something... Is it grief? Suspicion? Anger?"
+    n "Hikaru stares at you, breathing hard. Their face contorts into something... Is that grief? Suspicion? Anger?"
 
     show hik panic behind darken2:
         zoom 0.55
@@ -505,9 +505,9 @@ label loop1_hikaru_mandatory2:
 
     hide hik
 
-    n "Before you could make something out of it, they turn and storm off."
+    n "Before you can make something out of it, they turn and storm off."
 
-    n "And you’re left standing in the quiet."
+    n "You’re left standing in the quiet."
 
 
     $ loop1_hikaru_mandatory2 = True
@@ -597,7 +597,7 @@ label loop1_hikaru_mandatory3:
 
     show red_flash_slow onlayer screens
 
-    n "You take it and it feels quite warm in your hand. You turn it around, but can't find any heat source in it."
+    n "You take it and it feels quite warm in your hand. You examine it, but can't find any heat source in it."
 
     n "Still, you smell something faintly burning, it's coming from the talisman."
 
@@ -632,7 +632,7 @@ label loop1_hikaru_mandatory3:
 
     MC nervous "{w=0.2}...What?"
 
-    hikaru "{k=-1}Do you feel anything? I mean–{w=0.1}does it hurt, or tingle, or maybe a flash of something? {w=0.1}Memory? {w=0.1}Emotion?{/k}"
+    hikaru "{k=-1}Do you feel anything? I mean–{w=0.1}Does it hurt, or tingle, or maybe there's a flash of something? {w=0.1}Memory? {w=0.1}Emotion?{/k}"
 
     MC normal "Not really, no."
 
@@ -699,7 +699,7 @@ label loop1_hikaru_mandatory3:
     show hik sad
     with dissolve
 
-    hikaru "It doesn’t matter. I hope it'll get your memory back someday, maybe it... doesn't work immediately."
+    hikaru "It doesn’t matter. I hope it'll get your memory back someday. Maybe it... doesn't work immediately."
 
     hikaru "You should go back home. It’s late."
 
@@ -867,7 +867,7 @@ label loop1_hikaru_mandatory4:
     scene house day:
         zoom 0.5
 
-    n "You’ve just finished cleaning yourself when–"
+    n "You’ve just finished cleaning when–"
 
     play sound "sfx/knock.wav"
 
@@ -903,9 +903,9 @@ label loop1_hikaru_mandatory4:
 
     n "But..."
 
-    n "Maybe we should hear what they want to say?"
+    n "Maybe you should hear what they want to say?"
 
-    n "Even though they are so persistent in saying that you two are more than friends, maybe Hikaru is not lying."
+    n "Even though they're so persistent in saying that you two are more than friends, maybe Hikaru is not lying."
 
     n "You know they're not the type to lie."
 
@@ -941,7 +941,7 @@ label hikaru_visit_rejected:
     with vpunch
     pause 1.5
 
-    n "After a series of repeated knocks with no avail, it stops."
+    n "After a series of repeated knocks to no avail, it stops."
 
     n "And you sit in the darkness alone again."
     $ loop1_hikaru_mandatory4 = True
@@ -1072,13 +1072,13 @@ label hikaru_armorrefuse:
 
     MC annoyed "Why?"
 
-    hikaru "Because I am merely curious, that is all."
+    hikaru "I am merely curious, that is all."
 
     MC annoyed "I don't think that's true."
 
     n "Still–"
 
-    MC nervous "Look... {w=0.3}We don't know much about Yamakui, it could be cursed for all we know."
+    MC nervous "Look... {w=0.3}We don't know much about the Yamakui, it could be cursed for all we know."
 
     MC normal "I'm trying to understand it before anyone else gets hurt."
 
@@ -1116,7 +1116,7 @@ label hikaru_armorrefuse:
     n "And then they're gone."
 
 
-    n "If even Hikaru suspects something... how long before others start asking, too?"
+    n "If even Hikaru suspects something... How long before others start asking, too?"
 
     scene black with fade
     $ renpy.pause(1.0)
@@ -1147,7 +1147,7 @@ label hikaru_armor:
 
     n "You don't know what they are actually looking for. There's only dried blood and remnants of flesh."
 
-    n "That's because you haven't washed it at all and left it bloodied like that."
+    n "Because you haven't washed it at all and left it bloodied like that."
 
     scene house day:
         zoom 0.7
@@ -1192,7 +1192,7 @@ label hikaru_armor:
 
     n "You serve the tea for the both of you afterwards."
 
-    n "Since you brew it yourself... {i}it will be fine if you drink it, right?{/i}"
+    n "Since you brewed it yourself... {i}it will be fine if you drink it, right?{/i}"
 
     pause 0.5
 
@@ -1232,7 +1232,7 @@ label hikaru_teareject:
 
     n "They say nothing more and finish their tea."
 
-    n "What are you so afraid of? You're the one who brew it. Hikaru clearly drank that tea and is fine."
+    n "What are you so afraid of? You're the one who brewed it. Hikaru clearly drank that tea and they're fine."
 
     n "So what’s the hesitation?"
 
@@ -1319,7 +1319,7 @@ label hikaru_teadrink:
     show red_flash_slow onlayer screens
 
 
-    n "The taste of salt hits first, followed by sour... and ended up bitter at the tip of your tongue."
+    n "The taste of salt hits first, followed by something sour... it ends up bitter at the tip of your tongue."
 
     stop music
 
@@ -1362,7 +1362,7 @@ label hikaru_teadrink:
 
     MC sad "{cps=10}...I'm... {w}fine...{/cps}"
 
-    hikaru "Really? You look... mortified."
+    hikaru "Really? You look... disgusted."
 
     show hik worried
     with dissolve
@@ -1392,13 +1392,13 @@ label hikaru_teadrink:
 
     n "The same burn, the same trail of salt, the same taste of your own blood..."
 
-    n "...the same clawing ache in your stomach. Even worse now."
+    n "...The same clawing ache in your stomach. Even worse now."
 
     n "Poison?"
 
     n "A curse?"
 
-    n "But Hikaru looks fine... and you're the one brewing it...."
+    n "But Hikaru looks fine... and you're the one who brewed it...."
 
     MC nervous "{cps=10}...Hhh–D-Did you say what this was? I didn't remember–{/cps}"
 
@@ -1407,7 +1407,7 @@ label hikaru_teadrink:
 
     hikaru "You drank it last year, and before that. In fact, the four of us did."
 
-    hikaru "Remember the new year's celebration?"
+    hikaru "Remember the New Year's celebration?"
 
     MC surprised "{w=0.2}W-Wh–"
 
@@ -1516,7 +1516,7 @@ label hikaru_teadrink:
     play sound "sfx/prang.mp3"
     with sshake
 
-    n "–you throw the tray. Well, more like you slammed the tray into the ground that every glassware breaks apart."
+    n "–you throw the tray. Well, more like you slam the tray into the ground that the cups break apart."
 
     MC mad "{cps=10}{sc=6}Haa... {w}Haa... {w}Haa...{/sc}{/cps}"
 
@@ -1672,7 +1672,7 @@ label loop1_hikaru_mandatory5:
     show shi annoyed
     with vpunch
 
-    shiori "{cps=12}Yamato-kun~ don’t be rude!{/cps}"
+    shiori "{cps=12}Yamato-kun~ Don’t be rude!{/cps}"
 
     show yam annoyed
     with dissolve
@@ -1689,7 +1689,7 @@ label loop1_hikaru_mandatory5:
     show yam serious
     with dissolve
 
-    yamato "{bt=1}Did the Yamakui hit yer head so hard ya start hallucinating a damn relationship?{/bt}"
+    yamato "{bt=1}Did the Yamakui hit yer head so hard ya started hallucinating a damn relationship?{/bt}"
 
     MC sad "..."
 
@@ -1699,7 +1699,7 @@ label loop1_hikaru_mandatory5:
 
     MC normal "I’m fine."
 
-    yamato "Yeah, so that's the dumbest shit I've ever heard since ya came back from that damn mountain."
+    yamato "Yeah, so that's the dumbest shit I've heard since ya came back from that damn mountain."
 
     shiori "If something’s bothering you, I can ask Hikaru myself?"
 

@@ -14,7 +14,7 @@ label loop1_shiori_mandatory1:
 
     n "The shrine looks the same as always."
 
-    n "Stone steps, with red paint that flakes if you look close enough. Fresh, but actually... {w}old and tattered."
+    n "Stone steps, with red paint that flakes if you look close enough. Fresh, but actually... {w}Old and tattered."
 
     n "Just like your whole village."
 
@@ -34,7 +34,7 @@ label loop1_shiori_mandatory1:
 
     n "{i}Is it?{/i}"
 
-    MC smugcl "Heh... {w}yeah. Guess I should come by more. Bet the gods missed me."
+    MC smugcl "Heh... {w}Yeah. Guess I should come by more. Bet the gods missed me."
 
     show shi yan
     with dissolve
@@ -67,7 +67,7 @@ label loop1_shiori_mandatory1:
 
     n "You nod before you even think."
 
-    MC normal "Right, yeah. We always used to hang out by that, uh... {w=0.2}that rock thing. The... {w}{i}Dosojin{/i}?"
+    MC normal "Right, yeah. We always used to hang out by that, uh... {w=0.2}That rock thing. The... {w}{i}Dosojin{/i}?"
 
     shiori "Mhm~"
 
@@ -88,7 +88,7 @@ label loop1_shiori_mandatory1:
 
     shiori "But now? They're being weird with you."
 
-    MC smug "Heh... maybe they're just jealous I did it. Yamakui’s gone, after all."
+    MC smug "Heh... Maybe they're just jealous I did it. Yamakui’s gone, after all."
 
     show shi normal
     with dissolve
@@ -138,7 +138,7 @@ label loop1_shiori_mandatory1:
     $ decrease_music_volume(0.2)
     $ renpy.block_rollback()
 
-    n "{alpha=0.8}The incense grows thick once you've stepped in behind Shiori. The smell hits the back of your nose immediately, overwhelming...{/alpha}"
+    n "{alpha=0.8}The incense grows thick once you've stepped in behind Shiori. The smell hits the back of your nose immediately. It's overwhelming.{/alpha}"
 
     n "{i}You didn’t remember it being this sharp...{/i} {w=0.2}Or maybe that’s just how memory works?"
 
@@ -254,7 +254,7 @@ label loop1_shiori_mandatory2:
 
     n "Who was taken last? {w=0.2}A child? {w=0.2}A friend? {w=0.5}{i}{sc=1}Your parents?{/sc}{/i}"
 
-    n "Because you came back home and there are no parents at home. {w=0.2}{cps=52}Did they get eaten, too?{/cps}"
+    n "Because you came back, and there are no parents at home. {w=0.2}{cps=52}Did they get eaten, too?{/cps}"
 
     $ restore_music_volume()
 
@@ -323,7 +323,7 @@ label loop1_shiori_mandatory2:
 
     n "{cps=30}The shrine staying open even when no one prays anymore.{/cps}"
 
-    n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive it."
+    n "And... {w=0.2}{glitch=1.1}offerings{/glitch} without a god to receive them."
 
     stop music
     scene black
@@ -419,7 +419,7 @@ label loop1_shiori_mandatory3:
 
     n "This morning, you come in to the smell of rot lingering in the shrine."
 
-    n "It reminds you of the smell of the mountains when you left Yamakui's lair."
+    n "It reminds you of the smell of the mountains when you left the Yamakui's lair."
 
     scene shrine day:
         zoom 0.5
@@ -467,7 +467,7 @@ label loop1_shiori_mandatory3:
 
     n "Then a {color=ff0019}{cps=62}sticky red liquid{/cps}{/color} wells up around your thumb as you scoop it to your hand."
 
-    n "It's {cps=58}warm...{/cps} as warm as Shiori's hand when you brush against it as you hand the thing to her."
+    n "It's {cps=58}warm...{/cps} As warm as Shiori's hand when you brush against it as you hand the thing to her."
 
     MC surprised "Fresh?"
 
@@ -490,7 +490,7 @@ label loop1_shiori_mandatory3:
         yalign 0
         yoffset 80
         ease 0.7 zoom 0.43 yoffset 60
-    shiori "Okay! So all we have to do is eat the offering and the kami-sama will listen to our prayers."
+    shiori "Okay! So all we have to do is eat the offering and the Kami-sama will listen to our prayers."
 
     shiori "...Supposedly."
 
@@ -527,7 +527,7 @@ label loop1_shiori_mandatory3:
 
     MC nervous "Alright then."
 
-    n "You pick up a piece. The surface seems {alpha=0.7}slick{/alpha}. A thick mucous sheen coats it, and it {sc=4}slides{/sc} through your fingers once before you get a grip."
+    n "You pick up a piece. The surface seems {alpha=0.7}slick{/alpha}. A thick sheen of mucous coats it, and it {sc=4}slides{/sc} through your fingers once before you get a grip."
 
     MC normal "...Itadakimasu."
 
@@ -626,7 +626,7 @@ label gulgulp:
 
     n "It slides down with a thick gulp."
 
-    n "Shiori watches you eating, staring. Her mouth still open, with a strand of red hanging from her lips."
+    n "Shiori watches you eating, staring. Her mouth is still open, with a strand of red hanging from her lips."
 
     n "She wipes it with blood under her fingernails."
 
@@ -710,7 +710,7 @@ label loop1_shiori_mandatory4:
 
     MC surprised "...Checking?"
 
-    shiori "If there’s anything evil around, of course! Since the red moon is coming, and all!"
+    shiori "If there’s anything evil around, of course! Since the Red Moon is coming, and all!"
 
     shiori "If I find one, I’ll banish it~"
 
@@ -974,7 +974,7 @@ label loop1_shiori_mandatory5:
 
     shiori "Do you remember the day before they sent you off to the mountain and we said our goodbyes here?"
 
-    MC happy "Heh... yeah! Right here under this old tree. I remember...."
+    MC happy "Heh... Yeah! Right here under this old tree. I remember...."
 
     menu:
         "We all cried.":
@@ -1015,7 +1015,7 @@ label loop1_shiori_mandatory5:
     show shi normal
     with dissolve
 
-    shiori "Yeah, you are right, [persistent.player_name]..."
+    shiori "Yeah, you're right, [persistent.player_name]..."
 
     shiori "{cps=62}{alpha=0.8}Except...{/alpha}{/cps}"
 
@@ -1039,7 +1039,7 @@ label loop1_shiori_mandatory5:
 
     play music "sfx/forest night.wav"
 
-    MC panic "{sc=1}N-no! That’s not– I  said goodbye to you, at least... Right, Shiori?{/sc}"
+    MC panic "{sc=1}N-no! That’s not– I said goodbye to you, at least... Right, Shiori?{/sc}"
 
     shiori "{cps=52}{glitch=10}[persistent.player_name], you’re lying. I remember more than anyone else.{/glitch}{/cps}"
 
@@ -1052,7 +1052,7 @@ label loop1_shiori_mandatory5:
     show shi happyblush
     with dissolve
 
-    shiori "But that's okay! If you lie again tomorrow.... or if something happens during the red moon... I'll still be here for you."
+    shiori "But that's okay! If you lie again tomorrow.... or if something happens during the Red Moon... I'll still be here for you."
 
     shiori "{cps=52}Even if Yamato and Hikaru told me otherwise.{/cps}"
 
@@ -1142,7 +1142,7 @@ label loop1_shiori_mandatory5:
 
     MC yansm "{sc=3}You’ve been here this whole time.{/sc}"
 
-    MC yan "Narrating every step, whispering like a kami stuck in my head."
+    MC yan "Narrating my every step, always whispering..."
 
     MC yan "{size=+2}But now? Now you shut up?{/size}"
 

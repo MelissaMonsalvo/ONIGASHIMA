@@ -53,7 +53,7 @@ label loop2_yamato_mandatory1:
 
     yamato "You went up that mountain and came back without a single scratch."
 
-    yamato "{w=0.1}There ain't no way that's happenin'."
+    yamato "{w=0.1}There ain't no way that's what happened'."
 
     MC yan2 "..."
 
@@ -81,7 +81,7 @@ label loop2_yamato_mandatory1:
 
     play sound "sfx/rustle.mp3"
 
-    n "You pull your collar down and shows a mark just below the neck."
+    n "You pull your collar down and show a mark just below the neck."
 
     n "It looks like a bite, all right."
 
@@ -160,7 +160,7 @@ label loop2_yamato_mandatory1:
 
     MC yansm2 "{i}It’s only a wound, Yamato.{/i}"
 
-    MC smug2 "I mean it's a Yamakui, it's bound to leave a curse or something."
+    MC smug2 "I mean if it’s the Yamakui, it's bound to leave a curse or something."
 
     show yam ngh
     with dissolve
@@ -383,7 +383,7 @@ label loop2_yamato_mandatory2:
     $ renpy.pause(0.1, hard=True)
     with vpunch
 
-    n "Yamato grabs his sword then rushes towards you."
+    n "Yamato grabs his sword, then rushes towards you."
 
     n "He always had that fast and clean form, even sharper than you or Hikaru."
 
@@ -555,7 +555,7 @@ label yyyesss:
 
     with sshake
 
-    n "Yamato scrambles away frantically, but still heavily wounded."
+    n "Yamato scrambles away frantically, still heavily wounded."
 
     n "What are you doing...? He's going to tell the others and–"
 
@@ -614,7 +614,7 @@ label loop2_yamato_mandatory3:
             xoffset +20
         with dissolve
 
-        n "She’s standing between the urns, her mouth stretches open, then splits slowly."
+        n "She’s standing between the urns. Her mouth stretches open, then splits slowly."
 
         n "Who...?"
 
@@ -628,7 +628,7 @@ label loop2_yamato_mandatory3:
 
         yamato "{w=0.1}Whoever you were, I remembered having ya as a friend..."
 
-        yamato "Sometimes I dreamed of a girly voice in my sleep... {i}Maybe it's ya.{/i}"
+        yamato "Sometimes I dreamt of a girly voice in my sleep... {i}Maybe it's ya.{/i}"
 
         yamato "{sc=3}...I shoulda gone up there with ya.{/sc}"
 
@@ -674,7 +674,7 @@ label loop2_yamato_mandatory3:
 
         n "You can feel it on your skin."
 
-        yamato "{sc=2}Tch... I can't even remember how ya look like...{/sc}"
+        yamato "{sc=2}Tch... I can't even remember what ya look like...{/sc}"
 
         yamato "But I remembered I got another sparring partner other than [persistent.player_name]."
 
@@ -828,11 +828,11 @@ label loop2_yamato_mandatory4:
 
     play music "noinomai.mp3"
 
-    n "Yamato is on his knees, with his hands clawed into the dirt."
+    n "Yamato is on his knees, with his hands clawing into the dirt."
 
     yamato "{sc=3}HrghKKKK!{/sc}"
 
-    n "Black water floods from his mouth. It's thick, writhing... alive?"
+    n "Black water floods from his mouth. It's thick, writhing... Alive?"
 
     yamato "{i}Haaah... Hhhhaaaaahh...{/i}"
 
@@ -840,9 +840,9 @@ label loop2_yamato_mandatory4:
 
     n "What is happening?!"
 
-    n "You hear a popping, crunching sound. It's as if... as if... something inside him is rearranging."
+    n "You hear a popping, crunching sound. It's as if... As if... Something inside him is rearranging."
 
-    n "The black water pools at his knees. It moves without touching him, having a mind of its own"
+    n "The black water pools at his knees. It moves without touching him, having a mind of its own."
 
     yamato "{w}Tch..."
 
@@ -856,7 +856,7 @@ label loop2_yamato_mandatory4:
 
     yamato "{sc=5}NO NO NO. Not scared not scared not scared.{/sc}"
 
-    yamato "{i}Red moon's comin’... and I’m gonna peel the meat off your damn bones.{/i}"
+    yamato "{i}Red Moon's comin’... and I’m gonna peel the meat off your damn bones.{/i}"
 
     show yam eldritch:
         zoom 0.35
@@ -887,7 +887,7 @@ label yesyeysysyqsad:
 
     n2 "Little boy thinks he's brave."
 
-    n2 "HRAHaHAHaHaaa... oh, bite back, bite down, BITE OUT HIS TONGUE!"
+    n2 "HRAHaHAHaHaaa... Oh, bite back, bite down, BITE OUT HIS TONGUE!"
 
     yamato "{sc=3}I’m stronger now. {w=0.2}Don’t need skin to hold me back anymore.{/sc}"
 

@@ -30,7 +30,7 @@ label prologue_loop2:
 
     n2 "ThEy kEep cHeErInG, {w} cHeErInG fOr tHe pErSOn unDEr tHE sKiN."
 
-    n "...you..."
+    n "...You..."
 
     MC yansm3 "HhHHRaAAHaHhAH!"
 

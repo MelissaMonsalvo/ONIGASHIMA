@@ -14,9 +14,9 @@ label preloop1_scene1:
 
     shiori "Nooo, you’re twitching. Again~"
 
-    yamato "'Causec it’s damn cold. Yer puttin’ that on with ice fingers or somethin’?"
+    yamato "'Cause it’s damn cold. Yer puttin’ that on with ice fingers or somethin’?"
 
-    shiori "Ehehe~ Then maybe you shouldn’t’ve sprained your whole arm trying to chop wood like it's the Yamakui~"
+    shiori "Ehehe~ Maybe you shouldn’t’ve sprained your whole arm trying to chop wood like it's the Yamakui~"
 
     yamato "I was trainin’. S’important."
 
@@ -38,7 +38,7 @@ label preloop1_scene1:
 
     yamato "Oi—"
 
-    shiori "Ah ah ah~! Don’t move! One more twitch and I’ll tie this whole bandage into a bow, athen you'll be suuuper embarrased!"
+    shiori "Ah ah ah~! Don’t move! One more twitch and I’ll tie this whole bandage into a bow, and then you'll be suuuper embarrassed!"
 
     yamato "Ya wouldn’t dare."
 
@@ -104,7 +104,7 @@ label preloop1_scene2:
 
     n "The sparring slows. Hikaru lowers their weapon, sweat sticking their fringe to their face."
 
-    yamato "Ya don’t have to push like this. Ain’t like yer plannin’ to be an oni-slayer or somethin’."
+    yamato "Ya don’t have to push like this. Ain’t like yer plannin’ to be an Oni-slayer or somethin’."
 
     hikaru "{w=0.1}...I am training to protect someone."
 
@@ -198,7 +198,7 @@ label preloop1_scene3:
 
     hikaru "...I just...{w=0.1} admire their resolve."
 
-    shiori "Ara~ Resolve, is it? Not [persistent.player_name]-sama's smile~? Not the way [persistent.player_name]-sama pat your head sometimes~?"
+    shiori "Ara~ Resolve, is it? Not [persistent.player_name]-sama's smile~? Not the way [persistent.player_name]-sama pats your head sometimes~?"
 
     hikaru "...That was once."
 
@@ -234,7 +234,7 @@ label preloop1_scene3:
 
     shiori "{cps=10}Liar~{/cps}"
 
-    n "You step back before before your name comes up again."
+    n "You step back before your name comes up again."
 
     n "But Shiori’s laughter is still ringing in your ears."
 
@@ -257,7 +257,7 @@ label scene4ver2:
 
     n "You hear their voices from afar, but you decide not to approach them."
 
-    yamato "...How many charms a count tonight?"
+    yamato "...How many charms didja count tonight?"
 
     hikaru "Seven. Two were cracked."
 
@@ -297,7 +297,7 @@ label scene4ver2:
 
     hikaru "Yes."
 
-    yamato "The way [persistent.player_name] talks now. Methinks half their sentences sounds like guesses."
+    yamato "The way [persistent.player_name] talks now. Methinks half their sentences sound like guesses."
 
     hikaru "They forget things, yes. Like ou—"
 
@@ -319,13 +319,13 @@ label scene4ver2:
 
     yamato "Whatever. {w=0.1}Ain’t my business."
 
-    yamato "Still weird. Like...{w=0.1} we got our friend back, but somethin’s off."
+    yamato "Still weird. Like...{w=0.1} We got our friend back, but somethin’s off."
 
     hikaru "I know."
 
     yamato "Guess we just keep walkin'."
 
-    hikaru "Just... {w=0.1}keep your guard up, Yamato."
+    hikaru "Just... {w=0.1}Keep your guard up, Yamato."
 
     yamato "Yeah, always."
 
@@ -337,9 +337,9 @@ label scene4ver3:
 
     n "Tonight is not your patrol day. It's Yamato and Hikaru's."
 
-    n "They walk near, but not talking."
+    n "They walk side by side, but not talking."
 
-    n "You decide to leave because the tension is tighter than a blade."
+    n "You decide to leave because the tension is sharper than a blade."
 
     $ preloop4_extra = True
 
@@ -372,7 +372,7 @@ label preloop1_scene4:
 
     hikaru "..."
 
-    shiori "So... {w=0.1}it wasn’t the Yamakui."
+    shiori "So... {w=0.1}It wasn’t Yamakui."
 
     hikaru "I don’t think so."
 
@@ -384,7 +384,7 @@ label preloop1_scene4:
 
     hikaru "He said he was looking for a way out."
 
-    hikaru "But if he’s alive... why didn’t he come back for me?"
+    hikaru "But if he’s alive... Why didn’t he come back for me?"
 
     shiori "..."
 
@@ -414,7 +414,7 @@ label preloop1_scene6:
 
     $ preloop6_extra = True
 
-    n "The village streets at night are unusually quiet. You see Shiori and Yamato walking ehead."
+    n "The village streets at night are unusually quiet. You see Shiori and Yamato walking ahead."
 
     n "You follow from a distance but don't catch up to them."
 
@@ -512,7 +512,7 @@ label preloop1_scene7:
 
     "Old Woman" "There! You see?! Swearing again! Bad child!"
 
-    yamato "Oi! 'S just a punctuation!"
+    yamato "Oi! 'S just punctuation!"
 
     hikaru "...She is correct."
 
@@ -562,7 +562,7 @@ label preloop1_scene8:
 
     yamato "C’mon. Ya hide it better than most, but I ain’t blind."
 
-    hikaru "I didn't hide it because I'm ashemed, if you think that way. It is simply irrelevant."
+    hikaru "I didn't hide it because I'm ashamed, if you think that way. It is simply irrelevant."
 
     yamato "Tch. That’s a shinobi thing?"
 
@@ -604,11 +604,11 @@ label preloop1_scene8:
 
     shiori "But it’s fine~ I’ll find [persistent.player_name]-sama later. For now, sit down!"
 
-    n "She places the boxes between them, they immedieatly sit straighter and eats."
+    n "She places the boxes between them. They immediately sit up straighter and eat."
 
     n "As if this is a habit for them."
 
-    n "Funny, you don't feel familliar at all, like you don't belong."
+    n "Funny, you don't feel familiar at all, like you don't belong."
 
     n "You slink back to the darkness so they don't see you watching."
 

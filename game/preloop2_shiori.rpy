@@ -27,7 +27,7 @@ label loop2_shiori_mandatory1:
     show shi yansm
     with dissolve
 
-    shiori "I thought you'd dream of killing the Yamakui."
+    shiori "I thought you'd dream of killing Yamakui."
 
     n2 "Hoo?"
 
@@ -54,7 +54,7 @@ label loop2_shiori_mandatory1:
 
     shiori "Ne, [persistent.player_name]-sama?"
 
-    shiori "Will you tell me how you killed the Yamakui?"
+    shiori "Will you tell me how you killed Yamakui?"
 
     n  "Why would she ask that?"
 
@@ -63,7 +63,7 @@ label loop2_shiori_mandatory1:
     show shi happy
     with dissolve
 
-    shiori "I just... I want to understand. I want to know how you get to kill the fearsome Oni~"
+    shiori "I just... I want to understand. I want to know how you were able to to kill the fearsome Oni~"
 
     shiori "{i}Where did you strike first? What's the color of its blood? Did it go down without a fight?{/i}"
 
@@ -89,7 +89,7 @@ label loop2_shiori_mandatory1:
 
     shiori "Ara~ That sounds...{w} painful."
 
-    shiori "{sc=2}But are you sure it's really dead?{/sc}"
+    shiori "{sc=2}...Are you sure it's really dead?{/sc}"
 
     MC yansm2 "{i}Definitely.{/i}"
 
@@ -99,7 +99,7 @@ label loop2_shiori_mandatory1:
         "I watched it bleed out":
             MC evil2 "I tore the arms off..."
 
-    MC yan2 "...and bent the legs backwards so it'd be at the wrong angle."
+    MC yan2 "...and bent the legs backwards so they'd be at the wrong angle."
 
     MC happy2 "It looked like {i}a beautiful flower~{/i}"
 
@@ -184,7 +184,7 @@ label loop2_shiori_mandatory1:
         linear 0.24 zoom 0.6 xalign 0.3 yoffset 80
         pause 0.08
 
-    shiori "{sc=2}You didn’t kill the Yamakui, didn't you~{/sc}"
+    shiori "{sc=2}You didn’t kill Yamakui, did you~{/sc}"
 
     shiori "It’s still alive, {w=0.2}isn’t it?"
 
@@ -207,9 +207,9 @@ label loop2_shiori_mandatory1:
 
     shiori "But that's okay, Shiori will keep your secrets. I won't tell anyone, {i}promise.{/i}"
 
-    shiori "Because if you’re lying... {w=0.2}it means {sc=1}my precious Yamakui{/sc} is still breathing somewhere~"
+    shiori "Because if you’re lying... {w=0.2}It means {sc=1}my precious Yamakui{/sc} is still breathing somewhere~"
 
-    shiori "And if it’s still alive... {w=0.2}maybe it’s listening {i}right now?{/i}"
+    shiori "And if it’s still alive... {w=0.2}Maybe it’s listening {i}right now?{/i}"
 
     n "Don’t say anything. Don’t respond. Please–"
 
@@ -218,9 +218,9 @@ label loop2_shiori_mandatory1:
 
     shiori "Ne, [persistent.player_name]-sama..."
 
-    shiori "{k=1}If you see the Yamakui again...{/k}"
+    shiori "{k=1}If you see Yamakui again...{/k}"
 
-    shiori "...will you tell it something for me?"
+    shiori "... will you tell it something for me?"
 
     MC yan2 "What is it?"
 
@@ -238,15 +238,15 @@ label loop2_shiori_mandatory1:
         linear 0.55 zoom 0.8 yoffset -20 xoffset -150
         pause 0.12
 
-    shiori "Tell it... {w}it was never a monster to me."
+    shiori "Tell it... {w}that it was never a monster to me."
 
-    n "She leans closer that you feel her {sc=2}breath{/sc} on your face."
+    n "She leans closer, so that you feel her {sc=2}breath{/sc} on your face."
 
     shiori "{w=0.2}Tell it that if it feels hungry, [persistent.player_name]-sama..."
 
     pause 0.2
 
-    shiori "{sc=2}...come find me first.{/sc}"
+    shiori "{sc=2}...Come find me first.{/sc}"
 
     show shi yansmbl:
         zoom 0.8
@@ -299,7 +299,7 @@ label loop2_shiori_mandatory2:
 
     n "You see her again, waiting at the same spot, wearing the same smile."
 
-    n "She's being normal... {w}Yesterday doesn't mean anything. {w}She was just being curious, is all...."
+    n "She's being normal... {w}Yesterday doesn't mean anything. {w}She was just being curious, that’s all...."
 
     shiori "[persistent.player_name]-sama~ Did you sleep well again?"
 
@@ -308,7 +308,7 @@ label loop2_shiori_mandatory2:
     show shi happyblush
     with dissolve
 
-    shiori "I am so happy you get enough sleep!"
+    shiori "I’m so happy you got enough sleep!"
 
     show shi happyblush:
         zoom 0.5
@@ -391,9 +391,9 @@ label loop2_shiori_mandatory2:
 
     MC sadcl2 "..."
 
-    shiori "{sc=2}Like... when it actually eats normally and not just snacking?{/sc}"
+    shiori "{sc=2}Like... When it actually eats normally and isn’t just snacking?{/sc}"
 
-    MC yan2 "{k=1}Yes! That is when it feeds off something fresh and not rotten.{/k}"
+    MC yan2 "{k=1}Yes! That’s is when it feeds off something fresh and not rotten.{/k}"
 
     MC yan2 "{w}Food that has its own soul and memories."
 
@@ -435,14 +435,14 @@ label loop2_shiori_mandatory2:
 
     MC smug2 "That's why I{i} know.{/i}"
 
-    shiori "Mm... {w=0.2}but you talk like it’s still alive."
+    shiori "Mm... {w=0.2}You talk like it’s still alive."
 
     MC sadcl2 "..."
 
     show shi normal
     with dissolve
 
-    shiori "{i}So, the Yamakui is hungry, right?{/i}"
+    shiori "{i}So, Yamakui is hungry, right?{/i}"
 
     show shi sad
     with dissolve
@@ -494,7 +494,7 @@ label loop2_shiori_mandatory2:
     hide darken2
     with dissolve
 
-    n "{i}She bows then literally skips away cheerfully.{/i}"
+    n "{i}She bows, then literally skips away cheerfully.{/i}"
 
     stop music
 
@@ -614,7 +614,7 @@ label loop2_shiori_mandatory3:
 
     shiori "{i}I think I loved you too.{/i}"
 
-    shiori "So...{w=0.2} wherever you are,{w=0.2} I hope you’re at peace now."
+    shiori "So...{w=0.2} Wherever you are,{w=0.2} I hope you’re at peace now."
 
     scene black
     with out_212
@@ -722,7 +722,7 @@ label loop2_shiori_mandatory4:
 
     n2 "I don't sleep."
 
-    MC nervous2 "Yeah. The red moon is coming, so I–"
+    MC nervous2 "Yeah. The Red Moon is coming, so I–"
 
     show shi happy:
         zoom 0.35
@@ -754,11 +754,11 @@ label loop2_shiori_mandatory4:
     show shi sad
     with dissolve
 
-    shiori "When the Yamakui wasn’t eating...{w=0.2} what did it do?"
+    shiori "When Yamakui wasn’t eating...{w=0.2} What did it do?"
 
     shiori "Did it nap in a corner{w=0.2} or {i}crawl{/i} somewhere quiet?"
 
-    shiori "Do you think it ever looked up at the sky{w=0.2} and {cps=17}watch the stars?{/cps}"
+    shiori "Do you think it ever looked up at the sky{w=0.2} and {cps=17}watched the stars?{/cps}"
 
     shiori "Did it ever just...{w=0.2} wonder what it's like {glitch=12}outside{/glitch} the mountain?"
 
@@ -850,7 +850,7 @@ label loop2_shiori_mandatory4:
 
     shiori "{w=0.2}...But I-um,{w=0.2} also just..."
 
-    shiori "{w=0.2}...I keep thinking about it.{w=0.3} The Yamakui."
+    shiori "{w=0.2}...I keep thinking about it.{w=0.3} Yamakui."
 
     shiori "It was probably awful and scary and hurt people,{w=0.3} {i}but...{/i}"
 
@@ -995,7 +995,7 @@ label loop2_shiori_mandatory4:
 
     n "{cps=14}She’s gone.{/cps}"
 
-    n2 "See if she still says that when the hugging arms are {b}missing.{/b}"
+    n2 "See if she still says that when her arms are {b}missing.{/b}"
 
     n "{sc=1}Shut up.{/sc}"
 

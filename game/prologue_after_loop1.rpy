@@ -56,9 +56,9 @@ label prologue_loop1:
 
     n "Who was that? Was that you?"
 
-    n "You grip the hilt harder, your sword is sticky now, covered in blood."
+    n "You grip the hilt harder. Your sword is sticky now, covered in blood."
 
-    n "You’ll need to clean it. Later. Burn it maybe."
+    n "You’ll need to clean it. Later. Burn it, maybe."
 
     n "What... {w=0.1}did you kill?"
 
@@ -66,9 +66,9 @@ label prologue_loop1:
 
     n "...What?"
 
-    n "Isn't this supposed to be Yamakui? But wait..."
+    n "Isn't this supposed to be the Yamakui? But wait..."
 
-    n "It has red blood? And isn't it supposed to have claws? A-and this is Yamakui's lair. And you're alive."
+    n "It has red blood? And isn't it supposed to have claws?"
 
     n "This makes no sense."
 
@@ -99,13 +99,13 @@ label prologue_loop1:
 
     n "That voice again... Is that you, [persistent.player_name]?"
 
-    n "......"
+    n "....."
 
     n "...."
 
     n "..."
 
-    n "{size=*0.9}{k=-1}You must be hallucinating things.{/k}{/size}"
+    n "{size=*0.9}{k=-1}You must be hallucinating.{/k}{/size}"
 
 
 
@@ -119,7 +119,7 @@ label prologue_loop1:
 
 
 
-    n "You start down the mountain, but these legs {i}don't feel like yours{/i}."
+    n "You start to head down the mountain, but these legs {i}don't feel like yours{/i}."
 
     play sound "sfx/metal drag.wav"
     $ renpy.pause(0.8)
@@ -131,7 +131,7 @@ label prologue_loop1:
 
     n "The elders said the Yamakui wore stone armor. That its body was too large for skin alone."
 
-    n "This... this is your proof. You dragged it with you, so they'd believe you."
+    n "This... This is your proof. You dragged it with you, so they'd believe you."
 
     n "Because there was {i}nothing else{/i} left. {w=0.2}Because you–"
 
@@ -156,15 +156,13 @@ label prologue_loop1:
 
     n "Shouldn’t the forest open up for you? Shouldn’t the world feel..."
 
-    n "{size=*0.95}{k=-1}...safe?{/k}{/size}"
+    n "{size=*0.95}{k=-1}... safe?{/k}{/size}"
 
     n "You imagine the clouds parting, or gold light spilling down, or flowers blooming or... something."
 
     n2 "Pfft... hkkk-HRAHAHAH."
 
     n "–!"
-
-    n2 "Gold light. Pretty lie. {w}Ha."
 
     n "What–"
 
@@ -179,7 +177,7 @@ label prologue_loop1:
 
     n "...to the village..."
 
-    n "...before... the red moon..."
+    n "...before... The Red Moon..."
 
     n "{cps=10}...{/cps}"
 
@@ -187,7 +185,7 @@ label prologue_loop1:
 
     n "No. That's {i}not{/i} true."
 
-    n "You killed the Oni. That's what is supposed to happen. {w=0.3}So now you're going home."
+    n "You killed the Oni. That's what’s is supposed to happen. {w=0.3}So now you're going home."
 
     n "{w=0.2}You’ll be a hero."
 
@@ -242,7 +240,7 @@ label prologue_loop1:
 
     stop sound
 
-    n "You walk toward a familiar-looking elder and hand the armor out. He steps forward and examines the armor, brows furrowing."
+    n "You walk toward a familiar-looking elder and hand over the armor. He steps forward and examines it, brows furrowing."
 
     show elder:
         xzoom -1
@@ -280,9 +278,9 @@ label prologue_loop1:
         ypos 1.67
     with dissolve
 
-    n "Hands reach for you, but they seem to be unsteady. Everyone looks...conflicted and unsure."
+    n "Hands reach for you, but they seem to be unsteady. Everyone looks… conflicted and unsure."
 
-    n "That's odd, shouldn't they be celebrating? Shouldn't they be joyous?"
+    n "That's odd, shouldn't they be celebrating? Shouldn't they be full of joy?"
 
     n "Shouldn't they call your name?"
 
@@ -294,11 +292,11 @@ label prologue_loop1:
 
     n2 "{cps=201}Yamakui. Yamakui. Yamakui–{/cps}"
 
-    n "No, that’s-{w}That’s NOT-!"
+    n "No, that’s–{w}That’s NOT–!"
 
     "Man" "Did you really kill the Yamakui, [persistent.player_name]?"
 
-    MC smug2 "Yeah! I took down that Oni in one blow! Well... maybe two! Or ten! Who’s counting?!"
+    MC smug2 "Yeah! I took down that Oni in one blow! Well... Maybe two! Or ten! Who’s counting?!"
 
     "Elder" "[persistent.player_name], you have done us a great service."
 
@@ -318,9 +316,9 @@ label prologue_loop1:
 
     n "They looked worried still, because someone was recently devoured. Someone by the name of–"
 
-    n "–huh?"
+    n "–Huh?"
 
-    n "Why can't I remember their name? That's odd, let me think again. Were they your friend?"
+    n "Why can't I remember their name? That's odd, let me think again. Were they your friend?" ## intentional
 
     n2 "{sc=1}{color=#ff2b54}Don't think too much.{/color}{/sc}"
 
@@ -352,7 +350,7 @@ label speechhh2shiori:
 
     n "You wonder why the Elder's hand is shaking when he tugs your arm."
 
-    n "Or maybe that's your own hand that's trembling."
+    n "Or maybe it’s that's your own hand that's trembling."
 
     show elder:
         xzoom -1
@@ -402,7 +400,7 @@ label speechhh2shiori:
 
     "Girl" "A speech, [persistent.player_name]!"
 
-    n "A voice rises from the crowd. Shiori’s, maybe."
+    n "A voice rises from the crowd. Shiori’s, maybe." ## yeah it’s supposed to be different
 
     MC normal2 "Thank you, everyone. I didn’t do it alone."
 
@@ -410,7 +408,7 @@ label speechhh2shiori:
 
     MC smugcl2 "Aaaand that weird old charm from our beloved shrine maiden..."
 
-    MC smugcl2 "Still stuck in my pocket, by the way, thanks Shiori!"
+    MC smugcl2 "Still stuck in my pocket, by the way. Thanks Shiori!"
 
     n2 "It stings. Throw it away."
 
@@ -435,7 +433,7 @@ label speechhh2shiori:
 
     n "{cps=7}They believe you.{/cps}"
 
-    n "The armor is still in your hand, the only proof that you killed Yamakui."
+    n "The armor is still in your hand, the only proof that you killed the Yamakui."
 
     n "As you step down from the shrine, the crowd parts."
 
@@ -467,7 +465,7 @@ label speechhh2shiori:
 
     "Man" "I don't know, but..."
 
-    "Man" "...there’s nothing left to hide from. Right?"
+    "Man" "...There’s nothing left to hide from. Right?"
 
     n "...Right?"
 
@@ -581,9 +579,9 @@ label speechhh2noshiori:
 
     pause 0.3
 
-    MC annoyed2 "....?"
+    MC annoyed2 "...?"
 
-    n "Wait, {w=0.2}shouldn't someone say something by now?"
+    n "Wait, {w=0.2}shouldn't someone have said something by now?"
 
     n "Someone always says something here. {blur}A girl’s voice{/blur} I think her name was–"
 
@@ -637,7 +635,7 @@ label speechhh2noshiori:
 
     "Man" "I don't know, but..."
 
-    "Man" "...there’s nothing left to hide from. Right?"
+    "Man" "...There’s nothing left to hide from. Right?"
 
     n "...Right?"
 
@@ -695,17 +693,17 @@ label beforesecondloop:
 
     n "But from what?"
 
-    n "The village tries to be more bright and cheery, but there's always this heavy feeling in the air."
+    n "The village tries to be brighter and more cheery, but there's always this heavy feeling in the air."
 
-    n "They greet you kindly, politely. A bit... rehearsed, so to speak."
+    n "Everyone greets you kindly, politely. A bit... rehearsed, so to speak."
 
-    n "And slightly afraid."
+    n "And they sound slightly afraid."
 
     n "No one speaks about the mountain anymore."
 
     n "Instead, they light incense more often, close their doors faster..."
 
-    n "...and never once stare you in the eye."
+    n "...And never once stare you in the eye."
 
     n "You never ask why."
 
@@ -719,7 +717,7 @@ label beforesecondloop:
 
     n "{i}{blur}That’s when the Yamakui comes down.{/blur}{/i}"
 
-    n "All the villagers can do now is waiting, wondering... If you've truly killed the Yamakui."
+    n "All the villagers can do now is wait, wondering... If you've truly killed the Yamakui."
 
     n2 "{w=0.2}You know the answer.{w=0.2}"
 

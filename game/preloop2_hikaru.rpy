@@ -82,7 +82,7 @@ label loop2_hikaru_mandatory1:
 
     n2 "Just go with it."
 
-    MC annoyed2 "Kind of hard to concentrate if the villagers looks at you like you're lying."
+    MC annoyed2 "Kind of hard to concentrate when the villagers look at you like you're lying."
 
     hikaru "Ah."
 
@@ -157,7 +157,7 @@ label loop2_hikaru_mandatory1:
         yalign 0.33
     with dissolve
 
-    hikaru "See that boar? One of its leg is limping."
+    hikaru "See that boar? One of its legs is limping."
 
     MC normal2 "Mmhmm."
 
@@ -179,7 +179,7 @@ label loop2_hikaru_mandatory1:
     pause 0.1
     play sound "sfx/boar.mp3"
 
-    n "Your blade strikes first and you take down the boar no problem."
+    n "Your blade strikes first, and you take down the boar no problem."
 
     play music "heavy breathing.mp3"
 
@@ -220,7 +220,7 @@ label loop2_hikaru_mandatory1:
 
     n2 "{i}Succulent ribs, juicy eyeballs.{/i}"
 
-    n "No–{w}no, stop."
+    n "No–{w}No, stop."
 
     play sound "sfx/hahh.mp3"
 
@@ -254,7 +254,7 @@ label loop2_hikaru_mandatory1:
 
     play music "sfx/forest night.wav"
 
-    n "The boar lies beneath your hands, your hands are already digging into it, almost ripping into flesh."
+    n "The boar lies beneath your hands, your hands already digging into it. Almost ripping into flesh."
 
     show hik sad
     with dissolve
@@ -379,7 +379,7 @@ label loop2_hikaru_mandatory2:
     show darken2
 
 
-    n "Bones are scattered on the floor. Someone's remains, and some still have rotten meat on it."
+    n "Bones are scattered on the floor. Someone's remains. There's still rotten meat."
 
     if persistent.shiori_eaten:
         n "There are ribbons tied with bells..."
@@ -395,7 +395,7 @@ label loop2_hikaru_mandatory2:
 
         n "Someone wore that around their waist. You remember..."
 
-        n "...the smell of sake in your mouth?"
+        n "...The smell of sake in your mouth?"
 
     hide gore
     show hik cry:
@@ -415,7 +415,7 @@ label loop2_hikaru_mandatory2:
         linear 0.11 yoffset 20
 
 
-    n "Hikaru's tears fall, hand shaking in disbelief."
+    n "Hikaru's tears fall, hands shaking in disbelief."
     hikaru "{k=2}...!{/k}"
 
     hikaru "{sc=3}Wait, what?{/sc}"
@@ -430,7 +430,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "..."
 
-    hikaru "{w=0.2}...Why can’t I remember?"
+    hikaru "{w=0.2}... Why can’t I remember?"
 
     hikaru "{k=2}[persistent.player_name]...{/k}"
 
@@ -451,20 +451,20 @@ label loop2_hikaru_mandatory2:
         "Say nothing":
             MC yan2 "..."
 
-    hikaru "{w=0.2}Do you think they got eaten by Yamakui?"
+    hikaru "{w=0.2}Do you think they got eaten by the Yamakui?"
 
     MC normal2 "If you can't remember them, then yes."
 
     hikaru "..."
 
-    MC happy2 "But don't worry, I killed it! So there's no way anyone will get eaten again!"
+    MC happy2 "But don't worry, I killed it! No one’s gonna be eaten again!"
 
     show hik sad
     with dissolve
 
-    hikaru "{k=2}Y-Yes... That's right..{/k}"
+    hikaru "{k=2}Y-Yes... That's right...{/k}"
 
-    MC happycl2 "Let's just go home, you look pale, Hikaru."
+    MC happycl2 "Let's just go home. You look pale, Hikaru."
 
     hikaru "{i}Yeah...{/i}"
 
@@ -472,7 +472,7 @@ label loop2_hikaru_mandatory2:
 
     with fade
 
-    n "You return to the shrine again to see Hikaru crouching at the same place as yesterday, shovel in hand."
+    n "You return to the shrine again to see Hikaru crouching in at the same place as yesterday, shovel in hand."
 
     scene shrine day:
         zoom 0.7
@@ -514,7 +514,7 @@ label loop2_hikaru_mandatory2:
 
         hikaru "{sc=4}We have {b}NO{/b} shrine maiden!{/sc}"
 
-        hikaru "{i}Or... {w=0.1}At least... {w=0.1}We had at some point?{/i}"
+        hikaru "{i}Or... {w=0.1}At least... {w=0.1}We did at some point?{/i}"
 
         hikaru "{w=0.2}Is this the shrine maiden?"
 
@@ -556,7 +556,7 @@ label loop2_hikaru_mandatory2:
 
     MC surprised2 "Mm?"
 
-    hikaru "I'm gonna go look for it. Maybe someone else buried it."
+    hikaru "I'm gonna go look. Maybe someone else buried it."
 
     MC happy2 "Okay, I'll stay here then."
 
@@ -565,7 +565,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "...You're not... {w=0.2}{i}curious?{/i}"
 
-    hikaru "I mean...{w=0.1} you used to be."
+    hikaru "I mean...{w=0.1} You used to be."
 
     MC happycl2 "Nah, it's probably just someone the Yamakui ate a long time ago."
 
@@ -576,7 +576,7 @@ label loop2_hikaru_mandatory2:
 
     hikaru "But–"
 
-    hikaru "...Nevermind. {w=0.2}I'll see you later."
+    hikaru "... Nevermind. {w=0.2}I'll see you later."
 
     show hik worried:
 
@@ -602,7 +602,7 @@ label loop2_hikaru_mandatory2:
 
     n "You {b}should{/b} remember."
 
-    n "To whoever belonged those bones... {w=0.5}They used to laugh with you, {blur}didn't they...?{/blur}"
+    n "Whoever those bones belonged to… {w=0.5}They used to laugh with you, {blur}didn't they...?{/blur}"
 
     scene black
     with out_182
@@ -633,9 +633,9 @@ label loop2_hikaru_mandatory3:
 
     n "You and Hikaru are sitting together on the roof."
 
-    hikaru "You know what, I think you've changed since the mountains."
+    hikaru "You know what, I think you've changed since the mountain."
 
-    hikaru "You're... {w=0.1}a lot calmer now, and a lot less affectionate."
+    hikaru "You're... {w=0.1}A lot calmer now, and a lot less affectionate."
 
     hikaru "Are you mad at me?"
 
@@ -650,7 +650,7 @@ label loop2_hikaru_mandatory3:
 
     hikaru "Are you bored of me? Sorry that I got too paranoid about the bones, but–"
 
-    hikaru "Don't you think that even the Yamakui is dead now, everything's still not how it's supposed to be?"
+    hikaru "Don't you think that even if the Yamakui is dead now, everything's still not how it's supposed to be?"
 
     n "You lean in..."
 
@@ -669,7 +669,7 @@ label loop2_hikaru_mandatory3:
         # Smoothly zoom in and move head into frame
         easein 0.33 zoom 1.25 yalign 0.08 yoffset 170 xoffset 200
 
-    n "...and shut them up with a kiss."
+    n "...And shut them up with a kiss."
 
     ##3 squelching kiss
 
@@ -760,7 +760,7 @@ label loop2_hikaru_mandatory3:
         linear 0.04 xoffset 0 yoffset 50
 
 
-    hikaru "You're being weird, [persistent.player_name]. What's... {w=0.1}{sc=1}what's gotten into you?{/sc}"
+    hikaru "You're being weird, [persistent.player_name]. What's... {w=0.1}{sc=1}What's gotten into you?{/sc}"
 
     MC yan2 "I don't understand."
 
@@ -794,7 +794,7 @@ label loop2_hikaru_mandatory3:
         linear 0.04 xoffset -8 yoffset 49
         linear 0.04 xoffset 0 yoffset 50
 
-    hikaru "The, uh–{w}fire. I left my irori still burning–"
+    hikaru "The, uh–{w}fire. I left my iron still burning–"
 
     n "They gesture vaguely toward the trail, not even looking in that direction."
 
@@ -842,7 +842,7 @@ label loop2_hikaru_mandatory4:
     with vpunch
     pause 0.01
 
-    n "You hear a soft knocking at your door, you open it to reveal Hikaru standing in front of your house."
+    n "You hear a soft knocking at your door. You open it to reveal Hikaru standing in front of your house."
 
     play sound "sfx/sliding door.mp3"
 
@@ -871,7 +871,7 @@ label loop2_hikaru_mandatory4:
 
     hikaru "{i}I’ve been thinking.{/i}"
 
-    hikaru "{k=2}Last night... {w}that wasn’t you, was it?{/k}"
+    hikaru "{k=2}Last night... {w}That wasn’t you, was it?{/k}"
 
     hikaru "{sc=3}The way you kissed me. That–{/sc}"
 
@@ -897,7 +897,7 @@ label loop2_hikaru_mandatory4:
         linear 0.07 xoffset 0 yoffset 40
         repeat
 
-    hikaru "{w=0.2}Your tongue is not that long, isn't it?"
+    hikaru "{w=0.2}Your tongue is not that long, is it?"
 
     hikaru "{i}I've always known how your body feels like–{/i}"
 

@@ -42,7 +42,7 @@ label prologue:
 
     n "You shouldn’t be. You’re alive. Whole. {w=0.4}{i}Well, mostly.{/i}"
 
-    n "And most importantly, you have won."
+    n "And most importantly, you've won."
 
     play muzak "sfx/squelch.mp3"
 
@@ -97,9 +97,9 @@ label prologue:
 
     n "Ah yes. The Yamakui. The Oni that has terrorized your village for years."
 
-    n "But it bled red. Aren’t onis supposed to bleed black?"
+    n "But it bled red. Aren’t Onis supposed to bleed black?"
 
-    n "And... it looked smaller than the legends said."
+    n "And... It looked smaller than the legends said."
 
     n "It had {i}hands.{/i} Smooth hands, without claws. {w=0.2}Mortal hands?"
 
@@ -140,20 +140,19 @@ label prologue:
 
     play muzak "sfx/forest night.wav"
 
-    n "It’s time to return to our village."
+    n "It’s time to return to the village."
 
     play sound"sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
-    n "You begin your slow descent from the mountains. Your legs know the motion already, but it feels wrong for the muscles."
-
+    n "You begin your slow descent from the mountains. Your legs know the motion already, but it feels wrong in your muscles."
 
     n "{w=0.2}The sound of armor dragging follows behind you. It grinds the stone path as you drag it along with one hand."
 
     play sound"sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
-    n "The elders said that Yamakui had an armor made of stone."
+    n "The elders said that the Yamakui had armor made of stone."
 
     n "You decide to loot the armor because they won’t believe you killed it."
 
@@ -162,7 +161,7 @@ label prologue:
     play sound"sfx/metal drag.wav"
     $ renpy.pause(0.8)
 
-    n "Well, let's see the look in their eyes once they see this now."
+    n "Well, let's see the look in their eyes now."
 
     n "Because you did it, the unthinkable.{w=0.3} You're {i}absolutely{/i} sure."
 
@@ -171,7 +170,7 @@ label prologue:
     n "{w=0.2}It's quiet, isn't it?"
 
 
-    n "The air feels cold and anticlimactic, even though you just fought a big battle against the village's greatest enemy."
+    n "The air feels cold and anticlimactic, even though you just battled the village's greatest enemy."
 
     n "Shouldn’t it be warmer now? Shouldn’t the wind carry your heroic feats?"
 
@@ -256,7 +255,7 @@ label village_entrance:
 
     play sound "sfx/walk grass.mp3"
 
-    n "You walk toward a familiar-looking elder and hand the armor out. He steps forward and examines the armor, brows furrowing."
+    n "You walk toward a familiar-looking elder and hand over the armor. He steps forward and examines it, brows furrowing."
 
     pause 1.0
 
@@ -300,7 +299,7 @@ label village_entrance:
         ypos 1.67
     with dissolve
 
-    n "Suddenly, hands reach for you. Clapping on your back, with smiles on their faces."
+    n "Suddenly, hands reach for you. Clapping your back, with smiles on their faces."
 
     n "Ah, there it is."
 
@@ -356,9 +355,9 @@ label get_player_name:
 
 label after_get_name:
 
-    "Man" "But.... how? How did you do it, [persistent.player_name]?"
+    "Man" "But... How? How did you do it, [persistent.player_name]?"
 
-    MC smug "I took down that Oni in one blow! Well... maybe two! Or ten! But who's there to count?!"
+    MC smug "Yeah! I took down that Oni in one blow! Well... Maybe two! Or ten! Who’s counting?!"
 
     play sound "sfx/cheer.mp3"
 
@@ -383,7 +382,7 @@ label after_get_name:
 
     "Man" "{w=0.2}[persistent.player_name], {w=0.2}[persistent.player_name], {w=0.2}[persistent.player_name]!"
 
-    n "They say your name, over, and over again. Your name has become sacred, etched in legends."
+    n "They say your name, over and over again. Your name has become sacred, etched in legends."
 
     n "You like that."
 
@@ -410,7 +409,7 @@ label after_get_name:
 
     n "You wonder why the Elder's hand is shaking when he tugs your arm."
 
-    n "Or maybe that's your own hand that's trembling."
+    n "Or maybe it's your own hand that's trembling."
 
     show elder:
         xzoom -1
@@ -443,22 +442,22 @@ label after_get_name:
 
     "Elder" "{b}Never again{/b} will we sleep listening for {size=*0.95}footsteps.{/size}"
 
-    "Elder" "{b}Never again{/b} will our loved ones be taken the next {i}red moon.{/i}"
+    "Elder" "{b}Never again{/b} will our loved ones be taken the next {i}Red Moon.{/i}"
 
     "Elder" "{b}And never again{/b} will we... {w=0.3}{i}forget.{/i}"
 
     "Girl" "A speech, [persistent.player_name]!"
 
-    n "Someone shouts from the back, it might've been your friend, Shiori."
+    n "Someone shouts from the back. It might've been your friend, Shiori."
 
 
     MC happy "Thank you, everyone. I didn’t do it alone."
 
     MC happycl "I had your hopes, {w}your prayers, {w}your bento. Aaaand that weird old charm from our beloved shrine maiden..."
 
-    MC happy "Still stuck in my pocket, by the way, thanks Shiori!"
+    MC happy "Still stuck in my pocket, by the way. Thanks Shiori!"
 
-    n "The girl giggled at the back."
+    n "The girl giggles in the back."
 
     MC smug "But I climbed that mountain! I faced it head-on! {w}And I won!"
 
@@ -500,11 +499,11 @@ label after_get_name:
 
     "Woman" "{size=*0.95}{alpha=0.8}Think we’ll be safe this time?{/alpha}{/size}"
 
-    "Man" "{size=*0.95}{alpha=0.8}Of course we will be, [persistent.player_name] killed it.{/alpha}{/size}"
+    "Man" "{size=*0.95}{alpha=0.8}Of course we'll be, [persistent.player_name] killed it.{/alpha}{/size}"
 
     "Man" "{size=*0.95}{alpha=0.8}There’s nothing left to hide from. Right?{/alpha}{/size}"
 
-    n "{size=*0.9}{alpha=0.5}...Right?{/alpha}{/size}"
+    n "{size=*0.9}{alpha=0.5}... Right?{/alpha}{/size}"
 
     $ _preferences.volumes["music"] = _prev_music_volume
 
@@ -544,15 +543,15 @@ label after_get_name:
 
     n "They are your childhood friends and confidants."
 
-    n "You grew up running through rice paddies together, shouting at the sky, skipping stones at puddles, and laughing with no care in the world."
+    n "You grew up running through rice paddies together, shouting at the sky, skipping stones at puddles, and laughing without a care in the world."
 
-    n "The four of you once chased the shrine cat for hours, caught the priest’s omamori instead."
+    n "The four of you once chased the shrine cat for hours, and caught the priest’s omamori instead."
 
     n "Shiori used to say she’d marry someone strong."
 
     n "Yamato wanted to guard the village gates as a samurai, sword in hand and pride in his chest."
 
-    n "And Hikaru...{w=0.4}Hikaru never said much, always just listening to you three ramble."
+    n "And Hikaru...{w=0.4}Hikaru never said much, always just listening to the three of you ramble."
 
     show shi happyblush
     with dissolve
@@ -600,7 +599,7 @@ label after_get_name:
 
     show shi happy with dissolve
 
-    shiori "Ara~ What’s wrong, Yamato? Jealous of the oni?"
+    shiori "Ara~ What’s wrong, Yamato? Jealous of the Oni?"
 
     hide yam normal
     show yam angry at left:
@@ -661,7 +660,7 @@ label after_get_name:
 
     hikaru "...I see."
 
-    n "Hikaru's voice drops, their eyes slide slowly. From you...to the ground. {w=0.2}No-"
+    n "Hikaru's voice drops, their eyes slide slowly. From you... to the ground. {w=0.2}No-"
 
     $ _prev_music_volume = _preferences.volumes["music"]
 
@@ -773,7 +772,7 @@ label beforefirstloop:
 
     n "But she starts to leave white flower petals at the shrine."
 
-    n "She always welcome you with her smile already in place."
+    n "She always welcomes you with her smile already in place."
 
     n "You can’t tell if she is mourning.... or celebrating."
 
@@ -801,15 +800,15 @@ label beforefirstloop:
 
     n "The Yamakui is {atl=-#,#,fade_in_text~0.6}{glitch=1.1}DEAD.{/glitch}{/atl} {w=0.3}Isn’t it?"
 
-    n "So what is he still protecting them from? You don't need to train as vigorously anymore, do you?"
+    n "So what is he still protecting everyone from? You don't need to train as vigorously anymore, do you?"
 
     n "Maybe he doesn’t believe that you killed the Yamakui."
 
-    n "Sometimes you feel him staring. At the way you walk... or perhaps the way the villagers looks at you now."
+    n "Sometimes you feel him staring. At the way you walk... or perhaps the way the villagers look at you now."
 
     n "You can't tell, but one thing is for sure..."
 
-    n "You never look back, even though you always feel his stares deep in your bones."
+    n "You never look back, even though you always feel his stare deep in your bones."
 
     show yam serious:
         zoom 0.7
@@ -837,7 +836,7 @@ label beforefirstloop:
 
     n "Their eyes linger much longer than necessary. On your hands, {w=0.2}your eyes... No...{w=0.3}Your neck?"
 
-    n "You never dare ask what they are looking for, because you don’t want the answer to it."
+    n "You never dare ask what they are looking for, because you don’t want the answer."
 
     show hik normal:
         zoom 0.7
@@ -903,7 +902,7 @@ label beforefirstloop:
 
     n "..."
 
-    n "But you can't stop thinking about it, right?"
+    n "But you can't stop thinking about it."
 
     n "Why won’t you sleep?"
 
